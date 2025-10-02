@@ -175,7 +175,7 @@ M: 4/4
 N: Setting from thesession (*) adapted in 13 & 14 May 2025%250514
 N: (*) https://thesession.org/tunes/140#setting46226
 L: 1/8
-K: B min
+K: B aeolian
 de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
