@@ -4,6 +4,8 @@ import tunesDataRaw from './tunes.json';
         let filteredData = [];
         let currentSort = { column: null, direction: 'asc' };
         let currentViewMode = 'rendered';
+let currentTranspose = 0;
+let currentTuneABC = "";
 
         function parseABC(abc) {
             const lines = abc.split('\n');
@@ -101,22 +103,13 @@ import tunesDataRaw from './tunes.json';
             const modal = document.getElementById('abcModal');
             const modalTitle = document.getElementById('modalTitle');
             const abcRendered = document.getElementById('abcRendered');
-            const abcTextContent = document.getElementById('abcTextContent');
             const abcText = document.getElementById('abcText');
 
             modalTitle.textContent = tune.name;
-            abcTextContent.textContent = tune.abc;
+            currentTuneABC = tune.abc;
+            currentTranspose = 0;
+            updateABCDisplay();
 
-            abcRendered.innerHTML = '';
-            ABCJS.renderAbc('abcRendered', tune.abc, {
-    // responsive: 'resize',
-    scale: 0.7,
-    staffwidth: 600,  // control staff width in pixels
-    paddingtop: 10,
-    paddingbottom: 10,
-    paddingright: 20,
-    paddingleft: 20
-});
 
             currentViewMode = 'rendered';
             abcRendered.style.display = 'block';
@@ -129,6 +122,7 @@ import tunesDataRaw from './tunes.json';
         function closeABCModal() {
             const modal = document.getElementById('abcModal');
             modal.classList.remove('active');
+            currentTranspose = 0;
         }
 
         function toggleView() {
@@ -148,6 +142,40 @@ import tunesDataRaw from './tunes.json';
                 toggleBtn.textContent = 'Show ABC Text';
             }
         }
+
+function transposeABC(semitones) {
+  currentTranspose += semitones;
+  updateABCDisplay();
+}
+
+function updateABCDisplay() {
+  const abcTextContent = document.getElementById("abcTextContent");
+  const abcRendered = document.getElementById("abcRendered");
+
+  let transposedABC = currentTuneABC;
+
+  if (currentTranspose !== 0) {
+    transposedABC = transposeABCNotation(currentTuneABC, currentTranspose);
+  }
+
+  abcTextContent.textContent = transposedABC;
+
+  abcRendered.innerHTML = "";
+  ABCJS.renderAbc("abcRendered", transposedABC, {
+    scale: 1.0,
+    staffwidth: 800,
+    paddingtop: 10,
+    paddingbottom: 10,
+    paddingright: 20,
+    paddingleft: 20,
+  });
+}
+
+function transposeABCNotation(abc, transposeAmount) {
+  var visualObj = ABCJS.renderAbc("*", abc);
+  return ABCJS.strTranspose(abc, visualObj, transposeAmount);
+}
+
 
         function renderTable() {
             const tbody = document.getElementById('tunesTableBody');
@@ -268,6 +296,13 @@ import tunesDataRaw from './tunes.json';
 
             document.getElementById('closeModalBtn').addEventListener('click', closeABCModal);
             document.getElementById('toggleViewBtn').addEventListener('click', toggleView);
+            
+  document
+    .getElementById("transposeUpBtn")
+    .addEventListener("click", () => transposeABC(1));
+  document
+    .getElementById("transposeDownBtn")
+    .addEventListener("click", () => transposeABC(-1));
 
             document.getElementById('abcModal').addEventListener('click', function (e) {
                 if (e.target === this) {

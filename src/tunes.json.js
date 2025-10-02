@@ -28,7 +28,7 @@ R:song
 Q:1/4=70
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-07-(19,25,26); 08-07;11-21
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 F:https://s3-eu-west-1.amazonaws.com/audio.itma.ie/josephinekeegan/113itmamp3.mp3
 N:
 N:0. I find the overall rhythmic structure fascinating: (3+4)+(3+4)+(4+3+4) (=25). 
@@ -125,7 +125,7 @@ F:https://www.itma.ie/playlists/furls-leitrim-performers/?track=23
 D:ITMA – Furls of Music – Leitrim Performers
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-08-22, 2024-08-25, 2024-11-08, 2025-09-29
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M: 3/4
 L: 1/8
 Q:1/4=140
@@ -155,7 +155,7 @@ F:https://www.itma.ie/playlists/furls-leitrim-performers/?track=23
 D:ITMA – Furls of Music – Leitrim Performers
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-08-22, 2024-08-25
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M: 3/4
 L: 1/8
 K: G
@@ -198,7 +198,7 @@ Q: 3/8 = 70
 M: 18/16
 L: 1/16
 Z:abc-transcription Malcolm Schonfield%240620, 21, 27, 240718
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: E aeolian
 |:[P:A]"Em"E3 FEF G2F E3 BcA "Bm7"BGD|"Em"E3 FEF "G"G2A BAG "D"FAG FED:|
 |:[P:B]"G"BGB "D"AFA "G"G2D GAB dge "Bm7"dBA|"G"BGB "D"AFA "G"G2A BAG "D"FAG FED:|
