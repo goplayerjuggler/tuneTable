@@ -221,11 +221,14 @@ function renderTable() {
                             }
                             ${
                               ref.notes
-                                ? `<div class="notes">${ref.notes.replace(
-                                    /\n/g,
-                                    "<br />"
-                                  ).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')// transforms markdown links to HTML anchor tags:
-                                }</div>`
+                                ? `<div class="notes">${
+                                    ref.notes
+                                      .replace(/\n/g, "<br />")
+                                      .replace(
+                                        /\[([^\]]+)\]\(([^)]+)\)/g,
+                                        '<a href="$2">$1</a>'
+                                      ) // transforms markdown links to HTML anchor tags:
+                                  }</div>`
                                 : ""
                             }
                         </div>
@@ -260,7 +263,9 @@ function renderTable() {
 
     tbody.appendChild(row);
   });
-  document.getElementById("spCount").innerText = `${filteredData.length}/${tunesData.length}`;
+  document.getElementById(
+    "spCount"
+  ).innerText = `${filteredData.length}/${tunesData.length}`;
 }
 
 function applyFilters() {
