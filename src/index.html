@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tunes database</title>
+    <title>Tune table</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/abcjs/6.2.3/abcjs-basic-min.js"></script>
     <style>
         * {
@@ -48,7 +48,8 @@
 
         .search-box,
         .filter-select {
-            padding: 12px 16px;
+            padding: 
+            12px 16px;
             border: 2px solid #e0e0e0;
             border-radius: 10px;
             font-size: 16px;
@@ -397,7 +398,7 @@
         <h1>🎵 Tunes</h1>
 
         <div class="controls">
-            <input type="text" id="searchInput" class="search-box" placeholder="Search tunes, artists, or rhythms...">
+            <input type="text" id="searchInput" class="search-box" placeholder="Search tunes, artists, or rhythms..." autofocus>
             <select id="rhythmFilter" class="filter-select">
                 <option value="">All rhythms</option>
             </select>
@@ -440,7 +441,10 @@
             </div>
         </div>
     </div>
-
+<div id="footer">
+    Tune data last updated: <span id="spLastUpdated"></span><br/>
+    <a href="https://github.com/goplayerjuggler/tuneTable">source code</a>
+</div>
 </body>
 
 </html>

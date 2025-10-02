@@ -71,12 +71,14 @@ let currentTuneABC = "";
             return processed;
         }
 
-        function initializeData() {
-            tunesData = tunesDataRaw.map(processTuneData);
+        function initialiseData() {
+            tunesData = tunesDataRaw.tunes.map(processTuneData);
+            document.getElementById('spLastUpdated').innerHTML = tunesDataRaw.lastUpdate
             filteredData = [...tunesData];
             populateFilters();
             renderTable();
-            sortData('name')//default sort
+            sortData('rhythm')
+            sortData('rhythm')//default sort
         }
 
         function populateFilters() {
@@ -196,7 +198,7 @@ function transposeABCNotation(abc, transposeAmount) {
                         <div class="reference-item">
                             ${ref.artists ? `<div class="artists">${ref.artists}</div>` : ''}
                             ${ref.url ? `<div class="url"><a href="${ref.url}" target="_blank">${ref.url}</a></div>` : ''}
-                            ${ref.notes ? `<div class="notes">${ref.notes}</div>` : ''}
+                            ${ref.notes ? `<div class="notes">${ref.notes.replace(/\n/g, '<br />')}</div>` : ''}
                         </div>
                     `;
                 });
@@ -282,7 +284,7 @@ function transposeABCNotation(abc, transposeAmount) {
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            initializeData();
+            initialiseData();
 
             document.getElementById('searchInput').addEventListener('input', applyFilters);
             document.getElementById('rhythmFilter').addEventListener('change', applyFilters);
