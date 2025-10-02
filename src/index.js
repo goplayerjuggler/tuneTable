@@ -75,7 +75,19 @@ function processTuneData(tune) {
 }
 
 function initialiseData() {
-  tunesData = tunesDataRaw.tunes.map(processTuneData);
+  tunesData = tunesDataRaw.tunes
+    .map(processTuneData)
+    .sort((a, b) =>
+      a.rhythm === b.rhythm
+        ? a.name === b.name
+          ? 0
+          : a.name < b.name
+          ? -1
+          : 1
+        : a.rhythm < b.rhythm
+        ? -1
+        : 1
+    ); //default sort by name
   filteredData = [...tunesData];
   populateFilters();
   renderTable();
@@ -107,11 +119,9 @@ function openABCModal(tune) {
   if (!tune.abc) return;
 
   const modal = document.getElementById("abcModal");
-  const modalTitle = document.getElementById("modalTitle");
   const abcRendered = document.getElementById("abcRendered");
   const abcText = document.getElementById("abcText");
 
-  modalTitle.textContent = tune.name;
   currentTuneABC = tune.abc;
   currentTranspose = 0;
   updateABCDisplay();
@@ -214,7 +224,8 @@ function renderTable() {
                                 ? `<div class="notes">${ref.notes.replace(
                                     /\n/g,
                                     "<br />"
-                                  )}</div>`
+                                  ).replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')// transforms markdown links to HTML anchor tags:
+                                }</div>`
                                 : ""
                             }
                         </div>
@@ -249,6 +260,7 @@ function renderTable() {
 
     tbody.appendChild(row);
   });
+  document.getElementById("spCount").innerText = `${filteredData.length}/${tunesData.length}`;
 }
 
 function applyFilters() {
@@ -273,6 +285,13 @@ function applyFilters() {
 
     return matchesSearch && matchesRhythm && matchesKey;
   });
+
+  renderTable();
+}
+function filterByName(searchTerm) {
+  filteredData = tunesData.filter((tune) =>
+    tune.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   renderTable();
 }
@@ -314,18 +333,22 @@ function sortData(column) {
 document.addEventListener("DOMContentLoaded", function () {
   initialiseData();
 
-  sortData("rhythm");
-  sortData("rhythm"); //default sort
   let params = new URLSearchParams(new URL(window.location).search.slice(1));
   if (params.has("q")) {
     let q = params.get("q");
     if (q) {
       document.getElementById("searchInput").value = q;
       applyFilters();
-      if (filteredData.length === 1 && filteredData[0].abc) {
-        openABCModal(filteredData[0]);
-      }
     }
+  }
+  if (params.has("n")) {
+    let n = params.get("n");
+    if (n) {
+      filterByName(n);
+    }
+  }
+  if (filteredData.length === 1 && filteredData[0].abc) {
+    openABCModal(filteredData[0]);
   }
 
   document
