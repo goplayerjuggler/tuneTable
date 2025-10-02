@@ -79,8 +79,6 @@ function initialiseData() {
   filteredData = [...tunesData];
   populateFilters();
   renderTable();
-  sortData("rhythm");
-  sortData("rhythm"); //default sort
 }
 
 function populateFilters() {
@@ -315,6 +313,20 @@ function sortData(column) {
 
 document.addEventListener("DOMContentLoaded", function () {
   initialiseData();
+
+  sortData("rhythm");
+  sortData("rhythm"); //default sort
+  let params = new URLSearchParams(new URL(window.location).search.slice(1));
+  if (params.has("q")) {
+    let q = params.get("q");
+    if (q) {
+      document.getElementById("searchInput").value = q;
+      applyFilters();
+      if (filteredData.length === 1 && filteredData[0].abc) {
+        openABCModal(filteredData[0]);
+      }
+    }
+  }
 
   document
     .getElementById("searchInput")
