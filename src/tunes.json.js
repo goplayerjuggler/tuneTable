@@ -7,11 +7,11 @@ export default
 X: 2
 T: Maud Millar
 T: version of 2025-03-11%2024-08-21 %2024-06-27 %2025-04-11
-R: (single) reel
+R: reel (single)
 Q:1/4=110
 M: 4/4
 L: 1/16
-K: G maj
+K: G
 P:Part I
 gf|"C(E)"edBA "D(F#)"GEDE "G"G2"^v1"BG "^v2"dGBd|"C(E)""^v3,v4"e2dB A2GA "D(F#)"Beed efgf|
 "C(E)"edBA "D(F#)"GEDE   "G""^v5"G2BG dGBd|"Em"e2dB A2GA "D"Beed "^v6"e2ge||
@@ -225,9 +225,10 @@ K: E aeolian
         {
             abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
-T: Bransle d’écosse — déstructurée ; à 3 temps
+T: Bransle d’Écosse — déstructurée ; à 3 temps
 C:Malcolm Schonfield %2025-07-29, 2025-09-05, 2025-10-02
 M: 3/4
+R: waltz
 L: 1/8
 P:ABAC
 N:
@@ -243,8 +244,9 @@ K: E dorian
 [P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`},
         {
             abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
-T: Bransle d’écosse
+T: Bransle d’Écosse
 M: 6/4
+R: bransle
 L: 1/16
 Q: 1/4=80
 K: E dorian
@@ -263,7 +265,7 @@ F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 R: barndance
 M: 4/4
 L: 1/8
-K: A maj
+K: A
 %
 % Use an Accordion sound when playing the melody:
 %%MIDI program 21
@@ -286,7 +288,7 @@ F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 R: barndance
 M: 4/4
 L: 1/8
-K: G maj
+K: G
 %
 % Use an Accordion sound when playing the melody:
 %%MIDI program 21
@@ -338,7 +340,7 @@ P:Ⅱ
             name: "The Killavil Fancy",
             key: "G",
             origin: 'Ireland',
-            rhythm: "(single) reel)",
+            rhythm: "reel (single)",
             references: [
                 {
                     artists: "Éimhear Flannery & Paul De Grae",
@@ -357,7 +359,7 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
             name: "The Dogs Among The Bushes",
             key: "G",
             origin: 'Ireland',
-            rhythm: "(single) reel)",
+            rhythm: "reel (single)",
             references: [
                 {
                     artists: "Éimhear Flannery & Paul De Grae",
@@ -376,7 +378,7 @@ G - - - | D - - - | G - - (D) | G - D - ||
             name: "The Drunken Tinker",
             key: "A dorian",
             origin: 'Ireland',
-            rhythm: "(single) reel",
+            rhythm: "reel (single)",
             references: [
                 {
                     artists: "",
@@ -471,6 +473,24 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `}
             scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/159#setting35527" }]
         },
         {
+            abc:`
+X: 1
+T: Patsy Geary’s
+R: slide
+M: 12/8
+L: 1/8
+Z:abc-transcription Malcolm Schonfield %2025-03-26
+Z:abc-transcription used this score as a starting point: https://thesession.org/tunes/325#setting325
+K: D
+P:Ⅰ
+AG|:"D"F2 A AFA "(Dsus4?)"B=cB A2 G|"D"F2 A d2 e ~f3 fef|
+"G"~g3 fgf "D"efe d2 B|1 "D"ABA AFD "A"~E3 EAG:|2 "A" A2d f2e "D" ~d3 d2 e||
+P:Ⅱ
+|:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
+"A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
+`
+        },
+        {
             name: "Denis Murphy’s",
             key: "D",
             origin: 'Ireland',
@@ -492,7 +512,7 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `}
             name: "The Wind That Shakes The Barley",
             key: "D",
             origin: 'Ireland',
-            rhythm: "(single) reel",
+            rhythm: "reel (single)",
             references: [
                 {
                     notes: "ALORA: #2 in the Maud Millar set"
@@ -523,5 +543,54 @@ G C D - | G C D G :|
 G C G D | G C D G :|`}]
 ,scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/440#setting48642" }]
 }
+,{abc:`X: 1
+T: Leave it down easy
+S: As played by Danny Smith, 1992 or 1993
+F:https://www.itma.ie/playlists/first_itma_fieldrecordings_1992/?track=7
+R: jig
+N:
+N: 1. Notated in 12/8 on purpose; I think it’s better that way for this sort of jig.
+N: 2. I tried to transcribe the notes more or less as they were played; as usual 
+N: I’ve omitted the phrasing and ornaments, or embellishments.
+N: 3. The variation indicated by (*) the first time around, with a little bit at the 
+N: bottom of the score could be an accident or “by mistake” but I rather like it.
+N: 4. This is clearly the tune The Lilting Banshee a.k.a. The Miller Of Glanmire; 
+N: it’s mostly played a bit differently in sessions these days. 
+D:ITMA – First ITMA Audio Field Recordings, 1992-93
+I:abc-charset utf-8
+Z:abc-transcription Malcolm Schonfield% 2024-09-03
+Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+M: 12/8
+L: 1/8
+K: A dorian
+{G}!fermata!A2G|:EAA EAA   BAB "^(*)"G2A|Bde "^(**)"dBA   BAB GED|
+EAA EAA   BAB G2A|Bde dBA   BAA [1 A2G :| [2 A2z ||
+eaa age   dBA G2A|Bde dBA   def gag|
+eaa age   dBA G2A|Bde dBA   BAA A2z|
+eaa age   dBA G2A|Bde dBA   d"<("e">)"f g2g| 
+a3 age   dBA G2A|Bde dBA   BAA !fermata!A3|]
+P:note for (*): the first time round there was an E here rather than a G:
+EAA EAA   BAB "here"E2A| 
+P:note for (**): the first time round maybe it was a C#, like this (but I’m not sure):
+d^cAy
+`
+,scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/60" }]}, 
+{abc:`
+%230717
+X: 1
+T: The Silver Slipper
+R: ? + hop jig
+S: John Doherty (recorded between 1968 and 1974)
+N: 1. Mostly swung throughout – so in general “𝅘𝅥𝅮𝅘𝅥𝅮=𝅘𝅥𝅘𝅥𝅮”
+D: The Floating Bow (1996)
+C:Traditional
+M: 2/2
+L: 1/8
+K: Dmaj
+|:FD ~D2 FD ~D2|AFdA FD ~D2|FDFA B<GEA:|
+M: 3/4
+|:FA dc d2|FA dA (3Bcd|FA dc ~d2|BG EF GE|
+FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
+`, references:[{notes:`1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)`}]}
 ]
 }
