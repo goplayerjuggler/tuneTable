@@ -515,12 +515,12 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `}
         }
 ,{
     name:"Christmas Eve", 
-    rhythm:"reel", origin:"Ireland"
+    rhythm:"reel", origin:"Ireland", key:"G"
     ,references: [{notes: `Composed by Tommy Coen.
 Chords (TBC):
-G - | D G | D G | D G :|
-G C | D - | G C | D G :|
-G C | G D | G C | D G :|`}]
+G - D G | D G D G :|
+G C D - | G C D G :|
+G C G D | G C D G :|`}]
 ,scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/440#setting48642" }]
 }
 ]
