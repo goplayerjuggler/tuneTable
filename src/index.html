@@ -226,6 +226,7 @@
           opacity: 1;
         }
       }
+
       .modal-content {
         background-color: white;
         margin: 2% auto;
@@ -235,17 +236,25 @@
         border-radius: 15px;
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         overflow-y: auto;
+        overflow-x: auto;
         position: relative;
       }
 
       .modal-header {
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 20px;
       }
 
       .modal-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+      }
+
+      .control-row {
         display: flex;
         gap: 10px;
         align-items: center;
@@ -268,7 +277,9 @@
       }
 
       .toggle-view-btn,
-      .close-btn {
+      .close-btn,
+      .transpose-btn,
+      .nav-btn {
         padding: 10px 20px;
         border: none;
         border-radius: 8px;
@@ -278,12 +289,16 @@
         transition: all 0.3s ease;
       }
 
-      .toggle-view-btn {
+      .toggle-view-btn,
+      .transpose-btn,
+      .nav-btn {
         background: linear-gradient(135deg, #667eea, #764ba2);
         color: white;
       }
 
-      .toggle-view-btn:hover {
+      .toggle-view-btn:hover,
+      .transpose-btn:hover,
+      .nav-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
       }
@@ -303,8 +318,16 @@
         transform: scale(1.1);
       }
 
+      #abcCounter {
+        font-weight: 600;
+        color: #2c3e50;
+        padding: 0 10px;
+      }
+
       .abc-rendered {
         margin-top: 20px;
+        overflow-x: auto;
+        padding-right: 20px;
       }
 
       .abc-text {
@@ -326,6 +349,18 @@
       }
 
       .abc-text.active {
+        display: block;
+      }
+
+      #abcRendered {
+        max-width: 100%;
+        font-size: 14px;
+        min-width: 800px;
+      }
+
+      #abcRendered svg {
+        max-width: none;
+        height: auto;
         display: block;
       }
 
@@ -353,13 +388,9 @@
           max-width: 200px;
         }
 
-        #abcRendered {
-          max-width: 800px; /* limit the width */
-          font-size: 14px; /* this affects the overall rendering size */
-        }
-        #abcRendered svg {
-          max-width: 100%;
-          height: auto;
+        .control-row {
+          flex-wrap: wrap;
+          justify-content: flex-end;
         }
       }
     </style>
@@ -367,7 +398,7 @@
 
   <body>
     <div class="container">
-      <h1>🎵 Tunes</h1>
+      <h1>&#127925; Tunes</h1>
 
       <div class="controls">
         <input
@@ -405,12 +436,19 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="modal-controls">
-            <button id="transposeDownBtn">♭ Down</button>
-            <button id="transposeUpBtn">♯ Up</button>
-            <button class="toggle-view-btn" id="toggleViewBtn">
-              Show ABC Text
-            </button>
-            <button class="close-btn" id="closeModalBtn">&times;</button>
+            <div class="control-row">
+              <button id="transposeDownBtn">♭ Down</button>
+              <button id="transposeUpBtn">♯ Up</button>
+              <button class="toggle-view-btn" id="toggleViewBtn">
+                Show ABC Text
+              </button>
+              <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="control-row">
+              <button id="prevABCBtn">← Previous</button>
+              <span id="abcCounter"></span>
+              <button id="nextABCBtn">Next →</button>
+            </div>
           </div>
         </div>
         <div id="abcRendered" class="abc-rendered"></div>
@@ -419,6 +457,7 @@
         </div>
       </div>
     </div>
+
     <div id="footer">
       <span id="spCount"></span> tunes<br />
       Tune data last updated: <span id="spLastUpdated"></span><br />

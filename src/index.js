@@ -7,6 +7,8 @@ let currentSort = { column: null, direction: "asc" };
 let currentViewMode = "rendered";
 let currentTranspose = 0;
 let currentTuneABC = "";
+let currentABCArray = [];
+let currentABCIndex = 0;
 
 function parseABC(abc) {
   const lines = abc.split("\n");
@@ -39,30 +41,40 @@ function processTuneData(tune) {
   const processed = { ...tune };
 
   if (tune.abc) {
-    const abcMeta = parseABC(tune.abc);
+    // Handle both string and array formats
+    const abcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
 
-    if (!processed.name && abcMeta.title) {
-      processed.name = abcMeta.title;
-    }
-    if (!processed.rhythm && abcMeta.rhythm) {
-      processed.rhythm = abcMeta.rhythm;
-    }
-    if (!processed.key && abcMeta.key) {
-      processed.key = abcMeta.key;
-    }
+    // Process all ABC entries for metadata
+    abcArray.forEach((abcString, index) => {
+      const abcMeta = parseABC(abcString);
 
-    if (!processed.references) {
-      processed.references = [];
-    }
+      // Use first ABC for name, rhythm, and key if not already set
+      if (index === 0) {
+        if (!processed.name && abcMeta.title) {
+          processed.name = abcMeta.title;
+        }
+        if (!processed.rhythm && abcMeta.rhythm) {
+          processed.rhythm = abcMeta.rhythm;
+        }
+        if (!processed.key && abcMeta.key) {
+          processed.key = abcMeta.key;
+        }
+      }
 
-    if (abcMeta.source || abcMeta.url || abcMeta.recording) {
-      const abcRef = {
-        artists: abcMeta.source || "",
-        url: abcMeta.url || "",
-        notes: abcMeta.recording || "",
-      };
-      processed.references.push(abcRef);
-    }
+      if (!processed.references) {
+        processed.references = [];
+      }
+
+      // Add reference from each ABC that has source/url/recording
+      if (abcMeta.source || abcMeta.url || abcMeta.recording) {
+        const abcRef = {
+          artists: abcMeta.source || "",
+          url: abcMeta.url || "",
+          notes: abcMeta.recording || "",
+        };
+        processed.references.push(abcRef);
+      }
+    });
   }
 
   if (!processed.name) processed.name = "Untitled";
@@ -122,9 +134,14 @@ function openABCModal(tune) {
   const abcRendered = document.getElementById("abcRendered");
   const abcText = document.getElementById("abcText");
 
-  currentTuneABC = tune.abc;
+  // Handle both string and array formats
+  currentABCArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
+  currentABCIndex = 0;
+  currentTuneABC = currentABCArray[0];
   currentTranspose = 0;
+
   updateABCDisplay();
+  updateNavigationButtons();
 
   currentViewMode = "rendered";
   abcRendered.style.display = "block";
@@ -138,6 +155,7 @@ function closeABCModal() {
   const modal = document.getElementById("abcModal");
   modal.classList.remove("active");
   currentTranspose = 0;
+  currentABCIndex = 0;
 }
 
 function toggleView() {
@@ -155,6 +173,34 @@ function toggleView() {
     abcRendered.style.display = "block";
     abcText.classList.remove("active");
     toggleBtn.textContent = "Show ABC Text";
+  }
+}
+
+function navigateABC(direction) {
+  currentABCIndex += direction;
+  if (currentABCIndex < 0) currentABCIndex = currentABCArray.length - 1;
+  if (currentABCIndex >= currentABCArray.length) currentABCIndex = 0;
+
+  currentTuneABC = currentABCArray[currentABCIndex];
+  currentTranspose = 0;
+  updateABCDisplay();
+  updateNavigationButtons();
+}
+
+function updateNavigationButtons() {
+  const prevBtn = document.getElementById("prevABCBtn");
+  const nextBtn = document.getElementById("nextABCBtn");
+  const counter = document.getElementById("abcCounter");
+
+  if (currentABCArray.length > 1) {
+    prevBtn.style.display = "inline-block";
+    nextBtn.style.display = "inline-block";
+    counter.style.display = "inline-block";
+    counter.textContent = `${currentABCIndex + 1} / ${currentABCArray.length}`;
+  } else {
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+    counter.style.display = "none";
   }
 }
 
@@ -386,6 +432,13 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("transposeDownBtn")
     .addEventListener("click", () => transposeABC(-1));
 
+  document
+    .getElementById("prevABCBtn")
+    .addEventListener("click", () => navigateABC(-1));
+  document
+    .getElementById("nextABCBtn")
+    .addEventListener("click", () => navigateABC(1));
+
   document.getElementById("abcModal").addEventListener("click", function (e) {
     if (e.target === this) {
       closeABCModal();
@@ -395,6 +448,14 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       closeABCModal();
+    } else if (
+      document.getElementById("abcModal").classList.contains("active")
+    ) {
+      if (e.key === "ArrowLeft") {
+        navigateABC(-1);
+      } else if (e.key === "ArrowRight") {
+        navigateABC(1);
+      }
     }
   });
 });
