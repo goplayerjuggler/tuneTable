@@ -1,7 +1,9 @@
 export default  
-  
-[{
-            abc: `
+{
+    lastUpdate:'2025-10-02',
+    tunes:
+    [{
+                abc: `
 X: 2
 T: Maud Millar
 T: version of 2025-03-11%2024-08-21 %2024-06-27 %2025-04-11
@@ -47,7 +49,7 @@ N:3. There’s a lot of other information about this song and its variants here:
 N:https://mainlynorfolk.info/nic.jones/songs/thespanishlady.html
 N:4. Interesting things are happening for the chord/harmony backing in bar number 6. 
 N:There’s a sort of walking bass feel going 
-N:downwards stepwise: D C B A. I’m not 100% sure about the chords I put down there; 
+N:downwards stepwise: D C B A. I’m not 100％ sure about the chords I put down there; 
 N:there may well be good alternatives.
 N:5. I decided not to attempt to give any rhythmic details for how
 N:the song was actually sung. There’s an enormous amount of rhythmical variation in there, 
@@ -224,7 +226,7 @@ K: E aeolian
             abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
 T: Bransle d’écosse — déstructurée ; à 3 temps
-C:Malcolm Schonfield %2025-07-29, 2025-09-05
+C:Malcolm Schonfield %2025-07-29, 2025-09-05, 2025-10-02
 M: 3/4
 L: 1/8
 P:ABAC
@@ -234,11 +236,11 @@ N: (http://creativecommons.org/licenses/by-nc/2.0/fr/).
 N: This work is licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License 
 N: (http://creativecommons.org/licenses/by-nc/3.0/).
 K: E dorian
-[P:A]|: "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" BdcB "D" (3AGF |
-        "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" (3BAG FE "Bm" FD :|
+[P:A]|: "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" Bd "D"cB (3AGF |
+        "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" (3BAG "Bm"FE FD :|
 [P:B]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" FE | "Em"B2 AG "D" FE | 
-        "Em"B2 Bc "D"dc | "Em"(3BAG FE "Bm"FD :|
-[P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG FE "Bm"FD :|`},
+        "Em"B2 Bc "D"dc | "Em"(3BAG "Bm"FE FD :|
+[P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`},
         {
             abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d’écosse
@@ -342,7 +344,11 @@ P:Ⅱ
                     artists: "Éimhear Flannery & Paul De Grae",
                     url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
                     notes: "in a set with The Dogs Among The Bushes"
-                }
+                },
+                {notes: `Chords (TBC):
+G (D) C - | G (D) C - | G (D) C - | G (D) C - ||
+G (C) G (D) | G (C) G - | G (C) G (D) | C - G C || 
+`}
             ]
             ,
             scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/576" }]
@@ -357,7 +363,11 @@ P:Ⅱ
                     artists: "Éimhear Flannery & Paul De Grae",
                     url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
                     notes: "in a set with The Killavil Fancy"
-                }
+                },
+                {notes: `Chords (TBC):
+G - - C | G - D - | G - - C | G - D - ||
+G - - - | D - - - | G - - (D) | G - D - ||
+`}
             ]
             ,
             scores: [{ type: "tune", name: "tradchords", url: "https://tradchords.org/?tune=595" }]
@@ -405,7 +415,26 @@ P:Ⅱ
                     artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
                     url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
                     notes: "(you have to click on the link in the player) 7:58 (-06:48)"
-                }
+                },
+                {notes: `Chords (TBC):
+Part A
+D D D Em | D G A D
+D D D Em | D G A D
+
+Part B
+D D D Em | D G A D
+D D D Em | D G A D
+
+Part C
+D D D Em | D D A D
+D D D Em | G D A D
+
+Part D
+D D D A? | D G A D
+D D D A  | G D A D
+
+Part A - alternative 1st bar
+D - (D/F) (D, Dsus4, G or Em) D - Em - `}
             ],
             scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/1552" }]
         },
@@ -484,7 +513,15 @@ P:Ⅱ
             ],
             scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/118#setting55404" }]
         }
-
-
-        ];
-        
+,{
+    name:"Christmas Eve", 
+    rhythm:"reel", origin:"Ireland"
+    ,references: [{notes: `Composed by Tommy Coen.
+Chords (TBC):
+G - | D G | D G | D G :|
+G C | D - | G C | D G :|
+G C | G D | G C | D G :|`}]
+,scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/440#setting48642" }]
+}
+]
+}
