@@ -75,7 +75,6 @@ let currentTuneABC = "";
 
         function initialiseData() {
             tunesData = tunesDataRaw.tunes.map(processTuneData);
-            document.getElementById('spLastUpdated').innerHTML = tunesDataRaw.lastUpdate
             filteredData = [...tunesData];
             populateFilters();
             renderTable();
@@ -300,6 +299,9 @@ function transposeABCNotation(abc, transposeAmount) {
 
             document.getElementById('closeModalBtn').addEventListener('click', closeABCModal);
             document.getElementById('toggleViewBtn').addEventListener('click', toggleView);
+            
+            document.getElementById('spLastUpdated').innerHTML = tunesDataRaw.lastUpdate
+            
             
   document
     .getElementById("transposeUpBtn")
