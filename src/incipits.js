@@ -1,6 +1,6 @@
 ///adapted from abctools
 "use strict";
-const incipitLength = 35
+const incipitLength = 35;
 //
 // Clean an incipit line
 //
@@ -24,8 +24,8 @@ function cleanIncipitLine(theTextIncipit) {
   theTextIncipit = theTextIncipit.replace(searchRegExp, "");
   //console.log(theTextIncipit);
 
-  // Sanitize !*! style annotations
-  searchRegExp = /![^!\n]*!/gm;
+  // Sanitize !*! style annotations, but keep !fermata!
+  searchRegExp = /!(?!fermata!)[^!\n]*!/gm;
   theTextIncipit = theTextIncipit.replace(searchRegExp, "");
   //console.log(theTextIncipit);
 
@@ -40,18 +40,23 @@ function cleanIncipitLine(theTextIncipit) {
   //console.log(theTextIncipit);
 
   // Strip out brackets
-//   theTextIncipit = theTextIncipit.replaceAll("[", "");
+  //   theTextIncipit = theTextIncipit.replaceAll("[", "");
   //console.log(theTextIncipit);
 
   // Strip out brackets
-//   theTextIncipit = theTextIncipit.replaceAll("]", "");
+  //   theTextIncipit = theTextIncipit.replaceAll("]", "");
   //console.log(theTextIncipit);
 
   // Strip out continuations
   theTextIncipit = theTextIncipit.replaceAll("\\", "");
-  
+
   // Segno
   theTextIncipit = theTextIncipit.replaceAll("S", "");
+
+  // Strip out comments
+  theTextIncipit = theTextIncipit.replace(/"[^"]+"/gm, "");
+  // Strip out inline parts
+  theTextIncipit = theTextIncipit.replace(/\[P:[Ⅰ\w]\]/gm, "");
 
   //console.log("Final raw incipit :");
   //console.log(theTextIncipit);
@@ -223,11 +228,6 @@ export default (theTune) => {
   // Strip out chord markings
   theTune = StripChordsOne(theTune);
 
-  // Strip out comments
-  theTune = theTune.replace(/"[^"]+"/gm, "");
-  // Strip out inline parts
-  theTune = theTune.replace(/\[P:\w\]/gm, "");
-
   // Parse out the first few measures
   let theLines = theTune.split("\n");
 
@@ -267,7 +267,6 @@ export default (theTune) => {
     }
   }
 
-
   // Find the first line of the tune that has measure separators
   for (k = 0; k < nLines; ++k) {
     theTextIncipit = theLines[k];
@@ -280,50 +279,53 @@ export default (theTune) => {
     // Clean out the incipit line of any annotations besides notes and bar lines
     theTextIncipit = cleanIncipitLine(theTextIncipit);
 
-    // Split the incipit
-    theRawSplits = theTextIncipit.split("|");
+    // // Split the incipit
+    // theRawSplits = theTextIncipit.split("|");
 
-    theSplitIncipit = [];
+    // theSplitIncipit = [];
 
-    nSplits = theRawSplits.length;
+    // nSplits = theRawSplits.length;
 
-    // Strip out any blank splits
-    for (j = 0; j < nSplits; ++j) {
-      if (theRawSplits[j] != "") {
-        theSplitIncipit.push(theRawSplits[j]);
-      }
-    }
+    // // Strip out any blank splits
+    // for (j = 0; j < nSplits; ++j) {
+    //   if (theRawSplits[j] != "") {
+    //     theSplitIncipit.push(theRawSplits[j]);
+    //   }
+    // }
 
-    // Use just the first few measures
-    nSplits = theSplitIncipit.length;
+    // // Use just the first few measures
+    // nSplits = theSplitIncipit.length;
 
-    splitAcc = "";
+    // splitAcc = "";
 
-    for (j = 0; j < nSplits; ++j) {
-      theSplitIncipit[j] = theSplitIncipit[j].trim();
+    // for (j = 0; j < nSplits; ++j) {
+    //   theSplitIncipit[j] = theSplitIncipit[j].trim();
 
-      splitAcc += theSplitIncipit[j];
+    //   splitAcc += theSplitIncipit[j];
 
-      if (j != nSplits - 1) {
-        splitAcc += " | ";
-      }
-    }
+    //   if (j != nSplits - 1) {
+    //     splitAcc += " | ";
+    //   }
+    // }
 
-    theTextIncipit = splitAcc;
+    // theTextIncipit = splitAcc;
 
     // Strip initial bar line
-    if (theTextIncipit.indexOf(" | ") == 0) {
-      theTextIncipit = theTextIncipit.substring(3, theTextIncipit.length);
+    // if (theTextIncipit.indexOf(" | ") == 0) {
+    //   theTextIncipit = theTextIncipit.substring(3, theTextIncipit.length);
+    // }
+    if (theTextIncipit.indexOf("|") == 0) {
+      theTextIncipit = theTextIncipit.substring(1);
     }
-	break
+    break;
     //theTextIncipits.push(theTextIncipit);
   }
   // Limit the incipit length
-    if (theTextIncipit.length > incipitLength) {
-      theTextIncipit = theTextIncipit.substring(0, incipitLength);
-      theTextIncipit = theTextIncipit.trim();
-    } else {
-      theTextIncipit = theTextIncipit.trim();
-    }
+  if (theTextIncipit.length > incipitLength) {
+    theTextIncipit = theTextIncipit.substring(0, incipitLength);
+    theTextIncipit = theTextIncipit.trim();
+  } else {
+    theTextIncipit = theTextIncipit.trim();
+  }
   return `X:1\n${theM}\n${theL}\n${theKey}\n${theTextIncipit}`;
 };

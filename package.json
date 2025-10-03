@@ -39,6 +39,6 @@
     }
   ],
   "dependencies": {
-    "abcjs": "^6.5.2"
+    "abcjs": "6.4.0"
   }
 }
