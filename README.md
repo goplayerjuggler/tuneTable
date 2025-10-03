@@ -6,6 +6,7 @@ Features:
 * sorting and filtering of the list of tunes
 * can add links to audio references to the tunes along with notes
 * tunes can have multiple settings in ABC
+* other lists of tunes in ABC format can be imported
 
 ## Current list of tunes
 It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
