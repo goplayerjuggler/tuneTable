@@ -122,7 +122,7 @@ T: Do It Fair
 S: Frank & Pat Reilly
 N: 1. A hop jig played in the good old way by two County Leitrim fiddlers.
 N: 2. Quavers are played “straight”, and not “swung”;  writing this in 9/8 would be wrong here, IMO.
-N: You could perhaps write that as “𝅘𝅥𝅮𝅘𝅥𝅮 ≠ 𝅘𝅥𝅘𝅥𝅮”.
+N: You could perhaps write that as “♪♪ ≠ ♩♪”.
 N: In the recording this was played a few moments after Top The Candle.
 N:3. Chords added by me — not in the original recording
 R: hop jig
@@ -153,7 +153,7 @@ N:1. A hop jig played in the good old way by two County
 N:Leitrim fiddlers.
 N:2. Quavers are played “straight”, and not “swung”;  writing
 N:this in 9/8 would be wrong here, IMO.
-N:You could perhaps write that as “𝅘𝅥𝅮𝅘𝅥𝅮 ≠ 𝅘𝅥𝅘𝅥𝅮”.
+N:You could perhaps write that as “♪♪ ≠ ♩♪”.
 N:In the recording this was played a few moments before Do it
 N:Fair.
 N:3. (2024-11-08) For this version I added chords and
@@ -699,7 +699,7 @@ X: 1
 T: The Silver Slipper
 R: ? + hop jig
 S: John Doherty (recorded between 1968 and 1974)
-N: 1. Mostly swung throughout – so in general “𝅘𝅥𝅮𝅘𝅥𝅮=𝅘𝅥𝅘𝅥𝅮”
+N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 D: The Floating Bow (1996)
 C:Traditional
 M: 2/2
