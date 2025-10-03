@@ -1,10 +1,8 @@
 
-# Logs
-log.txt
+# Local perso files
+log.md
+*bourrée*.txt
+*workspace
 # Dependency directories
 node_modules/
-
 dist/
-.DS_Store
-*workspace
-*bourrée*.txt

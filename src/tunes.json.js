@@ -1,9 +1,8 @@
-export default  
-{
-    lastUpdate:'2025-10-03',
-    tunes:
-    [{
-                abc: `
+export default {
+  lastUpdate: "2025-10-03",
+  tunes: [
+    {
+      abc: `
 X: 2
 T: Maud Millar
 T: version of 2025-03-11%2024-08-21 %2024-06-27 %2025-04-11
@@ -19,12 +18,15 @@ P:Part II
 "G"dega bgg2   "D"agef "G"g3e|"G"dega bgg2 "C"aged eage|
 "G"dega bgg2   "D"agef "G"g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
 !coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
-[P:v1]Be||[P:v2]d2||[P:v3](3ege||[P:v4]eBdB ABGA||[P:v5](3GGG||[P:v6]ef||`}, {
-            abc: `
+[P:v1]Be||[P:v2]d2||[P:v3](3ege||[P:v4]eBdB ABGA||[P:v5](3GGG||[P:v6]ef||`,
+    },
+    {
+      abc: `
 %The Spanish Lady
 %abc-2.1
 X:1
 T:The Spanish Lady
+M:3/4
 S:As sung by Brian Dunne, 25 May 2011
 R:song
 Q:1/4=70
@@ -110,9 +112,10 @@ w: And~in all me life I ne’er did see A maid so neat a-bout the sole
 [P:Chorus]F/E/| [M:3/4]"D"DD DE FE | [M:4/4] "Bm"DB,-B,2 z4, | [M:3/4] "D"D>D DE FA | [M:4/4] "G"B4z2z
 w: She had twen-ty eight-een six-teen four-teen * Twelve ten eight six four two none 
 B/c/ | "Bm"dc BA "F#m"FE DE | [M:3/4] "Em7"FF "F#m7"FE "G6"DB, | [M:4/4]"A"A,4 z2z
-w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`},
-        {
-            abc: `
+w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`,
+    },
+    {
+      abc: `
 
 X: 1
 T: Do It Fair
@@ -139,8 +142,11 @@ P:Ⅰ
 P:Ⅱ
 "D"~f2fd "Bm"fa | "Em7"be2d (c/B/A) | "D"f2fd "A"fa |"D"Ad2A (F/E/D)|
 "D"~f2fd "Bm"fa | "Em7"be2d (c/B/A) | "D"(f/g/f) "(A)"(e/f/e) "Bm"d2 |"D"Ad2A (F/E/D)!D.C.!|]
-`, references: [{notes:"ALORA: #2 in the Top The Candle set"}]}, {
-            abc: `X: 1
+`,
+      references: [{ notes: "ALORA: #2 in the Top The Candle set" }],
+    },
+    {
+      abc: `X: 1
 T: Top The Candle
 S: Frank & Pat Reilly
 N:1. A hop jig played in the good old way by two County
@@ -166,8 +172,10 @@ P:Ⅰ
 P:Ⅱ
 "G"~b2 ag fd|"Am"ea2g fd|"C"{d}e2 dc BG|"G"DG2B Ad|
 "G"~b2 ag fd|"Am"ea2g fd|"Am/C"{d}e2 dc BA|"D"GB Ac BA!D.C.!|]
-`}, {
-            abc: `X: 8
+`,
+    },
+    {
+      abc: `X: 8
 T: Tommy’s Tarbukas
 C: Alasdair Fraser
 R: reel
@@ -179,13 +187,14 @@ K: B aeolian
 de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
-"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `},
-        {
-            name: "The Kid On The Mountain",
-            key: "E aeolian",
-            origin: 'Ireland',
-            rhythm: "slip jig",
-            abc: `%The Kid On The Mountain
+"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
+    },
+    {
+      name: "The Kid On The Mountain",
+      key: "E aeolian",
+      origin: "Ireland",
+      rhythm: "slip jig",
+      abc: `%The Kid On The Mountain
 X: 1
 T: The Kid On The Mountain
 N:
@@ -208,27 +217,33 @@ K: E aeolian
 |:[P:D]"Em"eBB e2f gfg eBB efg "Bm7"afd|"Em"eBB e2f g2a bag "D"fag fed:|
 |:[P:E]"Em"edB "D"dBA "G"G2A Bee "Bm7"dBA BGE|"G"edB "D"dBA "G"G2A BAG "D"FAG FED:|
 |:[P:F]"Em"B,EE ABG "Bm7"E2D "Em"B,EE EFG "Bm7"AFD | "Em"B,EE ABG E2B BAG "D"FAG FED :|`,
-            references: [
-                {
-                    artists: "Michael Gorman",
-                    url: "https://music.youtube.com/watch?v=Ftm1147osmo",
-                    notes: ""
-                },
-                {
-                    artists: "Andy McGann",
-                    url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
-                    notes: ""
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/52" }]
+      references: [
+        {
+          artists: "Michael Gorman",
+          url: "https://music.youtube.com/watch?v=Ftm1147osmo",
+          notes: "",
         },
         {
-            abc: `% Bransle d’écosse — détournée, à 3 temps
+          artists: "Andy McGann",
+          url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
+          notes: "",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/52",
+        },
+      ],
+    },
+    {
+      abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
 T: Bransle d’Écosse — déstructurée ; à 3 temps
 C:Malcolm Schonfield %2025-07-29, 2025-09-05, 2025-10-02
 M: 3/4
-R: waltz
+R: polska?
 L: 1/8
 P:ABAC
 N:
@@ -241,9 +256,10 @@ K: E dorian
         "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" (3BAG "Bm"FE FD :|
 [P:B]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" FE | "Em"B2 AG "D" FE | 
         "Em"B2 Bc "D"dc | "Em"(3BAG "Bm"FE FD :|
-[P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`},
-        {
-            abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
+[P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`,
+    },
+    {
+      abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d’Écosse
 M: 6/4
 R: bransle
@@ -253,9 +269,10 @@ K: E dorian
 |: "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "Em"BdcB "A"AG"Bm"FE |
 "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "A"AG"Bm"FE "Bm"FD"Em"E2 :|
 |: "Em"B2Bc "A"dedc  "Em".B2B2 "D"AGFE  "Em"B2AG "Bm"F2E2 |
-[M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`},
-        {
-            abc: `
+[M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`,
+    },
+    {
+      abc: `
 X: 2
 T: Gypsy Princess
 O:Ireland
@@ -277,9 +294,10 @@ K: A
 "A"(c2 c)c .c2c2|"D"BcBA F2 E2|"A"(A2A)c efec|1 "E"B2 .A2 "A"(A2 A)B:|2 "E"B2 .A2 "A"(A2 A)c||
 |:"A"(e2 e)e .e2 e2|BccB ABce|"D"(f2 f)f .f2 f2|"A"BccB ABcd|
 (e2 e)e .e2 e2|BccB ABce|"D"a2 af "E"ecBe|1 "A"c2 .A2 A2 Ac:|2 "A"c2 .A2 A2 AB||
-`},
-        {
-            abc: `X: 1
+`,
+    },
+    {
+      abc: `X: 1
 T: Joe Bane’s
 O:Ireland
 S: Jack Talty & Cormac Begley
@@ -299,9 +317,10 @@ K: G
 ge|"G"dG GA B2AG|d2 .G2 G2 ge|dG GA B2 AG|"D"B2 .A2 A2 Bc |
 "G"dG GA B2 AG|B2d2 "C"g3e|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|
 Bd|"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2 de dB GA|"D"B2 A2 A2 Bd|
-"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|`},
-        {
-            abc: `X: 1
+"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|`,
+    },
+    {
+      abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
 C: Traditional
 R: jig
@@ -321,104 +340,138 @@ P:Ⅰ
 P:Ⅱ
 |:"D"d2 e fed faf gfe| d2 e fed      "Asus4"dcA dcA|
 "D"d2 e fed   faf gfe|"G"dcA "A"BAG [|]1 "D"AFD DFA:|2 "D"AFD D3!D.C.!|]
-`},
+`,
+    },
+    {
+      name: "My Darling Asleep",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "jig",
+      references: [
         {
-            name: "My Darling Asleep",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "jig",
-            references: [
-                {
-                    artists: "Stockton’s Wing",
-                    url: "https://music.youtube.com/watch?v=HkuABOYkWws&si=bDs2E-LaXpOlgP8R",
-                    notes: ""
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/76" }]
+          artists: "Stockton’s Wing",
+          url: "https://music.youtube.com/watch?v=HkuABOYkWws&si=bDs2E-LaXpOlgP8R",
+          notes: "",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/76",
+        },
+      ],
+    },
+    {
+      name: "The Killavil Fancy",
+      key: "G",
+      origin: "Ireland",
+      rhythm: "reel (single)",
+      references: [
+        {
+          artists: "Éimhear Flannery & Paul De Grae",
+          url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
+          notes: "in a set with The Dogs Among The Bushes",
         },
         {
-            name: "The Killavil Fancy",
-            key: "G",
-            origin: 'Ireland',
-            rhythm: "reel (single)",
-            references: [
-                {
-                    artists: "Éimhear Flannery & Paul De Grae",
-                    url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
-                    notes: "in a set with The Dogs Among The Bushes"
-                },
-                {notes: `Chords (TBC):
+          notes: `Chords (TBC):
 G (D) C - | G (D) C - | G (D) C - | G (D) C - ||
 G (C) G (D) | G (C) G - | G (C) G (D) | C - G C || 
-`}
-            ]
-            ,
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/576" }]
+`,
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/576",
+        },
+      ],
+    },
+    {
+      name: "The Dogs Among The Bushes",
+      key: "G",
+      origin: "Ireland",
+      rhythm: "reel (single)",
+      references: [
+        {
+          artists: "Éimhear Flannery & Paul De Grae",
+          url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
+          notes: "in a set with The Killavil Fancy",
         },
         {
-            name: "The Dogs Among The Bushes",
-            key: "G",
-            origin: 'Ireland',
-            rhythm: "reel (single)",
-            references: [
-                {
-                    artists: "Éimhear Flannery & Paul De Grae",
-                    url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
-                    notes: "in a set with The Killavil Fancy"
-                },
-                {notes: `Chords (TBC):
+          notes: `Chords (TBC):
 G - - C | G - D - | G - - C | G - D - ||
 G - - - | D - - - | G - - (D) | G - D - ||
-`}
-            ]
-            ,
-            scores: [{ type: "tune", name: "tradchords", url: "https://tradchords.org/?tune=595" }]
+`,
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "tradchords",
+          url: "https://tradchords.org/?tune=595",
+        },
+      ],
+    },
+    {
+      name: "The Drunken Tinker",
+      key: "A dorian",
+      origin: "Ireland",
+      rhythm: "reel (single)",
+      references: [
+        {
+          artists: "",
+          url: "https://comhaltas.ie/comhaltaslive/comhaltaslive_628_9tribute_concert_to_the_late_ashling_murphy/",
+          notes: "from 4:32 onwards",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/1555",
+        },
+      ],
+    },
+    {
+      name: "The Bucks Of Oranmore",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "reel",
+      references: [
+        {
+          artists: "Stockton’s Wing",
+          url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
+          notes: "0:46 onwards",
         },
         {
-            name: "The Drunken Tinker",
-            key: "A dorian",
-            origin: 'Ireland',
-            rhythm: "reel (single)",
-            references: [
-                {
-                    artists: "",
-                    url: "https://comhaltas.ie/comhaltaslive/comhaltaslive_628_9tribute_concert_to_the_late_ashling_murphy/",
-                    notes: "from 4:32 onwards"
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/1555" }]
+          artists: "Paddy Glackin & Paddy Keenan",
+          url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?si=4bed2eed7e394bfe",
+          notes: "1:44 onwards",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/2",
+        },
+      ],
+    },
+    {
+      name: "Lucy Campbell",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "reel",
+      references: [
+        {
+          artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
+          url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
+          notes: "(you have to click on the link in the player) 7:58 (-06:48)",
         },
         {
-            name: "The Bucks Of Oranmore",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "reel",
-            references: [
-                {
-                    artists: "Stockton’s Wing",
-                    url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
-                    notes: "0:46 onwards"
-                },
-                {
-                    artists: "Paddy Glackin & Paddy Keenan",
-                    url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?si=4bed2eed7e394bfe",
-                    notes: "1:44 onwards"
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/2" }]
-        },
-        {
-            name: "Lucy Campbell",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "reel",
-            references: [
-                {
-                    artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
-                    url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
-                    notes: "(you have to click on the link in the player) 7:58 (-06:48)"
-                },
-                {notes: `Chords (TBC):
+          notes: `Chords (TBC):
 Part A
 D D D Em | D G A D
 D D D Em | D G A D
@@ -436,44 +489,67 @@ D D D A? | D G A D
 D D D A  | G D A D
 
 Part A - alternative 1st bar
-D - (D/F) (D, Dsus4, G or Em) D - Em - `}
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/1552" }]
+D - (D/F) (D, Dsus4, G or Em) D - Em - `,
         },
+      ],
+      scores: [
         {
-            name: "Haste To The Wedding",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "jig",
-            references: [
-                {
-                    artists: "Malachy Bourke, Brian Bourke & Frankie Gavin",
-                    url: "https://music.youtube.com/watch?v=hF9fGvdO8gw&si=RLavrljWDY9WCqL2&t=107",
-                    notes: "in G"
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/582" }]
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/1552",
         },
+      ],
+    },
+    {
+      name: "Haste To The Wedding",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "jig",
+      references: [
         {
-            name: "John Ryan’s",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "polka",
-            references: [{notes:"ALORA: #3 in the Denis Murphy’s set"}],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/441#setting28845" }]
+          artists: "Malachy Bourke, Brian Bourke & Frankie Gavin",
+          url: "https://music.youtube.com/watch?v=hF9fGvdO8gw&si=RLavrljWDY9WCqL2&t=107",
+          notes: "in G",
         },
+      ],
+      scores: [
         {
-            name: "Denis Murphy’s",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "slide",
-            references: [
-
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/159#setting35527" }]
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/582",
         },
+      ],
+    },
+    {
+      name: "John Ryan’s",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "polka",
+      references: [{ notes: "ALORA: #3 in the Denis Murphy’s set" }],
+      scores: [
         {
-            abc:`
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/441#setting28845",
+        },
+      ],
+    },
+    {
+      name: "Denis Murphy’s",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "slide",
+      references: [],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/159#setting35527",
+        },
+      ],
+    },
+    {
+      abc: `
 X: 1
 T: Patsy Geary’s
 R: slide
@@ -488,62 +564,96 @@ AG|:"D"F2 A AFA "(Dsus4?)"B=cB A2 G|"D"F2 A d2 e ~f3 fef|
 P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
-`
-        },
+`,
+    },
+    {
+      name: "Denis Murphy’s",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "polka",
+      references: [],
+      scores: [
         {
-            name: "Denis Murphy’s",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "polka",
-            references: [
-
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/357#setting46411" }]
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/357#setting46411",
         },
+      ],
+    },
+    {
+      name: "The £42 Cheque",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "polka",
+      references: [{ notes: "ALORA: #2 in the Denis Murphy’s set" }],
+      scores: [
         {
-            name: "The £42 Cheque",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "polka",
-            references: [{notes:"ALORA: #2 in the Denis Murphy’s set"}],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/786" }]
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/786",
         },
+      ],
+    },
+    {
+      name: "The Wind That Shakes The Barley",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "reel (single)",
+      references: [
         {
-            name: "The Wind That Shakes The Barley",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "reel (single)",
-            references: [
-                {
-                    notes: "ALORA: #2 in the Maud Millar set"
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/116#setting45357" }]
+          notes: "ALORA: #2 in the Maud Millar set",
         },
+      ],
+      scores: [
         {
-            name: "The Wise Maid",
-            key: "D",
-            origin: 'Ireland',
-            rhythm: "reel",
-            references: [
-
-                {
-                    notes: "ALORA: #3 in the Maud Millar set"
-                }
-            ],
-            scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/118#setting55404" }]
-        }
-,{
-    name:"Christmas Eve", 
-    rhythm:"reel", origin:"Ireland", key:"G"
-    ,references: [{notes: `Composed by Tommy Coen.
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/116#setting45357",
+        },
+      ],
+    },
+    {
+      name: "The Wise Maid",
+      key: "D",
+      origin: "Ireland",
+      rhythm: "reel",
+      references: [
+        {
+          notes: "ALORA: #3 in the Maud Millar set",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/118#setting55404",
+        },
+      ],
+    },
+    {
+      name: "Christmas Eve",
+      rhythm: "reel",
+      origin: "Ireland",
+      key: "G",
+      references: [
+        {
+          notes: `Composed by Tommy Coen.
 Chords (TBC):
 G - D G | D G D G :|
 G C D - | G C D G :|
-G C G D | G C D G :|`}]
-,scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/440#setting48642" }]
-}
-,{abc:`X: 1
+G C G D | G C D G :|`,
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/440#setting48642",
+        },
+      ],
+    },
+    {
+      abc: `X: 1
 T: Leave it down easy
 S: As played by Danny Smith, 1992 or 1993
 F:https://www.itma.ie/playlists/first_itma_fieldrecordings_1992/?track=7
@@ -573,9 +683,17 @@ P:note for (*): the first time round there was an E here rather than a G:
 EAA EAA   BAB "here"E2A| 
 P:note for (**): the first time round maybe it was a C#, like this (but I’m not sure):
 d^cAy
-`
-,scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/60" }]}, 
-{abc:`
+`,
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/60",
+        },
+      ],
+    },
+    {
+      abc: `
 %230717
 X: 1
 T: The Silver Slipper
@@ -591,8 +709,15 @@ K: D
 M: 3/4
 |:FA dc d2|FA dA (3Bcd|FA dc ~d2|BG EF GE|
 FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
-`, references:[{notes:`1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)`}]}
-, {abc:`
+`,
+      references: [
+        {
+          notes: `1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)`,
+        },
+      ],
+    },
+    {
+      abc: `
 X: 1
 T: John Doherty’s Mazurka
 S: John Doherty
@@ -635,13 +760,17 @@ P:D
 cd BA eA | cd BA eA | !coda!GA Bc (3dBG |[1 A2 A2 ed :|[2 A2 A2 E2 !D.S.! |] 
 P:E (coda)
 !coda! GA Bc (3dBG | !fermata!A4|]
-`},
-{abc:[`X: 1
+`,
+    },
+    {
+      abc: [
+        `X: 1
 T: The Cameronian
 R: reel
 S:Rónán Galvin
 D: The Fiddle Music of Donegal Volume 2
 F: https://donegalfiddlemusic.bandcamp.com/track/track-22-the-cameronian-reel
+N:0. This is a “crooked” tune
 N:1. No attempt is made here to capture the fine details (bowing, rhythm,
 N:ornamentation and embellishments) in R. Galvin’s setting. You need to hear the
 N:(very worthwhile) recording to not miss out on anything.
@@ -663,7 +792,8 @@ K:G
 FGAg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 [M:5/2]defg fada egcf gbag fdcB!D.S.!|]
-`,`X: 1
+`,
+        `X: 1
 T: The Cameronian
 R: reel
 S: Consuelo Nerea Breschi & Eoghan O’Shaughnessy
@@ -688,7 +818,11 @@ cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG  ||
 P:Ⅱ
 F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 [M:3/2]dgeg ^fdcA G2gf | [M:4/2] egce ^fdaf gbag fgfd!D.C.!|]
-`]}, {abc:`X:1
+`,
+      ],
+    },
+    {
+      abc: `X:1
 T:Kringelleken
 Z:Malcolm Schonfield%230427,250325
 N:On the recording, it’s played “ABABA2BC”
@@ -705,6 +839,7 @@ P:ABABA2BC
 |: [P:B]ag bf af/e/ | f>a f2 df | ag bf af/e/ | f>a f2 df | eg fe df/e/ | ed BG A2 | 
 a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 [P:C (la dernière fois)]|: d2 ce d2 | eg fe d2 | eg fa/f/ [1 dd | ed BG A2 :| [2 de | cd !fermata!d4 |]
-`}
-]
-}
+`,
+    },
+  ],
+};

@@ -1,5 +1,7 @@
+"use strict";
 import tunesDataRaw from "./tunes.json";
-import AbcJS from "abcjs";
+import getIncipit from "./incipits";
+import AbcJs from "abcjs";
 
 let tunesData = [];
 let filteredData = [];
@@ -85,6 +87,8 @@ function processTuneData(tune) {
         processed.references.push(abcRef);
       }
     });
+    processed.incipit = getIncipit(abcArray[0]);
+    processed.rhythm = processed.rhythm.toLowerCase();
   }
 
   if (!processed.name) processed.name = "Untitled";
@@ -145,6 +149,7 @@ function openAbcModal(tune) {
   const abcText = document.getElementById("abcText");
 
   currentAbcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
+
   currentAbcIndex = 0;
   currentTuneAbc = currentAbcArray[0];
   currentTranspose = 0;
@@ -350,7 +355,7 @@ function updateAbcDisplay() {
   abcTextContent.textContent = transposedAbc;
 
   abcRendered.innerHTML = "";
-  AbcJS.renderAbc("abcRendered", transposedAbc, {
+  AbcJs.renderAbc("abcRendered", transposedAbc, {
     scale: 1.0,
     staffwidth: 900,
     paddingtop: 10,
@@ -361,8 +366,8 @@ function updateAbcDisplay() {
 }
 
 function transposeAbcNotation(abc, transposeAmount) {
-  var visualObj = ABCJS.renderAbc("*", abc);
-  return ABCJS.strTranspose(abc, visualObj, transposeAmount);
+  var visualObj = AbcJs.renderAbc("*", abc);
+  return AbcJs.strTranspose(abc, visualObj, transposeAmount);
 }
 
 function renderTable() {
@@ -430,10 +435,11 @@ function renderTable() {
     const hasAbc = !!tune.abc;
     const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
 
+    let incipitId = `incipit${index}`;
     row.innerHTML = `
                     <td><div class="${tuneNameClass}" data-tune-index="${index}">${
       tune.name
-    }</div></td>
+    }</div><div id="${incipitId}" class="incipitClass"></div></td>
                     <td><span class="badge">${tune.key}</span></td>
                     <td><span class="badge">${tune.rhythm}</span></td>
                     <td class="references">${referencesHtml}</td>
@@ -454,6 +460,16 @@ function renderTable() {
     }
 
     tbody.appendChild(row);
+    if (hasAbc) {
+      AbcJs.renderAbc(incipitId, tune.incipit, {
+        scale: 0.8,
+        staffwidth: 330,
+        paddingtop: 1,
+        paddingbottom: 1,
+        paddingright: 1,
+        paddingleft: 1,
+      });
+    }
   });
   document.getElementById(
     "spCount"
