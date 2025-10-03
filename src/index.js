@@ -437,9 +437,10 @@ function renderTable() {
 
     let incipitId = `incipit${index}`;
     row.innerHTML = `
-                    <td><div class="${tuneNameClass}" data-tune-index="${index}">${
-      tune.name
-    }</div><div id="${incipitId}" class="incipitClass"></div></td>
+                    <td><div> <a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+            ${tune.name}
+        </a></div>
+                    <div id="${incipitId}" class="incipitClass"></div></td>
                     <td><span class="badge">${tune.key}</span></td>
                     <td><span class="badge">${tune.rhythm}</span></td>
                     <td class="references">${referencesHtml}</td>
