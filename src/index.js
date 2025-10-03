@@ -11,8 +11,9 @@ let currentAbcArray = [];
 let currentAbcIndex = 0;
 
 function parseAbc(abc) {
-  const lines = abc.split("\n");
-  const metadata = {};
+  const lines = abc.split("\n"),
+    metadata = {},
+    comments = [];
 
   for (const line of lines) {
     const trimmed = line.trim();
@@ -22,13 +23,19 @@ function parseAbc(abc) {
       metadata.rhythm = trimmed.substring(2).trim();
     } else if (trimmed.startsWith("K:")) {
       metadata.key = trimmed.substring(2).trim();
+      break; //K is the last in the header
     } else if (trimmed.startsWith("S:")) {
       metadata.source = trimmed.substring(2).trim();
     } else if (trimmed.startsWith("F:")) {
       metadata.url = trimmed.substring(2).trim();
     } else if (trimmed.startsWith("D:")) {
       metadata.recording = trimmed.substring(2).trim();
+    } else if (trimmed.startsWith("N:")) {
+      comments.push(trimmed.substring(2).trim());
     }
+  }
+  if (comments.length > 0) {
+    metadata.comments = comments;
   }
 
   return metadata;
@@ -59,12 +66,22 @@ function processTuneData(tune) {
         processed.references = [];
       }
 
-      if (abcMeta.source || abcMeta.url || abcMeta.recording) {
+      if (
+        abcMeta.source ||
+        abcMeta.url ||
+        abcMeta.recording ||
+        abcMeta.comments
+      ) {
         const abcRef = {
           artists: abcMeta.source || "",
           url: abcMeta.url || "",
-          notes: abcMeta.recording || "",
+          notes:
+            (abcMeta.recording || "") +
+            `${abcMeta.recording ? "\n" : ""}${
+              abcMeta.comments ? abcMeta.comments.join("\n") : ""
+            }`,
         };
+
         processed.references.push(abcRef);
       }
     });
@@ -206,7 +223,7 @@ function addTunesFromAbc() {
   }
 
   try {
-    tunesData = []//don't keep existing tunes
+    tunesData = []; //don't keep existing tunes
     const abcTunes = splitAbcTunes(abcText);
     let addedCount = 0;
 
@@ -363,7 +380,36 @@ function renderTable() {
     const row = document.createElement("tr");
 
     let referencesHtml = "";
-    tune.references.forEach((ref) => {
+    tune.references.forEach((ref, refIndex) => {
+      let notesHtml = "";
+      if (ref.notes) {
+        const formattedNotes = ref.notes
+          .replace(/\n/g, "<br />")
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+        const lines = ref.notes.split("\n");
+        if (lines.length > 5) {
+          const truncatedLines = lines.slice(0, 5);
+          const truncatedNotes = truncatedLines
+            .join("\n")
+            .replace(/\n/g, "<br />")
+            .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+          notesHtml = `
+            <div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
+              ${truncatedNotes}
+              <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More...</button>
+            </div>
+            <div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
+              ${formattedNotes}
+              <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
+            </div>
+          `;
+        } else {
+          notesHtml = `<div class="notes">${formattedNotes}</div>`;
+        }
+      }
+
       referencesHtml += `
                         <div class="reference-item">
                             ${
@@ -376,16 +422,7 @@ function renderTable() {
                                 ? `<div class="url"><a href="${ref.url}" target="_blank">${ref.url}</a></div>`
                                 : ""
                             }
-                            ${
-                              ref.notes
-                                ? `<div class="notes">${ref.notes
-                                    .replace(/\n/g, "<br />")
-                                    .replace(
-                                      /\[([^\]]+)\]\(([^)]+)\)/g,
-                                      '<a href="$2">$1</a>'
-                                    )}</div>`
-                                : ""
-                            }
+                            ${notesHtml}
                         </div>
                     `;
     });
@@ -490,6 +527,37 @@ function sortData(column) {
 
   renderTable();
 }
+
+function expandNotes(tuneIndex, refIndex) {
+  const truncated = document.querySelector(
+    `.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+  const full = document.querySelector(
+    `.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+
+  if (truncated && full) {
+    truncated.style.display = "none";
+    full.style.display = "block";
+  }
+}
+
+function collapseNotes(tuneIndex, refIndex) {
+  const truncated = document.querySelector(
+    `.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+  const full = document.querySelector(
+    `.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+
+  if (truncated && full) {
+    truncated.style.display = "block";
+    full.style.display = "none";
+  }
+}
+
+window.expandNotes = expandNotes;
+window.collapseNotes = collapseNotes;
 
 document.addEventListener("DOMContentLoaded", function () {
   initialiseData();

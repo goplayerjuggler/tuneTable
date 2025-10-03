@@ -1,6 +1,6 @@
 export default  
 {
-    lastUpdate:'2025-10-02',
+    lastUpdate:'2025-10-03',
     tunes:
     [{
                 abc: `
@@ -459,7 +459,7 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `}
             key: "D",
             origin: 'Ireland',
             rhythm: "polka",
-            references: [{notes:"ALORA: #3 in the Denis Murphy’ set"}],
+            references: [{notes:"ALORA: #3 in the Denis Murphy’s set"}],
             scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/441#setting28845" }]
         },
         {
@@ -505,7 +505,7 @@ P:Ⅱ
             key: "D",
             origin: 'Ireland',
             rhythm: "polka",
-            references: [{notes:"ALORA: #2 in the Denis Murphy’ set"}],
+            references: [{notes:"ALORA: #2 in the Denis Murphy’s set"}],
             scores: [{ type: "tune", name: "thesession", url: "https://thesession.org/tunes/786" }]
         },
         {
@@ -655,7 +655,7 @@ L: 1/8
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-11-12,13
 Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
-K: G mixo
+K: G mixolydian
 !fermata!A2 B||[P:Ⅰ]ScFF/F/F cFdF cFFd cFAc|BGG/G/G BGdG BGGe dcBd|
 cFF/F/F cFdF cFFc cFAc| B/d/BGB DGBG DGBd cBAG||
 P:Ⅱ
@@ -682,7 +682,7 @@ L: 1/8
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2025-09-01
 Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
-K: G mixo
+K: G mixolydian
 [P:Ⅰ]cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG |
 cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG  ||
 P:Ⅱ
