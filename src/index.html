@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes"
+    />
     <title>Tune table</title>
     <style>
       * {
@@ -68,6 +71,22 @@
 
       .filter-select {
         min-width: 150px;
+      }
+
+      .add-tunes-btn {
+        padding: 12px 20px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .add-tunes-btn:hover {
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
       }
 
       .table-container {
@@ -355,13 +374,67 @@
       #abcRendered {
         max-width: 100%;
         font-size: 14px;
-        min-width: 800px;
+        min-width: 400px;
       }
 
       #abcRendered svg {
         max-width: none;
         height: auto;
         display: block;
+      }
+
+      .add-tunes-modal .modal-content {
+        height: auto;
+        max-height: 80%;
+      }
+
+      #abcInput {
+        width: 100%;
+        height: 300px;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        resize: vertical;
+      }
+
+      #abcInput:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .modal-btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .modal-btn.primary {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+      }
+
+      .modal-btn.secondary {
+        background: #95a5a6;
+        color: white;
+      }
+
+      .modal-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      #addTunesStatus {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        display: none;
       }
 
       @media (max-width: 768px) {
@@ -414,6 +487,9 @@
         <select id="keyFilter" class="filter-select">
           <option value="">All keys</option>
         </select>
+        <button id="addTunesBtn" class="add-tunes-btn">
+          + import tunes from ABC
+        </button>
       </div>
 
       <div class="table-container">
@@ -437,17 +513,19 @@
         <div class="modal-header">
           <div class="modal-controls">
             <div class="control-row">
-              <button id="transposeDownBtn">♭ Down</button>
-              <button id="transposeUpBtn">♯ Up</button>
+              <button id="transposeDownBtn" class="transpose-btn">
+                ♭ Down
+              </button>
+              <button id="transposeUpBtn" class="transpose-btn">♯ Up</button>
               <button class="toggle-view-btn" id="toggleViewBtn">
-                Show ABC Text
+                Show Abc Text
               </button>
               <button class="close-btn" id="closeModalBtn">&times;</button>
             </div>
             <div class="control-row">
-              <button id="prevABCBtn">← Previous</button>
+              <button id="prevAbcBtn" class="nav-btn">← Previous</button>
               <span id="abcCounter"></span>
-              <button id="nextABCBtn">Next →</button>
+              <button id="nextAbcBtn" class="nav-btn">Next →</button>
             </div>
           </div>
         </div>
@@ -455,6 +533,39 @@
         <div id="abcText" class="abc-text">
           <pre id="abcTextContent"></pre>
         </div>
+      </div>
+    </div>
+
+    <div id="addTunesModal" class="modal add-tunes-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 style="flex: 1; margin: 0; color: #2c3e50">
+            Import tunes via ABC
+          </h2>
+          <button class="close-btn" id="closeAddTunesBtn">&times;</button>
+        </div>
+        <div style="margin-bottom: 20px">
+          <p style="color: #666; margin-bottom: 10px">
+            Paste ABC notation below. Multiple tunes can be separated by blank
+            lines or X: headers.
+          </p>
+          <textarea
+            id="abcInput"
+            placeholder="Paste ABC notation here...
+
+Example:
+X:1
+T:Example Tune
+R:jig
+K:Dmaj
+|:D2E F2G|A2B c2d|..."
+          ></textarea>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end">
+          <button id="clearAbcBtn" class="modal-btn secondary">Clear</button>
+          <button id="addAbcBtn" class="modal-btn primary">Add Tunes</button>
+        </div>
+        <div id="addTunesStatus"></div>
       </div>
     </div>
 

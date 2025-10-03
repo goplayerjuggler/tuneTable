@@ -1,25 +1,22 @@
 import tunesDataRaw from "./tunes.json";
-import ABCJS from "abcjs";
+import AbcJS from "abcjs";
 
 let tunesData = [];
 let filteredData = [];
 let currentSort = { column: null, direction: "asc" };
 let currentViewMode = "rendered";
 let currentTranspose = 0;
-let currentTuneABC = "";
-let currentABCArray = [];
-let currentABCIndex = 0;
+let currentTuneAbc = "";
+let currentAbcArray = [];
+let currentAbcIndex = 0;
 
-function parseABC(abc) {
+function parseAbc(abc) {
   const lines = abc.split("\n");
   const metadata = {};
 
   for (const line of lines) {
     const trimmed = line.trim();
-    if (
-      trimmed.startsWith("T:") &&
-      !metadata.title //prevent the primary title being overwritten by secondary title
-    ) {
+    if (trimmed.startsWith("T:") && !metadata.title) {
       metadata.title = trimmed.substring(2).trim();
     } else if (trimmed.startsWith("R:")) {
       metadata.rhythm = trimmed.substring(2).trim();
@@ -41,14 +38,11 @@ function processTuneData(tune) {
   const processed = { ...tune };
 
   if (tune.abc) {
-    // Handle both string and array formats
     const abcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
 
-    // Process all ABC entries for metadata
     abcArray.forEach((abcString, index) => {
-      const abcMeta = parseABC(abcString);
+      const abcMeta = parseAbc(abcString);
 
-      // Use first ABC for name, rhythm, and key if not already set
       if (index === 0) {
         if (!processed.name && abcMeta.title) {
           processed.name = abcMeta.title;
@@ -65,7 +59,6 @@ function processTuneData(tune) {
         processed.references = [];
       }
 
-      // Add reference from each ABC that has source/url/recording
       if (abcMeta.source || abcMeta.url || abcMeta.recording) {
         const abcRef = {
           artists: abcMeta.source || "",
@@ -99,7 +92,7 @@ function initialiseData() {
         : a.rhythm < b.rhythm
         ? -1
         : 1
-    ); //default sort by name
+    );
   filteredData = [...tunesData];
   populateFilters();
   renderTable();
@@ -127,20 +120,19 @@ function populateFilters() {
   });
 }
 
-function openABCModal(tune) {
+function openAbcModal(tune) {
   if (!tune.abc) return;
 
   const modal = document.getElementById("abcModal");
   const abcRendered = document.getElementById("abcRendered");
   const abcText = document.getElementById("abcText");
 
-  // Handle both string and array formats
-  currentABCArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
-  currentABCIndex = 0;
-  currentTuneABC = currentABCArray[0];
+  currentAbcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
+  currentAbcIndex = 0;
+  currentTuneAbc = currentAbcArray[0];
   currentTranspose = 0;
 
-  updateABCDisplay();
+  updateAbcDisplay();
   updateNavigationButtons();
 
   currentViewMode = "rendered";
@@ -151,11 +143,130 @@ function openABCModal(tune) {
   modal.classList.add("active");
 }
 
-function closeABCModal() {
+function closeAbcModal() {
   const modal = document.getElementById("abcModal");
   modal.classList.remove("active");
   currentTranspose = 0;
-  currentABCIndex = 0;
+  currentAbcIndex = 0;
+}
+
+function openAddTunesModal() {
+  const modal = document.getElementById("addTunesModal");
+  const statusDiv = document.getElementById("addTunesStatus");
+  statusDiv.style.display = "none";
+  document.getElementById("abcInput").value = "";
+  modal.classList.add("active");
+}
+
+function closeAddTunesModal() {
+  const modal = document.getElementById("addTunesModal");
+  modal.classList.remove("active");
+}
+
+function splitAbcTunes(abcText) {
+  const tunes = [];
+  let currentTune = "";
+  const lines = abcText.split("\n");
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+
+    if (line.trim().match(/^X:\s*\d+/)) {
+      if (currentTune.trim()) {
+        tunes.push(currentTune.trim());
+      }
+      currentTune = line + "\n";
+    } else {
+      currentTune += line + "\n";
+    }
+  }
+
+  if (currentTune.trim()) {
+    tunes.push(currentTune.trim());
+  }
+
+  if (tunes.length === 0 && abcText.trim()) {
+    return abcText.split(/\n\s*\n/).filter((t) => t.trim());
+  }
+
+  return tunes;
+}
+
+function addTunesFromAbc() {
+  const abcInput = document.getElementById("abcInput");
+  const statusDiv = document.getElementById("addTunesStatus");
+  const abcText = abcInput.value.trim();
+
+  if (!abcText) {
+    statusDiv.style.display = "block";
+    statusDiv.style.background = "#fee";
+    statusDiv.style.color = "#c33";
+    statusDiv.textContent = "Please paste some ABC notation first.";
+    return;
+  }
+
+  try {
+    tunesData = []//don't keep existing tunes
+    const abcTunes = splitAbcTunes(abcText);
+    let addedCount = 0;
+
+    abcTunes.forEach((abc) => {
+      if (abc.trim()) {
+        const newTune = {
+          abc: abc,
+          name: "",
+          key: "",
+          rhythm: "",
+          references: [],
+          scores: [],
+        };
+
+        const processed = processTuneData(newTune);
+        tunesData.push(processed);
+        addedCount++;
+      }
+    });
+
+    if (addedCount > 0) {
+      tunesData.sort((a, b) =>
+        a.rhythm === b.rhythm
+          ? a.name === b.name
+            ? 0
+            : a.name < b.name
+            ? -1
+            : 1
+          : a.rhythm < b.rhythm
+          ? -1
+          : 1
+      );
+
+      populateFilters();
+      applyFilters();
+
+      statusDiv.style.display = "block";
+      statusDiv.style.background = "#efe";
+      statusDiv.style.color = "#2a7";
+      statusDiv.textContent = `Successfully added ${addedCount} tune${
+        addedCount !== 1 ? "s" : ""
+      }!`;
+
+      abcInput.value = "";
+
+      setTimeout(() => {
+        closeAddTunesModal();
+      }, 1500);
+    } else {
+      statusDiv.style.display = "block";
+      statusDiv.style.background = "#fee";
+      statusDiv.style.color = "#c33";
+      statusDiv.textContent = "No valid tunes found in the ABC notation.";
+    }
+  } catch (error) {
+    statusDiv.style.display = "block";
+    statusDiv.style.background = "#fee";
+    statusDiv.style.color = "#c33";
+    statusDiv.textContent = `Error processing ABC: ${error.message}`;
+  }
 }
 
 function toggleView() {
@@ -176,27 +287,27 @@ function toggleView() {
   }
 }
 
-function navigateABC(direction) {
-  currentABCIndex += direction;
-  if (currentABCIndex < 0) currentABCIndex = currentABCArray.length - 1;
-  if (currentABCIndex >= currentABCArray.length) currentABCIndex = 0;
+function navigateAbc(direction) {
+  currentAbcIndex += direction;
+  if (currentAbcIndex < 0) currentAbcIndex = currentAbcArray.length - 1;
+  if (currentAbcIndex >= currentAbcArray.length) currentAbcIndex = 0;
 
-  currentTuneABC = currentABCArray[currentABCIndex];
+  currentTuneAbc = currentAbcArray[currentAbcIndex];
   currentTranspose = 0;
-  updateABCDisplay();
+  updateAbcDisplay();
   updateNavigationButtons();
 }
 
 function updateNavigationButtons() {
-  const prevBtn = document.getElementById("prevABCBtn");
-  const nextBtn = document.getElementById("nextABCBtn");
+  const prevBtn = document.getElementById("prevAbcBtn");
+  const nextBtn = document.getElementById("nextAbcBtn");
   const counter = document.getElementById("abcCounter");
 
-  if (currentABCArray.length > 1) {
+  if (currentAbcArray.length > 1) {
     prevBtn.style.display = "inline-block";
     nextBtn.style.display = "inline-block";
     counter.style.display = "inline-block";
-    counter.textContent = `${currentABCIndex + 1} / ${currentABCArray.length}`;
+    counter.textContent = `${currentAbcIndex + 1} / ${currentAbcArray.length}`;
   } else {
     prevBtn.style.display = "none";
     nextBtn.style.display = "none";
@@ -204,27 +315,27 @@ function updateNavigationButtons() {
   }
 }
 
-function transposeABC(semitones) {
+function transposeAbc(semitones) {
   currentTranspose += semitones;
-  updateABCDisplay();
+  updateAbcDisplay();
 }
 
-function updateABCDisplay() {
+function updateAbcDisplay() {
   const abcTextContent = document.getElementById("abcTextContent");
   const abcRendered = document.getElementById("abcRendered");
 
-  let transposedABC = currentTuneABC;
+  let transposedAbc = currentTuneAbc;
 
   if (currentTranspose !== 0) {
-    transposedABC = transposeABCNotation(currentTuneABC, currentTranspose);
+    transposedAbc = transposeAbcNotation(currentTuneAbc, currentTranspose);
   }
 
-  abcTextContent.textContent = transposedABC;
+  abcTextContent.textContent = transposedAbc;
 
   abcRendered.innerHTML = "";
-  ABCJS.renderAbc("abcRendered", transposedABC, {
+  AbcJS.renderAbc("abcRendered", transposedAbc, {
     scale: 1.0,
-    staffwidth: 800,
+    staffwidth: 900,
     paddingtop: 10,
     paddingbottom: 10,
     paddingright: 20,
@@ -232,7 +343,7 @@ function updateABCDisplay() {
   });
 }
 
-function transposeABCNotation(abc, transposeAmount) {
+function transposeAbcNotation(abc, transposeAmount) {
   var visualObj = ABCJS.renderAbc("*", abc);
   return ABCJS.strTranspose(abc, visualObj, transposeAmount);
 }
@@ -267,14 +378,12 @@ function renderTable() {
                             }
                             ${
                               ref.notes
-                                ? `<div class="notes">${
-                                    ref.notes
-                                      .replace(/\n/g, "<br />")
-                                      .replace(
-                                        /\[([^\]]+)\]\(([^)]+)\)/g,
-                                        '<a href="$2">$1</a>'
-                                      ) // transforms markdown links to HTML anchor tags:
-                                  }</div>`
+                                ? `<div class="notes">${ref.notes
+                                    .replace(/\n/g, "<br />")
+                                    .replace(
+                                      /\[([^\]]+)\]\(([^)]+)\)/g,
+                                      '<a href="$2">$1</a>'
+                                    )}</div>`
                                 : ""
                             }
                         </div>
@@ -303,7 +412,7 @@ function renderTable() {
     const tuneNameEl = row.querySelector(".tune-name");
     if (hasAbc) {
       tuneNameEl.addEventListener("click", () => {
-        openABCModal(tune);
+        openAbcModal(tune);
       });
     }
 
@@ -339,6 +448,7 @@ function applyFilters() {
 
   renderTable();
 }
+
 function filterByName(searchTerm) {
   filteredData = tunesData.filter((tune) =>
     tune.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -399,7 +509,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   if (filteredData.length === 1 && filteredData[0].abc) {
-    openABCModal(filteredData[0]);
+    openAbcModal(filteredData[0]);
   }
 
   document
@@ -418,43 +528,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document
     .getElementById("closeModalBtn")
-    .addEventListener("click", closeABCModal);
+    .addEventListener("click", closeAbcModal);
   document
     .getElementById("toggleViewBtn")
     .addEventListener("click", toggleView);
+
+  document
+    .getElementById("addTunesBtn")
+    .addEventListener("click", openAddTunesModal);
+  document
+    .getElementById("closeAddTunesBtn")
+    .addEventListener("click", closeAddTunesModal);
+  document
+    .getElementById("addAbcBtn")
+    .addEventListener("click", addTunesFromAbc);
+  document.getElementById("clearAbcBtn").addEventListener("click", () => {
+    document.getElementById("abcInput").value = "";
+    document.getElementById("addTunesStatus").style.display = "none";
+  });
 
   document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
 
   document
     .getElementById("transposeUpBtn")
-    .addEventListener("click", () => transposeABC(1));
+    .addEventListener("click", () => transposeAbc(1));
   document
     .getElementById("transposeDownBtn")
-    .addEventListener("click", () => transposeABC(-1));
+    .addEventListener("click", () => transposeAbc(-1));
 
   document
-    .getElementById("prevABCBtn")
-    .addEventListener("click", () => navigateABC(-1));
+    .getElementById("prevAbcBtn")
+    .addEventListener("click", () => navigateAbc(-1));
   document
-    .getElementById("nextABCBtn")
-    .addEventListener("click", () => navigateABC(1));
+    .getElementById("nextAbcBtn")
+    .addEventListener("click", () => navigateAbc(1));
 
   document.getElementById("abcModal").addEventListener("click", function (e) {
     if (e.target === this) {
-      closeABCModal();
+      closeAbcModal();
     }
   });
 
+  document
+    .getElementById("addTunesModal")
+    .addEventListener("click", function (e) {
+      if (e.target === this) {
+        closeAddTunesModal();
+      }
+    });
+
   document.addEventListener("keydown", function (e) {
+    const addTunesModal = document.getElementById("addTunesModal");
+    const abcModal = document.getElementById("abcModal");
+
     if (e.key === "Escape") {
-      closeABCModal();
-    } else if (
-      document.getElementById("abcModal").classList.contains("active")
-    ) {
+      if (addTunesModal.classList.contains("active")) {
+        closeAddTunesModal();
+      } else if (abcModal.classList.contains("active")) {
+        closeAbcModal();
+      }
+    } else if (abcModal.classList.contains("active")) {
       if (e.key === "ArrowLeft") {
-        navigateABC(-1);
+        navigateAbc(-1);
       } else if (e.key === "ArrowRight") {
-        navigateABC(1);
+        navigateAbc(1);
       }
     }
   });

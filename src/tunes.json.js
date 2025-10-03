@@ -329,7 +329,7 @@ P:Ⅱ
             rhythm: "jig",
             references: [
                 {
-                    artists: "Stockton's Wing",
+                    artists: "Stockton’s Wing",
                     url: "https://music.youtube.com/watch?v=HkuABOYkWws&si=bDs2E-LaXpOlgP8R",
                     notes: ""
                 }
@@ -666,7 +666,7 @@ defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 `,`X: 1
 T: The Cameronian
 R: reel
-S: Consuelo Nerea Breschi & Eoghan O'Shaughnessy
+S: Consuelo Nerea Breschi & Eoghan O’Shaughnessy
 D: The Morning Tree
 F: https://themorningtree.bandcamp.com/track/rakish-paddy-the-cameronian
 N:1. No attempt is made here to capture the fine details (bowing, rhythm,
