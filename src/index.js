@@ -436,10 +436,15 @@ function renderTable() {
     const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
 
     let incipitId = `incipit${index}`;
-    row.innerHTML = `
-                    <td><div> <a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+    let title = hasAbc
+      ? `<div> <a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
             ${tune.name}
-        </a></div>
+        </a></div>`
+      : `<div class="${tuneNameClass}" data-tune-index="${index}">
+            ${tune.name}
+        </div>`;
+    row.innerHTML = `
+                    <td>${title}
                     <div id="${incipitId}" class="incipitClass"></div></td>
                     <td><span class="badge">${tune.key}</span></td>
                     <td><span class="badge">${tune.rhythm}</span></td>
