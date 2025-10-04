@@ -199,7 +199,7 @@ M: 4/4
 N: Setting from thesession (*) adapted in 13 & 14 May 2025%250514
 N: (*) https://thesession.org/tunes/140#setting46226
 L: 1/8
-K: B aeolian
+K: B minor
 de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
@@ -207,11 +207,11 @@ de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
      incipit: `X:1
 M: 4/4
 L: 1/8
-K: B aeolian
+K: B minor
 de|f2 ef dBBd|cAeA fAeA|f2 ef dBBd|`},
     {
       name: "The Kid On The Mountain",
-      key: "E aeolian",
+      key: "E minor",
       origin: "Ireland",
       rhythm: "slip jig",
       abc: `%The Kid On The Mountain
@@ -230,7 +230,7 @@ M: 18/16
 L: 1/16
 Z:abc-transcription Malcolm Schonfield%240620, 21, 27, 240718
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-K: E aeolian
+K: E minor
 |:[P:A]"Em"E3 FEF G2F E3 BcA "Bm7"BGD|"Em"E3 FEF "G"G2A BAG "D"FAG FED:|
 |:[P:B]"G"BGB "D"AFA "G"G2D GAB dge "Bm7"dBA|"G"BGB "D"AFA "G"G2A BAG "D"FAG FED:|
 |:[P:C]"Em"~g3 eBe e2f ~g3 efg "Bm7"afd|"Em"~g3 eBe ega bag "D"fag fed:|
@@ -259,7 +259,7 @@ K: E aeolian
      incipit: `X:1
 M: 18/16
 L: 1/16
-K: E aeolian
+K: E minor
 E3 FEF G2F E3 BcA BGD|E3 FEF G2A BA`},
     {
       abc: `% Bransle d’écosse — détournée, à 3 temps
