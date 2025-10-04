@@ -1,6 +1,6 @@
 "use strict";
-import tunesDataRaw from "./tunes.json";
-import getIncipit from "./incipits";
+import tunesDataRaw from "./tunes.json.js";
+import getIncipit from "./incipits.js";
 import AbcJs from "abcjs";
 
 let tunesData = [];
@@ -87,7 +87,9 @@ function processTuneData(tune) {
         processed.references.push(abcRef);
       }
     });
-    processed.incipit = getIncipit(abcArray[0]);
+    if (!tune.incipit) {
+      processed.incipit = getIncipit(abcArray[0]);
+    }
     processed.rhythm = processed.rhythm.toLowerCase();
   }
 
@@ -362,6 +364,7 @@ function updateAbcDisplay() {
     paddingbottom: 10,
     paddingright: 20,
     paddingleft: 20,
+    responsive: "resize"
   });
 }
 
@@ -466,7 +469,7 @@ function renderTable() {
     }
 
     tbody.appendChild(row);
-    if (hasAbc) {
+    if (tune.incipit) {
       AbcJs.renderAbc(incipitId, tune.incipit, {
         scale: 0.8,
         staffwidth: 330,

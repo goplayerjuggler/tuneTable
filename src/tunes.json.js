@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-03",
+  lastUpdate: "2025-10-04",
   tunes: [
     {
       abc: `
@@ -19,7 +19,11 @@ P:Part II
 "G"dega bgg2   "D"agef "G"g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
 !coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
 [P:v1]Be||[P:v2]d2||[P:v3](3ege||[P:v4]eBdB ABGA||[P:v5](3GGG||[P:v6]ef||`,
-    },
+     incipit: `X:1
+M: 4/4
+L: 1/16
+K: G
+gf|edBA GEDE G2BG dGBd|e2dB A2GA Be`},
     {
       abc: `
 %The Spanish Lady
@@ -113,7 +117,11 @@ w: And~in all me life I ne’er did see A maid so neat a-bout the sole
 w: She had twen-ty eight-een six-teen four-teen * Twelve ten eight six four two none 
 B/c/ | "Bm"dc BA "F#m"FE DE | [M:3/4] "Em7"FF "F#m7"FE "G6"DB, | [M:4/4]"A"A,4 z2z
 w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`,
-    },
+     incipit: `X:1
+M:3/4
+L:1/8
+K:D
+[M:3/4]A, | DD DE FE | [M:4/4] D<B,`},
     {
       abc: `
 
@@ -144,7 +152,11 @@ P:Ⅱ
 "D"~f2fd "Bm"fa | "Em7"be2d (c/B/A) | "D"(f/g/f) "(A)"(e/f/e) "Bm"d2 |"D"Ad2A (F/E/D)!D.C.!|]
 `,
       references: [{ notes: "ALORA: #2 in the Top The Candle set" }],
-    },
+     incipit: `X:1
+M: 3/4
+L: 1/8
+K: D
+FA (A/B/A) B2 | Be2d (c/B/A)|FA (A`},
     {
       abc: `X: 1
 T: Top The Candle
@@ -173,7 +185,11 @@ P:Ⅱ
 "G"~b2 ag fd|"Am"ea2g fd|"C"{d}e2 dc BG|"G"DG2B Ad|
 "G"~b2 ag fd|"Am"ea2g fd|"Am/C"{d}e2 dc BA|"D"GB Ac BA!D.C.!|]
 `,
-    },
+     incipit: `X:1
+M: 3/4
+L: 1/8
+K: G
+~G2 dG BG|FA2B cA|~G2 dG BG|DG2B  A`},
     {
       abc: `X: 8
 T: Tommy’s Tarbukas
@@ -188,7 +204,11 @@ de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
 "Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
-    },
+     incipit: `X:1
+M: 4/4
+L: 1/8
+K: B aeolian
+de|f2 ef dBBd|cAeA fAeA|f2 ef dBBd|`},
     {
       name: "The Kid On The Mountain",
       key: "E aeolian",
@@ -236,7 +256,11 @@ K: E aeolian
           url: "https://thesession.org/tunes/52",
         },
       ],
-    },
+     incipit: `X:1
+M: 18/16
+L: 1/16
+K: E aeolian
+E3 FEF G2F E3 BcA BGD|E3 FEF G2A BA`},
     {
       abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
@@ -257,7 +281,11 @@ K: E dorian
 [P:B]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" FE | "Em"B2 AG "D" FE | 
         "Em"B2 Bc "D"dc | "Em"(3BAG "Bm"FE FD :|
 [P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`,
-    },
+     incipit: `X:1
+M: 3/4
+L: 1/8
+K: E dorian
+EF GE FG | AG FE GA |   Bd cB (3AG`},
     {
       abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d’Écosse
@@ -270,7 +298,11 @@ K: E dorian
 "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "A"AG"Bm"FE "Bm"FD"Em"E2 :|
 |: "Em"B2Bc "A"dedc  "Em".B2B2 "D"AGFE  "Em"B2AG "Bm"F2E2 |
 [M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`,
-    },
+     incipit: `X:1
+M: 6/4
+L: 1/16
+K: E dorian
+EFGE FGA2  AGFE GAB2  BdcB AGFE |`},
     {
       abc: `
 X: 2
@@ -295,7 +327,11 @@ K: A
 |:"A"(e2 e)e .e2 e2|BccB ABce|"D"(f2 f)f .f2 f2|"A"BccB ABcd|
 (e2 e)e .e2 e2|BccB ABce|"D"a2 af "E"ecBe|1 "A"c2 .A2 A2 Ac:|2 "A"c2 .A2 A2 AB||
 `,
-    },
+     incipit: `X:1
+M: 4/4
+L: 1/8
+K: A
+(c2 c)c .c2c2|BcBA F2 E2|(A2A)c e2`},
     {
       abc: `X: 1
 T: Joe Bane’s
@@ -318,7 +354,11 @@ ge|"G"dG GA B2AG|d2 .G2 G2 ge|dG GA B2 AG|"D"B2 .A2 A2 Bc |
 "G"dG GA B2 AG|B2d2 "C"g3e|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|
 Bd|"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2 de dB GA|"D"B2 A2 A2 Bd|
 "G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|`,
-    },
+     incipit: `X:1
+M: 4/4
+L: 1/8
+K: G
+ge|dG GA B2AG|d2 .G2 G2 ge|dG GA B2`},
     {
       abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
@@ -341,7 +381,11 @@ P:Ⅱ
 |:"D"d2 e fed faf gfe| d2 e fed      "Asus4"dcA dcA|
 "D"d2 e fed   faf gfe|"G"dcA "A"BAG [|]1 "D"AFD DFA:|2 "D"AFD D3!D.C.!|]
 `,
-    },
+     incipit: `X:1
+M: 12/8
+L: 1/8
+K: D mixolydian
+DED F2 G AdB cAF|GFG BAG    FAF GEA`},
     {
       name: "My Darling Asleep",
       key: "D",
@@ -525,6 +569,11 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
+      incipit:`X:1
+M: 4/4
+L: 1/16
+K: D
+d2d2 BcdB A2F2 A2F2 | `,
       references: [{ notes: "ALORA: #3 in the Denis Murphy’s set" }],
       scores: [
         {
@@ -565,7 +614,11 @@ P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
 `,
-    },
+     incipit: `X:1
+M: 12/8
+L: 1/8
+K: D
+AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     {
       name: "Denis Murphy’s",
       key: "D",
@@ -691,7 +744,11 @@ d^cAy
           url: "https://thesession.org/tunes/60",
         },
       ],
-    },
+     incipit: `X:1
+M: 12/8
+L: 1/8
+K: A dorian
+{G}!fermata!A2G|EAA EAA   BAB G2A|B`},
     {
       abc: `
 %230717
@@ -715,7 +772,11 @@ FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
           notes: `1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)`,
         },
       ],
-    },
+     incipit: `X:1
+M: 2/2
+L: 1/8
+K: D
+FD ~D2 FD ~D2|AFdA FD ~D2|FDFA B<GE`},
     {
       abc: `
 X: 1
@@ -761,7 +822,11 @@ cd BA eA | cd BA eA | !coda!GA Bc (3dBG |[1 A2 A2 ed :|[2 A2 A2 E2 !D.S.! |]
 P:E (coda)
 !coda! GA Bc (3dBG | !fermata!A4|]
 `,
-    },
+     incipit: `X:1
+M: 3/4
+L: 1/8
+K: A
+E AB |  cd cE Ac | ea ec df | B2 B`},
     {
         references:[{notes:`A crooked tune`}],
       abc: [
@@ -821,7 +886,11 @@ F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 [M:3/2]dgeg ^fdcA G2gf | [M:4/2] egce ^fdaf gbag fgfd!D.C.!|]
 `,
       ],
-    },
+     incipit: `X:1
+M: 4/2
+L: 1/8
+K: G mixolydian
+!fermata!A2 B||cFF/F/F cFdF cFFd cF`},
     {
       abc: `X:1
 T:Kringelleken
@@ -841,6 +910,10 @@ P:ABABA2BC
 a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 [P:C (la dernière fois)]|: d2 ce d2 | eg fe d2 | eg fa/f/ [1 dd | ed BG A2 :| [2 de | cd !fermata!d4 |]
 `,
-    },
+     incipit: `X:1
+M:3/4
+L:1/8
+K:D
+d2 Pce d2 | eg fe d2 | eg fa/f/  dd`},
   ],
 };
