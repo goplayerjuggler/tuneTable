@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-04",
+  lastUpdate: "2025-10-05",
   tunes: [
     {
       abc: `
@@ -388,6 +388,11 @@ K: D mixolydian
 DED F2 G AdB cAF|GFG BAG    FAF GEA`},
     {
       name: "My Darling Asleep",
+      incipit:`X: 5
+M: 6/8
+L: 1/8
+K: D
+e|fdd cAA BGG A2G|`,
       key: "D",
       origin: "Ireland",
       rhythm: "jig",
@@ -408,6 +413,11 @@ DED F2 G AdB cAF|GFG BAG    FAF GEA`},
     },
     {
       name: "The Killavil Fancy",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: G
+DGBG A2BA GEE2 cEGE | `,
       key: "G",
       origin: "Ireland",
       rhythm: "reel (single)",
@@ -434,6 +444,11 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
     },
     {
       name: "The Dogs Among The Bushes",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: G
+BGG2 DGG2 BGG2 cedc | `,
       key: "G",
       origin: "Ireland",
       rhythm: "reel (single)",
@@ -460,6 +475,11 @@ G - - - | D - - - | G - - (D) | G - D - ||
     },
     {
       name: "The Drunken Tinker",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: Amix
+EAAG EGDG EA~A2 fAeA| `,
       key: "A dorian",
       origin: "Ireland",
       rhythm: "reel (single)",
@@ -480,10 +500,15 @@ G - - - | D - - - | G - - (D) | G - D - ||
     },
     {
       name: "The Bucks Of Oranmore",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: D
+dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
       key: "D",
       origin: "Ireland",
       rhythm: "reel",
-      references: [
+      references: [{notes:'Compare with Lucy Campbell'},
         {
           artists: "Stockton’s Wing",
           url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
@@ -505,10 +530,16 @@ G - - - | D - - - | G - - (D) | G - D - ||
     },
     {
       name: "Lucy Campbell",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: Dmaj
+dB|A2FA A2dB A2FA BEE2|A2FA defe`,
       key: "D",
       origin: "Ireland",
-      rhythm: "reel",
-      references: [
+      rhythm: "reel (single)",
+      
+      references: [{notes:'Compare with The Bucks Of Oranmore'},
         {
           artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
           url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
@@ -563,6 +594,11 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `,
           url: "https://thesession.org/tunes/582",
         },
       ],
+      incipit:`X: 1
+L: 1/8
+M: 12/8
+K: D
+AFA Agf ede fdB|`
     },
     {
       name: "John Ryan’s",
@@ -585,6 +621,11 @@ d2d2 BcdB A2F2 A2F2 | `,
     },
     {
       name: "Denis Murphy’s",
+      incipit:`X: 1
+M: 12/8
+L: 1/8
+K: Dmaj
+A2D FED F2A A2f|gfe`,
       key: "D",
       origin: "Ireland",
       rhythm: "slide",
@@ -621,6 +662,11 @@ K: D
 AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     {
       name: "Denis Murphy’s",
+      incipit:`X: 1
+M: 4/4
+L: 1/8
+K: Dmaj
+f/g/f/e/ d>B AD FA | GE e>d`,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
@@ -635,6 +681,11 @@ AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     },
     {
       name: "The £42 Cheque",
+      incipit:`X: 1
+M: 4/4
+L: 1/8
+K: Dmaj
+Ad Bd/B/ AD FA|GE BE`,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
@@ -649,6 +700,11 @@ AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     },
     {
       name: "The Wind That Shakes The Barley",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: Dmaj
+A2AB AFED B2BA BcdB |`,
       key: "D",
       origin: "Ireland",
       rhythm: "reel (single)",
@@ -667,6 +723,11 @@ AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     },
     {
       name: "The Wise Maid",
+      incipit:`X: 1
+M: 4/4
+L: 1/16
+K: Dmaj
+DE|F2FG FEDE FAAB AFED|d2eg`,
       key: "D",
       origin: "Ireland",
       rhythm: "reel",
@@ -685,6 +746,11 @@ AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     },
     {
       name: "Christmas Eve",
+      incipit:`X: 3
+M: 4/4
+L: 1/16
+K: Gmaj
+GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
       rhythm: "reel",
       origin: "Ireland",
       key: "G",
