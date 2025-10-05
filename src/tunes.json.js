@@ -31,14 +31,14 @@ gf|edBA GEDE G2BG dGBd|e2dB A2GA Be`},
 X:1
 T:The Spanish Lady
 M:3/4
-S:As sung by Brian Dunne, 25 May 2011
+S:Brian Dunne
 R:song
 Q:1/4=70
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-07-(19,25,26); 08-07;11-21
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 F:https://s3-eu-west-1.amazonaws.com/audio.itma.ie/josephinekeegan/113itmamp3.mp3
-N:
+N:As sung by Brian Dunne, 25 May 2011
 N:0. I find the overall rhythmic structure fascinating: (3+4)+(3+4)+(4+3+4) (=25). 
 N:Beautiful; it just simply works! I think you could call this a crooked tune.
 N:1. There are full details about the recording this is based on at the two following links:
@@ -103,7 +103,7 @@ K:D
 %%leftmargin 15
 %%rightmargin 15
 %%staffwidth 800
-%%writefields N false  
+%%writefields N false 
 %
 [M:3/4]A, | "D"DD DE FE | [M:4/4]"Bm" D<B,-B,2 z4 |[M:3/4] "D" D>D DE FA | [M:4/4] "G"B4z2z
 w: As I was walking through Dub-lin ci-ty * At the hour of twelve at night
@@ -271,10 +271,7 @@ R: polska?
 L: 1/8
 P:ABAC
 N:
-N: (English text follows) Cette création est distribuée sous une licence Creative Commons 
-N: (http://creativecommons.org/licenses/by-nc/2.0/fr/). 
-N: This work is licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License 
-N: (http://creativecommons.org/licenses/by-nc/3.0/).
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: E dorian
 [P:A]|: "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" Bd "D"cB (3AGF |
         "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" (3BAG "Bm"FE FD :|
@@ -508,7 +505,7 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
       key: "D",
       origin: "Ireland",
       rhythm: "reel",
-      references: [{notes:'Compare with Lucy Campbell'},
+      references: [{notes:"Compare with Lucy Campbell"},
         {
           artists: "Stockton’s Wing",
           url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
@@ -539,7 +536,7 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
       origin: "Ireland",
       rhythm: "reel (single)",
       
-      references: [{notes:'Compare with The Bucks Of Oranmore'},
+      references: [{notes:"Compare with The Bucks Of Oranmore"},
         {
           artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
           url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
@@ -788,7 +785,7 @@ N: it’s mostly played a bit differently in sessions these days.
 D:ITMA – First ITMA Audio Field Recordings, 1992-93
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-09-03
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M: 12/8
 L: 1/8
 K: A dorian
@@ -821,9 +818,9 @@ K: A dorian
 X: 1
 T: The Silver Slipper
 R: ? + hop jig
-S: John Doherty (recorded between 1968 and 1974)
+S: John Doherty, fiddle
 N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
-D: The Floating Bow (1996)
+D: The Floating Bow (1996; recorded between 1968 and 1974)
 C:Traditional
 M: 2/2
 L: 1/8
@@ -847,7 +844,7 @@ FD ~D2 FD ~D2|AFdA FD ~D2|FDFA B<GE`},
       abc: `
 X: 1
 T: John Doherty’s Mazurka
-S: John Doherty
+S: John Doherty, fiddle
 D: Bundle and Go
 F: https://open.spotify.com/track/14llNbrqpfrhKkBB2Q94qx
 N: * This is a “crooked” tune. It’s mostly in three, but there are two bars 
@@ -866,7 +863,7 @@ N: from ¾ mazurka signature to slip jig tempo.”
 N: Perhaps the “slip jig tempo” parts mentioned are the C and D sections. I would perhaps prefer
 N: to use the term “hop jig tempo”.
 Z: abc-transcription Malcolm Schonfield % 2024-05-29; 2025-03-26
-Z: abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 I:abc-charset utf-8
 M: 3/4
 L: 1/8
@@ -899,7 +896,7 @@ E AB |  cd cE Ac | ea ec df | B2 B`},
         `X: 1
 T: The Cameronian
 R: reel
-S:Rónán Galvin
+S:Rónán Galvin, fiddle
 D: The Fiddle Music of Donegal Volume 2
 F: https://donegalfiddlemusic.bandcamp.com/track/track-22-the-cameronian-reel
 N:0. This is a “crooked” tune
@@ -915,7 +912,7 @@ M: 4/2
 L: 1/8
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-11-12,13
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: G mixolydian
 !fermata!A2 B||[P:Ⅰ]ScFF/F/F cFdF cFFd cFAc|BGG/G/G BGdG BGGe dcBd|
 cFF/F/F cFdF cFFc cFAc| B/d/BGB DGBG DGBd cBAG||
@@ -928,7 +925,7 @@ defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
         `X: 1
 T: The Cameronian
 R: reel
-S: Consuelo Nerea Breschi & Eoghan O’Shaughnessy
+S: Consuelo Nerea Breschi, fiddle; Eoghan O’Shaughnessy, fiddle
 D: The Morning Tree
 F: https://themorningtree.bandcamp.com/track/rakish-paddy-the-cameronian
 N:1. No attempt is made here to capture the fine details (bowing, rhythm,
@@ -943,7 +940,7 @@ M: 4/2
 L: 1/8
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2025-09-01
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: G mixolydian
 [P:Ⅰ]cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG |
 cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG  ||
@@ -981,5 +978,155 @@ M:3/4
 L:1/8
 K:D
 d2 Pce d2 | eg fe d2 | eg fa/f/  dd`},
+{
+    incipit:`
+    X: 1
+    M: 12/8
+    L: 1/8
+    K: D
+    DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE`,
+    abc:[`X:1
+T:Unknown
+R:jig
+I:abc-charset utf-8
+Z:abc-transcription Malcolm Schonfield% 2025-02-07
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+M:12/8
+L:1/8
+K:D
+D2A, DFA def edB | B/B/AB dBA FDD EFE | D2A, DFA def edB | BAB dBA FED [1 DDA, :| [2 D2A ||:
+dcd e^de f=dA BdA | B/c/dB AFD E/E/EE EDB, | D2A, DFA def edB | BAB dBA FED [1 D2A :| [2 D2A, !D.C.! |]
+`,`
+X: 1
+T: Unknown
+R: jig
+S: Mick O’Connor
+F: https://archive.comhaltas.ie/tracks/5596
+N:very roughly as played by the artist
+Z: abc-transcription Malcolm Schonfield% 2025-03-06
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+M: 12/8
+L: 1/8
+K: D
+DFA def  edB | B/B/AB dBA F/F/DD EFE | DDA, DDA Aef edB | BAB dBA FED DDA, |
+DDA, DFA [Dd]ef edB | B/B/AB dBA F/E/DD EFE | DDA, DDA def edB | BAB dBA FED D2A ||
+dcd e^de f=dA  BdA | B/c/dB AFD DEE  EDB, | DDA, DFA [Dd]ef edB | B/B/AB dBA FED D2A |
+dcd e^de f=dA  BdA | B/c/dB AFD D/E/EE EDB, | DDD DFA [Dd]ef edB | BAB dBA FED DDA, ||
+DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE | DDA, DDA [Dd]ef edB | BAB dBA FED DDA, |
+DDA, DFA [Dd]ef edB | B/B/AB dBA FED  EFE | DDA, DDA def edB | BAB dBA FED D2A ||
+dcd e^de f=dA  BdA | B/c/dB AFD DEE  FDA, |
+`]},{
+    name:'Paddy on the Turnpike – crooked settings',
+    incipit:`X:1
+L:1/16
+K:G 
+GE||DGDG G=FGG BGdG eGdG|DE=FG FEFF `,
+    abc:[
+    `X:1
+T:Paddy on the Turnpike 
+T:as played by Fidel Martin
+S:Fidel Martin, fiddle
+O:USA
+M:C|
+Q:1/4=110
+L:1/16
+R:reel
+N:Probably was played on a fiddle tuned one tone down from the standard tuning.
+D: https://bmac.libs.uga.edu/index.php/Detail/objects/331630
+F:UGA Brown Media Archives: identifier artrosen_00180 (Track 3 -29:03 of the tape
+Z:abc-transcription Malcolm Schonfield (using A. Kuntz's transcription 
+Z:as a starting point)%2024-06-26
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%abcjs_soundfont fluid
+%%MIDI program 40
+K:F 
+P:A
+FD||SCFCF F_EFF AFcF dFcF|CD_EF EDEE (CE)BE cEBE|
+CFF_E {FE}F2FG Acde f-eff|[M:3/4] cABG ABG_E F2FD|
+[M:C|]CFCF F_EFF "*"AFcF dFcF|CD_EF ED(E/D/E) (CE)BE cEBE|
+CFF_E {FE}F2FG "**"Acde f2{g}fd|[M:3/4]cABB AcG_E F2Ac | 
+P:B
+[M:C|]dfeg feff afcf afcf|dgdg edee gece gece|
+dfeg {g}f-e(f/e/f) afcf afcf| [M:5/4]d(cAc) fgff cABG AFGE F2Ac | 
+[M:C|]dfeg feff afcf afcc|dgdg {ef}edee gece gece|
+dfeg (f/g/f/e/)ff afcf afcf|[M:5/4]!coda!d(cAc) fgfd cABG (A/B/G/A/)GE .Fz FDS||
+P:Substitution
+"*"AccA dAcA||"**"Acde fe(f/e/f)||
+P:Coda
+[M:5/4]!coda!d(cAc) fgfd cABG (A/B/G/A/)GE .F2z2|]
+`
+,`X:5
+T:Paddy on the Turnpike
+T: as played by Manco Sneed
+S:Manco Sneed, fiddle
+M:4/4
+L:1/16
+R:reel
+D:Field Recorders Collective FRC 505, "Byard Ray, Manco Sneed \&
+D:Mike Rogers" (2006).
+N:Manco Sneed (1885-1975, Jackson & Graham Counties, western N.C.)
+N:Recorded by Peter Hoover in the 1960's.
+F:https://www.slippery-hill.com/recording/paddy-turnpike-2
+Z:Transcribed by Andrew Kuntz; then edited (time signatures & bars) by Malcolm Schonfield%2024-12-10
+K:Gmix
+GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
+DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
+|: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
+[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
+]}, {abc:[`
+X: 1
+T: Tommy Potts' Rampling Pitchfork
+T: As played by Jimmy Power
+%C: Tommy Potts
+S: Jimmy Power, fiddle
+D: Irish Fiddle Player
+F: https://music.youtube.com/watch?v=JCoioqMwFU0
+F: https://open.spotify.com/track/36qbAuJDpdPnmmeaqEjMaH
+Z: abc-transcription Malcolm Schonfield% 2024-05-15 - 17, 24
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+N:accompanied by Reg Hall (piano)
+R: jig
+M: 12/8
+L: 1/8
+K: D minor
+[P:A] D2SE || FEF GFG  AGA dA^F | G/G/^FG A2g  fed cAG |
+^FDD ADD  CDD A,DD | [(GG,3]FG) ABG AFD D2E | 
+FEF [GG,]FG AGA dA^F |  G/G/^FG A2g fed cAG |
+^FDD ADD CDD A,DD | [(GG,3]FG)  A/A/BG AFD
+ [P:B] D2A |:  d2g fed ecA ABc |  d/d/de fed  f/g/af gec |
+d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:| 
+[2 [P:C] D2E |: FEF AFF cFF AFF | GFG A2g fed cAG |
+^FDD ADD CDD A,DD | GFG ABG AFD [1D2E:| 
+[2 [P:D] D2e |: (fef) ecA BAB AFD | (GFG) A2g fed cAG |
+^FDD ADD CDD A,DD | (GFG) ABG AFD [1 D2e :| [2 D2!D.S.! |]
+`,`
+X: 2
+T: The Rambling Pitchfork
+T: Tommy Potts’ Rambling Pitchfork
+%C: Tommy Potts
+T: As played by Paddy O’Brien and Nathan Gourley
+S: Paddy O’Brien, accordeon; Nathan Gourley, fiddle
+D: Bright And Early - The Ballykeale / The Rambling Pitchfork 
+F: https://music.youtube.com/watch?v=FqNstTlVggE&t=64
+F: https://open.spotify.com/track/05m3z6WmKqWGd4xluoujTT
+Z: abc-transcription Malcolm Schonfield% 2024-05-17,24
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+N:• Paddy O’Brien – Button Accordion
+N:• Nathan Gourley – fiddle
+N:• Dáithí Sproule – guitar
+R: jig
+M: 6/8
+L: 1/8
+K: Dmin
+E |:[P:A] F2F AFF cFF AGF | G2A Bde fed cAG | 
+FDD ADD CDD A,DF | G2A BAG [1 AFD DCD :| [2 AFC D2d ||
+|:[P:B] d^cd ^fed e^cA =B/c/de | d^cd e^fg a2^f gfe |
+d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
+[P:C] fed ecA dAc AFD | G2A Bde fed cAG |
+FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`], incipit: `X:1
+M: 12/8
+L: 1/8
+K: D minor
+D2E || FEF GFG  AGA dA^F | G/G/^FG`}
   ],
 };
