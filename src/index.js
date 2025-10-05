@@ -90,7 +90,7 @@ function processTuneData(tune) {
     if (!tune.incipit) {
       processed.incipit = getIncipit(abcArray[0]);
     }
-    processed.rhythm = processed.rhythm.toLowerCase();
+    processed.rhythm = processed.rhythm?.toLowerCase();
   }
 
   if (!processed.name) processed.name = "Untitled";
