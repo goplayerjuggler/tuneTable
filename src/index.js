@@ -499,7 +499,7 @@ function applyFilters() {
       tune.references.some(
         (ref) =>
           ref.artists?.toLowerCase().includes(searchTerm) ||
-          ref.notes.toLowerCase().includes(searchTerm)
+          ref.notes?.toLowerCase().includes(searchTerm)
       );
 
     const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;

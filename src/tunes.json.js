@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-05",
+  lastUpdate: "2025-10-06",
   tunes: [
     {
       abc: `
@@ -504,7 +504,7 @@ K: D
 dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
       key: "D",
       origin: "Ireland",
-      rhythm: "reel",
+      rhythm: "reel (single)",
       references: [{notes:"Compare with Lucy Campbell"},
         {
           artists: "Stockton’s Wing",
@@ -1128,5 +1128,47 @@ M: 12/8
 L: 1/8
 K: D minor
 D2E || FEF GFG  AGA dA^F | G/G/^FG`}
+, {
+  name:"Shanahan’s"
+  , rhythm:"hornpipe"
+  , incipit:`X: 6
+M: 4/2
+L: 1/8
+K: Gmaj
+(3DEF|:GFGA BGBd gfga `
+  , references:[{
+          artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar",
+          url:"https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush"
+        }],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/8753#setting44975",
+        }]
+},{
+  name:"Jerry McMahon’s"
+  , rhythm:"reel (single)"
+  , key:"A dorian"
+  , incipit:`X: 2
+M: 4/2
+L: 1/8
+K: Ador
+EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `
+  , references:[{
+          artists: "Dave Sheridan, fiddle",
+          url:"https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs"
+          ,notes:`From 2:10 onwards. Dunno who the backing guitar & perc are by.
+          I think he’s playing this in G (dorian), not A.
+          This tune is also known as Sailing Into Walpole’s Marsh, but that may be a mistake.
+          This one is in Steam Up!’s repertoire.`
+        }],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/4263#setting45736",
+        }]
+}
   ],
 };
