@@ -301,24 +301,21 @@ L: 1/16
 K: E dorian
 EFGE FGA2  AGFE GAB2  BdcB AGFE |`},
     {
+      
       abc: `
 X: 2
 T: Gypsy Princess
 O:Ireland
-S: Jack Talty & Cormac Begley
+S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
+F:https://music.youtube.com/watch?v=XIVMg8-OI2A&t=134
 F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 R: barndance
+N: Played in F, or maybe D minor, by Talty & Begley. This version
+N: transposes it up a third.
 M: 4/4
 L: 1/8
 K: A
-%
-% Use an Accordion sound when playing the melody:
-%%MIDI program 21
-%
-% Use an Accordion sound when playing the chords:
-%%MIDI chordprog 21
-%
 |:"A"(c2 c)c .c2c2|"D"BcBA F2 E2|"A"(A2A)c e2 ce|"D"f2ec "E"B2 AB|
 "A"(c2 c)c .c2c2|"D"BcBA F2 E2|"A"(A2A)c efec|1 "E"B2 .A2 "A"(A2 A)B:|2 "E"B2 .A2 "A"(A2 A)c||
 |:"A"(e2 e)e .e2 e2|BccB ABce|"D"(f2 f)f .f2 f2|"A"BccB ABcd|
@@ -333,20 +330,16 @@ K: A
       abc: `X: 1
 T: Joe Bane’s
 O:Ireland
-S: Jack Talty & Cormac Begley
+S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
+F:https://music.youtube.com/watch?v=XIVMg8-OI2A
 F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 R: barndance
+N: Played in F, by Talty & Begley. This version
+N: transposes it up a tone.
 M: 4/4
 L: 1/8
 K: G
-%
-% Use an Accordion sound when playing the melody:
-%%MIDI program 21
-%
-% Use an Accordion sound when playing the chords:
-%%MIDI chordprog 21
-%
 ge|"G"dG GA B2AG|d2 .G2 G2 ge|dG GA B2 AG|"D"B2 .A2 A2 Bc |
 "G"dG GA B2 AG|B2d2 "C"g3e|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|
 Bd|"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2 de dB GA|"D"B2 A2 A2 Bd|
@@ -396,7 +389,7 @@ e|fdd cAA BGG A2G|`,
       references: [
         {
           artists: "Stockton’s Wing",
-          url: "https://music.youtube.com/watch?v=HkuABOYkWws&si=bDs2E-LaXpOlgP8R",
+          url: "https://music.youtube.com/watch?v=HkuABOYkWws",
           notes: "",
         },
       ],
@@ -513,8 +506,7 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
         },
         {
           artists: "Paddy Glackin & Paddy Keenan",
-          url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?si=4bed2eed7e394bfe",
-          notes: "1:44 onwards",
+          url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104",
         },
       ],
       scores: [
@@ -540,7 +532,8 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
         {
           artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
           url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
-          notes: "(you have to click on the link in the player) 7:58 (-06:48)",
+          notes: `I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
+Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`,
         },
         {
           notes: `Chords (TBC):
@@ -580,7 +573,7 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `,
       references: [
         {
           artists: "Malachy Bourke, Brian Bourke & Frankie Gavin",
-          url: "https://music.youtube.com/watch?v=hF9fGvdO8gw&si=RLavrljWDY9WCqL2&t=107",
+          url: "https://music.youtube.com/watch?v=hF9fGvdO8gw&t=106",
           notes: "in G",
         },
       ],
