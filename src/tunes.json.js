@@ -127,7 +127,7 @@ K:D
 
 X: 1
 T: Do It Fair
-S: Frank & Pat Reilly
+S: Frank & Pat Reilly, fiddles
 N: 1. A hop jig played in the good old way by two County Leitrim fiddlers.
 N: 2. Quavers are played “straight”, and not “swung”;  writing this in 9/8 would be wrong here, IMO.
 N: You could perhaps write that as “♪♪ ≠ ♩♪”.
@@ -160,7 +160,7 @@ FA (A/B/A) B2 | Be2d (c/B/A)|FA (A`},
     {groups:"ALORA",
       abc: `X: 1
 T: Top The Candle
-S: Frank & Pat Reilly
+S: Frank & Pat Reilly, fiddles
 N:1. A hop jig played in the good old way by two County
 N:Leitrim fiddlers.
 N:2. Quavers are played “straight”, and not “swung”;  writing
@@ -1189,7 +1189,7 @@ K: Emin
 GA|BE~E2 GABG AdBA GEED|~G3A `
   , references:[{
           
-          artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? boghrán",
+          artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? bodhrán",
           url:"https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1"
           
         }],
