@@ -98,12 +98,12 @@ function processTuneData(tune) {
   if (!processed.rhythm) processed.rhythm = "";
   if (!processed.references) processed.references = [];
   if (!processed.scores) processed.scores = [];
-
   return processed;
 }
 
 function initialiseData() {
   tunesData = tunesDataRaw.tunes
+    .filter((t) => t !== undefined)
     .map(processTuneData)
     .sort((a, b) =>
       a.rhythm === b.rhythm
@@ -388,7 +388,7 @@ function renderTable() {
     const row = document.createElement("tr");
 
     let referencesHtml = "";
-    tune.references.forEach((ref, refIndex) => {
+    tune.references?.forEach((ref, refIndex) => {
       let notesHtml = "";
       if (ref.notes) {
         const formattedNotes = ref.notes

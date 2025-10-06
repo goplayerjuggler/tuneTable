@@ -1,7 +1,8 @@
 export default {
-  lastUpdate: "2025-10-06",
+  lastUpdate: "2025-10-06 17:14",
   tunes: [
-    {groups:"ALORA",
+    {
+      groups: "ALORA",
       abc: `
 X: 2
 T: Maud Millar
@@ -19,12 +20,14 @@ P:Part II
 "G"dega bgg2   "D"agef "G"g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
 !coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
 [P:v1]Be||[P:v2]d2||[P:v3](3ege||[P:v4]eBdB ABGA||[P:v5](3GGG||[P:v6]ef||`,
-     incipit: `X:1
+      incipit: `X:1
 M: 4/4
 L: 1/16
 K: G
-gf|edBA GEDE G2BG dGBd|e2dB A2GA Be`},
-    {groups:"ALORA,SU",
+gf|edBA GEDE G2BG dGBd|e2dB A2GA Be`,
+    },
+    {
+      groups: "ALORA,SU",
       abc: `
 %The Spanish Lady
 %abc-2.1
@@ -117,12 +120,14 @@ w: And~in all me life I ne’er did see A maid so neat a-bout the sole
 w: She had twen-ty eight-een six-teen four-teen * Twelve ten eight six four two none 
 B/c/ | "Bm"dc BA "F#m"FE DE | [M:3/4] "Em7"FF "F#m7"FE "G6"DB, | [M:4/4]"A"A,4 z2z
 w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`,
-     incipit: `X:1
+      incipit: `X:1
 M:3/4
 L:1/8
 K:D
-[M:3/4]A, | DD DE FE | [M:4/4] D<B,`},
-    {groups:"ALORA",
+[M:3/4]A, | DD DE FE | [M:4/4] D<B,`,
+    },
+    {
+      groups: "ALORA",
       abc: `
 
 X: 1
@@ -152,12 +157,14 @@ P:Ⅱ
 "D"~f2fd "Bm"fa | "Em7"be2d (c/B/A) | "D"(f/g/f) "(A)"(e/f/e) "Bm"d2 |"D"Ad2A (F/E/D)!D.C.!|]
 `,
       references: [{ notes: "ALORA: #2 in the Top The Candle set" }],
-     incipit: `X:1
+      incipit: `X:1
 M: 3/4
 L: 1/8
 K: D
-FA (A/B/A) B2 | Be2d (c/B/A)|FA (A`},
-    {groups:"ALORA",
+FA (A/B/A) B2 | Be2d (c/B/A)|FA (A`,
+    },
+    {
+      groups: "ALORA",
       abc: `X: 1
 T: Top The Candle
 S: Frank & Pat Reilly, fiddles
@@ -185,12 +192,14 @@ P:Ⅱ
 "G"~b2 ag fd|"Am"ea2g fd|"C"{d}e2 dc BG|"G"DG2B Ad|
 "G"~b2 ag fd|"Am"ea2g fd|"Am/C"{d}e2 dc BA|"D"GB Ac BA!D.C.!|]
 `,
-     incipit: `X:1
+      incipit: `X:1
 M: 3/4
 L: 1/8
 K: G
-~G2 dG BG|FA2B cA|~G2 dG BG|DG2B  A`},
-    {groups:"ALORA",
+~G2 dG BG|FA2B cA|~G2 dG BG|DG2B  A`,
+    },
+    {
+      groups: "ALORA",
       abc: `X: 8
 T: Tommy’s Tarbukas
 C: Alasdair Fraser
@@ -204,14 +213,15 @@ de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
 "Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
-     incipit: `X:1
+      incipit: `X:1
 M: 4/4
 L: 1/8
 K: B minor
-de|f2 ef dBBd|cAeA fAeA|f2 ef dBBd|`},
+de|f2 ef dBBd|cAeA fAeA|f2 ef dBBd|`,
+    },
     {
       name: "The Kid On The Mountain",
-		groups:"ALORA",
+      groups: "ALORA",
       key: "E minor",
       origin: "Ireland",
       rhythm: "slip jig",
@@ -257,12 +267,14 @@ K: E minor
           url: "https://thesession.org/tunes/52",
         },
       ],
-     incipit: `X:1
+      incipit: `X:1
 M: 18/16
 L: 1/16
 K: E minor
-E3 FEF G2F E3 BcA BGD|E3 FEF G2A BA`},
-    {groups:"ALORA",
+E3 FEF G2F E3 BcA BGD|E3 FEF G2A BA`,
+    },
+    {
+      groups: "ALORA",
       abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
 T: Bransle d’Écosse — déstructurée ; à 3 temps
@@ -279,12 +291,14 @@ K: E dorian
 [P:B]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" FE | "Em"B2 AG "D" FE | 
         "Em"B2 Bc "D"dc | "Em"(3BAG "Bm"FE FD :|
 [P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`,
-     incipit: `X:1
+      incipit: `X:1
 M: 3/4
 L: 1/8
 K: E dorian
-EF GE FG | AG FE GA |   Bd cB (3AG`},
-    {groups:"ALORA",
+EF GE FG | AG FE GA |   Bd cB (3AG`,
+    },
+    {
+      groups: "ALORA",
       abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d’Écosse
 M: 6/4
@@ -296,13 +310,15 @@ K: E dorian
 "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "A"AG"Bm"FE "Bm"FD"Em"E2 :|
 |: "Em"B2Bc "A"dedc  "Em".B2B2 "D"AGFE  "Em"B2AG "Bm"F2E2 |
 [M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`,
-     incipit: `X:1
+      incipit: `X:1
 M: 6/4
 L: 1/16
 K: E dorian
-EFGE FGA2  AGFE GAB2  BdcB AGFE |`},
-    {groups:"ALORA",
-      
+EFGE FGA2  AGFE GAB2  BdcB AGFE |`,
+    },
+    {
+      groups: "ALORA",
+
       abc: `
 X: 2
 T: Gypsy Princess
@@ -322,12 +338,14 @@ K: A
 |:"A"(e2 e)e .e2 e2|BccB ABce|"D"(f2 f)f .f2 f2|"A"BccB ABcd|
 (e2 e)e .e2 e2|BccB ABce|"D"a2 af "E"ecBe|1 "A"c2 .A2 A2 Ac:|2 "A"c2 .A2 A2 AB||
 `,
-     incipit: `X:1
+      incipit: `X:1
 M: 4/4
 L: 1/8
 K: A
-(c2 c)c .c2c2|BcBA F2 E2|(A2A)c e2`},
-    {groups:"ALORA",
+(c2 c)c .c2c2|BcBA F2 E2|(A2A)c e2`,
+    },
+    {
+      groups: "ALORA",
       abc: `X: 1
 T: Joe Bane’s
 O:Ireland
@@ -345,12 +363,14 @@ ge|"G"dG GA B2AG|d2 .G2 G2 ge|dG GA B2 AG|"D"B2 .A2 A2 Bc |
 "G"dG GA B2 AG|B2d2 "C"g3e|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|
 Bd|"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2 de dB GA|"D"B2 A2 A2 Bd|
 "G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|`,
-     incipit: `X:1
+      incipit: `X:1
 M: 4/4
 L: 1/8
 K: G
-ge|dG GA B2AG|d2 .G2 G2 ge|dG GA B2`},
-    {groups:"ALORA",
+ge|dG GA B2AG|d2 .G2 G2 ge|dG GA B2`,
+    },
+    {
+      groups: "ALORA",
       abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
 C: Traditional
@@ -372,15 +392,16 @@ P:Ⅱ
 |:"D"d2 e fed faf gfe| d2 e fed      "Asus4"dcA dcA|
 "D"d2 e fed   faf gfe|"G"dcA "A"BAG [|]1 "D"AFD DFA:|2 "D"AFD D3!D.C.!|]
 `,
-     incipit: `X:1
+      incipit: `X:1
 M: 12/8
 L: 1/8
 K: D mixolydian
-DED F2 G AdB cAF|GFG BAG    FAF GEA`},
+DED F2 G AdB cAF|GFG BAG    FAF GEA`,
+    },
     {
       name: "My Darling Asleep",
-		groups:"ALORA",
-      incipit:`X: 5
+      groups: "ALORA",
+      incipit: `X: 5
 M: 6/8
 L: 1/8
 K: D
@@ -405,8 +426,8 @@ e|fdd cAA BGG A2G|`,
     },
     {
       name: "The Killavil Fancy",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: G
@@ -437,8 +458,8 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
     },
     {
       name: "The Dogs Among The Bushes",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: G
@@ -469,8 +490,8 @@ G - - - | D - - - | G - - (D) | G - D - ||
     },
     {
       name: "The Drunken Tinker",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Amix
@@ -495,8 +516,8 @@ EAAG EGDG EA~A2 fAeA| `,
     },
     {
       name: "The Bucks Of Oranmore",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: D
@@ -504,7 +525,8 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
       key: "D",
       origin: "Ireland",
       rhythm: "reel (single)",
-      references: [{notes:"Compare with Lucy Campbell"},
+      references: [
+        { notes: "Compare with Lucy Campbell" },
         {
           artists: "Stockton’s Wing",
           url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
@@ -525,8 +547,8 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
     },
     {
       name: "Lucy Campbell",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Dmaj
@@ -534,8 +556,9 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
       key: "D",
       origin: "Ireland",
       rhythm: "reel (single)",
-      
-      references: [{notes:"Compare with The Bucks Of Oranmore"},
+
+      references: [
+        { notes: "Compare with The Bucks Of Oranmore" },
         {
           artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
           url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
@@ -574,7 +597,7 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `,
     },
     {
       name: "Haste To The Wedding",
-		groups:"ALORA",
+      groups: "ALORA",
       key: "D",
       origin: "Ireland",
       rhythm: "jig",
@@ -592,19 +615,19 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `,
           url: "https://thesession.org/tunes/582",
         },
       ],
-      incipit:`X: 1
+      incipit: `X: 1
 L: 1/8
 M: 12/8
 K: D
-AFA Agf ede fdB|`
+AFA Agf ede fdB|`,
     },
     {
       name: "John Ryan’s",
-		groups:"ALORA",
+      groups: "ALORA",
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
-      incipit:`X:1
+      incipit: `X:1
 M: 4/4
 L: 1/16
 K: D
@@ -620,8 +643,8 @@ d2d2 BcdB A2F2 A2F2 | `,
     },
     {
       name: "Denis Murphy’s",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 12/8
 L: 1/8
 K: Dmaj
@@ -638,7 +661,8 @@ A2D FED F2A A2f|gfe`,
         },
       ],
     },
-    {groups:"ALORA",
+    {
+      groups: "ALORA",
       abc: `
 X: 1
 T: Patsy Geary’s
@@ -655,15 +679,16 @@ P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
 `,
-     incipit: `X:1
+      incipit: `X:1
 M: 12/8
 L: 1/8
 K: D
-AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
+AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`,
+    },
     {
       name: "Denis Murphy’s",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/8
 K: Dmaj
@@ -682,8 +707,8 @@ f/g/f/e/ d>B AD FA | GE e>d`,
     },
     {
       name: "The £42 Cheque",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/8
 K: Dmaj
@@ -702,8 +727,8 @@ Ad Bd/B/ AD FA|GE BE`,
     },
     {
       name: "The Wind That Shakes The Barley",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Dmaj
@@ -726,8 +751,8 @@ A2AB AFED B2BA BcdB |`,
     },
     {
       name: "The Wise Maid",
-		groups:"ALORA",
-      incipit:`X: 1
+      groups: "ALORA",
+      incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Dmaj
@@ -750,8 +775,8 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
     },
     {
       name: "Christmas Eve",
-		groups:"ALORA",
-      incipit:`X: 3
+      groups: "ALORA",
+      incipit: `X: 3
 M: 4/4
 L: 1/16
 K: Gmaj
@@ -815,11 +840,12 @@ d^cAy
           url: "https://thesession.org/tunes/60",
         },
       ],
-     incipit: `X:1
+      incipit: `X:1
 M: 12/8
 L: 1/8
 K: A dorian
-{G}!fermata!A2G|EAA EAA   BAB G2A|B`},
+{G}!fermata!A2G|EAA EAA   BAB G2A|B`,
+    },
     {
       abc: `
 %230717
@@ -843,11 +869,12 @@ FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
           notes: `1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)`,
         },
       ],
-     incipit: `X:1
+      incipit: `X:1
 M: 2/2
 L: 1/8
 K: D
-FD ~D2 FD ~D2|AFdA FD ~D2|FDFA B<GE`},
+FD ~D2 FD ~D2|AFdA FD ~D2|FDFA B<GE`,
+    },
     {
       abc: `
 X: 1
@@ -893,13 +920,14 @@ cd BA eA | cd BA eA | !coda!GA Bc (3dBG |[1 A2 A2 ed :|[2 A2 A2 E2 !D.S.! |]
 P:E (coda)
 !coda! GA Bc (3dBG | !fermata!A4|]
 `,
-     incipit: `X:1
+      incipit: `X:1
 M: 3/4
 L: 1/8
 K: A
-E AB |  cd cE Ac | ea ec df | B2 B`},
+E AB |  cd cE Ac | ea ec df | B2 B`,
+    },
     {
-        references:[{notes:`A crooked tune`}],
+      references: [{ notes: `A crooked tune` }],
       abc: [
         `X: 1
 T: The Cameronian
@@ -957,11 +985,12 @@ F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 [M:3/2]dgeg ^fdcA G2gf | [M:4/2] egce ^fdaf gbag fgfd!D.C.!|]
 `,
       ],
-     incipit: `X:1
+      incipit: `X:1
 M: 4/2
 L: 1/8
 K: G mixolydian
-!fermata!A2 B||cFF/F/F cFdF cFFd cF`},
+!fermata!A2 B||cFF/F/F cFdF cFFd cF`,
+    },
     {
       abc: `X:1
 T:Kringelleken
@@ -981,19 +1010,21 @@ P:ABABA2BC
 a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 [P:C (la dernière fois)]|: d2 ce d2 | eg fe d2 | eg fa/f/ [1 dd | ed BG A2 :| [2 de | cd !fermata!d4 |]
 `,
-     incipit: `X:1
+      incipit: `X:1
 M:3/4
 L:1/8
 K:D
-d2 Pce d2 | eg fe d2 | eg fa/f/  dd`},
-{
-    incipit:`
+d2 Pce d2 | eg fe d2 | eg fa/f/  dd`,
+    },
+    {
+      incipit: `
     X: 1
     M: 12/8
     L: 1/8
     K: D
     DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE`,
-    abc:[`X:1
+      abc: [
+        `X:1
 T:Unknown
 R:jig
 I:abc-charset utf-8
@@ -1004,7 +1035,8 @@ L:1/8
 K:D
 D2A, DFA def edB | B/B/AB dBA FDD EFE | D2A, DFA def edB | BAB dBA FED [1 DDA, :| [2 D2A ||:
 dcd e^de f=dA BdA | B/c/dB AFD E/E/EE EDB, | D2A, DFA def edB | BAB dBA FED [1 D2A :| [2 D2A, !D.C.! |]
-`,`
+`,
+        `
 X: 1
 T: Unknown
 R: jig
@@ -1023,14 +1055,17 @@ dcd e^de f=dA  BdA | B/c/dB AFD D/E/EE EDB, | DDD DFA [Dd]ef edB | BAB dBA FED D
 DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE | DDA, DDA [Dd]ef edB | BAB dBA FED DDA, |
 DDA, DFA [Dd]ef edB | B/B/AB dBA FED  EFE | DDA, DDA def edB | BAB dBA FED D2A ||
 dcd e^de f=dA  BdA | B/c/dB AFD DEE  FDA, |
-`]},{
-    name:'Paddy on the Turnpike – crooked settings',
-    incipit:`X:1
+`,
+      ],
+    },
+    {
+      name: "Paddy on the Turnpike – crooked settings",
+      incipit: `X:1
 L:1/16
 K:G 
 GE||DGDG G=FGG BGdG eGdG|DE=FG FEFF `,
-    abc:[
-    `X:1
+      abc: [
+        `X:1
 T:Paddy on the Turnpike 
 T:as played by Fidel Martin
 S:Fidel Martin, fiddle
@@ -1062,8 +1097,8 @@ P:Substitution
 "*"AccA dAcA||"**"Acde fe(f/e/f)||
 P:Coda
 [M:5/4]!coda!d(cAc) fgfd cABG (A/B/G/A/)GE .F2z2|]
-`
-,`X:5
+`,
+        `X:5
 T:Paddy on the Turnpike
 T: as played by Manco Sneed
 S:Manco Sneed, fiddle
@@ -1080,8 +1115,12 @@ K:Gmix
 GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
 DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
-[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
-]}, {abc:[`
+[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`,
+      ],
+    },
+    {
+      abc: [
+        `
 X: 1
 T: Tommy Potts' Rampling Pitchfork
 T: As played by Jimmy Power
@@ -1107,7 +1146,8 @@ d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:|
 ^FDD ADD CDD A,DD | GFG ABG AFD [1D2E:| 
 [2 [P:D] D2e |: (fef) ecA BAB AFD | (GFG) A2g fed cAG |
 ^FDD ADD CDD A,DD | (GFG) ABG AFD [1 D2e :| [2 D2!D.S.! |]
-`,`
+`,
+        `
 X: 2
 T: The Rambling Pitchfork
 T: Tommy Potts’ Rambling Pitchfork
@@ -1131,74 +1171,139 @@ FDD ADD CDD A,DF | G2A BAG [1 AFD DCD :| [2 AFC D2d ||
 |:[P:B] d^cd ^fed e^cA =B/c/de | d^cd e^fg a2^f gfe |
 d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
 [P:C] fed ecA dAc AFD | G2A Bde fed cAG |
-FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`], incipit: `X:1
+FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`,
+      ],
+      incipit: `X:1
 M: 12/8
 L: 1/8
 K: D minor
-D2E || FEF GFG  AGA dA^F | G/G/^FG`}
-, {
-  name:"Shanahan’s"
-  , rhythm:"hornpipe"
-  , incipit:`X: 6
+D2E || FEF GFG  AGA dA^F | G/G/^FG`,
+    },
+    {
+      name: "Shanahan’s",
+      rhythm: "hornpipe",
+      incipit: `X: 6
 M: 4/2
 L: 1/8
 K: Gmaj
-(3DEF|:GFGA BGBd gfga `
-  , references:[{
+(3DEF|:GFGA BGBd gfga `,
+      references: [
+        {
           artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar",
-          url:"https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush"
-        }],
+          url: "https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush",
+        },
+      ],
       scores: [
         {
           type: "tune",
           name: "thesession",
           url: "https://thesession.org/tunes/8753#setting44975",
-        }]
-},{
-  name:"Jerry McMahon’s"
-  , groups:"SU"
-  , rhythm:"reel (single)"
-  , key:"A dorian"
-  , incipit:`X: 2
+        },
+      ],
+    },
+    {
+      name: "Jerry McMahon’s",
+      groups: "SU",
+      rhythm: "reel (single)",
+      key: "A dorian",
+      incipit: `X: 2
 M: 4/4
 L: 1/16
 K: Ador
-EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `
-  , references:[{
+EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
+      references: [
+        {
           artists: "Dave Sheridan, fiddle",
-          url:"https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs"
-          ,notes:`From 2:10 onwards. Dunno who the backing guitar & perc are by.
+          url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs",
+          notes: `From 2:10 onwards. Dunno who the backing guitar & perc are by.
           I think he’s playing this in G (dorian), not A.
-          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`
-        }],
+          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`,
+        },
+      ],
       scores: [
         {
           type: "tune",
           name: "thesession",
           url: "https://thesession.org/tunes/4263#setting45736",
-        }]
-},{
-  name:"Palmer’s Gate"
-  , rhythm:"reel"
-  , groups:"SU"
-  , key:"A dorian"
-  , incipit:`X: 3
+        },
+      ],
+    },
+    {
+      name: "Palmer’s Gate",
+      rhythm: "reel",
+      groups: "SU",
+      key: "A dorian",
+      incipit: `X: 3
 M: 4/4
 L: 1/16
 K: Emin
-GA|BE~E2 GABG AdBA GEED|~G3A `
-  , references:[{
-          
-          artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? bodhrán",
-          url:"https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1"
-          
-        }],
+GA|BE~E2 GABG AdBA GEED|~G3A `,
+      references: [
+        {
+          artists:
+            "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? bodhrán",
+          url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1",
+        },
+      ],
       scores: [
         {
           type: "tune",
           name: "thesession",
           url: "https://thesession.org/tunes/1020",
-        }]
-}
+        },
+      ],
+    },
+    {
+      name: "The Home Ruler",
+      rhythm: "hornpipe",
+      key: "D",
+      groups: "ALORA",
+      incipit: `X: 1
+M: 4/2
+L: 1/8
+K: Dmaj
+AF|D2FA DAFA dfed B2dB|A2AB AFDE 
+`,
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/1020",
+        },
+      ],
+    },
+    ,
+    {
+      name: "The Boys Of Bluehill",
+      rhythm: "hornpipe",
+      key: "D",
+      groups: "ALORA",
+      incipit: `
+X: 6
+M: 4/2
+L: 1/8
+K: Dmaj
+FA| BAFA DAFA BA (3Bcd e2de|fagf 
+`,
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/651",
+        },
+      ],
+    },
+
+    /*
+https://thesession.org/tunes/651
+X: 6
+T: The Boys Of Bluehill
+R: hornpipe
+M: 4/4
+L: 1/8
+K: Dmaj
+FA|:"Bm"BAFA "D"DA FA|"Bm"BA (3Bcd "A" e2 de|"D"fa gf "A7"egfe|"D"dfed "Bm"B2dA|
+"Bm"BAFA "D"DAFA|"Bm7"BA (3Bcd "Em"e2 de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 FA:|2 "D"d2 f2 d2 fg||
+*/
   ],
 };
