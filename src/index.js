@@ -364,7 +364,7 @@ function updateAbcDisplay() {
     paddingbottom: 10,
     paddingright: 20,
     paddingleft: 20,
-    responsive: "resize"
+    responsive: "resize",
   });
 }
 
@@ -513,10 +513,16 @@ function applyFilters() {
 
 function filterByName(searchTerm) {
   filteredData = tunesData.filter((tune) =>
-    tune.name.toLowerCase().includes(searchTerm.toLowerCase())
+    tune.name?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   renderTable();
+}
+function filterByGroup(searchTerm) {
+  tunesData = tunesData.filter((tune) =>
+    tune.groups?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  applyFilters();
 }
 
 function sortData(column) {
@@ -599,6 +605,12 @@ document.addEventListener("DOMContentLoaded", function () {
     let n = params.get("n");
     if (n) {
       filterByName(n);
+    }
+  }
+  if (params.has("g")) {
+    let g = params.get("g");
+    if (g) {
+      filterByGroup(g);
     }
   }
   if (filteredData.length === 1 && filteredData[0].abc) {

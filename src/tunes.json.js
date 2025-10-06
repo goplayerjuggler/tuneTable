@@ -1,7 +1,7 @@
 export default {
   lastUpdate: "2025-10-06",
   tunes: [
-    {
+    {groups:"ALORA",
       abc: `
 X: 2
 T: Maud Millar
@@ -24,7 +24,7 @@ M: 4/4
 L: 1/16
 K: G
 gf|edBA GEDE G2BG dGBd|e2dB A2GA Be`},
-    {
+    {groups:"ALORA,SU",
       abc: `
 %The Spanish Lady
 %abc-2.1
@@ -122,7 +122,7 @@ M:3/4
 L:1/8
 K:D
 [M:3/4]A, | DD DE FE | [M:4/4] D<B,`},
-    {
+    {groups:"ALORA",
       abc: `
 
 X: 1
@@ -157,7 +157,7 @@ M: 3/4
 L: 1/8
 K: D
 FA (A/B/A) B2 | Be2d (c/B/A)|FA (A`},
-    {
+    {groups:"ALORA",
       abc: `X: 1
 T: Top The Candle
 S: Frank & Pat Reilly
@@ -190,7 +190,7 @@ M: 3/4
 L: 1/8
 K: G
 ~G2 dG BG|FA2B cA|~G2 dG BG|DG2B  A`},
-    {
+    {groups:"ALORA",
       abc: `X: 8
 T: Tommy’s Tarbukas
 C: Alasdair Fraser
@@ -211,6 +211,7 @@ K: B minor
 de|f2 ef dBBd|cAeA fAeA|f2 ef dBBd|`},
     {
       name: "The Kid On The Mountain",
+		groups:"ALORA",
       key: "E minor",
       origin: "Ireland",
       rhythm: "slip jig",
@@ -261,7 +262,7 @@ M: 18/16
 L: 1/16
 K: E minor
 E3 FEF G2F E3 BcA BGD|E3 FEF G2A BA`},
-    {
+    {groups:"ALORA",
       abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
 T: Bransle d’Écosse — déstructurée ; à 3 temps
@@ -283,7 +284,7 @@ M: 3/4
 L: 1/8
 K: E dorian
 EF GE FG | AG FE GA |   Bd cB (3AG`},
-    {
+    {groups:"ALORA",
       abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d’Écosse
 M: 6/4
@@ -300,7 +301,7 @@ M: 6/4
 L: 1/16
 K: E dorian
 EFGE FGA2  AGFE GAB2  BdcB AGFE |`},
-    {
+    {groups:"ALORA",
       
       abc: `
 X: 2
@@ -326,7 +327,7 @@ M: 4/4
 L: 1/8
 K: A
 (c2 c)c .c2c2|BcBA F2 E2|(A2A)c e2`},
-    {
+    {groups:"ALORA",
       abc: `X: 1
 T: Joe Bane’s
 O:Ireland
@@ -349,7 +350,7 @@ M: 4/4
 L: 1/8
 K: G
 ge|dG GA B2AG|d2 .G2 G2 ge|dG GA B2`},
-    {
+    {groups:"ALORA",
       abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
 C: Traditional
@@ -378,6 +379,7 @@ K: D mixolydian
 DED F2 G AdB cAF|GFG BAG    FAF GEA`},
     {
       name: "My Darling Asleep",
+		groups:"ALORA",
       incipit:`X: 5
 M: 6/8
 L: 1/8
@@ -403,6 +405,7 @@ e|fdd cAA BGG A2G|`,
     },
     {
       name: "The Killavil Fancy",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -434,6 +437,7 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
     },
     {
       name: "The Dogs Among The Bushes",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -465,6 +469,7 @@ G - - - | D - - - | G - - (D) | G - D - ||
     },
     {
       name: "The Drunken Tinker",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -490,6 +495,7 @@ EAAG EGDG EA~A2 fAeA| `,
     },
     {
       name: "The Bucks Of Oranmore",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -519,6 +525,7 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
     },
     {
       name: "Lucy Campbell",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -567,6 +574,7 @@ D - (D/F) (D, Dsus4, G or Em) D - Em - `,
     },
     {
       name: "Haste To The Wedding",
+		groups:"ALORA",
       key: "D",
       origin: "Ireland",
       rhythm: "jig",
@@ -592,6 +600,7 @@ AFA Agf ede fdB|`
     },
     {
       name: "John Ryan’s",
+		groups:"ALORA",
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
@@ -611,6 +620,7 @@ d2d2 BcdB A2F2 A2F2 | `,
     },
     {
       name: "Denis Murphy’s",
+		groups:"ALORA",
       incipit:`X: 1
 M: 12/8
 L: 1/8
@@ -628,7 +638,7 @@ A2D FED F2A A2f|gfe`,
         },
       ],
     },
-    {
+    {groups:"ALORA",
       abc: `
 X: 1
 T: Patsy Geary’s
@@ -652,6 +662,7 @@ K: D
 AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`},
     {
       name: "Denis Murphy’s",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/8
@@ -671,6 +682,7 @@ f/g/f/e/ d>B AD FA | GE e>d`,
     },
     {
       name: "The £42 Cheque",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/8
@@ -690,6 +702,7 @@ Ad Bd/B/ AD FA|GE BE`,
     },
     {
       name: "The Wind That Shakes The Barley",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -713,6 +726,7 @@ A2AB AFED B2BA BcdB |`,
     },
     {
       name: "The Wise Maid",
+		groups:"ALORA",
       incipit:`X: 1
 M: 4/4
 L: 1/16
@@ -736,6 +750,7 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
     },
     {
       name: "Christmas Eve",
+		groups:"ALORA",
       incipit:`X: 3
 M: 4/4
 L: 1/16
@@ -1141,6 +1156,7 @@ K: Gmaj
         }]
 },{
   name:"Jerry McMahon’s"
+  , groups:"SU"
   , rhythm:"reel (single)"
   , key:"A dorian"
   , incipit:`X: 2
@@ -1153,14 +1169,35 @@ EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `
           url:"https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs"
           ,notes:`From 2:10 onwards. Dunno who the backing guitar & perc are by.
           I think he’s playing this in G (dorian), not A.
-          This tune is also known as Sailing Into Walpole’s Marsh, but that may be a mistake.
-          This one is in Steam Up!’s repertoire.`
+          This tune is also known as Sailing Into Walpole’s Marsh, but that may be a mistake.`
         }],
       scores: [
         {
           type: "tune",
           name: "thesession",
           url: "https://thesession.org/tunes/4263#setting45736",
+        }]
+},{
+  name:"Palmer’s Gate"
+  , rhythm:"reel"
+  , groups:"SU"
+  , key:"A dorian"
+  , incipit:`X: 3
+M: 4/4
+L: 1/16
+K: Emin
+GA|BE~E2 GABG AdBA GEED|~G3A `
+  , references:[{
+          
+          artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? boghrán",
+          url:"https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1"
+          
+        }],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/1020",
         }]
 }
   ],
