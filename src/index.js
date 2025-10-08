@@ -1,5 +1,5 @@
 "use strict";
-import './styles.css';
+import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
 import getIncipit from "./incipits.js";
 import AbcJs from "abcjs";
@@ -12,7 +12,252 @@ let currentTranspose = 0;
 let currentTuneAbc = "";
 let currentAbcArray = [];
 let currentAbcIndex = 0;
+//
+let currentEditTuneIndex = null;
 
+function openEditModal(tune, tuneIndex) {
+  const modal = document.getElementById("editModal");
+  currentEditTuneIndex = tuneIndex;
+
+  // Populate basic metadata
+  document.getElementById("editName").value = tune.name || "";
+  document.getElementById("editKey").value = tune.key || "";
+  document.getElementById("editRhythm").value = tune.rhythm || "";
+
+  // Populate ABC notation (handle array or single string)
+  const abcArray = Array.isArray(tune.abc)
+    ? tune.abc
+    : tune.abc
+    ? [tune.abc]
+    : [];
+  document.getElementById("editAbc").value = abcArray.join("\n\n---\n\n");
+
+  // Render references editor
+  renderReferencesEditor(tune.references || []);
+
+  // Render scores editor
+  renderScoresEditor(tune.scores || []);
+
+  modal.classList.add("active");
+}
+
+function closeEditModal() {
+  const modal = document.getElementById("editModal");
+  modal.classList.remove("active");
+  currentEditTuneIndex = null;
+}
+
+function renderReferencesEditor(references) {
+  const container = document.getElementById("referencesEditor");
+
+  if (references.length === 0) {
+    container.innerHTML =
+      '<p class="empty-message">No references yet. Click "Add Reference" to create one.</p>';
+    return;
+  }
+
+  container.innerHTML = references
+    .map(
+      (ref, index) => `
+    <div class="editor-item" data-index="${index}">
+      <div class="editor-item-header">
+        <strong>Reference ${index + 1}</strong>
+        <button type="button" class="btn-icon btn-danger" onclick="removeReference(${index})" title="Remove reference">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="editor-item-content">
+        <div class="form-group">
+          <label>Artists/Source:</label>
+          <input type="text" class="form-control" value="${escapeHtml(
+            ref.artists || ""
+          )}" data-ref-index="${index}" data-field="artists">
+        </div>
+        <div class="form-group">
+          <label>URL:</label>
+          <input type="text" class="form-control" value="${escapeHtml(
+            ref.url || ""
+          )}" data-ref-index="${index}" data-field="url" placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label>Notes:</label>
+          <textarea class="form-control" rows="3" data-ref-index="${index}" data-field="notes">${escapeHtml(
+        ref.notes || ""
+      )}</textarea>
+        </div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+function renderScoresEditor(scores) {
+  const container = document.getElementById("scoresEditor");
+
+  if (scores.length === 0) {
+    container.innerHTML =
+      '<p class="empty-message">No scores yet. Click "Add Score" to create one.</p>';
+    return;
+  }
+
+  container.innerHTML = scores
+    .map(
+      (score, index) => `
+    <div class="editor-item" data-index="${index}">
+      <div class="editor-item-header">
+        <strong>Score ${index + 1}</strong>
+        <button type="button" class="btn-icon btn-danger" onclick="removeScore(${index})" title="Remove score">
+          <span>×</span>
+        </button>
+      </div>
+      <div class="editor-item-content">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" class="form-control" value="${escapeHtml(
+            score.name || ""
+          )}" data-score-index="${index}" data-field="name">
+        </div>
+        <div class="form-group">
+          <label>URL:</label>
+          <input type="text" class="form-control" value="${escapeHtml(
+            score.url || ""
+          )}" data-score-index="${index}" data-field="url" placeholder="https://...">
+        </div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+}
+
+function addReference() {
+  const tune = filteredData[currentEditTuneIndex];
+  if (!tune.references) tune.references = [];
+
+  tune.references.push({
+    artists: "",
+    url: "",
+    notes: "",
+  });
+
+  renderReferencesEditor(tune.references);
+}
+
+function removeReference(index) {
+  const tune = filteredData[currentEditTuneIndex];
+  tune.references.splice(index, 1);
+  renderReferencesEditor(tune.references);
+}
+
+function addScore() {
+  const tune = filteredData[currentEditTuneIndex];
+  if (!tune.scores) tune.scores = [];
+
+  tune.scores.push({
+    name: "",
+    url: "",
+  });
+
+  renderScoresEditor(tune.scores);
+}
+
+function removeScore(index) {
+  const tune = filteredData[currentEditTuneIndex];
+  tune.scores.splice(index, 1);
+  renderScoresEditor(tune.scores);
+}
+
+function saveEditedTune() {
+  const tune = filteredData[currentEditTuneIndex];
+  const originalTuneDataIndex = tunesData.findIndex((t) => t === tune);
+
+  // Update basic metadata
+  tune.name = document.getElementById("editName").value.trim() || "Untitled";
+  tune.key = document.getElementById("editKey").value.trim();
+  tune.rhythm = document
+    .getElementById("editRhythm")
+    .value.trim()
+    .toLowerCase();
+
+  // Update ABC notation
+  const abcText = document.getElementById("editAbc").value.trim();
+  if (abcText) {
+    // Split by separator if multiple versions exist
+    const abcParts = abcText
+      .split(/\n\s*---\s*\n/)
+      .filter((part) => part.trim());
+    tune.abc = abcParts.length === 1 ? abcParts[0] : abcParts;
+  } else {
+    tune.abc = null;
+  }
+
+  // Update references from form inputs
+  const referenceInputs = document.querySelectorAll(
+    "#referencesEditor .editor-item"
+  );
+  tune.references = Array.from(referenceInputs).map((item, index) => {
+    const artists =
+      item.querySelector(
+        `input[data-ref-index="${index}"][data-field="artists"]`
+      )?.value || "";
+    const url =
+      item.querySelector(`input[data-ref-index="${index}"][data-field="url"]`)
+        ?.value || "";
+    const notes =
+      item.querySelector(
+        `textarea[data-ref-index="${index}"][data-field="notes"]`
+      )?.value || "";
+
+    return { artists, url, notes };
+  });
+
+  // Update scores from form inputs
+  const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
+  tune.scores = Array.from(scoreInputs).map((item, index) => {
+    const name =
+      item.querySelector(
+        `input[data-score-index="${index}"][data-field="name"]`
+      )?.value || "";
+    const url =
+      item.querySelector(`input[data-score-index="${index}"][data-field="url"]`)
+        ?.value || "";
+
+    return { name, url };
+  });
+
+  // Reprocess tune to update incipit and other derived data
+  const reprocessed = processTuneData(tune);
+  Object.assign(tune, reprocessed);
+
+  // Update in main tunesData array if tune exists there
+  if (originalTuneDataIndex !== -1) {
+    tunesData[originalTuneDataIndex] = tune;
+  }
+
+  // Re-render table and close modal
+  renderTable();
+  closeEditModal();
+}
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Make functions globally accessible
+window.openEditModal = openEditModal;
+window.closeEditModal = closeEditModal;
+window.addReference = addReference;
+window.removeReference = removeReference;
+window.addScore = addScore;
+window.removeScore = removeScore;
+window.saveEditedTune = saveEditedTune;
+window.filteredData = filteredData
+
+// Add this to your DOMContentLoaded event listener:
+//
 function parseAbc(abc) {
   const lines = abc.split("\n"),
     metadata = {},
@@ -441,12 +686,22 @@ function renderTable() {
 
     let incipitId = `incipit${index}`;
     let title = hasAbc
-      ? `<div> <a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
-            ${tune.name}
-        </a></div>`
-      : `<div class="${tuneNameClass}" data-tune-index="${index}">
-            ${tune.name}
-        </div>`;
+      ? `<div class="tune-header">
+      <a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+        ${tune.name}
+      </a>
+      <button class="btn-icon btn-edit" onclick="openEditModal(filteredData[${index}], ${index})" title="Edit tune">
+        ✎
+      </button>
+    </div>`
+      : `<div class="tune-header">
+      <div class="${tuneNameClass}" data-tune-index="${index}">
+        ${tune.name}
+      </div>
+      <button class="btn-icon btn-edit" onclick="openEditModal(filteredData[${index}], ${index})" title="Edit tune">
+        ✎
+      </button>
+    </div>`;
     row.innerHTML = `
                     <td>${title}
                     <div id="${incipitId}" class="incipitClass"></div></td>
@@ -484,6 +739,7 @@ function renderTable() {
   document.getElementById(
     "spCount"
   ).innerText = `${filteredData.length}/${tunesData.length}`;
+  window.filteredData = filteredData
 }
 
 function applyFilters() {
@@ -686,12 +942,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("keydown", function (e) {
     const addTunesModal = document.getElementById("addTunesModal");
     const abcModal = document.getElementById("abcModal");
+    const editModal = document.getElementById("editModal");
 
     if (e.key === "Escape") {
       if (addTunesModal.classList.contains("active")) {
         closeAddTunesModal();
       } else if (abcModal.classList.contains("active")) {
         closeAbcModal();
+      } else if (editModal.classList.contains("active")) {
+        closeEditModal();
       }
     } else if (abcModal.classList.contains("active")) {
       if (e.key === "ArrowLeft") {
@@ -699,6 +958,23 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (e.key === "ArrowRight") {
         navigateAbc(1);
       }
+    }
+  });
+
+  document
+    .getElementById("closeEditModalBtn")
+    ?.addEventListener("click", closeEditModal);
+  document
+    .getElementById("saveEditBtn")
+    ?.addEventListener("click", saveEditedTune);
+  document
+    .getElementById("addReferenceBtn")
+    ?.addEventListener("click", addReference);
+  document.getElementById("addScoreBtn")?.addEventListener("click", addScore);
+
+  document.getElementById("editModal")?.addEventListener("click", function (e) {
+    if (e.target === this) {
+      closeEditModal();
     }
   });
 });
