@@ -33,7 +33,7 @@ function openEditModal(tune, tuneIndex) {
   document.getElementById("editAbc").value = abcArray.join("\n\n---\n\n");
 
   // Render references editor
-  renderReferencesEditor(tune.references || []);
+  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc) || []);
 
   // Render scores editor
   renderScoresEditor(tune.scores || []);
@@ -328,6 +328,7 @@ function processTuneData(tune) {
             `${abcMeta.recording ? "\n" : ""}${
               abcMeta.comments ? abcMeta.comments.join("\n") : ""
             }`,
+            fromAbc:true
         };
 
         processed.references.push(abcRef);
