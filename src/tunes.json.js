@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-06 17:14",
+  lastUpdate: "2025-10-07",
   tunes: [
     {
       groups: "ALORA",
@@ -325,8 +325,8 @@ T: Gypsy Princess
 O:Ireland
 S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
-F:https://music.youtube.com/watch?v=XIVMg8-OI2A&t=134
 F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
+F:https://music.youtube.com/watch?v=XIVMg8-OI2A&t=134
 R: barndance
 N: Played in F, or maybe D minor, by Talty & Begley. This version
 N: transposes it up a third.
@@ -351,8 +351,8 @@ T: Joe Bane’s
 O:Ireland
 S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
-F:https://music.youtube.com/watch?v=XIVMg8-OI2A
 F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
+F:https://music.youtube.com/watch?v=XIVMg8-OI2A
 R: barndance
 N: Played in F, by Talty & Begley. This version
 N: transposes it up a tone.
@@ -1182,11 +1182,12 @@ D2E || FEF GFG  AGA dA^F | G/G/^FG`,
     {
       name: "Shanahan’s",
       rhythm: "hornpipe",
+      key:"G",
       incipit: `X: 6
 M: 4/2
 L: 1/8
 K: Gmaj
-(3DEF|:GFGA BGBd gfga `,
+(3DEF|GFGA BGBd gfga `,
       references: [
         {
           artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar",
