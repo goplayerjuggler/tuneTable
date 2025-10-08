@@ -2,7 +2,10 @@
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
 import getIncipit from "./incipits.js";
+
 import AbcJs from "abcjs";
+
+const STORAGE_KEY = "tunesData";
 
 let tunesData = [];
 let filteredData = [];
@@ -12,19 +15,146 @@ let currentTranspose = 0;
 let currentTuneAbc = "";
 let currentAbcArray = [];
 let currentAbcIndex = 0;
-//
 let currentEditTuneIndex = null;
+function stringifyWithTemplates(obj, indent = 2) {
+  // Use a WeakSet to handle circular references
+  const seen = new WeakSet();
+  function replacer(key, value) {
+    // Handle circular references
+    if (typeof value === 'object' && value !== null) {
+      if (seen.has(value)) return '[Circular]';
+      seen.add(value);
+    }
+    // Tag multi-line strings with a unique marker
+    if (typeof value === 'string' && (value.includes('\n') || value.includes('\r'))) {
+      // Use a marker unlikely to conflict with actual data
+      return `___MULTILINE_STRING___${btoa(unescape(encodeURIComponent(value)))}`;
+    }
+    return value;
+  }
+
+  let intermediate = JSON.stringify(obj, replacer, indent);
+
+  // Replace tagged strings with template literals
+  intermediate = intermediate.replace(
+    /"___MULTILINE_STRING___([A-Za-z0-9+/=]+)"/g,
+    (_, base64) => {
+      const str = decodeURIComponent(escape(atob(base64)));
+      return "`" + str.replace(/`/g, "\\`") + "`";
+    }
+  );
+
+  return intermediate;
+}
+// Local Storage Functions
+function saveTunesToStorage() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(tunesData));
+    console.log("Saved to local storage");
+  } catch (e) {
+    console.error("Failed to save to local storage:", e);
+  }
+}
+
+function loadTunesFromStorage() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed;
+      }
+    }
+  } catch (e) {
+    console.error("Failed to load from local storage:", e);
+  }
+  return null;
+}
+
+function clearStorage() {
+  if (confirm("This will reset all tunes to the original data. Continue?")) {
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  }
+}
+function emptyTunes() {
+  if(!localStorage.getItem(STORAGE_KEY) || confirm("You may lose some data. This cannot be undone. Continue?")) {
+    localStorage.removeItem(STORAGE_KEY);
+    tunesData = [];
+    filteredData = []
+    
+  renderTable();
+  }
+}
+
+function copyTunesToClipboard() {
+  const jsonString = stringifyWithTemplates(tunesData,2);
+  navigator.clipboard.writeText(jsonString).then(
+    () => {
+      const btn = document.getElementById("copyTunesBtn");
+      const originalText = btn.textContent;
+      btn.textContent = "✓ Copied!";
+      setTimeout(() => {
+        btn.textContent = originalText;
+      }, 2000);
+    },
+    (err) => {
+      console.error("Failed to copy:", err);
+      alert("Failed to copy to clipboard");
+    }
+  );
+}
+
+// Add New Tune
+function addNewTune() {
+  const newTune = {
+    name: "New Tune",
+    key: "",
+    rhythm: "",
+    abc: null,
+    references: [],
+    scores: [],
+    incipit: null
+  };
+
+  tunesData.push(newTune);
+  filteredData.push(newTune);
+  
+  saveTunesToStorage();
+  renderTable();
+  
+  // Open edit modal for the new tune
+  const newIndex = filteredData.length - 1;
+  openEditModal(newTune, newIndex);
+}
+
+// Delete Tune
+function deleteTune(tuneIndex) {
+  const tune = filteredData[tuneIndex];
+  
+  if (!confirm(`Delete tune "${tune.name}"? This cannot be undone.`)) {
+    return;
+  }
+
+  const originalTuneDataIndex = tunesData.findIndex((t) => t === tune);
+  
+  if (originalTuneDataIndex !== -1) {
+    tunesData.splice(originalTuneDataIndex, 1);
+  }
+  
+  saveTunesToStorage();
+  populateFilters();
+  applyFilters();
+}
 
 function openEditModal(tune, tuneIndex) {
   const modal = document.getElementById("editModal");
   currentEditTuneIndex = tuneIndex;
 
-  // Populate basic metadata
   document.getElementById("editName").value = tune.name || "";
   document.getElementById("editKey").value = tune.key || "";
   document.getElementById("editRhythm").value = tune.rhythm || "";
 
-  // Populate ABC notation (handle array or single string)
   const abcArray = Array.isArray(tune.abc)
     ? tune.abc
     : tune.abc
@@ -32,10 +162,7 @@ function openEditModal(tune, tuneIndex) {
     : [];
   document.getElementById("editAbc").value = abcArray.join("\n\n---\n\n");
 
-  // Render references editor
   renderReferencesEditor(tune.references.filter(r=>!r.fromAbc) || []);
-
-  // Render scores editor
   renderScoresEditor(tune.scores || []);
 
   modal.classList.add("active");
@@ -141,13 +268,15 @@ function addReference() {
     notes: "",
   });
 
-  renderReferencesEditor(tune.references);
+  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc));
 }
 
 function removeReference(index) {
   const tune = filteredData[currentEditTuneIndex];
-  tune.references.splice(index, 1);
-  renderReferencesEditor(tune.references);
+  const nonAbcRefs = tune.references.filter(r=>!r.fromAbc);
+  const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
+  tune.references.splice(actualIndex, 1);
+  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc));
 }
 
 function addScore() {
@@ -172,7 +301,6 @@ function saveEditedTune() {
   const tune = filteredData[currentEditTuneIndex];
   const originalTuneDataIndex = tunesData.findIndex((t) => t === tune);
 
-  // Update basic metadata
   tune.name = document.getElementById("editName").value.trim() || "Untitled";
   tune.key = document.getElementById("editKey").value.trim();
   tune.rhythm = document
@@ -180,10 +308,8 @@ function saveEditedTune() {
     .value.trim()
     .toLowerCase();
 
-  // Update ABC notation
   const abcText = document.getElementById("editAbc").value.trim();
   if (abcText) {
-    // Split by separator if multiple versions exist
     const abcParts = abcText
       .split(/\n\s*---\s*\n/)
       .filter((part) => part.trim());
@@ -192,11 +318,10 @@ function saveEditedTune() {
     tune.abc = null;
   }
 
-  // Update references from form inputs
   const referenceInputs = document.querySelectorAll(
     "#referencesEditor .editor-item"
   );
-  tune.references = Array.from(referenceInputs).map((item, index) => {
+  const userRefs = Array.from(referenceInputs).map((item, index) => {
     const artists =
       item.querySelector(
         `input[data-ref-index="${index}"][data-field="artists"]`
@@ -212,7 +337,9 @@ function saveEditedTune() {
     return { artists, url, notes };
   });
 
-  // Update scores from form inputs
+  const abcRefs = tune.references.filter(r => r.fromAbc);
+  tune.references = [...userRefs, ...abcRefs];
+
   const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
   tune.scores = Array.from(scoreInputs).map((item, index) => {
     const name =
@@ -226,16 +353,14 @@ function saveEditedTune() {
     return { name, url };
   });
 
-  // Reprocess tune to update incipit and other derived data
   const reprocessed = processTuneData(tune);
   Object.assign(tune, reprocessed);
 
-  // Update in main tunesData array if tune exists there
   if (originalTuneDataIndex !== -1) {
     tunesData[originalTuneDataIndex] = tune;
   }
 
-  // Re-render table and close modal
+  saveTunesToStorage();
   renderTable();
   closeEditModal();
 }
@@ -246,7 +371,34 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
-// Make functions globally accessible
+function expandNotes(tuneIndex, refIndex) {
+  const truncated = document.querySelector(
+    `.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+  const full = document.querySelector(
+    `.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+
+  if (truncated && full) {
+    truncated.style.display = "none";
+    full.style.display = "block";
+  }
+}
+
+function collapseNotes(tuneIndex, refIndex) {
+  const truncated = document.querySelector(
+    `.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+  const full = document.querySelector(
+    `.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+  );
+
+  if (truncated && full) {
+    truncated.style.display = "block";
+    full.style.display = "none";
+  }
+}
+
 window.openEditModal = openEditModal;
 window.closeEditModal = closeEditModal;
 window.addReference = addReference;
@@ -254,10 +406,17 @@ window.removeReference = removeReference;
 window.addScore = addScore;
 window.removeScore = removeScore;
 window.saveEditedTune = saveEditedTune;
-window.filteredData = filteredData
+window.filteredData = filteredData;
+window.addNewTune = addNewTune;
+window.deleteTune = deleteTune;
+window.copyTunesToClipboard = copyTunesToClipboard;
+window.clearStorage = clearStorage;
+window.emptyTunes = emptyTunes;
 
-// Add this to your DOMContentLoaded event listener:
-//
+window.expandNotes = expandNotes;
+window.collapseNotes = collapseNotes;
+
+
 function parseAbc(abc) {
   const lines = abc.split("\n"),
     metadata = {},
@@ -271,7 +430,7 @@ function parseAbc(abc) {
       metadata.rhythm = trimmed.substring(2).trim();
     } else if (trimmed.startsWith("K:")) {
       metadata.key = trimmed.substring(2).trim();
-      break; //K is the last in the header
+      break;
     } else if (trimmed.startsWith("S:")) {
       metadata.source = trimmed.substring(2).trim();
     } else if (trimmed.startsWith("F:")) {
@@ -349,20 +508,29 @@ function processTuneData(tune) {
 }
 
 function initialiseData() {
-  tunesData = tunesDataRaw.tunes
-    .filter((t) => t !== undefined)
-    .map(processTuneData)
-    .sort((a, b) =>
-      a.rhythm === b.rhythm
-        ? a.name === b.name
-          ? 0
-          : a.name < b.name
+  const storedData = loadTunesFromStorage();
+  
+  if (storedData) {
+    console.log("Loading from local storage");
+    tunesData = storedData;
+  } else {
+    console.log("Loading from tunesDataRaw and processing");
+    tunesData = tunesDataRaw.tunes
+      .filter((t) => t !== undefined)
+      .map(processTuneData)
+      .sort((a, b) =>
+        a.rhythm === b.rhythm
+          ? a.name === b.name
+            ? 0
+            : a.name < b.name
+            ? -1
+            : 1
+          : a.rhythm < b.rhythm
           ? -1
           : 1
-        : a.rhythm < b.rhythm
-        ? -1
-        : 1
-    );
+      );
+  }
+  
   filteredData = [...tunesData];
   populateFilters();
   renderTable();
@@ -477,7 +645,6 @@ function addTunesFromAbc() {
   }
 
   try {
-    tunesData = []; //don't keep existing tunes
     const abcTunes = splitAbcTunes(abcText);
     let addedCount = 0;
 
@@ -511,6 +678,7 @@ function addTunesFromAbc() {
           : 1
       );
 
+      saveTunesToStorage();
       populateFilters();
       applyFilters();
 
@@ -538,6 +706,11 @@ function addTunesFromAbc() {
     statusDiv.style.color = "#c33";
     statusDiv.textContent = `Error processing ABC: ${error.message}`;
   }
+}
+function loadJson() {
+  //similar to addTunesFromAbc, but we load `tuneData` from the string literal of an array of JSON objects. 
+  // Like `initialiseData`. It overwrites all existing tunes; and updates local storage.
+  // todo:Claude
 }
 
 function toggleView() {
@@ -686,23 +859,22 @@ function renderTable() {
     const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
 
     let incipitId = `incipit${index}`;
-    let title = hasAbc
-      ? `<div class="tune-header">
-      <a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+    let title = `<div class="tune-header">
+      ${hasAbc ? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
         ${tune.name}
-      </a>
-      <button class="btn-icon btn-edit" onclick="openEditModal(filteredData[${index}], ${index})" title="Edit tune">
-        ✎
-      </button>
-    </div>`
-      : `<div class="tune-header">
-      <div class="${tuneNameClass}" data-tune-index="${index}">
+      </a>` : `<div class="${tuneNameClass}" data-tune-index="${index}">
         ${tune.name}
+      </div>`}
+      <div class="tune-actions">
+        <button class="btn-icon btn-edit" onclick="openEditModal(filteredData[${index}], ${index})" title="Edit tune">
+          ✎
+        </button>
+        <button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
+          🗑
+        </button>
       </div>
-      <button class="btn-icon btn-edit" onclick="openEditModal(filteredData[${index}], ${index})" title="Edit tune">
-        ✎
-      </button>
     </div>`;
+    
     row.innerHTML = `
                     <td>${title}
                     <div id="${incipitId}" class="incipitClass"></div></td>
@@ -719,7 +891,7 @@ function renderTable() {
                 `;
 
     const tuneNameEl = row.querySelector(".tune-name");
-    if (hasAbc) {
+    if (hasAbc && tuneNameEl) {
       tuneNameEl.addEventListener("click", () => {
         openAbcModal(tune);
       });
@@ -740,7 +912,7 @@ function renderTable() {
   document.getElementById(
     "spCount"
   ).innerText = `${filteredData.length}/${tunesData.length}`;
-  window.filteredData = filteredData
+  window.filteredData = filteredData;
 }
 
 function applyFilters() {
@@ -776,6 +948,7 @@ function filterByName(searchTerm) {
 
   renderTable();
 }
+
 function filterByGroup(searchTerm) {
   tunesData = tunesData.filter((tune) =>
     tune.groups?.toLowerCase().includes(searchTerm.toLowerCase())
@@ -817,36 +990,6 @@ function sortData(column) {
   renderTable();
 }
 
-function expandNotes(tuneIndex, refIndex) {
-  const truncated = document.querySelector(
-    `.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-  );
-  const full = document.querySelector(
-    `.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-  );
-
-  if (truncated && full) {
-    truncated.style.display = "none";
-    full.style.display = "block";
-  }
-}
-
-function collapseNotes(tuneIndex, refIndex) {
-  const truncated = document.querySelector(
-    `.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-  );
-  const full = document.querySelector(
-    `.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-  );
-
-  if (truncated && full) {
-    truncated.style.display = "block";
-    full.style.display = "none";
-  }
-}
-
-window.expandNotes = expandNotes;
-window.collapseNotes = collapseNotes;
 
 document.addEventListener("DOMContentLoaded", function () {
   initialiseData();
@@ -905,10 +1048,27 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("addAbcBtn")
     .addEventListener("click", addTunesFromAbc);
+  document
+    .getElementById("loadJsonBtn")
+    .addEventListener("click", loadJson);
   document.getElementById("clearAbcBtn").addEventListener("click", () => {
     document.getElementById("abcInput").value = "";
     document.getElementById("addTunesStatus").style.display = "none";
   });
+
+  // New buttons for add tune, copy data, and clear storage
+  document
+    .getElementById("addNewTuneBtn")
+    ?.addEventListener("click", addNewTune);
+  document
+    .getElementById("copyTunesBtn")
+    ?.addEventListener("click", copyTunesToClipboard);
+  document
+    .getElementById("clearStorageBtn")
+    ?.addEventListener("click", clearStorage);
+  document
+    .getElementById("emptyTunesBtn")
+    ?.addEventListener("click", emptyTunes);
 
   document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
 
