@@ -1,4 +1,5 @@
 "use strict";
+import './styles.css';
 import tunesDataRaw from "./tunes.json.js";
 import getIncipit from "./incipits.js";
 import AbcJs from "abcjs";

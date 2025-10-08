@@ -2,6 +2,10 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import HtmlInlineScriptPlugin from 'html-inline-script-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HtmlInlineCssWebpackPluginModule from 'html-inline-css-webpack-plugin';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+const HtmlInlineCssWebpackPlugin = HtmlInlineCssWebpackPluginModule.default || HtmlInlineCssWebpackPluginModule;
 
 // Get __dirname equivalent in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +30,10 @@ export default (env, argv) => {
       rules: [
         {
           test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          use: [
+            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+            'css-loader'
+          ],
         },
         {
           test: /\.json$/,
@@ -43,8 +50,15 @@ export default (env, argv) => {
           removeComments: true,
         },
       }),
-      // Only use inline plugin in production
+      // Extract CSS to temporary file in production (will be inlined)
+      ...(!isDevelopment ? [
+        new MiniCssExtractPlugin({
+          filename: 'styles.css',
+        })
+      ] : []),
+      // Inline both CSS and JS in production
       ...(isDevelopment ? [] : [
+        new HtmlInlineCssWebpackPlugin(),
         new HtmlInlineScriptPlugin({
           htmlMatchPattern: [/index.html$/],
           scriptMatchPattern: [/bundle.*.js$/],
@@ -62,6 +76,12 @@ export default (env, argv) => {
           ignored: ['**/node_modules/**', '**/dist/**']
         }
       }
+    },
+    optimization: {
+      minimizer: [
+        `...`, // Extend existing minimizers (like terser for JS)
+        new CssMinimizerPlugin(),
+      ],
     },
   };
 };
