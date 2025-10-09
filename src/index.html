@@ -12,7 +12,7 @@
 
   <body>
     <div class="container">
-      <h1>&#127925; Tunes</h1>
+      <h1>🎵 Tunes</h1>
 
       <div class="controls">
         <input
@@ -28,24 +28,21 @@
         <select id="keyFilter" class="filter-select">
           <option value="">All keys</option>
         </select>
-        <button id="addNewTuneBtn" class="add-tunes-btn">
-          ➕ add new tune
+        
+        <!-- Edit Menu Dropdown -->
+        <div class="dropdown">
+          <button id="editMenuBtn" class="add-tunes-btn">
+            ✎ Edit Menu ▼
         </button>
-        <button id="emptyTunesBtn" class="add-tunes-btn">
-          🚮 remove all tunes
-        </button>
-        <button id="addTunesBtn" class="add-tunes-btn">
-         ↖  add tunes (from ABC)
-        </button>
-        <button id="loadJsonBtn" class="add-tunes-btn">
-         ↖  load full tune table
-        </button>
-        <button id="copyTunesBtn" class="add-tunes-btn">
-          📋 copy data
-        </button>
-        <button id="clearStorageBtn" class="add-tunes-btn">
-          🔄 reset to original
-        </button>
+          <div id="editMenuDropdown" class="dropdown-content">
+            <a href="#" id="addNewTuneBtn">➕ add new tune</a>
+            <a href="#" id="emptyTunesBtn">🗑️ remove all tunes</a>
+            <a href="#" id="addTunesBtn">📝 add tunes (from ABC)</a>
+            <a href="#" id="loadJsonBtn">💾 load full tune table</a>
+            <a href="#" id="copyTunesBtn">📋 copy data</a>
+            <a href="#" id="clearStorageBtn">🔄 reset to original</a>
+          </div>
+        </div>
       </div>
 
       <div class="table-container">
@@ -124,6 +121,44 @@ K:Dmaj
         <div id="addTunesStatus"></div>
       </div>
     </div>
+
+    <div id="loadJsonModal" class="modal add-tunes-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 style="flex: 1; margin: 0; color: #2c3e50">
+            Load Full Tune Table
+          </h2>
+          <button class="close-btn" id="closeLoadJsonBtn">&times;</button>
+        </div>
+        <div style="margin-bottom: 20px">
+          <p style="color: #666; margin-bottom: 10px">
+            Paste JSON array of tune objects below. This will replace all existing tunes.
+          </p>
+          <textarea
+            id="jsonInput"
+            placeholder="Paste JSON array here...
+
+Example:
+[
+  {
+    &quot;name&quot;: &quot;Example Tune&quot;,
+    &quot;key&quot;: &quot;Dmaj&quot;,
+    &quot;rhythm&quot;: &quot;jig&quot;,
+    &quot;abc&quot;: &quot;X:1\nT:Example\n...&quot;,
+    &quot;references&quot;: [],
+    &quot;scores&quot;: []
+  }
+]"
+          ></textarea>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end">
+          <button id="clearJsonBtn" class="modal-btn secondary">Clear</button>
+          <button id="loadJsonDataBtn" class="modal-btn primary">Load Data</button>
+        </div>
+        <div id="loadJsonStatus"></div>
+      </div>
+    </div>
+
     <div id="editModal" class="modal">
   <div class="modal-content modal-content-large">
     <div class="modal-header">
