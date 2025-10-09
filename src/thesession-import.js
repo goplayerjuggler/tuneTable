@@ -11,21 +11,28 @@ function showTheSessionImportModal() {
   modal.className = "modal";
   modal.innerHTML = `
     <div class="modal-content">
-      <span class="close" onclick="closeTheSessionImportModal()">&times;</span>
-      <h2>Import tunebook from thesession.org</h2>
+    <div class="modal-header">
+    <h2>Import tunebook from thesession.org</h2>
+    <span class="close-button" onclick="closeTheSessionImportModal()">&times;</span>
+    </div>
+    
       <p>Enter the username of a thesession.org member to import their tunebook.</p>
       <div class="form-group">
         <label for="thesession-username">Username:</label>
-        <input type="text" id="thesession-username" placeholder="e.g. adactio" />
+        <input type="text" id="thesession-username" placeholder="e.g. goplayer" />
       </div>
       <div class="form-group">
-        <label for="import-limit">Number of tunes (max 10):</label>
-        <input type="number" id="import-limit" min="1" max="10" value="10" />
+        <label for="thesession-tune-id">Tune ID (optional):</label>
+        <input type="text" id="thesession-tune-id" placeholder="123" />
+      </div>
+      <div class="form-group">
+        <label for="import-limit">Number of tunes (max 100):</label>
+        <input type="number" id="import-limit" min="1" max="100" value="10" />
       </div>
       <div id="import-status" class="import-status"></div>
       <div class="button-group">
         <button onclick="importFromTheSession()" class="btn-primary">Import tunes</button>
-        <button onclick="closeTheSessionImportModal()" class="btn-secondary">Cancel</button>
+        <button onclick="closeTheSessionImportModal()" class="btn-secondary">Close</button>
       </div>
     </div>
   `;
@@ -61,6 +68,7 @@ function updateImportStatus(message, type = "info") {
  */
 async function importFromTheSession() {
   const username = document.getElementById("thesession-username").value.trim();
+  const tuneId = document.getElementById("thesession-tune-id").value.trim();
   const limit = parseInt(document.getElementById("import-limit").value) || 10;
 
   if (!username) {
@@ -88,7 +96,9 @@ async function importFromTheSession() {
     );
 
     // Step 2: Get tunebook for this member
-    const tuneIds = await getMemberTunebook(memberId, window.tunesData.length + limit);
+    const tuneIds = tuneId
+      ? [tuneId]
+      : await getMemberTunebook(memberId, window.tunesData.length + limit);
 
     if (tuneIds.length === 0) {
       throw new Error("No tunes found in tunebook");
@@ -114,14 +124,15 @@ async function importFromTheSession() {
         const tuneData = await getTuneWithAbc(tuneId, memberId);
 
         // Check if tune already exists in tunesData
-        const existingTune = window.tunesData?.find(
+        const existingTune = window.tunesData.find(
           (t) =>
             t.name &&
             tuneData.name &&
-            (
-				t.name.toLowerCase() === tuneData.name.toLowerCase()
-				|| tuneData.aliases?.find(a=>a?.toLowerCase() === t.name.toLowerCase())
-			)
+            (t.name.trim().toLowerCase() ===
+              tuneData.name.trim().toLowerCase() ||
+              tuneData.aliases?.find(
+                (a) => a?.trim().toLowerCase() === t.name.trim().toLowerCase()
+              ))
         );
 
         if (existingTune) {
@@ -129,15 +140,12 @@ async function importFromTheSession() {
           continue;
         }
 
-        // Add to tunesData
-        if (window.tunesData) {
-          const processedTune = processTuneData(tuneData);
-          window.tunesData.push(processedTune);
-          importedTunes.push(processedTune.name);
+        const processedTune = processTuneData(tuneData);
+        window.tunesData.push(processedTune);
+        importedTunes.push(processedTune.name);
 
-          if (importedTunes.length >= limit) {
-            break;
-          }
+        if (importedTunes.length >= limit) {
+          break;
         }
       } catch (error) {
         console.error(`Failed to import tune ${tuneId}:`, error);
@@ -147,11 +155,20 @@ async function importFromTheSession() {
       await delay(200);
     }
 
-    // Update the display
-    if (typeof window.applyFilters === "function") {
-		window.applyFilters()
-    }
+    // Show results
+    if (importedTunes.length > 0) {
+      let message = `Successfully imported ${importedTunes.length} tunes.`;
+      if (skippedTunes.length > 0) {
+        message += ` Skipped ${skippedTunes.length} tunes already in list.`;
+      }
+      updateImportStatus(message, "success");
 
+      // Update the display
+
+      window.applyFilters();
+
+      window.saveTunesToStorage();
+    }
     // Show results
     let message = `Successfully imported ${importedTunes.length} tunes.`;
     if (skippedTunes.length > 0) {
@@ -253,48 +270,57 @@ async function getTuneWithAbc(tuneId, preferredMemberId = null) {
   if (!selectedSetting) {
     throw new Error(`No settings found for tune ${tuneId}`);
   }
-  let lHeader, mHeader
+  let lHeader = "1/8",
+    mHeader;
   switch (tuneData.type) {
-	case 'jig':
-		lHeader='1/8'
-		mHeader='6/8'
-		break;
-	case 'slide':
-		lHeader='1/8'
-		mHeader='12/8'
-		break;
-	case 'polka':
-		lHeader='1/8'
-		mHeader='2/4'
-		break;
-	case 'reel':
-		lHeader='1/8'
-		mHeader='4/4'
-		break;
-  
-	default:
-		lHeader='1/8'
-		break;
+    case "jig":
+      mHeader = "6/8";
+      break;
+    case "slip jig":
+      mHeader = "9/8";
+      break;
+    case "slide":
+      mHeader = "12/8";
+      break;
+    case "polka":
+      mHeader = "2/4";
+      break;
+    case "barndance":
+    case "reel":
+    case "hornpipe":
+    case "strathspey":
+    case "march":
+      mHeader = "4/4";
+      break;
+    case "mazurka":
+    case "waltz":
+      mHeader = "3/4";
+      // lHeader="1/4"
+      break;
+    case "three-two":
+      mHeader = "3/2";
+      break;
   }
-
+const cHeader = tuneData.composer ? ("\nC:" + tuneData.composer) : ''
   const abc = `X:1
-T:${tuneData.name}
+T:${tuneData.name}${cHeader}
 R:${tuneData.type}
 L:${lHeader}
 M:${mHeader}
 N:Imported from https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}
 N:Setting by ${selectedSetting.member?.name}
 K:${selectedSetting.key}
-${selectedSetting.abc}`
-
+${selectedSetting.abc.replace(/\!/gm, "\n")}`;//line returns sometimes get corrupted as exclamation marks
 
   // Build the tune object in tuneTable format
   const tune = {
+    name: tuneData.name,
+    nameIsFromAbc:true,
     abc,
     scores: [
       {
-        source: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
-        sourceType: "thesession.org",
+        url: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
+        name: "thesession.org",
       },
     ],
   };
@@ -342,47 +368,7 @@ const setupTheSessionImportModal = () => {
   // Add CSS for the modal
   const modalStyles = `
 	<style>
-	.modal {
-	  display: none;
-	  position: fixed;
-	  z-index: 1000;
-	  left: 0;
-	  top: 0;
-	  width: 100%;
-	  height: 100%;
-	  overflow: auto;
-	  background-color: rgba(0, 0, 0, 0.4);
-	}
 	
-	.modal-content {
-	  background-color: var(--bg-color, #fefefe);
-	  color: var(--text-color, #333);
-	  margin: 5% auto;
-	  padding: 20px;
-	  border: 1px solid #888;
-	  border-radius: 8px;
-	  width: 90%;
-	  max-width: 500px;
-	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	}
-	
-	.modal-content h2 {
-	  margin-top: 0;
-	  color: var(--text-color, #333);
-	}
-	
-	.close {
-	  color: #aaa;
-	  float: right;
-	  font-size: 28px;
-	  font-weight: bold;
-	  cursor: pointer;
-	}
-	
-	.close:hover,
-	.close:focus {
-	  color: #000;
-	}
 	
 	.form-group {
 	  margin-bottom: 15px;

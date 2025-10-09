@@ -8,8 +8,6 @@ import AbcJs from "abcjs";
 
 const STORAGE_KEY = "tunesData";
 
-let tunesData = [];
-let filteredData = [];
 let currentSort = { column: null, direction: "asc" };
 let currentViewMode = "rendered";
 let currentTranspose = 0;
@@ -89,14 +87,12 @@ function clearStorage() {
   }
 }
 
-
-
 function emptyTunes() {
   if(!localStorage.getItem(STORAGE_KEY) || confirm("You may lose some data. This cannot be undone. Continue?")) {
     localStorage.removeItem(STORAGE_KEY);
   }
-  tunesData = [];
-  filteredData = [];
+  window.tunesData = [];
+  window.filteredData = [];
   
   renderTable();
   saveTunesToStorage();
@@ -104,7 +100,7 @@ function emptyTunes() {
 }
 
 function copyTunesToClipboard() {
-  tunesData.forEach(tune=>{
+  window.tunesData.forEach(tune=>{
     if(tune.nameIsFromAbc){
       delete tune.name
       delete tune.nameIsFromAbc
@@ -117,6 +113,8 @@ function copyTunesToClipboard() {
       delete tune.rhythm
       delete tune.rhythmIsFromAbc
     }
+    tune.references = tune.references?.filter(r=>!r.fromAbc)
+
     if(tune.references?.length === 0) delete tune.references
     if(tune.scores?.length === 0) delete tune.scores
     if(!tune.abc) delete tune.abc
@@ -150,29 +148,29 @@ function addNewTune() {
     incipit: null
   };
 
-  tunesData.push(newTune);
-  filteredData.push(newTune);
+  window.tunesData.push(newTune);
+  window.filteredData.push(newTune);
   
   saveTunesToStorage();
   renderTable();
   
   // Open edit modal for the new tune
-  const newIndex = filteredData.length - 1;
+  const newIndex = window.filteredData.length - 1;
   openEditModal(newTune, newIndex);
 }
 
 // Delete Tune
 function deleteTune(tuneIndex) {
-  const tune = filteredData[tuneIndex];
+  const tune = window.filteredData[tuneIndex];
   
   if (!confirm(`Delete tune "${tune.name}"? This cannot be undone.`)) {
     return;
   }
 
-  const originalTuneDataIndex = tunesData.findIndex((t) => t === tune);
+  const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
   
   if (originalTuneDataIndex !== -1) {
-    tunesData.splice(originalTuneDataIndex, 1);
+    window.tunesData.splice(originalTuneDataIndex, 1);
   }
   
   saveTunesToStorage();
@@ -293,7 +291,7 @@ function renderScoresEditor(scores) {
 }
 
 function addReference() {
-  const tune = filteredData[currentEditTuneIndex];
+  const tune = window.filteredData[currentEditTuneIndex];
   if (!tune.references) tune.references = [];
 
   tune.references.push({
@@ -306,7 +304,7 @@ function addReference() {
 }
 
 function removeReference(index) {
-  const tune = filteredData[currentEditTuneIndex];
+  const tune = window.filteredData[currentEditTuneIndex];
   const nonAbcRefs = tune.references.filter(r=>!r.fromAbc);
   const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
   tune.references.splice(actualIndex, 1);
@@ -314,7 +312,7 @@ function removeReference(index) {
 }
 
 function addScore() {
-  const tune = filteredData[currentEditTuneIndex];
+  const tune = window.filteredData[currentEditTuneIndex];
   if (!tune.scores) tune.scores = [];
 
   tune.scores.push({
@@ -326,14 +324,14 @@ function addScore() {
 }
 
 function removeScore(index) {
-  const tune = filteredData[currentEditTuneIndex];
+  const tune = window.filteredData[currentEditTuneIndex];
   tune.scores.splice(index, 1);
   renderScoresEditor(tune.scores);
 }
 
 function saveEditedTune() {
-  const tune = filteredData[currentEditTuneIndex];
-  const originalTuneDataIndex = tunesData.findIndex((t) => t === tune);
+  const tune = window.filteredData[currentEditTuneIndex];
+  const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
 
   const abcText = document.getElementById("editAbc").value.trim();
   if (abcText) {
@@ -443,7 +441,7 @@ function saveEditedTune() {
   tune.references = [...userRefs, ...abcRefs];
 
   if (originalTuneDataIndex !== -1) {
-    tunesData[originalTuneDataIndex] = tune;
+    window.tunesData[originalTuneDataIndex] = tune;
   }
 
   saveTunesToStorage();
@@ -485,37 +483,39 @@ function collapseNotes(tuneIndex, refIndex) {
   }
 }
 
-window.openEditModal = openEditModal;
-window.closeEditModal = closeEditModal;
-window.addReference = addReference;
-window.removeReference = removeReference;
-window.addScore = addScore;
-window.removeScore = removeScore;
-window.saveEditedTune = saveEditedTune;
-window.addNewTune = addNewTune;
-window.deleteTune = deleteTune;
-window.copyTunesToClipboard = copyTunesToClipboard;
-window.clearStorage = clearStorage;
-window.emptyTunes = emptyTunes;
-window.expandNotes = expandNotes;
-window.collapseNotes = collapseNotes;
-window.applyFilters = applyFilters
-updateWindowSharedData()
-
-window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal
-window.closeTheSessionImportModal = theSessionImport.closeTheSessionImportModal
-window.importFromTheSession = theSessionImport.importFromTheSession
-
 
 function initialiseData() {
+  
+  window.openEditModal = openEditModal;
+  window.closeEditModal = closeEditModal;
+  window.addReference = addReference;
+  window.removeReference = removeReference;
+  window.addScore = addScore;
+  window.removeScore = removeScore;
+  window.saveEditedTune = saveEditedTune;
+  window.addNewTune = addNewTune;
+  window.deleteTune = deleteTune;
+  window.copyTunesToClipboard = copyTunesToClipboard;
+  window.clearStorage = clearStorage;
+  window.emptyTunes = emptyTunes;
+  window.expandNotes = expandNotes;
+  window.collapseNotes = collapseNotes;
+  window.applyFilters = applyFilters
+  window.saveTunesToStorage = saveTunesToStorage
+  
+  window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal
+  window.closeTheSessionImportModal = theSessionImport.closeTheSessionImportModal
+  window.importFromTheSession = theSessionImport.importFromTheSession
+  window.tunesData = [];
+  window.filteredData = [];
   const storedData = loadTunesFromStorage();
   
   if (storedData) {
     console.log("Loading from local storage");
-    tunesData = storedData;
+    window.tunesData = storedData;
   } else {
     console.log("Loading from tunesDataRaw and processing");
-    tunesData = tunesDataRaw.tunes
+    window.tunesData = tunesDataRaw.tunes
       .filter((t) => t !== undefined)
       .map(processTuneData)
       .sort((a, b) =>
@@ -531,7 +531,7 @@ function initialiseData() {
       );
   }
   
-  filteredData = [...tunesData];
+  window.filteredData = [...tunesData];
   populateFilters();
   renderTable();
 }
@@ -673,13 +673,13 @@ function addTunesFromAbc() {
         };
 
         const processed = processTuneData(newTune);
-        tunesData.push(processed);
+        window.tunesData.push(processed);
         addedCount++;
       }
     });
 
     if (addedCount > 0) {
-      tunesData.sort((a, b) =>
+      window.tunesData.sort((a, b) =>
         a.rhythm === b.rhythm
           ? a.name === b.name
             ? 0
@@ -730,7 +730,7 @@ function loadJson() {
     statusDiv.style.display = "block";
     statusDiv.style.background = "#fee";
     statusDiv.style.color = "#c33";
-    statusDiv.textContent = "Please paste JSON data first.";
+    statusDiv.textContent = "Please paste data first.";
     return;
   }
 
@@ -763,7 +763,7 @@ if (!Array.isArray(parsedData)) {
 }
 
     // Process and validate the data
-    tunesData = parsedData
+    window.tunesData = parsedData
       .filter((t) => t !== undefined && t !== null)
       .map(processTuneData)
       .sort((a, b) =>
@@ -786,7 +786,7 @@ if (!Array.isArray(parsedData)) {
     statusDiv.style.background = "#efe";
     statusDiv.style.color = "#2a7";
     statusDiv.textContent = `Successfully loaded ${tunesData.length} tune${
-      tunesData.length !== 1 ? "s" : ""
+      window.tunesData.length !== 1 ? "s" : ""
     }!`;
 
     jsonInput.value = "";
@@ -893,7 +893,7 @@ function renderTable() {
 
   tbody.innerHTML = "";
 
-  filteredData.forEach((tune, index) => {
+  window.filteredData.forEach((tune, index) => {
     const row = document.createElement("tr");
 
     let referencesHtml = "";
@@ -1001,19 +1001,15 @@ function renderTable() {
   document.getElementById(
     "spCount"
   ).innerText = `${filteredData.length}/${tunesData.length}`;
-  updateWindowSharedData()
+ 
 }
-function updateWindowSharedData()
-{
-  window.filteredData = filteredData;
-  window.tunesData = tunesData
-}
+
 function applyFilters() {
   const searchTerm = document.getElementById("searchInput").value.toLowerCase();
   const rhythmFilter = document.getElementById("rhythmFilter").value;
   const keyFilter = document.getElementById("keyFilter").value;
 
-  filteredData = tunesData.filter((tune) => {
+  window.filteredData = window.tunesData.filter((tune) => {
     const matchesSearch =
       searchTerm === "" ||
       tune.name.toLowerCase().includes(searchTerm) ||
@@ -1035,7 +1031,7 @@ function applyFilters() {
 }
 
 function filterByName(searchTerm) {
-  filteredData = tunesData.filter((tune) =>
+  window.filteredData = window.tunesData.filter((tune) =>
     tune.name?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -1043,7 +1039,7 @@ function filterByName(searchTerm) {
 }
 
 function filterByGroup(searchTerm) {
-  tunesData = tunesData.filter((tune) =>
+  window.tunesData = window.tunesData.filter((tune) =>
     tune.groups?.toLowerCase().includes(searchTerm.toLowerCase())
   );
   applyFilters();
@@ -1057,7 +1053,7 @@ function sortData(column) {
     currentSort.direction = "asc";
   }
 
-  filteredData.sort((a, b) => {
+  window.filteredData.sort((a, b) => {
     let aVal = a[column];
     let bVal = b[column];
 
@@ -1107,7 +1103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       filterByGroup(g);
     }
   }
-  if (filteredData.length === 1 && filteredData[0].abc) {
+  if (filteredData.length === 1 && window.filteredData[0].abc) {
     openAbcModal(filteredData[0]);
   }
 
