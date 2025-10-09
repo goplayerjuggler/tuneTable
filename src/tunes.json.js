@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-07",
+  lastUpdate: "2025-10-09",
   tunes: [
     {
       groups: "ALORA",
@@ -283,7 +283,6 @@ M: 3/4
 R: polska?
 L: 1/8
 P:ABAC
-N:
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: E dorian
 [P:A]|: "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" Bd "D"cB (3AGF |
@@ -773,34 +772,61 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
         },
       ],
     },
-    {
-      name: "Christmas Eve",
-      groups: "ALORA",
-      incipit: `X: 3
+    
+  {
+    
+    abc:`X: 14
+T: Christmas Eve
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+N:based on a score by MarMac on thesession.org
+GE|:DB,DE G2GA (3BBB dB ABGA|BAGE DB,DE G2BG ABGE|
+DB,DE GFGA B2dB ABGA|BAAB G~E3 [1 ABGF G2EG:| [2 ABGF G2GA||
+|:BG (3Bcd edeg a2ge g2eg|a2ge g2ge dedB A2GA | 
+BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
+|:BG (3GGG BGBd eg (3ggg egdc|BG (3GGG DGBG FAAG FAdc|
+BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE|| `,
+    groups: "ALORA",
+    incipit: `X: 3
 M: 4/4
 L: 1/16
 K: Gmaj
 GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
-      rhythm: "reel",
-      origin: "Ireland",
-      key: "G",
-      references: [
-        {
-          notes: `Composed by Tommy Coen.
+    rhythm: "reel",
+    origin: "Ireland",
+    key: "G",
+    references: [
+      {
+        artists: "",
+        url: "",
+        notes: `Composed by Tommy Coen.
 Chords (TBC):
 G - D G | D G D G :|
 G C D - | G C D G :|
-G C G D | G C D G :|`,
-        },
-      ],
-      scores: [
-        {
-          type: "tune",
-          name: "thesession",
-          url: "https://thesession.org/tunes/440#setting48642",
-        },
-      ],
-    },
+G C G D | G C D G :|`
+      },
+      {
+        artists: "Micho Russel, flute",
+        url: "https://youtu.be/1FUi3f3pDFc",
+        notes: "album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond"
+      },
+      {
+        artists: "Sonny Murray, concertina",
+        url: "https://music.youtube.com/watch?v=MNscUYF0ybU",
+        notes: `album: It Was Mighty! the Early Days of Irish Music in London
+`
+      }
+    ],
+    scores: [
+      {
+        name: "thesession",
+        url: "https://thesession.org/tunes/440#setting48642"
+      }
+    ]
+  }
+,
     {
       abc: `X: 1
 T: Leave it down easy

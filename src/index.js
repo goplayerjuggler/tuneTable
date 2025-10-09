@@ -17,37 +17,44 @@ let currentAbcArray = [];
 let currentAbcIndex = 0;
 let currentEditTuneIndex = null;
 
-function stringifyWithTemplates(obj, indent = 2) {
+function stringifyWithTemplatesLiteral(obj, indent = 2) {
+  // Helper to determine if a string is a valid JS identifier
+  function isValidIdentifier(str) {
+    return /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(str);
+  }
+
   // Use a WeakSet to handle circular references
   const seen = new WeakSet();
-  function replacer(key, value) {
-    // Handle circular references
+
+  function serialize(value, depth) {
     if (typeof value === 'object' && value !== null) {
       if (seen.has(value)) return '[Circular]';
       seen.add(value);
+
+      if (Array.isArray(value)) {
+        const arr = value.map(v => serialize(v, depth + 1));
+        return `[\n${' '.repeat((depth + 1) * indent)}${arr.join(`,\n${' '.repeat((depth + 1) * indent)}`)}\n${' '.repeat(depth * indent)}]`;
+      } else {
+        const entries = Object.entries(value).map(([k, v]) => {
+          const key = isValidIdentifier(k) ? k : JSON.stringify(k);
+          return `${key}: ${serialize(v, depth + 1)}`;
+        });
+        return `{\n${' '.repeat((depth + 1) * indent)}${entries.join(`,\n${' '.repeat((depth + 1) * indent)}`)}\n${' '.repeat(depth * indent)}}`;
+      }
+    } else if (typeof value === 'string') {
+      if (value.includes('\n') || value.includes('\r')) {
+        // Use a template literal for multi-line strings
+        return '`' + value.replace(/`/g, '\\`') + '`';
+      } else {
+        return JSON.stringify(value);
+      }
+    } else {
+      return String(value);
     }
-    // Tag multi-line strings with a unique marker
-    if (typeof value === 'string' && (value.includes('\n') || value.includes('\r'))) {
-      // Use a marker unlikely to conflict with actual data
-      return `___MULTILINE_STRING___${btoa(unescape(encodeURIComponent(value)))}`;
-    }
-    return value;
   }
 
-  let intermediate = JSON.stringify(obj, replacer, indent);
-
-  // Replace tagged strings with template literals
-  intermediate = intermediate.replace(
-    /"___MULTILINE_STRING___([A-Za-z0-9+/=]+)"/g,
-    (_, base64) => {
-      const str = decodeURIComponent(escape(atob(base64)));
-      return "`" + str.replace(/`/g, "\\`") + "`";
-    }
-  );
-
-  return intermediate;
+  return serialize(obj, 0);
 }
-
 // Local Storage Functions
 function saveTunesToStorage() {
   try {
@@ -106,8 +113,9 @@ function copyTunesToClipboard() {
     }
     if(tune.references?.length === 0) delete tune.references
     if(tune.scores?.length === 0) delete tune.scores
+    if(!tune.abc) delete tune.abc
   })
-  const jsonString = stringifyWithTemplates(tunesData, 2);
+  const jsonString = stringifyWithTemplatesLiteral(tunesData, 2);
   navigator.clipboard.writeText(jsonString).then(
     () => {
       const btn = document.getElementById("copyTunesBtn");
@@ -350,9 +358,6 @@ function saveEditedTune() {
     return { artists, url, notes };
   });
 
-  const abcRefs = tune.references.filter((r) => r.fromAbc);
-  tune.references = [...userRefs, ...abcRefs];
-
   const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
   tune.scores = Array.from(scoreInputs).map((item, index) => {
     const name =
@@ -427,6 +432,9 @@ function saveEditedTune() {
     }
   }
   Object.assign(tune, reprocessed);
+
+  const abcRefs = tune.references.filter((r) => r.fromAbc);
+  tune.references = [...userRefs, ...abcRefs];
 
   if (originalTuneDataIndex !== -1) {
     tunesData[originalTuneDataIndex] = tune;
