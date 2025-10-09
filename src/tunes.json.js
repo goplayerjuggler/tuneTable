@@ -804,11 +804,11 @@ GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
         notes: `Composed by Tommy Coen.
 Chords:
 |: G - - - | D - G - |
-   D - G - | D - G - :|
-|: G - C - | D - - - | 
-   G - C - | D - G - :|
-|: G - C - | G - D - | 
-   G - C - | D - G - :|`
+G - - - | D - G - :|
+|: G - C - | D - - - |
+G - C - | D - G - :|
+|: G - C - | G - D - |
+G - C - | D - G - :| `
       },
       {
         artists: "Micho Russel, flute",
