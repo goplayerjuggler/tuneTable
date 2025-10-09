@@ -1,8 +1,9 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
-import getIncipit from "./incipits.js";
 
+import processTuneData from "./processTuneData.js";
+import theSessionImport from "./thesession-import.js"
 import AbcJs from "abcjs";
 
 const STORAGE_KEY = "tunesData";
@@ -70,7 +71,8 @@ function loadTunesFromStorage() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed) && parsed.length > 0) {
+      if (Array.isArray(parsed) //&& parsed.length > 0
+    ) {
         return parsed;
       }
     }
@@ -87,14 +89,18 @@ function clearStorage() {
   }
 }
 
+
+
 function emptyTunes() {
   if(!localStorage.getItem(STORAGE_KEY) || confirm("You may lose some data. This cannot be undone. Continue?")) {
     localStorage.removeItem(STORAGE_KEY);
-    tunesData = [];
-    filteredData = [];
-    
-  renderTable();
   }
+  tunesData = [];
+  filteredData = [];
+  
+  renderTable();
+  saveTunesToStorage();
+  
 }
 
 function copyTunesToClipboard() {
@@ -486,108 +492,20 @@ window.removeReference = removeReference;
 window.addScore = addScore;
 window.removeScore = removeScore;
 window.saveEditedTune = saveEditedTune;
-window.filteredData = filteredData;
 window.addNewTune = addNewTune;
 window.deleteTune = deleteTune;
 window.copyTunesToClipboard = copyTunesToClipboard;
 window.clearStorage = clearStorage;
 window.emptyTunes = emptyTunes;
-
 window.expandNotes = expandNotes;
 window.collapseNotes = collapseNotes;
+window.applyFilters = applyFilters
+updateWindowSharedData()
 
-function parseAbc(abc) {
-  const lines = abc.split("\n"),
-    metadata = {},
-    comments = [];
+window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal
+window.closeTheSessionImportModal = theSessionImport.closeTheSessionImportModal
+window.importFromTheSession = theSessionImport.importFromTheSession
 
-  for (const line of lines) {
-    const trimmed = line.trim();
-    if (trimmed.startsWith("T:") && !metadata.title) {
-      metadata.title = trimmed.substring(2).trim();
-    } else if (trimmed.startsWith("R:")) {
-      metadata.rhythm = trimmed.substring(2).trim();
-    } else if (trimmed.startsWith("K:")) {
-      metadata.key = trimmed.substring(2).trim();
-      break;
-    } else if (trimmed.startsWith("S:")) {
-      metadata.source = trimmed.substring(2).trim();
-    } else if (trimmed.startsWith("F:")) {
-      metadata.url = trimmed.substring(2).trim();
-    } else if (trimmed.startsWith("D:")) {
-      metadata.recording = trimmed.substring(2).trim();
-    } else if (trimmed.startsWith("N:")) {
-      comments.push(trimmed.substring(2).trim());
-    }
-  }
-  if (comments.length > 0) {
-    metadata.comments = comments;
-  }
-
-  return metadata;
-}
-
-function processTuneData(tune) {
-  const processed = { ...tune };
-
-  if (tune.abc) {
-    const abcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
-
-    abcArray.forEach((abcString, index) => {
-      const abcMeta = parseAbc(abcString);
-
-      if (index === 0) {
-        if (!processed.name && abcMeta.title) {
-          processed.name = abcMeta.title;
-          processed.nameIsFromAbc = true
-        }
-        if (!processed.rhythm && abcMeta.rhythm) {
-          processed.rhythm = abcMeta.rhythm;
-          processed.rhythmIsFromAbc = true
-        }
-        if (!processed.key && abcMeta.key) {
-          processed.key = abcMeta.key;
-          processed.keyIsFromAbc = true;
-        }
-      }
-
-      if (!processed.references) {
-        processed.references = [];
-      }
-
-      if (
-        abcMeta.source ||
-        abcMeta.url ||
-        abcMeta.recording ||
-        abcMeta.comments
-      ) {
-        const abcRef = {
-          artists: abcMeta.source || "",
-          url: abcMeta.url || "",
-          notes:
-            (abcMeta.recording || "") +
-            `${abcMeta.recording ? "\n" : ""}${
-              abcMeta.comments ? abcMeta.comments.join("\n") : ""
-            }`,
-            fromAbc:true
-        };
-
-        processed.references.push(abcRef);
-      }
-    });
-    if (!tune.incipit) {
-      processed.incipit = getIncipit(abcArray[0]);
-    }
-    processed.rhythm = processed.rhythm?.toLowerCase();
-  }
-
-  if (!processed.name) processed.name = "Untitled";
-  if (!processed.key) processed.key = "";
-  if (!processed.rhythm) processed.rhythm = "";
-  if (!processed.references) processed.references = [];
-  if (!processed.scores) processed.scores = [];
-  return processed;
-}
 
 function initialiseData() {
   const storedData = loadTunesFromStorage();
@@ -1083,9 +1001,13 @@ function renderTable() {
   document.getElementById(
     "spCount"
   ).innerText = `${filteredData.length}/${tunesData.length}`;
-  window.filteredData = filteredData;
+  updateWindowSharedData()
 }
-
+function updateWindowSharedData()
+{
+  window.filteredData = filteredData;
+  window.tunesData = tunesData
+}
 function applyFilters() {
   const searchTerm = document.getElementById("searchInput").value.toLowerCase();
   const rhythmFilter = document.getElementById("rhythmFilter").value;
@@ -1368,4 +1290,5 @@ document.addEventListener("DOMContentLoaded", function () {
       closeEditModal();
     }
   });
+  theSessionImport.setupTheSessionImportModal()
 });
