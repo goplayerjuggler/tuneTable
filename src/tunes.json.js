@@ -802,10 +802,13 @@ GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
         artists: "",
         url: "",
         notes: `Composed by Tommy Coen.
-Chords (TBC):
-G - D G | D G D G :|
-G C D - | G C D G :|
-G C G D | G C D G :|`
+Chords:
+|: G - - - | D - G - |
+   D - G - | D - G - :|
+|: G - C - | D - - - | 
+   G - C - | D - G - :|
+|: G - C - | G - D - | 
+   G - C - | D - G - :|`
       },
       {
         artists: "Micho Russel, flute",
