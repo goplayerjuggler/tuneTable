@@ -23,7 +23,7 @@ function showTheSessionImportModal() {
       </div>
       <div class="form-group">
         <label for="thesession-tune-id">Tune ID (optional):</label>
-        <input type="text" id="thesession-tune-id" placeholder="123" />
+        <input type="text" id="thesession-tune-id" placeholder="e.g. 123" />
       </div>
       <div class="form-group">
         <label for="import-limit">Number of tunes (max 100):</label>
@@ -164,7 +164,12 @@ async function importFromTheSession() {
       updateImportStatus(message, "success");
 
       // Update the display
-
+      // if (importedTunes.length > 1 &&
+      //   importedTunes.length === window.tunesData.length) {
+      //   window.applyDefaultSort()
+      // }
+      window.sortWithDefaultSort()
+      window.populateFilters()
       window.applyFilters();
 
       window.saveTunesToStorage();
@@ -265,10 +270,16 @@ async function getTuneWithAbc(tuneId, preferredMemberId = null) {
 
   const settingsData = tuneData.settings;
 
-  // Select the best setting
-  const selectedSetting = selectBestSetting(settingsData, preferredMemberId);
+  // Select the best setting(s)
+  let selectedSetting = selectBestSetting(settingsData, preferredMemberId);
   if (!selectedSetting) {
     throw new Error(`No settings found for tune ${tuneId}`);
+  }
+  let selectedSettings
+  if (Array.isArray(selectedSetting)) {
+    selectedSettings = selectedSetting
+    selectedSetting = selectedSettings[0]
+    
   }
   let lHeader = "1/8",
     mHeader;
@@ -301,22 +312,30 @@ async function getTuneWithAbc(tuneId, preferredMemberId = null) {
       mHeader = "3/2";
       break;
   }
+  
 const cHeader = tuneData.composer ? ("\nC:" + tuneData.composer) : ''
-  const abc = `X:1
+
+const getAbc = s =>  `X:1
 T:${tuneData.name}${cHeader}
 R:${tuneData.type}
 L:${lHeader}
 M:${mHeader}
-N:Imported from https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}
-N:Setting by ${selectedSetting.member?.name}
-K:${selectedSetting.key}
-${selectedSetting.abc.replace(/\!/gm, "\n")}`;//line returns sometimes get corrupted as exclamation marks
+N:Imported from https://thesession.org/tunes/${tuneId}#setting${s.id}${s.member?.name ? `
+N:Setting entered in thesession by user ${s.member.name}` : ''}
+K:${s.key}
+${s.abc.replace(/!(\w+)!/gm, '__$1__').replace(/\!/gm, "\n").replace(/__(\w+)__/gm,'!$1!')
+  /*
+  bit of work to escape out abc ornaments like !tenuto!, then replace `!` with line return
+  , then restore the abc ornaments!
+Because thesession encodes line returns with `!`. 
+  */
+}`;
 
   // Build the tune object in tuneTable format
   const tune = {
     name: tuneData.name,
     nameIsFromAbc:true,
-    abc,
+    abc: selectedSettings ? selectedSettings.map(getAbc) : getAbc(selectedSetting),
     scores: [
       {
         url: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
@@ -339,10 +358,10 @@ function selectBestSetting(settings, preferredMemberId = null) {
 
   // First try to find a setting by the preferred member
   if (preferredMemberId) {
-    const memberSetting = settings.find(
+    const memberSetting = settings.filter(
       (s) => s.member && s.member.id === preferredMemberId
     );
-    if (memberSetting) {
+    if (memberSetting.length > 0) {
       return memberSetting;
     }
   }

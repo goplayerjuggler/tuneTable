@@ -8,7 +8,8 @@ import AbcJs from "abcjs";
 
 const STORAGE_KEY = "tunesData";
 
-let currentSort = { column: null, direction: "asc" };
+const getEmptySort = () => { return {column: null, direction: "asc"} }; 
+let currentSort = getEmptySort();
 let currentViewMode = "rendered";
 let currentTranspose = 0;
 let currentTuneAbc = "";
@@ -483,29 +484,38 @@ function collapseNotes(tuneIndex, refIndex) {
   }
 }
 
+function applyDefaultSort()
+{
+  currentSort=getEmptySort()
+  sortData()
+}
 
 function initialiseData() {
   
-  window.openEditModal = openEditModal;
-  window.closeEditModal = closeEditModal;
-  window.addReference = addReference;
-  window.removeReference = removeReference;
-  window.addScore = addScore;
-  window.removeScore = removeScore;
-  window.saveEditedTune = saveEditedTune;
   window.addNewTune = addNewTune;
-  window.deleteTune = deleteTune;
-  window.copyTunesToClipboard = copyTunesToClipboard;
+  window.addReference = addReference;
+  window.addScore = addScore;
+  window.applyDefaultSort = applyDefaultSort
+  window.applyFilters = applyFilters
   window.clearStorage = clearStorage;
+  window.closeEditModal = closeEditModal;
+  window.collapseNotes = collapseNotes;
+  window.copyTunesToClipboard = copyTunesToClipboard;
+  window.deleteTune = deleteTune;
   window.emptyTunes = emptyTunes;
   window.expandNotes = expandNotes;
-  window.collapseNotes = collapseNotes;
-  window.applyFilters = applyFilters
+  window.openEditModal = openEditModal;
+  window.populateFilters = populateFilters
+  window.removeReference = removeReference;
+  window.removeScore = removeScore;
+  window.saveEditedTune = saveEditedTune;
   window.saveTunesToStorage = saveTunesToStorage
+  window.sortWithDefaultSort = sortWithDefaultSort
   
   window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal
   window.closeTheSessionImportModal = theSessionImport.closeTheSessionImportModal
   window.importFromTheSession = theSessionImport.importFromTheSession
+
   window.tunesData = [];
   window.filteredData = [];
   const storedData = loadTunesFromStorage();
@@ -644,6 +654,20 @@ function splitAbcTunes(abcText) {
   return tunes;
 }
 
+function sortWithDefaultSort() {
+  window.tunesData.sort((a, b) =>
+        a.rhythm === b.rhythm
+          ? a.name === b.name
+            ? 0
+            : a.name < b.name
+            ? -1
+            : 1
+          : a.rhythm < b.rhythm
+          ? -1
+          : 1
+      );
+}
+
 function addTunesFromAbc() {
   const abcInput = document.getElementById("abcInput");
   const statusDiv = document.getElementById("addTunesStatus");
@@ -679,17 +703,7 @@ function addTunesFromAbc() {
     });
 
     if (addedCount > 0) {
-      window.tunesData.sort((a, b) =>
-        a.rhythm === b.rhythm
-          ? a.name === b.name
-            ? 0
-            : a.name < b.name
-            ? -1
-            : 1
-          : a.rhythm < b.rhythm
-          ? -1
-          : 1
-      );
+      sortWithDefaultSort()
 
       saveTunesToStorage();
       populateFilters();
@@ -766,17 +780,8 @@ if (!Array.isArray(parsedData)) {
     window.tunesData = parsedData
       .filter((t) => t !== undefined && t !== null)
       .map(processTuneData)
-      .sort((a, b) =>
-        a.rhythm === b.rhythm
-          ? a.name === b.name
-            ? 0
-            : a.name < b.name
-            ? -1
-            : 1
-          : a.rhythm < b.rhythm
-          ? -1
-          : 1
-      );
+      ;
+    sortWithDefaultSort()
 
     saveTunesToStorage();
     populateFilters();
@@ -951,7 +956,7 @@ function renderTable() {
     let title = `<div class="tune-header">
       ${hasAbc ? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
         ${tune.name}
-      </a>` : `<div class="${tuneNameClass}" data-tune-index="${index}">
+      </a>${Array.isArray(tune.abc) && tune.abc.length > 1 ? ` - ${tune.abc.length} settings` : ''}` : `<div class="${tuneNameClass}" data-tune-index="${index}">
         ${tune.name}
       </div>`}
       <div class="tune-actions">
@@ -1072,7 +1077,7 @@ function sortData(column) {
   });
 
   const currentTh = document.querySelector(`th[data-column="${column}"]`);
-  currentTh.classList.add(
+  currentTh?.classList?.add(
     currentSort.direction === "asc" ? "sort-asc" : "sort-desc"
   );
 
