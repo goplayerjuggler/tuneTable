@@ -41,6 +41,4 @@ function addLineBreaks(text, maxWidth = 40, minWidth = 20, newLinePrefix = 'N:')
   // Add prefix
   return lines.map((l) => newLinePrefix + l).join('\n');
 }
-// Example usage:
-// console.log(addLb("This is a long line of text that we want to break into smaller lines, preserving words where possible.", 40, 20, 'N:'));
 export {addLineBreaks}

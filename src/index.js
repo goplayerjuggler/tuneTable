@@ -1,7 +1,6 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
-
 import processTuneData from "./processTuneData.js";
 import theSessionImport from "./thesession-import.js"
 import AbcJs from "abcjs";
@@ -934,7 +933,17 @@ function renderTable() {
       if (ref.notes) {
         const formattedNotes = ref.notes
           .replace(/\n/g, "<br />")
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+          .replace(/https?:\/\/[^\s<>"']+/g, (url) => {
+            try {
+              const { hostname, pathname, search } = new URL(url);
+              const display = hostname + pathname + search;
+              return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
+            } catch {
+              // In case URL parsing fails, leave the original
+              return url;
+            }
+          });
 
         const lines = ref.notes.split("\n");
         if (lines.length > 5) {
@@ -981,11 +990,19 @@ function renderTable() {
 
     let incipitId = `incipit${index}`;
     let title = `<div class="tune-header">
-      ${hasAbc ? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+      ${
+        hasAbc
+          ? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
         ${tune.name}
-      </a>${Array.isArray(tune.abc) && tune.abc.length > 1 ? ` - ${tune.abc.length} settings` : ''}` : `<div class="${tuneNameClass}" data-tune-index="${index}">
+      </a>${
+        Array.isArray(tune.abc) && tune.abc.length > 1
+          ? ` - ${tune.abc.length} settings`
+          : ""
+      }`
+          : `<div class="${tuneNameClass}" data-tune-index="${index}">
         ${tune.name}
-      </div>`}
+      </div>`
+      }
       <div class="tune-actions">
         <button class="btn-icon btn-edit" onclick="openEditModal(window.filteredData[${index}], ${index})" title="Edit tune">
           ✎
@@ -995,7 +1012,7 @@ function renderTable() {
         </button>
       </div>
     </div>`;
-    
+
     row.innerHTML = `
                     <td>${title}
                     <div id="${incipitId}" class="incipitClass"></div></td>
@@ -1033,7 +1050,6 @@ function renderTable() {
   document.getElementById(
     "spCount"
   ).innerText = `${filteredData.length}/${tunesData.length}`;
- 
 }
 
 function applyFilters() {

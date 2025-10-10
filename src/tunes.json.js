@@ -809,8 +809,6 @@ GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
     key: "G",
     references: [
       {
-        artists: "",
-        url: "",
         notes: `Composed by Tommy Coen.
 Chords:
 |: G - - - | D - G - |
@@ -825,9 +823,14 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`, url:"https://caitlinciar
         ,artists:"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
       },
       {
+        artists:"Fintan Vallely, flute; Mark Simos, guitar"
+        , url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2"
+        , notes: `Christmas Eve / The Reel of Rio `
+      },
+      {
         artists:"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion"
         , url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore"
-        , notes: `Christmas Eve / Reel of Mullinavat / Bucks of Oranmore `
+        , notes: `Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
       },
       {
         artists: "Micho Russel, flute",
@@ -837,8 +840,7 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`, url:"https://caitlinciar
       {
         artists: "Sonny Murray, concertina",
         url: "https://music.youtube.com/watch?v=MNscUYF0ybU",
-        notes: `album: It Was Mighty! the Early Days of Irish Music in London
-`
+        notes: `album: It Was Mighty! the Early Days of Irish Music in London`
       }
     ],
     scores: [
