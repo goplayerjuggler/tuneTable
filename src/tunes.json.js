@@ -703,8 +703,8 @@ f/g/f/e/ d>B AD FA | GE e>d`,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
-      references: [{ url:"https://youtu.be/q5Blc3k16rE",
-        notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album by Planxty. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
+      references: [{ artists:"Planxty", url:"https://youtu.be/q5Blc3k16rE",
+        notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
         ` }],
       scores: [
         {
@@ -1379,7 +1379,7 @@ N:I copied it from the itma.ie page. I got in touch with S. Peoples and she kind
 N:agreed for me to do this.
 N:---
 N:Imported from https://thesession.org/tunes/23320#setting47650
-N:Setting entered in thesession by user GoPlayer on 2023-07-13 09:37:43
+N:Setting entered in thesession by user GoPlayer on 2023-07-13
 K:Gmajor
 |:DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG  |
  Bc d/c/B cA|G<B DG FG|EG ce DF|G2 G2:|
@@ -1406,7 +1406,7 @@ N:precisely; I wanted to get closer to the variations and ornaments played in th
 N:recording.
 N:---
 N:Imported from https://thesession.org/tunes/23320#setting47651
-N:Setting entered in thesession by user GoPlayer on 2023-07-13 09:46:32
+N:Setting entered in thesession by user GoPlayer on 2023-07-13
 K:Gmajor
 M:9/16
  L: 1/16
@@ -1435,6 +1435,32 @@ M:3/4
 L:1/8
 K:Gmajor
 DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|B`
+  },  {groups:"ALORA",
+    abc: `X:1
+T:Elizabeth Kelly’s Delight
+R:slip jig
+L:1/8
+M:9/8
+N:Based on a setting entered in thesession by user Will Harmon on 2002-09-07
+N:Chords by Malcolm Schonfield
+K:Adorian
+|:"A-"A3 ABA AGE|"A-"A2 E"G"G2 E DEG|"A-"A3 ABA AGE|"G"~G3 G2 E DEG:|
+ |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
+ references:[{url:"https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig"
+, artists:"The Kelly Family"
+, notes:"1:42 onwards"
+ }],
+    scores: [
+      {
+        url: "https://thesession.org/tunes/953#setting953",
+        name: "thesession.org"
+      }
+    ],
+    incipit: `X:1
+M:9/8
+L:1/8
+K:Adorian
+A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|`
   }
 ]
   ,

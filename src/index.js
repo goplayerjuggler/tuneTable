@@ -541,9 +541,35 @@ function initialiseData() {
       );
   }
   
-  window.filteredData = [...tunesData];
-  populateFilters();
-  renderTable();
+  let params = new URLSearchParams(new URL(window.location).search.slice(1));
+  if (params.has("g")) {
+    let g = params.get("g");
+    if (g) {
+      window.tunesData = window.tunesData.filter((tune) =>
+    tune.groups?.toLowerCase().includes(g.toLowerCase())
+  );
+    }
+  }
+  if (params.has("q")) {
+    let q = params.get("q");
+    if (q) {
+      document.getElementById("searchInput").value = q;
+      applyFilters();
+    }
+  }
+  if (params.has("n")) {
+    let n = params.get("n");
+    if (n) {
+      filterByName(n);
+    }
+    
+    // window.filteredData = [...tunesData];
+    populateFilters();
+    renderTable();
+  }
+  if (window.filteredData.length === 1 && window.filteredData[0].abc) {
+    openAbcModal(window.filteredData[0]);
+  }
 }
 
 function populateFilters() {
@@ -890,7 +916,7 @@ function transposeAbcNotation(abc, transposeAmount) {
 function renderTable() {
   const tbody = document.getElementById("tunesTableBody");
 
-  if (filteredData.length === 0) {
+  if (window.filteredData.length === 0) {
     tbody.innerHTML =
       '<tr><td colspan="5" class="no-results">No tunes found matching your criteria.</td></tr>';
     return;
@@ -960,7 +986,7 @@ function renderTable() {
         ${tune.name}
       </div>`}
       <div class="tune-actions">
-        <button class="btn-icon btn-edit" onclick="openEditModal(filteredData[${index}], ${index})" title="Edit tune">
+        <button class="btn-icon btn-edit" onclick="openEditModal(window.filteredData[${index}], ${index})" title="Edit tune">
           ✎
         </button>
         <button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
@@ -1043,12 +1069,6 @@ function filterByName(searchTerm) {
   renderTable();
 }
 
-function filterByGroup(searchTerm) {
-  window.tunesData = window.tunesData.filter((tune) =>
-    tune.groups?.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  applyFilters();
-}
 
 function sortData(column) {
   if (currentSort.column === column) {
@@ -1088,29 +1108,6 @@ function sortData(column) {
 document.addEventListener("DOMContentLoaded", function () {
   initialiseData();
 
-  let params = new URLSearchParams(new URL(window.location).search.slice(1));
-  if (params.has("q")) {
-    let q = params.get("q");
-    if (q) {
-      document.getElementById("searchInput").value = q;
-      applyFilters();
-    }
-  }
-  if (params.has("n")) {
-    let n = params.get("n");
-    if (n) {
-      filterByName(n);
-    }
-  }
-  if (params.has("g")) {
-    let g = params.get("g");
-    if (g) {
-      filterByGroup(g);
-    }
-  }
-  if (filteredData.length === 1 && window.filteredData[0].abc) {
-    openAbcModal(filteredData[0]);
-  }
 
   document
     .getElementById("searchInput")
