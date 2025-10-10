@@ -1,4 +1,5 @@
 import processTuneData from "./processTuneData.js";
+import { addLineBreaks } from "./utils.js";
 // thesession-import.js
 // Module for importing tunebooks from thesession.org
 
@@ -23,7 +24,7 @@ function showTheSessionImportModal() {
       </div>
       <div class="form-group">
         <label for="thesession-tune-id">Tune ID (optional):</label>
-        <input type="text" id="thesession-tune-id" placeholder="e.g. 123" />
+        <input type="text" id="thesession-tune-id" placeholder="e.g. 23320 (ID of The First Draft, a mazurka by S. Peoples)" />
       </div>
       <div class="form-group">
         <label for="import-limit">Number of tunes (max 100):</label>
@@ -168,8 +169,8 @@ async function importFromTheSession() {
       //   importedTunes.length === window.tunesData.length) {
       //   window.applyDefaultSort()
       // }
-      window.sortWithDefaultSort()
-      window.populateFilters()
+      window.sortWithDefaultSort();
+      window.populateFilters();
       window.applyFilters();
 
       window.saveTunesToStorage();
@@ -275,11 +276,10 @@ async function getTuneWithAbc(tuneId, preferredMemberId = null) {
   if (!selectedSetting) {
     throw new Error(`No settings found for tune ${tuneId}`);
   }
-  let selectedSettings
+  let selectedSettings;
   if (Array.isArray(selectedSetting)) {
-    selectedSettings = selectedSetting
-    selectedSetting = selectedSettings[0]
-    
+    selectedSettings = selectedSetting;
+    selectedSetting = selectedSettings[0];
   }
   let lHeader = "1/8",
     mHeader;
@@ -312,30 +312,46 @@ async function getTuneWithAbc(tuneId, preferredMemberId = null) {
       mHeader = "3/2";
       break;
   }
-  
-const cHeader = tuneData.composer ? ("\nC:" + tuneData.composer) : ''
 
-const getAbc = s =>  `X:1
-T:${tuneData.name}${cHeader}
+  const cHeader = tuneData.composer ? "\nC:" + tuneData.composer : "";
+
+  const getAbc = (setting) => {
+    const comments = tuneData.comments.find((c) => c.date === setting.date);
+    let nHeaders = comments
+      ? "\n" + comments.content.replace(/    /gm, "\n").split('\n').map(l=>addLineBreaks(l,80)).join('\n') + "\nN:---"
+      : "";
+    return `X:1
+T:${tuneData.name + cHeader}
 R:${tuneData.type}
 L:${lHeader}
-M:${mHeader}
-N:Imported from https://thesession.org/tunes/${tuneId}#setting${s.id}${s.member?.name ? `
-N:Setting entered in thesession by user ${s.member.name}` : ''}
-K:${s.key}
-${s.abc.replace(/!(\w+)!/gm, '__$1__').replace(/\!/gm, "\n").replace(/__(\w+)__/gm,'!$1!')
+M:${mHeader + nHeaders}
+N:Imported from https://thesession.org/tunes/${tuneId}#setting${setting.id}${
+      setting.member?.name
+        ? `
+N:Setting entered in thesession by user ${setting.member.name}`
+        : ""
+    } on ${setting.date}
+K:${setting.key}
+${
+  setting.abc
+    .replace(/!(\w+)!/gm, "__$1__")
+    .replace(/\!/gm, "\n")
+    .replace(/__(\w+)__/gm, "!$1!")
   /*
   bit of work to escape out abc ornaments like !tenuto!, then replace `!` with line return
   , then restore the abc ornaments!
 Because thesession encodes line returns with `!`. 
   */
 }`;
+  };
 
   // Build the tune object in tuneTable format
   const tune = {
     name: tuneData.name,
-    nameIsFromAbc:true,
-    abc: selectedSettings ? selectedSettings.map(getAbc) : getAbc(selectedSetting),
+    nameIsFromAbc: true,
+    abc: selectedSettings
+      ? selectedSettings.map(getAbc)
+      : getAbc(selectedSetting),
     scores: [
       {
         url: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
