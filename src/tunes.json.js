@@ -156,7 +156,7 @@ P:Ⅱ
 "D"~f2fd "Bm"fa | "Em7"be2d (c/B/A) | "D"f2fd "A"fa |"D"Ad2A (F/E/D)|
 "D"~f2fd "Bm"fa | "Em7"be2d (c/B/A) | "D"(f/g/f) "(A)"(e/f/e) "Bm"d2 |"D"Ad2A (F/E/D)!D.C.!|]
 `,
-      references: [{ notes: "ALORA: #2 in the Top The Candle set" }],
+      references: [{ notes: "#2 in the (ALORA) Top The Candle set" }],
       incipit: `X:1
 M: 3/4
 L: 1/8
@@ -535,6 +535,12 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
           artists: "Paddy Glackin & Paddy Keenan",
           url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104",
         },
+      {
+        artists:"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion"
+        , url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore"
+        , notes: `3:04 onwards.
+        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
+      },
       ],
       scores: [
         {
@@ -631,7 +637,7 @@ M: 4/4
 L: 1/16
 K: D
 d2d2 BcdB A2F2 A2F2 | `,
-      references: [{ notes: "ALORA: #3 in the Denis Murphy’s set" }],
+      references: [{ notes: "#3 in the (ALORA) Denis Murphy’s set" }],
       scores: [
         {
           type: "tune",
@@ -651,7 +657,9 @@ A2D FED F2A A2f|gfe`,
       key: "D",
       origin: "Ireland",
       rhythm: "slide",
-      references: [],
+      references: [
+        
+      ],
       scores: [
         {
           type: "tune",
@@ -695,7 +703,9 @@ f/g/f/e/ d>B AD FA | GE e>d`,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
-      references: [],
+      references: [{ url:"https://youtu.be/q5Blc3k16rE",
+        notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album by Planxty. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
+        ` }],
       scores: [
         {
           type: "tune",
@@ -715,7 +725,7 @@ Ad Bd/B/ AD FA|GE BE`,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
-      references: [{ notes: "ALORA: #2 in the Denis Murphy’s set" }],
+      references: [{ notes: "#2 in the (ALORA) Denis Murphy’s set" }],
       scores: [
         {
           type: "tune",
@@ -737,7 +747,7 @@ A2AB AFED B2BA BcdB |`,
       rhythm: "reel (single)",
       references: [
         {
-          notes: "ALORA: #2 in the Maud Millar set",
+          notes: "#2 in the (ALORA) Maud Millar set",
         },
       ],
       scores: [
@@ -761,7 +771,7 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
       rhythm: "reel",
       references: [
         {
-          notes: "ALORA: #3 in the Maud Millar set",
+          notes: "#3 in the (ALORA) Maud Millar set",
         },
       ],
       scores: [
@@ -809,6 +819,15 @@ G - - - | D - G - :|
 G - C - | D - G - :|
 |: G - C - | G - D - |
 G - C - | D - G - :| `
+      },
+      {notes:`1:48 onwards
+The Drunken Landlady / Christmas Eve / The Abbey Reel`, url:"https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel"
+        ,artists:"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
+      },
+      {
+        artists:"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion"
+        , url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore"
+        , notes: `Christmas Eve / Reel of Mullinavat / Bucks of Oranmore `
       },
       {
         artists: "Micho Russel, flute",
@@ -1106,7 +1125,7 @@ R:reel
 N:Probably was played on a fiddle tuned one tone down from the standard tuning.
 D: https://bmac.libs.uga.edu/index.php/Detail/objects/331630
 F:UGA Brown Media Archives: identifier artrosen_00180 (Track 3 -29:03 of the tape
-Z:abc-transcription Malcolm Schonfield (using A. Kuntz's transcription 
+Z:abc-transcription Malcolm Schonfield (using A. Kuntz’s transcription 
 Z:as a starting point)%2024-06-26
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 %abcjs_soundfont fluid
@@ -1137,7 +1156,7 @@ R:reel
 D:Field Recorders Collective FRC 505, "Byard Ray, Manco Sneed \&
 D:Mike Rogers" (2006).
 N:Manco Sneed (1885-1975, Jackson & Graham Counties, western N.C.)
-N:Recorded by Peter Hoover in the 1960's.
+N:Recorded by Peter Hoover in the 1960’s.
 F:https://www.slippery-hill.com/recording/paddy-turnpike-2
 Z:Transcribed by Andrew Kuntz; then edited (time signatures & bars) by Malcolm Schonfield%2024-12-10
 K:Gmix
@@ -1151,7 +1170,7 @@ DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4
       abc: [
         `
 X: 1
-T: Tommy Potts' Rampling Pitchfork
+T: Tommy Potts’ Rampling Pitchfork
 T: As played by Jimmy Power
 %C: Tommy Potts
 S: Jimmy Power, fiddle
@@ -1335,5 +1354,88 @@ K: Dmaj
 FA|:"Bm"BAFA "D"DA FA|"Bm"BA (3Bcd "A" e2 de|"D"fa gf "A7"egfe|"D"dfed "Bm"B2dA|
 "Bm"BAFA "D"DAFA|"Bm7"BA (3Bcd "Em"e2 de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 FA:|2 "D"d2 f2 d2 fg||
 */
-  ],
+  ,
+  {
+    abc: [
+      `X:1
+T:The First Draft
+C:Siobhan Peoples
+S:Fidil
+F:https://raelachrecords.bandcamp.com/track/the-first-draft-mazurka
+D:Decade
+R:mazurka
+L:1/8
+M:3/4
+N:This lovely mazurka is a composition by Siobhán Peoples. I first heard it on
+N:www.itma.ie.
+N:Currently there’s a page on itma.ie for this tune:
+N:https://www.itma.ie/scores/first-draft/
+N:In it there are the following words from S Peoples: "This tune simply got its
+N:title as it presented itself to me fully formed. It was recorded by the band
+N:Fidil on their 2019 recording, Decade, and they kindly allowed us to include the
+N:track here."
+N:The score I’m sharing is, I believe, identical to the one written by S Peoples;
+N:I copied it from the itma.ie page. I got in touch with S. Peoples and she kindly
+N:agreed for me to do this.
+N:---
+N:Imported from https://thesession.org/tunes/23320#setting47650
+N:Setting entered in thesession by user GoPlayer on 2023-07-13 09:37:43
+K:Gmajor
+|:DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG  |
+ Bc d/c/B cA|G<B DG FG|EG ce DF|G2 G2:|
+ ga|ba gb a^g|af d2 =gf|ec ef g/f/e|dB G2 ga|
+ ba gb a^g|af de f=g|eB eg f/e/d|[e3c3] f ge|
+ d<B G2 gf|ec Gg fe|dA FG A/B/c|B<G DG FG|
+ EG ce d^c|dB GB DG|EG ce DF|G2 G2||`,
+      `X:1
+T:The First Draft
+C:Siobhan Peoples
+R:mazurka
+L:1/8
+M:3/4
+N:This is my own transcription of a version of this tune by the group Fidil
+N:(well, just the first time they play it through). Their setting of the tune is
+N:lovely. I also like the meditative coda they added on – not given here in this
+N:score.
+N:You can hear it via a player on this page: https://www.itma.ie/scores/first-draft/
+N:---
+N:I chose to use more dots than is perhaps traditional when writing things down.
+N:It may well not be to many people’s taste, but it’s how I wanted to do it. I
+N:feel it’s better suited to getting down the swung rhythm and the variations more
+N:precisely; I wanted to get closer to the variations and ornaments played in the
+N:recording.
+N:---
+N:Imported from https://thesession.org/tunes/23320#setting47651
+N:Setting entered in thesession by user GoPlayer on 2023-07-13 09:46:32
+K:Gmajor
+M:9/16
+ L: 1/16
+ |:D2G|B2c d/c/B2 c/B/A2|GB2 D2G F2G|E2G c2e d2c|B2G DGD .B,3|
+ B2c d/c/B2 c/B/A2|GB2 D2G F2G|E2G ce2 D2F|1 .G3 G3:|2 .G3 (G3 G2)g||
+ b2a g2b a2(^g|!tenuto!a2)f d2g f2g|ec2 e2f gfe|!tenuto!d2B (G3 G2)g|
+ b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|.[e3c3] z2f g2e|
+ d2B G2g f2g|ec2 G2g f2e|d2A F2z ABc|B2G D2G F2G|
+ E2G c2e d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 (G3 G2)g||
+ b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d(g2 {a}g2)f g2a|
+ b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
+ d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
+ E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`
+    ],
+    references: [{artists:"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle", notes:`a version that’s quite close to the
+Fidil one; it also has some very pretty things going on on the cello.`}],
+    scores: [
+      {
+        url: "https://thesession.org/tunes/23320#setting47650",
+
+        name: "thesession.org"
+      }
+    ],
+    incipit: `X:1
+M:3/4
+L:1/8
+K:Gmajor
+DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|B`
+  }
+]
+  ,
 };
