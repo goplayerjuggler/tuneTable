@@ -1,19 +1,18 @@
 # Tune table
-An HTML viewer for lists of tunes. It uses data in a hybrid format where the tune can be given in [ABC format](https://abcnotation.com) or more simply just with some metadata. 
+An interactive HTML/Javascript viewer for lists of tunes. It uses data in a hybrid format where tunes can either be given in [ABC format](https://abcnotation.com) or otherwise with just some simple descriptions/comments/links. 
 
-Features: 
-* a popup score viewer with transpose buttons, for tunes where the abc is included
-* sorting and filtering of the list of tunes
-* incipits for tunes
-* can add links to audio references to the tunes along with notes
-* tunes can have multiple settings in ABC
-* other lists of tunes in ABC format can be imported
-
-## Current list of tunes
-It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
-A fair number of the scores there are my own work, either transcriptions of other people’s tunes or original pieces. I reserve some rights on this via a CC licence; details below.
-
-It should be possible to adapt the tool so as to use other lists of tunes – maybe this tool could be useful more widely?
+## Features: 
+* tunes can have zero, one or more settings in ABC
+* a popup score viewer with transpose buttons, for tunes with one or more settings in ABC
+* sorting and filtering of the tune list
+* incipit generator (incipit: a short score giving the first few notes)
+* comments/notes for tunes, optionally with links to audio references
+* optional external links to scores
+* entries can be edited within the tool
+* import functions
+  * lists of tunes in ABC format can be imported
+  * full import/export: full data for the current tune list can be exported/imported in Javascript literal or JSON format
+  * integration with thesession.org: load a tune book or one specific tune
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
@@ -27,17 +26,27 @@ Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.gi
 [goplayerjuggler.github.io/tuneTable/?g=alora](https://goplayerjuggler.github.io/tuneTable/?g=alora) 
 Unlike the other pages, other tunes are no longer accessible.
 
+## Current default list of tunes
+It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
+A fair number of the scores there are my own work, either transcriptions of other people’s tunes or original pieces. I reserve some rights on this via a CC licence; details below.
+
+The current default list of tunes can be changed easily using the tool’s edit and import functionalities.
+
+## Code status
+This project is in the alpha stage of development. Which is one reason why I haven’t yet done any publicity for it.
+
 ## Dev notes
 I used Claude.ai to do a lot of the dev work. Tune rendering and transposing is done by [abcjs](https://github.com/paulrosen/abcjs), a library written by by Paul Rosen and Gregory Dyke.
 
-A tip of the hat to Michael Eskin and his amazing and indispensable online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which no doubt is part of the inspiration behind this. Michael has already kindly given me a few tips on several details.
+A tip of the hat to: 
 
-## Setup
-```
-npm install
-npm run dev
-npm run build
-```
+* Michael Eskin and his amazing and indispensable online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which no doubt is part of the inspiration behind this. Michael has already kindly given me a few tips on several details; and I adapted his code to write the incipit generator.
+
+* Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”.
+
+* Jeremy from [thesession.org](https://thesession.org) for providing such an great resource and helping me with a question about it.
+
+
 ## Licenses
 
 This project uses dual licensing:
@@ -53,3 +62,11 @@ This project uses dual licensing:
 - **BY** (Attribution): You must give appropriate credit to the original creator
 - **NC** (NonCommercial): You may not use the data for commercial purposes
 - **SA** (ShareAlike): If you remix or build upon the data, you must distribute your contributions under the same CC BY-NC-SA 4.0 license
+
+
+## Setup notes
+```
+npm install
+npm run dev
+npm run build
+```
