@@ -1462,6 +1462,35 @@ L:1/8
 K:Adorian
 A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|`
   }
+,
+  {groups:"alora",
+    abc: [
+      `X:1
+T:The Snowy Path
+C:Mark Kelly
+R:slip jig
+L:1/8
+M:9/8
+N:Imported from https://thesession.org/tunes/104#setting104
+N:Setting entered in thesession by user Jeremy on 2001-05-25
+K:Dmajor
+|"D"F2A B2F A2F|"G"G2B d2e dBA|"D"F2A B2F A2F|"Em"E2D E2F GFE|
+ "D"F2A B2F A2F|"G"G2B d2e dBA|"D"F2A B2F A2F|"Em"E2D E2F GAB||
+ "A"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"D"A2G F2G A2B|
+ "A"c3 c2e d2c|"G"B2G B2c d2e|"D"d2A B2F A2F|"Em"E2D E2F GFE||`
+    ],
+    scores: [
+      {
+        url: "https://thesession.org/tunes/104#setting104",
+        name: "thesession.org"
+      }
+    ],
+    incipit: `X:1
+M:9/8
+L:1/8
+K:Dmajor
+F2A B2F A2F|G2B d2e dBA|F2A B2F A2F`
+  }
 ]
   ,
 };

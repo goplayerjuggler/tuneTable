@@ -491,12 +491,11 @@ function applyDefaultSort()
 }
 
 function initialiseData() {
-  
   window.addNewTune = addNewTune;
   window.addReference = addReference;
   window.addScore = addScore;
-  window.applyDefaultSort = applyDefaultSort
-  window.applyFilters = applyFilters
+  window.applyDefaultSort = applyDefaultSort;
+  window.applyFilters = applyFilters;
   window.clearStorage = clearStorage;
   window.closeEditModal = closeEditModal;
   window.collapseNotes = collapseNotes;
@@ -505,21 +504,20 @@ function initialiseData() {
   window.emptyTunes = emptyTunes;
   window.expandNotes = expandNotes;
   window.openEditModal = openEditModal;
-  window.populateFilters = populateFilters
+  window.populateFilters = populateFilters;
   window.removeReference = removeReference;
   window.removeScore = removeScore;
   window.saveEditedTune = saveEditedTune;
-  window.saveTunesToStorage = saveTunesToStorage
-  window.sortWithDefaultSort = sortWithDefaultSort
-  
-  window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal
-  window.closeTheSessionImportModal = theSessionImport.closeTheSessionImportModal
-  window.importFromTheSession = theSessionImport.importFromTheSession
+  window.saveTunesToStorage = saveTunesToStorage;
+  window.sortWithDefaultSort = sortWithDefaultSort;
 
-  window.tunesData = [];
-  window.filteredData = [];
+  window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal;
+  window.closeTheSessionImportModal =
+    theSessionImport.closeTheSessionImportModal;
+  window.importFromTheSession = theSessionImport.importFromTheSession;
+
   const storedData = loadTunesFromStorage();
-  
+
   if (storedData) {
     console.log("Loading from local storage");
     window.tunesData = storedData;
@@ -540,14 +538,14 @@ function initialiseData() {
           : 1
       );
   }
-  
+  let filtered = false;
   let params = new URLSearchParams(new URL(window.location).search.slice(1));
   if (params.has("g")) {
     let g = params.get("g");
     if (g) {
       window.tunesData = window.tunesData.filter((tune) =>
-    tune.groups?.toLowerCase().includes(g.toLowerCase())
-  );
+        tune.groups?.toLowerCase().includes(g.toLowerCase())
+      );
     }
   }
   if (params.has("q")) {
@@ -555,6 +553,7 @@ function initialiseData() {
     if (q) {
       document.getElementById("searchInput").value = q;
       applyFilters();
+      filtered = true;
     }
   }
   if (params.has("n")) {
@@ -562,10 +561,12 @@ function initialiseData() {
     if (n) {
       filterByName(n);
     }
-    
-    // window.filteredData = [...tunesData];
     populateFilters();
-    renderTable();
+    
+    // renderTable();
+  }
+  if (!filtered) {
+    applyFilters();
   }
   if (window.filteredData.length === 1 && window.filteredData[0].abc) {
     openAbcModal(window.filteredData[0]);
