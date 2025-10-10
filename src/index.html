@@ -19,7 +19,7 @@
           type="text"
           id="searchInput"
           class="search-box"
-          placeholder="Search tunes, artists, or rhythms..."
+          placeholder="Search tunes, artists, or rhythms…"
           autofocus
         />
         <select id="rhythmFilter" class="filter-select">
@@ -35,6 +35,9 @@
             ✎ Edit Menu ▼
         </button>
           <div id="editMenuDropdown" class="dropdown-content">
+            <a href="#" onclick="showTheSessionImportModal()">
+  Import from thesession.org
+            </a>
             <a href="#" id="addNewTuneBtn">➕ add new tune</a>
             <a href="#" id="emptyTunesBtn">🗑️ remove all tunes</a>
             <a href="#" id="addTunesBtn">📝 add tunes (from ABC)</a>
@@ -104,14 +107,14 @@
           </p>
           <textarea
             id="abcInput"
-            placeholder="Paste ABC notation here...
+            placeholder="Paste ABC notation here…
 
 Example:
 X:1
 T:Example Tune
 R:jig
 K:Dmaj
-|:D2E F2G|A2B c2d|..."
+|:D2E F2G|A2B c2d|…"
           ></textarea>
         </div>
         <div style="display: flex; gap: 10px; justify-content: flex-end">
@@ -132,21 +135,16 @@ K:Dmaj
         </div>
         <div style="margin-bottom: 20px">
           <p style="color: #666; margin-bottom: 10px">
-            Paste JSON array of tune objects below. This will replace all existing tunes.
+            Paste an array of tune objects below, in JSON or Javascript format. This will replace all existing tunes.
           </p>
           <textarea
             id="jsonInput"
-            placeholder="Paste JSON array here...
+            placeholder="Paste array here…
 
 Example:
 [
   {
-    &quot;name&quot;: &quot;Example Tune&quot;,
-    &quot;key&quot;: &quot;Dmaj&quot;,
-    &quot;rhythm&quot;: &quot;jig&quot;,
-    &quot;abc&quot;: &quot;X:1\nT:Example\n...&quot;,
-    &quot;references&quot;: [],
-    &quot;scores&quot;: []
+    &quot;abc&quot;: &quot;X:1\nT:Example\n…&quot;,
   }
 ]"
           ></textarea>
