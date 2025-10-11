@@ -1412,7 +1412,7 @@ N:Setting entered in thesession by user GoPlayer on 2023-07-13
 K:Gmajor
 M:9/16
  L: 1/16
- |:D2G|B2c d/c/B2 c/B/A2|GB2 D2G F2G|E2G c2e d2c|B2G DGD .B,3|
+ D2G|B2c d/c/B2 c/B/A2|GB2 D2G F2G|E2G c2e d2c|B2G DGD .B,3|
  B2c d/c/B2 c/B/A2|GB2 D2G F2G|E2G ce2 D2F|1 .G3 G3:|2 .G3 (G3 G2)g||
  b2a g2b a2(^g|!tenuto!a2)f d2g f2g|ec2 e2f gfe|!tenuto!d2B (G3 G2)g|
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|.[e3c3] z2f g2e|
