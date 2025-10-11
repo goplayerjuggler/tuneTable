@@ -1,20 +1,17 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
+
 import processTuneData from "./processTuneData.js";
 import theSessionImport from "./thesession-import.js"
 import AbcJs from "abcjs";
+import ModalManager from "./src/modules/modals/ModalManager.js";
 
 const STORAGE_KEY = "tunesData";
 
 const getEmptySort = () => { return {column: null, direction: "asc"} }; 
 let currentSort = getEmptySort();
-let currentViewMode = "rendered";
-let currentTranspose = 0;
-let currentTuneAbc = "";
-let currentAbcArray = [];
-let currentAbcIndex = 0;
-let currentEditTuneIndex = null;
+let modalManager;
 
 function stringifyWithTemplatesLiteral(obj, indent = 2) {
   // Helper to determine if a string is a valid JS identifier
@@ -54,6 +51,7 @@ function stringifyWithTemplatesLiteral(obj, indent = 2) {
 
   return serialize(obj, 0);
 }
+
 // Local Storage Functions
 function saveTunesToStorage() {
   try {
@@ -69,8 +67,7 @@ function loadTunesFromStorage() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed) //&& parsed.length > 0
-    ) {
+      if (Array.isArray(parsed)) {
         return parsed;
       }
     }
@@ -96,7 +93,6 @@ function emptyTunes() {
   
   renderTable();
   saveTunesToStorage();
-  
 }
 
 function copyTunesToClipboard() {
@@ -156,7 +152,7 @@ function addNewTune() {
   
   // Open edit modal for the new tune
   const newIndex = window.filteredData.length - 1;
-  openEditModal(newTune, newIndex);
+  modalManager.openEdit(newTune, newIndex);
 }
 
 // Delete Tune
@@ -176,283 +172,6 @@ function deleteTune(tuneIndex) {
   saveTunesToStorage();
   populateFilters();
   applyFilters();
-}
-
-function openEditModal(tune, tuneIndex) {
-  const modal = document.getElementById("editModal");
-  currentEditTuneIndex = tuneIndex;
-
-  document.getElementById("editName").value = tune.nameIsFromAbc ? "" : (tune.name || "");
-  
-  document.getElementById("editKey").value = tune.keyIsFromAbc ? "" : (tune.key || "");
-  document.getElementById("editRhythm").value = tune.rhythmIsFromAbc ? "" : (tune.rhythm || "");
-
-  const abcArray = Array.isArray(tune.abc)
-    ? tune.abc
-    : tune.abc
-    ? [tune.abc]
-    : [];
-  document.getElementById("editAbc").value = abcArray.join("\n\n---\n\n");
-
-  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc) || []);
-  renderScoresEditor(tune.scores || []);
-
-  modal.classList.add("active");
-}
-
-function closeEditModal() {
-  const modal = document.getElementById("editModal");
-  modal.classList.remove("active");
-  currentEditTuneIndex = null;
-}
-
-function renderReferencesEditor(references) {
-  const container = document.getElementById("referencesEditor");
-
-  if (references.length === 0) {
-    container.innerHTML =
-      '<p class="empty-message">No references yet. Click "Add Reference" to create one.</p>';
-    return;
-  }
-
-  container.innerHTML = references
-    .map(
-      (ref, index) => `
-    <div class="editor-item" data-index="${index}">
-      <div class="editor-item-header">
-        <strong>Reference ${index + 1}</strong>
-        <button type="button" class="btn-icon btn-danger" onclick="removeReference(${index})" title="Remove reference">
-          <span>×</span>
-        </button>
-      </div>
-      <div class="editor-item-content">
-        <div class="form-group">
-          <label>Artists/Source:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            ref.artists || ""
-          )}" data-ref-index="${index}" data-field="artists">
-        </div>
-        <div class="form-group">
-          <label>URL:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            ref.url || ""
-          )}" data-ref-index="${index}" data-field="url" placeholder="https://...">
-        </div>
-        <div class="form-group">
-          <label>Notes:</label>
-          <textarea class="form-control" rows="3" data-ref-index="${index}" data-field="notes">${escapeHtml(
-        ref.notes || ""
-      )}</textarea>
-        </div>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-}
-
-function renderScoresEditor(scores) {
-  const container = document.getElementById("scoresEditor");
-
-  if (scores.length === 0) {
-    container.innerHTML =
-      '<p class="empty-message">No scores yet. Click "Add Score" to create one.</p>';
-    return;
-  }
-
-  container.innerHTML = scores
-    .map(
-      (score, index) => `
-    <div class="editor-item" data-index="${index}">
-      <div class="editor-item-header">
-        <strong>Score ${index + 1}</strong>
-        <button type="button" class="btn-icon btn-danger" onclick="removeScore(${index})" title="Remove score">
-          <span>×</span>
-        </button>
-      </div>
-      <div class="editor-item-content">
-        <div class="form-group">
-          <label>Name:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            score.name || ""
-          )}" data-score-index="${index}" data-field="name">
-        </div>
-        <div class="form-group">
-          <label>URL:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            score.url || ""
-          )}" data-score-index="${index}" data-field="url" placeholder="https://...">
-        </div>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-}
-
-function addReference() {
-  const tune = window.filteredData[currentEditTuneIndex];
-  if (!tune.references) tune.references = [];
-
-  tune.references.push({
-    artists: "",
-    url: "",
-    notes: "",
-  });
-
-  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc));
-}
-
-function removeReference(index) {
-  const tune = window.filteredData[currentEditTuneIndex];
-  const nonAbcRefs = tune.references.filter(r=>!r.fromAbc);
-  const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
-  tune.references.splice(actualIndex, 1);
-  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc));
-}
-
-function addScore() {
-  const tune = window.filteredData[currentEditTuneIndex];
-  if (!tune.scores) tune.scores = [];
-
-  tune.scores.push({
-    name: "",
-    url: "",
-  });
-
-  renderScoresEditor(tune.scores);
-}
-
-function removeScore(index) {
-  const tune = window.filteredData[currentEditTuneIndex];
-  tune.scores.splice(index, 1);
-  renderScoresEditor(tune.scores);
-}
-
-function saveEditedTune() {
-  const tune = window.filteredData[currentEditTuneIndex];
-  const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
-
-  const abcText = document.getElementById("editAbc").value.trim();
-  if (abcText) {
-    const abcParts = abcText
-      .split(/\n\s*---\s*\n/)
-      .filter((part) => part.trim());
-    tune.abc = abcParts.length === 1 ? abcParts[0] : abcParts;
-  } else {
-    tune.abc = null;
-  }
-
-  const referenceInputs = document.querySelectorAll(
-    "#referencesEditor .editor-item"
-  );
-  const userRefs = Array.from(referenceInputs).map((item, index) => {
-    const artists =
-      item.querySelector(
-        `input[data-ref-index="${index}"][data-field="artists"]`
-      )?.value || "";
-    const url =
-      item.querySelector(`input[data-ref-index="${index}"][data-field="url"]`)
-        ?.value || "";
-    const notes =
-      item.querySelector(
-        `textarea[data-ref-index="${index}"][data-field="notes"]`
-      )?.value || "";
-
-    return { artists, url, notes };
-  });
-
-  const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
-  tune.scores = Array.from(scoreInputs).map((item, index) => {
-    const name =
-      item.querySelector(
-        `input[data-score-index="${index}"][data-field="name"]`
-      )?.value || "";
-    const url =
-      item.querySelector(`input[data-score-index="${index}"][data-field="url"]`)
-        ?.value || "";
-
-    return { name, url };
-  });
-
-  let reprocessed = Object.assign({}, tune);
-  delete reprocessed.name;
-  delete reprocessed.nameIsFromAbc;
-  delete reprocessed.key;
-  delete reprocessed.keyIsFromAbc;
-  delete reprocessed.rhythm;
-  delete reprocessed.rhythmIsFromAbc;
-  delete reprocessed.references
-  
-  reprocessed = processTuneData(reprocessed);
-  //get rid of properties to get succint objects, when it's all in the abc
-  let editedName = document.getElementById("editName").value.trim();
-  let editedKey = document.getElementById("editKey").value.trim();
-  let editedRhythm = document
-    .getElementById("editRhythm")
-    .value.trim()
-    .toLowerCase();
-
-  if (editedName) {
-    if (reprocessed.nameIsFromAbc) {
-      if (editedName !== reprocessed.name) {
-        delete reprocessed.nameIsFromAbc;
-        delete tune.nameIsFromAbc;
-        reprocessed.name = editedName;
-      }
-    } else reprocessed.name = editedName;
-  } else {
-    if (!reprocessed.nameIsFromAbc) {
-      delete reprocessed.name;
-      delete tune.name;
-    }
-  }
-  if (editedRhythm) {
-    if (reprocessed.rhythmIsFromAbc) {
-      if (editedRhythm !== reprocessed.rhythm) {
-        delete reprocessed.rhythmIsFromAbc;
-        delete tune.rhythmIsFromAbc;
-        reprocessed.rhythm = editedRhythm;
-      }
-    } else reprocessed.rhythm = editedRhythm;
-  } else {
-    if (!reprocessed.rhythmIsFromAbc) {
-      delete reprocessed.rhythm;
-      delete tune.rhythm;
-    }
-  }
-  if (editedKey) {
-    if (reprocessed.keyIsFromAbc) {
-      if (editedKey !== reprocessed.key) {
-        delete reprocessed.keyIsFromAbc;
-        delete tune.keyIsFromAbc;
-        reprocessed.key = editedKey;
-      }
-    } else reprocessed.key = editedKey;
-  } else {
-    if (!reprocessed.keyIsFromAbc) {
-      delete reprocessed.key;
-      delete tune.key;
-    }
-  }
-  Object.assign(tune, reprocessed);
-
-  const abcRefs = tune.references.filter((r) => r.fromAbc);
-  tune.references = [...userRefs, ...abcRefs];
-
-  if (originalTuneDataIndex !== -1) {
-    window.tunesData[originalTuneDataIndex] = tune;
-  }
-
-  saveTunesToStorage();
-  renderTable();
-  closeEditModal();
-}
-
-function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text;
-  return div.innerHTML;
 }
 
 function expandNotes(tuneIndex, refIndex) {
@@ -483,10 +202,23 @@ function collapseNotes(tuneIndex, refIndex) {
   }
 }
 
-function applyDefaultSort()
-{
-  currentSort=getEmptySort()
-  sortData()
+// function applyDefaultSort() {
+//   currentSort = getEmptySort();
+//   sortData();
+// }
+
+function sortWithDefaultSort() {
+  window.tunesData.sort((a, b) =>
+    a.rhythm === b.rhythm
+      ? a.name === b.name
+        ? 0
+        : a.name < b.name
+        ? -1
+        : 1
+      : a.rhythm < b.rhythm
+      ? -1
+      : 1
+  );
 }
 
 function initialiseData() {
@@ -933,17 +665,7 @@ function renderTable() {
       if (ref.notes) {
         const formattedNotes = ref.notes
           .replace(/\n/g, "<br />")
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-          .replace(/https?:\/\/[^\s<>"']+/g, (url) => {
-            try {
-              const { hostname, pathname, search } = new URL(url);
-              const display = hostname + pathname + search;
-              return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
-            } catch {
-              // In case URL parsing fails, leave the original
-              return url;
-            }
-          });
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 
         const lines = ref.notes.split("\n");
         if (lines.length > 5) {
@@ -990,19 +712,11 @@ function renderTable() {
 
     let incipitId = `incipit${index}`;
     let title = `<div class="tune-header">
-      ${
-        hasAbc
-          ? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+      ${hasAbc ? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
         ${tune.name}
-      </a>${
-        Array.isArray(tune.abc) && tune.abc.length > 1
-          ? ` - ${tune.abc.length} settings`
-          : ""
-      }`
-          : `<div class="${tuneNameClass}" data-tune-index="${index}">
+      </a>${Array.isArray(tune.abc) && tune.abc.length > 1 ? ` - ${tune.abc.length} settings` : ''}` : `<div class="${tuneNameClass}" data-tune-index="${index}">
         ${tune.name}
-      </div>`
-      }
+      </div>`}
       <div class="tune-actions">
         <button class="btn-icon btn-edit" onclick="openEditModal(window.filteredData[${index}], ${index})" title="Edit tune">
           ✎
@@ -1012,7 +726,7 @@ function renderTable() {
         </button>
       </div>
     </div>`;
-
+    
     row.innerHTML = `
                     <td>${title}
                     <div id="${incipitId}" class="incipitClass"></div></td>
@@ -1050,6 +764,7 @@ function renderTable() {
   document.getElementById(
     "spCount"
   ).innerText = `${filteredData.length}/${tunesData.length}`;
+ 
 }
 
 function applyFilters() {
