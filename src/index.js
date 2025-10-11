@@ -538,6 +538,8 @@ function initialiseData() {
       );
   }
   let filtered = false;
+  
+    populateFilters();
   let params = new URLSearchParams(new URL(window.location).search.slice(1));
   if (params.has("g")) {
     let g = params.get("g");
