@@ -1,9 +1,12 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
+
 import processTuneData from "./processTuneData.js";
 import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
+import ModalManager from "./modules/modals/ModalManager.js";
+import AbcModal from "./modules/modals/AbcModal.js";
 
 const STORAGE_KEY = "tunesData";
 
@@ -11,12 +14,7 @@ const getEmptySort = () => {
   return { column: null, direction: "asc" };
 };
 let currentSort = getEmptySort();
-let currentViewMode = "rendered";
-let currentTranspose = 0;
-let currentTuneAbc = "";
-let currentAbcArray = [];
-let currentAbcIndex = 0;
-let currentEditTuneIndex = null;
+let modalManager;
 
 function stringifyWithTemplatesLiteral(obj, indent = 2) {
   // Helper to determine if a string is a valid JS identifier
@@ -60,6 +58,7 @@ function stringifyWithTemplatesLiteral(obj, indent = 2) {
 
   return serialize(obj, 0);
 }
+
 // Local Storage Functions
 function saveTunesToStorage() {
   try {
@@ -75,9 +74,7 @@ function loadTunesFromStorage() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
-      if (
-        Array.isArray(parsed) //&& parsed.length > 0
-      ) {
+      if (Array.isArray(parsed)) {
         return parsed;
       }
     }
@@ -165,7 +162,7 @@ function addNewTune() {
 
   // Open edit modal for the new tune
   const newIndex = window.filteredData.length - 1;
-  openEditModal(newTune, newIndex);
+  modalManager.openEdit(newTune, newIndex);
 }
 
 // Delete Tune
@@ -185,289 +182,6 @@ function deleteTune(tuneIndex) {
   saveTunesToStorage();
   populateFilters();
   applyFilters();
-}
-
-function openEditModal(tune, tuneIndex) {
-  const modal = document.getElementById("editModal");
-  currentEditTuneIndex = tuneIndex;
-
-  document.getElementById("editName").value = tune.nameIsFromAbc
-    ? ""
-    : tune.name || "";
-
-  document.getElementById("editKey").value = tune.keyIsFromAbc
-    ? ""
-    : tune.key || "";
-  document.getElementById("editRhythm").value = tune.rhythmIsFromAbc
-    ? ""
-    : tune.rhythm || "";
-
-  const abcArray = Array.isArray(tune.abc)
-    ? tune.abc
-    : tune.abc
-    ? [tune.abc]
-    : [];
-  document.getElementById("editAbc").value = abcArray.join("\n\n---\n\n");
-
-  renderReferencesEditor(tune.references.filter((r) => !r.fromAbc) || []);
-  renderScoresEditor(tune.scores || []);
-
-  modal.classList.add("active");
-}
-
-function closeEditModal() {
-  const modal = document.getElementById("editModal");
-  modal.classList.remove("active");
-  currentEditTuneIndex = null;
-}
-
-function renderReferencesEditor(references) {
-  const container = document.getElementById("referencesEditor");
-
-  if (references.length === 0) {
-    container.innerHTML =
-      '<p class="empty-message">No references yet. Click "Add Reference" to create one.</p>';
-    return;
-  }
-
-  container.innerHTML = references
-    .map(
-      (ref, index) => `
-    <div class="editor-item" data-index="${index}">
-      <div class="editor-item-header">
-        <strong>Reference ${index + 1}</strong>
-        <button type="button" class="btn-icon btn-danger" onclick="removeReference(${index})" title="Remove reference">
-          <span>×</span>
-        </button>
-      </div>
-      <div class="editor-item-content">
-        <div class="form-group">
-          <label>Artists/Source:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            ref.artists || ""
-          )}" data-ref-index="${index}" data-field="artists">
-        </div>
-        <div class="form-group">
-          <label>URL:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            ref.url || ""
-          )}" data-ref-index="${index}" data-field="url" placeholder="https://...">
-        </div>
-        <div class="form-group">
-          <label>Notes:</label>
-          <textarea class="form-control" rows="3" data-ref-index="${index}" data-field="notes">${escapeHtml(
-        ref.notes || ""
-      )}</textarea>
-        </div>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-}
-
-function renderScoresEditor(scores) {
-  const container = document.getElementById("scoresEditor");
-
-  if (scores.length === 0) {
-    container.innerHTML =
-      '<p class="empty-message">No scores yet. Click "Add Score" to create one.</p>';
-    return;
-  }
-
-  container.innerHTML = scores
-    .map(
-      (score, index) => `
-    <div class="editor-item" data-index="${index}">
-      <div class="editor-item-header">
-        <strong>Score ${index + 1}</strong>
-        <button type="button" class="btn-icon btn-danger" onclick="removeScore(${index})" title="Remove score">
-          <span>×</span>
-        </button>
-      </div>
-      <div class="editor-item-content">
-        <div class="form-group">
-          <label>Name:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            score.name || ""
-          )}" data-score-index="${index}" data-field="name">
-        </div>
-        <div class="form-group">
-          <label>URL:</label>
-          <input type="text" class="form-control" value="${escapeHtml(
-            score.url || ""
-          )}" data-score-index="${index}" data-field="url" placeholder="https://...">
-        </div>
-      </div>
-    </div>
-  `
-    )
-    .join("");
-}
-
-function addReference() {
-  const tune = window.filteredData[currentEditTuneIndex];
-  if (!tune.references) tune.references = [];
-
-  tune.references.push({
-    artists: "",
-    url: "",
-    notes: "",
-  });
-
-  renderReferencesEditor(tune.references.filter((r) => !r.fromAbc));
-}
-
-function removeReference(index) {
-  const tune = window.filteredData[currentEditTuneIndex];
-  const nonAbcRefs = tune.references.filter((r) => !r.fromAbc);
-  const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
-  tune.references.splice(actualIndex, 1);
-  renderReferencesEditor(tune.references.filter((r) => !r.fromAbc));
-}
-
-function addScore() {
-  const tune = window.filteredData[currentEditTuneIndex];
-  if (!tune.scores) tune.scores = [];
-
-  tune.scores.push({
-    name: "",
-    url: "",
-  });
-
-  renderScoresEditor(tune.scores);
-}
-
-function removeScore(index) {
-  const tune = window.filteredData[currentEditTuneIndex];
-  tune.scores.splice(index, 1);
-  renderScoresEditor(tune.scores);
-}
-
-function saveEditedTune() {
-  const tune = window.filteredData[currentEditTuneIndex];
-  const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
-
-  const abcText = document.getElementById("editAbc").value.trim();
-  if (abcText) {
-    const abcParts = abcText
-      .split(/\n\s*---\s*\n/)
-      .filter((part) => part.trim());
-    tune.abc = abcParts.length === 1 ? abcParts[0] : abcParts;
-  } else {
-    tune.abc = null;
-  }
-
-  const referenceInputs = document.querySelectorAll(
-    "#referencesEditor .editor-item"
-  );
-  const userRefs = Array.from(referenceInputs).map((item, index) => {
-    const artists =
-      item.querySelector(
-        `input[data-ref-index="${index}"][data-field="artists"]`
-      )?.value || "";
-    const url =
-      item.querySelector(`input[data-ref-index="${index}"][data-field="url"]`)
-        ?.value || "";
-    const notes =
-      item.querySelector(
-        `textarea[data-ref-index="${index}"][data-field="notes"]`
-      )?.value || "";
-
-    return { artists, url, notes };
-  });
-
-  const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
-  tune.scores = Array.from(scoreInputs).map((item, index) => {
-    const name =
-      item.querySelector(
-        `input[data-score-index="${index}"][data-field="name"]`
-      )?.value || "";
-    const url =
-      item.querySelector(`input[data-score-index="${index}"][data-field="url"]`)
-        ?.value || "";
-
-    return { name, url };
-  });
-
-  let reprocessed = Object.assign({}, tune);
-  delete reprocessed.name;
-  delete reprocessed.nameIsFromAbc;
-  delete reprocessed.key;
-  delete reprocessed.keyIsFromAbc;
-  delete reprocessed.rhythm;
-  delete reprocessed.rhythmIsFromAbc;
-  delete reprocessed.references;
-
-  reprocessed = processTuneData(reprocessed);
-  //get rid of properties to get succint objects, when it's all in the abc
-  let editedName = document.getElementById("editName").value.trim();
-  let editedKey = document.getElementById("editKey").value.trim();
-  let editedRhythm = document
-    .getElementById("editRhythm")
-    .value.trim()
-    .toLowerCase();
-
-  if (editedName) {
-    if (reprocessed.nameIsFromAbc) {
-      if (editedName !== reprocessed.name) {
-        delete reprocessed.nameIsFromAbc;
-        delete tune.nameIsFromAbc;
-        reprocessed.name = editedName;
-      }
-    } else reprocessed.name = editedName;
-  } else {
-    if (!reprocessed.nameIsFromAbc) {
-      delete reprocessed.name;
-      delete tune.name;
-    }
-  }
-  if (editedRhythm) {
-    if (reprocessed.rhythmIsFromAbc) {
-      if (editedRhythm !== reprocessed.rhythm) {
-        delete reprocessed.rhythmIsFromAbc;
-        delete tune.rhythmIsFromAbc;
-        reprocessed.rhythm = editedRhythm;
-      }
-    } else reprocessed.rhythm = editedRhythm;
-  } else {
-    if (!reprocessed.rhythmIsFromAbc) {
-      delete reprocessed.rhythm;
-      delete tune.rhythm;
-    }
-  }
-  if (editedKey) {
-    if (reprocessed.keyIsFromAbc) {
-      if (editedKey !== reprocessed.key) {
-        delete reprocessed.keyIsFromAbc;
-        delete tune.keyIsFromAbc;
-        reprocessed.key = editedKey;
-      }
-    } else reprocessed.key = editedKey;
-  } else {
-    if (!reprocessed.keyIsFromAbc) {
-      delete reprocessed.key;
-      delete tune.key;
-    }
-  }
-  Object.assign(tune, reprocessed);
-
-  const abcRefs = tune.references.filter((r) => r.fromAbc);
-  tune.references = [...userRefs, ...abcRefs];
-
-  if (originalTuneDataIndex !== -1) {
-    window.tunesData[originalTuneDataIndex] = tune;
-  }
-
-  saveTunesToStorage();
-  renderTable();
-  closeEditModal();
-}
-
-function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text;
-  return div.innerHTML;
 }
 
 function expandNotes(tuneIndex, refIndex) {
@@ -498,29 +212,37 @@ function collapseNotes(tuneIndex, refIndex) {
   }
 }
 
-function applyDefaultSort() {
-  currentSort = getEmptySort();
-  sortData();
+// function applyDefaultSort() {
+//   currentSort = getEmptySort();
+//   sortData();
+// }
+
+function sortWithDefaultSort() {
+  window.tunesData.sort((a, b) =>
+    a.rhythm === b.rhythm
+      ? a.name === b.name
+        ? 0
+        : a.name < b.name
+        ? -1
+        : 1
+      : a.rhythm < b.rhythm
+      ? -1
+      : 1
+  );
 }
 
 function initialiseData() {
+  // Expose global functions
   window.addNewTune = addNewTune;
-  window.addReference = addReference;
-  window.addScore = addScore;
-  window.applyDefaultSort = applyDefaultSort;
+  // window.applyDefaultSort = applyDefaultSort;
   window.applyFilters = applyFilters;
   window.clearStorage = clearStorage;
-  window.closeEditModal = closeEditModal;
   window.collapseNotes = collapseNotes;
   window.copyTunesToClipboard = copyTunesToClipboard;
   window.deleteTune = deleteTune;
   window.emptyTunes = emptyTunes;
   window.expandNotes = expandNotes;
-  window.openEditModal = openEditModal;
   window.populateFilters = populateFilters;
-  window.removeReference = removeReference;
-  window.removeScore = removeScore;
-  window.saveEditedTune = saveEditedTune;
   window.saveTunesToStorage = saveTunesToStorage;
   window.sortWithDefaultSort = sortWithDefaultSort;
 
@@ -529,6 +251,20 @@ function initialiseData() {
     theSessionImport.closeTheSessionImportModal;
   window.importFromTheSession = theSessionImport.importFromTheSession;
 
+  // Initialize modal manager with callbacks
+  modalManager = new ModalManager({
+    saveTunesToStorage,
+    populateFilters,
+    applyFilters,
+    renderTable,
+    sortWithDefaultSort,
+  });
+
+  // Expose modal functions globally for inline handlers
+  modalManager.exposeGlobalFunctions();
+
+  window.tunesData = [];
+  window.filteredData = [];
   const storedData = loadTunesFromStorage();
 
   if (storedData) {
@@ -584,6 +320,7 @@ function initialiseData() {
     applyFilters();
   }
   if (window.filteredData.length === 1 && window.filteredData[0].abc) {
+    
     openAbcModal(window.filteredData[0]);
   }
 }
@@ -613,57 +350,14 @@ function populateFilters() {
 function openAbcModal(tune) {
   if (!tune.abc) return;
 
-  const modal = document.getElementById("abcModal");
-  const abcRendered = document.getElementById("abcRendered");
-  const abcText = document.getElementById("abcText");
+  let abcModal = new AbcModal()
+  abcModal.openWithTune(tune)
 
-  currentAbcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
-
-  currentAbcIndex = 0;
-  currentTuneAbc = currentAbcArray[0];
-  currentTranspose = 0;
-
-  updateAbcDisplay();
-  updateNavigationButtons();
-
-  currentViewMode = "rendered";
-  abcRendered.style.display = "block";
-  abcText.classList.remove("active");
-  document.getElementById("toggleViewBtn").textContent = "Show ABC Text";
-
-  modal.classList.add("active");
 }
 
-function closeAbcModal() {
-  const modal = document.getElementById("abcModal");
-  modal.classList.remove("active");
-  currentTranspose = 0;
-  currentAbcIndex = 0;
-}
-
-function openAddTunesModal() {
-  const modal = document.getElementById("addTunesModal");
-  const statusDiv = document.getElementById("addTunesStatus");
-  statusDiv.style.display = "none";
-  document.getElementById("abcInput").value = "";
-  modal.classList.add("active");
-}
 
 function closeAddTunesModal() {
   const modal = document.getElementById("addTunesModal");
-  modal.classList.remove("active");
-}
-
-function openLoadJsonModal() {
-  const modal = document.getElementById("loadJsonModal");
-  const statusDiv = document.getElementById("loadJsonStatus");
-  statusDiv.style.display = "none";
-  document.getElementById("jsonInput").value = "";
-  modal.classList.add("active");
-}
-
-function closeLoadJsonModal() {
-  const modal = document.getElementById("loadJsonModal");
   modal.classList.remove("active");
 }
 
@@ -694,20 +388,6 @@ function splitAbcTunes(abcText) {
   }
 
   return tunes;
-}
-
-function sortWithDefaultSort() {
-  window.tunesData.sort((a, b) =>
-    a.rhythm === b.rhythm
-      ? a.name === b.name
-        ? 0
-        : a.name < b.name
-        ? -1
-        : 1
-      : a.rhythm < b.rhythm
-      ? -1
-      : 1
-  );
 }
 
 function addTunesFromAbc() {
@@ -1049,7 +729,7 @@ function renderTable() {
     const tuneNameEl = row.querySelector(".tune-name");
     if (hasAbc && tuneNameEl) {
       tuneNameEl.addEventListener("click", () => {
-        openAbcModal(tune);
+        openAbcModal(tune)
       });
     }
 
@@ -1155,40 +835,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document
-    .getElementById("closeModalBtn")
-    .addEventListener("click", closeAbcModal);
-  document
-    .getElementById("toggleViewBtn")
-    .addEventListener("click", toggleView);
-
+  // Modal button event listeners
   document.getElementById("addTunesBtn").addEventListener("click", (e) => {
     e.preventDefault();
-    openAddTunesModal();
+    modalManager.openAddTunes();
   });
-  document
-    .getElementById("closeAddTunesBtn")
-    .addEventListener("click", closeAddTunesModal);
-  document
-    .getElementById("addAbcBtn")
-    .addEventListener("click", addTunesFromAbc);
+
   document.getElementById("loadJsonBtn").addEventListener("click", (e) => {
     e.preventDefault();
-    openLoadJsonModal();
-  });
-  document
-    .getElementById("closeLoadJsonBtn")
-    .addEventListener("click", closeLoadJsonModal);
-  document
-    .getElementById("loadJsonDataBtn")
-    .addEventListener("click", loadJson);
-  document.getElementById("clearAbcBtn").addEventListener("click", () => {
-    document.getElementById("abcInput").value = "";
-    document.getElementById("addTunesStatus").style.display = "none";
-  });
-  document.getElementById("clearJsonBtn").addEventListener("click", () => {
-    document.getElementById("jsonInput").value = "";
-    document.getElementById("loadJsonStatus").style.display = "none";
+    modalManager.openLoadJson();
   });
 
   // Dropdown menu toggle
@@ -1231,82 +886,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
 
-  document
-    .getElementById("transposeUpBtn")
-    .addEventListener("click", () => transposeAbc(1));
-  document
-    .getElementById("transposeDownBtn")
-    .addEventListener("click", () => transposeAbc(-1));
-
-  document
-    .getElementById("prevAbcBtn")
-    .addEventListener("click", () => navigateAbc(-1));
-  document
-    .getElementById("nextAbcBtn")
-    .addEventListener("click", () => navigateAbc(1));
-
-  document.getElementById("abcModal").addEventListener("click", function (e) {
-    if (e.target === this) {
-      closeAbcModal();
-    }
-  });
-
-  document
-    .getElementById("addTunesModal")
-    .addEventListener("click", function (e) {
-      if (e.target === this) {
-        closeAddTunesModal();
-      }
-    });
-
-  document
-    .getElementById("loadJsonModal")
-    .addEventListener("click", function (e) {
-      if (e.target === this) {
-        closeLoadJsonModal();
-      }
-    });
-
-  document.addEventListener("keydown", function (e) {
-    const addTunesModal = document.getElementById("addTunesModal");
-    const loadJsonModal = document.getElementById("loadJsonModal");
-    const abcModal = document.getElementById("abcModal");
-    const editModal = document.getElementById("editModal");
-
-    if (e.key === "Escape") {
-      if (addTunesModal.classList.contains("active")) {
-        closeAddTunesModal();
-      } else if (loadJsonModal.classList.contains("active")) {
-        closeLoadJsonModal();
-      } else if (abcModal.classList.contains("active")) {
-        closeAbcModal();
-      } else if (editModal.classList.contains("active")) {
-        closeEditModal();
-      }
-    } else if (abcModal.classList.contains("active")) {
-      if (e.key === "ArrowLeft") {
-        navigateAbc(-1);
-      } else if (e.key === "ArrowRight") {
-        navigateAbc(1);
-      }
-    }
-  });
-
-  document
-    .getElementById("closeEditModalBtn")
-    ?.addEventListener("click", closeEditModal);
-  document
-    .getElementById("saveEditBtn")
-    ?.addEventListener("click", saveEditedTune);
-  document
-    .getElementById("addReferenceBtn")
-    ?.addEventListener("click", addReference);
-  document.getElementById("addScoreBtn")?.addEventListener("click", addScore);
-
-  document.getElementById("editModal")?.addEventListener("click", function (e) {
-    if (e.target === this) {
-      closeEditModal();
-    }
-  });
   theSessionImport.setupTheSessionImportModal();
 });
