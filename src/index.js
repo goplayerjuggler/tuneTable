@@ -233,7 +233,7 @@ function sortWithDefaultSort() {
 function initialiseData() {
   // Expose global functions
   window.addNewTune = addNewTune;
-  window.applyDefaultSort = applyDefaultSort;
+  // window.applyDefaultSort = applyDefaultSort;
   window.applyFilters = applyFilters;
   window.clearStorage = clearStorage;
   window.collapseNotes = collapseNotes;
@@ -287,6 +287,8 @@ function initialiseData() {
       );
   }
   let filtered = false;
+
+  populateFilters();
   let params = new URLSearchParams(new URL(window.location).search.slice(1));
   if (params.has("g")) {
     let g = params.get("g");
@@ -667,7 +669,20 @@ function renderTable() {
       if (ref.notes) {
         const formattedNotes = ref.notes
           .replace(/\n/g, "<br />")
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+          .replace(
+            /\[([^\]]+)\]\(([^)]+)\)/g,
+            '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+          )
+          .replace(/https?:\/\/[^\s<>"']+/g, (url) => {
+            try {
+              const { hostname, pathname, search } = new URL(url);
+              const display = hostname + pathname + search;
+              return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
+            } catch {
+              // In case URL parsing fails, leave the original
+              return url;
+            }
+          });
 
         const lines = ref.notes.split("\n");
         if (lines.length > 5) {

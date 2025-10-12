@@ -19,6 +19,7 @@ export default class EditModal extends BaseModal {
       key: document.getElementById("editKey"),
       rhythm: document.getElementById("editRhythm"),
       abc: document.getElementById("editAbc"),
+      abcIncipit: document.getElementById("editIncipit"),
       referencesEditor: document.getElementById("referencesEditor"),
       scoresEditor: document.getElementById("scoresEditor"),
       addReferenceBtn: document.getElementById("addReferenceBtn"),
@@ -115,7 +116,7 @@ export default class EditModal extends BaseModal {
   renderScores(scores) {
     if (scores.length === 0) {
       this.elements.scoresEditor.innerHTML =
-        '<p class="empty-message">No scores yet. Click &#8220;Add Score&#8221; to create one.</p>';
+        '<p class="empty-message">No external scores yet. Click &#8220;Add Score&#8221; to create one.</p>';
       return;
     }
 
