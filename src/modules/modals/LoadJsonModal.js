@@ -6,6 +6,42 @@ import processTuneData from "../../processTuneData.js";
  * Allows loading complete tune table from JSON/JS format
  */
 export default class LoadJsonModal extends BaseModal {
+    static getTemplate() {
+    return `
+    <div id="loadJsonModal" class="modal add-tunes-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 style="flex: 1; margin: 0; color: #2c3e50">
+            Load Full Tune Table
+          </h2>
+          <button class="close-btn" id="closeLoadJsonBtn">&times;</button>
+        </div>
+        <div style="margin-bottom: 20px">
+          <p style="color: #666; margin-bottom: 10px">
+            Paste an array of tune objects below, in JSON or Javascript format. This will replace all existing tunes.
+          </p>
+          <textarea
+            id="jsonInput"
+            placeholder="Paste array here…
+
+Example:
+[
+  {
+    &quot;abc&quot;: &quot;X:1\nT:Example\n…&quot;,
+  }
+]"
+          ></textarea>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end">
+          <button id="clearJsonBtn" class="modal-btn secondary">Clear</button>
+          <button id="loadJsonDataBtn" class="modal-btn primary">Load data</button>
+        </div>
+        <div id="loadJsonStatus"></div>
+      </div>
+    </div>
+
+    `;
+  }
   constructor(callbacks) {
     super("loadJsonModal");
 

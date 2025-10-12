@@ -3,7 +3,29 @@
  * Provides common functionality for all modals
  */
 export default class BaseModal {
-  constructor(modalId) {
+  
+  static getTemplate() {
+    // Override in subclasses
+    return "";
+  }
+
+  static inject() {
+    const template = this.getTemplate();
+    if (template) {
+      const container = document.createElement("div");
+      container.innerHTML = template;
+      document.body.appendChild(container.firstElementChild);
+    }
+  }
+  
+  constructor(modalId, autoInject = true) {
+  this.modalId = modalId;
+  
+  if (autoInject) {
+    this.constructor.inject();
+  }
+  
+  this.modal = document.getElementById(modalId);
     this.modalId = modalId;
     this.modal = document.getElementById(modalId);
     

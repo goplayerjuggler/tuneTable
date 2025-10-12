@@ -6,6 +6,47 @@ import processTuneData from "../../processTuneData.js";
  * Allows importing tunes via ABC notation
  */
 export default class AddTunesModal extends BaseModal {
+    static getTemplate() {
+    return `
+<div id="addTunesModal" class="modal add-tunes-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 style="flex: 1; margin: 0; color: #2c3e50">
+        Import tunes via ABC
+      </h2>
+      <button class="close-btn" id="closeAddTunesBtn">&times;</button>
+    </div>
+    <div style="margin-bottom: 20px">
+      <p style="color: #666; margin-bottom: 10px">
+        Paste ABC notation below. Multiple tunes can be separated by blank
+        lines or X: headers.
+      </p>
+      <textarea
+        id="abcInput"
+        placeholder="Paste ABC notation here…
+
+Example:
+
+X:1
+T:The Black Rogue
+R:jig
+L:1/8
+M:12/8
+K:A major
+d|cAA BGB cAA A2d | cAA BGB AFD D2
+…"
+      ></textarea>
+    </div>
+    <div style="display: flex; gap: 10px; justify-content: flex-end">
+      <button id="clearAbcBtn" class="modal-btn secondary">Clear</button>
+      <button id="addAbcBtn" class="modal-btn primary">Add Tunes</button>
+    </div>
+    <div id="addTunesStatus"></div>
+  </div>
+</div>
+    `;
+  }
+
   constructor(callbacks) {
     super("addTunesModal");
 

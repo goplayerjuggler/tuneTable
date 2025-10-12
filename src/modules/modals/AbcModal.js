@@ -6,6 +6,37 @@ import AbcJs from 'abcjs';
  * Shows rendered sheet music with transposition controls
  */
 export default class AbcModal extends BaseModal {
+    static getTemplate() {
+    return `
+<div id="abcModal" class="modal">
+<div class="modal-content">
+  <div class="modal-header">
+    <div class="modal-controls">
+      <div class="control-row">
+        <button id="transposeDownBtn" class="transpose-btn">
+          ♭ (down)
+        </button>
+        <button id="transposeUpBtn" class="transpose-btn">♯ (up)</button>
+        <button class="toggle-view-btn" id="toggleViewBtn">
+          Show Abc Text
+        </button>
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="control-row">
+        <button id="prevAbcBtn" class="nav-btn">← Previous</button>
+        <span id="abcCounter"></span>
+        <button id="nextAbcBtn" class="nav-btn">Next →</button>
+      </div>
+    </div>
+  </div>
+  <div id="abcRendered" class="abc-rendered"></div>
+  <div id="abcText" class="abc-text">
+    <pre id="abcTextContent"></pre>
+  </div>
+</div>
+</div>
+    `;
+  }
   constructor() {
     super('abcModal');
     

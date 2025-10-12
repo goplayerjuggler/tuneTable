@@ -6,6 +6,81 @@ import processTuneData from "../../processTuneData.js";
  * Comprehensive tune editor with metadata, ABC, references, and scores
  */
 export default class EditModal extends BaseModal {
+    static getTemplate() {
+    return `
+    <div id="editModal" class="modal">
+  <div class="modal-content modal-content-large">
+    <div class="modal-header">
+      <h2>Edit Tune</h2>
+      <button id="closeEditModalBtn" class="close-btn">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <form id="editTuneForm" onsubmit="return false;">
+        
+        <!-- Basic Metadata Section -->
+        <section class="edit-section">
+          <h3>Basic Information</h3>
+          <div class="form-row">
+            <div class="form-group form-group-flex-2">
+              <label for="editName">Tune Name:</label>
+              <input type="text" id="editName" class="form-control" placeholder="Enter tune name">
+            </div>
+            <div class="form-group">
+              <label for="editKey">Key:</label>
+              <input type="text" id="editKey" class="form-control" placeholder="e.g., Dmaj">
+            </div>
+            <div class="form-group">
+              <label for="editRhythm">Rhythm:</label>
+              <input type="text" id="editRhythm" class="form-control" placeholder="e.g., jig, reel">
+            </div>
+          </div>
+        </section>
+
+        <!-- ABC Notation Section -->
+        <section class="edit-section">
+          <h3>ABC Notation</h3>
+          <div class="form-group">
+            <label for="editAbc">ABC Code:</label>
+            <textarea id="editAbc" class="form-control abc-textarea" rows="8" placeholder="Paste ABC notation here. For multiple versions, separate with --- on its own line"></textarea>
+            <small class="form-hint">Separate multiple ABC versions with <code>---</code> on its own line</small>
+          </div>
+        </section>
+
+        <!-- References Section -->
+        <section class="edit-section">
+          <div class="section-header">
+            <h3>References</h3>
+            <button type="button" id="addReferenceBtn" class="btn btn-secondary">+ Add Reference</button>
+          </div>
+          <div id="referencesEditor" class="editor-container">
+            <!-- References will be dynamically inserted here -->
+          </div>
+        </section>
+
+        <!-- Scores Section -->
+        <section class="edit-section">
+          <div class="section-header">
+            <h3>Scores</h3>
+            <button type="button" id="addScoreBtn" class="btn btn-secondary">+ Add Score</button>
+          </div>
+          <div id="scoresEditor" class="editor-container">
+            <!-- Scores will be dynamically inserted here -->
+          </div>
+        </section>
+
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+      <button id="saveEditBtn" class="btn btn-primary">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+    `;
+  }
   constructor(callbacks) {
     super("editModal");
 
