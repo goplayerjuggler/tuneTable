@@ -1,17 +1,14 @@
-import BaseModal from './BaseModal.js';
+import Modal from './Modal.js';
 import AbcJs from 'abcjs';
 
 /**
  * ABC Notation Display Modal
  * Shows rendered sheet music with transposition controls
  */
-export default class AbcModal extends BaseModal {
-    static getTemplate() {
-    return `
-<div id="abcModal" class="modal">
-<div class="modal-content">
-  <div class="modal-header">
-    <div class="modal-controls">
+export default class AbcModal extends Modal {
+  constructor() {
+    super({id:'abcModal',size:'large',title:'score viewer',
+content: `<div class="modal-controls">
       <div class="control-row">
         <button id="transposeDownBtn" class="transpose-btn">
           ♭ (down)
@@ -20,7 +17,7 @@ export default class AbcModal extends BaseModal {
         <button class="toggle-view-btn" id="toggleViewBtn">
           Show Abc Text
         </button>
-        <button class="close-btn" id="closeModalBtn">&times;</button>
+        
       </div>
       <div class="control-row">
         <button id="prevAbcBtn" class="nav-btn">← Previous</button>
@@ -28,23 +25,16 @@ export default class AbcModal extends BaseModal {
         <button id="nextAbcBtn" class="nav-btn">Next →</button>
       </div>
     </div>
-  </div>
-  <div id="abcRendered" class="abc-rendered"></div>
+    <div id="abcRendered" class="abc-rendered"></div>
   <div id="abcText" class="abc-text">
     <pre id="abcTextContent"></pre>
-  </div>
-</div>
-</div>
-    `;
-  }
-  constructor() {
-    super('abcModal');
+  </div>`
+
+    });
     
-    this.currentAbcArray = [];
-    this.currentAbcIndex = 0;
-    this.currentTuneAbc = '';
-    this.currentTranspose = 0;
-    this.currentViewMode = 'rendered';
+  }
+
+  onOpen() {
     
     this.elements = {
       rendered: document.getElementById('abcRendered'),
@@ -60,10 +50,19 @@ export default class AbcModal extends BaseModal {
     };
     
     this.setupControls();
+    // Ensure rendered view is shown
+    this.elements.rendered.style.display = 'block';
+    this.elements.text.classList.remove('active');
+    this.elements.toggleBtn.textContent = 'Show ABC text';
+    
+    this.updateDisplay();
+    this.updateNavigationButtons();
+    
+    
   }
 
   setupControls() {
-    this.elements.closeBtn?.addEventListener('click', () => this.close());
+    
     this.elements.toggleBtn?.addEventListener('click', () => this.toggleView());
     this.elements.transposeUpBtn?.addEventListener('click', () => this.transpose(1));
     this.elements.transposeDownBtn?.addEventListener('click', () => this.transpose(-1));
@@ -72,23 +71,18 @@ export default class AbcModal extends BaseModal {
   }
 
   openWithTune(tune) {
-    if (!tune.abc) return;
     
+    if (!tune.abc) return;
     this.currentAbcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
     this.currentAbcIndex = 0;
     this.currentTuneAbc = this.currentAbcArray[0];
     this.currentTranspose = 0;
     this.currentViewMode = 'rendered';
     
-    this.updateDisplay();
-    this.updateNavigationButtons();
+    this.open()
     
-    // Ensure rendered view is shown
-    this.elements.rendered.style.display = 'block';
-    this.elements.text.classList.remove('active');
-    this.elements.toggleBtn.textContent = 'Show ABC Text';
     
-    this.open();
+    // this.open();
   }
 
   toggleView() {

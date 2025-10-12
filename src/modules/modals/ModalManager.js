@@ -13,7 +13,7 @@ export default class ModalManager {
 
     // Initialize all modals
     this.modals = {
-      abc: new AbcModal(),
+      // abc: new AbcModal(),
       addTunes: new AddTunesModal(callbacks),
       loadJson: new LoadJsonModal(callbacks),
       edit: new EditModal(callbacks),
@@ -31,17 +31,18 @@ export default class ModalManager {
             modal.close();
           }
         });
-      } else if (this.modals.abc.isOpen()) {
-        // Let ABC modal handle arrow keys
-        this.modals.abc.handleKeydown(e);
-      }
+      } 
+      // else if (this.modals.abc.isOpen()) {
+      //   // Let ABC modal handle arrow keys
+      //   this.modals.abc.handleKeydown(e);
+      // }
     });
   }
 
   // Convenience methods for opening modals
-  openAbc(tune) {
-    this.modals.abc.openWithTune(tune);
-  }
+  // openAbc(tune) {
+  //   this.modals.abc.openWithTune(tune);
+  // }
 
   openAddTunes() {
     this.modals.addTunes.open();

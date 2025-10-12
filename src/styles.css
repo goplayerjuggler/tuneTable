@@ -504,7 +504,13 @@ tbody tr:nth-child(even) {
 /* Edit Modal Specific Styles */
 .modal-content-large {
   max-width: 900px;
-  max-height: 90vh;
+  /* max-height: 90vh; */
+  overflow-y: auto;
+}
+/* Edit Modal Specific Styles */
+.modal-content-xlarge {
+  max-width: 1100px;
+  /* max-height: 90vh; */
   overflow-y: auto;
 }
 
@@ -753,5 +759,233 @@ tr:hover .tune-actions {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+}
+
+/*tmp 251012*/
+/* Base modall Styles */
+.modall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modall--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* modall Overlay */
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* modall Container */
+.modal__container {
+  position: relative;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-height: calc(100vh - 100px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* modall Sizes */
+.modall--small .modal__container {
+  max-width: 400px;
+}
+
+.modall--medium .modal__container {
+  max-width: 600px;
+}
+
+.modall--large .modal__container {
+  max-width: 900px;
+}
+
+/* modall Header */
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  flex-shrink: 0;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal__close:hover {
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.modal__close:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* modall Body */
+.modal__body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Import Form Specific Styles */
+.import-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-help {
+  font-size: 13px;
+  color: #666;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: #4a90e2;
+  color: white;
+}
+
+.btn--primary:hover:not(:disabled) {
+  background: #357abd;
+}
+
+.btn--primary:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Import Status */
+.import-status {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.import-status:empty {
+  display: none;
+}
+
+.import-status--loading {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.import-status--success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.import-status--error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal__container {
+    margin: 20px;
+    max-height: calc(100vh - 40px);
+  }
+  
+  .modall--small .modal__container,
+  .modall--medium .modal__container,
+  .modall--large .modal__container,
+  .modall--xlarge .modal__container {
+    max-width: calc(100% - 40px);
   }
 }

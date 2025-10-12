@@ -6,6 +6,7 @@ import processTuneData from "./processTuneData.js";
 import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 import ModalManager from "./modules/modals/ModalManager.js";
+import AbcModal from "./modules/modals/AbcModal.js";
 
 const STORAGE_KEY = "tunesData";
 
@@ -319,6 +320,7 @@ function initialiseData() {
     applyFilters();
   }
   if (window.filteredData.length === 1 && window.filteredData[0].abc) {
+    
     openAbcModal(window.filteredData[0]);
   }
 }
@@ -348,57 +350,14 @@ function populateFilters() {
 function openAbcModal(tune) {
   if (!tune.abc) return;
 
-  const modal = document.getElementById("abcModal");
-  const abcRendered = document.getElementById("abcRendered");
-  const abcText = document.getElementById("abcText");
+  let abcModal = new AbcModal()
+  abcModal.openWithTune(tune)
 
-  currentAbcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
-
-  currentAbcIndex = 0;
-  currentTuneAbc = currentAbcArray[0];
-  currentTranspose = 0;
-
-  updateAbcDisplay();
-  updateNavigationButtons();
-
-  currentViewMode = "rendered";
-  abcRendered.style.display = "block";
-  abcText.classList.remove("active");
-  document.getElementById("toggleViewBtn").textContent = "Show ABC Text";
-
-  modal.classList.add("active");
 }
 
-function closeAbcModal() {
-  const modal = document.getElementById("abcModal");
-  modal.classList.remove("active");
-  currentTranspose = 0;
-  currentAbcIndex = 0;
-}
-
-function openAddTunesModal() {
-  const modal = document.getElementById("addTunesModal");
-  const statusDiv = document.getElementById("addTunesStatus");
-  statusDiv.style.display = "none";
-  document.getElementById("abcInput").value = "";
-  modal.classList.add("active");
-}
 
 function closeAddTunesModal() {
   const modal = document.getElementById("addTunesModal");
-  modal.classList.remove("active");
-}
-
-function openLoadJsonModal() {
-  const modal = document.getElementById("loadJsonModal");
-  const statusDiv = document.getElementById("loadJsonStatus");
-  statusDiv.style.display = "none";
-  document.getElementById("jsonInput").value = "";
-  modal.classList.add("active");
-}
-
-function closeLoadJsonModal() {
-  const modal = document.getElementById("loadJsonModal");
   modal.classList.remove("active");
 }
 
@@ -770,7 +729,7 @@ function renderTable() {
     const tuneNameEl = row.querySelector(".tune-name");
     if (hasAbc && tuneNameEl) {
       tuneNameEl.addEventListener("click", () => {
-        modalManager.openAbc(tune);
+        openAbcModal(tune)
       });
     }
 
