@@ -1,5 +1,5 @@
-import BaseModal from './BaseModal.js';
-import processTuneData from '../processTuneData.js';
+import BaseModal from "./BaseModal.js";
+import processTuneData from "../../processTuneData.js";
 
 /**
  * Load JSON Modal
@@ -7,43 +7,43 @@ import processTuneData from '../processTuneData.js';
  */
 export default class LoadJsonModal extends BaseModal {
   constructor(callbacks) {
-    super('loadJsonModal');
-    
+    super("loadJsonModal");
+
     this.callbacks = callbacks;
-    
+
     this.elements = {
-      closeBtn: document.getElementById('closeLoadJsonBtn'),
-      input: document.getElementById('jsonInput'),
-      clearBtn: document.getElementById('clearJsonBtn'),
-      loadBtn: document.getElementById('loadJsonDataBtn'),
-      status: document.getElementById('loadJsonStatus')
+      closeBtn: document.getElementById("closeLoadJsonBtn"),
+      input: document.getElementById("jsonInput"),
+      clearBtn: document.getElementById("clearJsonBtn"),
+      loadBtn: document.getElementById("loadJsonDataBtn"),
+      status: document.getElementById("loadJsonStatus"),
     };
-    
+
     this.setupControls();
   }
 
   setupControls() {
-    this.elements.closeBtn?.addEventListener('click', () => this.close());
-    this.elements.clearBtn?.addEventListener('click', () => this.clear());
-    this.elements.loadBtn?.addEventListener('click', () => this.loadData());
+    this.elements.closeBtn?.addEventListener("click", () => this.close());
+    this.elements.clearBtn?.addEventListener("click", () => this.clear());
+    this.elements.loadBtn?.addEventListener("click", () => this.loadData());
   }
 
   clear() {
-    this.elements.input.value = '';
-    this.elements.status.style.display = 'none';
+    this.elements.input.value = "";
+    this.elements.status.style.display = "none";
   }
 
-  showStatus(message, type = 'error') {
-    this.elements.status.style.display = 'block';
-    
-    if (type === 'success') {
-      this.elements.status.style.background = '#efe';
-      this.elements.status.style.color = '#2a7';
+  showStatus(message, type = "error") {
+    this.elements.status.style.display = "block";
+
+    if (type === "success") {
+      this.elements.status.style.background = "#efe";
+      this.elements.status.style.color = "#2a7";
     } else {
-      this.elements.status.style.background = '#fee';
-      this.elements.status.style.color = '#c33';
+      this.elements.status.style.background = "#fee";
+      this.elements.status.style.color = "#c33";
     }
-    
+
     this.elements.status.textContent = message;
   }
 
@@ -51,11 +51,11 @@ export default class LoadJsonModal extends BaseModal {
     const jsonText = this.elements.input.value.trim();
 
     if (!jsonText) {
-      this.showStatus('Please paste data first.');
+      this.showStatus("Please paste data first.");
       return;
     }
 
-    if (!confirm('This will replace ALL existing tunes. Continue?')) {
+    if (!confirm("This will replace ALL existing tunes. Continue?")) {
       return;
     }
 
@@ -68,26 +68,26 @@ export default class LoadJsonModal extends BaseModal {
       } catch (jsonError) {
         // Fall back to JavaScript literal evaluation
         try {
-          const evaluateJS = new Function('return (' + jsonText + ')');
+          const evaluateJS = new Function("return (" + jsonText + ")");
           parsedData = evaluateJS();
         } catch (jsError) {
           throw new Error(
             `Failed to parse as JSON or JavaScript literal.\n` +
-            `JSON error: ${jsonError.message}\n` +
-            `JS error: ${jsError.message}`
+              `JSON error: ${jsonError.message}\n` +
+              `JS error: ${jsError.message}`
           );
         }
       }
 
       if (!Array.isArray(parsedData)) {
-        throw new Error('Data must be an array of tune objects');
+        throw new Error("Data must be an array of tune objects");
       }
 
       // Process and validate the data
       window.tunesData = parsedData
         .filter((t) => t !== undefined && t !== null)
         .map(processTuneData);
-      
+
       this.callbacks.sortWithDefaultSort();
       this.callbacks.saveTunesToStorage();
       this.callbacks.populateFilters();
@@ -95,12 +95,12 @@ export default class LoadJsonModal extends BaseModal {
 
       this.showStatus(
         `Successfully loaded ${window.tunesData.length} tune${
-          window.tunesData.length !== 1 ? 's' : ''
+          window.tunesData.length !== 1 ? "s" : ""
         }!`,
-        'success'
+        "success"
       );
 
-      this.elements.input.value = '';
+      this.elements.input.value = "";
 
       setTimeout(() => {
         this.close();
@@ -111,7 +111,7 @@ export default class LoadJsonModal extends BaseModal {
   }
 
   onOpen() {
-    this.elements.status.style.display = 'none';
-    this.elements.input.value = '';
+    this.elements.status.style.display = "none";
+    this.elements.input.value = "";
   }
 }
