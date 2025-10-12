@@ -2,12 +2,14 @@
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
 import processTuneData from "./processTuneData.js";
-import theSessionImport from "./thesession-import.js"
+import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 
 const STORAGE_KEY = "tunesData";
 
-const getEmptySort = () => { return {column: null, direction: "asc"} }; 
+const getEmptySort = () => {
+  return { column: null, direction: "asc" };
+};
 let currentSort = getEmptySort();
 let currentViewMode = "rendered";
 let currentTranspose = 0;
@@ -26,24 +28,28 @@ function stringifyWithTemplatesLiteral(obj, indent = 2) {
   const seen = new WeakSet();
 
   function serialize(value, depth) {
-    if (typeof value === 'object' && value !== null) {
-      if (seen.has(value)) return '[Circular]';
+    if (typeof value === "object" && value !== null) {
+      if (seen.has(value)) return "[Circular]";
       seen.add(value);
 
       if (Array.isArray(value)) {
-        const arr = value.map(v => serialize(v, depth + 1));
-        return `[\n${' '.repeat((depth + 1) * indent)}${arr.join(`,\n${' '.repeat((depth + 1) * indent)}`)}\n${' '.repeat(depth * indent)}]`;
+        const arr = value.map((v) => serialize(v, depth + 1));
+        return `[\n${" ".repeat((depth + 1) * indent)}${arr.join(
+          `,\n${" ".repeat((depth + 1) * indent)}`
+        )}\n${" ".repeat(depth * indent)}]`;
       } else {
         const entries = Object.entries(value).map(([k, v]) => {
           const key = isValidIdentifier(k) ? k : JSON.stringify(k);
           return `${key}: ${serialize(v, depth + 1)}`;
         });
-        return `{\n${' '.repeat((depth + 1) * indent)}${entries.join(`,\n${' '.repeat((depth + 1) * indent)}`)}\n${' '.repeat(depth * indent)}}`;
+        return `{\n${" ".repeat((depth + 1) * indent)}${entries.join(
+          `,\n${" ".repeat((depth + 1) * indent)}`
+        )}\n${" ".repeat(depth * indent)}}`;
       }
-    } else if (typeof value === 'string') {
-      if (value.includes('\n') || value.includes('\r')) {
+    } else if (typeof value === "string") {
+      if (value.includes("\n") || value.includes("\r")) {
         // Use a template literal for multi-line strings
-        return '`' + value.replace(/`/g, '\\`') + '`';
+        return "`" + value.replace(/`/g, "\\`") + "`";
       } else {
         return JSON.stringify(value);
       }
@@ -69,8 +75,9 @@ function loadTunesFromStorage() {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed) //&& parsed.length > 0
-    ) {
+      if (
+        Array.isArray(parsed) //&& parsed.length > 0
+      ) {
         return parsed;
       }
     }
@@ -88,37 +95,39 @@ function clearStorage() {
 }
 
 function emptyTunes() {
-  if(!localStorage.getItem(STORAGE_KEY) || confirm("You may lose some data. This cannot be undone. Continue?")) {
+  if (
+    !localStorage.getItem(STORAGE_KEY) ||
+    confirm("You may lose some data. This cannot be undone. Continue?")
+  ) {
     localStorage.removeItem(STORAGE_KEY);
   }
   window.tunesData = [];
   window.filteredData = [];
-  
+
   renderTable();
   saveTunesToStorage();
-  
 }
 
 function copyTunesToClipboard() {
-  window.tunesData.forEach(tune=>{
-    if(tune.nameIsFromAbc){
-      delete tune.name
-      delete tune.nameIsFromAbc
+  window.tunesData.forEach((tune) => {
+    if (tune.nameIsFromAbc) {
+      delete tune.name;
+      delete tune.nameIsFromAbc;
     }
-    if(tune.keyIsFromAbc){
-      delete tune.key
-      delete tune.keyIsFromAbc
+    if (tune.keyIsFromAbc) {
+      delete tune.key;
+      delete tune.keyIsFromAbc;
     }
-    if(tune.rhythmIsFromAbc){
-      delete tune.rhythm
-      delete tune.rhythmIsFromAbc
+    if (tune.rhythmIsFromAbc) {
+      delete tune.rhythm;
+      delete tune.rhythmIsFromAbc;
     }
-    tune.references = tune.references?.filter(r=>!r.fromAbc)
+    tune.references = tune.references?.filter((r) => !r.fromAbc);
 
-    if(tune.references?.length === 0) delete tune.references
-    if(tune.scores?.length === 0) delete tune.scores
-    if(!tune.abc) delete tune.abc
-  })
+    if (tune.references?.length === 0) delete tune.references;
+    if (tune.scores?.length === 0) delete tune.scores;
+    if (!tune.abc) delete tune.abc;
+  });
   const jsonString = stringifyWithTemplatesLiteral(tunesData, 2);
   navigator.clipboard.writeText(jsonString).then(
     () => {
@@ -145,15 +154,15 @@ function addNewTune() {
     abc: null,
     references: [],
     scores: [],
-    incipit: null
+    incipit: null,
   };
 
   window.tunesData.push(newTune);
   window.filteredData.push(newTune);
-  
+
   saveTunesToStorage();
   renderTable();
-  
+
   // Open edit modal for the new tune
   const newIndex = window.filteredData.length - 1;
   openEditModal(newTune, newIndex);
@@ -162,17 +171,17 @@ function addNewTune() {
 // Delete Tune
 function deleteTune(tuneIndex) {
   const tune = window.filteredData[tuneIndex];
-  
+
   if (!confirm(`Delete tune "${tune.name}"? This cannot be undone.`)) {
     return;
   }
 
   const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
-  
+
   if (originalTuneDataIndex !== -1) {
     window.tunesData.splice(originalTuneDataIndex, 1);
   }
-  
+
   saveTunesToStorage();
   populateFilters();
   applyFilters();
@@ -182,10 +191,16 @@ function openEditModal(tune, tuneIndex) {
   const modal = document.getElementById("editModal");
   currentEditTuneIndex = tuneIndex;
 
-  document.getElementById("editName").value = tune.nameIsFromAbc ? "" : (tune.name || "");
-  
-  document.getElementById("editKey").value = tune.keyIsFromAbc ? "" : (tune.key || "");
-  document.getElementById("editRhythm").value = tune.rhythmIsFromAbc ? "" : (tune.rhythm || "");
+  document.getElementById("editName").value = tune.nameIsFromAbc
+    ? ""
+    : tune.name || "";
+
+  document.getElementById("editKey").value = tune.keyIsFromAbc
+    ? ""
+    : tune.key || "";
+  document.getElementById("editRhythm").value = tune.rhythmIsFromAbc
+    ? ""
+    : tune.rhythm || "";
 
   const abcArray = Array.isArray(tune.abc)
     ? tune.abc
@@ -194,7 +209,7 @@ function openEditModal(tune, tuneIndex) {
     : [];
   document.getElementById("editAbc").value = abcArray.join("\n\n---\n\n");
 
-  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc) || []);
+  renderReferencesEditor(tune.references.filter((r) => !r.fromAbc) || []);
   renderScoresEditor(tune.scores || []);
 
   modal.classList.add("active");
@@ -300,15 +315,15 @@ function addReference() {
     notes: "",
   });
 
-  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc));
+  renderReferencesEditor(tune.references.filter((r) => !r.fromAbc));
 }
 
 function removeReference(index) {
   const tune = window.filteredData[currentEditTuneIndex];
-  const nonAbcRefs = tune.references.filter(r=>!r.fromAbc);
+  const nonAbcRefs = tune.references.filter((r) => !r.fromAbc);
   const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
   tune.references.splice(actualIndex, 1);
-  renderReferencesEditor(tune.references.filter(r=>!r.fromAbc));
+  renderReferencesEditor(tune.references.filter((r) => !r.fromAbc));
 }
 
 function addScore() {
@@ -382,8 +397,8 @@ function saveEditedTune() {
   delete reprocessed.keyIsFromAbc;
   delete reprocessed.rhythm;
   delete reprocessed.rhythmIsFromAbc;
-  delete reprocessed.references
-  
+  delete reprocessed.references;
+
   reprocessed = processTuneData(reprocessed);
   //get rid of properties to get succint objects, when it's all in the abc
   let editedName = document.getElementById("editName").value.trim();
@@ -483,10 +498,9 @@ function collapseNotes(tuneIndex, refIndex) {
   }
 }
 
-function applyDefaultSort()
-{
-  currentSort=getEmptySort()
-  sortData()
+function applyDefaultSort() {
+  currentSort = getEmptySort();
+  sortData();
 }
 
 function initialiseData() {
@@ -538,8 +552,8 @@ function initialiseData() {
       );
   }
   let filtered = false;
-  
-    populateFilters();
+
+  populateFilters();
   let params = new URLSearchParams(new URL(window.location).search.slice(1));
   if (params.has("g")) {
     let g = params.get("g");
@@ -563,7 +577,7 @@ function initialiseData() {
       filterByName(n);
     }
     populateFilters();
-    
+
     // renderTable();
   }
   if (!filtered) {
@@ -684,16 +698,16 @@ function splitAbcTunes(abcText) {
 
 function sortWithDefaultSort() {
   window.tunesData.sort((a, b) =>
-        a.rhythm === b.rhythm
-          ? a.name === b.name
-            ? 0
-            : a.name < b.name
-            ? -1
-            : 1
-          : a.rhythm < b.rhythm
-          ? -1
-          : 1
-      );
+    a.rhythm === b.rhythm
+      ? a.name === b.name
+        ? 0
+        : a.name < b.name
+        ? -1
+        : 1
+      : a.rhythm < b.rhythm
+      ? -1
+      : 1
+  );
 }
 
 function addTunesFromAbc() {
@@ -731,7 +745,7 @@ function addTunesFromAbc() {
     });
 
     if (addedCount > 0) {
-      sortWithDefaultSort()
+      sortWithDefaultSort();
 
       saveTunesToStorage();
       populateFilters();
@@ -783,33 +797,32 @@ function loadJson() {
   try {
     let parsedData;
 
-// Try JSON first (safer)
-try {
-  parsedData = JSON.parse(jsonText);
-} catch (jsonError) {
-  // Fall back to JavaScript literal evaluation
-  try {
-    const evaluateJS = new Function('return (' + jsonText + ')');
-    parsedData = evaluateJS();
-  } catch (jsError) {
-    throw new Error(
-      `Failed to parse as JSON or JavaScript literal.\n` +
-      `JSON error: ${jsonError.message}\n` +
-      `JS error: ${jsError.message}`
-    );
-  }
-}
+    // Try JSON first (safer)
+    try {
+      parsedData = JSON.parse(jsonText);
+    } catch (jsonError) {
+      // Fall back to JavaScript literal evaluation
+      try {
+        const evaluateJS = new Function("return (" + jsonText + ")");
+        parsedData = evaluateJS();
+      } catch (jsError) {
+        throw new Error(
+          `Failed to parse as JSON or JavaScript literal.\n` +
+            `JSON error: ${jsonError.message}\n` +
+            `JS error: ${jsError.message}`
+        );
+      }
+    }
 
-if (!Array.isArray(parsedData)) {
-  throw new Error("Data must be an array of tune objects");
-}
+    if (!Array.isArray(parsedData)) {
+      throw new Error("Data must be an array of tune objects");
+    }
 
     // Process and validate the data
     window.tunesData = parsedData
       .filter((t) => t !== undefined && t !== null)
-      .map(processTuneData)
-      ;
-    sortWithDefaultSort()
+      .map(processTuneData);
+    sortWithDefaultSort();
 
     saveTunesToStorage();
     populateFilters();
@@ -935,7 +948,10 @@ function renderTable() {
       if (ref.notes) {
         const formattedNotes = ref.notes
           .replace(/\n/g, "<br />")
-          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+          .replace(
+            /\[([^\]]+)\]\(([^)]+)\)/g,
+            '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+          )
           .replace(/https?:\/\/[^\s<>"']+/g, (url) => {
             try {
               const { hostname, pathname, search } = new URL(url);
@@ -1088,7 +1104,6 @@ function filterByName(searchTerm) {
   renderTable();
 }
 
-
 function sortData(column) {
   if (currentSort.column === column) {
     currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
@@ -1123,10 +1138,8 @@ function sortData(column) {
   renderTable();
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   initialiseData();
-
 
   document
     .getElementById("searchInput")
@@ -1149,24 +1162,20 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("toggleViewBtn")
     .addEventListener("click", toggleView);
 
-  document
-    .getElementById("addTunesBtn")
-    .addEventListener("click", (e) => {
-      e.preventDefault();
-      openAddTunesModal();
-    });
+  document.getElementById("addTunesBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    openAddTunesModal();
+  });
   document
     .getElementById("closeAddTunesBtn")
     .addEventListener("click", closeAddTunesModal);
   document
     .getElementById("addAbcBtn")
     .addEventListener("click", addTunesFromAbc);
-  document
-    .getElementById("loadJsonBtn")
-    .addEventListener("click", (e) => {
-      e.preventDefault();
-      openLoadJsonModal();
-    });
+  document.getElementById("loadJsonBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    openLoadJsonModal();
+  });
   document
     .getElementById("closeLoadJsonBtn")
     .addEventListener("click", closeLoadJsonModal);
@@ -1185,7 +1194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Dropdown menu toggle
   const editMenuBtn = document.getElementById("editMenuBtn");
   const dropdown = editMenuBtn.parentElement;
-  
+
   editMenuBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     dropdown.classList.toggle("active");
@@ -1199,34 +1208,26 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Dropdown menu items
-  document
-    .getElementById("addNewTuneBtn")
-    ?.addEventListener("click", (e) => {
-      e.preventDefault();
-      dropdown.classList.remove("active");
-      addNewTune();
-    });
-  document
-    .getElementById("copyTunesBtn")
-    ?.addEventListener("click", (e) => {
-      e.preventDefault();
-      dropdown.classList.remove("active");
-      copyTunesToClipboard();
-    });
-  document
-    .getElementById("clearStorageBtn")
-    ?.addEventListener("click", (e) => {
-      e.preventDefault();
-      dropdown.classList.remove("active");
-      clearStorage();
-    });
-  document
-    .getElementById("emptyTunesBtn")
-    ?.addEventListener("click", (e) => {
-      e.preventDefault();
-      dropdown.classList.remove("active");
-      emptyTunes();
-    });
+  document.getElementById("addNewTuneBtn")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.classList.remove("active");
+    addNewTune();
+  });
+  document.getElementById("copyTunesBtn")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.classList.remove("active");
+    copyTunesToClipboard();
+  });
+  document.getElementById("clearStorageBtn")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.classList.remove("active");
+    clearStorage();
+  });
+  document.getElementById("emptyTunesBtn")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropdown.classList.remove("active");
+    emptyTunes();
+  });
 
   document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
 
@@ -1307,5 +1308,5 @@ document.addEventListener("DOMContentLoaded", function () {
       closeEditModal();
     }
   });
-  theSessionImport.setupTheSessionImportModal()
+  theSessionImport.setupTheSessionImportModal();
 });
