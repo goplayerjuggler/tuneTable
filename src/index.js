@@ -7,6 +7,7 @@ import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 import ModalManager from "./modules/modals/ModalManager.js";
 import AbcModal from "./modules/modals/AbcModal.js";
+import EditModal from "./modules/modals/EditModal.js";
 
 const STORAGE_KEY = "tunesData";
 
@@ -14,7 +15,7 @@ const getEmptySort = () => {
   return { column: null, direction: "asc" };
 };
 let currentSort = getEmptySort();
-let modalManager;
+let modalManager, editModal;
 
 function stringifyWithTemplatesLiteral(obj, indent = 2) {
   // Helper to determine if a string is a valid JS identifier
@@ -162,7 +163,7 @@ function addNewTune() {
 
   // Open edit modal for the new tune
   const newIndex = window.filteredData.length - 1;
-  modalManager.openEdit(newTune, newIndex);
+  editModal.openWithTune(newTune, newIndex);
 }
 
 // Delete Tune
@@ -251,17 +252,18 @@ function initialiseData() {
     theSessionImport.closeTheSessionImportModal;
   window.importFromTheSession = theSessionImport.importFromTheSession;
 
-  // Initialize modal manager with callbacks
-  modalManager = new ModalManager({
+  // Initialise modal manager with callbacks
+  let callbacks = {
     saveTunesToStorage,
     populateFilters,
     applyFilters,
     renderTable,
     sortWithDefaultSort,
-  });
+  }
+  modalManager = new ModalManager(callbacks);
+  editModal = new EditModal(callbacks)
+  
 
-  // Expose modal functions globally for inline handlers
-  modalManager.exposeGlobalFunctions();
 
   window.tunesData = [];
   window.filteredData = [];
@@ -702,7 +704,7 @@ function renderTable() {
       </div>`
       }
       <div class="tune-actions">
-        <button class="btn-icon btn-edit" onclick="openEditModal(window.filteredData[${index}], ${index})" title="Edit tune">
+        <button class="btn-icon btn-edit" title="Edit tune">
           ✎
         </button>
         <button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
@@ -727,11 +729,15 @@ function renderTable() {
                 `;
 
     const tuneNameEl = row.querySelector(".tune-name");
-    if (hasAbc && tuneNameEl) {
+    if (hasAbc) {
       tuneNameEl.addEventListener("click", () => {
         openAbcModal(tune)
       });
     }
+    const editButtonEl = row.querySelector(".btn-edit");
+    editButtonEl.addEventListener("click", () => {
+        editModal.openWithTune(window.filteredData[index], index)
+      });
 
     tbody.appendChild(row);
     if (tune.incipit) {
