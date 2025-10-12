@@ -1,21 +1,17 @@
-import BaseModal from "./BaseModal.js";
+import Modal from "./Modal.js";
 import processTuneData from "../../processTuneData.js";
 
 /**
  * Edit Tune Modal
  * Comprehensive tune editor with metadata, ABC, references, and scores
  */
-export default class EditModal extends BaseModal {
-    static getTemplate() {
-    return `
-    <div id="editModal" class="modal">
-  <div class="modal-content modal-content-large">
-    <div class="modal-header">
-      <h2>Edit Tune</h2>
-      <button id="closeEditModalBtn" class="close-btn">&times;</button>
-    </div>
-
-    <div class="modal-body">
+export default class EditModal extends Modal {
+    
+  constructor(callbacks) {
+    
+    super({id:'editModal',size:'large',title:'editor',
+content: `
+<div class="modal-body">
       <form id="editTuneForm" onsubmit="return false;">
         
         <!-- Basic Metadata Section -->
@@ -37,13 +33,22 @@ export default class EditModal extends BaseModal {
           </div>
         </section>
 
-        <!-- ABC Notation Section -->
+        
         <section class="edit-section">
           <h3>ABC Notation</h3>
           <div class="form-group">
             <label for="editAbc">ABC Code:</label>
             <textarea id="editAbc" class="form-control abc-textarea" rows="8" placeholder="Paste ABC notation here. For multiple versions, separate with --- on its own line"></textarea>
-            <small class="form-hint">Separate multiple ABC versions with <code>---</code> on its own line</small>
+            
+          </div>
+        </section>
+        
+        <section class="edit-section">
+          <h3>Incipit</h3>
+          <div class="form-group">
+            <label for="editIncipit">Incipit:</label>
+            <textarea id="editIncipit" class="form-control abc-textarea" rows="8" placeholder="Paste ABC notation here. "></textarea>
+            
           </div>
         </section>
 
@@ -73,28 +78,25 @@ export default class EditModal extends BaseModal {
     </div>
 
     <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeEditModal()">Cancel</button>
+      
       <button id="saveEditBtn" class="btn btn-primary">Save Changes</button>
     </div>
-  </div>
-</div>
+    `
 
-    `;
-  }
-  constructor(callbacks) {
-    super("editModal");
+    });
 
     this.callbacks = callbacks;
     this.currentEditTuneIndex = null;
-
+  }
+  onOpen () {
     this.elements = {
-      closeBtn: document.getElementById("closeEditModalBtn"),
+      
       saveBtn: document.getElementById("saveEditBtn"),
       name: document.getElementById("editName"),
       key: document.getElementById("editKey"),
       rhythm: document.getElementById("editRhythm"),
       abc: document.getElementById("editAbc"),
-      abcIncipit: document.getElementById("editIncipit"),
+      incipit: document.getElementById("editIncipit"),
       referencesEditor: document.getElementById("referencesEditor"),
       scoresEditor: document.getElementById("scoresEditor"),
       addReferenceBtn: document.getElementById("addReferenceBtn"),
@@ -103,10 +105,30 @@ export default class EditModal extends BaseModal {
 
     this.setupControls();
     this.exposeGlobalFunctions();
+    
+    // Populate basic fields
+    this.elements.name.value = this.tune.nameIsFromAbc ? "" : this.tune.name || "";
+    this.elements.key.value = this.tune.keyIsFromAbc ? "" : this.tune.key || "";
+    this.elements.rhythm.value = this.tune.rhythmIsFromAbc ? "" : this.tune.rhythm || "";
+    this.elements.incipit.value = this.tune.incipit
+
+
+    // Populate ABC
+    const abcArray = Array.isArray(this.tune.abc)
+      ? this.tune.abc
+      : this.tune.abc
+      ? [this.tune.abc]
+      : [];
+    this.elements.abc.value = abcArray.join("\n\n---\n\n");
+
+    // Populate references and scores
+    this.renderReferences(this.tune.references?.filter((r) => !r.fromAbc) || []);
+    this.renderScores(this.tune.scores || []);
+
   }
 
   setupControls() {
-    this.elements.closeBtn?.addEventListener("click", () => this.close());
+
     this.elements.saveBtn?.addEventListener("click", () => this.save());
     this.elements.addReferenceBtn?.addEventListener("click", () =>
       this.addReference()
@@ -122,23 +144,7 @@ export default class EditModal extends BaseModal {
 
   openWithTune(tune, tuneIndex) {
     this.currentEditTuneIndex = tuneIndex;
-
-    // Populate basic fields
-    this.elements.name.value = tune.nameIsFromAbc ? "" : tune.name || "";
-    this.elements.key.value = tune.keyIsFromAbc ? "" : tune.key || "";
-    this.elements.rhythm.value = tune.rhythmIsFromAbc ? "" : tune.rhythm || "";
-
-    // Populate ABC
-    const abcArray = Array.isArray(tune.abc)
-      ? tune.abc
-      : tune.abc
-      ? [tune.abc]
-      : [];
-    this.elements.abc.value = abcArray.join("\n\n---\n\n");
-
-    // Populate references and scores
-    this.renderReferences(tune.references?.filter((r) => !r.fromAbc) || []);
-    this.renderScores(tune.scores || []);
+    this.tune = tune
 
     this.open();
   }
@@ -191,7 +197,7 @@ export default class EditModal extends BaseModal {
   renderScores(scores) {
     if (scores.length === 0) {
       this.elements.scoresEditor.innerHTML =
-        '<p class="empty-message">No external scores yet. Click &#8220;Add Score&#8221; to create one.</p>';
+        '<p class="empty-message">No external scores yet. Click “Add score&#8221; to create one.</p>';
       return;
     }
 
@@ -269,6 +275,9 @@ export default class EditModal extends BaseModal {
   save() {
     const tune = window.filteredData[this.currentEditTuneIndex];
     const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
+
+    const incipitText = this.elements.incipit.value.trim();
+    tune.incipit = incipitText
 
     // Process ABC
     const abcText = this.elements.abc.value.trim();
@@ -366,6 +375,7 @@ export default class EditModal extends BaseModal {
 
     this.callbacks.saveTunesToStorage();
     this.callbacks.renderTable();
+    this.callbacks.populateFilters()
     this.close();
   }
 

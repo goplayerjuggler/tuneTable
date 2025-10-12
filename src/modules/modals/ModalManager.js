@@ -16,7 +16,7 @@ export default class ModalManager {
       // abc: new AbcModal(),
       addTunes: new AddTunesModal(callbacks),
       loadJson: new LoadJsonModal(callbacks),
-      edit: new EditModal(callbacks),
+      // edit: new EditModal(callbacks),
     };
 
     this.setupGlobalKeyboardHandler();
@@ -52,17 +52,17 @@ export default class ModalManager {
     this.modals.loadJson.open();
   }
 
-  openEdit(tune, tuneIndex) {
-    this.modals.edit.openWithTune(tune, tuneIndex);
-  }
+  // openEdit(tune, tuneIndex) {
+  //   this.modals.edit.openWithTune(tune, tuneIndex);
+  // }
 
   closeAll() {
     Object.values(this.modals).forEach((modal) => modal.close());
   }
 
-  // Expose to global scope for inline onclick handlers
-  exposeGlobalFunctions() {
-    window.openEditModal = (tune, tuneIndex) => this.openEdit(tune, tuneIndex);
-    window.closeEditModal = () => this.modals.edit.close();
-  }
+  // // Expose to global scope for inline onclick handlers
+  // exposeGlobalFunctions() {
+  //   window.openEditModal = (tune, tuneIndex) => this.openEdit(tune, tuneIndex);
+  //   window.closeEditModal = () => this.modals.edit.close();
+  // }
 }
