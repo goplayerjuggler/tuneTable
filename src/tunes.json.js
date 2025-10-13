@@ -1445,6 +1445,7 @@ L:1/8
 M:9/8
 N:Based on a setting entered in thesession by user Will Harmon on 2002-09-07
 N:Chords by Malcolm Schonfield
+N:A pentatonic tune
 K:Adorian
 |:"A-"A3 ABA AGE|"A-"A2 E"G"G2 E DEG|"A-"A3 ABA AGE|"G"~G3 G2 E DEG:|
  |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
@@ -1502,6 +1503,7 @@ F2A B2F A2F|G2B d2e dBA|F2A B2F A2F`
     abc: `X:1
 T:Josefin's
 C:Roger Tallroth
+O:Sweden
 R:waltz
 L:1/8
 M:3/4

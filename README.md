@@ -8,11 +8,17 @@ An interactive HTML/Javascript viewer for lists of tunes. It uses data in a hybr
 * incipit generator (incipit: a short score giving the first few notes)
 * comments/notes for tunes, optionally with links to audio references
 * optional external links to scores
-* entries can be edited within the tool
-* import functions
+* All entries can be fully edited within the tool
+* import & export functions
   * lists of tunes in ABC format can be imported
-  * full import/export: full data for the current tune list can be exported/imported in Javascript literal or JSON format
-  * integration with thesession.org: load a tune book or one specific tune
+  * complete data for the current tune list can be exported/imported in Javascript literal or JSON format
+  * integration with thesession.org: load a member’s tune book or one specific tune
+
+## Upcoming features / wishlist
+Here are some features I hope to add soon - ish:
+* sort tunes based on their melodic contour
+* load preset lists of tunes
+* meter and bar length switcher
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
