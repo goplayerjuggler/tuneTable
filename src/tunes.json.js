@@ -332,8 +332,8 @@ N: transposes it up a third.
 M: 4/4
 L: 1/8
 K: A
-|:"A"(c2 c)c .c2c2|"D"BcBA F2 E2|"A"(A2A)c e2 ce|"D"f2ec "E"B2 AB|
-"A"(c2 c)c .c2c2|"D"BcBA F2 E2|"A"(A2A)c efec|1 "E"B2 .A2 "A"(A2 A)B:|2 "E"B2 .A2 "A"(A2 A)c||
+|:"A"(c2 !>!c)c .c2c2|"D"BcBA F2 E"<("">)"F|"A"(A2 !>!A)c e2 ce|"D"f2ec "E"B2 AB|
+"A"(c2 c)c .c2c2|"D"BcBA F2 E"<("">)"F|"A"(A2A)c efec|1 "E"B2 .A2 "A"(A2 A)B:|2 "E"B2 .A2 "A"(A2 A)c||
 |:"A"(e2 e)e .e2 e2|BccB ABce|"D"(f2 f)f .f2 f2|"A"BccB ABcd|
 (e2 e)e .e2 e2|BccB ABce|"D"a2 af "E"ecBe|1 "A"c2 .A2 A2 Ac:|2 "A"c2 .A2 A2 AB||
 `,
@@ -341,7 +341,7 @@ K: A
 M: 4/4
 L: 1/8
 K: A
-(c2 c)c .c2c2|BcBA F2 E2|(A2A)c e2`,
+c3c .c2c2|BcBA F2 EF|A3c e2`,
     },
     {
       groups: "ALORA",

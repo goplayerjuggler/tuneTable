@@ -64,18 +64,24 @@ export default class TheSessionImportModal extends Modal {
 
     const importBtn = this.element.querySelector("#import-btn");
     const userNameInput = this.element.querySelector("#thesession-username");
+    const limitEl = this.element.querySelector("#import-limit")
+    //todo: add user ID - one fewer API call
     const tuneIdInput = this.element.querySelector("#thesession-tune-id");
     const statusDiv = this.element.querySelector("#import-status");
 
     // Import button click
     importBtn.addEventListener("click", () => this.handleImport());
 
-    // Enter key to import
-    tuneIdInput.addEventListener("keypress", (e) => {
+    const enterKeyImport = (e) => {
       if (e.key === "Enter" && !this.isLoading) {
         this.handleImport();
       }
-    });
+    }
+    // Enter key to import
+    tuneIdInput.addEventListener("keypress", enterKeyImport);
+    userNameInput.addEventListener("keypress", enterKeyImport);
+    limitEl.addEventListener("keypress", enterKeyImport);
+
     const clearStatus = () => {
       statusDiv.textContent = "";
       statusDiv.className = "import-status";
@@ -407,7 +413,8 @@ N:Imported from https://thesession.org/tunes/${tuneId}#setting${setting.id}${
           ? `
 N:Setting entered in thesession by user ${setting.member.name}`
           : ""
-      } on ${setting.date}
+      } on ${setting.date.substr(0,10)//just get the date, not the time
+        }
 K:${setting.key}
 ${
   setting.abc
