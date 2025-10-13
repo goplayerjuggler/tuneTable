@@ -4,6 +4,7 @@ log.md
 mytunebook*.js
 *bourrée*.txt
 *workspace
+**/251010**/*
 # Dependency directories
 node_modules/
 dist/
