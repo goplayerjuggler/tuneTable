@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-10",
+  lastUpdate: "2025-10-13",
   tunes: [
     {
       groups: "ALORA",
@@ -101,7 +101,7 @@ N:7. I did a little research and it seems Bridewell Gate, Stoneybatter,
 N:Patrick’s Close and the Gloucester Diamond are places in Dublin. No idea
 N:about Sally Napper Tandy’s house though.
 L:1/8
-K:D
+K:Dmajor
 %%staffsep 54
 %%leftmargin 15
 %%rightmargin 15
@@ -123,7 +123,7 @@ w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three 
       incipit: `X:1
 M:3/4
 L:1/8
-K:D
+K:Dmajor
 [M:3/4]A, | DD DE FE | [M:4/4] D<B,`,
     },
     {
@@ -1003,7 +1003,7 @@ K: G mixolydian
 !fermata!A2 B||[P:Ⅰ]ScFF/F/F cFdF cFFd cFAc|BGG/G/G BGdG BGGe dcBd|
 cFF/F/F cFdF cFFc cFAc| B/d/BGB DGBG DGBd cBAG||
 P:Ⅱ
-K:G
+K:Gmajor
 FGAg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 [M:5/2]defg fada egcf gbag fdcB!D.S.!|]
@@ -1053,7 +1053,7 @@ F:https://music.youtube.com/watch?v=m8mfkFcY17Q
 M:3/4
 Q:1/4=140
 L:1/8
-K:D
+K:Dmajor
 P:ABABA2BC
 [P:A]d2 Pce d2 | eg fe d2 | eg fa/f/ [1,3 dd | ed BG A2 :| [2 de | cd d3A :| [4 de | cd d3f ||
 |: [P:B]ag bf af/e/ | f>a f2 df | ag bf af/e/ | f>a f2 df | eg fe df/e/ | ed BG A2 | 
@@ -1063,7 +1063,7 @@ a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
       incipit: `X:1
 M:3/4
 L:1/8
-K:D
+K:Dmajor
 d2 Pce d2 | eg fe d2 | eg fa/f/  dd`,
     },
     {
@@ -1082,7 +1082,7 @@ Z:abc-transcription Malcolm Schonfield% 2025-02-07
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M:12/8
 L:1/8
-K:D
+K:Dmajor
 D2A, DFA def edB | B/B/AB dBA FDD EFE | D2A, DFA def edB | BAB dBA FED [1 DDA, :| [2 D2A ||:
 dcd e^de f=dA BdA | B/c/dB AFD E/E/EE EDB, | D2A, DFA def edB | BAB dBA FED [1 D2A :| [2 D2A, !D.C.! |]
 `,
@@ -1112,7 +1112,7 @@ dcd e^de f=dA  BdA | B/c/dB AFD DEE  FDA, |
       name: "Paddy on the Turnpike – crooked settings",
       incipit: `X:1
 L:1/16
-K:G 
+K:Gmajor
 GE||DGDG G=FGG BGdG eGdG|DE=FG FEFF `,
       abc: [
         `X:1
@@ -1132,7 +1132,7 @@ Z:as a starting point)%2024-06-26
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 %abcjs_soundfont fluid
 %%MIDI program 40
-K:F 
+K:Fmajor
 P:A
 FD||SCFCF F_EFF AFcF dFcF|CD_EF EDEE (CE)BE cEBE|
 CFF_E {FE}F2FG Acde f-eff|[M:3/4] cABG ABG_E F2FD|
@@ -1161,7 +1161,7 @@ N:Manco Sneed (1885-1975, Jackson & Graham Counties, western N.C.)
 N:Recorded by Peter Hoover in the 1960’s.
 F:https://www.slippery-hill.com/recording/paddy-turnpike-2
 Z:Transcribed by Andrew Kuntz; then edited (time signatures & bars) by Malcolm Schonfield%2024-12-10
-K:Gmix
+K:Gmixolydian
 GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
 DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
@@ -1474,13 +1474,16 @@ R:slip jig
 L:1/8
 M:9/8
 N:Imported from https://thesession.org/tunes/104#setting104
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Based on a setting entered in thesession by user Jeremy on 2001-05-25;
+N:adapted by Malcolm 2025-10-13
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K:Dmajor
-|"D"F2A B2F A2F|"G"G2B d2e dBA|"D"F2A B2F A2F|"Em"E2D E2F GFE|
- "D"F2A B2F A2F|"G"G2B d2e dBA|"D"F2A B2F A2F|"Em"E2D E2F GAB||
- "A"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"D"A2G F2G A2B|
- "A"c3 c2e d2c|"G"B2G B2c d2e|"D"d2A B2F A2F|"Em"E2D E2F GFE||`
+|"D?"F2A B2F A2F|"G"G2B d2e dBG|"D"F2A B2F A2F|"A"E2D E2F GFE|
+ "D"F2A B2F A2F|"G"G2B d2e dBG|"Bm"F2A B2F A2F|"A"E2D E2F GAB||
+ "F#m"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"A"A2G F2G A2B|
+ "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`
     ],
+    references:[{artists:"Altan, 1991", url:"https://music.youtube.com/watch?v=BP_nsOCubf0", notes:"https://www.discogs.com/release/2408131-Altan-Harvest-Storm"}],
     scores: [
       {
         url: "https://thesession.org/tunes/104#setting104",
@@ -1492,6 +1495,52 @@ M:9/8
 L:1/8
 K:Dmajor
 F2A B2F A2F|G2B d2e dBA|F2A B2F A2F`
+  },
+
+  {groups:"alora",
+    name: "Johsefins Dopvals",
+    abc: `X:1
+T:Josefin's
+C:Roger Tallroth
+R:waltz
+L:1/8
+M:3/4
+N:Here's a two-part arrangement by The Rude Mechanicals.
+N:---
+N:Imported from https://thesession.org/tunes/1016#setting36756
+N:Setting entered in thesession by user Bazza on 2019-12-09
+K:Gmajor
+M:3/4
+ V:1
+ "G"D2 G2 A2|"Gmaj7"B2 d2 c2|"Em7"B2 A2 G2|"Bm7"D4 E2|"Cmaj7"C4 CC|"Am7"E2 G2 F2|"D7"E6|D6|
+ "G"D2 G2 A2|"Gmaj7"B2 d2 c2|"Em7"B2 A2 G2|"Bm"D4 E2|"Am7"C4 CC|"Bm7"D2 F2 G2|1 "D"A6-|A6:|2 A6-|A2 B2 c2||
+ |:"G"d2 B2 d2|"Em"g4 f2|"Am7"e6|"Bm"d6|"C"c2 e2 d2|"Am7"c2 B2 A2|"Em7"B3 c B2|"D"A2 B2 c2|"Bm"d2 B2 d2|
+ "Em7"g4 f2|"C"e6|"D"d6|"Am7"c2 e2 d2|"D7"c2 B2 A2|"Am9"B3 c B2|"D7"A2 B2 c2|"Em7"B2 A2 G2|"Bm"F4 G2|
+ "C"G6|C2 D2 C2|"G"B,2 D2 G2|"D"F2 E2 F2||1 "G9sus4"G6|"D"A2 B2 c2:|2 "G"G6-|G6||
+ V:2
+ B,2 D2 F2|G2 F2 A2|G2 F2 E2|B,2 G,4|E2 G2 B2|c2 A2 d2|c2 A2 G2-|G2 F2 D2|
+ G,4 G2-|G2 F2 A2|G4 E2|B,6|A,2 G2 E2|B,2 D2 E2|1 F4 D2|D2 C2 A,2:|2 F2 G2 F2|D2 G2 A2||
+ |:B2 G2 F2|E2 B,2 D2|C2 A4|F4 B,2|E2 C2 B,2|A,2 G2 F2|G2 E4|F2 G2 A2|B2 D2 B,2|
+ E2 D4|C2 G4|F2 A2 cB|A2 G2 F2|E2 D2 C2|D2 E2 G2|F2 G2 A2|G3 F E2|D2 B,4|
+ CE GA Bc|ec AF GE|D2 GA B2|A2 c4-|1 c2 D2 E2|F2 G2 A2:|2 c2 B2 c2|[D6G,6B6]||`,
+    scores: [
+      {
+        name: "thesession.org",
+        url: "https://thesession.org/tunes/1016#setting36756"
+      }
+    ],
+    references: [
+      {
+        artists: "Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
+        url: "https://youtu.be/_ZrfjHeFEr0",
+        notes: "@ Gamla Teatern, Östersund 2010"
+      }
+    ],
+    incipit: `X:1
+M:3/4
+L:1/8
+K:Gmajor
+D2 G2 A2|B2 d2 c2|B2 A2 G2|D4 E2|C`
   }
 ]
   ,

@@ -13,13 +13,13 @@ function showTheSessionImportModal() {
   modal.innerHTML = `
     <div class="modal-content">
     <div class="modal-header">
-    <h2>Import tunebook from thesession.org</h2>
+    <h2>Import tunebook or tune from thesession.org</h2>
     <span class="close-button" onclick="closeTheSessionImportModal()">&times;</span>
     </div>
     
-      <p>Enter the username of a thesession.org member to import their tunebook.</p>
+      
       <div class="form-group">
-        <label for="thesession-username">Username:</label>
+        <label for="thesession-username">Username (optional):</label>
         <input type="text" id="thesession-username" placeholder="e.g. goplayer" />
       </div>
       <div class="form-group">
@@ -72,41 +72,45 @@ async function importFromTheSession() {
   const tuneId = document.getElementById("thesession-tune-id").value.trim();
   const limit = parseInt(document.getElementById("import-limit").value) || 10;
 
-  if (!username) {
-    updateImportStatus("Please enter a username", "error");
+  if (!username && !tuneId) {
+    updateImportStatus("Please enter a username and/or a tune ID", "error");
     return;
   }
 
   // Disable the import button during processing
   const importBtn = event.target;
   importBtn.disabled = true;
-  importBtn.textContent = "Importing...";
+  importBtn.textContent = "Importing…";
 
   try {
-    updateImportStatus("Fetching member information...", "info");
-
-    // Step 1: Get member ID from username
-    const memberId = await getMemberIdByUsername(username);
-    if (!memberId) {
-      throw new Error(`Member '${username}' not found`);
+    let memberId, tuneIds
+    if (username) {
+      
+      updateImportStatus("Fetching member information…", "info");
+  
+      // Step 1: Get member ID from username
+      memberId = await getMemberIdByUsername(username);
+      if (!memberId) {
+        throw new Error(`Member '${username}' not found`);
+      }
+  
+      updateImportStatus(
+        `Found member ${username}.`,
+        "info"
+      );
+  
     }
-
-    updateImportStatus(
-      `Found member ${username}. Fetching tunebook...`,
-      "info"
-    );
-
     // Step 2: Get tunebook for this member
-    const tuneIds = tuneId
+    tuneIds = tuneId
       ? [tuneId]
       : await getMemberTunebook(memberId, window.tunesData.length + limit);
 
     if (tuneIds.length === 0) {
-      throw new Error("No tunes found in tunebook");
+      throw new Error("No tunes found");
     }
 
     updateImportStatus(
-      `Found ${tuneIds.length} tunes. Fetching ABC settings...`,
+      `Found ${tuneIds.length} tunes. Fetching ABC settings…`,
       "info"
     );
 
@@ -117,7 +121,7 @@ async function importFromTheSession() {
     for (let i = 0; i < tuneIds.length; i++) {
       const tuneId = tuneIds[i];
       updateImportStatus(
-        `Processing tune ${i + 1} of ${tuneIds.length}...`,
+        `Processing tune ${i + 1} of ${tuneIds.length}…`,
         "info"
       );
 
