@@ -57,7 +57,6 @@ export default class Modal {
 
   /**
    * Sets up all event listeners for modal interaction
-   * Subclasses should call super.setupEventListeners() first
    */
   setupEventListeners() {
     // Close button
@@ -68,7 +67,7 @@ export default class Modal {
     const overlay = this.element.querySelector('.modal__overlay');
     overlay.addEventListener('click', () => this.close());
     
-    // ESC key binding - CRITICAL FIX
+    // ESC key binding
     this.escHandler = (e) => {
       if (e.key === 'Escape' && this.isTopModal()) {
         this.close();

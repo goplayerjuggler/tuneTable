@@ -3,12 +3,14 @@ import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
 
 import processTuneData from "./processTuneData.js";
-import theSessionImport from "./thesession-import.js";
+// import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 import ModalManager from "./modules/modals/ModalManager.js";
 import AbcModal from "./modules/modals/AbcModal.js";
 import EditModal from "./modules/modals/EditModal.js";
 
+import TheSessionImportModal from './modules/modals/TheSessionImportModal.js';
+import { eventBus } from './modules/events/EventBus.js';
 const STORAGE_KEY = "tunesData";
 
 const getEmptySort = () => {
@@ -232,6 +234,11 @@ function sortWithDefaultSort() {
   );
 }
 
+function openSessionImport() {
+  const modal = new TheSessionImportModal(window.tunesData);
+  modal.open();
+}
+
 function initialiseData() {
   // Expose global functions
   window.addNewTune = addNewTune;
@@ -247,10 +254,22 @@ function initialiseData() {
   window.saveTunesToStorage = saveTunesToStorage;
   window.sortWithDefaultSort = sortWithDefaultSort;
 
-  window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal;
-  window.closeTheSessionImportModal =
-    theSessionImport.closeTheSessionImportModal;
-  window.importFromTheSession = theSessionImport.importFromTheSession;
+  //window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal;
+  // window.closeTheSessionImportModal =
+  //   theSessionImport.closeTheSessionImportModal;
+  // window.importFromTheSession = theSessionImport.importFromTheSession;
+
+  eventBus.on("tuneImported", (tuneData) => {
+    tunesData.push(tuneData)
+    saveTunesToStorage()
+    
+  });
+  eventBus.on("refreshTable", () => {
+    sortWithDefaultSort();
+    populateFilters();
+    applyFilters();
+    
+  });
 
   // Initialise modal manager with callbacks
   let callbacks = {
@@ -259,11 +278,9 @@ function initialiseData() {
     applyFilters,
     renderTable,
     sortWithDefaultSort,
-  }
+  };
   modalManager = new ModalManager(callbacks);
-  editModal = new EditModal(callbacks)
-  
-
+  editModal = new EditModal(callbacks);
 
   window.tunesData = [];
   window.filteredData = [];
@@ -322,7 +339,6 @@ function initialiseData() {
     applyFilters();
   }
   if (window.filteredData.length === 1 && window.filteredData[0].abc) {
-    
     openAbcModal(window.filteredData[0]);
   }
 }
@@ -892,5 +908,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
 
-  theSessionImport.setupTheSessionImportModal();
+  // theSessionImport.setupTheSessionImportModal();
+  document.getElementById('thesession-import-btn').addEventListener('click', openSessionImport);
 });
