@@ -1,5 +1,6 @@
 import Modal from "./Modal.js";
 import processTuneData from "../../processTuneData.js";
+import {addLineBreaks} from "../../utils.js"
 import { eventBus } from "../events/EventBus.js";
 
 /**
@@ -148,10 +149,10 @@ export default class TheSessionImportModal extends Modal {
 
     this.setLoading(true);
     importBtn.disabled = true;
-    const tuneId = this.element.querySelector("#thesession-tune-id").value;
+    const tuneId = this.element.querySelector("#thesession-tune-id").value?.trim();
     //todo - possible improvement: allow the tune URL as an alternative
 
-    const username = this.element.querySelector("#thesession-username").value;
+    const username = this.element.querySelector("#thesession-username").value?.trim();
     const limit = parseInt(document.getElementById("import-limit").value) || 10;
 
     if (!username && !tuneId) {
@@ -299,11 +300,13 @@ export default class TheSessionImportModal extends Modal {
   async getMemberTunebook(memberId, limit = 500) {
     const tuneIds = [];
     let page = 1;
-    const perPage = 50;
+    const perPage = Math.min([20, limit]);
+
 
     while (tuneIds.length < limit) {
-      const url = `https://thesession.org/members/${memberId}/tunebook?format=json&page=${page}&perpage=${perPage}`;
+      const url = `https://thesession.org/members/${memberId}/tunebook?format=json&page=${page}&orderby=newest&perpage=${perPage}`;
 
+      this.showStatus(`loading tunebook items ${page*perPage +1} to ${(page + 1)*perPage}`, "info");
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Failed to fetch tunebook: ${response.status}`);
