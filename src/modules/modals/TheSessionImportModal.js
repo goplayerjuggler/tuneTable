@@ -4,7 +4,6 @@ import { eventBus } from "../events/EventBus.js";
 
 /**
  * Modal for importing tunes from TheSession.org
- * Extends base Modal class for consistent behavior
  */
 export default class TheSessionImportModal extends Modal {
   constructor(tunesData) {
@@ -131,6 +130,10 @@ export default class TheSessionImportModal extends Modal {
     }
   }
 
+  static delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   /**
    * Main import function
    */
@@ -223,8 +226,9 @@ export default class TheSessionImportModal extends Modal {
         }
 
         // Add small delay to avoid overwhelming the API
-        //todo
-        //await window.delay(200);
+        await TheSessionImportModal.delay(200);
+        
+
       }
 
       // Show results
@@ -438,7 +442,7 @@ Because thesession encodes line returns with `!`.
 
   /**
    * Select the best ABC setting from available settings
-   * Prefers settings by the specified member, then most popular
+   * Prefers settings by the specified member, then takes the first
    */
   selectBestSetting(settings, preferredMemberId = null) {
     if (!settings || settings.length === 0) {
