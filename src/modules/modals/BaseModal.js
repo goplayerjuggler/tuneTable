@@ -1,6 +1,7 @@
 /**
  * Base Modal Class
  * Provides common functionality for all modals
+ * Deprecated - moving towards phasing this out and using Modal instead.
  */
 export default class BaseModal {
   

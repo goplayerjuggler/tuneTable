@@ -4,6 +4,22 @@ import AbcJs from 'abcjs';
 /**
  * ABC Notation Display Modal
  * Shows rendered sheet music with transposition controls
+### AbcModal
+**Purpose**: Display sheet music with interactive controls
+
+**Features**:
+- Render ABC notation as sheet music
+- Toggle between rendered and text views
+- Transpose music up/down by semitones
+- Navigate between multiple tune settings
+- Keyboard navigation support
+
+**Key Methods**:
+- `openWithTune(tune)`: Initialize and show modal with tune data
+- `transpose(semitones)`: Transpose the displayed music
+- `navigate(direction)`: Move between tune settings
+- `toggleView()`: Switch between rendered and text views
+
  */
 export default class AbcModal extends Modal {
   constructor() {

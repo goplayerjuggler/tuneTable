@@ -324,24 +324,24 @@ T: Gypsy Princess
 O:Ireland
 S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
-F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
+F:https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 F:https://music.youtube.com/watch?v=XIVMg8-OI2A&t=134
 R: barndance
 N: Played in F, or maybe D minor, by Talty & Begley. This version
 N: transposes it up a third.
-M: 4/4
+M: 4/2
 L: 1/8
 K: A
-|:"A"(c2 !>!c)c .c2c2|"D"BcBA F2 E"<("">)"F|"A"(A2 !>!A)c e2 ce|"D"f2ec "E"B2 AB|
-"A"(c2 c)c .c2c2|"D"BcBA F2 E"<("">)"F|"A"(A2A)c efec|1 "E"B2 .A2 "A"(A2 A)B:|2 "E"B2 .A2 "A"(A2 A)c||
-|:"A"(e2 e)e .e2 e2|BccB ABce|"D"(f2 f)f .f2 f2|"A"BccB ABcd|
-(e2 e)e .e2 e2|BccB ABce|"D"a2 af "E"ecBe|1 "A"c2 .A2 A2 Ac:|2 "A"c2 .A2 A2 AB||
+|:"A"(c2 !>!c)c .c2c2 "D"BcBA F2 E"<("">)"F|"A"(A2 !>!A)c e2 ce "D"f2ec "E"B2 AB|
+"A"(c2 c)c .c2c2 "D"BcBA F2 E"<("">)"F|"A"(A2A)c efec  "E"B2 .A2 [|]1 "A"(A2 A)B:| [|]2 "A"(A2 A)c||
+|:"A"(e2 e)e .e2 e2 BccB ABce|"D"(f2 f)f .f2 f2 "A"BccB ABcd|
+(e2 e)e .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [|]1 A2 Ac:| [|]2 A2 AB||
 `,
       incipit: `X:1
-M: 4/4
+M: 4/2
 L: 1/8
 K: A
-c3c .c2c2|BcBA F2 EF|A3c e2`,
+c3c .c2c2 BcBA F2 EF|A3c e2`,
     },
     {
       groups: "ALORA",
@@ -350,23 +350,23 @@ T: Joe Bane’s
 O:Ireland
 S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
-F: https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
+F:https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 F:https://music.youtube.com/watch?v=XIVMg8-OI2A
 R: barndance
 N: Played in F, by Talty & Begley. This version
 N: transposes it up a tone.
-M: 4/4
+M: 4/2
 L: 1/8
 K: G
-ge|"G"dG GA B2AG|d2 .G2 G2 ge|dG GA B2 AG|"D"B2 .A2 A2 Bc |
-"G"dG GA B2 AG|B2d2 "C"g3e|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|
-Bd|"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2 de dB GA|"D"B2 A2 A2 Bd|
-"G"g2 ga ge dg|"C"e2 ed e2 ge|"G"d2de "D"dB Ad|"G"B2 .G2 G2:|`,
+|: ge|"G or Emin"dG GA B2AG d2 .G2 G2 ge|dG GA B2 AG "D"B2 .A2 A2 Bc |
+"Emin"dG GA B2 AG B2d2 "C"g3e|"G"d2de "D"dB Ad "G"B2 .G2 G2:|
+|: Bd|"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2 de dB GA "D"B2 A2 A2 Bd|
+"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2de "D"dB Ad "G"B2 .G2 G2:|`,
       incipit: `X:1
-M: 4/4
+M: 4/2
 L: 1/8
 K: G
-ge|dG GA B2AG|d2 .G2 G2 ge|dG GA B2`,
+ge|dG GA B2AG d2 .G2 G2 ge|dG GA B2`,
     },
     {
       groups: "ALORA",
@@ -812,11 +812,11 @@ GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
         notes: `Composed by Tommy Coen.
 Chords:
 |: G - - - | D - G - |
-G - - - | D - G - :|
-|: G - C - | D - - - |
-G - C - | D - G - :|
+   G - - - | D - G - :|
+|: G - C - | D - G - |
+   G - C - | D - G - :|
 |: G - C - | G - D - |
-G - C - | D - G - :| `
+   G - C - | D - G - :|`
       },
       {notes:`1:48 onwards
 The Drunken Landlady / Christmas Eve / The Abbey Reel`, url:"https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel"
@@ -1479,7 +1479,7 @@ N:Based on a setting entered in thesession by user Jeremy on 2001-05-25;
 N:adapted by Malcolm 2025-10-13
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K:Dmajor
-|"D?"F2A B2F A2F|"G"G2B d2e dBG|"D"F2A B2F A2F|"A"E2D E2F GFE|
+|"D"F2A B2F A2F|"G"G2B d2e dBG|"D"F2A B2F A2F|"A"E2D E2F GFE|
  "D"F2A B2F A2F|"G"G2B d2e dBG|"Bm"F2A B2F A2F|"A"E2D E2F GAB||
  "F#m"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"A"A2G F2G A2B|
  "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`

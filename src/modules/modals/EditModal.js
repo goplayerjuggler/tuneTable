@@ -4,6 +4,26 @@ import processTuneData from "../../processTuneData.js";
 /**
  * Edit Tune Modal
  * Comprehensive tune editor with metadata, ABC, references, and scores
+ * 
+ * 
+### EditModal
+**Purpose**: Comprehensive tune editing interface
+
+**Features**:
+- Edit basic metadata (name, key, rhythm)
+- Edit ABC notation with multi-version support
+- Manage references (artists, URLs, notes)
+- Manage score links
+- Automatic ABC parsing and metadata extraction
+- Smart field override detection
+
+**Key Methods**:
+- `openWithTune(tune, tuneIndex)`: Initialize editor with tune
+- `save()`: Process and save edited tune
+- `addReference()`: Add new reference entry
+- `addScore()`: Add new score entry
+- `renderReferences(refs)`: Update references UI
+- `renderScores(scores)`: Update scores UI
  */
 export default class EditModal extends Modal {
     

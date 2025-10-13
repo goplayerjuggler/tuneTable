@@ -4,6 +4,19 @@ import processTuneData from "../../processTuneData.js";
 /**
  * Load JSON Modal
  * Allows loading complete tune table from JSON/JS format
+ * 
+### LoadJsonModal
+**Purpose**: Import complete tune database from JSON or JavaScript
+
+**Features**:
+- Support for JSON and JavaScript literal formats
+- Data validation and error handling
+- Replace entire tune collection
+- Confirmation before destructive operations
+
+**Key Methods**:
+- `loadData()`: Parse and import tune data
+
  */
 export default class LoadJsonModal extends BaseModal {
     static getTemplate() {

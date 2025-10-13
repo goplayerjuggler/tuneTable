@@ -4,6 +4,20 @@ import processTuneData from "../../processTuneData.js";
 /**
  * Add Tunes Modal
  * Allows importing tunes via ABC notation
+ * 
+### AddTunesModal
+**Purpose**: Import new tunes via ABC notation
+
+**Features**:
+- Parse single or multiple ABC tunes
+- Automatic tune splitting by X: headers
+- Status feedback for import operations
+- Integration with main tune database
+
+**Key Methods**:
+- `addTunes()`: Process and import ABC notation
+- `splitAbcTunes(abcText)`: Parse ABC text into individual tunes
+
  */
 export default class AddTunesModal extends BaseModal {
     static getTemplate() {

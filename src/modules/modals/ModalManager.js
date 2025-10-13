@@ -4,6 +4,8 @@ import LoadJsonModal from "./LoadJsonModal.js";
 /**
  * Modal Manager
  * Centralizes modal creation and keyboard event handling
+ * Works with BaseModal
+ * Deprecated - moving towards phasing this out and using Modal as a base class instead.
  */
 export default class ModalManager {
   constructor(callbacks) {
