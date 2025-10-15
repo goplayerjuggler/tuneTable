@@ -1,25 +1,27 @@
 export default {
-  lastUpdate: "2025-10-14",
+  lastUpdate: "2025-10-15",
   tunes: [
     {
-      groups: "ALORA",
+      groups: "ALORA,su",
       abc: `
 X: 2
 T: Maud Millar
-T: version of 2025-03-11%2024-08-21 %2024-06-27 %2025-04-11
+T: version of 2025-10-15%2024-08-21 %2024-06-27 %2025-04-11%2025-10-15
 R: reel (single)
 Q:1/4=110
 M: 4/4
 L: 1/16
 K: G
-P:Part I
-gf|"C(E)"edBA "D(F#)"GEDE "G"G2"^v1"BG "^v2"dGBd|"C(E)""^v3,v4"e2dB A2GA "D(F#)"Beed efgf|
-"C(E)"edBA "D(F#)"GEDE   "G""^v5"G2BG dGBd|"Em"e2dB A2GA "D"Beed "^v6"e2ge||
-P:Part II
+P:I
+gf|"C(E)"edBA "D(F#)"GEDE "G"G2"_v1"BG  "_v2"d2Bd|"C(E)" "_v3,v4"e2dB "_v5,v6"A2GA "D(F#)"Beed efgf|
+"C(E)"edBA "D(F#)"GEDE   "G" "_v7"G2BG dGBd|"Em"e2dB A2GA "D""_v8"Beed  "_v9,v10,v11"e2ge||
+P:II
 "G"dega bgg2   "D"agef "G"g3e|"G"dega bgg2 "C"aged eage|
 "G"dega bgg2   "D"agef "G"g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
+P:Coda
 !coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
-[P:v1]Be||[P:v2]d2||[P:v3](3ege||[P:v4]eBdB ABGA||[P:v5](3GGG||[P:v6]ef||`,
+P:Variations/embellishments
+"_v1"Be||"_v2"dG||"_v3"(3ege||"_v4"eBdB ABGA||"_v5"ABGA||"_v6"A/B/AGA||"_v7"(3GGG||"_v8"BeeB||||"_v9"efge||"_v10"eage||"_v11"e2(3gfe||`,
       incipit: `X:1
 M: 4/4
 L: 1/16
@@ -872,7 +874,7 @@ Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/
 M: 12/8
 L: 1/8
 K: A dorian
-{G}!fermata!A2G|:EAA EAA   BAB "^(*)"G2A|Bde "^(**)"dBA   BAB GED|
+{G}!fermata!A2G|:EAA EAA   BAB  "_(*)"G2A|Bde  "_(**)"dBA   BAB GED|
 EAA EAA   BAB G2A|Bde dBA   BAA [1 A2G :| [2 A2z ||
 eaa age   dBA G2A|Bde dBA   def gag|
 eaa age   dBA G2A|Bde dBA   BAA A2z|
@@ -1361,7 +1363,7 @@ FA|:"Bm"BAFA "D"DA FA|"Bm"BA (3Bcd "A" e2 de|"D"fa gf "A7"egfe|"D"dfed "Bm"B2dA|
     abc: [
       `X:1
 T:The First Draft
-C:Siobhan Peoples
+C:Siobhán Peoples
 S:Fidil
 F:https://raelachrecords.bandcamp.com/track/the-first-draft-mazurka
 D:Decade
@@ -1372,18 +1374,18 @@ N:This lovely mazurka is a composition by Siobhán Peoples. I first heard it on
 N:www.itma.ie.
 N:Currently there’s a page on itma.ie for this tune:
 N:https://www.itma.ie/scores/first-draft/
-N:In it there are the following words from S Peoples: "This tune simply got its
+N:In it there are the following words from S. Peoples: "This tune simply got its
 N:title as it presented itself to me fully formed. It was recorded by the band
 N:Fidil on their 2019 recording, Decade, and they kindly allowed us to include the
 N:track here."
-N:The score I’m sharing is, I believe, identical to the one written by S Peoples;
+N:The score I’m sharing is, I believe, identical to the one written by S. Peoples;
 N:I copied it from the itma.ie page. I got in touch with S. Peoples and she kindly
 N:agreed for me to do this.
 N:---
 N:Imported from https://thesession.org/tunes/23320#setting47650
 N:Setting entered in thesession by user GoPlayer on 2023-07-13
 K:Gmajor
-DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG  |
+DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG |
  Bc d/c/B cA|G<B DG FG|EG ce DF|G2 G2:|
  ga|ba gb a^g|af d2 =gf|ec ef g/f/e|dB G2 ga|
  ba gb a^g|af de f=g|eB eg f/e/d|[e3c3] f ge|
@@ -1391,7 +1393,7 @@ DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG  |
  EG ce d^c|dB GB DG|EG ce DF|G2 G2||`,
       `X:1
 T:The First Draft
-C:Siobhan Peoples
+C:Siobhán Peoples
 R:mazurka
 L:1/8
 M:3/4
