@@ -345,7 +345,7 @@ function initialiseData() {
 
 function populateFilters() {
   const rhythms = [
-    ...new Set(tunesData.map((tune) => tune.rhythm).filter((r) => r)),
+    ...new Set(tunesData.map((tune) => tune.rhythm?.toLowerCase()).filter((r) => r)),
   ].sort();
   const keys = [
     ...new Set(tunesData.map((tune) => tune.key).filter((k) => k)),

@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-15",
+  lastUpdate: "2025-10-20",
   tunes: [
     {
       groups: "ALORA,su",
@@ -537,12 +537,13 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
           artists: "Paddy Glackin & Paddy Keenan",
           url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104",
         },
-      {
-        artists:"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion"
-        , url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore"
-        , notes: `3:04 onwards.
-        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
-      },
+        {
+          artists:
+            "“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
+          url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
+          notes: `3:04 onwards.
+        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`,
+        },
       ],
       scores: [
         {
@@ -659,9 +660,7 @@ A2D FED F2A A2f|gfe`,
       key: "D",
       origin: "Ireland",
       rhythm: "slide",
-      references: [
-        
-      ],
+      references: [],
       scores: [
         {
           type: "tune",
@@ -705,9 +704,14 @@ f/g/f/e/ d>B AD FA | GE e>d`,
       key: "D",
       origin: "Ireland",
       rhythm: "polka",
-      references: [{ artists:"Planxty", url:"https://youtu.be/q5Blc3k16rE",
-        notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
-        ` }],
+      references: [
+        {
+          artists: "Planxty",
+          url: "https://youtu.be/q5Blc3k16rE",
+          notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
+        `,
+        },
+      ],
       scores: [
         {
           type: "tune",
@@ -784,10 +788,9 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
         },
       ],
     },
-    
-  {
-    
-    abc:`X: 14
+
+    {
+      abc: `X: 14
 T: Christmas Eve
 R: reel
 M: 4/4
@@ -800,59 +803,63 @@ DB,DE GFGA B2dB ABGA|BAAB G~E3 [1 ABGF G2EG:| [2 ABGF G2GA||
 BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
 |:BG (3GGG BGBd eg (3ggg egdc|BG (3GGG DGBG FAAG FAdc|
 BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE|| `,
-    groups: "ALORA",
-    incipit: `X: 3
+      groups: "ALORA",
+      incipit: `X: 3
 M: 4/4
 L: 1/16
 K: Gmaj
 GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
-    rhythm: "reel",
-    origin: "Ireland",
-    key: "G",
-    references: [
-      {
-        notes: `Composed by Tommy Coen.
+      rhythm: "reel",
+      origin: "Ireland",
+      key: "G",
+      references: [
+        {
+          notes: `Composed by Tommy Coen.
 Chords:
 |: G - - - | D - G - |
    G - - - | D - G - :|
 |: G - C - | D - G - |
    G - C - | D - G - :|
 |: G - C - | G - D - |
-   G - C - | D - G - :|`
-      },
-      {notes:`1:48 onwards
-The Drunken Landlady / Christmas Eve / The Abbey Reel`, url:"https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel"
-        ,artists:"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
-      },
-      {
-        artists:"Fintan Vallely, flute; Mark Simos, guitar"
-        , url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2"
-        , notes: `Christmas Eve / The Reel of Rio `
-      },
-      {
-        artists:"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion"
-        , url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore"
-        , notes: `Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
-      },
-      {
-        artists: "Micho Russel, flute",
-        url: "https://youtu.be/1FUi3f3pDFc",
-        notes: "album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond"
-      },
-      {
-        artists: "Sonny Murray, concertina",
-        url: "https://music.youtube.com/watch?v=MNscUYF0ybU",
-        notes: `album: It Was Mighty! the Early Days of Irish Music in London`
-      }
-    ],
-    scores: [
-      {
-        name: "thesession",
-        url: "https://thesession.org/tunes/440#setting48642"
-      }
-    ]
-  }
-,
+   G - C - | D - G - :|`,
+        },
+        {
+          notes: `1:48 onwards
+The Drunken Landlady / Christmas Eve / The Abbey Reel`,
+          url: "https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel",
+          artists:
+            "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
+        },
+        {
+          artists: "Fintan Vallely, flute; Mark Simos, guitar",
+          url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2",
+          notes: `Christmas Eve / The Reel of Rio `,
+        },
+        {
+          artists:
+            "“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
+          url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
+          notes: `Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`,
+        },
+        {
+          artists: "Micho Russel, flute",
+          url: "https://youtu.be/1FUi3f3pDFc",
+          notes:
+            "album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond",
+        },
+        {
+          artists: "Sonny Murray, concertina",
+          url: "https://music.youtube.com/watch?v=MNscUYF0ybU",
+          notes: `album: It Was Mighty! the Early Days of Irish Music in London`,
+        },
+      ],
+      scores: [
+        {
+          name: "thesession",
+          url: "https://thesession.org/tunes/440#setting48642",
+        },
+      ],
+    },
     {
       abc: `X: 1
 T: Leave it down easy
@@ -1046,11 +1053,12 @@ K: G mixolydian
     {
       abc: `X:1
 T:Kringelleken
-Z:Malcolm Schonfield%230427,250325
+Z:Malcolm Schonfield%230427,250325,251025
 N:On the recording, it’s played “ABABA2BC”
 R:Polska?
 O:Sweden
-D:Per Gudmundson & Bengan Janson - Hjeltamôs
+S:Per Gudmundson, fiddle; Bengan Janson, accordeon
+D:Hjeltamôs
 F:https://music.youtube.com/watch?v=m8mfkFcY17Q
 M:3/4
 Q:1/4=140
@@ -1234,7 +1242,7 @@ D2E || FEF GFG  AGA dA^F | G/G/^FG`,
     {
       name: "Shanahan’s",
       rhythm: "hornpipe",
-      key:"G",
+      key: "G",
       incipit: `X: 6
 M: 4/2
 L: 1/8
@@ -1347,6 +1355,7 @@ FA| BAFA DAFA BA (3Bcd e2de|fagf
       ],
     },
 
+    ,
     /*
 https://thesession.org/tunes/651
 X: 6
@@ -1358,10 +1367,9 @@ K: Dmaj
 FA|:"Bm"BAFA "D"DA FA|"Bm"BA (3Bcd "A" e2 de|"D"fa gf "A7"egfe|"D"dfed "Bm"B2dA|
 "Bm"BAFA "D"DAFA|"Bm7"BA (3Bcd "Em"e2 de|"D"fagf "A7"egfe|1 "D"d2 f2 d2 FA:|2 "D"d2 f2 d2 fg||
 */
-  ,
-  {
-    abc: [
-      `X:1
+    {
+      abc: [
+        `X:1
 T:The First Draft
 C:Siobhán Peoples
 S:Fidil
@@ -1391,7 +1399,7 @@ DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG |
  ba gb a^g|af de f=g|eB eg f/e/d|[e3c3] f ge|
  d<B G2 gf|ec Gg fe|dA FG A/B/c|B<G DG FG|
  EG ce d^c|dB GB DG|EG ce DF|G2 G2||`,
-      `X:1
+        `X:1
 T:The First Draft
 C:Siobhán Peoples
 R:mazurka
@@ -1423,87 +1431,72 @@ M:9/16
  b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d(g2 {a}g2)f g2a|
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
  d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
- E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`
-    ],
-    references: [{artists:"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle", notes:`a version that’s quite close to the
-Fidil one; it also has some very pretty things going on on the cello.`}],
-    scores: [
-      {
-        url: "https://thesession.org/tunes/23320#setting47650",
+ E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
+      ],
+      references: [
+        {
+          artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle",
+          notes: `a version that’s quite close to the
+Fidil one; it also has some very pretty things going on on the cello.`,
+        },
+      ],
+      scores: [
+        {
+          url: "https://thesession.org/tunes/23320#setting47650",
 
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
 M:3/4
 L:1/8
 K:Gmajor
-DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|B`
-  },  {groups:"ALORA",
-    abc: `X:1
-T:Elizabeth Kelly’s Delight
-R:slip jig
-L:1/8
-M:9/8
-N:Based on a setting entered in thesession by user Will Harmon on 2002-09-07
-N:Chords by Malcolm Schonfield
-N:A pentatonic tune
-K:Adorian
-|:"A-"A3 ABA AGE|"A-"A2 E"G"G2 E DEG|"A-"A3 ABA AGE|"G"~G3 G2 E DEG:|
- |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
- references:[{url:"https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig"
-, artists:"The Kelly Family"
-, notes:"1:42 onwards"
- }],
-    scores: [
-      {
-        url: "https://thesession.org/tunes/953#setting953",
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
-M:9/8
-L:1/8
-K:Adorian
-A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|`
-  }
-,
-  {groups:"alora",
-    abc: [
-      `X:1
+DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|B`,
+    },
+    {
+      groups: "alora",
+      abc: [
+        `X:1
 T:The Snowy Path
 C:Mark Kelly
 R:slip jig
 L:1/8
 M:9/8
 N:Imported from https://thesession.org/tunes/104#setting104
-N:Based on a setting entered in thesession by user Jeremy on 2001-05-25;
-N:adapted by Malcolm 2025-10-13
+N:Based on a setting entered in thesession by user Jeremy on 2001-05-25
+N:(edited after importing)
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K:Dmajor
 |"D"F2A B2F A2F|"G"G2B d2e dBG|"D"F2A B2F A2F|"A"E2D E2F GFE|
  "D"F2A B2F A2F|"G"G2B d2e dBG|"Bm"F2A B2F A2F|"A"E2D E2F GAB||
  "F#m"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"A"A2G F2G A2B|
- "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`
-    ],
-    references:[{artists:"Altan, 1991", url:"https://music.youtube.com/watch?v=BP_nsOCubf0", notes:"https://www.discogs.com/release/2408131-Altan-Harvest-Storm"}],
-    scores: [
-      {
-        url: "https://thesession.org/tunes/104#setting104",
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
+ "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`,
+      ],
+      references: [
+        {
+          artists: "Altan, 1991",
+          url: "https://music.youtube.com/watch?v=BP_nsOCubf0",
+          notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm",
+        },
+      ],
+      scores: [
+        {
+          url: "https://thesession.org/tunes/104#setting104",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
 M:9/8
 L:1/8
 K:Dmajor
-F2A B2F A2F|G2B d2e dBA|F2A B2F A2F`
-  },
+F2A B2F A2F|G2B d2e dBA|F2A B2F A2F`,
+    },
 
-  {groups:"alora",
-    name: "Johsefins Dopvals",
-    abc: `X:1
-T:Josefin's
+    {
+      groups: "alora",
+      name: "Johsefins Dopvals",
+      abc: `X:1
+T:Josefin’s
 C:Roger Tallroth
 O:Sweden
 R:waltz
@@ -1527,29 +1520,29 @@ M:3/4
  |:B2 G2 F2|E2 B,2 D2|C2 A4|F4 B,2|E2 C2 B,2|A,2 G2 F2|G2 E4|F2 G2 A2|B2 D2 B,2|
  E2 D4|C2 G4|F2 A2 cB|A2 G2 F2|E2 D2 C2|D2 E2 G2|F2 G2 A2|G3 F E2|D2 B,4|
  CE GA Bc|ec AF GE|D2 GA B2|A2 c4-|1 c2 D2 E2|F2 G2 A2:|2 c2 B2 c2|[D6G,6B6]||`,
-    scores: [
-      {
-        name: "thesession.org",
-        url: "https://thesession.org/tunes/1016#setting36756"
-      }
-    ],
-    references: [
-      {
-        artists: "Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
-        url: "https://youtu.be/_ZrfjHeFEr0",
-        notes: "@ Gamla Teatern, Östersund 2010"
-      }
-    ],
-    incipit: `X:1
+      scores: [
+        {
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/1016#setting36756",
+        },
+      ],
+      references: [
+        {
+          artists:
+            "Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
+          url: "https://youtu.be/_ZrfjHeFEr0",
+          notes: "@ Gamla Teatern, Östersund 2010",
+        },
+      ],
+      incipit: `X:1
 M:3/4
 L:1/8
 K:Gmajor
-D2 G2 A2|B2 d2 c2|B2 A2 G2|D4 E2|C`
-  }
-,
-  {
-    abc: [
-      `X:1
+D2 G2 A2|B2 d2 c2|B2 A2 G2|D4 E2|C`,
+    },
+    {
+      abc: [
+        `X:1
 T:The Boys Of Ballisodare
 R:hop jig
 L:1/8
@@ -1560,20 +1553,428 @@ K:Gmajor
 |:"G" D2 G G2 A B2 d|"C" ege d2 e g3|"G" D2 G G2 B d2 B|"Am"AGA B2 G "D"E2 G|
  "G" D2 G G2 A B2 d|"C" ege d2 e "D"g2 a|"Em"b2 a g2 e d2 B|"Am"AGA B2 G E2 G:|
  "C" B2 d d2 B d2 B|"D" dBd e2 f "G"g3|"C" B2 d d2 B d2 B|"Am"AGA B2 G E2 G|
- "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`
-    ],
+ "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`,
+      ],
+      scores: [
+        {
+          url: "https://thesession.org/tunes/1340#setting14690",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
+M:9/8
+L:1/8
+K:Gmajor
+D2 G G2 A B2 d| ege d2 e g3| D2 G`,
+    },
+    {
+      groups: "su",
+      abc: `X:1
+T:Come West Along The Road
+R:reel (single)
+L:1/16
+M:4/4
+N:Imported from https://thesession.org/tunes/474#setting31703
+N:(edited after importing)
+N:Setting entered in thesession by user JACKB on 2018-01-19
+K:Gmajor
+ d2BG dGBG G2(3Bcd efge|d2BG dGBG ABcd edBe|
+ d2BG dGBG G2(3Bcd efge|d2BG dGBG ABcd edBd||
+ g2bg egdg egdg edBd   |g2bg egdg ABcd edBd|
+ g2bg egdg egdg edBd   |gabg efge dega bage||`,
+      scores: [
+        {
+          url: "https://thesession.org/tunes/474#setting22920",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
+M:4/4
+L:1/16
+K:Gmajor
+d2BG dGBG G2(3Bcd efge|d2BG dGBG`,
+      references: [
+        {
+          notes: `Éigse an Spidéil / Come West Along the Road
+album: The High Seas`,
+          url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
+          artists:
+            "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
+        },
+      ],
+    },
+    {
+      abc: `X:1
+T:Eklundapolska nr 3
+C:Viksta-Lasse
+R:Polska
+O:Sweden, Uppland
+Z:Erik Ronström 2008-01-31
+F:https://youtu.be/wS-iUNnb_wU?t=23
+N:Youtube: Erik Svansbo
+N:this abc comes from http://www.folkwiki.se/Musik/96
+M:3/4
+L:1/16
+K:G
+"G" g2fg b2g2 d2B2|"C" cBcd egec A2c2|"G" B2AB "C" cdcA "G" BcBG|"D7" A2d2 d8|
+"G" g2fg b2g2 d2B2|"C" cBcd egec A2c2|"G" B2AB "C" cdcA "G" BcBG|"D7" ABAF "G" G8:|
+[|"G" [DB]3[DB] [Dc]2[Dc]2 [DB]2[DB]2|"D7" A2d2 d8|"G"[DB]3[DB] [Dc]2[Dc]2 [DB]2[DB]2|"D7" ABAF D8|
+"G" [DB]3[DB] [Dc]2[Dc]2 [DB]2[DB]2 |"D7"A2d2 d8|"G"G2AB "C"cdcA "G" BcBG|"D7"ABAF "G"G8 ||
+"Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"ABAF D8|
+"Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"G" G2AB "C" cdcA "G" BcBG|"D7"ABAF "G" G8|]
+`,
+    },
+    {
+      groups: "su",
+      name: "Johnny Cope",
+      rhythm: "hornpipe",
+      key: "A dorian",
+      references: [
+        {
+          artists:
+            "Fintan Vallely, flute; Lori Cole, English concertina; Mark Simos, guitar;  CB Heinemann, bouzouki",
+          notes: `Fintan Vallely - Traditional Irish Flute Music, 1979
+ Doolin whistle player Micho Russell’s version of an old Scottish tune, as notated by Mícheál Ó hÁlmháin.`,
+          url: "https://fintanvallely.bandcamp.com/track/johnny-cope-2",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/4953",
+        },
+        {
+          type: "background",
+          name: "imusic.ie - background info",
+          url: "https://imusic.ie/fintan-vallely-traditional-irish-flute-music/",
+        },
+      ],
+    },
+    {
+      groups: "su",
+      name: "The Roving Bachelor",
+      rhythm: "Reel (single)",
+      key: "G major",
+      references: [
+        {
+          artists: "Tommy Peoples, fiddle",
+          url: "https://www.itma.ie/playlists/tommy-peoples-mcconnell-recordings/?track=6",
+          notes: "The Cathal McConnell Tapes: Tape One; early 1970s",
+        },
+      ],
+      incipit: `X:1
+M: 4/4
+L: 1/16
+K: G
+GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`,
+    },
+    {
+      groups: "su",
+      name: "Brogan’s Ferry",
+      rhythm: "Reel (single)",
+      key: "D major",
+      references: [
+        {
+          artists: "Tommy Peoples, fiddle",
+          url: "https://www.itma.ie/playlists/tommy-peoples-mcconnell-recordings/?track=14",
+          notes: "The Cathal McConnell Tapes: Tape One; early 1970s",
+        },
+      ],
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/5516",
+        }],
+      incipit: `
+X: 1
+M: 4/4
+L: 1/16
+K: Dmaj
+FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
+`,
+    },  {
+    groups: "su",
+    abc: `X:1
+T:The Humours Of Kiltyclogher
+R:jig
+L:1/8
+M:12/8
+N:Imported from https://thesession.org/tunes/1043#setting1043
+N:(edited after importing)
+N:Setting entered in thesession by user slainte on 2002-10-14
+K:Adorian
+|:B|AGE G2E c2E G2E|DED D2E GED D2B|
+    AGE G2E c2E DEG|A3 BGE A3 A2:|
+|:B|c2B c2d ecA ABc|BAG GAB dBG GAB|
+    c2B c2d ecA ABc|BAG GEG A3 A2:|`,
     scores: [
       {
-        url: "https://thesession.org/tunes/1340#setting14690",
+        name: "thesession.org",
+        url: "https://thesession.org/tunes/1043#setting1043",
+      },
+    ],
+    references: [
+      {
+        artists: "The Kelly Family",
+        url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
+        notes: `SU #2 in Elisabeth Kelly set`,
+      },
+    ],
+    incipit: `X:1
+M:12/8
+L:1/8
+K:Adorian
+B|AGE G2E c2E G2E|DED D2E GED D2B|`,
+  },
+  {
+    groups: "su",
+    abc: `X:1
+T:Palm Sunday
+R:jig
+L:1/8
+M:12/8
+N:Imported from https://thesession.org/tunes/770#setting29548
+N:(edited after importing)
+N:Setting entered in thesession by user JACKB on 2016-12-24
+K:Adorian
+B|:AGE G2E G2E G2E|A2B c2d e2d efg|
+   e3 dBA BAG Bcd|edc BAG [|]1 B2A A2B:| [|]2 B2A A2e||
+ |:a3 efg a3 bge|g3 gfe dBA GB/c/d|
+   efg ded BAG Bcd|edc BAG [|]1 B2A A2e:| [|2] B2A A2B||`,
+    scores: [
+      {
+        name: "thesession.org",
+        url: "https://thesession.org/tunes/770#setting29548",
+      },
+    ],
+    references: [
+      {
+        artists: "",
+        url: "",
+        notes: "SU #1 in Elisabeth Kelly set",
+      },
+    ],
+    incipit: `X:1
+M:12/8
+L:1/8
+K:Adorian
+B|AGE G2E G2E G2E|A2B c2d e2d efg|`,
+  },
+  
+    {
+      groups: "ALORA,SU",
+      abc: `X:1
+T:Elizabeth Kelly’s Delight
+R:slip jig
+L:1/8
+M:9/8
+N:Based on a setting entered in thesession by user Will Harmon on 2002-09-07
+N:Chords by Malcolm Schonfield
+N:A pentatonic tune
+K:Adorian
+|:"A-"A3 ABA AGE|"A-"A2 E"G"G2 E DEG|"A-"A3 ABA AGE|"G"~G3 G2 E DEG:|
+ |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
+      references: [
+        {
+          url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
+          artists: "The Kelly Family",
+          notes: "1:42 onwards",
+        },
+      ],
+      scores: [
+        {
+          url: "https://thesession.org/tunes/953#setting953",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
+M:9/8
+L:1/8
+K:Adorian
+A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|`,
+    references: [
+      {
+        notes: "SU #3 in Elisabeth Kelly set",
+      },
+    ],
+    },
+  ,
+  
+  {
+    groups:"su",
+    abc: `X:1
+T:Kafoozalum
+R:Fling
+L:1/8
+M:4/2
+N:This has been transcribed from the 1999 self-titled album by Providence; they
+N:heard it "from the playing of Macall, the all-woman group of the 1980s, with
+N:which Joan [McDermott, vocalist] sang. We haven't been able to trace the source
+N:of this tune but we believe it to have Donegal connections." It's the first tune
+N:on the 4th track, titled "Gan Ainm."
+N:---
+N:Imported from https://thesession.org/tunes/8204#setting52726
+N:Setting entered in thesession by user Nigel Gatherer on 2024-12-24
+N:Transposed up a 4th & edited
+K:Dmajor
+e2|:fdAd f2fa gece g2ge| fdAd f2fe[|]1 defd e2de:|[|]2 defd e2df||
+  |:aaag fgaf efgf efge| aaag fgaf[|]1 defd e2df:|[|]2 defd e2de||`,
+    scores: [
+      {
+        name: "thesession.org",
+        url: "https://thesession.org/tunes/8204#setting52726"
+      }
+    ],
+    incipit: `X:1
+M:4/2
+L:1/8
+K:Dmajor
+e2|:fdAd f2fa gece g2ge| fdAd`
+  }
+ 
+  ,{name:"Fahey’s Fiddle", groups:"su"
+    , incipit:`X: 1
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+DFA d2e d^cA ~G3 | A`,
+references:[{artists:"Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars", url:"https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
+        notes:`album: The Northern Concertina
+SU: 1st & 3rd in the Fahey’s Fiddle set `}],
+    scores: [
+      {
+        name: "thesession.org",
+        url: "https://thesession.org/tunes/124"
+      },]
+  },
+  {
+    abc: [
+      `X:1
+T:Strop The Razor
+R:jig
+L:1/8
+M:12/8
+N:Imported from https://thesession.org/tunes/693#setting23367
+N:(edited after importing)
+N:Setting entered in thesession by user JACKB on 2014-02-01
+K:Gmajor
+|:BGG AGG BGG AGF|DGG GAG DGG G2A|
+  BGG AGG BGG AGF|D2E F2G ADE FGA:|
+|:dcB cAA dcB cAF|DGG GFG DGG G(3ABc|
+  dcB cAA dcB cAF|D2E F2G ADE FGA:|
+|:B3 cBc d(3Bcd dBd|g3 gfd gba gdc|
+  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`
+    ],
+references:[{
+        notes:`SU: 2nd in the Fahey’s Fiddle set `}],
+    scores: [
+      {
+        url: "https://thesession.org/tunes/693#setting23367",
         name: "thesession.org"
       }
     ],
     incipit: `X:1
-M:9/8
+M:12/8
 L:1/8
 K:Gmajor
-D2 G G2 A B2 d| ege d2 e g3| D2 G`
+BGG AGG BGG AGF|DGG GFG DGG G2A|`
+  },
+  
+  {
+    groups:"su",
+    abc: 
+      `X:1
+T:Boil The Breakfast Early
+R:reel
+L:1/16
+M:4/4
+N:Imported from https://thesession.org/tunes/3#setting3
+N:Setting entered in thesession by user Jeremy on 2001-05-14
+N:(edited after importing)
+K:Gmajor
+BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
+   G2BG AFDF G2Bd c2Bc| dBcA BGAF GEEG c2Bc||
+   d2fd eBAB d2fa g2fe| d2fd eBAB BGEG c2Bc|
+   d2fd eBAB d2fa g2fg| afge fded BGEG c2Bc||
+   dAAA dAFA dAAA defe| dAAA dAFA GEEG c2Bc|
+   dAAA dAFA d^cde dgfe|dBcA BGAF GEEG c2||`
+    ,
+    scores: [
+      {
+        url: "https://thesession.org/tunes/3#setting3",
+        name: "thesession.org"
+      }
+    ],
+    incipit: `X:1
+M:4/16
+L:1/8
+K:Gmajor
+BA|G2BG AFDF G2Bd c2BA|G2BG AFDF|`
+  },
+  {
+    groups:"su",
+    abc: `X:1
+T:Beauties Of Autumn
+C:John Brady
+R:march
+L:1/8
+M:4/2
+N:Imported from https://thesession.org/tunes/4553#setting4553
+N:Setting entered in thesession by user Michael Eskin on 2005-06-02
+N:(edited after importing)
+K:Edorian
+E>G|:BEGB AFDE FB,DF A2(3Bcd|efed BAFE FdFE DABA|
+ GAGG B,DGB ADFA d2(3efg|afec dBAF[|]1 F2ED E2EG:|2 F2ED EFGA||
+ |:B2ef eBef g2fe fdeB|ABAF Adfa bafe fdef|
+ g2ef eBef g2fe fdeB|Aaef deBA[|]1 F2ED E2GA:|2 F2ED E2EG||`,
+    scores: [
+      {
+        url: "https://thesession.org/tunes/4553#setting4553",
+        name: "thesession.org"
+      }
+    ],
+    incipit: `X:1
+M:4/2
+L:1/8
+K:Edorian
+E>G|BEGB AFDE FB,DF A2(3Bcd|e>fed`
   }
-]
-  ,
+,
+  {
+    abc: `X:1
+T:Muireann’s
+C:Niall Vallely
+R:jig
+L:1/8
+M:12/8
+N:Imported from https://thesession.org/tunes/1902#setting1902
+N:(edited after importing)
+N:Setting entered in thesession by user Dr. Dow on 2003-08-24
+K:Bminor
+|:dBA ~B3 def ede|f2e ede faf efe|
+  dBA ~B3 def ede|fba fed fee edB:|
+|:BAB e3 BAB fef|Bba fed fee edB|
+  BAB e3 BAB fef|baf aba fee edB:|
+|:BAF E2F FDE FDA|DAA DBB Ddd edB|
+  BAF E2F FDE FDE|FAB def [|]1 fed edB:|2 fed e3||
+|:fef b2B fef ~a3|fba fed fee ede|
+  fef b2B fef ~a3|baf aba [|]1 fee ede:|2 fee edB||`,
+    scores: [
+      {
+        url: "https://thesession.org/tunes/1902#setting1902",
+        name: "thesession.org"
+      }
+    ],
+    incipit: `X:1
+M:12/8
+L:1/8
+K:Bminor
+dBA ~B3 def ede|f2e`
+  }
+
+
+  ],
 };
