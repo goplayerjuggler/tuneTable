@@ -1,6 +1,7 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
+import {normaliseKey} from "abc-tools"
 
 import processTuneData from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
@@ -348,7 +349,11 @@ function populateFilters() {
     ...new Set(tunesData.map((tune) => tune.rhythm?.toLowerCase()).filter((r) => r)),
   ].sort();
   const keys = [
-    ...new Set(tunesData.map((tune) => tune.key).filter((k) => k)),
+    ...new Set(
+      tunesData
+      .map((tune) => tune.key)
+      .filter((k) => k)
+      .map(k=> normaliseKey(k).join(" "))),
   ].sort();
 
   const rhythmFilter = document.getElementById("rhythmFilter");
