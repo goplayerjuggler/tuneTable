@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-20",
+  lastUpdate: "2025-10-22",
   tunes: [
     {
       groups: "ALORA,su",
@@ -1626,6 +1626,11 @@ K:G
     },
     {
       groups: "su",
+      incipit: `X: 8
+M: 4/4
+L: 1/16
+K: Ador
+G2|| A2A>B A2Bd eged B2AG|EG`,
       name: "Johnny Cope",
       rhythm: "hornpipe",
       key: "A dorian",
