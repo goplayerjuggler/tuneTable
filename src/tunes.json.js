@@ -1915,8 +1915,8 @@ BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
       }
     ],
     incipit: `X:1
-M:4/16
-L:1/8
+M:4/4
+L:1/16
 K:Gmajor
 BA|G2BG AFDF G2Bd c2BA|G2BG AFDF|`
   },
