@@ -1,7 +1,7 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
-import {normaliseKey} from "abc-tools"
+import {normaliseKey} from "@goplayerjuggler/abc-tools"
 
 import processTuneData from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";

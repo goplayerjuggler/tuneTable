@@ -1834,7 +1834,7 @@ K:Dmajor
 e2|:fdAd f2fa gece g2ge| fdAd`
   }
  
-  ,{name:"Fahey’s Fiddle", groups:"su"
+  ,{name:"Fahey’s Fiddle", groups:"su", rhythm:"jig", key:"D"
     , incipit:`X: 1
 R: jig
 M: 12/8

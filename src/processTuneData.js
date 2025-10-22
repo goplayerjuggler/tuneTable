@@ -1,5 +1,6 @@
+import {normaliseKey} from "@goplayerjuggler/abc-tools"
 
-import getIncipit from "./incipits.js";
+import {getIncipit} from "@goplayerjuggler/abc-tools";
 function parseAbc(abc) {
   const lines = abc.split("\n"),
 	metadata = {},
@@ -12,7 +13,7 @@ function parseAbc(abc) {
 	} else if (trimmed.startsWith("R:")) {
 	  metadata.rhythm = trimmed.substring(2).trim();
 	} else if (trimmed.startsWith("K:")) {
-	  metadata.key = trimmed.substring(2).trim();
+	  metadata.key = normaliseKey(trimmed.substring(2).trim()).join(' ');
 	  break;
 	} else if (trimmed.startsWith("S:")) {
 	  metadata.source = trimmed.substring(2).trim();
@@ -80,7 +81,7 @@ function processTuneData(tune) {
 	  }
 	});
 	if (!tune.incipit) {
-	  processed.incipit = getIncipit(abcArray[0]);
+	  processed.incipit = getIncipit({abc:abcArray[0]});
 	}
 	processed.rhythm = processed.rhythm?.toLowerCase();
   }
