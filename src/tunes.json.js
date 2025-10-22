@@ -687,6 +687,12 @@ P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
 `,
+      scores: [
+        {
+          type: "tune",
+          name: "thesession",
+          url: "https://thesession.org/tunes/325",
+        }],
       incipit: `X:1
 M: 12/8
 L: 1/8
