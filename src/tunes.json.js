@@ -1856,7 +1856,7 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `}],
         url: "https://thesession.org/tunes/124"
       },]
   },
-  {
+  { groups:"su",
     abc: [
       `X:1
 T:Strop The Razor
