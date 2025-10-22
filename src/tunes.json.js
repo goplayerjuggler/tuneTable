@@ -1538,7 +1538,7 @@ M:3/4
 M:3/4
 L:1/8
 K:Gmajor
-D2 G2 A2|B2 d2 c2|B2 A2 G2|D4 E2|C`,
+D2 G2 A2|B2 d2 c2|B2 A2 G2|`,
     },
     {
       abc: [
@@ -1840,7 +1840,7 @@ R: jig
 M: 12/8
 L: 1/8
 K: Dmaj
-DFA d2e d^cA ~G3 | A`,
+DFA d2e dcA ~G3 | A`,
 references:[{artists:"Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars", url:"https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
         notes:`album: The Northern Concertina
 SU: 1st & 3rd in the Fahey’s Fiddle set `}],
