@@ -1639,7 +1639,8 @@ G2|| A2A>B A2Bd eged B2AG|EG`,
           artists:
             "Fintan Vallely, flute; Lori Cole, English concertina; Mark Simos, guitar;  CB Heinemann, bouzouki",
           notes: `Fintan Vallely - Traditional Irish Flute Music, 1979
- Doolin whistle player Micho Russell’s version of an old Scottish tune, as notated by Mícheál Ó hÁlmháin.`,
+ Doolin whistle player Micho Russell’s version of an old Scottish tune, as notated by Mícheál Ó hÁlmháin.
+ [F. Vallely’s notes](https://imusic.ie/fintan-vallely-traditional-irish-flute-music/)`,
           url: "https://fintanvallely.bandcamp.com/track/johnny-cope-2",
         },
       ],
