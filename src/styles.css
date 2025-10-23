@@ -246,6 +246,10 @@ tbody tr:nth-child(even) {
   font-style: italic;
 }
 
+.notes pre {
+  font-style: normal;
+}
+
 .scores a {
   color: #667eea;
   text-decoration: none;
@@ -585,7 +589,7 @@ tbody tr:nth-child(even) {
 
 textarea.form-control {
   resize: vertical;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .abc-textarea {
@@ -981,7 +985,7 @@ tr:hover .tune-actions {
     margin: 20px;
     max-height: calc(100vh - 40px);
   }
-  
+
   .modall--small .modal__container,
   .modall--medium .modal__container,
   .modall--large .modal__container,

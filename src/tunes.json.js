@@ -825,13 +825,15 @@ GE|D3E ~G3A B2dB ABGA| BAGE DB,DE`,
       references: [
         {
           notes: `Composed by Tommy Coen.
-Chords:
-|: G - - - | D - G - |
-   G - - - | D - G - :|
-|: G - C - | D - G - |
-   G - C - | D - G - :|
-|: G - C - | G - D - |
-   G - C - | D - G - :|`,
+Chords: (version of 2025-10-23)
+\`\`\`
+|: G/B - - - | C - C - |
+   G/B - - - | C - C - :|
+|: G/B - C - | C - D - |
+   G/B - C - | D - D - :|
+|: G/B - C - | G - Am- |
+   G/B - C - | D - G - :|
+\`\`\``,
         },
         {
           notes: `1:48 onwards
@@ -1175,8 +1177,7 @@ S:Manco Sneed, fiddle
 M:4/4
 L:1/16
 R:reel
-D:Field Recorders Collective FRC 505, "Byard Ray, Manco Sneed \&
-D:Mike Rogers" (2006).
+D:Field Recorders Collective FRC 505, "Byard Ray, Manco Sneed & Mike Rogers" (2006).
 N:Manco Sneed (1885-1975, Jackson & Graham Counties, western N.C.)
 N:Recorded by Peter Hoover in the 1960’s.
 F:https://www.slippery-hill.com/recording/paddy-turnpike-2
@@ -2023,9 +2024,3 @@ dBA ~B3 def ede|f2e`,
     },
   ],
 };
-/* 
-todo
- https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6 morning dew, Larry Redican - SU
-
- monaghan jig https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=1
-*/
