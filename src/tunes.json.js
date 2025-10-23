@@ -2016,7 +2016,7 @@ dBA ~B3 def ede|f2e`,
         {
           url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
           artists:
-            " / Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
+            "Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
           notes: `Miss Walsh, jig ; Morrison's, jig`,
         },
       ],
