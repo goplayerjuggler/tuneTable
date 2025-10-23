@@ -2002,5 +2002,30 @@ L:1/8
 K:Bminor
 dBA ~B3 def ede|f2e`,
     },
+    {
+      name: "Morrison’s",
+      rhythm: "jig",
+      groups: "alora",
+      scores: [
+        {
+          url: "https://thesession.org/tunes/71",
+          name: "thesession.org",
+        },
+      ],
+      references: [
+        {
+          url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
+          artists:
+            " / Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
+          notes: `Miss Walsh, jig ; Morrison's, jig`,
+        },
+      ],
+    },
   ],
 };
+/* 
+todo
+ https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6 morning dew, Larry Redican - SU
+
+ monaghan jig https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=1
+*/
