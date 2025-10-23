@@ -44,7 +44,7 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "^1.0.2",
+    "@goplayerjuggler/abc-tools": "^1.0.4",
     "abcjs": "6.5.1"
   }
 }

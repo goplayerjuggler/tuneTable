@@ -1,5 +1,5 @@
 export default {
-  lastUpdate: "2025-10-22",
+  lastUpdate: "2025-10-23",
   tunes: [
     {
       groups: "ALORA,su",
@@ -692,7 +692,8 @@ P:Ⅱ
           type: "tune",
           name: "thesession",
           url: "https://thesession.org/tunes/325",
-        }],
+        },
+      ],
       incipit: `X:1
 M: 12/8
 L: 1/8
@@ -759,7 +760,10 @@ A2AB AFED B2BA BcdB |`,
       rhythm: "reel (single)",
       references: [
         {
-          notes: "#2 in the (ALORA) Maud Millar set",
+          artists: "Tony DeMarco, fiddle; Felix Dolan, piano",
+          url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=3",
+          notes: `Wind that shakes the barley, reel ; Reel of Bogie 
+          #2 in the (ALORA) Maud Millar set`,
         },
       ],
       scores: [
@@ -1698,7 +1702,8 @@ GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`,
           type: "tune",
           name: "thesession",
           url: "https://thesession.org/tunes/5516",
-        }],
+        },
+      ],
       incipit: `
 X: 1
 M: 4/4
@@ -1706,9 +1711,10 @@ L: 1/16
 K: Dmaj
 FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
 `,
-    },  {
-    groups: "su",
-    abc: `X:1
+    },
+    {
+      groups: "su",
+      abc: `X:1
 T:The Humours Of Kiltyclogher
 R:jig
 L:1/8
@@ -1721,28 +1727,28 @@ K:Adorian
     AGE G2E c2E DEG|A3 BGE A3 A2:|
 |:B|c2B c2d ecA ABc|BAG GAB dBG GAB|
     c2B c2d ecA ABc|BAG GEG A3 A2:|`,
-    scores: [
-      {
-        name: "thesession.org",
-        url: "https://thesession.org/tunes/1043#setting1043",
-      },
-    ],
-    references: [
-      {
-        artists: "The Kelly Family",
-        url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
-        notes: `SU #2 in Elisabeth Kelly set`,
-      },
-    ],
-    incipit: `X:1
+      scores: [
+        {
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/1043#setting1043",
+        },
+      ],
+      references: [
+        {
+          artists: "The Kelly Family",
+          url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
+          notes: `SU #2 in Elisabeth Kelly set`,
+        },
+      ],
+      incipit: `X:1
 M:12/8
 L:1/8
 K:Adorian
 B|AGE G2E c2E G2E|DED D2E GED D2B|`,
-  },
-  {
-    groups: "su",
-    abc: `X:1
+    },
+    {
+      groups: "su",
+      abc: `X:1
 T:Palm Sunday
 R:jig
 L:1/8
@@ -1755,26 +1761,26 @@ B|:AGE G2E G2E G2E|A2B c2d e2d efg|
    e3 dBA BAG Bcd|edc BAG [|]1 B2A A2B:| [|]2 B2A A2e||
  |:a3 efg a3 bge|g3 gfe dBA GB/c/d|
    efg ded BAG Bcd|edc BAG [|]1 B2A A2e:| [|2] B2A A2B||`,
-    scores: [
-      {
-        name: "thesession.org",
-        url: "https://thesession.org/tunes/770#setting29548",
-      },
-    ],
-    references: [
-      {
-        artists: "",
-        url: "",
-        notes: "SU #1 in Elisabeth Kelly set",
-      },
-    ],
-    incipit: `X:1
+      scores: [
+        {
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/770#setting29548",
+        },
+      ],
+      references: [
+        {
+          artists: "",
+          url: "",
+          notes: "SU #1 in Elisabeth Kelly set",
+        },
+      ],
+      incipit: `X:1
 M:12/8
 L:1/8
 K:Adorian
 B|AGE G2E G2E G2E|A2B c2d e2d efg|`,
-  },
-  
+    },
+
     {
       groups: "ALORA,SU",
       abc: `X:1
@@ -1806,17 +1812,16 @@ M:9/8
 L:1/8
 K:Adorian
 A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|`,
-    references: [
-      {
-        notes: "SU #3 in Elisabeth Kelly set",
-      },
-    ],
+      references: [
+        {
+          notes: "SU #3 in Elisabeth Kelly set",
+        },
+      ],
     },
-  ,
-  
-  {
-    groups:"su",
-    abc: `X:1
+    ,
+    {
+      groups: "su",
+      abc: `X:1
 T:Kafoozalum
 R:Fling
 L:1/8
@@ -1833,38 +1838,49 @@ N:Transposed up a 4th & edited
 K:Dmajor
 e2|:fdAd f2fa gece g2ge| fdAd f2fe[|]1 defd e2de:|[|]2 defd e2df||
   |:aaag fgaf efgf efge| aaag fgaf[|]1 defd e2df:|[|]2 defd e2de||`,
-    scores: [
-      {
-        name: "thesession.org",
-        url: "https://thesession.org/tunes/8204#setting52726"
-      }
-    ],
-    incipit: `X:1
+      scores: [
+        {
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/8204#setting52726",
+        },
+      ],
+      incipit: `X:1
 M:4/2
 L:1/8
 K:Dmajor
-e2|:fdAd f2fa gece g2ge| fdAd`
-  }
- 
-  ,{name:"Fahey’s Fiddle", groups:"su", rhythm:"jig", key:"D"
-    , incipit:`X: 1
+e2|:fdAd f2fa gece g2ge| fdAd`,
+    },
+
+    {
+      name: "Fahey’s Fiddle",
+      groups: "su",
+      rhythm: "jig",
+      key: "D",
+      incipit: `X: 1
 R: jig
 M: 12/8
 L: 1/8
 K: Dmaj
 DFA d2e dcA ~G3 | A`,
-references:[{artists:"Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars", url:"https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
-        notes:`album: The Northern Concertina
-SU: 1st & 3rd in the Fahey’s Fiddle set `}],
-    scores: [
-      {
-        name: "thesession.org",
-        url: "https://thesession.org/tunes/124"
-      },]
-  },
-  { groups:"su",
-    abc: [
-      `X:1
+      references: [
+        {
+          artists: "Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars",
+          url: "https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
+          notes: `album: The Northern Concertina
+SU: 1st & 3rd in the Fahey’s Fiddle set `,
+        },
+      ],
+      scores: [
+        {
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/124",
+        },
+      ],
+    },
+    {
+      groups: "su",
+      abc: [
+        `X:1
 T:Strop The Razor
 R:jig
 L:1/8
@@ -1878,27 +1894,29 @@ K:Gmajor
 |:dcB cAA dcB cAF|DGG GFG DGG G(3ABc|
   dcB cAA dcB cAF|D2E F2G ADE FGA:|
 |:B3 cBc d(3Bcd dBd|g3 gfd gba gdc|
-  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`
-    ],
-references:[{
-        notes:`SU: 2nd in the Fahey’s Fiddle set `}],
-    scores: [
-      {
-        url: "https://thesession.org/tunes/693#setting23367",
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
+  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`,
+      ],
+      references: [
+        {
+          notes: `SU: 2nd in the Fahey’s Fiddle set `,
+        },
+      ],
+      scores: [
+        {
+          url: "https://thesession.org/tunes/693#setting23367",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
 M:12/8
 L:1/8
 K:Gmajor
-BGG AGG BGG AGF|DGG GFG DGG G2A|`
-  },
-  
-  {
-    groups:"su",
-    abc: 
-      `X:1
+BGG AGG BGG AGF|DGG GFG DGG G2A|`,
+    },
+
+    {
+      groups: "su",
+      abc: `X:1
 T:Boil The Breakfast Early
 R:reel
 L:1/16
@@ -1912,23 +1930,22 @@ BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
    d2fd eBAB d2fa g2fe| d2fd eBAB BGEG c2Bc|
    d2fd eBAB d2fa g2fg| afge fded BGEG c2Bc||
    dAAA dAFA dAAA defe| dAAA dAFA GEEG c2Bc|
-   dAAA dAFA d^cde dgfe|dBcA BGAF GEEG c2||`
-    ,
-    scores: [
-      {
-        url: "https://thesession.org/tunes/3#setting3",
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
+   dAAA dAFA d^cde dgfe|dBcA BGAF GEEG c2||`,
+      scores: [
+        {
+          url: "https://thesession.org/tunes/3#setting3",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
 M:4/4
 L:1/16
 K:Gmajor
-BA|G2BG AFDF G2Bd c2BA|G2BG AFDF|`
-  },
-  {
-    groups:"su",
-    abc: `X:1
+BA|G2BG AFDF G2Bd c2BA|G2BG AFDF|`,
+    },
+    {
+      groups: "su",
+      abc: `X:1
 T:Beauties Of Autumn
 C:John Brady
 R:march
@@ -1942,21 +1959,20 @@ E>G|:BEGB AFDE FB,DF A2(3Bcd|efed BAFE FdFE DABA|
  GAGG B,DGB ADFA d2(3efg|afec dBAF[|]1 F2ED E2EG:|2 F2ED EFGA||
  |:B2ef eBef g2fe fdeB|ABAF Adfa bafe fdef|
  g2ef eBef g2fe fdeB|Aaef deBA[|]1 F2ED E2GA:|2 F2ED E2EG||`,
-    scores: [
-      {
-        url: "https://thesession.org/tunes/4553#setting4553",
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
+      scores: [
+        {
+          url: "https://thesession.org/tunes/4553#setting4553",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
 M:4/2
 L:1/8
 K:Edorian
-E>G|BEGB AFDE FB,DF A2(3Bcd|e>fed`
-  }
-,
-  {
-    abc: `X:1
+E>G|BEGB AFDE FB,DF A2(3Bcd|e>fed`,
+    },
+    {
+      abc: `X:1
 T:Muireann’s
 C:Niall Vallely
 R:jig
@@ -1974,19 +1990,17 @@ K:Bminor
   BAF E2F FDE FDE|FAB def [|]1 fed edB:|2 fed e3||
 |:fef b2B fef ~a3|fba fed fee ede|
   fef b2B fef ~a3|baf aba [|]1 fee ede:|2 fee edB||`,
-    scores: [
-      {
-        url: "https://thesession.org/tunes/1902#setting1902",
-        name: "thesession.org"
-      }
-    ],
-    incipit: `X:1
+      scores: [
+        {
+          url: "https://thesession.org/tunes/1902#setting1902",
+          name: "thesession.org",
+        },
+      ],
+      incipit: `X:1
 M:12/8
 L:1/8
 K:Bminor
-dBA ~B3 def ede|f2e`
-  }
-
-
+dBA ~B3 def ede|f2e`,
+    },
   ],
 };
