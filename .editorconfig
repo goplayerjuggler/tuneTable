@@ -1,0 +1,26 @@
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{js,md}]
+charset = utf-8
+
+# Indentation override for all JS
+[**.js]
+indent_style = tab
+
+# Ignore paths
+[{tunes.json,**/*tunebook*}.js,log.md]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
