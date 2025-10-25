@@ -54,10 +54,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:D2GA B2B2|(3ABA GA B<d dg|`,
+D2GA B2B2|(3ABA GA B<d dg|`,
       contour: {
         sortKey: "ЛКСУХФХФ"
       }
@@ -86,10 +86,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:A,B,DE DD DE|(3FED FA dDcd|`,
+A,B,DE DD DE|(3FED FA dDcd|`,
       contour: {
         sortKey: "ЛНСУСССУ"
       }
@@ -123,10 +123,10 @@ D|:G3A B3A|GAGE D3E|GABd edgd|eege edBA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-D|:G3A B3A|GAGE D3`,
+D|G3A B3A|GAGE D3`,
       contour: {
         sortKey: "СРРУХФФУ"
       }
@@ -155,10 +155,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G3B d2Bd|e/g/e dB d2BA|`,
+G3B d2Bd|e/g/e dB d2BA|`,
       contour: {
         sortKey: "СРРХЩШХЩ"
       }
@@ -185,10 +185,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G2 (3GGG G2G2|GABc dBGB|`,
+G2 (3GGG G2G2|GABc dBGB|`,
       contour: {
         sortKey: "СРССССРСР",
         durations: [
@@ -233,10 +233,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:A/|F2 F2 A2 A2|G>FG>A B2 B2|`,
+A/|F2 F2 A2 A2|G>FG>A B2 B2`,
       contour: {
         sortKey: "ХФХФЩШЩШ"
       }
@@ -324,10 +324,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:d2 d2 dB ed|B2 B2 BA GB|`,
+d2 d2 dB ed|B2 B2 BA GB|`,
       contour: {
         sortKey: "ЯЮЯЮЯЫбЯ"
       }
@@ -531,10 +531,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:(3CB,A,|G,B, DG B,D GB|DG Bd GB dg|`,
+(3CB,A,|G,B, DG B,D GB|DG Bd GB `,
       contour: {
         sortKey: "ГЗЛСЗЛСХ"
       }
@@ -562,10 +562,10 @@ K:Aminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Aminor
-|:^D2|EAcA Acec|d2dc dec2|`,
+^D2|EAcA Acec|d2dc de`,
       contour: {
         sortKey: "ЛСХССХЩХ"
       }
@@ -593,10 +593,10 @@ K:Fdorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Fdorian
-|:(3B,CD|E2 G2 G2 FE|D2 F2 F2 ED|`,
+(3B,CD|E2 G2 G2 FE|D2 F2 F2 `,
       contour: {
         sortKey: "ПОУТУТСП"
       }
@@ -622,10 +622,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:BA|(3GFG DG BGBd|(3cBc AB cdef|`,
+BA|(3GFG DG BGBd|(3cBc AB cd`,
       contour: {
         sortKey: "СПСЛСХСХЩ",
         durations: [
@@ -668,10 +668,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:(3cBA|GB,DG BDGB|dGBd gbag|`,
+(3cBA|GB,DG BDGB|dGBd gb`,
       contour: {
         sortKey: "СЗЛСХЛСХ"
       }
@@ -697,10 +697,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:D>F|G>FG>A B>G (3Bcd|g>fg>a b>gd>B|`,
+D>F|G>FG>A B>G (3Bcd|g>fg>a b>g`,
       contour: {
         sortKey: "СРПСРУХФСХЧЩ",
         durations: [
@@ -770,10 +770,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:FE|D2 FA dAFD|CDEF G2 FE|`,
+FE|D2 FA dAFD|CDEF G2 `,
       contour: {
         sortKey: "СРХЩЯЩХС"
       }
@@ -799,10 +799,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:(3DEF|GABA GBdg|fefd e^cAG|`,
+(3DEF|GABA GBdg|fefd e^c`,
       contour: {
         sortKey: "СУХУСХЩЯ"
       }
@@ -828,10 +828,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:BA|GABd dBde|gage dega|`,
+BA|GABd dBde|gage de`,
       contour: {
         sortKey: "СУХЩЩХЩЫ"
       }
@@ -858,10 +858,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:(3DEF|GABd g2fg|eGce d2Bd|`,
+(3DEF|GABd g2fg|eGce d2`,
       contour: {
         sortKey: "СУХЩЯЮЭЯ"
       }
@@ -888,10 +888,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:(3DEF|GdBG FcAF|(3GFG BG D2GF|`,
+(3DEF|GdBG FcAF|(3GFG BG D2`,
       contour: {
         sortKey: "СЩХСПЧУП"
       }
@@ -917,10 +917,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:AF|DAFA DAFA|defe dcBA|`,
+AF|DAFA DAFA|defe dc`,
       contour: {
         sortKey: "СЩХЩСЩХЩ"
       }
@@ -947,10 +947,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:D2||BGDG cAFA|d^cde dBGF|`,
+D2||BGDG cAFA|d^cde dB`,
       contour: {
         sortKey: "ХСЛСЧУПУ"
       }
@@ -977,10 +977,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:BGFG (3EFG DB,|G,B,DG cBAG|`,
+BGFG (3EFG DB,|G,B,DG cBAG|`,
       contour: {
         sortKey: "ХСПСНПСЛЗ",
         durations: [
@@ -1024,8 +1024,8 @@ G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>d|c>b a>g f>e d>c|(3dfe (3dcB (3ABA (3GFE|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
 G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>`,
       contour: {
@@ -1092,10 +1092,10 @@ AG|:(3FGF EF DFAF|GAFG E2 EF|GFGA (3Bcd ed|cded cAGE|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-AG|:(3FGF EF DFAF|GAFG E2 `,
+AG|(3FGF EF DFAF|GAFG E2 `,
       contour: {
         sortKey: "ХЧХУХСХЩХ",
         durations: [
@@ -1149,10 +1149,10 @@ K:Eminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Eminor
-|:BEED E2DE|GABG A2GA|`,
+BEED E2DE|GABG A2GA|`,
       contour: {
         sortKey: "ЩССПСРПС"
       }
@@ -1178,10 +1178,10 @@ K:Gmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmixolydian
-|:Bc|dB G^F GB (3dcB|cA FE FA cA|`,
+Bc|dB G^F GB (3dcB|cA FE FA `,
       contour: {
         sortKey: "ЩХСПСХЩЧХ",
         durations: [
@@ -1224,10 +1224,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:dB|AFEF (3DDD DE|FDFA d2 de|`,
+dB|AFEF (3DDD DE|FDFA d2 `,
       contour: {
         sortKey: "ЩХУХССССУ",
         durations: [
@@ -1270,10 +1270,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:dB|AF~F2 DEFA|dced BAdB|`,
+dB|AF~F2 DEFA|dced BA`,
       contour: {
         sortKey: "ЩХХФСУХЩ"
       }
@@ -1299,10 +1299,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:FG|ABAF DEFG|AG (3FED =c2 (3AB^c|`,
+FG|ABAF DEFG|AG (3FED =c2 `,
       contour: {
         sortKey: "ЩЫЩХСУХЧ"
       }
@@ -1329,10 +1329,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:fe|d2Bd A2FA|BAFA D2 ED|`,
+fe|d2Bd A2FA|BAFA D2 `,
       contour: {
         sortKey: "ЯЮЫЯЩШХЩ"
       }
@@ -1359,10 +1359,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:(3Bcd|efed Beed|geag f2 gf|`,
+(3Bcd|efed Beed|geag f2 `,
       contour: {
         sortKey: "ЯбЯЭЩЯЯЭ"
       }
@@ -1389,10 +1389,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:DEG DEG|DEG B3|`,
+DEG DEG|DEG B3|`,
       contour: {
         sortKey: "ЛНСЛНС"
       }
@@ -1419,10 +1419,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:DEG GAB|Bdg gab|`,
+DEG GAB|Bdg gab|`,
       contour: {
         sortKey: "ЛНССУХ"
       }
@@ -1448,10 +1448,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Adorian
-|:G|EGG GED|EGG c2B|`,
+G|EGG GED|EGG c2`,
       contour: {
         sortKey: "ЛПППЛЙ"
       }
@@ -1529,8 +1529,8 @@ E.A.A AGA|cBA c2d|~e3 efg|dBG GFG|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Adorian
 E.A.A AGA|cBA c2d|`,
       contour: {
@@ -1560,10 +1560,10 @@ K:Gdorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gdorian
-|:G/F/|DGG G2A|B/A/G/A/B/G/ A/G/F/G/A/F/|`,
+G/F/|DGG G2A|B/A/G/A/B/G/ A/G/F/G/`,
       contour: {
         sortKey: "ЛСССРУ"
       }
@@ -1595,10 +1595,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:D|DGA B2d|cAG FGA|`,
+D|DGA B2d|cAG FG`,
       contour: {
         sortKey: "ЛСУХФЩ"
       }
@@ -1627,10 +1627,10 @@ K:Emajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Emajor
-|:CEG F2 (E|E)GB e2 d|`,
+CEG F2 (E|E)GB e2 d|`,
       contour: {
         sortKey: "НСХУТС"
       }
@@ -1656,10 +1656,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:F2 D D^CD|F2 D D^CD|`,
+F2 D D^CD|F2 D D^CD|`,
       contour: {
         sortKey: "ПОЛЛЙЛ"
       }
@@ -1806,10 +1806,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Amixolydian
-|:A3 AGF|EDC D3 d2e|fgf edc`,
+A3 AGF|EDC D3 `,
       contour: {
         sortKey: "СРРСПН"
       }
@@ -1835,10 +1835,10 @@ D|:~G3 AGA|~B3 gdB|GAB cBA|BGE EDE|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-D|:~G3 AGA|~B3 gd`,
+D|~G3 AGA|~B3 gd`,
       contour: {
         sortKey: "СРРУСУ"
       }
@@ -1864,10 +1864,10 @@ D|:~E3 GFE|~B3 dBA|BdB BAB|GBG AFD|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Edorian
-D|:~E3 GFE|~B3 dB`,
+D|~E3 GFE|~B3 dB`,
       contour: {
         sortKey: "СРРХУС"
       }
@@ -1893,10 +1893,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Edorian
-|:~E3 BAF|FEB AFD|`,
+~E3 BAF|FEB AFD|`,
       contour: {
         sortKey: "СРРЩЧУ"
       }
@@ -1926,8 +1926,8 @@ B,|E2 E EFB,|GFG AGA|~B3 ABA|GFG EDB,|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Eminor
 B,|E2 E EFB,|GFG AG`,
       contour: {
@@ -1957,10 +1957,10 @@ D|:G2A B2c|d2g d2c|BdB GFG|cBc A2c|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-D|:G2A B2c|d2g d2`,
+D|G2A B2c|d2g d2`,
       contour: {
         sortKey: "СРУХФЧ"
       }
@@ -1989,10 +1989,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:A,|D2 F EDB,|DFA dcd|`,
+A,|D2 F EDB,|DFA dc`,
       contour: {
         sortKey: "СРХУСН"
       }
@@ -2023,10 +2023,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:D2F FEF|AFA d3|`,
+D2F FEF|AFA d3|`,
       contour: {
         sortKey: "СРХХУХ"
       }
@@ -2052,10 +2052,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:G2e dBG|~B3 dBA|`,
+G2e dBG|~B3 dBA|`,
       contour: {
         sortKey: "СРЫЩХС"
       }
@@ -2086,10 +2086,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:D|GGG BAG|FFF AFD|`,
+D|GGG BAG|FFF AF`,
       contour: {
         sortKey: "СССХУС"
       }
@@ -2117,10 +2117,10 @@ D|:GAG GAB|ded dBG|AGA BGD|EFE E2 D|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-D|:GAG GAB|ded dB`,
+D|GAG GAB|ded dB`,
       contour: {
         sortKey: "СУССУХ"
       }
@@ -2178,10 +2178,10 @@ K:Aminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Aminor
-|:ABA a2 (a|{b}a)ge ~g3|~c3 edc`,
+ABA a2 (a|{b}a)ge ~g3`,
       contour: {
         sortKey: "СУСЯЮЯ"
       }
@@ -2207,10 +2207,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Adorian
-|:E|ABd edB|dBA A2B|`,
+E|ABd edB|dBA A2`,
       contour: {
         sortKey: "СУЧЩЧУ"
       }
@@ -2236,10 +2236,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:D|GBA G2B|def gdB|`,
+D|GBA G2B|def gd`,
       contour: {
         sortKey: "СХУСРХ"
       }
@@ -2266,10 +2266,10 @@ K:Dminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dminor
-|:DFA ^G2 A|DFA ^G2 A|`,
+DFA ^G2 A|DFA ^G2 A|`,
       contour: {
         sortKey: "СХЩЧЦЩ"
       }
@@ -2298,10 +2298,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:F|DFA d2e|fdB BAF|`,
+F|DFA d2e|fdB BA`,
       contour: {
         sortKey: "СХЩЯЮб"
       }
@@ -2329,10 +2329,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:A|DFA d2f|edc B2d|`,
+A|DFA d2f|edc B2`,
       contour: {
         sortKey: "СХЩЯЮг"
       }
@@ -2363,10 +2363,10 @@ K:Bminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Bminor
-|:dBA ~B3|def ede|`,
+dBA ~B3|def ede|`,
       contour: {
         sortKey: "ХСПСРР"
       }
@@ -2426,10 +2426,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Amixolydian
-|:cAA BGG|cAA ABd|`,
+cAA BGG|cAA ABd|`,
       contour: {
         sortKey: "ХССУПП"
       }
@@ -2494,10 +2494,10 @@ B|:cAd cAG|EDE GAB|cBc BAG|EAA ~A2B|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Adorian
-B|:cAd cAG|EDE GA`,
+B|cAd cAG|EDE GA`,
       contour: {
         sortKey: "ХСЧХСП"
       }
@@ -2526,10 +2526,10 @@ DE|:FDB BAG|FAd faf|fgb ege|Bcc AGE|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-DE|:FDB BAG|FAd f`,
+DE|FDB BAG|FAd f`,
       contour: {
         sortKey: "ХСЫЫЩЧ"
       }
@@ -2557,10 +2557,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:BAG AFD|G2G FGA|`,
+BAG AFD|G2G FGA|`,
       contour: {
         sortKey: "ХУСУПЛ"
       }
@@ -2594,10 +2594,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:FED EFG|Add cAG|`,
+FED EFG|Add cAG|`,
       contour: {
         sortKey: "ХУСУХЧ"
       }
@@ -2623,10 +2623,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Amixolydian
-|:cBA ecA|fed cBA|`,
+cBA ecA|fed cBA|`,
       contour: {
         sortKey: "ХУСЩХС"
       }
@@ -2700,10 +2700,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:BAB cBc|dgg d2g|`,
+BAB cBc|dgg d2g|`,
       contour: {
         sortKey: "ХУХЧХЧ"
       }
@@ -2794,10 +2794,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Amixolydian
-|:c2A ABA|d2e fed|`,
+c2A ABA|d2e fed|`,
       contour: {
         sortKey: "ХФССУС"
       }
@@ -2828,10 +2828,10 @@ K:Fmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Fmajor
-|:A2^G AcB|A2^G AcB|`,
+A2^G AcB|A2^G AcB|`,
       contour: {
         sortKey: "ХФУХЩЧ"
       }
@@ -2861,10 +2861,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:G/A/|~B3 ABA|GAG FGA|`,
+G/A/|~B3 ABA|GAG FG`,
       contour: {
         sortKey: "ХФФУХУ"
       }
@@ -2890,10 +2890,10 @@ c|:B3BAB|GBd gdB|A3AGA|Bee dBA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-c|:B3BAB|GBd gd`,
+c|B3BAB|GBd gd`,
       contour: {
         sortKey: "ХФФХУХ"
       }
@@ -2929,10 +2929,10 @@ K:Cmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Cmajor
-|:E3 FGA|G3 G,CD|`,
+E3 FGA|G3 G,CD|`,
       contour: {
         sortKey: "ХФФЧЩЫ"
       }
@@ -2959,10 +2959,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:A|F2A AFA|Bdd efg|`,
+A|F2A AFA|Bdd ef`,
       contour: {
         sortKey: "ХФЩЩХЩ"
       }
@@ -2993,10 +2993,10 @@ K:Dminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dminor
-|:FFF AFF|cFF AF^F|`,
+FFF AFF|cFF AF^F|`,
       contour: {
         sortKey: "ХХХЩХХ"
       }
@@ -3025,10 +3025,10 @@ K:Dminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dminor
-|:GFD D2F|GAc d3|`,
+GFD D2F|GAc d3|`,
       contour: {
         sortKey: "ЧХССРХ"
       }
@@ -3057,10 +3057,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:B|dGF GDB,|G,A,G, DB,D|`,
+B|dGF GDB,|G,A,G, DB,`,
       contour: {
         sortKey: "ЩСПСЛЗ"
       }
@@ -3088,10 +3088,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Edorian
-|:BEE EFA|Bee d2f|`,
+BEE EFA|Bee d2f|`,
       contour: {
         sortKey: "ЩСССУЧ"
       }
@@ -3120,10 +3120,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:ADD B2 D|ADD FGA|`,
+ADD B2 D|ADD FGA|`,
       contour: {
         sortKey: "ЩССЫЪС"
       }
@@ -3150,10 +3150,10 @@ K:Emixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Emixolydian
-|:BGE EDB,|DEF EGB|`,
+BGE EDB,|DEF EGB|`,
       contour: {
         sortKey: "ЩХССПЛ"
       }
@@ -3179,10 +3179,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Amajor
-|:f|ecA BAF|AFE EFA|`,
+f|ecA BAF|AFE EF`,
       contour: {
         sortKey: "ЩХСУСН"
       }
@@ -3212,10 +3212,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:AFA AFA|BGB BdB|`,
+AFA AFA|BGB BdB|`,
       contour: {
         sortKey: "ЩХЩЩХЩ"
       }
@@ -3241,10 +3241,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:ABA D2d|{e}dcA AGF|ABG ABc`,
+ABA D2d|{e}dcA AG`,
       contour: {
         sortKey: "ЩЫЩСРЯ"
       }
@@ -3270,10 +3270,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:ded ~B3|cBc AFD|`,
+ded ~B3|cBc AFD|`,
       contour: {
         sortKey: "ЩЫЩХФФ"
       }
@@ -3300,10 +3300,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:Ace aed|edB A3|`,
+Ace aed|edB A3|`,
       contour: {
         sortKey: "ЩЭбзбЯ"
       }
@@ -3332,10 +3332,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:AdF ~A3|GBE GFG|`,
+AdF ~A3|GBE GFG|`,
       contour: {
         sortKey: "ЩЯХЩШШ"
       }
@@ -3362,10 +3362,10 @@ K:Dmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmixolydian
-|:Adc A3|AGE G3|`,
+Adc A3|AGE G3|`,
       contour: {
         sortKey: "ЩЯЭЩШШ"
       }
@@ -3392,10 +3392,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:A|Add dcd|BAG A3|`,
+A|Add dcd|BAG A3`,
       contour: {
         sortKey: "ЩЯЯЯЭЯ"
       }
@@ -3422,10 +3422,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:B|Bcd efg|aba age|`,
+B|Bcd efg|aba ag`,
       contour: {
         sortKey: "ЫЭЯбге"
       }
@@ -3458,10 +3458,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:B|cAA edb|cAA ABc|`,
+B|cAA edb|cAA AB`,
       contour: {
         sortKey: "ЭЩЩбЯй"
       }
@@ -3488,10 +3488,10 @@ K:Dmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmixolydian
-|:cec BdB|AGA AGE|`,
+cec BdB|AGA AGE|`,
       contour: {
         sortKey: "ЭбЭЫЯЫ"
       }
@@ -3523,10 +3523,10 @@ ABc|:dAG FED|=c3 ed^c|dAF GFE|FED gfe|
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-ABc|:dAG FED|=c3 `,
+ABc|dAG FED|=c3 `,
       contour: {
         sortKey: "ЯЩЧХУС"
       }
@@ -3552,10 +3552,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:gfd cAd|GAG B2c|`,
+gfd cAd|GAG B2c|`,
       contour: {
         sortKey: "ЯЭЩЧУЩ"
       }
@@ -3581,10 +3581,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Gmajor
-|:gfg e2d|Bee dBA|`,
+gfg e2d|Bee dBA|`,
       contour: {
         sortKey: "ЯЭЯЫЪЩ"
       }
@@ -3612,10 +3612,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:dcd faf|dcd AFD|`,
+dcd faf|dcd AFD|`,
       contour: {
         sortKey: "ЯЭЯгзг"
       }
@@ -3642,10 +3642,10 @@ K:Cmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Cmajor
-|:c3 dcB|cGE CEG|`,
+c3 dcB|cGE CEG|`,
       contour: {
         sortKey: "ЯЮЮбЯЭ"
       }
@@ -3671,10 +3671,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:6/8
+L:1/8
 K:Dmajor
-|:fAA fAA|BAG FGE|`,
+fAA fAA|BAG FGE|`,
       contour: {
         sortKey: "гЩЩгЩЩ"
       }
@@ -3701,10 +3701,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
-|:e2|A>e c<e A>e c<e|e>Af>A e2d>B|`,
+e2|A>e c<e A>e c<e|e>Af>A e2`,
       contour: {
         sortKey: "СРЩХЩШСРЩХЩШ",
         durations: [
@@ -3769,10 +3769,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
-|:af|eAAB c2 BA|e2 A2 Aaaf|`,
+af|eAAB c2 BA|e2 A2 Aa`,
       contour: {
         sortKey: "ЩССУХФУС"
       }
@@ -3850,10 +3850,10 @@ K:Dminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Dminor
-(3CDE|:F4 (3GFE|F3C FG|A3F `,
+(3CDE|F4 (3GFE|F3C FG|A3F `,
       contour: {
         sortKey: "ХФФФЧХУ",
         durations: [
@@ -3899,10 +3899,10 @@ GA|:B2 BG Bd|A4 AB|(3cBA Bcde|dc BA GA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Gminor
-GA|:B2 BG Bd|A4 AB|(3cBA Bc`,
+GA|B2 BG Bd|A4 AB|(3cBA Bc`,
       contour: {
         sortKey: "ХФХСХЩ"
       }
@@ -3928,10 +3928,10 @@ GA|:"G"B2BAGE|DB, D2B,D|"C"EC E2CE|"G"DB, D2GA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Gmajor
-GA|:B2BAGE|DB, D2B,D|EC E2`,
+GA|B2BAGE|DB, D2B,D|EC E2`,
       contour: {
         sortKey: "ХФХУСН"
       }
@@ -3957,10 +3957,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Gmajor
-|:DG|B2 BA GB|d2 dB AB|c2 ce dc|`,
+DG|B2 BA GB|d2 dB AB|c2 ce `,
       contour: {
         sortKey: "ХФХУСХ"
       }
@@ -4092,10 +4092,10 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Fmajor
-AB|:cF Ac BA|GC EG BA|FG FE `,
+AB|cF Ac BA|GC EG BA|FG FE `,
       contour: {
         sortKey: "ЩСХЩЧХ"
       }
@@ -4122,10 +4122,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Dmajor
-|:(3AAA|d2 f2 ag|bg B2 (3ggg|fe Ac eg|`,
+(3AAA|d2 f2 ag|bg B2 (3ggg|fe Ac `,
       contour: {
         sortKey: "ЯЮгвзе"
       }
@@ -4207,10 +4207,10 @@ K:Eminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Eminor
-|:E>F G/E/-E|{A}B2{^c/B/}A>B|G<E d2`,
+E>F G/E/-E|{A}B2{^c/B/`,
       contour: {
         sortKey: "СРУХСР",
         durations: [
@@ -4256,10 +4256,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Amajor
-|:A2 AE|FA E2|`,
+A2 AE|FA E2|`,
       contour: {
         sortKey: "СРСЛ"
       }
@@ -4323,10 +4323,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Dmajor
-|:DF FD|CE EF/E/|`,
+DF FD|CE EF/E/|`,
       contour: {
         sortKey: "СХХС"
       }
@@ -4352,10 +4352,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Gmajor
-|:GD|GB B/c/B/A/|FA AD|`,
+GD|GB B/c/B/A/|FA `,
       contour: {
         sortKey: "СХХЧХУ",
         durations: [
@@ -4400,10 +4400,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Amajor
-|:E|Ac ef|ec c/d/c/B/|`,
+E|Ac ef|ec c/d/`,
       contour: {
         sortKey: "СХЩЫ"
       }
@@ -4429,10 +4429,10 @@ d/c/|:BG D>D|Ec cA/B/|cE F>E|Dd d/e/d/c/|
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Gmajor
-d/c/|:BG D>D|Ec c`,
+d/c/|BG D>D|Ec c`,
       contour: {
         sortKey: "ХСЛКЛ",
         durations: [
@@ -4469,10 +4469,10 @@ K:Eminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Eminor
-|:G2 EG|DE GD|`,
+G2 EG|DE GD|`,
       contour: {
         sortKey: "ХФСХ"
       }
@@ -4498,10 +4498,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Adorian
-|:AB|c2 B2|A2 GA|`,
+AB|c2 B2|A2 `,
       contour: {
         sortKey: "ХФУТ"
       }
@@ -4534,10 +4534,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Gmajor
-|:B>c de|dB Bd|`,
+B>c de|dB Bd|`,
       contour: {
         sortKey: "ХФЧЩЫ",
         durations: [
@@ -4574,10 +4574,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Dmajor
-|:AD FA|dc AB|`,
+AD FA|dc AB|`,
       contour: {
         sortKey: "ЩСХЩ"
       }
@@ -4608,10 +4608,10 @@ B>c|:d/e/d/c/ BG|DG B2|B/d/c/B/ AG|c2 A>B|
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Gmajor
-B>c|:d/e/d/c/ BG|DG `,
+B>c|d/e/d/c/ BG|DG `,
       contour: {
         sortKey: "ЩЫЩЧХС",
         durations: [
@@ -4655,10 +4655,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Dmajor
-|:dA FA|dc d/e/f/e/|`,
+dA FA|dc d/e/f/e/|`,
       contour: {
         sortKey: "ЯЩХЩ"
       }
@@ -4684,10 +4684,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Gmajor
-|:g>f gd|BG GA/B/|`,
+g>f gd|BG GA/B/|`,
       contour: {
         sortKey: "ЯЮЭЯЩ",
         durations: [
@@ -4724,10 +4724,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:2/4
+L:1/8
 K:Dmajor
-|:f|a2 af/a/|ba fa|`,
+f|a2 af/a/|ba f`,
       contour: {
         sortKey: "зжзгз",
         durations: [
@@ -4851,10 +4851,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:A,2 EA, B,G,G,B,|(3A,A,A, EG FDEG|`,
+A,2 EA, B,G,G,B,|(3A,A,A, EG FDEG|`,
       contour: {
         sortKey: "ГВЛГЕББЕ"
       }
@@ -4883,10 +4883,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:EA,~A,2 E2DB,|G,B,~B,2 G,A,B,D|`,
+EA,~A,2 E2DB,|G,B,~B,2 G,A,B,D|`,
       contour: {
         sortKey: "ЛГГВЛКЙЕ"
       }
@@ -4985,10 +4985,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:A,B,DE FDED|B,EED EDB,D|`,
+A,B,DE FDED|B,EED EDB,D|`,
       contour: {
         sortKey: "ЛНСУХСУС"
       }
@@ -5015,10 +5015,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:GE|DEGA BABd|egg2 agef|`,
+GE|DEGA BABd|egg2 ag`,
       contour: {
         sortKey: "ЛНСУХУХЩ"
       }
@@ -5110,10 +5110,10 @@ K:Bminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Bminor
-|:FBBA B2FB|dBcB BAFA|`,
+FBBA B2FB|dBcB BAFA|`,
       contour: {
         sortKey: "ЛССПСРЛС"
       }
@@ -5139,10 +5139,10 @@ K:Gdorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gdorian
-|:DGGF G2 Ac|BG (3GGG dGBG|`,
+DGGF G2 Ac|BG (3GGG dGBG|`,
       contour: {
         sortKey: "ЛССПСРУЧ"
       }
@@ -5168,10 +5168,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:EAA2 ABcA|EAFA GAEA|`,
+EAA2 ABcA|EAFA GAEA|`,
       contour: {
         sortKey: "ЛССРСУХС"
       }
@@ -5200,10 +5200,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:DG~G2 AG (3GGG|DG~G2 cAFA|`,
+DG~G2 AG (3GGG|DG~G2 cAFA|`,
       contour: {
         sortKey: "ЛССРУСССС",
         durations: [
@@ -5247,10 +5247,10 @@ K:Bminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Bminor
-|:FB B2 fB B2|dcBc AE E2|`,
+FB B2 fB B2|dcBc AE E2|`,
       contour: {
         sortKey: "ЛССРЩССР"
       }
@@ -5276,10 +5276,10 @@ K:Gminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gminor
-|:GF|DG ~G2 dGcG|dGcA GFDC|`,
+GF|DG ~G2 dGcG|dGcA GF`,
       contour: {
         sortKey: "ЛССРЩСЧС"
       }
@@ -5305,8 +5305,8 @@ EAAB cABd|cABA G2GF|GABG EAAB|cABd cABG|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
 EAAB cABd|cABA G2GF|`,
       contour: {
@@ -5335,10 +5335,10 @@ K:Gdorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gdorian
-|:F|DGGA BABF|DFF2 DFCF|`,
+F|DGGA BABF|DFF2 DFC`,
       contour: {
         sortKey: "ЛССУХУХП"
       }
@@ -5364,10 +5364,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:B,E (3EEE B,EFE|EDB,D A,DFD|`,
+B,E (3EEE B,EFE|EDB,D A,DFD|`,
       contour: {
         sortKey: "ЛССССЛСУС",
         durations: [
@@ -5413,10 +5413,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:DGBG ^DGcG|DGBG AGFG|`,
+DGBG ^DGcG|DGBG AGFG|`,
       contour: {
         sortKey: "ЛСХСЛСЧС"
       }
@@ -5443,10 +5443,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:DGBG dGBG|~c3 d efga|`,
+DGBG dGBG|~c3 d efga|`,
       contour: {
         sortKey: "ЛСХСЩСХС"
       }
@@ -5473,10 +5473,10 @@ K:Bminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Bminor
-|:FBfe dB (3BBB|Aced cA A2|`,
+FBfe dB (3BBB|Aced cA A2|`,
       contour: {
         sortKey: "ЛСЩЧХСССС",
         durations: [
@@ -5519,8 +5519,8 @@ EAAB GABG|EAAB G2ED|EAA2 GABd|edge dBAG|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
 EAAB GABG|EAAB G2ED|`,
       contour: {
@@ -5549,10 +5549,10 @@ A2-|:AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EAAc B2 cB|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
-A2-|:AGEC D2 CD|EA,A,B, CD `,
+A2-|AGEC D2 CD|EA,A,B, CD `,
       contour: {
         sortKey: "СПЛЗЙИЗЙ"
       }
@@ -5576,10 +5576,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G2DG EGDE|G2BG AGEF|`,
+G2DG EGDE|G2BG AGEF|`,
       contour: {
         sortKey: "СРЛСНСЛН"
       }
@@ -5606,10 +5606,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G3 D E2 DB,|G,A,B,D EGDB,|`,
+G3 D E2 DB,|G,A,B,D EGDB,|`,
       contour: {
         sortKey: "СРРЛНМЛЗ"
       }
@@ -5634,10 +5634,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:B|A3B A2GE|A2GA BddB|`,
+B|A3B A2GE|A2GA Bdd`,
       contour: {
         sortKey: "СРРУСРПЛ"
       }
@@ -5661,10 +5661,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:A2AG A2cA|EGDE GEDG|`,
+A2AG A2cA|EGDE GEDG|`,
       contour: {
         sortKey: "СРСПСРХС"
       }
@@ -5691,8 +5691,8 @@ G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG EDB,D|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
 G2 GA BA A2|bgag egdB|`,
       contour: {
@@ -5723,10 +5723,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:D2DF ADFA|dfed B3c|`,
+D2DF ADFA|dfed B3c|`,
       contour: {
         sortKey: "СРСХЩСХЩ"
       }
@@ -5758,8 +5758,8 @@ C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Cdorian
 C2DB,C2DF|GFGAB4-|`,
       contour: {
@@ -5788,10 +5788,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:D2 EF ED D2|d2 ef edBA|`,
+D2 EF ED D2|d2 ef edBA|`,
       contour: {
         sortKey: "СРУХУССР"
       }
@@ -5821,8 +5821,8 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
 D2 (3FED ADFD|E2=cE dEcE|`,
       contour: {
@@ -5867,10 +5867,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:D2 (3FED ADFA|Ad~d2 Adfd|`,
+D2 (3FED ADFA|Ad~d2 Adfd|`,
       contour: {
         sortKey: "СРХУСЩСХЩ",
         durations: [
@@ -5913,8 +5913,8 @@ G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
 G2 BG FGAF|(3GGG Ac BdcA|`,
       contour: {
@@ -5941,10 +5941,10 @@ K:Aminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Aminor
-|:A2 cA ABcA|GcEG G2 EG|`,
+A2 cA ABcA|GcEG G2 EG|`,
       contour: {
         sortKey: "СРХССУХС"
       }
@@ -6002,10 +6002,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G2 BG AGBG|B2 BA BcBA|`,
+G2 BG AGBG|B2 BA BcBA|`,
       contour: {
         sortKey: "СРХСУСХС"
       }
@@ -6029,10 +6029,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G2BG cGBG|ADDE FGAF|`,
+G2BG cGBG|ADDE FGAF|`,
       contour: {
         sortKey: "СРХСЧСХС"
       }
@@ -6059,10 +6059,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:D2 FD GEFE|(3DDD FA d2 ef|`,
+D2 FD GEFE|(3DDD FA d2 ef|`,
       contour: {
         sortKey: "СРХСЧУХУ"
       }
@@ -6088,10 +6088,10 @@ K:Dmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmixolydian
-|:D2 FD ADFD|ABcA G~E3|`,
+D2 FD ADFD|ABcA G~E3|`,
       contour: {
         sortKey: "СРХСЩСХС"
       }
@@ -6116,10 +6116,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:G2BG dGBG|G/G/G BG AFDF|`,
+G2BG dGBG|G/G/G BG AFDF|`,
       contour: {
         sortKey: "СРХСЩСХС"
       }
@@ -6146,10 +6146,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:D2 FA d2 cA|BAGB AFDF|`,
+D2 FA d2 cA|BAGB AFDF|`,
       contour: {
         sortKey: "СРХЩЯЮЭЩ"
       }
@@ -6179,10 +6179,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:A2eA cAeA|ABcd edBA|`,
+A2eA cAeA|ABcd edBA|`,
       contour: {
         sortKey: "СРЩСХСЩС"
       }
@@ -6207,10 +6207,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:E2BE dEBE|E2BE AFDF|`,
+E2BE dEBE|E2BE AFDF|`,
       contour: {
         sortKey: "СРЩСЭСЩС"
       }
@@ -6237,10 +6237,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:A2 ed BedB|AG (3GGG AGEG|`,
+A2 ed BedB|AG (3GGG AGEG|`,
       contour: {
         sortKey: "СРЩЧУЩЧУ"
       }
@@ -6267,10 +6267,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:E (3EEE F GE (3EEE|B2AB AGED|`,
+E (3EEE F GE (3EEE|B2AB AGED|`,
       contour: {
         sortKey: "ССССУХСССС",
         durations: [
@@ -6329,10 +6329,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:DF F2 AFAB|d2 fe dBAF|`,
+DF F2 AFAB|d2 fe dBAF|`,
       contour: {
         sortKey: "СХХФЩХЩЫ"
       }
@@ -6360,10 +6360,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:DFAF DFAF|EGAG EGAG|`,
+DFAF DFAF|EGAG EGAG|`,
       contour: {
         sortKey: "СХЩХСХЩХ"
       }
@@ -6390,10 +6390,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:DFAd f2 fe|dcde fdAF|`,
+DFAd f2 fe|dcde fdAF|`,
       contour: {
         sortKey: "СХЩЯгвгб"
       }
@@ -6417,10 +6417,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
-|:(3AAA Ag fdec|A2 A=c BG(3GGG|`,
+(3AAA Ag fdec|A2 A=c BG(3GGG|`,
       contour: {
         sortKey: "ССССЭЫЧЩХ",
         durations: [
@@ -6465,10 +6465,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-|:B|A/A/A (BA) GAAB|A/A/A (BA) edde|`,
+B|A/A/A (BA) GAAB|A/A/A (BA) edd`,
       contour: {
         sortKey: "СССУСПССУ",
         durations: [
@@ -6506,10 +6506,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:(3FED AD FDAD|FAAF GFEC|`,
+(3FED AD FDAD|FAAF GFEC|`,
       contour: {
         sortKey: "ХУСЩСХСЩС",
         durations: [
@@ -6555,10 +6555,10 @@ B|:AFFCF2Ac|dfcf AGGB|AFFC DEFd|cAfc AFFB:|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Fmajor
-B|:AFFCF2Ac|dfcf AGG`,
+B|AFFCF2Ac|dfcf AGG`,
       contour: {
         sortKey: "ХССЛСРХЩ"
       }
@@ -6585,10 +6585,10 @@ K:Bminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Bminor
-|:dB~B2 FB~B2|dfBd f2ed|`,
+dB~B2 FB~B2|dfBd f2ed|`,
       contour: {
         sortKey: "ХССРЛССР"
       }
@@ -6612,10 +6612,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:GE~E2 E2AF|GE~E2 AFDF|`,
+GE~E2 E2AF|GE~E2 AFDF|`,
       contour: {
         sortKey: "ХССРСРЧУ"
       }
@@ -6641,8 +6641,8 @@ dc|BG G2 AGFG|DG G2 A2 dc|BG G2 AGAB|cABG A2 dc|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
 dc|BG G2 AGFG|DG G2 A2 `,
       contour: {
@@ -6674,10 +6674,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:BG~G2 AGFG|EG~G2 AEGE|`,
+BG~G2 AGFG|EG~G2 AEGE|`,
       contour: {
         sortKey: "ХССРУСПС"
       }
@@ -6702,10 +6702,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:FDDF ABAF|GAAF GFED|`,
+FDDF ABAF|GAAF GFED|`,
       contour: {
         sortKey: "ХССХЩЫЩХ"
       }
@@ -6732,10 +6732,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:BG (3GGG BGdG|BG (3GGG Bdgd|`,
+BG (3GGG BGdG|BG (3GGG Bdgd|`,
       contour: {
         sortKey: "ХССССХСЩС",
         durations: [
@@ -6777,10 +6777,10 @@ AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
-AB|:cBAB cdec|d2 gd BG`,
+AB|cBAB cdec|d2 gd BG`,
       contour: {
         sortKey: "ХУСУХЧЩХ"
       }
@@ -6807,10 +6807,10 @@ K:Ddorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Ddorian
-|:DE||F2DE F2DE|FEFG ECCE|`,
+DE||F2DE F2DE|FEFG EC`,
       contour: {
         sortKey: "ХФСУХФСУ"
       }
@@ -6837,10 +6837,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
-|:ed|c2B2 ABcd|egfg edBd|`,
+ed|c2B2 ABcd|egfg ed`,
       contour: {
         sortKey: "ХФУТСУХЧ"
       }
@@ -6866,10 +6866,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:G3B A3B|G3B AFDF|`,
+G3B A3B|G3B AFDF|`,
       contour: {
         sortKey: "ХФФЩЧЦЦЩ"
       }
@@ -6898,10 +6898,10 @@ A2G2 S|:F3d dcde|d2A2 F2A2|G3d dcde|d2B2 G2B2|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-A2G2 S|:F3d dcde|d2A2 `,
+A2G2 |F3d dcde|d2A2 `,
       contour: {
         sortKey: "ХФФЯЯЭЯб"
       }
@@ -6928,10 +6928,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:B2 BG ABGE|DGBG A3 c|`,
+B2 BG ABGE|DGBG A3 c|`,
       contour: {
         sortKey: "ХФХСУХСН"
       }
@@ -6959,8 +6959,8 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
 ~B2BA BAGA|B2GB AGEG|`,
       contour: {
@@ -7028,10 +7028,10 @@ K:Dmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmixolydian
-|:AG|~F2 FG ~A3B|cAdB cABG|`,
+AG|~F2 FG ~A3B|cAdB cA`,
       contour: {
         sortKey: "ХФХЧЩШШЫ"
       }
@@ -7058,10 +7058,10 @@ AAG|:F2AF DFAF|G2BG DGBG|A2cA EABc|dzde edAG|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-AAG|:F2AF DFAF|G2BG D`,
+AAG|F2AF DFAF|G2BG D`,
       contour: {
         sortKey: "ХФЩХСХЩХ"
       }
@@ -7087,10 +7087,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:F2 AF GFED|DFAF GFED|`,
+F2 AF GFED|DFAF GFED|`,
       contour: {
         sortKey: "ХФЩХЧХУС"
       }
@@ -7119,10 +7119,10 @@ EF|:GBEG (3BBB AF|GFGA BdAG|FADF ADFA|(3ddd cd BAGF|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-EF|:GBEG (3BBB AF|GFGA Bd`,
+EF|GBEG (3BBB AF|GFGA Bd`,
       contour: {
         sortKey: "ХЩСХЩЩЩЧУ",
         durations: [
@@ -7169,10 +7169,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:FA(3AAA FADF|ADFA BAFD|`,
+FA(3AAA FADF|ADFA BAFD|`,
       contour: {
         sortKey: "ХЩЩЩЩХЩСХ",
         durations: [
@@ -7216,10 +7216,10 @@ K:Dminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dminor
-|:FdcB AGFD|G2 dG eGdG|`,
+FdcB AGFD|G2 dG eGdG|`,
       contour: {
         sortKey: "ХЯЭЫЩЧХС"
       }
@@ -7331,8 +7331,8 @@ e|B<E Ec B2 Bc|BE (3EEE cBGe|BE (3EEE B2GB|cBce fefg|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Emajor
 e|B<E Ec B2 Bc|BE (3EEE cBG`,
       contour: {
@@ -7374,8 +7374,8 @@ a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
 a3 g|eA ~A2 cdec|degd `,
       contour: {
@@ -7403,10 +7403,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:dG G2 dGeG|d2 de dcAB|`,
+dG G2 dGeG|d2 de dcAB|`,
       contour: {
         sortKey: "ЩССРЩСЫС"
       }
@@ -7432,10 +7432,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:BE~E2 BAFA|BE~E2 BAFA|`,
+BE~E2 BAFA|BE~E2 BAFA|`,
       contour: {
         sortKey: "ЩССРЩЧУЧ"
       }
@@ -7464,10 +7464,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:B(E ~E2) B2 AF|{e}(3cBB AF AdAG|FDAD A,DAD`,
+B(E ~E2) B2 AF|{e}(3cBB AF AdA`,
       contour: {
         sortKey: "ЩССРЩШЧУ"
       }
@@ -7494,10 +7494,10 @@ K:Eminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Eminor
-|:GA|BE (3EEE Gz BG|AcBA GEDE|`,
+GA|BE (3EEE Gz BG|AcBA GE`,
       contour: {
         sortKey: "ЩССССХ_ЩХ",
         durations: [
@@ -7541,10 +7541,10 @@ Bc|:dGBd c=FAc|BGBd gfdc|Bcde =fdeg|fdBd c=FAc|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-Bc|:dGBd c=FAc|BGBd gf`,
+Bc|dGBd c=FAc|BGBd gf`,
       contour: {
         sortKey: "ЩСХЩЧПУЧ"
       }
@@ -7573,10 +7573,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:B|AF~F2 DEFA|dfaf eB~B2|`,
+B|AF~F2 DEFA|dfaf eB~B2`,
       contour: {
         sortKey: "ЩХХФСУХЩ"
       }
@@ -7607,10 +7607,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:AF F2 DF F2|AF F2 ABde|`,
+AF F2 DF F2|AF F2 ABde|`,
       contour: {
         sortKey: "ЩХХФСХХФ"
       }
@@ -7637,10 +7637,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:AF F2 EFDE|F2 AF BFAF|`,
+AF F2 EFDE|F2 AF BFAF|`,
       contour: {
         sortKey: "ЩХХФУХСУ"
       }
@@ -7669,10 +7669,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:dB~B2 dBGB|dA~A2 dAFA|`,
+dB~B2 dBGB|dA~A2 dAFA|`,
       contour: {
         sortKey: "ЩХХФЩХСХ"
       }
@@ -7697,10 +7697,10 @@ B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-B|:AGFE D2FD|GEFE Ddc`,
+B|AGFE D2FD|GEFE Ddc`,
       contour: {
         sortKey: "ЩЧХУСРХС"
       }
@@ -7782,10 +7782,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gmajor
-|:d2BG d2BG|d2BG AGEG|`,
+d2BG d2BG|d2BG AGEG|`,
       contour: {
         sortKey: "ЩШХСЩШХС"
       }
@@ -7812,10 +7812,10 @@ K:Bdorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Bdorian
-|:f2ef dB~B2|f2ef defg|`,
+f2ef dB~B2|f2ef defg|`,
       contour: {
         sortKey: "ЩШЧЩХССР"
       }
@@ -7866,10 +7866,10 @@ K:Gminor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Gminor
-(3ABc|:d2 cd BGGB|AFcF dF`,
+(3ABc|d2 cd BGGB|AFcF dF`,
       contour: {
         sortKey: "ЩШЧЩХССХ"
       }
@@ -7896,8 +7896,8 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
 (3Bcd|e2df eABd|~e3c d2`,
       contour: {
@@ -7925,10 +7925,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-|:B2Ad BEED|EB,EB ~B2EB|`,
+B2Ad BEED|EB,EB ~B2EB|`,
       contour: {
         sortKey: "ЩШЧЭЩССП"
       }
@@ -7953,10 +7953,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:~A3G FAdB|AGFD EA,~A,2|`,
+~A3G FAdB|AGFD EA,~A,2|`,
       contour: {
         sortKey: "ЩШШЧХЩЯЫ"
       }
@@ -7982,10 +7982,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:A3 B AFDF|A2 FA GECE|`,
+A3 B AFDF|A2 FA GECE|`,
       contour: {
         sortKey: "ЩШШЫЩХСХ"
       }
@@ -8012,10 +8012,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:dB|A2dA (3Bcd AF|DFAF EA,CE|`,
+dB|A2dA (3Bcd AF|DFAF EA,`,
       contour: {
         sortKey: "ЩШЯЩЫЭЯЩХ",
         durations: [
@@ -8061,10 +8061,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:FG|A2df edcB|ABAG F2EF|`,
+FG|A2df edcB|ABAG F2`,
       contour: {
         sortKey: "ЩШЯгбЯЭЫ"
       }
@@ -8090,10 +8090,10 @@ K:Dmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmixolydian
-|(3AAA GB A2 dB|cBcG EFGB|`,
+(3AAA GB A2 dB|cBcG EFGB|`,
       contour: {
         sortKey: "ЩЩЩЧЫЩШЯЫ",
         durations: [
@@ -8169,10 +8169,10 @@ K:Fmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Fmajor
-|:d2cA dAcA|GcAF GAFD|`,
+d2cA dAcA|GcAF GAFD|`,
       contour: {
         sortKey: "ЫЪЩХЫХЩХ"
       }
@@ -8203,10 +8203,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:cFAc fdBF|cFce dFBd|`,
+cFAc fdBF|cFce dFBd|`,
       contour: {
         sortKey: "ЭХЩЭгЯЫХ"
       }
@@ -8233,10 +8233,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:dD~D2 FDFA|dfaf gfec|`,
+dD~D2 FDFA|dfaf gfec|`,
       contour: {
         sortKey: "ЯССРХСХЩ"
       }
@@ -8264,10 +8264,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
-|:aA~A2 cAeA|Bcde f2fg|`,
+aA~A2 cAeA|Bcde f2fg|`,
       contour: {
         sortKey: "ЯССРХСЩС"
       }
@@ -8295,8 +8295,8 @@ ABc||dD (3DDD EDB,E|DEFA BAFA|d2cd (3Bcd AF|DEFD EDB,D|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
 ABc||dD (3DDD EDB,E|DEFA B`,
       contour: {
@@ -8341,10 +8341,10 @@ gf|:eBBA A~B3|dBAc BAGF|EDB,D G2 FG|EDB,E DB,A,G,|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Eminor
-gf|:eBBA A~B3|dBAc BA`,
+gf|eBBA A~B3|dBAc BA`,
       contour: {
         sortKey: "ЯЩЩЧЧЩШШ"
       }
@@ -8370,10 +8370,10 @@ gf|:eB~B2 eBdB|AF~F2 EDB,A,|B,E~E2 B,EGE|FB~B2 FBdf|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Edorian
-gf|:eB~B2 eBdB|AF~F2 ED`,
+gf|eB~B2 eBdB|AF~F2 ED`,
       contour: {
         sortKey: "ЯЩЩШЯЩЭЩ"
       }
@@ -8397,10 +8397,10 @@ K:Ddorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Ddorian
-|:dcAG ~F2EF|~E2 DE FD D2|`,
+dcAG ~F2EF|~E2 DE FD D2|`,
       contour: {
         sortKey: "ЯЭЩЧХФУХ"
       }
@@ -8427,8 +8427,8 @@ d2 Ad fdAF|GFEF GABc|d2 Ad fdAF|GAAG FDDd|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
 d2 Ad fdAF|GFEF GABc|`,
       contour: {
@@ -8456,8 +8456,8 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Eminor
 e2 dB eBdB|A2 GA Bd d2|`,
       contour: {
@@ -8485,10 +8485,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:d2dA BAGB|AFBF A~F3|`,
+d2dA BAGB|AFBF A~F3|`,
       contour: {
         sortKey: "ЯЮЯЩЫЩЧЫ"
       }
@@ -8515,8 +8515,8 @@ eg|a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 eg|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
 eg|a2 ab ageg|a2 ab ag`,
       contour: {
@@ -8544,10 +8544,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:AB|d2fd Adfe|defg afdf|`,
+AB|d2fd Adfe|defg af`,
       contour: {
         sortKey: "ЯЮгЯЩЯгб"
       }
@@ -8573,10 +8573,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:d2fd gefe|dfed cdec|`,
+d2fd gefe|dfed cdec|`,
       contour: {
         sortKey: "ЯЮгЯебгб"
       }
@@ -8601,10 +8601,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:A|defe dBAF|BFAF E3A|`,
+A|defe dBAF|BFAF E3`,
       contour: {
         sortKey: "ЯбгбЯЫЩХ"
       }
@@ -8630,10 +8630,10 @@ K:Cmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Cmajor
-|:d2 cA GE E2|DEcE dEcE|`,
+d2 cA GE E2|DEcE dEcE|`,
       contour: {
         sortKey: "баЯЫЩХХФ"
       }
@@ -8663,10 +8663,10 @@ geg|:decd BcAB|GG G3 geg|decd BcAc|BB B3 geg|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Cmajor
-geg|:decd BcAB|GG G3 `,
+geg|decd BcAB|GG G3 `,
       contour: {
         sortKey: "бгЯбЭЯЫЭ"
       }
@@ -8692,10 +8692,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:fdec d2AG|FGAB =cAGc|`,
+fdec d2AG|FGAB =cAGc|`,
       contour: {
         sortKey: "гЯбЭЯЮЩЧ"
       }
@@ -8721,10 +8721,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:fedf edcB|A2FA DAFA|`,
+fedf edcB|A2FA DAFA|`,
       contour: {
         sortKey: "гбЯгбЯЭЫ"
       }
@@ -8749,10 +8749,10 @@ K:Dmixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmixolydian
-|:fage d2dB|AD (3FED EFGB|`,
+fage d2dB|AD (3FED EFGB|`,
       contour: {
         sortKey: "гзебЯЮЯЫ"
       }
@@ -8812,10 +8812,10 @@ AG|:F2 A AFA B=cB A2 G|F2 A d2 e ~f3 fef|
         }
       ],
       incipit: `X:1
-L:1/8
 M:12/8
+L:1/8
 K:Dmajor
-AG|:F2 A AFA B=cB A2 G|F2 A d2 `,
+AG|F2 A AFA B=cB A2 G|F2 A d2 `,
       contour: {
         sortKey: "ХФЩЩХЩЫЭЫЩШЧ"
       }
@@ -8841,11 +8841,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:12/8
+L:1/8
 K:Dmajor
-|:A2D FED F2A A2f|gfe fed e2d BdB|
-A2D FED `,
+A2D FED F2A A2f|gfe fed `,
       contour: {
         sortKey: "ЩШСХУСХФЩЩШг"
       }
@@ -8871,10 +8870,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:12/8
+L:1/8
 K:Amajor
-|:e3 ede f2e d2f|edB d2B A2B d3|e3 ede `,
+e3 ede f2e d2f|edB d2B `,
       contour: {
         sortKey: "ЩШШЩЧЩЫЪЩЧЦЫ"
       }
@@ -8901,10 +8900,10 @@ g3|:fed B2d A2d F2B|A2F DEF E3 E2g|
         }
       ],
       incipit: `X:1
-L:1/8
 M:12/8
+L:1/8
 K:Dmajor
-g3|:fed B2d A2d F2B|A2F `,
+g3|fed B2d A2d F2B|A2F `,
       contour: {
         sortKey: "гбЯЫЪЯЩШЯХФЫ"
       }
@@ -8931,8 +8930,8 @@ D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G GFD G2F|
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gminor
 D2G GFD G2F|D2G GFD Bcd|`,
       contour: {
@@ -8961,10 +8960,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Amajor
-|:E2 c E2 c cBA|E2 c E2 c cBA|`,
+E2 c E2 c cBA|E2 c E2 c cBA|`,
       contour: {
         sortKey: "ЛКХЛКХХУС"
       }
@@ -8990,10 +8989,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Amajor
-|:F2c BA~F- F2E|F2c BAc fec|`,
+F2c BA~F- F2E|F2c BAc fec|`,
       contour: {
         sortKey: "НМХУСНММЛ"
       }
@@ -9021,10 +9020,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gmajor
-|:FGA AFA c2A|BAG F/G/AF GED|`,
+FGA AFA c2A|BAG F/G/AF GED|`,
       contour: {
         sortKey: "ПСУУПУЧЦУ"
       }
@@ -9081,10 +9080,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Adorian
-|:A3 ABA AGE|A2 EG2 E DEG|`,
+A3 ABA AGE|A2 EG2 E DEG|`,
       contour: {
         sortKey: "СРРСУССПЛ"
       }
@@ -9165,10 +9164,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gmajor
-|:G2B BAG ABc|d2g gfd BcA|`,
+G2B BAG ABc|d2g gfd BcA|`,
       contour: {
         sortKey: "СРХХУСУХЧ"
       }
@@ -9195,8 +9194,8 @@ D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF AFE|
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Dmajor
 D2F FED EFA|d2f fed efa|`,
       contour: {
@@ -9223,10 +9222,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gmajor
-|:AAA dcA d2c|AGA dcA GFG|`,
+AAA dcA d2c|AGA dcA GFG|`,
       contour: {
         sortKey: "УУУЩЧУЩШЧ"
       }
@@ -9254,10 +9253,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Amixolydian
-|:c2A AEA ABA|cBc Ace ded|`,
+c2A AEA ABA|cBc Ace ded|`,
       contour: {
         sortKey: "ХФССЛССУС"
       }
@@ -9281,10 +9280,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gmajor
-|:B2 G AGE GED|E/F/GE DEG A2 c|`,
+B2 G AGE GED|E/F/GE DEG A2 c|`,
       contour: {
         sortKey: "ХФСУСНСНЛ"
       }
@@ -9309,10 +9308,10 @@ K:Gmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gmajor
-|:B3 BAB c3|BAG B/c/dB ABc|`,
+B3 BAB c3|BAG B/c/dB ABc|`,
       contour: {
         sortKey: "ХФФХУХЧЦЦ"
       }
@@ -9377,10 +9376,10 @@ d|:cAG GAG GBd|cAG GAB cAd|cAG GAG GAG|1 cAA fed cAd:|2 cAA fed cAG||
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Gmajor
-d|:cAG GAG GBd|cAG GAB cA`,
+d|cAG GAG GBd|cAG GAB cA`,
       contour: {
         sortKey: "ЧУССУССХЩ"
       }
@@ -9409,10 +9408,10 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Adorian
-|:edB ABA Agf|edB def gfg|`,
+edB ABA Agf|edB def gfg|`,
       contour: {
         sortKey: "ЩЧУСУССЭЫ"
       }
@@ -9436,10 +9435,10 @@ K:Edorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:9/8
+L:1/8
 K:Edorian
-|:B2E E2F G2A|Bcd e2c d3|`,
+B2E E2F G2A|Bcd e2c d3|`,
       contour: {
         sortKey: "ЩШССРУХФЧ"
       }
@@ -9578,8 +9577,8 @@ K:Adorian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Adorian
 [A,2E2] ~(3A,/B,/A,/A, E>A,B,>A,|G,>A,B,>G D<G,`,
       contour: {
@@ -9646,8 +9645,8 @@ A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
 A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|`,
       contour: {
@@ -9712,10 +9711,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
-|:A,>EC>E (3D/D/D/D F>D|E>Ac>A B<B, B,2| `,
+A,>EC>E (3D/D/D/D F>D|E>Ac>A B<B, B,2| `,
       contour: {
         sortKey: "ГВЛЗЖЛЙЙЙЙНМЙ",
         durations: [
@@ -9781,8 +9780,8 @@ B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>ED/C/B,/A,/ G,>B,|~A,>A E>D C<A, 
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
 B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>`,
       contour: {
@@ -9847,10 +9846,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
-|:AFEF AB c2|(3dcB cA BAFA|`,
+AFEF AB c2|(3dcB cA BAFA|`,
       contour: {
         sortKey: "СНЛНСУХФ"
       }
@@ -9878,10 +9877,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amajor
-(3EFG|:A2c>A E>Ac>e|a2g>a f>a`,
+(3EFG|A2c>A E>Ac>e|a2g>a f>a`,
       contour: {
         sortKey: "СРХФСЛКСХФЩ",
         durations: [
@@ -9936,10 +9935,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-|:A|D2 F>A D>A F<A|A,2 C>E A,>E C<E|`,
+A|D2 F>A D>A F<A|A,2 C>E A,>E C<E`,
       contour: {
         sortKey: "СРХФЩСРЩХЩШ",
         durations: [
@@ -10005,8 +10004,8 @@ A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
 A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cB`,
       contour: {
@@ -10084,8 +10083,8 @@ A|BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGGA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Eminor
 A|BEBE cBcA|BEBE cAF`,
       contour: {
@@ -10114,10 +10113,10 @@ O:Cape Breton
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
-F>G|:A>BA>F !uppermordent!E2F>uG|A>B!uppermordent!A>F A/A/A `,
+F>G|A>BA>F E2F>uG|A>BA>F A/A/A `,
       contour: {
         sortKey: "ЩШЫЩШХУТХФЧ",
         durations: [
@@ -10171,8 +10170,8 @@ A2 B>c d2 A>F|G2 E<D E2 G2|A<AB>c d2 F>G|A2 G<E D2 D2-|HD8||
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Dmajor
 A2 B>c d2 A>F|G2 E<D E2 G2|`,
       contour: {
@@ -10218,10 +10217,10 @@ K:Amixolydian
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
-|:B/c/d[A3e3] f e^d e2|efed BA B/c/d|e2 efed .g2|`,
+B/c/d[A3e3] f e^d e2|efe`,
       contour: {
         sortKey: "ЩЫЩЧУСУХЧ",
         durations: [
@@ -10257,8 +10256,8 @@ a|f2 e>c e>fae|f2 ec fBBa|f2 e>c e>fae|faec eAAa|
         }
       ],
       incipit: `X:1
-L:1/8
 M:4/4
+L:1/8
 K:Amixolydian
 a|f2 e>c e>fae|f2 ec fBB`,
       contour: {
@@ -10306,10 +10305,10 @@ K:Amajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/2
+L:1/8
 K:Amajor
-|:{g}a4 e2fg agfe|(3cdcA2 .a2(A2 cdec)|a4 e2fg agfe|`,
+{g}a4 e2fg agfe|(3cdcA2 .a2(A2 cde`,
       contour: {
         sortKey: "ХЧХСРЯЮСРХЧЩХ",
         durations: [
@@ -10405,10 +10404,10 @@ DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Gmajor
-DE|:G2G2DE|G2G2Bd|e2d2`,
+DE|G2G2DE|G2G2Bd|e2d2`,
       contour: {
         sortKey: "СРСРЛН"
       }
@@ -10438,10 +10437,10 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Dmajor
-FG|:A3d AF|G2A2 FD|=C2 (D4`,
+FG|A3d AF|G2A2 FD|=C2 (D4`,
       contour: {
         sortKey: "ЩШШЯЩХ"
       }
@@ -10472,8 +10471,8 @@ d3gdc|B2{F}G2G2|d3gdB|c3edc|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Gminor
 d3gdc|B2{F}G2G2|d3gd`,
       contour: {
@@ -10506,10 +10505,10 @@ K:Dmajor
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Dmajor
-|:d3 e d2|d2 c2 B2|A3 B A2|`,
+d3 e d2|d2 c2 B2|A3 B A2|`,
       contour: {
         sortKey: "ЯЮЮбЯЮ"
       }
@@ -10536,10 +10535,10 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
         }
       ],
       incipit: `X:1
-L:1/8
 M:3/4
+L:1/8
 K:Dmajor
-de|:f3e d2|d2 de d2|B4 `,
+de|f3e d2|d2 de d2|B4 `,
       contour: {
         sortKey: "гввбЯЮ"
       }
