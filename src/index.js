@@ -179,14 +179,18 @@ function collapseNotes(tuneIndex, refIndex) {
 
 function canBeCompared(tune1, tune2) {
 	if (!tune1.abc || !tune2.abc) return false;
-	if (!tune1.contour) {
-		tune1.contour = getContourFromFullAbc(tune1.abc);
-	}
-	if (!tune2.contour) {
-		tune2.contour = getContourFromFullAbc(tune2.abc);
+	try {
+		if (!tune1.contour) {
+			tune1.contour = getContourFromFullAbc(tune1.abc);
+		}
+		if (!tune2.contour) {
+			tune2.contour = getContourFromFullAbc(tune2.abc);
+		}
+	} catch (error) {
+		console.log(error);
 	}
 	if (!tune1.contour || !tune2.contour) return false;
-
+	// return true;
 	//can compare all the different reels
 	if (
 		tune1.rhythm?.indexOf("reel") >= 0 &&
@@ -203,6 +207,12 @@ function canBeCompared(tune1, tune2) {
 	) {
 		return false;
 	}
+	const comparable = [["jig", "slide"]];
+	comparable.forEach((list) => {
+		if (list.indexOf(tune1.rhythm) >= 0 && list.indexOf(tune2.rhythm) >= 0) {
+			return true;
+		}
+	});
 
 	return tune1.rhythm === tune2.rhythm;
 }
@@ -736,8 +746,13 @@ function renderTable() {
     </div>`;
 
 		row.innerHTML = `
-                    <td>${title}
-                    <div id="${incipitId}" class="incipitClass"></div></td>
+    <td>
+        <div class="tune-header">
+            <div class="tune-title">${title}</div>
+            <div class="tune-contour">${tune.contour?.svg || ""}</div>
+        </div>
+        <div id="${incipitId}" class="incipitClass"></div>
+    </td>
                     <td><span class="badge">${tune.key}</span></td>
                     <td><span class="badge">${tune.rhythm}</span></td>
                     <td class="references">${referencesHtml}</td>

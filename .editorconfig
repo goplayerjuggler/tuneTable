@@ -17,7 +17,7 @@ charset = utf-8
 indent_style = tab
 
 # Ignore paths
-[{tunes.json,**/*tunebook*}.js,log.md]
+[{tunes.json.js,**/*tunebook*}.js,log.md]
 charset = unset
 end_of_line = unset
 insert_final_newline = unset

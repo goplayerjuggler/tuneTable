@@ -1,6 +1,6 @@
 import { normaliseKey } from "@goplayerjuggler/abc-tools";
 
-import { getIncipit } from "@goplayerjuggler/abc-tools";
+import { getIncipit, getContour } from "@goplayerjuggler/abc-tools";
 function parseAbc(abc) {
 	const lines = abc.split("\n"),
 		metadata = {},
@@ -87,7 +87,18 @@ function processTuneData(tune) {
 			}
 		});
 		if (!tune.incipit) {
-			processed.incipit = getIncipit({ abc: abcArray[0] });
+			try {
+				processed.incipit = getIncipit({ abc: abcArray[0] });
+			} catch (error) {
+				console.log(error);
+			}
+		}
+		if (!tune.contour) {
+			try {
+				processed.contour = getContour(abcArray[0]);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 		processed.rhythm = processed.rhythm?.toLowerCase();
 	}

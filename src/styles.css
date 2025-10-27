@@ -260,6 +260,27 @@ tbody tr:nth-child(even) {
   text-decoration: underline;
 }
 
+.tune-header {
+  display: flex;
+  align-items: center;
+  gap: 0; /* space between title and contour */
+  margin-bottom: 0; /* space before the score */
+}
+
+.tune-title {
+  flex: 0 0 auto; /* don't grow or shrink */
+  font-weight: bold; /* or whatever styling you want */
+}
+
+.tune-contour {
+  flex: 1 1 auto; /* take remaining space */
+  display: flex;
+  align-items: center;
+}
+/* 
+svg.contour {
+} */
+
 .no-results {
   text-align: center;
   padding: 40px;

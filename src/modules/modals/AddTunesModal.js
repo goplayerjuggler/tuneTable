@@ -1,5 +1,6 @@
 import BaseModal from "./BaseModal.js";
 import processTuneData from "../../processTuneData.js";
+import { getTunes } from "@goplayerjuggler/abc-tools";
 
 /**
  * Add Tunes Modal
@@ -20,8 +21,8 @@ import processTuneData from "../../processTuneData.js";
 
  */
 export default class AddTunesModal extends BaseModal {
-    static getTemplate() {
-    return `
+	static getTemplate() {
+		return `
 <div id="addTunesModal" class="modal add-tunes-modal">
   <div class="modal-content">
     <div class="modal-header">
@@ -59,135 +60,108 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
   </div>
 </div>
     `;
-  }
+	}
 
-  constructor(callbacks) {
-    super("addTunesModal");
+	constructor(callbacks) {
+		super("addTunesModal");
 
-    this.callbacks = callbacks;
+		this.callbacks = callbacks;
 
-    this.elements = {
-      closeBtn: document.getElementById("closeAddTunesBtn"),
-      input: document.getElementById("abcInput"),
-      clearBtn: document.getElementById("clearAbcBtn"),
-      addBtn: document.getElementById("addAbcBtn"),
-      status: document.getElementById("addTunesStatus"),
-    };
+		this.elements = {
+			closeBtn: document.getElementById("closeAddTunesBtn"),
+			input: document.getElementById("abcInput"),
+			clearBtn: document.getElementById("clearAbcBtn"),
+			addBtn: document.getElementById("addAbcBtn"),
+			status: document.getElementById("addTunesStatus"),
+		};
 
-    this.setupControls();
-  }
+		this.setupControls();
+	}
 
-  setupControls() {
-    this.elements.closeBtn?.addEventListener("click", () => this.close());
-    this.elements.clearBtn?.addEventListener("click", () => this.clear());
-    this.elements.addBtn?.addEventListener("click", () => this.addTunes());
-  }
+	setupControls() {
+		this.elements.closeBtn?.addEventListener("click", () => this.close());
+		this.elements.clearBtn?.addEventListener("click", () => this.clear());
+		this.elements.addBtn?.addEventListener("click", () => this.addTunes());
+	}
 
-  clear() {
-    this.elements.input.value = "";
-    this.elements.status.style.display = "none";
-  }
+	clear() {
+		this.elements.input.value = "";
+		this.elements.status.style.display = "none";
+	}
 
-  showStatus(message, type = "error") {
-    this.elements.status.style.display = "block";
+	showStatus(message, type = "error") {
+		this.elements.status.style.display = "block";
 
-    if (type === "success") {
-      this.elements.status.style.background = "#efe";
-      this.elements.status.style.color = "#2a7";
-    } else {
-      this.elements.status.style.background = "#fee";
-      this.elements.status.style.color = "#c33";
-    }
+		if (type === "success") {
+			this.elements.status.style.background = "#efe";
+			this.elements.status.style.color = "#2a7";
+		} else {
+			this.elements.status.style.background = "#fee";
+			this.elements.status.style.color = "#c33";
+		}
 
-    this.elements.status.textContent = message;
-  }
+		this.elements.status.textContent = message;
+	}
 
-  splitAbcTunes(abcText) {
-    const tunes = [];
-    let currentTune = "";
-    const lines = abcText.split("\n");
+	addTunes() {
+		const abcText = this.elements.input.value.trim();
 
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+		if (!abcText) {
+			this.showStatus("Please paste some ABC notation first.");
+			return;
+		}
 
-      if (line.trim().match(/^X:\s*\d+/)) {
-        if (currentTune.trim()) {
-          tunes.push(currentTune.trim());
-        }
-        currentTune = line + "\n";
-      } else {
-        currentTune += line + "\n";
-      }
-    }
+		try {
+			const abcTunes = getTunes(abcText);
+			let addedCount = 0,
+				failedCount = 0;
 
-    if (currentTune.trim()) {
-      tunes.push(currentTune.trim());
-    }
+			abcTunes.forEach((abc) => {
+				try {
+					if (abc.trim()) {
+						const newTune = {
+							abc,
+						};
 
-    if (tunes.length === 0 && abcText.trim()) {
-      return abcText.split(/\n\s*\n/).filter((t) => t.trim());
-    }
+						const processed = processTuneData(newTune);
+						window.tunesData.push(processed);
+						addedCount++;
+					}
+				} catch (error) {
+					failedCount++;
 
-    return tunes;
-  }
+					this.showStatus(`Failed - nb failures: ${failedCount}`, "error");
+				}
+			});
 
-  addTunes() {
-    const abcText = this.elements.input.value.trim();
+			if (addedCount > 0) {
+				this.callbacks.sortWithDefaultSort();
+				this.callbacks.saveTunesToStorage();
+				this.callbacks.populateFilters();
+				this.callbacks.applyFilters();
 
-    if (!abcText) {
-      this.showStatus("Please paste some ABC notation first.");
-      return;
-    }
+				this.showStatus(
+					`Successfully added ${addedCount} tune${
+						addedCount !== 1 ? "s" : ""
+					}!`,
+					"success"
+				);
 
-    try {
-      const abcTunes = this.splitAbcTunes(abcText);
-      let addedCount = 0;
+				this.elements.input.value = "";
 
-      abcTunes.forEach((abc) => {
-        if (abc.trim()) {
-          const newTune = {
-            abc: abc,
-            name: "",
-            key: "",
-            rhythm: "",
-            references: [],
-            scores: [],
-          };
+				setTimeout(() => {
+					this.close();
+				}, 1500);
+			} else {
+				this.showStatus("No valid tunes found in the ABC notation.");
+			}
+		} catch (error) {
+			this.showStatus(`Error processing ABC: ${error.message}`);
+		}
+	}
 
-          const processed = processTuneData(newTune);
-          window.tunesData.push(processed);
-          addedCount++;
-        }
-      });
-
-      if (addedCount > 0) {
-        this.callbacks.sortWithDefaultSort();
-        this.callbacks.saveTunesToStorage();
-        this.callbacks.populateFilters();
-        this.callbacks.applyFilters();
-
-        this.showStatus(
-          `Successfully added ${addedCount} tune${
-            addedCount !== 1 ? "s" : ""
-          }!`,
-          "success"
-        );
-
-        this.elements.input.value = "";
-
-        setTimeout(() => {
-          this.close();
-        }, 1500);
-      } else {
-        this.showStatus("No valid tunes found in the ABC notation.");
-      }
-    } catch (error) {
-      this.showStatus(`Error processing ABC: ${error.message}`);
-    }
-  }
-
-  onOpen() {
-    this.elements.status.style.display = "none";
-    this.elements.input.value = "";
-  }
+	onOpen() {
+		this.elements.status.style.display = "none";
+		this.elements.input.value = "";
+	}
 }

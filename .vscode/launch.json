@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch custom script",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\tmp\\s.mjs"
+      "program": "${workspaceFolder}\\dev\\get-contours.mjs"
       // "${workspaceFolder}\\test\\manipulation.js"
     },
     // {
@@ -41,11 +41,13 @@
       "webRoot": "${workspaceFolder}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
-        "webpack:///*": "${workspaceFolder}/*"
+        "webpack-internal:///*": "${workspaceFolder}/*",
+        "webpack-internal:///./src/*": "${workspaceFolder}/src/*",
+        "webpack:///./src/*": "${workspaceFolder}/src/*",
+        "webpack:///./*": "${workspaceFolder}/*"
       },
-      "preLaunchTask": "npm: dev",
-      "timeout": 30000,
       "trace": true
     }
   ]
 }
+//webpack://tunetable/src/index.js?e25a
