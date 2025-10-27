@@ -7,6 +7,7 @@ mytunebook*.js
 *workspace
 **/251010**/*
 **/tmp/**/*
+*.backup
 # Dependency directories
 node_modules/
 dist/
