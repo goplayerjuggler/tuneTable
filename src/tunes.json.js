@@ -7286,30 +7286,26 @@ DGGF G2 Ac|BG (3GGG dGBG|`,
       }
     },
     {
-      abc: `X:1
-T:The Guns Of The Magnificent Seven
-C:Fintan McManus
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/40#setting40
-N:Setting entered in thesession by user Jeremy on 2001-05-21
-K:Adorian
-|:EAA2 ABcA|EAFA GAEA|EAA2 ABcd|egdB BAA2:|
- |:ABcd eAA2|gedB BAGB|ABcd eaaf|gedB BAA2:|
- |:egdB A2|egdB GABd|eBdB Aa2f|gedB BAA2:|`,
+      abc: `X: 7
+T: The Guns Of The Magnificent Seven
+R: reel
+M: 4/4
+L: 1/16
+K: Ador
+EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
+|:ABcd eAA2 gedc BAGB|ABcd eaaf gedB BAA2 :|
+|: [M:7/8] e/f/gdBA2 e/f/gdB GABd|[M:4/4]eBdA a3f gedB [1BAA2 :| [2 BAAG !D.C.! |]`,
       scores: [
         {
-          url: "https://thesession.org/tunes/40#setting40",
-          name: "thesession.org"
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/40"
         }
       ],
       incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-EAA2 ABcA|EAFA GAEA|`,
+M: 4/4
+L: 1/16
+K: Ador
+EAAG ABcA EAFA GEDG|EAAG ABcd `,
       contour: {
         sortKey: "ЛССРСУХС",
         svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
@@ -12291,6 +12287,55 @@ d2 Ad fdAF|GFEF GABc|`,
     },
     {
       abc: `X:1
+T:The Tempest
+R:reel
+L:1/8
+M:4/4
+N:Imported into *tuneTable* on 2025-10-27,
+N:from https://thesession.org/tunes/1004#setting14222
+N:Setting entered in thesession by user birlibirdie on 2012-07-19
+K:Edorian
+|:e2dB AFF2|EFdF eFdF|e2dB AF F2|EFBF AFEF|
+ e2dB AFF2|EFdF eFdF|EFGB AFdF|FEdA FEE2:|
+ e2fe dBAB|Beed BAFA|e2fe defg|fedf e3B|
+ fgeg fedB|edBA BAFA|EFGB AFdF|FEdA FEE2:|`,
+      scores: [
+        {
+          name: "thesession.org",
+          url: "https://thesession.org/tunes/1004#setting14222"
+        }
+      ],
+      incipit: `X:1
+M:4/4
+L:1/8
+K:Edorian
+e2dB AFF2|EFdF eFdF|`,
+      contour: {
+        sortKey: "ЯЮЭЩЧУУТСУ",
+        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
+  <rect width="170" height="47" fill="white"/>
+  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
+  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
+  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="85" y1="21" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="100" y1="31" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="115" y1="31" x2="130" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
+  <line x1="130" y1="31" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="130" y1="36" x2="145" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="145" y1="36" x2="145" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  <line x1="145" y1="31" x2="160" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+</svg>`
+      }
+    },
+    {
+      abc: `X:1
 T:Johnny When You Die
 R:reel
 L:1/8
@@ -12567,51 +12612,6 @@ A|defe dBAF|BFAF E3`,
   <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
   <line x1="115" y1="26" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
   <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
-    },
-    {
-      abc: `X:1
-T:The Tempest
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/1004#setting1004
-N:Setting entered in thesession by user PCL on 2002-10-01
-K:Cmajor
-|:d2 cA GE E2|DEcE dEcE|d2 cA GE E2|DEAE GEDE|
- d2 cA GE E2|DEcE dEcE|DEFA GEcE|EDcG ED D2:|
- |:d2 ed cAGA|Addc AGEG|d2 ed cdef|edce d3 z|
- efdf edcA|dcAG AGEG|DEFA GEcE|EDcG ED D2:|`,
-      scores: [
-        {
-          url: "https://thesession.org/tunes/1004#setting1004",
-          name: "thesession.org"
-        }
-      ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Cmajor
-d2 cA GE E2|DEcE dEcE|`,
-      contour: {
-        sortKey: "баЯЫЩХХФ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="52" viewBox="0 0 140 52" role="img">
-  <rect width="140" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="130" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="31" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
 </svg>`
       }
     },
