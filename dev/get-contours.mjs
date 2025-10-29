@@ -86,7 +86,7 @@ async function process() {
       try {
         if (
           !tune.contour ||
-          true //!! force complete rerun
+          //true //!! force complete rerun
         ) {
           const incipit = getIncipitForContourGeneration(abcString);
           // Generate contour

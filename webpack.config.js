@@ -1,10 +1,10 @@
-import path from "path";
 import { fileURLToPath } from "url";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import HtmlInlineScriptPlugin from "html-inline-script-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import HtmlInlineCssWebpackPluginModule from "html-inline-css-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
+import HtmlInlineCssWebpackPluginModule from "html-inline-css-webpack-plugin";
+import HtmlInlineScriptPlugin from "html-inline-script-webpack-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
 const HtmlInlineCssWebpackPlugin =
 	HtmlInlineCssWebpackPluginModule.default || HtmlInlineCssWebpackPluginModule;
 
@@ -52,7 +52,7 @@ export default (env, argv) => {
 					: {
 							collapseWhitespace: true,
 							removeComments: true,
-					  },
+						},
 			}),
 			// Extract CSS to temporary file in production (will be inlined)
 			...(!isDevelopment
@@ -60,7 +60,7 @@ export default (env, argv) => {
 						new MiniCssExtractPlugin({
 							filename: "styles.css",
 						}),
-				  ]
+					]
 				: []),
 			// Inline both CSS and JS in production
 			...(isDevelopment
@@ -71,7 +71,7 @@ export default (env, argv) => {
 							htmlMatchPattern: [/index.html$/],
 							scriptMatchPattern: [/bundle.*.js$/],
 						}),
-				  ]),
+					]),
 		],
 		devServer: {
 			static: "./dist",

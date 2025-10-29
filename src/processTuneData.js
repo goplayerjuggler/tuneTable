@@ -5,7 +5,6 @@ import {
 	normaliseKey,
 } from "@goplayerjuggler/abc-tools";
 
-import {} from "@goplayerjuggler/abc-tools";
 function parseAbc(abc) {
 	const lines = abc.split("\n"),
 		metadata = {},
@@ -101,7 +100,8 @@ function processTuneData(tune) {
 		if (!tune.contour) {
 			try {
 				processed.contour = getContour(
-					getIncipitForContourGeneration(abcArray[0])
+					getIncipitForContourGeneration(abcArray[0]),
+					{ withSvg: true },
 				);
 			} catch (error) {
 				console.log(error);

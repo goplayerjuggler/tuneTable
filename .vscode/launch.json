@@ -7,9 +7,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch custom script",
+      "name": "Format tunes file",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\dev\\get-contours.mjs"
+      "program": "${workspaceFolder}\\dev\\format.mjs"
       // "${workspaceFolder}\\test\\manipulation.js"
     },
     // {

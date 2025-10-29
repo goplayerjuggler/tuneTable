@@ -11,20 +11,6 @@
   "keywords": [],
   "author": "",
   "description": "",
-  "devDependencies": {
-    "css-loader": "^7.1.2",
-    "css-minimizer-webpack-plugin": "^7.0.2",
-    "eslint": "^9.37.0",
-    "html-inline-css-webpack-plugin": "^1.11.2",
-    "html-inline-script-webpack-plugin": "^3.2.1",
-    "html-webpack-plugin": "^5.6.4",
-    "json-loader": "^0.5.7",
-    "mini-css-extract-plugin": "^2.9.4",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.102.0",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
-  },
   "license": "SEE LICENSE IN LICENSE-CODE AND LICENSE-DATA",
   "licenses": [
     {
@@ -44,7 +30,21 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "^1.0.6",
+    "@goplayerjuggler/abc-tools": "^1.0.7",
     "abcjs": "6.5.1"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "html-inline-css-webpack-plugin": "^1.11.2",
+    "html-inline-script-webpack-plugin": "^3.2.1",
+    "html-webpack-plugin": "^5.6.4",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^2.9.4",
+    "prettier": "^3.6.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   }
 }

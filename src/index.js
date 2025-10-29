@@ -5,25 +5,28 @@ import {
 	normaliseKey,
 	compare,
 	getContourFromFullAbc,
+	//contourToSvg,
 } from "@goplayerjuggler/abc-tools";
 
 import processTuneData from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
-import ModalManager from "./modules/modals/ModalManager.js";
 import AbcModal from "./modules/modals/AbcModal.js";
 import EditModal from "./modules/modals/EditModal.js";
+import AddTunesModal from "./modules/modals/AddTunesModal.js";
+import LoadJsonModal from "./modules/modals/LoadJsonModal.js";
 
 import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
+
 const STORAGE_KEY = "tunesData";
 
 const getEmptySort = () => {
 	return { column: null, direction: "asc" };
 };
 let currentSort = getEmptySort();
-let modalManager, editModal;
+let editModal, addTunesModal, loadJsonModal;
 
 // Local Storage Functions
 function saveTunesToStorage() {
@@ -81,9 +84,11 @@ function copyTunesToClipboard() {
 		});
 		tune.references = tune.references?.filter((r) => !r.fromAbc);
 
-		//temp !! todo
-		// delete tune.contour;
-		if (tune.contour) delete tune.contour.debugPositions;
+		if (tune.abc) {
+			//delete data that's derived from the abc in 99% of cases
+			delete tune.contour;
+			delete tune.incipit;
+		}
 	});
 	const result = javascriptify(tunesData);
 	navigator.clipboard.writeText(result).then(
@@ -98,7 +103,7 @@ function copyTunesToClipboard() {
 		(err) => {
 			console.error("Failed to copy:", err);
 			alert("Failed to copy to clipboard");
-		}
+		},
 	);
 }
 
@@ -146,10 +151,10 @@ function deleteTune(tuneIndex) {
 
 function expandNotes(tuneIndex, refIndex) {
 	const truncated = document.querySelector(
-		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`,
 	);
 	const full = document.querySelector(
-		`.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+		`.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`,
 	);
 
 	if (truncated && full) {
@@ -160,10 +165,10 @@ function expandNotes(tuneIndex, refIndex) {
 
 function collapseNotes(tuneIndex, refIndex) {
 	const truncated = document.querySelector(
-		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`,
 	);
 	const full = document.querySelector(
-		`.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
+		`.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`,
 	);
 
 	if (truncated && full) {
@@ -178,13 +183,15 @@ function collapseNotes(tuneIndex, refIndex) {
 // }
 
 function canBeCompared(tune1, tune2) {
-	if (!tune1.abc || !tune2.abc) return false;
+	//todo: use a Tune class and expose abcOrIncipit
+	if ((!tune1.abc && !tune1.incipit) || (!tune2.abc && !tune2.incipit))
+		return false;
 	try {
 		if (!tune1.contour) {
-			tune1.contour = getContourFromFullAbc(tune1.abc);
+			tune1.contour = getContourFromFullAbc(tune1.abc || tune1.incipit);
 		}
 		if (!tune2.contour) {
-			tune2.contour = getContourFromFullAbc(tune2.abc);
+			tune2.contour = getContourFromFullAbc(tune2.abc || tune2.incipit);
 		}
 	} catch (error) {
 		console.log(error);
@@ -207,14 +214,17 @@ function canBeCompared(tune1, tune2) {
 	) {
 		return false;
 	}
-	const comparable = [["jig", "slide"]];
+	const comparable = [
+		["jig", "slide"],
+		["hornpipe", "barndance"],
+	];
 	comparable.forEach((list) => {
 		if (list.indexOf(tune1.rhythm) >= 0 && list.indexOf(tune2.rhythm) >= 0) {
 			return true;
 		}
 	});
 
-	return tune1.rhythm === tune2.rhythm;
+	return tune1.rhythm?.toLowerCase() === tune2.rhythm.toLowerCase();
 }
 
 function sortWithDefaultSort() {
@@ -231,20 +241,20 @@ function sortWithDefaultSort() {
 				const comparison = canBeCompared(a, b)
 					? compare(a.contour, b.contour)
 					: a.contour && !b.contour
-					? -1
-					: b.contour && !a.contour
-					? 1
-					: a.rhythm !== b.rhythm
-					? a.rhythm < b.rhythm
 						? -1
-						: 1
-					: a.name !== b.name
-					? a.name < b.name
-						? -1
-						: 1
-					: 0;
+						: b.contour && !a.contour
+							? 1
+							: a.rhythm !== b.rhythm
+								? a.rhythm < b.rhythm
+									? -1
+									: 1
+								: a.name !== b.name
+									? a.name < b.name
+										? -1
+										: 1
+									: 0;
 				return comparison;
-			}
+			},
 
 		// a.rhythm !== b.rhythm
 		// 	? a.rhythm < b.rhythm
@@ -289,7 +299,7 @@ function initialiseData() {
 		applyFilters();
 	});
 
-	// Initialise modal manager with callbacks
+	// Initialise modals with callbacks
 	let callbacks = {
 		saveTunesToStorage,
 		populateFilters,
@@ -297,19 +307,20 @@ function initialiseData() {
 		renderTable,
 		sortWithDefaultSort,
 	};
-	modalManager = new ModalManager(callbacks);
+
 	editModal = new EditModal(callbacks);
+	addTunesModal = new AddTunesModal(callbacks);
+	loadJsonModal = new LoadJsonModal(callbacks);
 
 	window.tunesData = [];
 	window.filteredData = [];
 	const storedData = loadTunesFromStorage();
 
-	//! todo - revise - no need to resort when loading from local storage(?)
-	// if (storedData) {
-	// 	console.log("Loading from local storage");
-	// 	window.tunesData = storedData;
-	// } else
-	{
+	//! todo - revise - no need to sort when loading from local storage(?)
+	if (storedData) {
+		console.log("Loading from local storage");
+		window.tunesData = storedData;
+	} else {
 		console.log("Loading from tunesDataRaw and processing");
 		window.tunesData = tunesDataRaw.tunes
 			.filter((t) => t !== undefined)
@@ -324,7 +335,7 @@ function initialiseData() {
 		let g = params.get("g");
 		if (g) {
 			window.tunesData = window.tunesData.filter((tune) =>
-				tune.groups?.toLowerCase().includes(g.toLowerCase())
+				tune.groups?.toLowerCase().includes(g.toLowerCase()),
 			);
 		}
 	}
@@ -356,7 +367,7 @@ function initialiseData() {
 function populateFilters() {
 	const rhythms = [
 		...new Set(
-			tunesData.map((tune) => tune.rhythm?.toLowerCase()).filter((r) => r)
+			tunesData.map((tune) => tune.rhythm?.toLowerCase()).filter((r) => r),
 		),
 	].sort();
 	const keys = [
@@ -364,7 +375,7 @@ function populateFilters() {
 			tunesData
 				.map((tune) => tune.key)
 				.filter((k) => k)
-				.map((k) => normaliseKey(k).join(" "))
+				.map((k) => normaliseKey(k).join(" ")),
 		),
 	].sort();
 
@@ -389,258 +400,6 @@ function openAbcModal(tune) {
 	abcModal.openWithTune(tune);
 }
 
-function closeAddTunesModal() {
-	const modal = document.getElementById("addTunesModal");
-	modal.classList.remove("active");
-}
-
-function splitAbcTunes(abcText) {
-	const tunes = [];
-	let currentTune = "";
-	const lines = abcText.split("\n");
-
-	for (let i = 0; i < lines.length; i++) {
-		const line = lines[i];
-
-		if (line.trim().match(/^X:\s*\d+/)) {
-			if (currentTune.trim()) {
-				tunes.push(currentTune.trim());
-			}
-			currentTune = line + "\n";
-		} else {
-			currentTune += line + "\n";
-		}
-	}
-
-	if (currentTune.trim()) {
-		tunes.push(currentTune.trim());
-	}
-
-	if (tunes.length === 0 && abcText.trim()) {
-		return abcText.split(/\n\s*\n/).filter((t) => t.trim());
-	}
-
-	return tunes;
-}
-
-function addTunesFromAbc() {
-	const abcInput = document.getElementById("abcInput");
-	const statusDiv = document.getElementById("addTunesStatus");
-	const abcText = abcInput.value.trim();
-
-	if (!abcText) {
-		statusDiv.style.display = "block";
-		statusDiv.style.background = "#fee";
-		statusDiv.style.color = "#c33";
-		statusDiv.textContent = "Please paste some ABC notation first.";
-		return;
-	}
-
-	try {
-		const abcTunes = splitAbcTunes(abcText);
-		let addedCount = 0;
-
-		abcTunes.forEach((abc) => {
-			if (abc.trim()) {
-				const newTune = {
-					abc: abc,
-					name: "",
-					key: "",
-					rhythm: "",
-					references: [],
-					scores: [],
-				};
-
-				const processed = processTuneData(newTune);
-				window.tunesData.push(processed);
-				addedCount++;
-			}
-		});
-
-		if (addedCount > 0) {
-			sortWithDefaultSort();
-
-			saveTunesToStorage();
-			populateFilters();
-			applyFilters();
-
-			statusDiv.style.display = "block";
-			statusDiv.style.background = "#efe";
-			statusDiv.style.color = "#2a7";
-			statusDiv.textContent = `Successfully added ${addedCount} tune${
-				addedCount !== 1 ? "s" : ""
-			}!`;
-
-			abcInput.value = "";
-
-			setTimeout(() => {
-				closeAddTunesModal();
-			}, 1500);
-		} else {
-			statusDiv.style.display = "block";
-			statusDiv.style.background = "#fee";
-			statusDiv.style.color = "#c33";
-			statusDiv.textContent = "No valid tunes found in the ABC notation.";
-		}
-	} catch (error) {
-		statusDiv.style.display = "block";
-		statusDiv.style.background = "#fee";
-		statusDiv.style.color = "#c33";
-		statusDiv.textContent = `Error processing ABC: ${error.message}`;
-	}
-}
-
-function loadJson() {
-	const jsonInput = document.getElementById("jsonInput");
-	const statusDiv = document.getElementById("loadJsonStatus");
-	const jsonText = jsonInput.value.trim();
-
-	if (!jsonText) {
-		statusDiv.style.display = "block";
-		statusDiv.style.background = "#fee";
-		statusDiv.style.color = "#c33";
-		statusDiv.textContent = "Please paste data first.";
-		return;
-	}
-
-	if (!confirm("This will replace ALL existing tunes. Continue?")) {
-		return;
-	}
-
-	try {
-		let parsedData;
-
-		// Try JSON first (safer)
-		try {
-			parsedData = JSON.parse(jsonText);
-		} catch (jsonError) {
-			// Fall back to JavaScript literal evaluation
-			try {
-				const evaluateJS = new Function("return (" + jsonText + ")");
-				parsedData = evaluateJS();
-			} catch (jsError) {
-				throw new Error(
-					`Failed to parse as JSON or JavaScript literal.\n` +
-						`JSON error: ${jsonError.message}\n` +
-						`JS error: ${jsError.message}`
-				);
-			}
-		}
-
-		if (!Array.isArray(parsedData)) {
-			throw new Error("Data must be an array of tune objects");
-		}
-
-		// Process and validate the data
-		window.tunesData = parsedData
-			.filter((t) => t !== undefined && t !== null)
-			.map(processTuneData);
-		sortWithDefaultSort();
-
-		saveTunesToStorage();
-		populateFilters();
-		applyFilters();
-
-		statusDiv.style.display = "block";
-		statusDiv.style.background = "#efe";
-		statusDiv.style.color = "#2a7";
-		statusDiv.textContent = `Successfully loaded ${tunesData.length} tune${
-			window.tunesData.length !== 1 ? "s" : ""
-		}!`;
-
-		jsonInput.value = "";
-
-		setTimeout(() => {
-			closeLoadJsonModal();
-		}, 1500);
-	} catch (error) {
-		statusDiv.style.display = "block";
-		statusDiv.style.background = "#fee";
-		statusDiv.style.color = "#c33";
-		statusDiv.textContent = `Error loading JSON: ${error.message}`;
-	}
-}
-
-function toggleView() {
-	const abcRendered = document.getElementById("abcRendered");
-	const abcText = document.getElementById("abcText");
-	const toggleBtn = document.getElementById("toggleViewBtn");
-
-	if (currentViewMode === "rendered") {
-		currentViewMode = "text";
-		abcRendered.style.display = "none";
-		abcText.classList.add("active");
-		toggleBtn.textContent = "Show Rendered";
-	} else {
-		currentViewMode = "rendered";
-		abcRendered.style.display = "block";
-		abcText.classList.remove("active");
-		toggleBtn.textContent = "Show ABC Text";
-	}
-}
-
-function navigateAbc(direction) {
-	currentAbcIndex += direction;
-	if (currentAbcIndex < 0) currentAbcIndex = currentAbcArray.length - 1;
-	if (currentAbcIndex >= currentAbcArray.length) currentAbcIndex = 0;
-
-	currentTuneAbc = currentAbcArray[currentAbcIndex];
-	currentTranspose = 0;
-	updateAbcDisplay();
-	updateNavigationButtons();
-}
-
-function updateNavigationButtons() {
-	const prevBtn = document.getElementById("prevAbcBtn");
-	const nextBtn = document.getElementById("nextAbcBtn");
-	const counter = document.getElementById("abcCounter");
-
-	if (currentAbcArray.length > 1) {
-		prevBtn.style.display = "inline-block";
-		nextBtn.style.display = "inline-block";
-		counter.style.display = "inline-block";
-		counter.textContent = `${currentAbcIndex + 1} / ${currentAbcArray.length}`;
-	} else {
-		prevBtn.style.display = "none";
-		nextBtn.style.display = "none";
-		counter.style.display = "none";
-	}
-}
-
-function transposeAbc(semitones) {
-	currentTranspose += semitones;
-	updateAbcDisplay();
-}
-
-function updateAbcDisplay() {
-	const abcTextContent = document.getElementById("abcTextContent");
-	const abcRendered = document.getElementById("abcRendered");
-
-	let transposedAbc = currentTuneAbc;
-
-	if (currentTranspose !== 0) {
-		transposedAbc = transposeAbcNotation(currentTuneAbc, currentTranspose);
-	}
-
-	abcTextContent.textContent = transposedAbc;
-
-	abcRendered.innerHTML = "";
-	AbcJs.renderAbc("abcRendered", transposedAbc, {
-		scale: 1.0,
-		staffwidth: 900,
-		paddingtop: 10,
-		paddingbottom: 10,
-		paddingright: 20,
-		paddingleft: 20,
-		responsive: "resize",
-	});
-}
-
-function transposeAbcNotation(abc, transposeAmount) {
-	var visualObj = AbcJs.renderAbc("*", abc);
-	return AbcJs.strTranspose(abc, visualObj, transposeAmount);
-}
-
 function renderTable() {
 	const tbody = document.getElementById("tunesTableBody");
 
@@ -663,7 +422,7 @@ function renderTable() {
 					.replace(/\n/g, "<br />")
 					.replace(
 						/\[([^\]]+)\]\(([^)]+)\)/g,
-						'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+						'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
 					)
 					.replace(/https?:\/\/[^\s<>"']+/g, (url) => {
 						try {
@@ -719,7 +478,7 @@ function renderTable() {
 
 		const hasAbc = !!tune.abc;
 		const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
-
+		// debugger;
 		let incipitId = `incipit${index}`;
 		let title = `<div class="tune-header">
       ${
@@ -749,7 +508,7 @@ function renderTable() {
     <td>
         <div class="tune-header">
             <div class="tune-title">${title}</div>
-            <div class="tune-contour">${tune.contour?.svg || ""}</div>
+            ${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
         </div>
         <div id="${incipitId}" class="incipitClass"></div>
     </td>
@@ -788,9 +547,8 @@ function renderTable() {
 			});
 		}
 	});
-	document.getElementById(
-		"spCount"
-	).innerText = `${filteredData.length}/${tunesData.length}`;
+	document.getElementById("spCount").innerText =
+		`${filteredData.length}/${tunesData.length}`;
 }
 
 function applyFilters() {
@@ -807,7 +565,7 @@ function applyFilters() {
 			tune.references.some(
 				(ref) =>
 					ref.artists?.toLowerCase().includes(searchTerm) ||
-					ref.notes?.toLowerCase().includes(searchTerm)
+					ref.notes?.toLowerCase().includes(searchTerm),
 			);
 
 		const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
@@ -821,7 +579,7 @@ function applyFilters() {
 
 function filterByName(searchTerm) {
 	window.filteredData = window.tunesData.filter((tune) =>
-		tune.name?.toLowerCase().includes(searchTerm.toLowerCase())
+		tune.name?.toLowerCase().includes(searchTerm.toLowerCase()),
 	);
 
 	renderTable();
@@ -855,7 +613,7 @@ function sortData(column) {
 
 	const currentTh = document.querySelector(`th[data-column="${column}"]`);
 	currentTh?.classList?.add(
-		currentSort.direction === "asc" ? "sort-asc" : "sort-desc"
+		currentSort.direction === "asc" ? "sort-asc" : "sort-desc",
 	);
 
 	renderTable();
@@ -882,12 +640,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Modal button event listeners
 	document.getElementById("addTunesBtn").addEventListener("click", (e) => {
 		e.preventDefault();
-		modalManager.openAddTunes();
+		addTunesModal.open();
 	});
 
 	document.getElementById("loadJsonBtn").addEventListener("click", (e) => {
 		e.preventDefault();
-		modalManager.openLoadJson();
+		loadJsonModal.open();
 	});
 
 	// Dropdown menu toggle

@@ -21,32 +21,10 @@ FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
 `,
       references: [
         {
-          notes: "1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
-        }
+          notes:
+            "1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)",
+        },
       ],
-      incipit: `X:1
-M: 2/2
-L: 1/8
-K: D
-FD ~D2 FD ~D2|AFdA FD ~D2|FDFA B<GE`,
-      contour: {
-        sortKey: "ХССРХССР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -65,32 +43,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/3515#setting3515",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-D2GA B2B2|(3ABA GA B<d dg|`,
-      contour: {
-        sortKey: "ЛКСУХФХФ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -112,34 +67,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2067#setting2067",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A,B,DE DD DE|(3FED FA dDcd|`,
-      contour: {
-        sortKey: "ЛНСУСССУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="130" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -166,32 +96,9 @@ D|:G3A B3A|GAGE D3E|GABd edgd|eege edBA|
       scores: [
         {
           url: "https://thesession.org/tunes/16299#setting30857",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-D|G3A B3A|GAGE D3`,
-      contour: {
-        sortKey: "СРРУХФФУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -213,33 +120,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1726#setting1726",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G3B d2Bd|e/g/e dB d2BA|`,
-      contour: {
-        sortKey: "СРРХЩШХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -259,47 +142,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/20543#setting40673",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2 (3GGG G2G2|GABc dBGB|`,
-      contour: {
-        sortKey: "СРССССРСР",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="12" viewBox="0 0 140 12" role="img">
-  <rect width="140" height="12" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="50" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="1" x2="60" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -320,30 +165,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/3536#setting3536",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A/|F2 F2 A2 A2|G>FG>A B2 B2`,
-      contour: {
-        sortKey: "ХФХФЩШЩШ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -366,30 +190,6 @@ K: A
 |:"A"(e2 e)e .e2 e2 BccB ABce|"D"(f2 f)f .f2 f2 "A"BccB ABcd|
 (e2 e)e .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [1 A2 Ac:| [2 A2 AB||
 `,
-      incipit: `X:1
-M: 4/2
-L: 1/8
-K: A
-c3c .c2c2 BcBA F2 EF|A3c e2`,
-      contour: {
-        sortKey: "ХФХХХФХФУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="22" viewBox="0 0 170 22" role="img">
-  <rect width="170" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="160" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="160" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -410,34 +210,6 @@ K: G
 "Emin"dG GA B2 AG B2d2 "C"g3e|"G"d2de "D"dB Ad "G"B2 .G2 G2:|
 |: Bd|"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2 de dB GA "D"B2 A2 A2 Bd|
 "G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2de "D"dB Ad "G"B2 .G2 G2:|`,
-      incipit: `X:1
-M: 4/2
-L: 1/8
-K: G
-ge|dG GA B2AG d2 .G2 G2 ge|dG GA B2`,
-      contour: {
-        sortKey: "ЩССУХФУСЩШ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="32" viewBox="0 0 170 32" role="img">
-  <rect width="170" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="160" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="160" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -460,32 +232,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/4321#setting4321",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-d2 d2 dB ed|B2 B2 BA GB|`,
-      contour: {
-        sortKey: "ЯЮЯЮЯЫбЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="52" viewBox="0 0 140 52" role="img">
-  <rect width="140" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="130" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -500,35 +249,6 @@ K: E dorian
 "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "A"AG"Bm"FE "Bm"FD"Em"E2 :|
 |: "Em"B2Bc "A"dedc  "Em".B2B2 "D"AGFE  "Em"B2AG "Bm"F2E2 |
 [M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`,
-      incipit: `X:1
-M: 6/4
-L: 1/16
-K: E dorian
-EFGE FGA2  AGFE GAB2  BdcB AGFE |`,
-      contour: {
-        sortKey: "СУХСУХЧЦЧХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="27" viewBox="0 0 170 27" role="img">
-  <rect width="170" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="160" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="160" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -552,38 +272,9 @@ e2|:fdAd f2fa gece g2ge| fdAd f2fe[1 defd e2de:|[2 defd e2df||
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/8204#setting52726"
-        }
+          url: "https://thesession.org/tunes/8204#setting52726",
+        },
       ],
-      incipit: `X:1
-M:4/2
-L:1/8
-K:Dmajor
-e2|:fdAd f2fa gece g2ge| fdAd`,
-      contour: {
-        sortKey: "гЯЩЯгвгзеб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="67" viewBox="0 0 170 67" role="img">
-  <rect width="170" height="67" fill="white"/>
-  <line x1="10" y1="56" x2="160" y2="56" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="16" x2="160" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: [
@@ -598,39 +289,14 @@ K:Gmajor
 |:"G" D2 G G2 A B2 d|"C" ege d2 e g3|"G" D2 G G2 B d2 B|"Am"AGA B2 G "D"E2 G|
  "G" D2 G G2 A B2 d|"C" ege d2 e "D"g2 a|"Em"b2 a g2 e d2 B|"Am"AGA B2 G E2 G:|
  "C" B2 d d2 B d2 B|"D" dBd e2 f "G"g3|"C" B2 d d2 B d2 B|"Am"AGA B2 G E2 G|
- "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`
+ "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`,
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/1340#setting14690",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-D2 G G2 A B2 d| ege d2 e g3| D2 G`,
-      contour: {
-        sortKey: "ЛКССРУХФЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="47" viewBox="0 0 155 47" role="img">
-  <rect width="155" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="145" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -661,28 +327,6 @@ P:Ⅱ
 "G"~b2 ag fd|"Am"ea2g fd|"C"{d}e2 dc BG|"G"DG2B Ad|
 "G"~b2 ag fd|"Am"ea2g fd|"Am/C"{d}e2 dc BA|"D"GB Ac BA!D.C.!|]
 `,
-      incipit: `X:1
-M: 3/4
-L: 1/8
-K: G
-~G2 dG BG|FA2B cA|~G2 dG BG|DG2B  A`,
-      contour: {
-        sortKey: "СРЩСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -716,42 +360,9 @@ P:Ⅱ
 `,
       references: [
         {
-          notes: "#2 in the (ALORA) Top The Candle set"
-        }
+          notes: "#2 in the (ALORA) Top The Candle set",
+        },
       ],
-      incipit: `X:1
-M: 3/4
-L: 1/8
-K: D
-FA (A/B/A) B2 | Be2d (c/B/A)|FA (A`,
-      contour: {
-        sortKey: "ХЩЩЫЩЫЪ",
-        durations: [
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="100" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="47.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="6" x2="47.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -770,36 +381,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1058#setting1058",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-(3CB,A,|G,B, DG B,D GB|DG Bd GB `,
-      contour: {
-        sortKey: "ГЗЛСЗЛСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="46" x2="25" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="46" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -820,35 +404,9 @@ K:Aminor
       scores: [
         {
           url: "https://thesession.org/tunes/445#setting445",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Aminor
-^D2|EAcA Acec|d2dc de`,
-      contour: {
-        sortKey: "ЛСХССХЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -869,32 +427,9 @@ K:Fdorian
       scores: [
         {
           url: "https://thesession.org/tunes/922#setting922",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Fdorian
-(3B,CD|E2 G2 G2 FE|D2 F2 F2 `,
-      contour: {
-        sortKey: "ПОУТУТСП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="6" x2="130" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -913,55 +448,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/32#setting32",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-BA|(3GFG DG BGBd|(3cBc AB cd`,
-      contour: {
-        sortKey: "СПСЛСХСХЩ",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="20" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="21" x2="20" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="26" x2="30" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="26" x2="30" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -980,36 +469,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/974#setting974",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-(3cBA|GB,DG BDGB|dGBd gb`,
-      contour: {
-        sortKey: "СЗЛСХЛСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1028,85 +490,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/8753#setting8753",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-D>F|G>FG>A B>G (3Bcd|g>fg>a b>g`,
-      contour: {
-        sortKey: "СРПСРУХФСХЧЩ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 7,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 8,
-            d: 2
-          },
-          {
-            i: 9,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 10,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 11,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="185" height="37" viewBox="0 0 185 37" role="img">
-  <rect width="185" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="175" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="47.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="21" x2="47.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="92.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="21" x2="92.5" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="137.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="11" x2="137.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="21" x2="145" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="21" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="155" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="155" y1="11" x2="155" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="155" y1="6" x2="165" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="165" y1="6" x2="165" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="165" y1="1" x2="175" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1125,35 +511,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/38#setting38",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-FE|D2 FA dAFD|CDEF G2 `,
-      contour: {
-        sortKey: "СРХЩЯЩХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1172,36 +532,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1980#setting1980",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-(3DEF|GABA GBdg|fefd e^c`,
-      contour: {
-        sortKey: "СУХУСХЩЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1220,35 +553,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/478#setting478",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-BA|GABd dBde|gage de`,
-      contour: {
-        sortKey: "СУХЩЩХЩЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1268,35 +575,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/9800#setting9800",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-(3DEF|GABd g2fg|eGce d2`,
-      contour: {
-        sortKey: "СУХЩЯЮЭЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1316,36 +597,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/337#setting337",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-(3DEF|GdBG FcAF|(3GFG BG D2`,
-      contour: {
-        sortKey: "СЩХСПЧУП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1364,36 +618,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/49#setting49",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-AF|DAFA DAFA|defe dc`,
-      contour: {
-        sortKey: "СЩХЩСЩХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1413,36 +640,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/573#setting573",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-D2||BGDG cAFA|d^cde dB`,
-      contour: {
-        sortKey: "ХСЛСЧУПУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="42" viewBox="0 0 140 42" role="img">
-  <rect width="140" height="42" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1462,55 +662,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1249#setting1249",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-BGFG (3EFG DB,|G,B,DG cBAG|`,
-      contour: {
-        sortKey: "ХСПСНПСЛЗ",
-        durations: [
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 5,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="80" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="21" x2="80" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="16" x2="90" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="16" x2="90" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1530,77 +684,9 @@ G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>d|c>b a>g f>e d>c|(3dfe (3dcB (3ABA (3GFE|
       scores: [
         {
           url: "https://thesession.org/tunes/1755#setting1755",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>`,
-      contour: {
-        sortKey: "ХФЧЧЦЩгвЯЩШХ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 7,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 8,
-            d: 2
-          },
-          {
-            i: 10,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 11,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="200" height="57" viewBox="0 0 200 57" role="img">
-  <rect width="200" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="190" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="47.5" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="36" x2="47.5" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="31" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="92.5" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="31" x2="92.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="137.5" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="1" x2="137.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="26" x2="160" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="160" y1="26" x2="182.5" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="26" x2="182.5" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="36" x2="190" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1620,55 +706,9 @@ AG|:(3FGF EF DFAF|GAFG E2 EF|GFGA (3Bcd ed|cded cAGE|
       scores: [
         {
           url: "https://thesession.org/tunes/130#setting130",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-AG|(3FGF EF DFAF|GAFG E2 `,
-      contour: {
-        sortKey: "ХЧХУХСХЩХ",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="20" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="11" x2="20" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="6" x2="30" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="6" x2="30" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1698,34 +738,9 @@ K:Eminor
       scores: [
         {
           url: "https://thesession.org/tunes/21525#setting43012",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Eminor
-BEED E2DE|GABG A2GA|`,
-      contour: {
-        sortKey: "ЩССПСРПС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1744,55 +759,9 @@ K:Gmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/2001#setting2001",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmixolydian
-Bc|dB G^F GB (3dcB|cA FE FA `,
-      contour: {
-        sortKey: "ЩХСПСХЩЧХ",
-        durations: [
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 7,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 8,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="110" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="110" y1="1" x2="110" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="110" y1="6" x2="120" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="120" y1="6" x2="120" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="120" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1811,52 +780,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2488#setting2488",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-dB|AFEF (3DDD DE|FDFA d2 `,
-      contour: {
-        sortKey: "ЩХУХССССУ",
-        durations: [
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 5,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="80" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="21" x2="90" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1875,34 +801,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/6274#setting6274",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-dB|AF~F2 DEFA|dced BA`,
-      contour: {
-        sortKey: "ЩХХФСУХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1921,36 +822,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/309#setting309",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-FG|ABAF DEFG|AG (3FED =c2 `,
-      contour: {
-        sortKey: "ЩЫЩХСУХЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -1970,34 +844,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/869#setting869",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-fe|d2Bd A2FA|BAFA D2 `,
-      contour: {
-        sortKey: "ЯЮЫЯЩШХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2017,35 +866,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/5675#setting5675",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-(3Bcd|efed Beed|geag f2 `,
-      contour: {
-        sortKey: "ЯбЯЭЩЯЯЭ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="52" viewBox="0 0 140 52" role="img">
-  <rect width="140" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="130" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: [
@@ -2064,37 +887,14 @@ K:Gmajor
 |:DEG EDB,|DEG ~B3|DEG B2 e|dBe dBA|
  DEG EDB,|DEG ~B3|dBd gfe|dBA G3:|
  |:gab age|deg ~B3|gab gab|dBd e2 d|
- gab age|deg ~B3|dBd gfe|dBA G3:|`
+ gab age|deg ~B3|dBd gfe|dBA G3:|`,
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/820#setting42781",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-DEG EDB,|DEG ~B3|`,
-      contour: {
-        sortKey: "ЛНСНЛЗ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="1" x2="100" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2114,31 +914,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/839#setting839",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-DEG GAB|Bdg gab|`,
-      contour: {
-        sortKey: "ЛНССУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2157,30 +935,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/803#setting803",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Adorian
-G|EGG GED|EGG c2`,
-      contour: {
-        sortKey: "ЛПППЛЙ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="1" x2="100" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X: 1
@@ -2218,36 +975,9 @@ d^cAy
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/60"
-        }
+          url: "https://thesession.org/tunes/60",
+        },
       ],
-      incipit: `X:1
-M: 12/8
-L: 1/8
-K: A dorian
-{G}!fermata!A2G|EAA EAA   BAB G2A|B`,
-      contour: {
-        sortKey: "ЛССЛССУСУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="145" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2270,30 +1000,9 @@ E.A.A AGA|cBA c2d|~e3 efg|dBG GFG|
       scores: [
         {
           url: "https://thesession.org/tunes/2191#setting2191",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Adorian
-E.A.A AGA|cBA c2d|`,
-      contour: {
-        sortKey: "ЛСССПС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="100" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2314,29 +1023,9 @@ K:Gdorian
       scores: [
         {
           url: "https://thesession.org/tunes/7352#setting7352",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gdorian
-G/F/|DGG G2A|B/A/G/A/B/G/ A/G/F/G/`,
-      contour: {
-        sortKey: "ЛСССРУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="100" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2361,31 +1050,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/13036#setting22413",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-D|DGA B2d|cAG FG`,
-      contour: {
-        sortKey: "ЛСУХФЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2407,31 +1074,9 @@ K:Emajor
       scores: [
         {
           url: "https://thesession.org/tunes/8853#setting8853",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Emajor
-CEG F2 (E|E)GB e2 d|`,
-      contour: {
-        sortKey: "НСХУТС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2450,30 +1095,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2096#setting2096",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-F2 D D^CD|F2 D D^CD|`,
-      contour: {
-        sortKey: "ПОЛЛЙЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="1" x2="100" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -2493,41 +1117,14 @@ B|:AGE G2E G2E G2E|A2B c2d e2d efg|
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/770#setting29548"
-        }
+          url: "https://thesession.org/tunes/770#setting29548",
+        },
       ],
       references: [
         {
-          notes: "SU #1 in Elisabeth Kelly set"
-        }
+          notes: "SU #1 in Elisabeth Kelly set",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Adorian
-B|AGE G2E G2E G2E|A2B c2d e2d efg|`,
-      contour: {
-        sortKey: "СПЛПОЛПОЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="27" viewBox="0 0 155 27" role="img">
-  <rect width="155" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="145" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -2547,51 +1144,18 @@ K:Adorian
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/1043#setting1043"
-        }
+          url: "https://thesession.org/tunes/1043#setting1043",
+        },
       ],
       references: [
         {
           artists: "The Kelly Family",
           url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
-          notes: "SU #2 in Elisabeth Kelly set"
-        }
+          notes: "SU #2 in Elisabeth Kelly set",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Adorian
-B|AGE G2E c2E G2E|DED D2E GED D2B|`,
-      contour: {
-        sortKey: "СПЛПОЛХФЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="145" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
-      incipit: `
-    X: 1
-    M: 12/8
-    L: 1/8
-    K: D
-    DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE`,
       abc: [
         `X:1
 T:Unknown
@@ -2624,33 +1188,8 @@ dcd e^de f=dA  BdA | B/c/dB AFD D/E/EE EDB, | DDD DFA [Dd]ef edB | BAB dBA FED D
 DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE | DDA, DDA [Dd]ef edB | BAB dBA FED DDA, |
 DDA, DFA [Dd]ef edB | B/B/AB dBA FED  EFE | DDA, DDA def edB | BAB dBA FED D2A ||
 dcd e^de f=dA  BdA | B/c/dB AFD DEE  FDA, |
-`
+`,
       ],
-      contour: {
-        sortKey: "СРЛСХЩЯбгб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="72" viewBox="0 0 170 72" role="img">
-  <rect width="170" height="72" fill="white"/>
-  <line x1="10" y1="46" x2="160" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="46" x2="25" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="46" x2="40" y2="46" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="46" x2="40" y2="61" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="61" x2="55" y2="61" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="61" x2="55" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="46" x2="70" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="46" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="160" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2673,29 +1212,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/417#setting417",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Amixolydian
-A3 AGF|EDC D3 `,
-      contour: {
-        sortKey: "СРРСПН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="1" x2="100" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2714,30 +1233,9 @@ D|:~G3 AGA|~B3 gdB|GAB cBA|BGE EDE|
       scores: [
         {
           url: "https://thesession.org/tunes/372#setting372",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-D|~G3 AGA|~B3 gd`,
-      contour: {
-        sortKey: "СРРУСУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="17" viewBox="0 0 110 17" role="img">
-  <rect width="110" height="17" fill="white"/>
-  <line x1="10" y1="6" x2="100" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2756,30 +1254,9 @@ D|:~E3 GFE|~B3 dBA|BdB BAB|GBG AFD|
       scores: [
         {
           url: "https://thesession.org/tunes/160#setting160",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Edorian
-D|~E3 GFE|~B3 dB`,
-      contour: {
-        sortKey: "СРРХУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2798,30 +1275,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/1447#setting1447",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Edorian
-~E3 BAF|FEB AFD|`,
-      contour: {
-        sortKey: "СРРЩЧУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2844,29 +1300,9 @@ B,|E2 E EFB,|GFG AGA|~B3 ABA|GFG EDB,|
       scores: [
         {
           url: "https://thesession.org/tunes/217#setting217",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Eminor
-B,|E2 E EFB,|GFG AG`,
-      contour: {
-        sortKey: "СРССУЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="100" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2887,30 +1323,9 @@ D|:G2A B2c|d2g d2c|BdB GFG|cBc A2c|
       scores: [
         {
           url: "https://thesession.org/tunes/2257#setting2257",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-D|G2A B2c|d2g d2`,
-      contour: {
-        sortKey: "СРУХФЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2932,31 +1347,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/8000#setting8000",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-A,|D2 F EDB,|DFA dc`,
-      contour: {
-        sortKey: "СРХУСН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -2980,30 +1373,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2309#setting2309",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-D2F FEF|AFA d3|`,
-      contour: {
-        sortKey: "СРХХУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3022,31 +1394,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1805#setting1805",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-G2e dBG|~B3 dBA|`,
-      contour: {
-        sortKey: "СРЫЩХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="100" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3070,30 +1420,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2156#setting2156",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-D|GGG BAG|FFF AF`,
-      contour: {
-        sortKey: "СССХУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3114,31 +1443,9 @@ D|:GAG GAB|ded dBG|AGA BGD|EFE E2 D|
       scores: [
         {
           url: "https://thesession.org/tunes/385#setting385",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-D|GAG GAB|ded dB`,
-      contour: {
-        sortKey: "СУССУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -3163,36 +1470,6 @@ P:Ⅱ
 |:"D"d2 e fed faf gfe| d2 e fed      "Asus4"dcA dcA|
 "D"d2 e fed   faf gfe|"G"dcA "A"BAG [1 "D"AFD DFA:|2 "D"AFD D3!D.C.!|]
 `,
-      incipit: `X:1
-M: 12/8
-L: 1/8
-K: D mixolydian
-DED F2 G AdB cAF|GFG BAG    FAF GEA`,
-      contour: {
-        sortKey: "СУСХФЧЩЯЫЭ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="160" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3211,30 +1488,9 @@ K:Aminor
       scores: [
         {
           url: "https://thesession.org/tunes/2540#setting2540",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Aminor
-ABA a2 (a|{b}a)ge ~g3`,
-      contour: {
-        sortKey: "СУСЯЮЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3253,32 +1509,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/4844#setting4844",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Adorian
-E|ABd edB|dBA A2`,
-      contour: {
-        sortKey: "СУЧЩЧУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3297,31 +1530,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/307#setting307",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-D|GBA G2B|def gd`,
-      contour: {
-        sortKey: "СХУСРХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3341,31 +1552,9 @@ K:Dminor
       scores: [
         {
           url: "https://thesession.org/tunes/736#setting736",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dminor
-DFA ^G2 A|DFA ^G2 A|`,
-      contour: {
-        sortKey: "СХЩЧЦЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3387,31 +1576,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1642#setting1642",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-F|DFA d2e|fdB BA`,
-      contour: {
-        sortKey: "СХЩЯЮб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="52" viewBox="0 0 110 52" role="img">
-  <rect width="110" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="100" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="41" x2="25" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="41" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3432,31 +1599,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2134#setting2134",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-A|DFA d2f|edc B2`,
-      contour: {
-        sortKey: "СХЩЯЮг",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="57" viewBox="0 0 110 57" role="img">
-  <rect width="110" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="100" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="46" x2="25" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="46" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3480,38 +1625,9 @@ K:Bminor
       scores: [
         {
           url: "https://thesession.org/tunes/1902#setting1902",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Bminor
-dBA ~B3 def ede|f2e`,
-      contour: {
-        sortKey: "ХСПСРРХЧЩЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="37" viewBox="0 0 170 37" role="img">
-  <rect width="170" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="160" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="160" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3530,30 +1646,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/1076#setting1076",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Amixolydian
-cAA BGG|cAA ABd|`,
-      contour: {
-        sortKey: "ХССУПП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -3572,47 +1667,19 @@ K:Gmajor
 |:dcB cAA dcB cAF|DGG GFG DGG G(3ABc|
   dcB cAA dcB cAF|D2E F2G ADE FGA:|
 |:B3 cBc d(3Bcd dBd|g3 gfd gba gdc|
-  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`
+  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`,
       ],
       references: [
         {
-          notes: "SU: 2nd in the Fahey’s Fiddle set "
-        }
+          notes: "SU: 2nd in the Fahey’s Fiddle set ",
+        },
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/693#setting23367",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Gmajor
-BGG AGG BGG AGF|DGG GFG DGG G2A|`,
-      contour: {
-        sortKey: "ХССУССХССУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="22" viewBox="0 0 170 22" role="img">
-  <rect width="170" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="160" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="160" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3631,32 +1698,9 @@ B|:cAd cAG|EDE GAB|cBc BAG|EAA ~A2B|
       scores: [
         {
           url: "https://thesession.org/tunes/830#setting830",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Adorian
-B|cAd cAG|EDE GA`,
-      contour: {
-        sortKey: "ХСЧХСП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3678,31 +1722,9 @@ DE|:FDB BAG|FAd faf|fgb ege|Bcc AGE|
       scores: [
         {
           url: "https://thesession.org/tunes/2132#setting2132",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-DE|FDB BAG|FAd f`,
-      contour: {
-        sortKey: "ХСЫЫЩЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="100" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3723,32 +1745,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1334#setting1334",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-BAG AFD|G2G FGA|`,
-      contour: {
-        sortKey: "ХУСУПЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3775,32 +1774,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/34#setting34",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-FED EFG|Add cAG|`,
-      contour: {
-        sortKey: "ХУСУХЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3819,32 +1795,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/810#setting810",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Amixolydian
-cBA ecA|fed cBA|`,
-      contour: {
-        sortKey: "ХУСЩХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: [
@@ -3877,37 +1830,14 @@ EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
  efg fed|ecA d^cd|cGE _BFD|Cec =Bcd|
  efg ~f3|~e3 ~d3|cGE _BFD|CDC C2E||
  efg fed|{f}e(3Gce d(3GBd|c(3GEG _B(3FDF|
- C(3EGc =Bcd|efg ~f3|efg fed|cGE _BFD|CDC C3||`
+ C(3EGc =Bcd|efg ~f3|efg fed|cGE _BFD|CDC C3||`,
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/23818#setting49004",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-L:1/8
-M:6/8
-K:Cmajor
-EDE CDC|EFG AdB|`,
-      contour: {
-        sortKey: "ХУХСУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -3926,32 +1856,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1570#setting1570",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-BAB cBc|dgg d2g|`,
-      contour: {
-        sortKey: "ХУХЧХЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: [
@@ -4006,39 +1913,8 @@ FDD ADD CDD A,DF | G2A BAG [1 AFD DCD :| [2 AFC D2d ||
 |:[P:B] d^cd ^fed e^cA =B/c/de | d^cd e^fg a2^f gfe |
 d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
 [P:C] fed ecA dAc AFD | G2A Bde fed cAG |
-FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`
+FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`,
       ],
-      incipit: `X:1
-M: 12/8
-L: 1/8
-K: D minor
-D2E || FEF GFG  AGA dA^F | G/G/^FG`,
-      contour: {
-        sortKey: "ХУХЧХЧЩЧЩЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="16" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="160" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4058,30 +1934,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/2481#setting2481",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Amixolydian
-c2A ABA|d2e fed|`,
-      contour: {
-        sortKey: "ХФССУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4105,31 +1960,9 @@ K:Fmajor
       scores: [
         {
           url: "https://thesession.org/tunes/23388#setting47849",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Fmajor
-A2^G AcB|A2^G AcB|`,
-      contour: {
-        sortKey: "ХФУХЩЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4152,30 +1985,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/4234#setting4234",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-G/A/|~B3 ABA|GAG FG`,
-      contour: {
-        sortKey: "ХФФУХУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4194,29 +2006,9 @@ c|:B3BAB|GBd gdB|A3AGA|Bee dBA|
       scores: [
         {
           url: "https://thesession.org/tunes/2838#setting2838",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-c|B3BAB|GBd gd`,
-      contour: {
-        sortKey: "ХФФХУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4245,30 +2037,9 @@ K:Cmajor
       scores: [
         {
           url: "https://thesession.org/tunes/21254#setting42412",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Cmajor
-E3 FGA|G3 G,CD|`,
-      contour: {
-        sortKey: "ХФФЧЩЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="100" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4288,30 +2059,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/4236#setting4236",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-A|F2A AFA|Bdd ef`,
-      contour: {
-        sortKey: "ХФЩЩХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4335,29 +2085,9 @@ K:Dminor
       scores: [
         {
           url: "https://thesession.org/tunes/2329#setting2329",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dminor
-FFF AFF|cFF AF^F|`,
-      contour: {
-        sortKey: "ХХХЩХХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4379,30 +2109,9 @@ K:Dminor
       scores: [
         {
           url: "https://thesession.org/tunes/280#setting280",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dminor
-GFD D2F|GAc d3|`,
-      contour: {
-        sortKey: "ЧХССРХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4424,32 +2133,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/488#setting488",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-B|dGF GDB,|G,A,G, DB,`,
-      contour: {
-        sortKey: "ЩСПСЛЗ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="57" viewBox="0 0 110 57" role="img">
-  <rect width="110" height="57" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="85" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="46" x2="100" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4470,30 +2156,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/5405#setting5405",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Edorian
-BEE EFA|Bee d2f|`,
-      contour: {
-        sortKey: "ЩСССУЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4515,30 +2180,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/6807#setting6807",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-ADD B2 D|ADD FGA|`,
-      contour: {
-        sortKey: "ЩССЫЪС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="100" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4558,31 +2202,9 @@ K:Emixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/4440#setting4440",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Emixolydian
-BGE EDB,|DEF EGB|`,
-      contour: {
-        sortKey: "ЩХССПЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4601,32 +2223,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/327#setting327",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Amajor
-f|ecA BAF|AFE EF`,
-      contour: {
-        sortKey: "ЩХСУСН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="42" viewBox="0 0 110 42" role="img">
-  <rect width="110" height="42" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4649,31 +2248,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/62#setting62",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-AFA AFA|BGB BdB|`,
-      contour: {
-        sortKey: "ЩХЩЩХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4692,31 +2269,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1301#setting1301",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-ABA D2d|{e}dcA AG`,
-      contour: {
-        sortKey: "ЩЫЩСРЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="85" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4735,30 +2290,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/833#setting833",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-ded ~B3|cBc AFD|`,
-      contour: {
-        sortKey: "ЩЫЩХФФ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="37" viewBox="0 0 110 37" role="img">
-  <rect width="110" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="100" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4778,32 +2312,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1497#setting1497",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-Ace aed|edB A3|`,
-      contour: {
-        sortKey: "ЩЭбзбЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="67" viewBox="0 0 110 67" role="img">
-  <rect width="110" height="67" fill="white"/>
-  <line x1="10" y1="56" x2="100" y2="56" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4825,30 +2336,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/870#setting870",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-AdF ~A3|GBE GFG|`,
-      contour: {
-        sortKey: "ЩЯХЩШШ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4868,30 +2358,9 @@ K:Dmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/351#setting351",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmixolydian
-Adc A3|AGE G3|`,
-      contour: {
-        sortKey: "ЩЯЭЩШШ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4911,30 +2380,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/4435#setting4435",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-A|Add dcd|BAG A3`,
-      contour: {
-        sortKey: "ЩЯЯЯЭЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -4954,32 +2402,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/11868#setting11868",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-B|Bcd efg|aba ag`,
-      contour: {
-        sortKey: "ЫЭЯбге",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="62" viewBox="0 0 110 62" role="img">
-  <rect width="110" height="62" fill="white"/>
-  <line x1="10" y1="51" x2="100" y2="51" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5005,31 +2430,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/620#setting620",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-B|cAA edb|cAA AB`,
-      contour: {
-        sortKey: "ЭЩЩбЯй",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="72" viewBox="0 0 110 72" role="img">
-  <rect width="110" height="72" fill="white"/>
-  <line x1="10" y1="61" x2="100" y2="61" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="31" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="25" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="41" x2="40" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="41" x2="55" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="41" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5049,32 +2452,9 @@ K:Dmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/942#setting942",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmixolydian
-cec BdB|AGA AGE|`,
-      contour: {
-        sortKey: "ЭбЭЫЯЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="52" viewBox="0 0 110 52" role="img">
-  <rect width="110" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="100" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5099,32 +2479,9 @@ ABc|:dAG FED|=c3 ed^c|dAF GFE|FED gfe|
       scores: [
         {
           url: "https://thesession.org/tunes/2607#setting2607",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-ABc|dAG FED|=c3 `,
-      contour: {
-        sortKey: "ЯЩЧХУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5143,32 +2500,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/825#setting825",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-gfd cAd|GAG B2c|`,
-      contour: {
-        sortKey: "ЯЭЩЧУЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5187,31 +2521,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1831#setting1831",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Gmajor
-gfg e2d|Bee dBA|`,
-      contour: {
-        sortKey: "ЯЭЯЫЪЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5232,32 +2544,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1822#setting1822",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-dcd faf|dcd AFD|`,
-      contour: {
-        sortKey: "ЯЭЯгзг",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="67" viewBox="0 0 110 67" role="img">
-  <rect width="110" height="67" fill="white"/>
-  <line x1="10" y1="56" x2="100" y2="56" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5277,30 +2566,9 @@ K:Cmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2667#setting2667",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Cmajor
-c3 dcB|cGE CEG|`,
-      contour: {
-        sortKey: "ЯЮЮбЯЭ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="52" viewBox="0 0 110 52" role="img">
-  <rect width="110" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="100" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5319,30 +2587,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/387#setting387",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:6/8
-L:1/8
-K:Dmajor
-fAA fAA|BAG FGE|`,
-      contour: {
-        sortKey: "гЩЩгЩЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="57" viewBox="0 0 110 57" role="img">
-  <rect width="110" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="100" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5362,78 +2609,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/8121#setting8121",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-e2|A>e c<e A>e c<e|e>Af>A e2`,
-      contour: {
-        sortKey: "СРЩХЩШСРЩХЩШ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          },
-          {
-            i: 5,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 7,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 8,
-            d: 2
-          },
-          {
-            i: 9,
-            d: 2
-          },
-          {
-            i: 11,
-            d: 2,
-            n: 3
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="200" height="32" viewBox="0 0 200 32" role="img">
-  <rect width="200" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="190" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="47.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="21" x2="47.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="62.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="11" x2="62.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="1" x2="77.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="137.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="21" x2="137.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="152.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="152.5" y1="11" x2="152.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="152.5" y1="1" x2="167.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="1" x2="190" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5453,34 +2631,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/1649#setting1649",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-af|eAAB c2 BA|e2 A2 Aa`,
-      contour: {
-        sortKey: "ЩССУХФУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -5501,40 +2654,9 @@ E>G|:BEGB AFDE FB,DF A2(3Bcd|efed BAFE FdFE DABA|
       scores: [
         {
           url: "https://thesession.org/tunes/4553#setting4553",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/2
-L:1/8
-K:Edorian
-E>G|BEGB AFDE FB,DF A2(3Bcd|e>fed`,
-      contour: {
-        sortKey: "ЩСХЩЧУПСУЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="160" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="16" x2="145" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="36" x2="160" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5557,48 +2679,9 @@ K:Dminor
       scores: [
         {
           url: "https://thesession.org/tunes/19631#setting38741",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dminor
-(3CDE|F4 (3GFE|F3C FG|A3F `,
-      contour: {
-        sortKey: "ХФФФЧХУ",
-        durations: [
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 5,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="80" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="1" x2="80" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="6" x2="90" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="6" x2="90" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5620,30 +2703,9 @@ GA|:B2 BG Bd|A4 AB|(3cBA Bcde|dc BA GA|
       scores: [
         {
           url: "https://thesession.org/tunes/7885#setting7885",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gminor
-GA|B2 BG Bd|A4 AB|(3cBA Bc`,
-      contour: {
-        sortKey: "ХФХСХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5662,30 +2724,9 @@ GA|:"G"B2BAGE|DB, D2B,D|"C"EC E2CE|"G"DB, D2GA|
       scores: [
         {
           url: "https://thesession.org/tunes/1332#setting1332",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gmajor
-GA|B2BAGE|DB, D2B,D|EC E2`,
-      contour: {
-        sortKey: "ХФХУСН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5704,30 +2745,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1276#setting1276",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gmajor
-DG|B2 BA GB|d2 dB AB|c2 ce `,
-      contour: {
-        sortKey: "ХФХУСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: [
@@ -5793,56 +2813,21 @@ M:9/16
  b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d(g2 {a}g2)f g2a|
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
  d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
- E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`
+ E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
       ],
       references: [
         {
           artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle",
           notes: `a version that’s quite close to the
-Fidil one; it also has some very pretty things going on on the cello.`
-        }
+Fidil one; it also has some very pretty things going on on the cello.`,
+        },
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/23320#setting47650",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gmajor
-DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|B`,
-      contour: {
-        sortKey: "ХЧЩЧХЧУ",
-        durations: [
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="47.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="47.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5869,32 +2854,9 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
       scores: [
         {
           url: "https://thesession.org/tunes/15563#setting29178",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Fmajor
-AB|cF Ac BA|GC EG BA|FG FE `,
-      contour: {
-        sortKey: "ЩСХЩЧХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="100" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -5914,30 +2876,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1302#setting1302",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dmajor
-(3AAA|d2 f2 ag|bg B2 (3ggg|fe Ac `,
-      contour: {
-        sortKey: "ЯЮгвзе",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="67" viewBox="0 0 110 67" role="img">
-  <rect width="110" height="67" fill="white"/>
-  <line x1="10" y1="56" x2="100" y2="56" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `
@@ -5984,29 +2925,6 @@ cd BA eA | cd BA eA | !coda!GA Bc (3dBG |[1 A2 A2 ed :|[2 A2 A2 E2 !D.S.! |]
 P:E (coda)
 !coda! GA Bc (3dBG | !fermata!A4|]
 `,
-      incipit: `X:1
-M: 3/4
-L: 1/8
-K: A
-E AB |  cd cE Ac | ea ec df | B2 B`,
-      contour: {
-        sortKey: "ХЧХЛСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="42" viewBox="0 0 110 42" role="img">
-  <rect width="110" height="42" fill="white"/>
-  <line x1="10" y1="16" x2="100" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6027,49 +2945,9 @@ K:Eminor
       scores: [
         {
           url: "https://thesession.org/tunes/5182#setting5182",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Eminor
-E>F G/E/-E|{A}B2{^c/B/`,
-      contour: {
-        sortKey: "СРУХСР",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="95" height="22" viewBox="0 0 95 22" role="img">
-  <rect width="95" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="85" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="47.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="11" x2="47.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="62.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="1" x2="62.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6089,26 +2967,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/6170#setting6170",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Amajor
-A2 AE|FA E2|`,
-      contour: {
-        sortKey: "СРСЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="27" viewBox="0 0 80 27" role="img">
-  <rect width="80" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="70" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6127,27 +2988,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/11600#setting11600",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Dmajor
-DF FD|CE EF/E/|`,
-      contour: {
-        sortKey: "СХХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="22" viewBox="0 0 80 22" role="img">
-  <rect width="80" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="70" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6166,49 +3009,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/6015#setting6015",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Gmajor
-GD|GB B/c/B/A/|FA `,
-      contour: {
-        sortKey: "СХХЧХУ",
-        durations: [
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2
-          },
-          {
-            i: 5,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="27" viewBox="0 0 80 27" role="img">
-  <rect width="80" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="70" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="47.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="6" x2="47.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="62.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="6" x2="62.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6228,28 +3031,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/8918#setting8918",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Amajor
-E|Ac ef|ec c/d/`,
-      contour: {
-        sortKey: "СХЩЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="37" viewBox="0 0 80 37" role="img">
-  <rect width="80" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="70" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6268,39 +3052,9 @@ d/c/|:BG D>D|Ec cA/B/|cE F>E|Dd d/e/d/c/|
       scores: [
         {
           url: "https://thesession.org/tunes/1560#setting1560",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Gmajor
-d/c/|BG D>D|Ec c`,
-      contour: {
-        sortKey: "ХСЛКЛ",
-        durations: [
-          {
-            i: 3,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 4,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="95" height="37" viewBox="0 0 95 37" role="img">
-  <rect width="95" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="85" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="77.5" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6319,27 +3073,9 @@ K:Eminor
       scores: [
         {
           url: "https://thesession.org/tunes/8904#setting8904",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Eminor
-G2 EG|DE GD|`,
-      contour: {
-        sortKey: "ХФСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="22" viewBox="0 0 80 22" role="img">
-  <rect width="80" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="70" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6358,26 +3094,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/239#setting239",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Adorian
-AB|c2 B2|A2 `,
-      contour: {
-        sortKey: "ХФУТ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="22" viewBox="0 0 80 22" role="img">
-  <rect width="80" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="70" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6403,40 +3122,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/18688#setting36502",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Gmajor
-B>c de|dB Bd|`,
-      contour: {
-        sortKey: "ХФЧЩЫ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="95" height="37" viewBox="0 0 95 37" role="img">
-  <rect width="95" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="85" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="47.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="16" x2="47.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6455,28 +3143,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/8541#setting8541",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Dmajor
-AD FA|dc AB|`,
-      contour: {
-        sortKey: "ЩСХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="32" viewBox="0 0 80 32" role="img">
-  <rect width="80" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="70" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6500,50 +3169,9 @@ B>c|:d/e/d/c/ BG|DG B2|B/d/c/B/ AG|c2 A>B|
       scores: [
         {
           url: "https://thesession.org/tunes/3479#setting3479",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Gmajor
-B>c|d/e/d/c/ BG|DG `,
-      contour: {
-        sortKey: "ЩЫЩЧХС",
-        durations: [
-          {
-            i: 0,
-            d: 2
-          },
-          {
-            i: 1,
-            d: 2
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="37" viewBox="0 0 80 37" role="img">
-  <rect width="80" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="70" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="17.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="6" x2="17.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="32.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="32.5" y1="6" x2="32.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="32.5" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6562,28 +3190,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/564#setting564",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Dmajor
-dA FA|dc d/e/f/e/|`,
-      contour: {
-        sortKey: "ЯЩХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="47" viewBox="0 0 80 47" role="img">
-  <rect width="80" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="70" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6602,40 +3211,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/8624#setting8624",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Gmajor
-g>f gd|BG GA/B/|`,
-      contour: {
-        sortKey: "ЯЮЭЯЩ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="95" height="47" viewBox="0 0 95 47" role="img">
-  <rect width="95" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="85" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="47.5" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="47.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6654,38 +3232,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2105#setting2105",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:2/4
-L:1/8
-K:Dmajor
-f|a2 af/a/|ba f`,
-      contour: {
-        sortKey: "зжзгз",
-        durations: [
-          {
-            i: 3,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="80" height="67" viewBox="0 0 80 67" role="img">
-  <rect width="80" height="67" fill="white"/>
-  <line x1="10" y1="56" x2="70" y2="56" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="62.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="11" x2="62.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="62.5" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6707,33 +3256,6 @@ K:G
 "Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"ABAF D8|
 "Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"G" G2AB "C" cdcA "G" BcBG|"D7"ABAF "G" G8|]
 `,
-      incipit: `X:1
-M:3/4
-L:1/16
-K:G
-g2fg b2g2 d2B2| cBcd egec A2c2| B2AB  cdcA  BcBG| `,
-      contour: {
-        sortKey: "ЯЮЭЯгвЯЮЩШ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="57" viewBox="0 0 170 57" role="img">
-  <rect width="170" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="160" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="26" x2="160" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -6752,29 +3274,6 @@ K: E dorian
 [P:B]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" FE | "Em"B2 AG "D" FE | 
         "Em"B2 Bc "D"dc | "Em"(3BAG "Bm"FE FD :|
 [P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`,
-      incipit: `X:1
-M: 3/4
-L: 1/8
-K: E dorian
-EF GE FG | AG FE GA |   Bd cB (3AG`,
-      contour: {
-        sortKey: "СУХСУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="22" viewBox="0 0 110 22" role="img">
-  <rect width="110" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="100" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6796,27 +3295,6 @@ P:ABABA2BC
 a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 [P:C (la dernière fois)]|: d2 ce d2 | eg fe d2 | eg fa/f/ [1 dd | ed BG A2 :| [2 de | cd !fermata!d4 |]
 `,
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dmajor
-d2 Pce d2 | eg fe d2 | eg fa/f/  dd`,
-      contour: {
-        sortKey: "ЯЮЭбЯЮ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="52" viewBox="0 0 110 52" role="img">
-  <rect width="110" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="100" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6839,34 +3317,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/184#setting184",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-A,2 EA, B,G,G,B,|(3A,A,A, EG FDEG|`,
-      contour: {
-        sortKey: "ГВЛГЕББЕ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="52" viewBox="0 0 140 52" role="img">
-  <rect width="140" height="52" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="85" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="41" x2="100" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="41" x2="115" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="41" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -6888,33 +3341,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/671#setting671",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-EA,~A,2 E2DB,|G,B,~B,2 G,A,B,D|`,
-      contour: {
-        sortKey: "ЛГГВЛКЙЕ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X: 14
@@ -6931,11 +3360,6 @@ BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
 |:BG (3GGG BGBd eg (3ggg egdc|BG (3GGG DGBG FAAG FAdc|
 BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`,
       groups: "ALORA",
-      incipit: `X: 3
-M: 4/4
-L: 1/16
-K: Gmaj
-GE|DB,DE G2GA B2dB ABGA|BAGE`,
       origin: "Ireland",
       key: "G",
       references: [
@@ -6949,64 +3373,45 @@ Chords: (version of 2025-10-23)
    G/B - C - | D - D - :|
 |: G/B - C - | G - Am- |
    G/B - C - | D - G - :|
-\`\`\``
+\`\`\``,
         },
         {
-          artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
+          artists:
+            "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
           url: "https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel",
           notes: `1:48 onwards
-The Drunken Landlady / Christmas Eve / The Abbey Reel`
+The Drunken Landlady / Christmas Eve / The Abbey Reel`,
         },
         {
           artists: "Fintan Vallely, flute; Mark Simos, guitar",
           url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2",
-          notes: "Christmas Eve / The Reel of Rio "
+          notes: "Christmas Eve / The Reel of Rio ",
         },
         {
-          artists: "“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
+          artists:
+            "“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
           url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
-          notes: "Christmas Eve / Reel of Mullinavat / Bucks of Oranmore"
+          notes: "Christmas Eve / Reel of Mullinavat / Bucks of Oranmore",
         },
         {
           artists: "Micho Russel, flute",
           url: "https://youtu.be/1FUi3f3pDFc",
-          notes: "album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond"
+          notes:
+            "album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond",
         },
         {
           artists: "Sonny Murray, concertina",
           url: "https://music.youtube.com/watch?v=MNscUYF0ybU",
-          notes: "album: It Was Mighty! the Early Days of Irish Music in London"
-        }
+          notes:
+            "album: It Was Mighty! the Early Days of Irish Music in London",
+        },
       ],
       scores: [
         {
           name: "thesession",
-          url: "https://thesession.org/tunes/440#setting48642"
-        }
+          url: "https://thesession.org/tunes/440#setting48642",
+        },
       ],
-      contour: {
-        sortKey: "ЛЗЛНСРСУХФ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="11" x2="160" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="160" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7026,36 +3431,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/4198#setting4198",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A,B,DE FDED|B,EED EDB,D|`,
-      contour: {
-        sortKey: "ЛНСУХСУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7075,44 +3453,12 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/575#setting575",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-GE|DEGA BABd|egg2 ag`,
-      contour: {
-        sortKey: "ЛНСУХУХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       name: "Paddy on the Turnpike – crooked settings",
-      incipit: `X:1
-L:1/16
-K:F
-K:Fmajor
-FD|CFCF F_EFF AFcF dFcF`,
       abc: [
         `X:1
 T:Paddy on the Turnpike 
@@ -7162,32 +3508,8 @@ K:Gmixolydian
 GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
 DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
-[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
+[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`,
       ],
-      contour: {
-        sortKey: "ЛСЛССПССХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="37" viewBox="0 0 170 37" role="img">
-  <rect width="170" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="160" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="160" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7210,34 +3532,9 @@ K:Bminor
       scores: [
         {
           url: "https://thesession.org/tunes/7898#setting7898",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Bminor
-FBBA B2FB|dBcB BAFA|`,
-      contour: {
-        sortKey: "ЛССПСРЛС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7256,34 +3553,9 @@ K:Gdorian
       scores: [
         {
           url: "https://thesession.org/tunes/344#setting344",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gdorian
-DGGF G2 Ac|BG (3GGG dGBG|`,
-      contour: {
-        sortKey: "ЛССПСРУЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="42" viewBox="0 0 140 42" role="img">
-  <rect width="140" height="42" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="31" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X: 7
@@ -7298,33 +3570,9 @@ EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/40"
-        }
+          url: "https://thesession.org/tunes/40",
+        },
       ],
-      incipit: `X:1
-M: 4/4
-L: 1/16
-K: Ador
-EAAG ABcA EAFA GEDG|EAAG ABcd `,
-      contour: {
-        sortKey: "ЛССРСУХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7346,50 +3594,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/676#setting676",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-DG~G2 AG (3GGG|DG~G2 cAFA|`,
-      contour: {
-        sortKey: "ЛССРУСССС",
-        durations: [
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 7,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 8,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="130" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="110" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="110" y1="6" x2="120" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="120" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7409,32 +3616,9 @@ K:Bminor
       scores: [
         {
           url: "https://thesession.org/tunes/556#setting556",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Bminor
-FB B2 fB B2|dcBc AE E2|`,
-      contour: {
-        sortKey: "ЛССРЩССР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7453,34 +3637,9 @@ K:Gminor
       scores: [
         {
           url: "https://thesession.org/tunes/675#setting675",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gminor
-GF|DG ~G2 dGcG|dGcA GF`,
-      contour: {
-        sortKey: "ЛССРЩСЧС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7499,39 +3658,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/2120#setting2120",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-[M:5/4]EAAB cABd cABA G2GF GAGD | [M:4/4]EAAB`,
-      contour: {
-        sortKey: "ЛССУХСУЧХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="42" viewBox="0 0 170 42" role="img">
-  <rect width="170" height="42" fill="white"/>
-  <line x1="10" y1="16" x2="160" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="31" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="16" x2="160" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7551,35 +3680,9 @@ K:Gdorian
       scores: [
         {
           url: "https://thesession.org/tunes/229#setting229",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gdorian
-F|DGGA BABF|DFF2 DFC`,
-      contour: {
-        sortKey: "ЛССУХУХП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7598,52 +3701,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/281#setting281",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-B,E (3EEE B,EFE|EDB,D A,DFD|`,
-      contour: {
-        sortKey: "ЛССССЛСУС",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="130" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="50" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="6" x2="60" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7691,36 +3751,9 @@ CFAF DFAF|CFAF cFAF|GddG (^cd)Gd|dGAd c/B/A F/E/D|
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/1091#setting14331"
-        }
+          url: "https://thesession.org/tunes/1091#setting14331",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Fmajor
-CFAF DFAF|CFAF cFAF|`,
-      contour: {
-        sortKey: "ЛСХСНСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7740,36 +3773,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2584#setting2584",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-DGBG dGBG|~c3 d efga|`,
-      contour: {
-        sortKey: "ЛСХСЩСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7789,52 +3795,9 @@ K:Bminor
       scores: [
         {
           url: "https://thesession.org/tunes/973#setting973",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Bminor
-FBfe dB (3BBB|Aced cA A2|`,
-      contour: {
-        sortKey: "ЛСЩЧХСССС",
-        durations: [
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 7,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 8,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="110" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="110" y1="21" x2="120" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="120" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7853,35 +3816,9 @@ EAAB GABG|EAAB G2ED|EAA2 GABd|edge dBAG|
       scores: [
         {
           url: "https://thesession.org/tunes/430#setting430",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-EAAB GABG|EAAB G2ED|`,
-      contour: {
-        sortKey: "НУУХСУХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7901,35 +3838,9 @@ A2-|:AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EAAc B2 cB|
       scores: [
         {
           url: "https://thesession.org/tunes/313#setting313",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-A2-|AGEC D2 CD|EA,A,B, CD `,
-      contour: {
-        sortKey: "СПЛЗЙИЗЙ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7946,35 +3857,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/141#setting530",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2DG EGDE|G2BG AGEF|`,
-      contour: {
-        sortKey: "СРЛСНСЛН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -7994,33 +3879,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/302#setting302",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G3 D E2 DB,|G,A,B,D EGDB,|`,
-      contour: {
-        sortKey: "СРРЛНМЛЗ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="1" x2="130" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8038,33 +3899,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/477#setting477",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-B|A3B A2GE|A2GA Bdd`,
-      contour: {
-        sortKey: "СРРУСРПЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="130" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8081,33 +3918,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/4263#setting4263",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-A2AG A2cA|EGDE GEDG|`,
-      contour: {
-        sortKey: "СРСПСРХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8127,32 +3940,9 @@ G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG EDB,D|
       scores: [
         {
           url: "https://thesession.org/tunes/1767#setting1767",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2 GA BA A2|bgag egdB|`,
-      contour: {
-        sortKey: "СРСУХУУТ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8174,34 +3964,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/891#setting891",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-D2DF ADFA|dfed B3c|`,
-      contour: {
-        sortKey: "СРСХЩСХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8226,34 +3991,9 @@ C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
       scores: [
         {
           url: "https://thesession.org/tunes/20851#setting41404",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Cdorian
-C2DB,C2DF|GFGAB4-|`,
-      contour: {
-        sortKey: "СРУПСРУЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8273,33 +4013,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1703#setting1703",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-D2 EF ED D2|d2 ef edBA|`,
-      contour: {
-        sortKey: "СРУХУССР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8322,54 +4038,9 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
       scores: [
         {
           url: "https://thesession.org/tunes/1272#setting1272",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-D2 (3FED ADFD|E2=cE dEcE|`,
-      contour: {
-        sortKey: "СРХУСЩСХС",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="50" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="11" x2="50" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="16" x2="60" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="16" x2="60" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8388,54 +4059,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/846#setting846",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-D2 (3FED ADFA|Ad~d2 Adfd|`,
-      contour: {
-        sortKey: "СРХУСЩСХЩ",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="50" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="11" x2="50" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="16" x2="60" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="16" x2="60" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8454,35 +4080,9 @@ G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
       scores: [
         {
           url: "https://thesession.org/tunes/227#setting227",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2 BG FGAF|(3GGG Ac BdcA|`,
-      contour: {
-        sortKey: "СРХСПСУП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8500,34 +4100,9 @@ K:Aminor
       scores: [
         {
           url: "https://thesession.org/tunes/21#setting21",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Aminor
-A2 cA ABcA|GcEG G2 EG|`,
-      contour: {
-        sortKey: "СРХССУХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -8549,38 +4124,9 @@ BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
       scores: [
         {
           url: "https://thesession.org/tunes/3#setting3",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/16
-K:Gmajor
-BA|G2BG AFDF G2Bd c2BA|G2BG AFDF|`,
-      contour: {
-        sortKey: "СРХСУПЛПСР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="37" viewBox="0 0 170 37" role="img">
-  <rect width="170" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="160" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="160" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8599,35 +4145,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/75#setting75",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2 BG AGBG|B2 BA BcBA|`,
-      contour: {
-        sortKey: "СРХСУСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8644,35 +4164,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1100#setting1100",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2BG cGBG|ADDE FGAF|`,
-      contour: {
-        sortKey: "СРХСЧСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8692,35 +4186,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2172#setting2172",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-D2 FD GEFE|(3DDD FA d2 ef|`,
-      contour: {
-        sortKey: "СРХСЧУХУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8739,35 +4207,9 @@ K:Dmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/138#setting138",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmixolydian
-D2 FD ADFD|ABcA G~E3|`,
-      contour: {
-        sortKey: "СРХСЩСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8785,35 +4227,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1268#setting1268",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-G2BG dGBG|G/G/G BG AFDF|`,
-      contour: {
-        sortKey: "СРХСЩСХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8833,34 +4249,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/181#setting181",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-D2 FA d2 cA|BAGB AFDF|`,
-      contour: {
-        sortKey: "СРХЩЯЮЭЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8883,35 +4274,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/579#setting579",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-A2eA cAeA|ABcd edBA|`,
-      contour: {
-        sortKey: "СРЩСХСЩС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8929,35 +4294,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/27#setting27",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-E2BE dEBE|E2BE AFDF|`,
-      contour: {
-        sortKey: "СРЩСЭСЩС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="42" viewBox="0 0 140 42" role="img">
-  <rect width="140" height="42" fill="white"/>
-  <line x1="10" y1="31" x2="130" y2="31" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="31" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="31" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -8977,35 +4316,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/426#setting426",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-A2 ed BedB|AG (3GGG AGEG|`,
-      contour: {
-        sortKey: "СРЩЧУЩЧУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9025,66 +4338,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/1050#setting1050",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-E (3EEE F GE (3EEE|B2AB AGED|`,
-      contour: {
-        sortKey: "ССССУХСССС",
-        durations: [
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 7,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 8,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 9,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="35" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="35" y1="11" x2="45" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="45" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="110" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="110" y1="11" x2="120" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="120" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9104,34 +4360,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2881#setting2881",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-DF F2 AFAB|d2 fe dBAF|`,
-      contour: {
-        sortKey: "СХХФЩХЩЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9152,36 +4383,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/17457#setting33504",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-DFAF DFAF|EGAG EGAG|`,
-      contour: {
-        sortKey: "СХЩХСХЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9201,34 +4405,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2739#setting2739",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-DFAd f2 fe|dcde fdAF|`,
-      contour: {
-        sortKey: "СХЩЯгвгб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="46" x2="25" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="46" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9245,52 +4424,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/136#setting136",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-(3AAA Ag fdec|A2 A=c BG(3GGG|`,
-      contour: {
-        sortKey: "ССССЭЫЧЩХ",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="42" viewBox="0 0 140 42" role="img">
-  <rect width="140" height="42" fill="white"/>
-  <line x1="10" y1="31" x2="130" y2="31" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="31" x2="20" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="31" x2="30" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="31" x2="40" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9311,45 +4447,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/727#setting727",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-B|A/A/A (BA) GAAB|A/A/A (BA) edd`,
-      contour: {
-        sortKey: "СССУСПССУ",
-        durations: [
-          {
-            i: 0,
-            d: 2
-          },
-          {
-            i: 1,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="6" x2="130" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="17.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9370,55 +4470,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/212#setting212",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-(3FED AD FDAD|FAAF GFEC|`,
-      contour: {
-        sortKey: "ХУСЩСХСЩС",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="20" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="11" x2="20" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="16" x2="30" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="16" x2="30" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9440,34 +4494,9 @@ B|:AFFCF2Ac|dfcf AGGB|AFFC DEFd|cAfc AFFB:|
       scores: [
         {
           url: "https://thesession.org/tunes/18630#setting36343",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Fmajor
-B|AFFCF2Ac|dfcf AGG`,
-      contour: {
-        sortKey: "ХССЛСРХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9487,32 +4516,9 @@ K:Bminor
       scores: [
         {
           url: "https://thesession.org/tunes/2870#setting2870",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Bminor
-dB~B2 FB~B2|dfBd f2ed|`,
-      contour: {
-        sortKey: "ХССРЛССР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9529,32 +4535,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/704#setting704",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-GE~E2 E2AF|GE~E2 AFDF|`,
-      contour: {
-        sortKey: "ХССРСРЧУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9573,34 +4556,9 @@ dc|BG G2 AGFG|DG G2 A2 dc|BG G2 AGAB|cABG A2 dc|
       scores: [
         {
           url: "https://thesession.org/tunes/1619#setting1619",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-dc|BG G2 AGFG|DG G2 A2 `,
-      contour: {
-        sortKey: "ХССРУСПС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9623,34 +4581,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/565#setting565",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-BG~G2 AGFG|EG~G2 AEGE|`,
-      contour: {
-        sortKey: "ХССРУСПС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9668,35 +4601,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2854#setting2854",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-FDDF ABAF|GAAF GFED|`,
-      contour: {
-        sortKey: "ХССХЩЫЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9716,52 +4623,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/195#setting195",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-BG (3GGG BGdG|BG (3GGG Bdgd|`,
-      contour: {
-        sortKey: "ХССССХСЩС",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="50" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="21" x2="60" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9779,36 +4643,9 @@ AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
       scores: [
         {
           url: "https://thesession.org/tunes/237#setting237",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-AB|cBAB cdec|d2 gd BG`,
-      contour: {
-        sortKey: "ХУСУХЧЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9828,34 +4665,9 @@ K:Ddorian
       scores: [
         {
           url: "https://thesession.org/tunes/263#setting263",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Ddorian
-DE||F2DE F2DE|FEFG EC`,
-      contour: {
-        sortKey: "ХФСУХФСУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9875,34 +4687,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/24#setting24",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-ed|c2B2 ABcd|egfg ed`,
-      contour: {
-        sortKey: "ХФУТСУХЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="27" viewBox="0 0 140 27" role="img">
-  <rect width="140" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="130" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9921,32 +4708,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/257#setting242",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-G3B A3B|G3B AFDF|`,
-      contour: {
-        sortKey: "ХФФЩЧЦЦЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -9968,33 +4732,9 @@ A2G2 S|:F3d dcde|d2A2 F2A2|G3d dcde|d2B2 G2B2|
       scores: [
         {
           url: "https://thesession.org/tunes/17379#setting33333",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A2G2 |F3d dcde|d2A2 `,
-      contour: {
-        sortKey: "ХФФЯЯЭЯб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="52" viewBox="0 0 140 52" role="img">
-  <rect width="140" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="130" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="31" x2="25" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="31" x2="40" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="31" x2="55" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10014,34 +4754,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2896#setting2896",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-B2 BG ABGE|DGBG A3 c|`,
-      contour: {
-        sortKey: "ХФХСУХСН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10062,34 +4777,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/605#setting605",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-~B2BA BAGA|B2GB AGEG|`,
-      contour: {
-        sortKey: "ХФХУХУСУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="22" viewBox="0 0 140 22" role="img">
-  <rect width="140" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: [
@@ -10114,42 +4804,14 @@ K:Gmajor
 [L: 1/16]|:B2BB EBGB dedB cdcB|1 ,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
  [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1 ,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2
 D.C.
-z2||`
+z2||`,
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/23211#setting47315",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-L:1/8
-M:4/4
-K:Gmajor
-[L: 1/16]|:B2BB EBGB dedB cdcB|1 ,3 AGFG A2FA dedc BAGA:|`,
-      contour: {
-        sortKey: "ХФХХНХСХЩЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="26" x2="160" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="160" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10168,32 +4830,9 @@ K:Dmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/2154#setting2154",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmixolydian
-AG|~F2 FG ~A3B|cAdB cA`,
-      contour: {
-        sortKey: "ХФХЧЩШШЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10213,35 +4852,9 @@ AAG|:F2AF DFAF|G2BG DGBG|A2cA EABc|dzde edAG|
       scores: [
         {
           url: "https://thesession.org/tunes/1024#setting1024",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-AAG|F2AF DFAF|G2BG D`,
-      contour: {
-        sortKey: "ХФЩХСХЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10260,35 +4873,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/408#setting408",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-F2 AF GFED|DFAF GFED|`,
-      contour: {
-        sortKey: "ХФЩХЧХУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10310,53 +4897,9 @@ EF|:GBEG (3BBB AF|GFGA BdAG|FADF ADFA|(3ddd cd BAGF|
       scores: [
         {
           url: "https://thesession.org/tunes/367#setting367",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-EF|GBEG (3BBB AF|GFGA Bd`,
-      contour: {
-        sortKey: "ХЩСХЩЩЩЧУ",
-        durations: [
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 5,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="80" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="1" x2="90" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10379,52 +4922,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1040#setting1040",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-FA(3AAA FADF|ADFA BAFD|`,
-      contour: {
-        sortKey: "ХЩЩЩЩХЩСХ",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="50" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="1" x2="60" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10444,42 +4944,15 @@ K:Dminor
       scores: [
         {
           url: "https://thesession.org/tunes/2805#setting2805",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dminor
-FdcB AGFD|G2 dG eGdG|`,
-      contour: {
-        sortKey: "ХЯЭЫЩЧХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       references: [
         {
-          notes: "A crooked tune"
-        }
+          notes: "A crooked tune",
+        },
       ],
       abc: [
         `X: 1
@@ -10536,48 +5009,8 @@ cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG  ||
 P:Ⅱ
 F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 [M:3/2]dgeg ^fdcA G2gf | [M:4/2] egce ^fdaf gbag fgfd!D.C.!|]
-`
+`,
       ],
-      incipit: `X:1
-M: 4/2
-L: 1/8
-K: G mixolydian
-!fermata!A2 B||cFF/F/F cFdF cFFd cF`,
-      contour: {
-        sortKey: "ЧППППЧПЩПЧП",
-        durations: [
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 3,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="37" viewBox="0 0 170 37" role="img">
-  <rect width="170" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="160" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="47.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="6" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="26" x2="160" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10600,45 +5033,9 @@ e|B<E Ec B2 Bc|BE (3EEE cBGe|BE (3EEE B2GB|cBce fefg|
       scores: [
         {
           url: "https://thesession.org/tunes/2686#setting2686",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Emajor
-e|B<E Ec B2 Bc|BE (3EEE cBG`,
-      contour: {
-        sortKey: "ЩСРСЫЩШЩЫ",
-        durations: [
-          {
-            i: 0,
-            d: 2
-          },
-          {
-            i: 2,
-            d: 2,
-            n: 3
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="145" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="17.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="6" x2="17.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="26" x2="32.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="32.5" y1="26" x2="55" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10660,34 +5057,9 @@ a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
       scores: [
         {
           url: "https://thesession.org/tunes/504#setting504",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-a3 g|eA ~A2 cdec|degd `,
-      contour: {
-        sortKey: "ЩССРХЧЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10706,34 +5078,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1596#setting1596",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-dG G2 dGeG|d2 de dcAB|`,
-      contour: {
-        sortKey: "ЩССРЩСЫС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10752,34 +5099,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/363#setting363",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-BE~E2 BAFA|BE~E2 BAFA|`,
-      contour: {
-        sortKey: "ЩССРЩЧУЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10801,33 +5123,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/3435#setting3435",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-B(E ~E2) B2 AF|{e}(3cBB AF AdA`,
-      contour: {
-        sortKey: "ЩССРЩШЧУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10847,50 +5145,9 @@ K:Eminor
       scores: [
         {
           url: "https://thesession.org/tunes/1020#setting1020",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Eminor
-GA|BE (3EEE Gz BG|AcBA GE`,
-      contour: {
-        sortKey: "ЩССССХ_ЩХ",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="50" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="21" x2="60" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10910,36 +5167,9 @@ Bc|:dGBd c=FAc|BGBd gfdc|Bcde =fdeg|fdBd c=FAc|
       scores: [
         {
           url: "https://thesession.org/tunes/4525#setting4525",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-Bc|dGBd c=FAc|BGBd gf`,
-      contour: {
-        sortKey: "ЩСХЩЧПУЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -10961,34 +5191,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/3943#setting3943",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-B|AF~F2 DEFA|dfaf eB~B2`,
-      contour: {
-        sortKey: "ЩХХФСУХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11012,32 +5217,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2716#setting2716",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-AF F2 DF F2|AF F2 ABde|`,
-      contour: {
-        sortKey: "ЩХХФСХХФ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11057,34 +5239,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/50#setting50",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-AF F2 EFDE|F2 AF BFAF|`,
-      contour: {
-        sortKey: "ЩХХФУХСУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11106,34 +5263,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1333#setting1333",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-dB~B2 dBGB|dA~A2 dAFA|`,
-      contour: {
-        sortKey: "ЩХХФЩХСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11151,35 +5283,9 @@ B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
       scores: [
         {
           url: "https://thesession.org/tunes/1370#setting1370",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-B|AGFE D2FD|GEFE Ddc`,
-      contour: {
-        sortKey: "ЩЧХУСРХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -11199,45 +5305,18 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/474#setting22920",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/16
-K:Gmajor
-d2BG dGBG G2(3Bcd efge|d2BG dGBG`,
       references: [
         {
           notes: `Éigse an Spidéil / Come West Along the Road
 album: The High Seas`,
           url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
-          artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
-        }
+          artists:
+            "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
+        },
       ],
-      contour: {
-        sortKey: "ЩШХСЩСХССР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="32" viewBox="0 0 170 32" role="img">
-  <rect width="170" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="160" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="145" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="21" x2="160" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11257,34 +5336,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/511#setting511",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gmajor
-d2BG d2BG|d2BG AGEG|`,
-      contour: {
-        sortKey: "ЩШХСЩШХС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11304,33 +5358,9 @@ K:Bdorian
       scores: [
         {
           url: "https://thesession.org/tunes/3531#setting3531",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Bdorian
-f2ef dB~B2|f2ef defg|`,
-      contour: {
-        sortKey: "ЩШЧЩХССР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -11347,31 +5377,6 @@ de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
 "Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
-      incipit: `X:1
-M: 4/4
-L: 1/8
-K: B minor
-de|f2 ef dBBd|cAeA fAeA|f2 ef dBBd|`,
-      contour: {
-        sortKey: "ЩШЧЩХССХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11391,34 +5396,9 @@ K:Gminor
       scores: [
         {
           url: "https://thesession.org/tunes/140#setting140",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Gminor
-(3ABc|d2 cd BGGB|AFcF dF`,
-      contour: {
-        sortKey: "ЩШЧЩХССХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="32" viewBox="0 0 140 32" role="img">
-  <rect width="140" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="130" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11438,35 +5418,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/177#setting177",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-(3Bcd|e2df eABd|~e3c d2`,
-      contour: {
-        sortKey: "ЩШЧЫЩСУЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11485,34 +5439,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/1963#setting1963",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-B2Ad BEED|EB,EB ~B2EB|`,
-      contour: {
-        sortKey: "ЩШЧЭЩССП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="31" x2="130" y2="31" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="31" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11530,34 +5459,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1522#setting1522",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-~A3G FAdB|AGFD EA,~A,2|`,
-      contour: {
-        sortKey: "ЩШШЧХЩЯЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11576,34 +5480,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/3033#setting3033",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A3 B AFDF|A2 FA GECE|`,
-      contour: {
-        sortKey: "ЩШШЫЩХСХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11623,54 +5502,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/754#setting754",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-dB|A2dA (3Bcd AF|DFAF EA,`,
-      contour: {
-        sortKey: "ЩШЯЩЫЭЯЩХ",
-        durations: [
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 5,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 6,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="80" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="11" x2="80" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="80" y1="6" x2="90" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="6" x2="90" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="90" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11692,35 +5526,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/5933#setting5933",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-FG|A2df edcB|ABAG F2`,
-      contour: {
-        sortKey: "ЩШЯгбЯЭЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11739,52 +5547,9 @@ K:Dmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/1270#setting1270",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmixolydian
-(3AAA GB A2 dB|cBcG EFGB|`,
-      contour: {
-        sortKey: "ЩЩЩЧЫЩШЯЫ",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="20" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="16" x2="30" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA,su",
@@ -11807,36 +5572,6 @@ P:Coda
 !coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
 P:Variations/embellishments
 "_v1"Be||"_v2"dG||"_v3"(3ege||"_v4"eBdB ABGA||"_v5"ABGA||"_v6"A/B/AGA||"_v7"(3GGG||"_v8"BeeB||||"_v9"efge||"_v10"eage||"_v11"e2(3gfe||`,
-      incipit: `X:1
-M: 4/4
-L: 1/16
-K: G
-gf|edBA GEDE G2BG dGBd|e2dB A2GA Be`,
-      contour: {
-        sortKey: "ЫЩХУСНЛНСР",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="52" viewBox="0 0 170 52" role="img">
-  <rect width="170" height="52" fill="white"/>
-  <line x1="10" y1="26" x2="160" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="36" x2="100" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="41" x2="115" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="41" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="36" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="26" x2="160" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11858,35 +5593,9 @@ K:Fmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2316#setting2316",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Fmajor
-d2cA dAcA|GcAF GAFD|`,
-      contour: {
-        sortKey: "ЫЪЩХЫХЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11910,36 +5619,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/15517#setting29085",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-cFAc fdBF|cFce dFBd|`,
-      contour: {
-        sortKey: "ЭХЩЭгЯЫХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -11959,34 +5641,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/800#setting800",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-dD~D2 FDFA|dfaf gfec|`,
-      contour: {
-        sortKey: "ЯССРХСХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="36" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12007,34 +5664,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/2911#setting2911",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-aA~A2 cAeA|Bcde f2fg|`,
-      contour: {
-        sortKey: "ЯССРХСЩС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="36" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12055,52 +5687,9 @@ ABc||dD (3DDD EDB,E|DEFA BAFA|d2cd (3Bcd AF|DEFD EDB,D|
       scores: [
         {
           url: "https://thesession.org/tunes/1949#setting1949",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-ABc||dD (3DDD EDB,E|DEFA B`,
-      contour: {
-        sortKey: "ЯССССУСНУ",
-        durations: [
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 3,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="50" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="50" y1="36" x2="60" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="60" y1="36" x2="70" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="36" x2="100" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="46" x2="115" y2="46" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="46" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12119,32 +5708,9 @@ gf|:eBBA A~B3|dBAc BAGF|EDB,D G2 FG|EDB,E DB,A,G,|
       scores: [
         {
           url: "https://thesession.org/tunes/129#setting129",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Eminor
-gf|eBBA A~B3|dBAc BA`,
-      contour: {
-        sortKey: "ЯЩЩЧЧЩШШ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12163,34 +5729,9 @@ gf|:eB~B2 eBdB|AF~F2 EDB,A,|B,E~E2 B,EGE|FB~B2 FBdf|
       scores: [
         {
           url: "https://thesession.org/tunes/649#setting649",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-gf|eB~B2 eBdB|AF~F2 ED`,
-      contour: {
-        sortKey: "ЯЩЩШЯЩЭЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12207,35 +5748,9 @@ K:Ddorian
       scores: [
         {
           url: "https://thesession.org/tunes/589#setting589",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Ddorian
-dcAG ~F2EF|~E2 DE FD D2|`,
-      contour: {
-        sortKey: "ЯЭЩЧХФУХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="31" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12255,35 +5770,9 @@ d2 Ad fdAF|GFEF GABc|d2 Ad fdAF|GAAG FDDd|
       scores: [
         {
           url: "https://thesession.org/tunes/1941#setting1941",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-d2 Ad fdAF|GFEF GABc|`,
-      contour: {
-        sortKey: "ЯЮЩЯгЯЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12302,37 +5791,9 @@ K:Edorian
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/1004#setting14222"
-        }
+          url: "https://thesession.org/tunes/1004#setting14222",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Edorian
-e2dB AFF2|EFdF eFdF|`,
-      contour: {
-        sortKey: "ЯЮЭЩЧУУТСУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="31" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="31" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="36" x2="145" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="36" x2="145" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="31" x2="160" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12351,35 +5812,9 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
       scores: [
         {
           url: "https://thesession.org/tunes/15252#setting5373",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Eminor
-e2 dB eBdB|A2 GA Bd d2|`,
-      contour: {
-        sortKey: "ЯЮЭЩЯЩЭЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12398,34 +5833,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/538#setting538",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-d2dA BAGB|AFBF A~F3|`,
-      contour: {
-        sortKey: "ЯЮЯЩЫЩЧЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="47" viewBox="0 0 140 47" role="img">
-  <rect width="140" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="130" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12445,34 +5855,9 @@ eg|a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 eg|
       scores: [
         {
           url: "https://thesession.org/tunes/880#setting880",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-eg|a2 ab ageg|a2 ab ag`,
-      contour: {
-        sortKey: "ЯЮЯбЯЭЩЭ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="52" viewBox="0 0 140 52" role="img">
-  <rect width="140" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="130" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12491,35 +5876,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/97#setting97",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-AB|d2fd Adfe|defg af`,
-      contour: {
-        sortKey: "ЯЮгЯЩЯгб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12538,35 +5897,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1027#setting1027",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-d2fd gefe|dfed cdec|`,
-      contour: {
-        sortKey: "ЯЮгЯебгб",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="62" viewBox="0 0 140 62" role="img">
-  <rect width="140" height="62" fill="white"/>
-  <line x1="10" y1="51" x2="130" y2="51" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12584,36 +5917,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1428#setting1428",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A|defe dBAF|BFAF E3`,
-      contour: {
-        sortKey: "ЯбгбЯЫЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12636,36 +5942,9 @@ geg|:decd BcAB|GG G3 geg|decd BcAc|BB B3 geg|
       scores: [
         {
           url: "https://thesession.org/tunes/6183#setting6183",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Cmajor
-geg|decd BcAB|GG G3 `,
-      contour: {
-        sortKey: "бгЯбЭЯЫЭ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12684,35 +5963,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1934#setting1934",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-fdec d2AG|FGAB =cAGc|`,
-      contour: {
-        sortKey: "гЯбЭЯЮЩЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12731,36 +5984,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/103#setting103",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-fedf edcB|A2FA DAFA|`,
-      contour: {
-        sortKey: "гбЯгбЯЭЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="57" viewBox="0 0 140 57" role="img">
-  <rect width="140" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="130" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12778,34 +6004,9 @@ K:Dmixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/2610#setting2610",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmixolydian
-fage d2dB|AD (3FED EFGB|`,
-      contour: {
-        sortKey: "гзебЯЮЯЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="67" viewBox="0 0 140 67" role="img">
-  <rect width="140" height="67" fill="white"/>
-  <line x1="10" y1="56" x2="130" y2="56" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="130" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA",
@@ -12829,36 +6030,9 @@ P:Ⅱ
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/325"
-        }
+          url: "https://thesession.org/tunes/325",
+        },
       ],
-      incipit: `X:1
-M: 12/8
-L: 1/8
-K: D
-AG|F2 A AFA B=cB A2 G|F2 A d2 e ~f3`,
-      contour: {
-        sortKey: "ХФЩЩХЩЫЭЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="42" viewBox="0 0 155 42" role="img">
-  <rect width="155" height="42" fill="white"/>
-  <line x1="10" y1="31" x2="145" y2="31" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12877,36 +6051,9 @@ AG|:F2 A AFA B=cB A2 G|F2 A d2 e ~f3 fef|
       scores: [
         {
           url: "https://thesession.org/tunes/325#setting325",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Dmajor
-AG|F2 A AFA B=cB A2 G|F2 A d2 `,
-      contour: {
-        sortKey: "ХФЩЩХЩЫЭЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="42" viewBox="0 0 155 42" role="img">
-  <rect width="155" height="42" fill="white"/>
-  <line x1="10" y1="31" x2="145" y2="31" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12925,36 +6072,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/159#setting159",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Dmajor
-A2D FED F2A A2f|gfe fed `,
-      contour: {
-        sortKey: "ЩШСХУСХФЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="145" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -12973,34 +6093,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/7444#setting7444",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Amajor
-e3 ede f2e d2f|edB d2B `,
-      contour: {
-        sortKey: "ЩШШЩЧЩЫЪЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="145" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13020,36 +6115,9 @@ g3|:fed B2d A2d F2B|A2F DEF E3 E2g|
       scores: [
         {
           url: "https://thesession.org/tunes/1527#setting1527",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:12/8
-L:1/8
-K:Dmajor
-g3|fed B2d A2d F2B|A2F `,
-      contour: {
-        sortKey: "гбЯЫЪЯЩШЯ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="57" viewBox="0 0 155 57" role="img">
-  <rect width="155" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="145" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="115" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="26" x2="130" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13069,35 +6137,9 @@ D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G GFD G2F|
       scores: [
         {
           url: "https://thesession.org/tunes/11427#setting11427",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gminor
-D2G GFD G2F|D2G GFD Bcd|`,
-      contour: {
-        sortKey: "ЛКССПЛСРП",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="27" viewBox="0 0 155 27" role="img">
-  <rect width="155" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="145" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13117,35 +6159,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/3511#setting3511",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Amajor
-E2 c E2 c cBA|E2 c E2 c cBA|`,
-      contour: {
-        sortKey: "ЛКХЛКХХУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="145" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13164,35 +6180,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/2410#setting2410",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Amajor
-F2c BA~F- F2E|F2c BAc fec|`,
-      contour: {
-        sortKey: "НМХУСНММЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="145" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13213,36 +6203,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/879#setting879",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-FGA AFA c2A|BAG F/G/AF GED|`,
-      contour: {
-        sortKey: "ПСУУПУЧЦУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="16" x2="145" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA,SU",
@@ -13259,40 +6222,15 @@ K:Adorian
  |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
       references: [
         {
-          notes: "SU #3 in Elisabeth Kelly set"
-        }
+          notes: "SU #3 in Elisabeth Kelly set",
+        },
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/953#setting953",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Adorian
-A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|`,
-      contour: {
-        sortKey: "СРРСУССПЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="145" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="145" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13309,34 +6247,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/953#setting953",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Adorian
-A3 ABA AGE|A2 EG2 E DEG|`,
-      contour: {
-        sortKey: "СРРСУССПЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="145" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="145" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       name: "The Kid On The Mountain",
@@ -13370,46 +6283,20 @@ K: E minor
       references: [
         {
           artists: "Michael Gorman",
-          url: "https://music.youtube.com/watch?v=Ftm1147osmo"
+          url: "https://music.youtube.com/watch?v=Ftm1147osmo",
         },
         {
           artists: "Andy McGann",
-          url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm"
-        }
+          url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/52"
-        }
+          url: "https://thesession.org/tunes/52",
+        },
       ],
-      incipit: `X:1
-M: 18/16
-L: 1/16
-K: E minor
-E3 FEF G2F E3 BcA BGD|E3 FEF G2A BA`,
-      contour: {
-        sortKey: "СРРУСУХФУ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="22" viewBox="0 0 155 22" role="img">
-  <rect width="155" height="22" fill="white"/>
-  <line x1="10" y1="11" x2="145" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13428,36 +6315,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/2087#setting2087",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-G2B BAG ABc|d2g gfd BcA|`,
-      contour: {
-        sortKey: "СРХХУСУХЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="27" viewBox="0 0 155 27" role="img">
-  <rect width="155" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="145" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13477,36 +6337,9 @@ D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF AFE|
       scores: [
         {
           url: "https://thesession.org/tunes/2143#setting2143",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Dmajor
-D2F FED EFA|d2f fed efa|`,
-      contour: {
-        sortKey: "СРХХУСУХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="145" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13524,35 +6357,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/8976#setting8976",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-AAA dcA d2c|AGA dcA GFG|`,
-      contour: {
-        sortKey: "УУУЩЧУЩШЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="145" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13573,35 +6380,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/17637#setting34009",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Amixolydian
-c2A AEA ABA|cBc Ace ded|`,
-      contour: {
-        sortKey: "ХФССЛССУС",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="145" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13618,37 +6399,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/612#setting612",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-B2 G AGE GED|E/F/GE DEG A2 c|`,
-      contour: {
-        sortKey: "ХФСУСНСНЛ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="145" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13666,33 +6419,9 @@ K:Gmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1550#setting1550",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-B3 BAB c3|BAG B/c/dB ABc|`,
-      contour: {
-        sortKey: "ХФФХУХЧЦЦ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="27" viewBox="0 0 155 27" role="img">
-  <rect width="155" height="27" fill="white"/>
-  <line x1="10" y1="16" x2="145" y2="16" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "alora",
@@ -13711,47 +6440,21 @@ K:Dmajor
 |"D"F2A B2F A2F|"G"G2B d2e dBG|"D"F2A B2F A2F|"A"E2D E2F GFE|
  "D"F2A B2F A2F|"G"G2B d2e dBG|"Bm"F2A B2F A2F|"A"E2D E2F GAB||
  "F#m"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"A"A2G F2G A2B|
- "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`
+ "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`,
       ],
       references: [
         {
           artists: "Altan, 1991",
           url: "https://music.youtube.com/watch?v=BP_nsOCubf0",
-          notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm"
-        }
+          notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm",
+        },
       ],
       scores: [
         {
           url: "https://thesession.org/tunes/104#setting104",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Dmajor
-F2A B2F A2F|G2B d2e dBA|F2A B2F A2F`,
-      contour: {
-        sortKey: "ХФЩЫЪХЩШХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="37" viewBox="0 0 155 37" role="img">
-  <rect width="155" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="145" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="115" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="6" x2="130" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13768,36 +6471,9 @@ d|:cAG GAG GBd|cAG GAB cAd|cAG GAG GAG|1 cAA fed cAd:|2 cAA fed cAG||
       scores: [
         {
           url: "https://thesession.org/tunes/2337#setting2337",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Gmajor
-d|cAG GAG GBd|cAG GAB cA`,
-      contour: {
-        sortKey: "ЧУССУССХЩ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="145" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13819,37 +6495,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/14242#setting25937",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Adorian
-edB ABA Agf|edB def gfg|`,
-      contour: {
-        sortKey: "ЩЧУСУССЭЫ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="42" viewBox="0 0 155 42" role="img">
-  <rect width="155" height="42" fill="white"/>
-  <line x1="10" y1="31" x2="145" y2="31" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="31" x2="100" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="31" x2="115" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="31" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -13866,34 +6514,9 @@ K:Edorian
       scores: [
         {
           url: "https://thesession.org/tunes/1030#setting1030",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:9/8
-L:1/8
-K:Edorian
-B2E E2F G2A|Bcd e2c d3|`,
-      contour: {
-        sortKey: "ЩШССРУХФЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="32" viewBox="0 0 155 32" role="img">
-  <rect width="155" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="145" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="11" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="6" x2="145" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "ALORA,SU",
@@ -13989,35 +6612,6 @@ w: And~in all me life I ne’er did see A maid so neat a-bout the sole
 w: She had twen-ty eight-een six-teen four-teen * Twelve ten eight six four two none 
 B/c/ | "Bm"dc BA "F#m"FE DE | [M:3/4] "Em7"FF "F#m7"FE "G6"DB, | [M:4/4]"A"A,4 z2z
 w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`,
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dmajor
-[M:3/4]A, | DD DE FE | [M:4/4] D<B,`,
-      contour: {
-        sortKey: "СНМММ____",
-        durations: [
-          {
-            i: 0,
-            d: 2
-          },
-          {
-            i: 2,
-            d: 2,
-            n: 3
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="155" height="22" viewBox="0 0 155 22" role="img">
-  <rect width="155" height="22" fill="white"/>
-  <line x1="10" y1="1" x2="145" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="17.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="1" x2="17.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="17.5" y1="11" x2="32.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="32.5" y1="11" x2="55" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14035,78 +6629,9 @@ K:Adorian
       scores: [
         {
           url: "https://thesession.org/tunes/3012#setting3012",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Adorian
-[A,2E2] ~(3A,/B,/A,/A, E>A,B,>A,|G,>A,B,>G D<G,`,
-      contour: {
-        sortKey: "БАГЕДПЙБАЕДБ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 6,
-            d: 2
-          },
-          {
-            i: 8,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 10,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 11,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="200" height="52" viewBox="0 0 200 52" role="img">
-  <rect width="200" height="52" fill="white"/>
-  <line x1="10" y1="1" x2="190" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="41" x2="25" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="41" x2="47.5" y2="41" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="41" x2="47.5" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="55" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="31" x2="70" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="31" x2="92.5" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="31" x2="92.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="107.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="107.5" y1="21" x2="107.5" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="107.5" y1="41" x2="122.5" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="41" x2="145" y2="41" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="41" x2="145" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="31" x2="160" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="160" y1="31" x2="182.5" y2="31" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="31" x2="182.5" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="41" x2="190" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14126,78 +6651,9 @@ A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]|
       scores: [
         {
           url: "https://thesession.org/tunes/11206#setting11206",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|`,
-      contour: {
-        sortKey: "ГВЗЛКЗЙИНСРН",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 7,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 8,
-            d: 2
-          },
-          {
-            i: 10,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 11,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="200" height="47" viewBox="0 0 200 47" role="img">
-  <rect width="200" height="47" fill="white"/>
-  <line x1="10" y1="1" x2="190" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="47.5" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="36" x2="47.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="92.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="16" x2="92.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="137.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="21" x2="137.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="160" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="160" y1="1" x2="182.5" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="1" x2="182.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="11" x2="190" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14215,81 +6671,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/2918#setting2918",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-A,>EC>E (3D/D/D/D F>D|E>Ac>A B<B, B,2| `,
-      contour: {
-        sortKey: "ГВЛЗЖЛЙЙЙЙНМЙ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 6,
-            d: 3
-          },
-          {
-            i: 7,
-            d: 3
-          },
-          {
-            i: 8,
-            d: 3
-          },
-          {
-            i: 11,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 12,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="185" height="47" viewBox="0 0 185 47" role="img">
-  <rect width="185" height="47" fill="white"/>
-  <line x1="10" y1="1" x2="175" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="47.5" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="36" x2="47.5" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="92.5" y2="26" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="26" x2="92.5" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="105" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="105" y1="21" x2="110" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="110" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="167.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="11" x2="167.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="21" x2="175" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14307,78 +6691,9 @@ B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>ED/C/B,/A,/ G,>B,|~A,>A E>D C<A, 
       scores: [
         {
           url: "https://thesession.org/tunes/7681#setting7681",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>`,
-      contour: {
-        sortKey: "ГВСЛКЗЙБАЙИЕ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 6,
-            d: 2
-          },
-          {
-            i: 8,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 10,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 11,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="200" height="52" viewBox="0 0 200 52" role="img">
-  <rect width="200" height="52" fill="white"/>
-  <line x1="10" y1="1" x2="190" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="36" x2="25" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="36" x2="47.5" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="36" x2="47.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="92.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="16" x2="92.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="107.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="107.5" y1="21" x2="107.5" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="107.5" y1="41" x2="122.5" y2="41" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="41" x2="145" y2="41" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="41" x2="145" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="21" x2="160" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="160" y1="21" x2="182.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="21" x2="182.5" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="182.5" y1="31" x2="190" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14396,35 +6711,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/3007#setting3007",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-AFEF AB c2|(3dcB cA BAFA|`,
-      contour: {
-        sortKey: "СНЛНСУХФ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="11" x2="130" y2="11" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="55" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="21" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="130" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14445,67 +6734,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/170#setting170",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amajor
-(3EFG|A2c>A E>Ac>e|a2g>a f>a`,
-      contour: {
-        sortKey: "СРХФСЛКСХФЩ",
-        durations: [
-          {
-            i: 3,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 4,
-            d: 2
-          },
-          {
-            i: 6,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 7,
-            d: 2
-          },
-          {
-            i: 9,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 10,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="185" height="47" viewBox="0 0 185 47" role="img">
-  <rect width="185" height="47" fill="white"/>
-  <line x1="10" y1="21" x2="175" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="77.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="11" x2="77.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="36" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="36" x2="122.5" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="36" x2="122.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="21" x2="130" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="145" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="11" x2="167.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="11" x2="167.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="1" x2="175" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14524,67 +6755,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/1762#setting1762",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A|D2 F>A D>A F<A|A,2 C>E A,>E C<E`,
-      contour: {
-        sortKey: "СРХФЩСРЩХЩШ",
-        durations: [
-          {
-            i: 3,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 4,
-            d: 2
-          },
-          {
-            i: 6,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 7,
-            d: 2
-          },
-          {
-            i: 8,
-            d: 2
-          },
-          {
-            i: 10,
-            d: 2,
-            n: 3
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="185" height="32" viewBox="0 0 185 32" role="img">
-  <rect width="185" height="32" fill="white"/>
-  <line x1="10" y1="21" x2="175" y2="21" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="77.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="11" x2="77.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="122.5" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="21" x2="122.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="1" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="137.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="11" x2="137.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="137.5" y1="1" x2="152.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="152.5" y1="1" x2="175" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14614,92 +6787,9 @@ A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
       scores: [
         {
           url: "https://thesession.org/tunes/16343#setting30955",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cB`,
-      contour: {
-        sortKey: "ХУСЩШЭЯЮЩХУС",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 7,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 8,
-            d: 2
-          },
-          {
-            i: 9,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 10,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 11,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="20" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="26" x2="20" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="31" x2="30" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="31" x2="30" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="36" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="77.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="16" x2="77.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="122.5" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="1" x2="122.5" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="140" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="140" y1="26" x2="140" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="140" y1="31" x2="150" y2="31" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="150" y1="31" x2="150" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="150" y1="36" x2="160" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14718,36 +6808,9 @@ A|BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGGA|
       scores: [
         {
           url: "https://thesession.org/tunes/655#setting655",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Eminor
-A|BEBE cBcA|BEBE cAF`,
-      contour: {
-        sortKey: "ЩСЩСЫЩЫЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="26" x2="70" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="26" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="6" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14767,67 +6830,9 @@ O:Cape Breton
       scores: [
         {
           url: "https://thesession.org/tunes/14694#setting27107",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-F>G|A>BA>F E2F>uG|A>BA>F A/A/A `,
-      contour: {
-        sortKey: "ЩШЫЩШХУТХФЧ",
-        durations: [
-          {
-            i: 1,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 2,
-            d: 2
-          },
-          {
-            i: 4,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 5,
-            d: 2
-          },
-          {
-            i: 9,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 10,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="185" height="37" viewBox="0 0 185 37" role="img">
-  <rect width="185" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="175" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="47.5" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="6" x2="47.5" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="47.5" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="92.5" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="6" x2="92.5" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="92.5" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="115" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="21" x2="130" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="21" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="16" x2="167.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="16" x2="167.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="167.5" y1="11" x2="175" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14845,56 +6850,9 @@ A2 B>c d2 A>F|G2 E<D E2 G2|A<AB>c d2 F>G|A2 G<E D2 D2-|HD8||
       scores: [
         {
           url: "https://thesession.org/tunes/10313#setting10313",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Dmajor
-A2 B>c d2 A>F|G2 E<D E2 G2|`,
-      contour: {
-        sortKey: "ЩШЫЪЭЯЮЩШХ",
-        durations: [
-          {
-            i: 3,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 4,
-            d: 2
-          },
-          {
-            i: 8,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 9,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="40" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="77.5" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="11" x2="77.5" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="115" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="1" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="130" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="16" x2="152.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="152.5" y1="16" x2="152.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="152.5" y1="26" x2="160" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14911,48 +6869,9 @@ K:Amixolydian
       scores: [
         {
           url: "https://thesession.org/tunes/6366#setting6366",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-B/c/d[A3e3] f e^d e2|efe`,
-      contour: {
-        sortKey: "ЩЫЩЧУСУХЧ",
-        durations: [
-          {
-            i: 6,
-            d: 2
-          },
-          {
-            i: 7,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="140" height="37" viewBox="0 0 140 37" role="img">
-  <rect width="140" height="37" fill="white"/>
-  <line x1="10" y1="26" x2="130" y2="26" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="11" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="70" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="21" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="26" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="21" x2="107.5" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="107.5" y1="21" x2="107.5" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="107.5" y1="16" x2="115" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="16" x2="115" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -14971,57 +6890,9 @@ a|f2 e>c e>fae|f2 ec fBBa|f2 e>c e>fae|faec eAAa|
       scores: [
         {
           url: "https://thesession.org/tunes/24127#setting49877",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:4/4
-L:1/8
-K:Amixolydian
-a|f2 e>c e>fae|f2 ec fBB`,
-      contour: {
-        sortKey: "ЫЪЩШХЩШЫЯЩ",
-        durations: [
-          {
-            i: 3,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 4,
-            d: 2
-          },
-          {
-            i: 6,
-            d: 2,
-            n: 3
-          },
-          {
-            i: 7,
-            d: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="11" x2="25" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="11" x2="40" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="11" x2="40" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="77.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="16" x2="77.5" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="77.5" y1="26" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="100" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="16" x2="122.5" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="16" x2="122.5" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="122.5" y1="11" x2="130" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="11" x2="130" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="1" x2="145" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="1" x2="145" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="16" x2="160" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -15040,56 +6911,9 @@ K:Amajor
       scores: [
         {
           url: "https://thesession.org/tunes/1194#setting1194",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/2
-L:1/8
-K:Amajor
-{g}a4 e2fg agfe|(3cdcA2 .a2(A2 cde`,
-      contour: {
-        sortKey: "ХЧХСРЯЮСРХЧ",
-        durations: [
-          {
-            i: 0,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 1,
-            d: 3,
-            n: 2
-          },
-          {
-            i: 2,
-            d: 3,
-            n: 2
-          }
-        ],
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="170" height="47" viewBox="0 0 170 47" role="img">
-  <rect width="170" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="160" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="26" x2="20" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="26" x2="20" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="20" y1="21" x2="30" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="21" x2="30" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="30" y1="26" x2="40" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="26" x2="40" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="36" x2="55" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="36" x2="70" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="36" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="1" x2="100" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="100" y1="36" x2="115" y2="36" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="115" y1="36" x2="130" y2="36" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="36" x2="130" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="130" y1="26" x2="145" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="26" x2="145" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="145" y1="21" x2="160" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "alora",
@@ -15122,36 +6946,17 @@ M:3/4
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/1016#setting36756"
-        }
+          url: "https://thesession.org/tunes/1016#setting36756",
+        },
       ],
       references: [
         {
-          artists: "Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
+          artists:
+            "Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
           url: "https://youtu.be/_ZrfjHeFEr0",
-          notes: "@ Gamla Teatern, Östersund 2010"
-        }
+          notes: "@ Gamla Teatern, Östersund 2010",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gmajor
-D2 G2 A2|B2 d2 c2|B2 A2 G2|`,
-      contour: {
-        sortKey: "ЛКСРУТ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="32" viewBox="0 0 110 32" role="img">
-  <rect width="110" height="32" fill="white"/>
-  <line x1="10" y1="6" x2="100" y2="6" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="21" x2="25" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="21" x2="40" y2="21" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="21" x2="40" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="85" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="1" x2="100" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -15173,29 +6978,9 @@ DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
       scores: [
         {
           url: "https://thesession.org/tunes/10668#setting10668",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gmajor
-DE|G2G2DE|G2G2Bd|e2d2`,
-      contour: {
-        sortKey: "СРСРЛН",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="27" viewBox="0 0 110 27" role="img">
-  <rect width="110" height="27" fill="white"/>
-  <line x1="10" y1="1" x2="100" y2="1" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -15218,30 +7003,9 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
       scores: [
         {
           url: "https://thesession.org/tunes/8296#setting8296",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dmajor
-FG|A3d AF|G2A2 FD|=C2 (D4`,
-      contour: {
-        sortKey: "ЩШШЯЩХ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="26" x2="100" y2="26" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -15265,30 +7029,9 @@ d3gdc|B2{F}G2G2|d3gdB|c3edc|
       scores: [
         {
           url: "https://thesession.org/tunes/3809#setting3809",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Gminor
-d3gdc|B2{F}G2G2|d3gd`,
-      contour: {
-        sortKey: "ЩШШЯЩЧ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="47" viewBox="0 0 110 47" role="img">
-  <rect width="110" height="47" fill="white"/>
-  <line x1="10" y1="36" x2="100" y2="36" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="16" x2="25" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="16" x2="40" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="16" x2="55" y2="16" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="16" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="16" x2="85" y2="16" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="16" x2="85" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="21" x2="100" y2="21" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -15312,29 +7055,9 @@ K:Dmajor
       scores: [
         {
           url: "https://thesession.org/tunes/5067#setting5067",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dmajor
-d3 e d2|d2 c2 B2|A3 B A2|`,
-      contour: {
-        sortKey: "ЯЮЮбЯЮ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="52" viewBox="0 0 110 52" role="img">
-  <rect width="110" height="52" fill="white"/>
-  <line x1="10" y1="41" x2="100" y2="41" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="6" x2="25" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="6" x2="40" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="6" x2="55" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="55" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="70" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="1" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="85" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="6" x2="100" y2="6" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       abc: `X:1
@@ -15354,29 +7077,9 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
       scores: [
         {
           url: "https://thesession.org/tunes/449#setting449",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
-      incipit: `X:1
-M:3/4
-L:1/8
-K:Dmajor
-de|f3e d2|d2 de d2|B4 `,
-      contour: {
-        sortKey: "гввбЯЮ",
-        svg: `<svg xmlns="http://www.w3.org/2000/svg" class="contour-svg" aria-label="Tune contour" width="110" height="57" viewBox="0 0 110 57" role="img">
-  <rect width="110" height="57" fill="white"/>
-  <line x1="10" y1="46" x2="100" y2="46" stroke="#555555" stroke-width="1" />
-  <line x1="10" y1="1" x2="25" y2="1" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="25" y1="1" x2="40" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="40" y1="1" x2="55" y2="1" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="1" x2="55" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="55" y1="6" x2="70" y2="6" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="6" x2="70" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="70" y1="11" x2="85" y2="11" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
-  <line x1="85" y1="11" x2="100" y2="11" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
-</svg>`
-      }
     },
     {
       groups: "su",
@@ -15387,15 +7090,15 @@ de|f3e d2|d2 de d2|B4 `,
         {
           artists: "Tommy Peoples, fiddle",
           url: "https://www.itma.ie/playlists/tommy-peoples-mcconnell-recordings/?track=14",
-          notes: "The Cathal McConnell Tapes: Tape One; early 1970s"
-        }
+          notes: "The Cathal McConnell Tapes: Tape One; early 1970s",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/5516"
-        }
+          url: "https://thesession.org/tunes/5516",
+        },
       ],
       incipit: `
 X: 1
@@ -15403,7 +7106,7 @@ M: 4/4
 L: 1/16
 K: Dmaj
 FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
-`
+`,
     },
     {
       groups: "su",
@@ -15414,14 +7117,14 @@ FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
         {
           artists: "Tommy Peoples, fiddle",
           url: "https://www.itma.ie/playlists/tommy-peoples-mcconnell-recordings/?track=6",
-          notes: "The Cathal McConnell Tapes: Tape One; early 1970s"
-        }
+          notes: "The Cathal McConnell Tapes: Tape One; early 1970s",
+        },
       ],
       incipit: `X:1
 M: 4/4
 L: 1/16
 K: G
-GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`
+GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`,
     },
     {
       groups: "su",
@@ -15435,25 +7138,26 @@ G2|| A2A>B A2Bd eged B2AG|EG`,
       key: "A dorian",
       references: [
         {
-          artists: "Fintan Vallely, flute; Lori Cole, English concertina; Mark Simos, guitar;  CB Heinemann, bouzouki",
+          artists:
+            "Fintan Vallely, flute; Lori Cole, English concertina; Mark Simos, guitar;  CB Heinemann, bouzouki",
           notes: `Fintan Vallely - Traditional Irish Flute Music, 1979
  Doolin whistle player Micho Russell’s version of an old Scottish tune, as notated by Mícheál Ó hÁlmháin.
  [F. Vallely’s notes](https://imusic.ie/fintan-vallely-traditional-irish-flute-music/)`,
-          url: "https://fintanvallely.bandcamp.com/track/johnny-cope-2"
-        }
+          url: "https://fintanvallely.bandcamp.com/track/johnny-cope-2",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/4953"
+          url: "https://thesession.org/tunes/4953",
         },
         {
           type: "background",
           name: "imusic.ie - background info",
-          url: "https://imusic.ie/fintan-vallely-traditional-irish-flute-music/"
-        }
-      ]
+          url: "https://imusic.ie/fintan-vallely-traditional-irish-flute-music/",
+        },
+      ],
     },
     {
       name: "Shanahan’s",
@@ -15467,16 +7171,16 @@ K: Gmaj
       references: [
         {
           artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar",
-          url: "https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush"
-        }
+          url: "https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/8753#setting44975"
-        }
-      ]
+          url: "https://thesession.org/tunes/8753#setting44975",
+        },
+      ],
     },
     {
       name: "The Boys Of Bluehill",
@@ -15494,9 +7198,9 @@ FA| BAFA DAFA BA (3Bcd e2de|fagf
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/651"
-        }
-      ]
+          url: "https://thesession.org/tunes/651",
+        },
+      ],
     },
     {
       name: "The Home Ruler",
@@ -15513,9 +7217,9 @@ AF|D2FA DAFA dfed B2dB|A2AB AFDE
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/1020"
-        }
-      ]
+          url: "https://thesession.org/tunes/1020",
+        },
+      ],
     },
     {
       name: "Fahey’s Fiddle",
@@ -15533,15 +7237,15 @@ DFA d2e dcA ~G3 | A`,
           artists: "Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars",
           url: "https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
           notes: `album: The Northern Concertina
-SU: 1st & 3rd in the Fahey’s Fiddle set `
-        }
+SU: 1st & 3rd in the Fahey’s Fiddle set `,
+        },
       ],
       scores: [
         {
           name: "thesession.org",
-          url: "https://thesession.org/tunes/124"
-        }
-      ]
+          url: "https://thesession.org/tunes/124",
+        },
+      ],
     },
     {
       name: "Haste To The Wedding",
@@ -15553,21 +7257,21 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `
         {
           artists: "Malachy Bourke, Brian Bourke & Frankie Gavin",
           url: "https://music.youtube.com/watch?v=hF9fGvdO8gw&t=106",
-          notes: "in G"
-        }
+          notes: "in G",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/582"
-        }
+          url: "https://thesession.org/tunes/582",
+        },
       ],
       incipit: `X: 1
 L: 1/8
 M: 12/8
 K: D
-AFA Agf ede fdB|`
+AFA Agf ede fdB|`,
     },
     {
       name: "Morrison’s",
@@ -15577,16 +7281,17 @@ AFA Agf ede fdB|`
       scores: [
         {
           url: "https://thesession.org/tunes/71",
-          name: "thesession.org"
-        }
+          name: "thesession.org",
+        },
       ],
       references: [
         {
           url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
-          artists: "Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
-          notes: "Miss Walsh, jig ; Morrison's, jig"
-        }
-      ]
+          artists:
+            "Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
+          notes: "Miss Walsh, jig ; Morrison's, jig",
+        },
+      ],
     },
     {
       name: "My Darling Asleep",
@@ -15602,16 +7307,16 @@ e|fdd cAA BGG A2G|`,
       references: [
         {
           artists: "Stockton’s Wing",
-          url: "https://music.youtube.com/watch?v=HkuABOYkWws"
-        }
+          url: "https://music.youtube.com/watch?v=HkuABOYkWws",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/76"
-        }
-      ]
+          url: "https://thesession.org/tunes/76",
+        },
+      ],
     },
     {
       name: "Denis Murphy’s",
@@ -15629,16 +7334,16 @@ f/g/f/e/ d>B AD FA | GE e>d`,
           artists: "Planxty",
           url: "https://youtu.be/q5Blc3k16rE",
           notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
-        `
-        }
+        `,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/357#setting46411"
-        }
-      ]
+          url: "https://thesession.org/tunes/357#setting46411",
+        },
+      ],
     },
     {
       name: "John Ryan’s",
@@ -15653,16 +7358,16 @@ K: D
 d2d2 BcdB A2F2 A2F2 | `,
       references: [
         {
-          notes: "#3 in the (ALORA) Denis Murphy’s set"
-        }
+          notes: "#3 in the (ALORA) Denis Murphy’s set",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/441#setting28845"
-        }
-      ]
+          url: "https://thesession.org/tunes/441#setting28845",
+        },
+      ],
     },
     {
       name: "The £42 Cheque",
@@ -15677,16 +7382,16 @@ Ad Bd/B/ AD FA|GE BE`,
       rhythm: "polka",
       references: [
         {
-          notes: "#2 in the (ALORA) Denis Murphy’s set"
-        }
+          notes: "#2 in the (ALORA) Denis Murphy’s set",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/786"
-        }
-      ]
+          url: "https://thesession.org/tunes/786",
+        },
+      ],
     },
     {
       name: "Palmer’s Gate",
@@ -15700,17 +7405,18 @@ K: Emin
 GA|BE~E2 GABG AdBA GEED|~G3A `,
       references: [
         {
-          artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? bodhrán",
-          url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1"
-        }
+          artists:
+            "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? bodhrán",
+          url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/1020"
-        }
-      ]
+          url: "https://thesession.org/tunes/1020",
+        },
+      ],
     },
     {
       name: "The Wise Maid",
@@ -15725,16 +7431,16 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
       rhythm: "reel",
       references: [
         {
-          notes: "#3 in the (ALORA) Maud Millar set"
-        }
+          notes: "#3 in the (ALORA) Maud Millar set",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/118#setting55404"
-        }
-      ]
+          url: "https://thesession.org/tunes/118#setting55404",
+        },
+      ],
     },
     {
       name: "Jerry McMahon’s",
@@ -15752,16 +7458,16 @@ EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
           url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs",
           notes: `From 2:10 onwards. Dunno who the backing guitar & perc are by.
           I think he’s playing this in G (dorian), not A.
-          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`
-        }
+          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/4263#setting45736"
-        }
-      ]
+          url: "https://thesession.org/tunes/4263#setting45736",
+        },
+      ],
     },
     {
       name: "Lucy Campbell",
@@ -15776,13 +7482,13 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
       rhythm: "reel (single)",
       references: [
         {
-          notes: "Compare with The Bucks Of Oranmore"
+          notes: "Compare with The Bucks Of Oranmore",
         },
         {
           artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
           url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
           notes: `I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
-Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`
+Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`,
         },
         {
           notes: `Chords (TBC):
@@ -15803,16 +7509,16 @@ D D D A? | D G A D
 D D D A  | G D A D
 
 Part A - alternative 1st bar
-D - (D/F) (D, Dsus4, G or Em) D - Em - `
-        }
+D - (D/F) (D, Dsus4, G or Em) D - Em - `,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/1552"
-        }
-      ]
+          url: "https://thesession.org/tunes/1552",
+        },
+      ],
     },
     {
       name: "The Bucks Of Oranmore",
@@ -15827,31 +7533,32 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
       rhythm: "reel (single)",
       references: [
         {
-          notes: "Compare with Lucy Campbell"
+          notes: "Compare with Lucy Campbell",
         },
         {
           artists: "Stockton’s Wing",
           url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
-          notes: "0:46 onwards"
+          notes: "0:46 onwards",
         },
         {
           artists: "Paddy Glackin & Paddy Keenan",
-          url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104"
+          url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104",
         },
         {
-          artists: "“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
+          artists:
+            "“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
           url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
           notes: `3:04 onwards.
-        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
-        }
+        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/2"
-        }
-      ]
+          url: "https://thesession.org/tunes/2",
+        },
+      ],
     },
     {
       name: "The Dogs Among The Bushes",
@@ -15868,22 +7575,22 @@ BGG2 DGG2 BGG2 cedc | `,
         {
           artists: "Éimhear Flannery, whistle; Paul De Grae, guitar",
           url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
-          notes: "in a set with The Killavil Fancy"
+          notes: "in a set with The Killavil Fancy",
         },
         {
           notes: `Chords (TBC):
 G - - C | G - D - | G - - C | G - D - ||
 G - - - | D - - - | G - - (D) | G - D - ||
-`
-        }
+`,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "tradchords",
-          url: "https://tradchords.org/?tune=595"
-        }
-      ]
+          url: "https://tradchords.org/?tune=595",
+        },
+      ],
     },
     {
       name: "The Drunken Tinker",
@@ -15899,16 +7606,16 @@ EAAG EGDG EA~A2 fAeA| `,
       references: [
         {
           url: "https://comhaltas.ie/comhaltaslive/comhaltaslive_628_9tribute_concert_to_the_late_ashling_murphy/",
-          notes: "from 4:32 onwards"
-        }
+          notes: "from 4:32 onwards",
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/1555"
-        }
-      ]
+          url: "https://thesession.org/tunes/1555",
+        },
+      ],
     },
     {
       name: "The Killavil Fancy",
@@ -15925,22 +7632,22 @@ DGBG A2BA GEE2 cEGE | `,
         {
           artists: "Éimhear Flannery, whistle; Paul De Grae, guitar",
           url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
-          notes: "in a set with The Dogs Among The Bushes"
+          notes: "in a set with The Dogs Among The Bushes",
         },
         {
           notes: `Chords (TBC):
 G (D) C - | G (D) C - | G (D) C - | G (D) C - ||
 G (C) G (D) | G (C) G - | G (C) G (D) | C - G C || 
-`
-        }
+`,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/576"
-        }
-      ]
+          url: "https://thesession.org/tunes/576",
+        },
+      ],
     },
     {
       name: "The Wind That Shakes The Barley",
@@ -15958,16 +7665,16 @@ A2AB AFED B2BA BcdB |`,
           artists: "Tony DeMarco, fiddle; Felix Dolan, piano",
           url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=3",
           notes: `Wind that shakes the barley, reel ; Reel of Bogie 
-          #2 in the (ALORA) Maud Millar set`
-        }
+          #2 in the (ALORA) Maud Millar set`,
+        },
       ],
       scores: [
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/116#setting45357"
-        }
-      ]
+          url: "https://thesession.org/tunes/116#setting45357",
+        },
+      ],
     },
     {
       name: "Denis Murphy’s",
@@ -15984,9 +7691,9 @@ A2D FED F2A A2f|gfe`,
         {
           type: "tune",
           name: "thesession",
-          url: "https://thesession.org/tunes/159#setting35527"
-        }
-      ]
-    }
-  ]
-}
+          url: "https://thesession.org/tunes/159#setting35527",
+        },
+      ],
+    },
+  ],
+};
