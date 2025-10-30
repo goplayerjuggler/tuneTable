@@ -113,6 +113,7 @@ function processTuneData(tune) {
 	if (!processed.name) processed.name = "Untitled";
 	if (!processed.key) processed.key = "";
 	if (!processed.rhythm) processed.rhythm = "";
+	else processed.rhythm = processed.rhythm.toLowerCase();
 	if (!processed.references) processed.references = [];
 	if (!processed.scores) processed.scores = [];
 	return processed;

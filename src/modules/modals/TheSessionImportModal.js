@@ -194,7 +194,7 @@ export default class TheSessionImportModal extends Modal {
 
 			this.showStatus(
 				`Found ${tuneIds.length} tunes. Fetching ABC settings…`,
-				"info"
+				"info",
 			);
 
 			// Step 3: Fetch ABC for each tune
@@ -205,7 +205,7 @@ export default class TheSessionImportModal extends Modal {
 				const tuneId = tuneIds[i];
 				this.showStatus(
 					`Processing tune ${i + 1} of ${tuneIds.length}…`,
-					"info"
+					"info",
 				);
 
 				const tuneData = await this.getTuneWithAbc(tuneId, memberId);
@@ -218,8 +218,8 @@ export default class TheSessionImportModal extends Modal {
 						(t.name.trim().toLowerCase() ===
 							tuneData.name.trim().toLowerCase() ||
 							tuneData.aliases?.find(
-								(a) => a?.trim().toLowerCase() === t.name.trim().toLowerCase()
-							))
+								(a) => a?.trim().toLowerCase() === t.name.trim().toLowerCase(),
+							)),
 				);
 
 				if (existingTune) {
@@ -235,10 +235,10 @@ export default class TheSessionImportModal extends Modal {
 					if (importedTunes.length >= limit) {
 						break;
 					}
-				} catch (error) {
+				} catch {
 					this.showStatus(
 						`failed to import tune: ${tuneData.name} - continuing`,
-						"error"
+						"error",
 					);
 					continue;
 				}
@@ -285,7 +285,7 @@ export default class TheSessionImportModal extends Modal {
 	 */
 	async getMemberIdByUsername(username) {
 		const searchUrl = `https://thesession.org/members/search?q=${encodeURIComponent(
-			username
+			username,
 		)}&format=json`;
 
 		const response = await fetch(searchUrl);
@@ -297,7 +297,7 @@ export default class TheSessionImportModal extends Modal {
 
 		// Find exact match (case-insensitive)
 		const member = data.members?.find(
-			(m) => m.name.toLowerCase() === username.toLowerCase()
+			(m) => m.name.toLowerCase() === username.toLowerCase(),
 		);
 
 		return member?.id || null;
@@ -318,7 +318,7 @@ export default class TheSessionImportModal extends Modal {
 				`loading tunebook items ${page * perPage + 1} to ${
 					(page + 1) * perPage
 				}`,
-				"info"
+				"info",
 			);
 			const response = await fetch(url);
 			if (!response.ok) {
@@ -367,7 +367,7 @@ export default class TheSessionImportModal extends Modal {
 		// Select the best setting(s)
 		let selectedSetting = this.selectBestSetting(
 			settingsData,
-			preferredMemberId
+			preferredMemberId,
 		);
 		if (!selectedSetting) {
 			throw new Error(`No settings found for tune ${tuneId}`);
@@ -415,12 +415,12 @@ export default class TheSessionImportModal extends Modal {
 			const comments = tuneData.comments.find((c) => c.date === setting.date);
 			let nHeaders = comments
 				? "\n" +
-				  comments.content
-						.replace(/    /gm, "\n")
+					comments.content
+						.replace(/ {4}/gm, "\n")
 						.split("\n")
 						.map((l) => addLineBreaks(l, 80))
 						.join("\n") +
-				  "\nN:---"
+					"\nN:---"
 				: "";
 			return `X:1
 T:${tuneData.name + cHeader}
@@ -440,7 +440,7 @@ K:${setting.key}
 ${
 	setting.abc
 		.replace(/!(\w+)!/gm, "__$1__")
-		.replace(/\!/gm, "\n")
+		.replace(/!/gm, "\n")
 		.replace(/__(\w+)__/gm, "!$1!")
 	/*
   bit of work to escape out abc ornaments like !tenuto!, then replace `!` with line return
@@ -480,7 +480,7 @@ Because thesession encodes line returns with `!`.
 		// First try to find a setting by the preferred member
 		if (preferredMemberId) {
 			const memberSetting = settings.filter(
-				(s) => s.member && s.member.id === preferredMemberId
+				(s) => s.member && s.member.id === preferredMemberId,
 			);
 			if (memberSetting.length > 0) {
 				return memberSetting;

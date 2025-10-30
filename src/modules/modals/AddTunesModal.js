@@ -126,6 +126,7 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 			let addedCount = 0;
 			let failedCount = 0;
 			const failedNames = [];
+			const errors = [];
 
 			abcTunes.forEach((abc) => {
 				try {
@@ -142,13 +143,16 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 					if (titles.length > 0 && failedNames.length < 10) {
 						failedNames.push(titles[0]);
 					}
+					if (errors.indexOf(error) < 0) {
+						errors.push(error);
+					}
 				}
 			});
 
 			const fails = `nb failures: ${failedCount}${
 				failedNames.length === 0
 					? ""
-					: `; titles of failed: ${failedNames.join(", ")}`
+					: `; titles of failed: ${failedNames.join(", ")}; errors: ${errors.join("<br />")}`
 			}`;
 
 			if (addedCount > 0) {
@@ -162,7 +166,7 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 				}`;
 				this.showStatus(
 					successes + (failedCount === 0 ? "" : `; ${fails}`),
-					"success"
+					"success",
 				);
 
 				this.elements.input.value = "";

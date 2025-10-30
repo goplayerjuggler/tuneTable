@@ -20,7 +20,12 @@ import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
-const STORAGE_KEY = "tunesData";
+const storageKey = "tunesData";
+const comparable = [
+	["jig", "slide", "single jig", "double jig"],
+	["reel", "single reel", "reel (single)", "strathspey", "double reel"],
+	["hornpipe", "barndance", "fling"],
+];
 
 const getEmptySort = () => {
 	return { column: null, direction: "asc" };
@@ -31,7 +36,7 @@ let editModal, addTunesModal, loadJsonModal;
 // Local Storage Functions
 function saveTunesToStorage() {
 	try {
-		localStorage.setItem(STORAGE_KEY, JSON.stringify(tunesData));
+		localStorage.setItem(storageKey, JSON.stringify(window.tunesData));
 		console.log("Saved to local storage");
 	} catch (e) {
 		console.error("Failed to save to local storage:", e);
@@ -40,7 +45,7 @@ function saveTunesToStorage() {
 
 function loadTunesFromStorage() {
 	try {
-		const stored = localStorage.getItem(STORAGE_KEY);
+		const stored = localStorage.getItem(storageKey);
 		if (stored) {
 			const parsed = JSON.parse(stored);
 			if (Array.isArray(parsed)) {
@@ -55,17 +60,17 @@ function loadTunesFromStorage() {
 
 function clearStorage() {
 	if (confirm("This will reset all tunes to the original data. Continue?")) {
-		localStorage.removeItem(STORAGE_KEY);
+		localStorage.removeItem(storageKey);
 		location.reload();
 	}
 }
 
 function emptyTunes() {
 	if (
-		!localStorage.getItem(STORAGE_KEY) ||
+		!localStorage.getItem(storageKey) ||
 		confirm("You may lose some data. This cannot be undone. Continue?")
 	) {
-		localStorage.removeItem(STORAGE_KEY);
+		localStorage.removeItem(storageKey);
 	}
 	window.tunesData = [];
 	window.filteredData = [];
@@ -90,7 +95,7 @@ function copyTunesToClipboard() {
 			delete tune.incipit;
 		}
 	});
-	const result = javascriptify(tunesData);
+	const result = javascriptify(window.tunesData);
 	navigator.clipboard.writeText(result).then(
 		() => {
 			const btn = document.getElementById("copyTunesBtn");
@@ -197,8 +202,7 @@ function canBeCompared(tune1, tune2) {
 		console.log(error);
 	}
 	if (!tune1.contour || !tune2.contour) return false;
-	// return true;
-	//can compare all the different reels
+
 	if (
 		tune1.rhythm?.indexOf("reel") >= 0 &&
 		tune2.rhythm?.indexOf("reel") >= 0
@@ -208,16 +212,12 @@ function canBeCompared(tune1, tune2) {
 
 	// but not hop jigs with different meters
 	if (
-		tune1.rhythm?.indexOf("hope jig") >= 0 &&
-		tune2.rhythm?.indexOf("hope jig") >= 0 &&
+		tune1.rhythm?.indexOf("hop jig") >= 0 &&
+		tune2.rhythm?.indexOf("hop jig") >= 0 &&
 		tune1.meter !== tune2.meter
-	) {
+	)
 		return false;
-	}
-	const comparable = [
-		["jig", "slide"],
-		["hornpipe", "barndance"],
-	];
+
 	comparable.forEach((list) => {
 		if (list.indexOf(tune1.rhythm) >= 0 && list.indexOf(tune2.rhythm) >= 0) {
 			return true;
@@ -290,7 +290,7 @@ function initialiseData() {
 	// window.importFromTheSession = theSessionImport.importFromTheSession;
 
 	eventBus.on("tuneImported", (tuneData) => {
-		tunesData.push(tuneData);
+		window.tunesData.push(tuneData);
 		saveTunesToStorage();
 	});
 	eventBus.on("refreshTable", () => {
@@ -367,12 +367,14 @@ function initialiseData() {
 function populateFilters() {
 	const rhythms = [
 		...new Set(
-			tunesData.map((tune) => tune.rhythm?.toLowerCase()).filter((r) => r),
+			window.tunesData
+				.map((tune) => tune.rhythm?.toLowerCase())
+				.filter((r) => r),
 		),
 	].sort();
 	const keys = [
 		...new Set(
-			tunesData
+			window.tunesData
 				.map((tune) => tune.key)
 				.filter((k) => k)
 				.map((k) => normaliseKey(k).join(" ")),
@@ -548,7 +550,7 @@ function renderTable() {
 		}
 	});
 	document.getElementById("spCount").innerText =
-		`${filteredData.length}/${tunesData.length}`;
+		`${window.filteredData.length}/${window.tunesData.length}`;
 }
 
 function applyFilters() {
