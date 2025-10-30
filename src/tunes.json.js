@@ -5590,6 +5590,24 @@ P:Coda
 !coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
 P:Variations/embellishments
 "_v1"Be||"_v2"dG||"_v3"(3ege||"_v4"eBdB ABGA||"_v5"ABGA||"_v6"A/B/AGA||"_v7"(3GGG||"_v8"BeeB||||"_v9"efge||"_v10"eage||"_v11"e2(3gfe||`,
+			references: [
+				//	{url:"", artists:"", notes:``}
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2024/?track=8",
+					artists: "Seán Maguire, fiddle",
+					notes: `The skylark, reel; Maud Miller, reel`,
+				},
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=3",
+					artists: "Andy McGann, fiddle, speech; Felix Dolan, piano",
+					notes: `Maud Miller, reel ; Hand me down the tackle [Tom Steele's], reel`,
+				},
+				{
+					url: "https://www.youtube.com/watch?v=Mk5llmB-rLY",
+					artists: "Brid Harper, fiddle; Harry Bradley, flute",
+					notes: `Maud Miller, reel; Donegal reel`,
+				},
+			],
 		},
 		{
 			abc: `X:1
@@ -7740,6 +7758,20 @@ d3 ege c2A d3 faf ged|f3 ged c2A BAG FAF GED|
 [P:E] d3 ege d2A d3 f2d g2d|f2d ged c2A BAG FAF GED|
 !coda!d3 ege d2A d3 faf ged|f3 ged c2A BAG FAF GE!D.C.!D||
 !coda!d3 ege d2A d3 faf g3|afd ged c2A BAG FAF GED | !fermata!D6 |]`,
+		},
+		{
+			g: "alora",
+			abc: `X: 1
+T: The Ballydesmond
+R: polka
+M: 4/4
+L: 1/8
+K: Ador
+|: \
+"C"!tenuto!cd/c/ "G"!tenuto!Bc/B/ "Am"!tenuto!AB/A/ "Em"!tenuto!G>A|"G".Bd. ed "Em"(ga/g/) .ed|
+"Am".ea      g>e   "G".dB GA/B/    |"C".ce "Em".dB "Am"A2A2:|
+"Am".ea      ag/e/ "G".dg g>d      |"Am".ea ab "Em"(ga/g/) .ed|
+"Am".ea      g>e   "G".dB GA/B/    |"Am".ce "Em"dB "Am"A2A2:|`,
 		},
 	],
 };
