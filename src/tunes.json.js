@@ -1820,8 +1820,22 @@ K:Amixolydian
 		{
 			abc: [
 				`X:1
+T: The Sunny Side of the Latch
+Z: Malcolm Schonfield % 231212,3,4
+C: Jason O’Rourke
+Q:3/8=100
+M:12/8
+L:1/8
+K:C
+%swing 0.3 0
+EDE CDC EFG AdB | cBc ABc GEC ~D2C | EDE CDC EFG AdB | cGE _BFD CDC C2E | 
+EDE CDC EFG A2{^c}d | cBc ABc GEC ~D3 | EDE CDC EFG AdB | cGE _BFD CDC C2e || 
+efg fed ecA dBG | cGE _BFD CGc =Bcd | efg fed ecA d^cd | cGE _BFD CDC C2e |
+efg fed ecA d^cd | cGE _BFD Cec =Bcd | efg ~f3 ~e3 ~d3 | cGE _BFD CDC C2E !D.C.! |]
+"^second time, at the end"efg f(3edf e(3Gce d(3GBd | c(3GEG _B(3FDF C(3EGc =Bcd | efg ~f3 efg fed | cGE _BFD CDC C3 |]`,
+				`X:1
 T:The Sunny Side Of The Latch
-C:Jason O'Rourke
+C:Jason O’Rourke
 R:jig
 L:1/8
 M:6/8
@@ -3096,22 +3110,21 @@ K:Eminor
 			],
 		},
 		{
-			abc: `X:1
-T:The Ballydesmond
-R:polka
-L:1/8
-M:2/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/239#setting239
-N:Setting entered in thesession by user Jeremy on 2001-08-16
-K:Adorian
-|:AB|c2 B2|A2 GA|Bd ed|g2 ed|
- ea ge|dB G>B|ce dB|A2:|
- |:cd|ea ag|dg gd|ea ab|g2 ed|
- ea ge|dB G>B|ce dB|A2:|`,
+			g: "alora",
+			abc: `X: 1
+T: The Ballydesmond
+R: polka
+M: 4/4
+L: 1/8
+K: Ador
+|: \
+"C"!tenuto!cd/c/ "G"!tenuto!Bc/B/ "Am"!tenuto!AB/A/ "Em"!tenuto!G>A| "G".Bd. ed "Em"(ga/g/) .ed|
+"Am".ea g>e "G".dB GA/B/ |"C".ce "Em".dB "Am"A2A2:|
+"Am".ea ag/e/ "G".dg g>d |"Am".ea ab "Em"(ga/g/) .ed|
+"Am".ea g>e "G".dB GA/B/ |"Am".ce "Em"dB "Am"A2A2:|`,
 			scores: [
 				{
-					url: "https://thesession.org/tunes/239#setting239",
+					url: "https://thesession.org/tunes/239",
 					name: "thesession.org",
 				},
 			],
@@ -3119,11 +3132,11 @@ K:Adorian
 		{
 			abc: `X:1
 T:The Frozen Mouse
-C:Jason O'Rourke
+C:Jason O’Rourke
 R:polka
 L:1/8
 M:2/4
-N:Belfast concertinist Jason O'Rourke wrote this polka. He recorded it in his
+N:Belfast concertinist Jason O’Rourke wrote this polka. He recorded it in his
 N:second solo album "The Northern Concertina" (2015), in the middle of a set of 3
 N:polkas (the two other are traditional). First part in G, second part in Dmix,
 N:nice !
@@ -3134,7 +3147,7 @@ N:Setting entered in thesession by user fiddlebzh on 2019-11-07
 K:Gmajor
 |:B>c de|dB Bd|cA AB/d/|ed BA|
  B>c de|de/d/ Bd|cA DF|AG G2:|
- F>G AB|cA AG|Ad cA|AG FD|
+[K:D mix]F>G AB|cA AG|Ad cA|AG FD|
  F>G AB|1 cA AG|Ad cA|G2 G2:|
  [2 cA c/d/e|dc AF|G2 G2||`,
 			scores: [
@@ -7758,20 +7771,6 @@ d3 ege c2A d3 faf ged|f3 ged c2A BAG FAF GED|
 [P:E] d3 ege d2A d3 f2d g2d|f2d ged c2A BAG FAF GED|
 !coda!d3 ege d2A d3 faf ged|f3 ged c2A BAG FAF GE!D.C.!D||
 !coda!d3 ege d2A d3 faf g3|afd ged c2A BAG FAF GED | !fermata!D6 |]`,
-		},
-		{
-			g: "alora",
-			abc: `X: 1
-T: The Ballydesmond
-R: polka
-M: 4/4
-L: 1/8
-K: Ador
-|: \
-"C"!tenuto!cd/c/ "G"!tenuto!Bc/B/ "Am"!tenuto!AB/A/ "Em"!tenuto!G>A|"G".Bd. ed "Em"(ga/g/) .ed|
-"Am".ea      g>e   "G".dB GA/B/    |"C".ce "Em".dB "Am"A2A2:|
-"Am".ea      ag/e/ "G".dg g>d      |"Am".ea ab "Em"(ga/g/) .ed|
-"Am".ea      g>e   "G".dB GA/B/    |"Am".ce "Em"dB "Am"A2A2:|`,
 		},
 	],
 };
