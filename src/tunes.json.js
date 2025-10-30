@@ -6271,17 +6271,18 @@ K:Adorian
 		},
 		{
 			name: "The Kid On The Mountain",
-			groups: "ALORA",
+			groups: "ALORA,su",
 			key: "E minor",
 			origin: "Ireland",
 			rhythm: "slip jig",
-			abc: `%The Kid On The Mountain
+			abc: `
 X: 1
 T: The Kid On The Mountain
-N:
 N: 1. I attempt here to write the notes more or less as played by Michael Coleman on the It Was Mighty! album.
-N: 2. With chords by Malcolm Schonfield - version of 2024-07-18
+N: 2. With added chords - version of 2024-07-18
 N: 3. Using 16/18 rather than the standard 9/8 on purpose (personal preference).
+N: 4. The E part is slightly different from today’s standard version;
+N: and the F part isn’t well known at all.
 D: It Was Mighty! the Early Days of Irish Music in London
 S: Michael Coleman
 F: https://open.spotify.com/track/6ywXKcy4P31JiC9vqW2ru9
@@ -7712,6 +7713,33 @@ A2D FED F2A A2f|gfe`,
 					url: "https://thesession.org/tunes/159#setting35527",
 				},
 			],
+		},
+		{
+			g: "su",
+			abc: `
+X: 1
+T: O’Farrell’s Welcome To Limerick
+T: (as played by Tommy Peoples)
+C:traditionnel
+S: Tommy Peoples
+D: The High Part Of The Road (1976)
+F: https://open.spotify.com/track/1KaCOZYDak3wuTToNlUxpv
+N: See comments here: https://goplayerjuggler.blogspot.com/2024/06/ofarrells-welcome-to-limerick.html
+Z:abc-transcription Malcolm Schonfield%2024-06-17
+Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+R: Slip jig
+M: 18/16
+L: 1/16
+K: D mixo
+[P:A]FGA AFA Bc2 BAG FAF GED|F2D ADD d3 dfd dcA GED|
+FGA AFd Bc2 BAG FAF GED|F2D ADD d2A dfd dcA GED|
+[P:B]d3 ege c2A d3 f2d g3|afd ged c2A BAG FAF GED |
+d3 ege c2A d3 faf ged|f3 ged c2A BAG FAF GED|
+[P:C]|:FGA AFd AFd AFd AFd GED|FGA AFA Bc2 BAG FAF GED:|
+[P:D]|:D3 D3 c3 c2B c2A GED|D3 D3 d2A dfd dcA GED:|
+[P:E] d3 ege d2A d3 f2d g2d|f2d ged c2A BAG FAF GED|
+!coda!d3 ege d2A d3 faf ged|f3 ged c2A BAG FAF GE!D.C.!D||
+!coda!d3 ege d2A d3 faf g3|afd ged c2A BAG FAF GED | !fermata!D6 |]`,
 		},
 	],
 };
