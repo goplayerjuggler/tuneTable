@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-10-30",
+	lastUpdate: "2025-11-02",
 	tunes: [
 		{
 			abc: `
@@ -469,27 +469,6 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/974#setting974",
-					name: "thesession.org",
-				},
-			],
-		},
-		{
-			abc: `X:1
-T:Shanahan's
-R:hornpipe
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/8753#setting8753
-N:Setting entered in thesession by user ceolachan on 2008-07-27
-K:Gmajor
-|:D>F|G>FG>A B>G (3Bcd|g>fg>a b>gd>B|A>^GA>B c2 c>e|(3agf g>e (3dcB c>A|
- G3 A B>GB>d|g2 (3fga b>gd>B|A>e (3cBA B>G (3AGF|D>G (3GGF G2:|
- |:(3ABc|d2 (3^cde d2 e>f|g>fg>a b>gd>B|d>^cd>e f>ga>b|a>g (3gfe d>c (3cBA|
- G2 (3FGA B2 (3GBd|g3 a b>g (3dcB|A>ed>c B>GA<F|D2 G2 G2:|`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/8753#setting8753",
 					name: "thesession.org",
 				},
 			],
@@ -1107,8 +1086,8 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/770#setting29548
-N:(edited after importing)
 N:Setting entered in thesession by user JACKB on 2016-12-24
+N:(edited after importing)
 K:Adorian
 B|:AGE G2E G2E G2E|A2B c2d e2d efg|
    e3 dBA BAG Bcd|edc BAG [1 B2A A2B:| [2 B2A A2e||
@@ -1134,8 +1113,8 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/1043#setting1043
-N:(edited after importing)
 N:Setting entered in thesession by user slainte on 2002-10-14
+N:(edited after importing)
 K:Adorian
 |:B|AGE G2E c2E G2E|DED D2E GED D2B|
     AGE G2E c2E DEG|A3 BGE A3 A2:|
@@ -1629,8 +1608,8 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/1902#setting1902
-N:(edited after importing)
 N:Setting entered in thesession by user Dr. Dow on 2003-08-24
+N:(edited after importing)
 K:Bminor
 |:dBA ~B3 def ede|f2e ede faf efe|
   dBA ~B3 def ede|fba fed fee edB:|
@@ -1677,8 +1656,8 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/693#setting23367
-N:(edited after importing)
 N:Setting entered in thesession by user JACKB on 2014-02-01
+N:(edited after importing)
 K:Gmajor
 |:BGG AGG BGG AGF|DGG GAG DGG G2A|
   BGG AGG BGG AGF|D2E F2G ADE FGA:|
@@ -2349,22 +2328,24 @@ K:Dmajor
 			],
 		},
 		{
-			abc: `X:1
-T:Spórt
+			abc: `
+X: 3
+T: Spórt
 C:Peadar Ó Riada
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/870#setting870
-N:Setting entered in thesession by user CreadurMawnOrganig on 2002-08-02
-K:Dmajor
-|:AdF ~A3|GBE GFG|AdF ~A3|GBE cde|
- AdF ~A3|GBE GFG|cdc A2G|1 EAA D2F:|2 EAA D2||
- |:d|~c3 ~d3|cec A2g|fed ged|cec A2e|
- ~f3 ~g3|age d2e|fdF A2F|GEA D2:|z|
- |:AGG AGE|AGE EDD|AGE cde|dcA ~G3|
- AGG AGE|AGE EDD|cdc A2G|EAA D3:|`,
+R: jig
+M: 6/8
+L: 1/8
+N:Imported into *tuneTable* on 2025-11-01,
+N:from https://thesession.org/tunes/870#setting14042
+N:Setting entered in thesession by user daveboling on 2012-10-01
+K: Dmaj
+|:AdF A2 A|GBE G2 G|AdF A2 A|GEd cEA|
+AdF A2 A|GBE G2 A|cdc A2A|GEA D3:|
+|:cBc dcd|cec A2g|fed ged|cec A3|
+fef gfg|faf d2e|fdF AFA|GEA D2 A:|
+|:AGG AEE|AGE EDD|AGG c2 e|dcA AGE|
+AGG AEE|AGE EDD|cdc A2G|EAA D3:|
+`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/870#setting870",
@@ -3110,7 +3091,7 @@ K:Eminor
 			],
 		},
 		{
-			g: "alora",
+			groups: "alora",
 			abc: `X: 1
 T: The Ballydesmond
 R: polka
@@ -5326,8 +5307,8 @@ R:reel (single)
 L:1/16
 M:4/4
 N:Imported from https://thesession.org/tunes/474#setting31703
-N:(edited after importing)
 N:Setting entered in thesession by user JACKB on 2018-01-19
+N:(edited after importing)
 K:Gmajor
  d2BG dGBG G2(3Bcd efge|d2BG dGBG ABcd edBe|
  d2BG dGBG G2(3Bcd efge|d2BG dGBG ABcd edBd||
@@ -6440,7 +6421,9 @@ T:Na Ceannabháin Bhána
 R:slip jig
 L:1/8
 M:9/8
-N:Imported into *tuneTable* on 2025-10-25,
+N:1. It’s interesting to compare this with the Swaggering,
+N:which has a similar contour.
+N:2. Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/612#setting612
 N:Setting entered in thesession by user b.maloney on 2002-03-22
 K:Gmajor
@@ -7179,10 +7162,10 @@ GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`,
 		{
 			groups: "su",
 			incipit: `X: 8
-M: 4/4
-L: 1/16
+M: 4/2
+L: 1/8
 K: Ador
-G2|| A2A>B A2Bd eged B2AG|EG`,
+EG| A2A>B A2(3Bcd eged B2AG|EG`,
 			name: "Johnny Cope",
 			rhythm: "hornpipe",
 			key: "A dorian",
@@ -7217,7 +7200,7 @@ G2|| A2A>B A2Bd eged B2AG|EG`,
 M: 4/2
 L: 1/8
 K: Gmaj
-(3DEF|GFGA BGBd gfga `,
+(3DEF|GFGA BGBd gfga bgdB | `,
 			references: [
 				{
 					artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar",
@@ -7746,7 +7729,7 @@ A2D FED F2A A2f|gfe`,
 			],
 		},
 		{
-			g: "su",
+			groups: "su",
 			abc: `
 X: 1
 T: O’Farrell’s Welcome To Limerick
@@ -7771,6 +7754,92 @@ d3 ege c2A d3 faf ged|f3 ged c2A BAG FAF GED|
 [P:E] d3 ege d2A d3 f2d g2d|f2d ged c2A BAG FAF GED|
 !coda!d3 ege d2A d3 faf ged|f3 ged c2A BAG FAF GE!D.C.!D||
 !coda!d3 ege d2A d3 faf g3|afd ged c2A BAG FAF GED | !fermata!D6 |]`,
+		},
+		{
+			abc: [
+				`X:1
+T:The Swaggering Jig
+R:slip jig
+L:1/8
+M:9/8
+N:1. It’s interesting to compare this with Na Ceannabháin Bhána,
+N:which has a similar contour.
+N:2. Imported into *tuneTable* on 2025-10-31,
+N:from https://thesession.org/tunes/661#setting661
+N:Setting entered in thesession by user Jeremy on 2002-04-27
+K:Gmajor
+|:BGG AGE DEG|BAG DEG A3|BGG AGE DEG|cBA BGE D3:|
+ Bdd dge dBG|Bdd dBG A3|Bdd dge dBG|cBA BGE D3|
+ Bdd dge dBG|Bdd dBG A3|gfe fdB cBA|cBA BGE D3||`,
+			],
+			scores: [
+				{
+					url: "https://thesession.org/tunes/661#setting661",
+					name: "thesession.org",
+				},
+			],
+		},
+		{
+			name: "The Holly Bush",
+			rhythm: "reel",
+
+			incipit: `X: 1
+M: 4/2
+L: 1/8
+K: Dmix
+A2FA DAFG ABde fded|`,
+			references: [{ notes: "Composed by Finbarr Dwyer" }],
+			theSessionId: 1566,
+		},
+		{
+			groups: "su",
+			abc: [
+				`X:1
+T:Joan Martin's
+R:polka
+L:1/8
+M:2/4
+N:Imported into *tuneTable* on 2025-11-02,
+N:from https://thesession.org/tunes/11600#setting21930
+N:Setting entered in thesession by user ceolachan on 2013-07-18
+K:Gmajor
+|:D|GB BG|FA- AD|GA Bc|de/d/ cA|
+ GB- BG|FA AB|c/B/A FA|G2 G:|
+ |:B/c/|dg ga|bg gf/e/|dg- gb|ab/a/ g/f/e|
+ dg- ga|bg ge|dB c/B/A|G2- G:|`,
+			],
+			scores: [
+				{
+					url: "https://thesession.org/tunes/11600#setting21930",
+					name: "thesession.org",
+				},
+			],
+			references: [{ notes: "Nb 1 / 2nd polka set" }],
+			theSessionId: 11600,
+		},
+		{
+			name: "Cutting Bracken",
+			groups: "su",
+			rhythm: "polka",
+			incipit: `X: 9
+M: 4/4
+L: 1/8
+K: Amin
+AA ~a2 ge ~g2|ed`,
+			references: [{ notes: "Nb 2 / 2nd polka set" }],
+			theSessionId: 647,
+		},
+		{
+			name: "The Sliabh Lucan",
+			groups: "su",
+			rhythm: "polka",
+			incipit: `X: 1
+M: 4/4
+L: 1/8
+K: Emin
+EB B>A BG E/F/G|FA`,
+			references: [{ notes: "Nb 3 / 2nd polka set" }],
+			theSessionId: 11676,
 		},
 	],
 };
