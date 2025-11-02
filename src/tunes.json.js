@@ -7841,5 +7841,64 @@ EB B>A BG E/F/G|FA`,
 			references: [{ notes: "Nb 3 / 2nd polka set" }],
 			theSessionId: 11676,
 		},
+		{
+			name: "The Gold Ring",
+			groups: "su",
+			rhythm: "jig",
+			incipit: `X: 7
+M: 12/8
+L: 1/8
+K: Gmaj
+BAG A2d cAF G2A|`,
+			theSessionId: 37,
+			references: [
+				{
+					artists:
+						"Cillian Vallely, Uilleann pipes; Niall Vallely, concertina; Alan Murray, guitar",
+					url: "https://www.youtube.com/watch?v=0E39mRYES8M",
+					notes: "The Gold Ring / The Hearty Boys of Ballymote",
+				},
+				{
+					artists: "Sult Ceol",
+					url: "https://www.youtube.com/watch?v=iPmJHJ0wYiQ&t=7s",
+					notes: "harp, concertina, whistle and Uileann Pipes",
+				},
+			],
+		},
+		{
+			abc: [
+				`X:1
+T:A Tune For Frankie
+C:Mairéad Ní Mhaonaigh
+R:jig
+L:1/8
+M:6/8
+N:Imported into *tuneTable* on 2025-11-02,
+N:from https://thesession.org/tunes/1885#setting52765
+N:Setting entered in thesession by user Jalon on 2024-12-30
+K:Gdorian
+|: D2 G FDC | ~A,3 F3 | ~A,3 C3 | [M:9/8] A,CA, G,A,G, G,GF | [M:6/8] D2 G FDC |
+ ~A,3 F3 | ~A,3 CA,C |1 [M:9/8] FCA, G,A,G, G,A,/B,/C :|2 FCA, G,A,G, G,GF ||
+ [M:6/8] |:DGA Bdc | =BGE FED | ~F3 ~G3 | Add d3 |
+ [1 DGA Bdc | =BGE FED | FCA, DCA, | G,A,G, G,GF :|
+ [2 dcA B2 G | AFD DCD | C2 F A,CA, | G,A,G, G,3||`,
+			],
+			scores: [
+				{
+					url: "https://thesession.org/tunes/1885#setting52765",
+					name: "thesession.org",
+				},
+			],
+			groups: "su",
+			references: [
+				{
+					artists:
+						"Martin Hayes, fiddle; Mairéad Ní Mhaonaigh, fiddle; Dermot Byrne, accordion; Dennis Cahill guitar",
+					url: "https://www.youtube.com/watch?v=tsd8nlPJSx8",
+					notes:
+						"A Tune for Frankie [composed by Mairéad Ní Mhaonaigh] (Jig 0:00), The Tempest (Reel 1:30) & Love At The Endings [composed by Ed Reavy] (Reel 2:46), on a Christmas episode of the TG4 music series Geantraí, recorded in 1999.",
+				},
+			],
+		},
 	],
 };
