@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-02",
+	lastUpdate: "2025-11-03",
 	tunes: [
 		{
 			abc: `
@@ -3006,6 +3006,7 @@ K:Dmajor
 			],
 		},
 		{
+			groups: "alora",
 			abc: `X:1
 T:I Looked East And I Looked West
 R:polka
@@ -3027,6 +3028,7 @@ K:Gmajor
 			],
 		},
 		{
+			groups: "alora",
 			abc: `X:1
 T:Daly's Mill
 C:John Walsh
