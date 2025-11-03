@@ -7902,5 +7902,16 @@ K:Gdorian
 				},
 			],
 		},
+		{
+			name: "The Silver Spire",
+			groups: "alora",
+			rhythm: "reel",
+			theSessionId: 240, //todo
+			incipit: `X: 1
+M: 4/4
+L: 1/16
+K: Dmaj
+D2FE DFAc dcde fdAF|`,
+		},
 	],
 };
