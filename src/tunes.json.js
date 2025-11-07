@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-03",
+	lastUpdate: "2025-11-07",
 	tunes: [
 		{
 			abc: `
@@ -388,7 +388,7 @@ K:Gmajor
 		{
 			abc: `X:1
 T:Frailach
-R:hornpipe
+R:frailach
 L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
@@ -417,7 +417,8 @@ M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/922#setting922
 N:Setting entered in thesession by user b.maloney on 2002-08-23
-K:Fdorian
+N:(edited after importing)
+K:Ebmajor
 |:(3B,CD|E2 G2 G2 FE|D2 F2 F2 ED|E2 c2 c2 de|=ABcB _AGFE|
  G2 B2 B2 cB|A2 c2 c2 de|DEFG AFDF|E2 G2 E2:|
  |:~g2|g2 E2 E2 ~g2|f2 D2 D2 ~g2|e2 c2 c2 fe|dcB=A B2 B2|
@@ -616,6 +617,14 @@ K:Gmajor
  bg ~g2 dgBg|bg ~g2 dgBg|
  [1 c'a~a2 eaca|c'a~a2 eaca:|
  [2 ((3aba) ((3gag) ((3fgf) ((3efe)|((3ded) ((3cdc) B2||`,
+			references: [
+				{
+					artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
+					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=8",
+					notes: `(78 rpm) The cuckoo, hornpipe; The sweeps [Jim Coleman’s], hornpipe
+Gardiner, John Joe, 1893-1979`,
+				},
+			],
 			scores: [
 				{
 					url: "https://thesession.org/tunes/573#setting573",
@@ -828,23 +837,18 @@ K:Dmajor
 			],
 		},
 		{
-			abc: `X:1
-T:An Paistin Fionn
+			groups: "su",
+			name: "An Paistin Fionn",
+			rhythm: "hornpipe",
+			incipit: `X:1
 C:Jackie Daly
-R:hornpipe
 L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/5675#setting5675
-N:Setting entered in thesession by user Avery on 2006-04-16
+M:4/2
 K:Edorian
-|:(3Bcd|efed Beed|geag f2 gf|efed BA GA|B2 cA B2 (3Bcd|
- efed Beed|geag f2 gf|efed BA FA|E2 ED E2:|
- |:(3DEF|G2 Bc dBBA|B3c dcBA|G2 Bc dBBA|Beed e2(3DEF|
- G2 Bc dBBA|Bega b3 a|e2 ed BA FA|E2 ED E2:|`,
+(3B,CD|E2FE DFEF GEAG (3FGAGF|EFED`,
 			scores: [
 				{
-					url: "https://thesession.org/tunes/5675#setting5675",
+					url: "https://thesession.org/tunes/5675#setting17673",
 					name: "thesession.org",
 				},
 			],
@@ -1058,19 +1062,20 @@ K:Emajor
 			],
 		},
 		{
-			abc: `X:1
-T:The Chicago
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/2096#setting2096
-N:Setting entered in thesession by user Conway on 2003-10-29
-K:Gmajor
-|:F2 D D^CD|F2 D D^CD|F2 D D^CD|C2 C E3|
- F2 D D^CD|F2 D D^CD|B3 cAF|AGF G2 A:|
- |:B3 cde|dcB ABc|B2 G GAB|ABA A3|
- B3 cde|dcB ABc|f2 f fed|cAF G3:|`,
+			abc: `X: 2
+T: The Chicago
+R: jig
+M: 6/8
+L: 1/8
+N:Imported into *tuneTable* on 2025-11-07,
+N:from https://thesession.org/tunes/2096#setting15489
+N:Setting entered in thesession by user Dr. Dow on 2004-12-23
+K: Dmix
+|:F2D DAG|F2D DAG|F2D DED|C2A, A,AG|
+F2D DAG|F2D DAD|BDB cAF|1 AGF GAG:|2 AGF G2A||
+|:~B3 cBc|~d3 ABc|B2G GAG|F2D DAD|
+BDB cDc|~d3 ABc|~B3 cAF|1 AGF G2A:|2 AGF GAG||
+ `,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2096#setting2096",
@@ -1668,7 +1673,7 @@ K:Gmajor
 			],
 			references: [
 				{
-					notes: "SU: 2nd in the Fahey’s Fiddle set ",
+					notes: "SU: 2nd in the Fahey’s Fiddle set",
 				},
 			],
 			scores: [
@@ -1800,6 +1805,7 @@ K:Amixolydian
 			abc: [
 				`X:1
 T: The Sunny Side of the Latch
+R:jig
 Z: Malcolm Schonfield % 231212,3,4
 C: Jason O’Rourke
 Q:3/8=100
@@ -1928,6 +1934,7 @@ FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`,
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:The Thornton
 C:Donald Cameron
@@ -2672,6 +2679,7 @@ E>G|:BEGB AFDE FB,DF A2(3Bcd|efed BAFE FdFE DABA|
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:The Tax Max
 R:mazurka
@@ -2684,7 +2692,7 @@ N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/19631#setting38741
 N:Setting entered in thesession by user DaveF on 2020-08-14
-K:Dminor
+K:F
 (3CDE|:F4 (3GFE|F3C FG|A3F EC|D3C DE|
  FG BA FG|ED CG, CD|EF GF (3EDC|1 D3 C DE:|2 D3E FG||
  |:A3G AB|cd cB AG|A3F EC|D3C DE|
@@ -2843,6 +2851,7 @@ Fidil one; it also has some very pretty things going on on the cello.`,
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:La Polverita Fiera
 C:L. E. McCullough
@@ -2872,7 +2881,41 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
 			],
 		},
 		{
-			abc: `X:1
+			groups: "su",
+			name: "The Walking Stick / The Toonagh Mazurka",
+			abc: [
+				`%abc-2.1
+X: 1
+T:Toonagh Mazurka
+C:Tommy Peoples; and possibly Eamonn Coyne too
+S:Eamonn Coyne
+Z:abc-transcription Malcolm Schonfield, 2018-11-19,26; 2024-12-04,05; 2025-01-28
+Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+R: Mazurka
+N: 1. Mostly swung throughout – so in general “♪♪=♩♪”.
+N: 2. I asked Eamonn Coyne about this tune and he told me it’s a version of a Tommy
+N: Peoples tune that he learned from TP’s and TP’s daughter (Siobhán)’s playing. He 
+N: never intended it to be a new tune of his.
+N: 3. The TP tune in question is called the Walking Stick.
+N: 4. I personally think this tune, or setting or variation of a TP tune, is sufficiently 
+N: different from the TP tune to be considered as a different tune in its own right. So 
+N: one might argue it’s EC’s tune too as well.
+M: 3/4
+L: 1/8
+K: D
+P:Ⅰ
+Dd fd ad | ba Bg g/g/g | fd Ac eg | f<d FA AA | 
+Dd fd ad | ba Bg g/g/g | [M: 5/4] fd AG FA "_(V1)"dd AA |
+[M: 3/4] Dd fd ad | ba Bg g/g/g | fd Ac eg | f<d FA AA | 
+Dd fd ad | ba Bg g/g/g | fd AG FA || [P:Ⅱ]dA FE DD |
+"_(V2)"ED Df aa| gd "_(V3)"(3Bcd gg | fd Ad ff| dA FE DD |
+"_(V2)"ED Df aa| gd "_(V3)"(3Bcd gg| fd AG FA | dA FE DD |
+"_(V2)"ED Df aa| gd "_(V3)"(3Bcd gg| fd Ad ff | dA FE DD | 
+"_(V2)"ED Df aa| gd "_(V3)"(3Bcd gg| [M: 5/4] fd AG FA "_(V1)"dd AA!D.C.! |]
+P:Variations / embellishments
+"_(V1)"dA B/B/A ||"_(V2)"D/D/D || "_(V3)"Bd |]
+`,
+				`X:1
 T:The Walking Stick
 C:Tommy Peoples
 R:mazurka
@@ -2886,6 +2929,22 @@ K:Dmajor
  d2 f2 ag|bg B2(3ggg|fe Ac ec|d2d2:|:AF|
  D2 (3FGA df|a2 ge Ad|g2 fd Ad|(3fff dA FE|
  D2 (3FGA df|a2 ge Ad|fg fd AG|FA d2:|`,
+			],
+			references: [
+				{
+					artists: "Éamonn Coyne, banjo; Kris Drever, guitar",
+					url: "https://www.youtube.com/watch?v=xGEHMm_zOgc",
+					notes: `mazurka / highland / guns of the magnificent seven (reel)
+live; 2012`,
+				},
+				{
+					artists:
+						"Éamonn Coyne, banjo; Kris Drever, guitar; Megan Henderson, fiddle",
+					url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
+					notes: "EP",
+				},
+				//{artists:"", url:"", notes:""}
+			],
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1302#setting1302",
@@ -3375,7 +3434,6 @@ BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
 BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`,
 			groups: "ALORA",
 			origin: "Ireland",
-			key: "G",
 			references: [
 				{
 					notes: `Composed by Tommy Coen.
@@ -3399,7 +3457,7 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`,
 				{
 					artists: "Fintan Vallely, flute; Mark Simos, guitar",
 					url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2",
-					notes: "Christmas Eve / The Reel of Rio ",
+					notes: "Christmas Eve / The Reel of Rio",
 				},
 				{
 					artists:
@@ -3570,13 +3628,23 @@ K:Gdorian
 					name: "thesession.org",
 				},
 			],
+			references: [
+				{
+					artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
+					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=9",
+					notes: `(78 rpm) The mountain top; Lord Wellington’s [The bunch of keys]
+Gardiner, John Joe, 1893-1979`,
+				},
+			],
 		},
 		{
+			groups: "su",
 			abc: `X: 7
 T: The Guns Of The Magnificent Seven
 R: reel
 M: 4/4
 L: 1/16
+N: a crooked tune
 K: Ador
 EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
 |:ABcd eAA2 gedc BAGB|ABcd eaaf gedB BAA2 :|
@@ -4800,7 +4868,7 @@ K:Gmajor
 				`X:1
 T:Cotillon De Baie-Ste-Catherine
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:This transcription is based on Laurie Hart's album Danse ce soir ! Traditional
 N:tunes of Québec • 2001.
@@ -4815,7 +4883,7 @@ N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23211#setting47315
 N:Setting entered in thesession by user GoPlayer on 2023-06-02
 K:Gmajor
-[L: 1/16]|:B2BB EBGB dedB cdcB|1 ,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
+|:B2BB EBGB dedB cdcB|1 ,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
  [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1 ,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2
 D.C.
 z2||`,
@@ -5591,17 +5659,23 @@ P:Variations/embellishments
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2024/?track=8",
 					artists: "Seán Maguire, fiddle",
-					notes: `The skylark, reel; Maud Miller, reel`,
+					notes: `The skylark; Maud Miller`,
+				},
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=9",
+					artists: "Seán Maguire, fiddle",
+					notes: `Joe O'Dowds; Skylark; Maud Millar
+He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good stuff!`,
 				},
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=3",
 					artists: "Andy McGann, fiddle, speech; Felix Dolan, piano",
-					notes: `Maud Miller, reel ; Hand me down the tackle [Tom Steele's], reel`,
+					notes: `Maud Miller; Hand me down the tackle [Tom Steele's]`,
 				},
 				{
 					url: "https://www.youtube.com/watch?v=Mk5llmB-rLY",
 					artists: "Brid Harper, fiddle; Harry Bradley, flute",
-					notes: `Maud Miller, reel; Donegal reel`,
+					notes: `Maud Miller; Donegal reel`,
 				},
 			],
 		},
@@ -6286,7 +6360,6 @@ K:Adorian
 		{
 			name: "The Kid On The Mountain",
 			groups: "ALORA,su",
-			key: "E minor",
 			origin: "Ireland",
 			rhythm: "slip jig",
 			abc: `
@@ -6930,6 +7003,7 @@ a|f2 e>c e>fae|f2 ec fBBa|f2 e>c e>fae|faec eAAa|
 			],
 		},
 		{
+			origin: "England, Northumberland",
 			abc: `X:1
 T:The Lads Of Alnwick
 R:three-two
@@ -6943,6 +7017,13 @@ K:Amajor
  |:ABcd (3efec2 (3efec2|ABcd (3efec2 e2{g}a2|ABcd (3efec2 (3efec2|Bcde {g}.f2(B2 d2f2):|
  |:(e2.a2) (cdec .a2)(c2|e2.a2) cdec d2(3fgf|(e2.a2) (cdec .a2)c2|Bcde {g}.f2(B2 d2f2):|
  |:ABcd efed cdec|efed cdec e2{g}a2|ABcd efed cdec|Bcde {g}.f2(B2 d2f2):|`,
+			references: [
+				{
+					artists: "Kevin Lees, fiddle; Sebastian Bloch, guitar",
+					url: "https://youtu.be/R4pu91Lt7sc",
+					notes: "“The Good Tune”. 2020-08-06",
+				},
+			],
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1194#setting1194",
@@ -7120,7 +7201,6 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
 			groups: "su",
 			name: "Brogan’s Ferry",
 			rhythm: "Reel (single)",
-			key: "D major",
 			references: [
 				{
 					artists: "Tommy Peoples, fiddle",
@@ -7147,7 +7227,6 @@ FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
 			groups: "su",
 			name: "The Roving Bachelor",
 			rhythm: "Reel (single)",
-			key: "G major",
 			references: [
 				{
 					artists: "Tommy Peoples, fiddle",
@@ -7170,7 +7249,6 @@ K: Ador
 EG| A2A>B A2(3Bcd eged B2AG|EG`,
 			name: "Johnny Cope",
 			rhythm: "hornpipe",
-			key: "A dorian",
 			references: [
 				{
 					artists:
@@ -7197,7 +7275,6 @@ EG| A2A>B A2(3Bcd eged B2AG|EG`,
 		{
 			name: "Shanahan’s",
 			rhythm: "hornpipe",
-			key: "G",
 			incipit: `X: 6
 M: 4/2
 L: 1/8
@@ -7220,7 +7297,6 @@ K: Gmaj
 		{
 			name: "The Boys Of Bluehill",
 			rhythm: "hornpipe",
-			key: "D",
 			groups: "ALORA",
 			incipit: `
 X: 6
@@ -7240,7 +7316,6 @@ FA| BAFA DAFA BA (3Bcd e2de|fagf
 		{
 			name: "The Home Ruler",
 			rhythm: "hornpipe",
-			key: "D",
 			groups: "ALORA",
 			incipit: `X: 1
 M: 4/2
@@ -7260,7 +7335,6 @@ AF|D2FA DAFA dfed B2dB|A2AB AFDE
 			name: "Fahey’s Fiddle",
 			groups: "su",
 			rhythm: "jig",
-			key: "D",
 			incipit: `X: 1
 R: jig
 M: 12/8
@@ -7285,7 +7359,6 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `,
 		{
 			name: "Haste To The Wedding",
 			groups: "ALORA",
-			key: "D",
 			origin: "Ireland",
 			rhythm: "jig",
 			references: [
@@ -7310,7 +7383,6 @@ AFA Agf ede fdB|`,
 		},
 		{
 			name: "Morrison’s",
-			key: "Em",
 			rhythm: "jig",
 			groups: "alora",
 			scores: [
@@ -7332,11 +7404,10 @@ AFA Agf ede fdB|`,
 			name: "My Darling Asleep",
 			groups: "ALORA",
 			incipit: `X: 5
-M: 6/8
+M: 12/8
 L: 1/8
 K: D
 e|fdd cAA BGG A2G|`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "jig",
 			references: [
@@ -7361,7 +7432,6 @@ M: 4/4
 L: 1/8
 K: Dmaj
 f/g/f/e/ d>B AD FA | GE e>d`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "polka",
 			references: [
@@ -7383,7 +7453,6 @@ f/g/f/e/ d>B AD FA | GE e>d`,
 		{
 			name: "John Ryan’s",
 			groups: "ALORA",
-			key: "D",
 			origin: "Ireland",
 			rhythm: "polka",
 			incipit: `X:1
@@ -7412,7 +7481,6 @@ M: 4/4
 L: 1/8
 K: Dmaj
 Ad Bd/B/ AD FA|GE BE`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "polka",
 			references: [
@@ -7432,7 +7500,6 @@ Ad Bd/B/ AD FA|GE BE`,
 			name: "Palmer’s Gate",
 			rhythm: "reel",
 			groups: "SU",
-			key: "A dorian",
 			incipit: `X: 3
 M: 4/4
 L: 1/16
@@ -7461,7 +7528,6 @@ M: 4/4
 L: 1/16
 K: Dmaj
 DE|F2FG FEDE FAAB AFED|d2eg`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "reel",
 			references: [
@@ -7481,7 +7547,6 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
 			name: "Jerry McMahon’s",
 			groups: "SU",
 			rhythm: "reel (single)",
-			key: "A dorian",
 			incipit: `X: 2
 M: 4/4
 L: 1/16
@@ -7512,7 +7577,6 @@ M: 4/4
 L: 1/16
 K: Dmaj
 dB|A2FA A2dB A2FA BEE2|A2FA defe`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "reel (single)",
 			references: [
@@ -7563,7 +7627,6 @@ M: 4/4
 L: 1/16
 K: D
 dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "reel (single)",
 			references: [
@@ -7603,7 +7666,6 @@ M: 4/4
 L: 1/16
 K: G
 BGG2 DGG2 BGG2 cedc | `,
-			key: "G",
 			origin: "Ireland",
 			rhythm: "reel (single)",
 			references: [
@@ -7635,7 +7697,6 @@ M: 4/4
 L: 1/16
 K: Amix
 EAAG EGDG EA~A2 fAeA| `,
-			key: "A dorian",
 			origin: "Ireland",
 			rhythm: "reel (single)",
 			references: [
@@ -7660,7 +7721,6 @@ M: 4/4
 L: 1/16
 K: G
 DGBG A2BA GEE2 cEGE | `,
-			key: "G",
 			origin: "Ireland",
 			rhythm: "reel (single)",
 			references: [
@@ -7692,14 +7752,13 @@ M: 4/4
 L: 1/16
 K: Dmaj
 A2AB AFED B2BA BcdB |`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "reel (single)",
 			references: [
 				{
 					artists: "Tony DeMarco, fiddle; Felix Dolan, piano",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=3",
-					notes: `Wind that shakes the barley, reel ; Reel of Bogie 
+					notes: `Wind that shakes the barley; Reel of Bogie 
           #2 in the (ALORA) Maud Millar set`,
 				},
 			],
@@ -7719,7 +7778,6 @@ M: 12/8
 L: 1/8
 K: Dmaj
 A2D FED F2A A2f|gfe`,
-			key: "D",
 			origin: "Ireland",
 			rhythm: "slide",
 			scores: [
@@ -7912,6 +7970,36 @@ M: 4/4
 L: 1/16
 K: Dmaj
 D2FE DFAc dcde fdAF|`,
+		},
+		{
+			name: "The Plains Of Boyle",
+			rhythm: "hornpipe",
+			incipit: `X: 1
+M: 4/2
+L: 1/8
+K: Dmaj
+FG|AFDE FEDF (3ABA GB AFD2|`,
+			theSessionId: 652,
+			theSessionSettingId: 52321,
+		},
+		{
+			name: "Farrel O’Gara’s",
+			rhythm: "reel",
+			incipit: `X: 5
+M: 4/4
+L: 1/16
+K: Dmaj
+A,3B, DEFA BFAF EFAc|d2`,
+			references: [
+				{
+					artists: "Kathleen Harrington, fiddle; Moya Acheson, piano",
+					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=8",
+					notes: `(78 rpm) Farrell Gara; The scholar
+Mrs Kathleen Harrington née Gardiner (1897-1984)`,
+				},
+			],
+			theSessionId: 234,
+			groups: "alora",
 		},
 	],
 };

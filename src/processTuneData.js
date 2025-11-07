@@ -3,7 +3,10 @@ import {
 	getIncipit,
 	getIncipitForContourGeneration,
 	normaliseKey,
+	getKey,
 } from "@goplayerjuggler/abc-tools";
+
+const applySwingTransform = ["hornpipe", "barndance", "fling", "mazurka"];
 
 function parseAbc(abc) {
 	const lines = abc.split("\n"),
@@ -15,7 +18,7 @@ function parseAbc(abc) {
 		if (trimmed.startsWith("T:") && !metadata.title) {
 			metadata.title = trimmed.substring(2).trim();
 		} else if (trimmed.startsWith("R:")) {
-			metadata.rhythm = trimmed.substring(2).trim();
+			metadata.rhythm = trimmed.substring(2).trim().toLowerCase();
 		} else if (trimmed.startsWith("M:")) {
 			metadata.meter = trimmed.substring(2).trim();
 		} else if (trimmed.startsWith("K:")) {
@@ -99,17 +102,32 @@ function processTuneData(tune) {
 		}
 		if (!tune.contour) {
 			try {
-				processed.contour = getContour(
-					getIncipitForContourGeneration(abcArray[0]),
-					{ withSvg: true },
-				);
+				const withSwingTransform =
+					applySwingTransform.indexOf(processed.rhythm) >= 0;
+				let shortAbc;
+				if (processed.incipit)
+					shortAbc = getIncipitForContourGeneration(processed.incipit);
+				if (!shortAbc && abcArray && abcArray[0])
+					shortAbc = getIncipitForContourGeneration(abcArray[0]);
+
+				if (shortAbc) {
+					processed.contour = getContour(shortAbc, {
+						withSvg: true,
+						withSwingTransform,
+					});
+				}
+				// tune.contour = getContourFromFullAbc(tune.abc || tune.incipit, {
+				// 	withSwingTransform,
+				// });
+				// );
 			} catch (error) {
 				console.log(error);
 			}
 		}
 		processed.rhythm = processed.rhythm?.toLowerCase();
+	} else if (tune.incipit && !processed.key) {
+		processed.key = normaliseKey(getKey(tune.incipit)).join(" ");
 	}
-
 	if (!processed.name) processed.name = "Untitled";
 	if (!processed.key) processed.key = "";
 	if (!processed.rhythm) processed.rhythm = "";
@@ -119,4 +137,4 @@ function processTuneData(tune) {
 	return processed;
 }
 
-export default processTuneData;
+export { processTuneData, applySwingTransform };

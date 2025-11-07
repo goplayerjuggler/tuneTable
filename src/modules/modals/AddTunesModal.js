@@ -1,5 +1,5 @@
 import Modal from "./Modal.js";
-import processTuneData from "../../processTuneData.js";
+import { processTuneData } from "../../processTuneData.js";
 import { getTunes, getTitles } from "@goplayerjuggler/abc-tools";
 
 /**

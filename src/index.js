@@ -8,7 +8,7 @@ import {
 	//contourToSvg,
 } from "@goplayerjuggler/abc-tools";
 
-import processTuneData from "./processTuneData.js";
+import { applySwingTransform, processTuneData } from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 import AbcModal from "./modules/modals/AbcModal.js";
@@ -22,9 +22,16 @@ import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
 const storageKey = "tunesData";
 const comparable = [
-	["jig", "slide", "single jig", "double jig"],
+	[
+		"jig",
+		"slide",
+		"single jig",
+		"double jig",
+		"hornpipe",
+		"barndance",
+		"fling",
+	],
 	["reel", "single reel", "reel (single)", "strathspey", "double reel"],
-	["hornpipe", "barndance", "fling"],
 ];
 
 const getEmptySort = () => {
@@ -192,12 +199,17 @@ function canBeCompared(tune1, tune2) {
 	if ((!tune1.abc && !tune1.incipit) || (!tune2.abc && !tune2.incipit))
 		return false;
 	try {
-		if (!tune1.contour) {
-			tune1.contour = getContourFromFullAbc(tune1.abc || tune1.incipit);
-		}
-		if (!tune2.contour) {
-			tune2.contour = getContourFromFullAbc(tune2.abc || tune2.incipit);
-		}
+		const f = (tune) => {
+			if (!tune.contour) {
+				const withSwingTransform =
+					applySwingTransform.indexOf(tune.rhythm) >= 0;
+				tune.contour = getContourFromFullAbc(tune.abc || tune.incipit, {
+					withSwingTransform,
+				});
+			}
+		};
+		f(tune1);
+		f(tune2);
 	} catch (error) {
 		console.log(error);
 	}

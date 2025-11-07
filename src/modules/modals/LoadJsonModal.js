@@ -1,5 +1,5 @@
 import Modal from "./Modal.js";
-import processTuneData from "../../processTuneData.js";
+import { processTuneData } from "../../processTuneData.js";
 
 /**
  * Load JSON Modal
@@ -135,7 +135,7 @@ Example:
 					throw new Error(
 						`Failed to parse as JSON or JavaScript literal.\n` +
 							`JSON error: ${jsonError.message}\n` +
-							`JS error: ${jsError.message}`
+							`JS error: ${jsError.message}`,
 					);
 				}
 			}
@@ -158,7 +158,7 @@ Example:
 				`Successfully loaded ${window.tunesData.length} tune${
 					window.tunesData.length !== 1 ? "s" : ""
 				}!`,
-				"success"
+				"success",
 			);
 
 			this.elements.input.value = "";

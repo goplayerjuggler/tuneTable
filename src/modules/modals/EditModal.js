@@ -1,5 +1,5 @@
 import Modal from "./Modal.js";
-import processTuneData from "../../processTuneData.js";
+import { processTuneData } from "../../processTuneData.js";
 
 /**
  * Edit Tune Modal
@@ -26,11 +26,12 @@ import processTuneData from "../../processTuneData.js";
 - `renderScores(scores)`: Update scores UI
  */
 export default class EditModal extends Modal {
-    
-  constructor(callbacks) {
-    
-    super({id:'editModal',size:'large',title:'editor',
-content: `
+	constructor(callbacks) {
+		super({
+			id: "editModal",
+			size: "large",
+			title: "editor",
+			content: `
 <div class="modal-body">
       <form id="editTuneForm" onsubmit="return false;">
         
@@ -101,84 +102,85 @@ content: `
       
       <button id="saveEditBtn" class="btn btn-primary">Save Changes</button>
     </div>
-    `
+    `,
+		});
 
-    });
+		this.callbacks = callbacks;
+		this.currentEditTuneIndex = null;
+	}
+	onOpen() {
+		this.elements = {
+			saveBtn: document.getElementById("saveEditBtn"),
+			name: document.getElementById("editName"),
+			key: document.getElementById("editKey"),
+			rhythm: document.getElementById("editRhythm"),
+			abc: document.getElementById("editAbc"),
+			incipit: document.getElementById("editIncipit"),
+			referencesEditor: document.getElementById("referencesEditor"),
+			scoresEditor: document.getElementById("scoresEditor"),
+			addReferenceBtn: document.getElementById("addReferenceBtn"),
+			addScoreBtn: document.getElementById("addScoreBtn"),
+		};
 
-    this.callbacks = callbacks;
-    this.currentEditTuneIndex = null;
-  }
-  onOpen () {
-    this.elements = {
-      
-      saveBtn: document.getElementById("saveEditBtn"),
-      name: document.getElementById("editName"),
-      key: document.getElementById("editKey"),
-      rhythm: document.getElementById("editRhythm"),
-      abc: document.getElementById("editAbc"),
-      incipit: document.getElementById("editIncipit"),
-      referencesEditor: document.getElementById("referencesEditor"),
-      scoresEditor: document.getElementById("scoresEditor"),
-      addReferenceBtn: document.getElementById("addReferenceBtn"),
-      addScoreBtn: document.getElementById("addScoreBtn"),
-    };
+		this.setupControls();
+		this.exposeGlobalFunctions();
 
-    this.setupControls();
-    this.exposeGlobalFunctions();
-    
-    // Populate basic fields
-    this.elements.name.value = this.tune.nameIsFromAbc ? "" : this.tune.name || "";
-    this.elements.key.value = this.tune.keyIsFromAbc ? "" : this.tune.key || "";
-    this.elements.rhythm.value = this.tune.rhythmIsFromAbc ? "" : this.tune.rhythm || "";
-    this.elements.incipit.value = this.tune.incipit
+		// Populate basic fields
+		this.elements.name.value = this.tune.nameIsFromAbc
+			? ""
+			: this.tune.name || "";
+		this.elements.key.value = this.tune.keyIsFromAbc ? "" : this.tune.key || "";
+		this.elements.rhythm.value = this.tune.rhythmIsFromAbc
+			? ""
+			: this.tune.rhythm || "";
+		this.elements.incipit.value = this.tune.incipit;
 
+		// Populate ABC
+		const abcArray = Array.isArray(this.tune.abc)
+			? this.tune.abc
+			: this.tune.abc
+				? [this.tune.abc]
+				: [];
+		this.elements.abc.value = abcArray.join("\n\n---\n\n");
 
-    // Populate ABC
-    const abcArray = Array.isArray(this.tune.abc)
-      ? this.tune.abc
-      : this.tune.abc
-      ? [this.tune.abc]
-      : [];
-    this.elements.abc.value = abcArray.join("\n\n---\n\n");
+		// Populate references and scores
+		this.renderReferences(
+			this.tune.references?.filter((r) => !r.fromAbc) || [],
+		);
+		this.renderScores(this.tune.scores || []);
+	}
 
-    // Populate references and scores
-    this.renderReferences(this.tune.references?.filter((r) => !r.fromAbc) || []);
-    this.renderScores(this.tune.scores || []);
+	setupControls() {
+		this.elements.saveBtn?.addEventListener("click", () => this.save());
+		this.elements.addReferenceBtn?.addEventListener("click", () =>
+			this.addReference(),
+		);
+		this.elements.addScoreBtn?.addEventListener("click", () => this.addScore());
+	}
 
-  }
+	exposeGlobalFunctions() {
+		// These are called from inline onclick handlers in the HTML
+		window.removeReference = (index) => this.removeReference(index);
+		window.removeScore = (index) => this.removeScore(index);
+	}
 
-  setupControls() {
+	openWithTune(tune, tuneIndex) {
+		this.currentEditTuneIndex = tuneIndex;
+		this.tune = tune;
 
-    this.elements.saveBtn?.addEventListener("click", () => this.save());
-    this.elements.addReferenceBtn?.addEventListener("click", () =>
-      this.addReference()
-    );
-    this.elements.addScoreBtn?.addEventListener("click", () => this.addScore());
-  }
+		this.open();
+	}
 
-  exposeGlobalFunctions() {
-    // These are called from inline onclick handlers in the HTML
-    window.removeReference = (index) => this.removeReference(index);
-    window.removeScore = (index) => this.removeScore(index);
-  }
+	renderReferences(references) {
+		if (references.length === 0) {
+			this.elements.referencesEditor.innerHTML =
+				'<p class="empty-message">No references yet. Click &#8220;Add Reference&#8221; to create one.</p>';
+			return;
+		}
 
-  openWithTune(tune, tuneIndex) {
-    this.currentEditTuneIndex = tuneIndex;
-    this.tune = tune
-
-    this.open();
-  }
-
-  renderReferences(references) {
-    if (references.length === 0) {
-      this.elements.referencesEditor.innerHTML =
-        '<p class="empty-message">No references yet. Click &#8220;Add Reference&#8221; to create one.</p>';
-      return;
-    }
-
-    this.elements.referencesEditor.innerHTML = references
-      .map(
-        (ref, index) => `
+		this.elements.referencesEditor.innerHTML = references
+			.map(
+				(ref, index) => `
 		<div class="editor-item" data-index="${index}">
 		  <div class="editor-item-header">
 			<strong>Reference ${index + 1}</strong>
@@ -190,40 +192,40 @@ content: `
 			<div class="form-group">
 			  <label>Artists/Source:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-          ref.artists || ""
-        )}" 
+					ref.artists || "",
+				)}" 
 					 data-ref-index="${index}" data-field="artists">
 			</div>
 			<div class="form-group">
 			  <label>URL:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-          ref.url || ""
-        )}" 
+					ref.url || "",
+				)}" 
 					 data-ref-index="${index}" data-field="url" placeholder="https://...">
 			</div>
 			<div class="form-group">
 			  <label>Notes:</label>
 			  <textarea class="form-control" rows="3" data-ref-index="${index}" data-field="notes">${this.escapeHtml(
-          ref.notes || ""
-        )}</textarea>
+					ref.notes || "",
+				)}</textarea>
 			</div>
 		  </div>
 		</div>
-	  `
-      )
-      .join("");
-  }
+	  `,
+			)
+			.join("");
+	}
 
-  renderScores(scores) {
-    if (scores.length === 0) {
-      this.elements.scoresEditor.innerHTML =
-        '<p class="empty-message">No external scores yet. Click “Add score&#8221; to create one.</p>';
-      return;
-    }
+	renderScores(scores) {
+		if (scores.length === 0) {
+			this.elements.scoresEditor.innerHTML =
+				'<p class="empty-message">No external scores yet. Click “Add score&#8221; to create one.</p>';
+			return;
+		}
 
-    this.elements.scoresEditor.innerHTML = scores
-      .map(
-        (score, index) => `
+		this.elements.scoresEditor.innerHTML = scores
+			.map(
+				(score, index) => `
 		<div class="editor-item" data-index="${index}">
 		  <div class="editor-item-header">
 			<strong>Score ${index + 1}</strong>
@@ -235,196 +237,196 @@ content: `
 			<div class="form-group">
 			  <label>Name:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-          score.name || ""
-        )}" 
+					score.name || "",
+				)}" 
 					 data-score-index="${index}" data-field="name">
 			</div>
 			<div class="form-group">
 			  <label>URL:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-          score.url || ""
-        )}" 
+					score.url || "",
+				)}" 
 					 data-score-index="${index}" data-field="url" placeholder="https://...">
 			</div>
 		  </div>
 		</div>
-	  `
-      )
-      .join("");
-  }
+	  `,
+			)
+			.join("");
+	}
 
-  addReference() {
-    const tune = window.filteredData[this.currentEditTuneIndex];
-    if (!tune.references) tune.references = [];
+	addReference() {
+		const tune = window.filteredData[this.currentEditTuneIndex];
+		if (!tune.references) tune.references = [];
 
-    tune.references.push({
-      artists: "",
-      url: "",
-      notes: "",
-    });
+		tune.references.push({
+			artists: "",
+			url: "",
+			notes: "",
+		});
 
-    this.renderReferences(tune.references.filter((r) => !r.fromAbc));
-  }
+		this.renderReferences(tune.references.filter((r) => !r.fromAbc));
+	}
 
-  removeReference(index) {
-    const tune = window.filteredData[this.currentEditTuneIndex];
-    const nonAbcRefs = tune.references.filter((r) => !r.fromAbc);
-    const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
-    tune.references.splice(actualIndex, 1);
-    this.renderReferences(tune.references.filter((r) => !r.fromAbc));
-  }
+	removeReference(index) {
+		const tune = window.filteredData[this.currentEditTuneIndex];
+		const nonAbcRefs = tune.references.filter((r) => !r.fromAbc);
+		const actualIndex = tune.references.indexOf(nonAbcRefs[index]);
+		tune.references.splice(actualIndex, 1);
+		this.renderReferences(tune.references.filter((r) => !r.fromAbc));
+	}
 
-  addScore() {
-    const tune = window.filteredData[this.currentEditTuneIndex];
-    if (!tune.scores) tune.scores = [];
+	addScore() {
+		const tune = window.filteredData[this.currentEditTuneIndex];
+		if (!tune.scores) tune.scores = [];
 
-    tune.scores.push({
-      name: "",
-      url: "",
-    });
+		tune.scores.push({
+			name: "",
+			url: "",
+		});
 
-    this.renderScores(tune.scores);
-  }
+		this.renderScores(tune.scores);
+	}
 
-  removeScore(index) {
-    const tune = window.filteredData[this.currentEditTuneIndex];
-    tune.scores.splice(index, 1);
-    this.renderScores(tune.scores);
-  }
+	removeScore(index) {
+		const tune = window.filteredData[this.currentEditTuneIndex];
+		tune.scores.splice(index, 1);
+		this.renderScores(tune.scores);
+	}
 
-  save() {
-    const tune = window.filteredData[this.currentEditTuneIndex];
-    const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
+	save() {
+		const tune = window.filteredData[this.currentEditTuneIndex];
+		const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
 
-    const incipitText = this.elements.incipit.value.trim();
-    tune.incipit = incipitText
+		const incipitText = this.elements.incipit.value.trim();
+		tune.incipit = incipitText;
 
-    // Process ABC
-    const abcText = this.elements.abc.value.trim();
-    if (abcText) {
-      const abcParts = abcText
-        .split(/\n\s*---\s*\n/)
-        .filter((part) => part.trim());
-      tune.abc = abcParts.length === 1 ? abcParts[0] : abcParts;
-    } else {
-      tune.abc = null;
-    }
+		// Process ABC
+		const abcText = this.elements.abc.value.trim();
+		if (abcText) {
+			const abcParts = abcText
+				.split(/\n\s*---\s*\n/)
+				.filter((part) => part.trim());
+			tune.abc = abcParts.length === 1 ? abcParts[0] : abcParts;
+		} else {
+			tune.abc = null;
+		}
 
-    // Process references
-    const referenceInputs = document.querySelectorAll(
-      "#referencesEditor .editor-item"
-    );
-    const userRefs = Array.from(referenceInputs).map((item, index) => {
-      const artists =
-        item.querySelector(
-          `input[data-ref-index="${index}"][data-field="artists"]`
-        )?.value || "";
-      const url =
-        item.querySelector(`input[data-ref-index="${index}"][data-field="url"]`)
-          ?.value || "";
-      const notes =
-        item.querySelector(
-          `textarea[data-ref-index="${index}"][data-field="notes"]`
-        )?.value || "";
-      return { artists, url, notes };
-    });
+		// Process references
+		const referenceInputs = document.querySelectorAll(
+			"#referencesEditor .editor-item",
+		);
+		const userRefs = Array.from(referenceInputs).map((item, index) => {
+			const artists =
+				item.querySelector(
+					`input[data-ref-index="${index}"][data-field="artists"]`,
+				)?.value || "";
+			const url =
+				item.querySelector(`input[data-ref-index="${index}"][data-field="url"]`)
+					?.value || "";
+			const notes =
+				item.querySelector(
+					`textarea[data-ref-index="${index}"][data-field="notes"]`,
+				)?.value || "";
+			return { artists, url, notes };
+		});
 
-    // Process scores
-    const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
-    tune.scores = Array.from(scoreInputs).map((item, index) => {
-      const name =
-        item.querySelector(
-          `input[data-score-index="${index}"][data-field="name"]`
-        )?.value || "";
-      const url =
-        item.querySelector(
-          `input[data-score-index="${index}"][data-field="url"]`
-        )?.value || "";
-      return { name, url };
-    });
+		// Process scores
+		const scoreInputs = document.querySelectorAll("#scoresEditor .editor-item");
+		tune.scores = Array.from(scoreInputs).map((item, index) => {
+			const name =
+				item.querySelector(
+					`input[data-score-index="${index}"][data-field="name"]`,
+				)?.value || "";
+			const url =
+				item.querySelector(
+					`input[data-score-index="${index}"][data-field="url"]`,
+				)?.value || "";
+			return { name, url };
+		});
 
-    // Reprocess tune data
-    let reprocessed = Object.assign({}, tune);
-    delete reprocessed.name;
-    delete reprocessed.nameIsFromAbc;
-    delete reprocessed.key;
-    delete reprocessed.keyIsFromAbc;
-    delete reprocessed.rhythm;
-    delete reprocessed.rhythmIsFromAbc;
-    delete reprocessed.references;
+		// Reprocess tune data
+		let reprocessed = Object.assign({}, tune);
+		delete reprocessed.name;
+		delete reprocessed.nameIsFromAbc;
+		delete reprocessed.key;
+		delete reprocessed.keyIsFromAbc;
+		delete reprocessed.rhythm;
+		delete reprocessed.rhythmIsFromAbc;
+		delete reprocessed.references;
 
-    reprocessed = processTuneData(reprocessed);
+		reprocessed = processTuneData(reprocessed);
 
-    // Apply manual overrides
-    const editedName = this.elements.name.value.trim();
-    const editedKey = this.elements.key.value.trim();
-    const editedRhythm = this.elements.rhythm.value.trim().toLowerCase();
+		// Apply manual overrides
+		const editedName = this.elements.name.value.trim();
+		const editedKey = this.elements.key.value.trim();
+		const editedRhythm = this.elements.rhythm.value.trim().toLowerCase();
 
-    this.applyFieldOverride(
-      reprocessed,
-      tune,
-      "name",
-      editedName,
-      "nameIsFromAbc"
-    );
-    this.applyFieldOverride(
-      reprocessed,
-      tune,
-      "rhythm",
-      editedRhythm,
-      "rhythmIsFromAbc"
-    );
-    this.applyFieldOverride(
-      reprocessed,
-      tune,
-      "key",
-      editedKey,
-      "keyIsFromAbc"
-    );
+		this.applyFieldOverride(
+			reprocessed,
+			tune,
+			"name",
+			editedName,
+			"nameIsFromAbc",
+		);
+		this.applyFieldOverride(
+			reprocessed,
+			tune,
+			"rhythm",
+			editedRhythm,
+			"rhythmIsFromAbc",
+		);
+		this.applyFieldOverride(
+			reprocessed,
+			tune,
+			"key",
+			editedKey,
+			"keyIsFromAbc",
+		);
 
-    Object.assign(tune, reprocessed);
+		Object.assign(tune, reprocessed);
 
-    // Merge references (user refs + ABC refs)
-    const abcRefs = tune.references.filter((r) => r.fromAbc);
-    tune.references = [...userRefs, ...abcRefs];
+		// Merge references (user refs + ABC refs)
+		const abcRefs = tune.references.filter((r) => r.fromAbc);
+		tune.references = [...userRefs, ...abcRefs];
 
-    // Update main data array
-    if (originalTuneDataIndex !== -1) {
-      window.tunesData[originalTuneDataIndex] = tune;
-    }
+		// Update main data array
+		if (originalTuneDataIndex !== -1) {
+			window.tunesData[originalTuneDataIndex] = tune;
+		}
 
-    this.callbacks.saveTunesToStorage();
-    this.callbacks.renderTable();
-    this.callbacks.populateFilters()
-    this.close();
-  }
+		this.callbacks.saveTunesToStorage();
+		this.callbacks.renderTable();
+		this.callbacks.populateFilters();
+		this.close();
+	}
 
-  applyFieldOverride(reprocessed, tune, field, editedValue, fromAbcFlag) {
-    if (editedValue) {
-      if (reprocessed[fromAbcFlag]) {
-        if (editedValue !== reprocessed[field]) {
-          delete reprocessed[fromAbcFlag];
-          delete tune[fromAbcFlag];
-          reprocessed[field] = editedValue;
-        }
-      } else {
-        reprocessed[field] = editedValue;
-      }
-    } else {
-      if (!reprocessed[fromAbcFlag]) {
-        delete reprocessed[field];
-        delete tune[field];
-      }
-    }
-  }
+	applyFieldOverride(reprocessed, tune, field, editedValue, fromAbcFlag) {
+		if (editedValue) {
+			if (reprocessed[fromAbcFlag]) {
+				if (editedValue !== reprocessed[field]) {
+					delete reprocessed[fromAbcFlag];
+					delete tune[fromAbcFlag];
+					reprocessed[field] = editedValue;
+				}
+			} else {
+				reprocessed[field] = editedValue;
+			}
+		} else {
+			if (!reprocessed[fromAbcFlag]) {
+				delete reprocessed[field];
+				delete tune[field];
+			}
+		}
+	}
 
-  escapeHtml(text) {
-    const div = document.createElement("div");
-    div.textContent = text;
-    return div.innerHTML;
-  }
+	escapeHtml(text) {
+		const div = document.createElement("div");
+		div.textContent = text;
+		return div.innerHTML;
+	}
 
-  onClose() {
-    this.currentEditTuneIndex = null;
-  }
+	onClose() {
+		this.currentEditTuneIndex = null;
+	}
 }

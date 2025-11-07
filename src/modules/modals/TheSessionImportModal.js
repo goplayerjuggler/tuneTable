@@ -1,5 +1,5 @@
 import Modal from "./Modal.js";
-import processTuneData from "../../processTuneData.js";
+import { processTuneData } from "../../processTuneData.js";
 import { addLineBreaks } from "../../utils.js";
 import { eventBus } from "../events/EventBus.js";
 
