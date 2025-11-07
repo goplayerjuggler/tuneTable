@@ -5678,6 +5678,7 @@ He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good st
 					notes: `Maud Miller; Donegal reel`,
 				},
 			],
+			theSessionId: 1177,
 		},
 		{
 			abc: `X:1
@@ -7591,6 +7592,7 @@ Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:4
 				},
 				{
 					notes: `Chords (TBC):
+\`\`\`
 Part A
 D D D Em | D G A D
 D D D Em | D G A D
@@ -7608,7 +7610,8 @@ D D D A? | D G A D
 D D D A  | G D A D
 
 Part A - alternative 1st bar
-D - (D/F) (D, Dsus4, G or Em) D - Em - `,
+D - (D/F) (D, Dsus4, G or Em) D - Em - 
+\`\`\``,
 				},
 			],
 			scores: [
@@ -7676,8 +7679,10 @@ BGG2 DGG2 BGG2 cedc | `,
 				},
 				{
 					notes: `Chords (TBC):
+\`\`\`
 G - - C | G - D - | G - - C | G - D - ||
 G - - - | D - - - | G - - (D) | G - D - ||
+\`\`\`
 `,
 				},
 			],
@@ -7731,8 +7736,10 @@ DGBG A2BA GEE2 cEGE | `,
 				},
 				{
 					notes: `Chords (TBC):
+\`\`\`
 G (D) C - | G (D) C - | G (D) C - | G (D) C - ||
-G (C) G (D) | G (C) G - | G (C) G (D) | C - G C || 
+G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
+\`\`\`
 `,
 				},
 			],
