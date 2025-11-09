@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-07",
+	lastUpdate: "2025-11-09",
 	tunes: [
 		{
 			abc: `
@@ -4867,6 +4867,7 @@ K:Gmajor
 			abc: [
 				`X:1
 T:Cotillon De Baie-Ste-Catherine
+O: Québec
 R:reel
 L:1/16
 M:4/4
@@ -5613,25 +5614,22 @@ K:Dmajor
 			],
 		},
 		{
-			abc: `X:1
-T:The Beauty Spot
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/1270#setting1270
-N:Setting entered in thesession by user Will Harmon on 2002-12-29
-K:Dmixolydian
-|(3AAA GB A2 dB|cBcG EFGB|A2 GB ABdB|cBcG ED (3DDD|
- A2 GB (3AAA dB|cBcG EFGB|(3AAA Ad ~B3d|cBce ed(3ddd||
- ed (3B^cd edcd|ed^cd eaag|ed (3B^cd ed=cB|ABcd ed^cd|
- ed (3B^cd edcd|ed^cd eaag|fgdB =cABG|ABcd gedB||`,
-			scores: [
+			groups: "su",
+			incipit: `X: 1
+T: The Beauty Spot
+R: reel
+M: 4/4
+L: 1/16
+K: Dmix
+(3AAAGB A2dB cBcG EFGB|A2GB A`,
+			references: [
 				{
-					url: "https://thesession.org/tunes/1270#setting1270",
-					name: "thesession.org",
+					notes: `The star of Munster; The cherry tree (1974)`,
+					artists: "Paddy Ryan, fiddle",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=2",
 				},
 			],
+			theSessionId: 1270,
 		},
 		{
 			groups: "ALORA,su",
@@ -7383,15 +7381,15 @@ K: D
 AFA Agf ede fdB|`,
 		},
 		{
-			name: "Morrison’s",
-			rhythm: "jig",
+			incipit: `X: 19
+T: Morrison's
+R: jig
+M: 12/8
+L: 1/8
+K: Edor
+EDE BAB EBE AFD|EDE ~B3`,
 			groups: "alora",
-			scores: [
-				{
-					url: "https://thesession.org/tunes/71",
-					name: "thesession.org",
-				},
-			],
+			theSessionId: 71,
 			references: [
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
@@ -8007,6 +8005,55 @@ Mrs Kathleen Harrington née Gardiner (1897-1984)`,
 			],
 			theSessionId: 234,
 			groups: "alora",
+		},
+		{
+			groups: "alora",
+			incipit: `X: 1
+T: The Star Of Munster
+R: reel
+M: 4/4
+L: 1/16
+K: Ador
+ed|c2Ac B2GB AGEF GEDG|EA`,
+			theSessionId: 197,
+			references: [
+				{
+					notes: `Chords from thesession (Fernando Durbán Galnares): 
+\`\`\`
+|: Am G Am Em | Am - Am Em |
+   Am G Am Em | Am - G  Am :|
+|: Am - - -   | G -  -  Em |
+   Am - - -   | G Am Em -  :|
+\`\`\`
+	`,
+				},
+				{
+					artists: "Patsy Hanly, flute",
+					url: "https://youtu.be/IpsE74EcGR0",
+					notes:
+						"2007 or 2008; more info on itma: https://www.itma.ie/playlists/wcss-2/",
+				},
+				{
+					artists: "Seán Ryan, fiddle",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=2",
+					notes: "1960s",
+				},
+				{
+					artists: "Joe Ryan, fiddle; John Kelly, fiddle ",
+					url: "https://youtu.be/NOs3GW161Co?t=163",
+				},
+			],
+		},
+		{
+			groups: "alora",
+			incipit: `X: 1
+T: The Gravel Walks
+R: reel
+M: 4/4
+L: 1/16
+K: Ador
+A2eA (3cBA eA A2eA BAGB|A2eA (3Bcd ef`,
+			theSessionId: 42,
 		},
 	],
 };
