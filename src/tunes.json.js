@@ -7074,6 +7074,7 @@ M:3/4
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:Flatwater Fran
 C:Phil Cunningham
@@ -7123,24 +7124,16 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
 			],
 		},
 		{
-			abc: `X:1
-T:Flatbush
+			groups: "alora",
+			incipit: `
+X: 7
 C:Andy Statman
-R:waltz
-L:1/8
-M:3/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/3809#setting3809
-N:Setting entered in thesession by user swisspiper on 2004-11-04
-K:Gminor
-d3gdc|B2{F}G2G2|d3gdB|c3edc|
- GABcdB|{d}cGc2c2|B3c_AB|GG,B,DGB|
- d3gdc|B2{F}G2G2|d3gdB|c3fe/d/c|
- Bcdef/e/d|{d}cGc2c2|B3c_AB|GG,B,DGB||
- [d4b4][ca][Bg]|[ca]D^FAdf|[B2g2][A3f3][Ge]|[F6d6]|
- [G2e2][F2d2][E2c2]|[F2d2][B2g2][c2a2]|[d3b3][ca][Bb][dc']|[c6a6]|
- [d4b4][ca][Bg]|[ca]D^FAdf|[B2g2][A3f3][Ge]|[F6d6]|
- [_A2e2][A2d2][E2c2]|[F2d2][B,2G2][E2c2]|[D3B3][Ec][C_A][DB]|[B,6G6]||`,
+T: Flatbush
+R: waltz
+M: 3/4
+L: 1/8
+K: Emin
+B2 Be BA|GF EF GA`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3809#setting3809",
@@ -8054,6 +8047,29 @@ L: 1/16
 K: Ador
 A2eA (3cBA eA A2eA BAGB|A2eA (3Bcd ef`,
 			theSessionId: 42,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=55",
+					artists: "Frank Kelly, fiddle; Michael McNamara, flute",
+					notes: "The bird in the bush, The gravel walks",
+				},
+			],
+		},
+		{
+			groups: "su",
+			incipit: `X: 7
+T: The Drunken Sailor's
+R: hornpipe
+M: 4/4
+L: 1/16
+K: Gdor
+D2|G2GF GABc dcBA GFDE|F2`,
+			references: [
+				{
+					artists: "Frank Kelly, fiddle",
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=56",
+				},
+			],
 		},
 	],
 };
