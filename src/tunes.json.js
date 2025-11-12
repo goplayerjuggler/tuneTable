@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-09",
+	lastUpdate: "2025-11-13",
 	tunes: [
 		{
 			abc: `
@@ -903,21 +903,22 @@ K:Gmajor
 		},
 		{
 			abc: `X:1
-T:I Ne'er Shall Wean Her
+T:I Ne’er Shall Wean Her
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/803#setting803
 N:Setting entered in thesession by user slainte on 2002-06-24
-K:Adorian
-|:G|EGG GED|EGG c2B|AcA AGA|cde ecd|
- cde g2a|ged c2d|eaa e2d|cAA A2:|
- |:d|egg ged|egg g2d|eaa aga|baa a2g|
- cde g2a|ged c2d|eaa e2d|cAA A2:|`,
+N:(edited after importing)
+K:C
+|:G|EGG GED EGG c2B|AcA AGA cde ecd|
+ cde g2a ged c2d|eaa e2d cAA A2:|
+ |:d|egg ged egg g2d|eaa aga baa a2g|
+ cde g2a ged c2d|eaa e2d cAA A2:|`,
 			scores: [
 				{
-					url: "https://thesession.org/tunes/803#setting803",
+					url: "https://thesession.org/tunes/803",
 					name: "thesession.org",
 				},
 			],
@@ -1918,9 +1919,7 @@ F: https://music.youtube.com/watch?v=FqNstTlVggE&t=64
 F: https://open.spotify.com/track/05m3z6WmKqWGd4xluoujTT
 Z: abc-transcription Malcolm Schonfield% 2024-05-17,24
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-N:• Paddy O’Brien – Button Accordion
-N:• Nathan Gourley – fiddle
-N:• Dáithí Sproule – guitar
+N: Paddy O’Brien, button accordion; Nathan Gourley, fiddle; Dáithí Sproule, guitar
 R: jig
 M: 6/8
 L: 1/8
@@ -1932,6 +1931,7 @@ d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
 [P:C] fed ecA dAc AFD | G2A Bde fed cAG |
 FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`,
 			],
+			theSessionId: 2329,
 		},
 		{
 			groups: "su",
@@ -2083,32 +2083,6 @@ K:Dmajor
 		},
 		{
 			abc: `X:1
-T:The Rambling Pitchfork
-C:Tommy Potts
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/2329#setting2329
-N:Setting entered in thesession by user Christopher Reynolds on 2003-12-31
-K:Dminor
-|:FFF AFF|cFF AF^F|G^FG ABg|fed cAG|
- ^FDD ADD|CDD A,DD|G^FG ABG|AFD D3:|
- fff ecA|BBB AFD|G^FG ABg|fed cAG|
- ^FDD ADD|CDD A,DD|G^FG ABG|AFD D3:|
- FEF G^FG|A^FA dA^F|G^FG ABg|fed cAG|
- ^FDD ADD|CDD A,DD|G^FG ABG|AFD D3:|
- d2e fed|ecA ABc|d2e fed|agf gec|
- d2e fed|ecA FGA|G^FG ABG|AFD D3:|`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/2329#setting2329",
-					name: "thesession.org",
-				},
-			],
-		},
-		{
-			abc: `X:1
 T:Seanamhac Tube Station
 C:John Carty
 R:jig
@@ -2117,13 +2091,14 @@ M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/280#setting280
 N:Setting entered in thesession by user scottythefiddler on 2001-09-09
-K:Dminor
-|:GFD D2F|GAc d3|dcA cAF|GFD C3|
- GFD D2F|GAc d3|dcA cAF|G3 G3:|
- d3 dcA|c3 cAc|dcA cAF|GFD C3|
- d3 dcA|c3 cAc|dcA cAF|G3 G3|
- d3 dcA|c3 cAc|dcA cAF|GFD C3|
- GFD D2F GAc d3|dcA cAF|G3 G3||`,
+N:(edited after importing)
+K:Gdor
+|:GFD D2F GAc d3|dcA cAF GFD C3|
+  GFD D2F GAc d3|dcA cAF G3 G3:|
+   d3 dcA c3 cAc|dcA cAF GFD C3|
+   d3 dcA c3 cAc|dcA cAF G3 G3|
+   d3 dcA c3 cAc|dcA cAF GFD C3|
+ GFD D2F GAc d3|dcA cAF G3 G3||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/280#setting280",
@@ -3002,7 +2977,7 @@ P:E (coda)
 			abc: `X:1
 T:An Feochán
 C:Tommy Peoples
-R:polka
+R:slow air
 L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
@@ -3703,22 +3678,28 @@ K:Bminor
 			],
 		},
 		{
-			abc: `X:1
-T:Paddy Canny's Toast
+			groups: "su",
+			incipit: `X: 6
+T: Paddy Canny’s Toast
+C:Charlie Lennon
+R: reel
+M: 4/4
+L: 1/16
+K: Gdor
+FGcG dGcG EFcF dFcF|FGcG`,
+		},
+		{
+			incipit: `X:1
+T:Paddy Canny’s Toast
 C:Frankie Gavin
 R:reel
-L:1/8
+L:1/16
 M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/675#setting675
-N:Setting entered in thesession by user donnchad on 2002-05-08
-K:Gminor
-|:GF|DG ~G2 dGcG|dGcA GFDC|DG ~G2 dGcG|dcAF AG:|
- GA|~B3 c df ~f2|~g3 f f=edc|BABc df ~f2|gfdB c2 dc|
- ~B3 c df=ef|~g3 =e f2 df|gfdc Bdcd|BGAF G2||`,
+K:Gdor
+GF|DG~G2 dGcG dGcA GFDC|DG~G2`,
 			scores: [
 				{
-					url: "https://thesession.org/tunes/675#setting675",
+					url: "https://thesession.org/tunes/675",
 					name: "thesession.org",
 				},
 			],
@@ -6289,29 +6270,7 @@ K:Amajor
 				},
 			],
 		},
-		{
-			abc: `X:1
-T:An Phis Fhliuch
-C:Patrick O'Farrell
-R:slip jig
-L:1/8
-M:9/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/879#setting879
-N:Setting entered in thesession by user Mark Cordova on 2002-08-07
-K:Gmajor
-|:FGA AFA c2A|BAG F/G/AF GED|FGA AFA d2A|d/e/fe dcA GED:|
- |:d^cd ege d2A|d^cd fdf ~g3|{b}a2a ged c2A|BAG F/G/AF GED:|
- |:FGA AFd AFd|AFd AFD GED|FGA AFA c2A|BAG F/G/AF GED:|
- |:~D3 ~D3 c3|c2B c2A GED|~D3 ~D3 d2^c|d/g/fe dcA GED:|
- |:d^cd ege c2A|d^cd fdf ~g3|~a3 ged c2A|BAG F/G/AF GED:|`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/879#setting879",
-					name: "thesession.org",
-				},
-			],
-		},
+
 		{
 			groups: "ALORA,SU",
 			abc: `X:1
@@ -7133,7 +7092,7 @@ R: waltz
 M: 3/4
 L: 1/8
 K: Emin
-B2 Be BA|GF EF GA`,
+B2 Be BA|FG E2 GA`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3809#setting3809",
@@ -7788,15 +7747,17 @@ A2D FED F2A A2f|gfe`,
 		},
 		{
 			groups: "su",
+			theSessionId: 879,
 			abc: `
 X: 1
 T: O’Farrell’s Welcome To Limerick
 T: (as played by Tommy Peoples)
-C:traditionnel
+C:Patrick O’Farrell
 S: Tommy Peoples
 D: The High Part Of The Road (1976)
 F: https://open.spotify.com/track/1KaCOZYDak3wuTToNlUxpv
-N: See comments here: https://goplayerjuggler.blogspot.com/2024/06/ofarrells-welcome-to-limerick.html
+N: 1. See comments here: https://goplayerjuggler.blogspot.com/2024/06/ofarrells-welcome-to-limerick.html
+N: 2. AKA An Phis Fhliuch
 Z:abc-transcription Malcolm Schonfield%2024-06-17
 Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
 R: Slip jig
