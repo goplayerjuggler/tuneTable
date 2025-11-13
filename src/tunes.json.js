@@ -3394,7 +3394,22 @@ K:Adorian
 			],
 		},
 		{
-			abc: `X: 14
+			abc: [
+				`X: 14
+T: Christmas Eve
+T: version with rolls; 2025-11-13
+Z:abc-transcription Malcolm Schonfield% 2025-11-13
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+|:GE|~D3E ~G3A B2dB ABGA|BAGE ~D3E G2BG ABGE|
+~D3E ~G3A B2dB ABGA|B~A3 G~E3 ABGE  G2:| 
+|:GA|BG (3Bcd ~e3g a2ge g2eg|a2ge g2ge dedB A2GA | 
+BG (3Bcd ~e3g abge g2eg | abge ~d3B ABGE G2:| 
+|:dc|B~G3 BGBd e~g3 egdc|B~G3 DGBG E~A3 A2dc|
+B~G3 BGBd e~g3 g3a|bgaf gedB ABGE G2:|`,
+				`X: 14
 T: Christmas Eve
 R: reel
 M: 4/4
@@ -3407,6 +3422,7 @@ DB,DE GFGA B2dB ABGA|BAAB G~E3 [1 ABGF G2EG:| [2 ABGF G2GA||
 BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
 |:BG (3GGG BGBd eg (3ggg egdc|BG (3GGG DGBG FAAG FAdc|
 BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`,
+			],
 			groups: "ALORA",
 			origin: "Ireland",
 			references: [
