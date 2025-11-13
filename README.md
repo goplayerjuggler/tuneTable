@@ -1,11 +1,21 @@
 # Tune table
-An interactive HTML/Javascript viewer for lists of tunes. It uses data in a hybrid format where tunes can either be given in [ABC format](https://abcnotation.com) or otherwise with just some simple descriptions/comments/links. 
+An interactive HTML/Javascript viewer for lists of tunes. It displays tune data that’s entered in a flexible JavaScript format where tune settings or incipits are given in [ABC format](https://abcnotation.com); alongside notes, comments, and links to audio references.  
+The tool sorts tunes, or indexes them, based on something I call the _contour_ of a tune. I go into more details [here](https://github.com/goplayerjuggler/abc-tools/blob/main/docs/contour_sort.md).
 
-## Features: 
-* tunes can have zero, one or more settings in ABC
-* a popup score viewer with transpose buttons, for tunes with one or more settings in ABC
-* sorting and filtering of the tune list
+## Code status
+This project is in the alpha stage of development. Which is one reason why I have so far hardly done any publicity for it.
+
+## Features
+* sort tunes based on the tune’s _contour_ w.r.t. to the tonic
+  * key- and mode- agnostic
+  * contours are displayed next to the tune’s title
 * incipit generator (incipit: a short score giving the first few notes)
+* I try to have at least one setting or incipit for each tune
+* tunes can have:
+  * zero, one or more settings in ABC
+  * zero or one incipits
+* a popup score viewer with transpose buttons, for tunes with one or more settings in ABC
+* optional simple sorting and filtering of the tune list
 * comments/notes for tunes, optionally with links to audio references
 * optional external links to scores
 * all entries can be fully edited within the tool
@@ -17,9 +27,10 @@ An interactive HTML/Javascript viewer for lists of tunes. It uses data in a hybr
 
 ## Upcoming features / wishlist
 Here are some features I hope to add at some point:
-* sort tunes based on the actual tune, in a key- and mode-agnostic manner – I have in mind a way of sorting tunes that I haven’t seen implemented, or even described, anywhere else.
-* load preset lists of tunes
-* meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers,  4/4 + semiquavers, and 4/2 + quavers. The first option is the standard way, but I often prefer the other two options.
+* have several incipits for a single tune - indexing by B, C parts etc
+* choose from a preset list of lists of tunes
+* meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers,  4/4 + semiquavers, and 4/2 + quavers. The first way is the standard/orthodox/traditional way, but I often prefer the other two options.
+* statistics & other UI improvements
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
@@ -31,28 +42,29 @@ Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.gi
 [goplayerjuggler.github.io/tuneTable/?q=crooked](https://goplayerjuggler.github.io/tuneTable/?q=crooked)
 * the `g` parameter limits the list to a sublist, those tunes whose `groups` are matches. This is meant to be used for sharing only some of the list with a target audience. Example: 
 [goplayerjuggler.github.io/tuneTable/?g=alora](https://goplayerjuggler.github.io/tuneTable/?g=alora) 
-Unlike the other pages, other tunes are no longer accessible.
+Unlike the other query parameters, with this option the other tunes that do not match are no longer accessible.
 
 ## Current default list of tunes
 It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
 A fair number of the scores there are my own work, either transcriptions of other people’s tunes or original pieces. I reserve some rights on this via a CC licence; details below.
 
-The current default list of tunes can be changed easily using the tool’s edit and import functionalities.
+A good proportion of the tunes was loaded from [thesession.org](https://thesession.org) based on my tune book there; but I haven’t yet gone through the tunes to check important things like the key – for contour sorting, it makes a big difference, e.g. having `K:G` instead of `K: Dmix`!
 
-## Code status
-This project is in the alpha stage of development. Which is one reason why I haven’t yet done any publicity for it.
+The current default list of tunes can be changed easily using the tool’s edit and import functionalities.
 
 ## Dev notes
 I used Claude.ai to do a lot of the dev work. Tune rendering and transposing is done by [abcjs](https://github.com/paulrosen/abcjs), a library written by by Paul Rosen and Gregory Dyke.
 
+Most of the other functionality related to ABC is in my [“abc-tools” repo](https://github.com/goplayerjuggler/abc-tools).
+
+## Thanks
 A tip of the hat to: 
 
-* Michael Eskin and his amazing and indispensable online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which no doubt is part of the inspiration behind this. Michael has already kindly given me a few tips on several details; and I adapted his code to write the incipit generator.
+* Michael Eskin and his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which no doubt is part of the inspiration behind this. Michael has already kindly given me a few tips on several details; and I used some of his code when building the incipit generator.
 
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”.
 
 * Jeremy from [thesession.org](https://thesession.org) for providing such an great resource and helping me with a question about it.
-
 
 ## Licenses
 
@@ -71,9 +83,13 @@ This project uses dual licensing:
 - **SA** (ShareAlike): If you remix or build upon the data, you must distribute your contributions under the same CC BY-NC-SA 4.0 license
 
 
-## Setup notes
-```
+## Setup & dev notes
+``` PowerShell
 npm install
 npm run dev
 npm run build
+# working with abc-tools
+npm link ..\abctools
+npm ls --global
+npm uninstall -g  @goplayerjuggler/abc-tools
 ```
