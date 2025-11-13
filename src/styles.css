@@ -310,13 +310,13 @@ svg.contour {
   overflow-x: auto;
   position: relative;
 }
-
+/* 
 .modal-header {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   margin-bottom: 20px;
-}
+} */
 
 .modal-controls {
   display: flex;
@@ -798,7 +798,9 @@ tr:hover .tune-actions {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modall--active {
@@ -874,7 +876,9 @@ tr:hover .tune-actions {
   justify-content: center;
   color: #666;
   border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .modal__close:hover {
@@ -944,7 +948,9 @@ tr:hover .tune-actions {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 }
 
 .btn:active {
