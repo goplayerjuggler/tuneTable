@@ -7962,13 +7962,23 @@ Mrs Kathleen Harrington née Gardiner (1897-1984)`,
 		},
 		{
 			groups: "alora",
-			incipit: `X: 1
+			abc: `X: 1
 T: The Star Of Munster
+T: (as played by Patsy Hanly – more or less!)
+S:Patsy Hanly, flute
 R: reel
+F:https://youtu.be/IpsE74EcGR0
+N:2007 or 2008; more info on itma: https://www.itma.ie/playlists/wcss-2/
+Z:abc-transcription Malcolm Schonfield% 2025-11-13
 M: 4/4
 L: 1/16
 K: Ador
-ed|c2Ac B2GB AGEF GEDG|EA`,
+HAB||!segno!.c2A~B- BAGB ABBA GEDG|EAAG .A2(3Bcd egfa gedB|
+.c2A~B- BAGB ABBA GEDG|.E2AG A2(3Bcd egdB BAAB|
+cBAc BAGB .A2BA GEDG | EAAG .A2(3Bcd egfa gedB|
+.c2A~B- BAGB ABBA GEDG|.E2AG A2(3Bcd egdB BAA2||
+|: eaab ageg a2ba agef|g2(3agf gedg egfa ged2|
+eaab ageg a2ba agef|~g3b a2ab- bc'ba [1 gedg :| [2 gedB !D.S.!||`,
 			theSessionId: 197,
 			references: [
 				{
@@ -7980,12 +7990,6 @@ ed|c2Ac B2GB AGEF GEDG|EA`,
    Am - - -   | G Am Em -  :|
 \`\`\`
 	`,
-				},
-				{
-					artists: "Patsy Hanly, flute",
-					url: "https://youtu.be/IpsE74EcGR0",
-					notes:
-						"2007 or 2008; more info on itma: https://www.itma.ie/playlists/wcss-2/",
 				},
 				{
 					artists: "Seán Ryan, fiddle",

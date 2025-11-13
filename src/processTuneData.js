@@ -102,7 +102,7 @@ function processTuneData(tune) {
 					fromAbc: true,
 				};
 
-				processed.references.push(abcRef);
+				processed.references.splice(0, 0, abcRef);
 			}
 		});
 		if (!tune.incipit) {
