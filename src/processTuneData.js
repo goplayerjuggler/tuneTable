@@ -45,22 +45,51 @@ function getMetadata(abc) {
 	return metadata;
 }
 
-function updateFromMetadata(metaData, processed, setIsFromAbc = true) {
-	if (!processed.name && metaData.title) {
-		processed.name = metaData.title;
-		if (setIsFromAbc) processed.nameIsFromAbc = true;
+function updateFromMetadata(
+	metaData,
+	processed,
+	setIsFromAbc = true,
+	updateBasicInfo = true,
+) {
+	if (updateBasicInfo) {
+		if (!processed.name && metaData.title) {
+			processed.name = metaData.title;
+			if (setIsFromAbc) processed.nameIsFromAbc = true;
+		}
+		if (!processed.rhythm && metaData.rhythm) {
+			processed.rhythm = metaData.rhythm;
+			if (setIsFromAbc) processed.rhythmIsFromAbc = true;
+		}
+		if (!processed.meter && metaData.meter) {
+			processed.meter = metaData.meter;
+			if (setIsFromAbc) processed.meterIsFromAbc = true;
+		}
+		if (!processed.key && metaData.key) {
+			processed.key = metaData.key;
+			if (setIsFromAbc) processed.keyIsFromAbc = true;
+		}
 	}
-	if (!processed.rhythm && metaData.rhythm) {
-		processed.rhythm = metaData.rhythm;
-		if (setIsFromAbc) processed.rhythmIsFromAbc = true;
+
+	if (!processed.references) {
+		processed.references = [];
 	}
-	if (!processed.meter && metaData.meter) {
-		processed.meter = metaData.meter;
-		if (setIsFromAbc) processed.meterIsFromAbc = true;
-	}
-	if (!processed.key && metaData.key) {
-		processed.key = metaData.key;
-		if (setIsFromAbc) processed.keyIsFromAbc = true;
+
+	if (
+		metaData.source ||
+		metaData.url ||
+		metaData.recording ||
+		metaData.comments
+	) {
+		const abcRef = {
+			artists: metaData.source || "",
+			url: metaData.url || "",
+			notes: `${metaData.recording ? `recording/album: ${metaData.recording}\n` : ""}${
+				metaData.comments ? metaData.comments.join("\n") : ""
+			}`,
+			fromAbc: true,
+		};
+
+		processed.references.splice(0, 0, abcRef);
 	}
 }
 
@@ -80,30 +109,7 @@ function processTuneData(tune) {
 			const abcMeta = getMetadata(abcString);
 
 			if (index === 0) updateFromMetadata(abcMeta, processed);
-
-			if (!processed.references) {
-				processed.references = [];
-			}
-
-			if (
-				abcMeta.source ||
-				abcMeta.url ||
-				abcMeta.recording ||
-				abcMeta.comments
-			) {
-				const abcRef = {
-					artists: abcMeta.source || "",
-					url: abcMeta.url || "",
-					notes:
-						(abcMeta.recording || "") +
-						`${abcMeta.recording ? "\n" : ""}${
-							abcMeta.comments ? abcMeta.comments.join("\n") : ""
-						}`,
-					fromAbc: true,
-				};
-
-				processed.references.splice(0, 0, abcRef);
-			}
+			else updateFromMetadata(abcMeta, processed, false, false);
 		});
 		if (!tune.incipit) {
 			try {

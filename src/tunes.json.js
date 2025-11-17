@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-13",
+	lastUpdate: "2025-11-18",
 	tunes: [
 		{
 			abc: `
@@ -2859,6 +2859,24 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
 			groups: "su",
 			name: "The Walking Stick / The Toonagh Mazurka",
 			abc: [
+				`X:1
+T:The Walking Stick
+C:Tommy Peoples
+F:https://youtu.be/1UhBWPM4uA8?t=62
+S:Kevin Crawford, fiddle; Tommy Peoples, fiddle
+D:In Good Company
+R:mazurka
+L:1/8
+M:3/4
+N:Imported into *tuneTable* on 2025-10-25,
+N:from https://thesession.org/tunes/1302#setting1302
+N:Setting entered in thesession by user gian marco on 2003-01-06
+N:(edited after importing)
+K:Dmajor
+|:(3AAA|d2 f2 ag|bg B2 (3ggg|fe Ac eg|fd A2 (3AAA|
+ d2 f2 ag|bg B2(3ggg|fe Ac ec|d2d2:||:AF|
+ D2 (3FGA df|a2 ge Ad|g2 fd Ad|(3fff dA FE|
+ D2 (3FGA df|a2 ge Ad|fg fd AG|FA d2:|`,
 				`%abc-2.1
 X: 1
 T:Toonagh Mazurka
@@ -2890,20 +2908,6 @@ Dd fd ad | ba Bg g/g/g | fd AG FA || [P:Ⅱ]dA FE DD |
 P:Variations / embellishments
 "_(V1)"dA B/B/A ||"_(V2)"D/D/D || "_(V3)"Bd |]
 `,
-				`X:1
-T:The Walking Stick
-C:Tommy Peoples
-R:mazurka
-L:1/8
-M:3/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/1302#setting1302
-N:Setting entered in thesession by user gian marco on 2003-01-06
-K:Dmajor
-|:(3AAA|d2 f2 ag|bg B2 (3ggg|fe Ac eg|fd A2 (3AAA|
- d2 f2 ag|bg B2(3ggg|fe Ac ec|d2d2:|:AF|
- D2 (3FGA df|a2 ge Ad|g2 fd Ad|(3fff dA FE|
- D2 (3FGA df|a2 ge Ad|fg fd AG|FA d2:|`,
 			],
 			references: [
 				{
@@ -3003,14 +3007,14 @@ C:Willie Hunter
 R:polka
 L:1/8
 M:2/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/6170#setting6170
-N:Setting entered in thesession by user armandaromin on 2006-09-06
-K:Amajor
-|:A2 AE|FA E2|FB BA/B/|cB cB|
- A2 AE|FA E2|FB BA/B/|1 cA GB:|2 cA Af||
- e>f ec|Af fe|Bf Bf|g2 gf|
- cg cg|a2 af|ec BA/B/|1 cA Af:|2 cA GB||`,
+N:Imported into *tuneTable* on 2025-11-16,
+N:from https://thesession.org/tunes/6170#setting36341
+N:Setting entered in thesession by user NfldWhistler on 2019-10-19
+K: Gmaj
+|:G>F GD|EG D2|EA AG/A/|BA AB/A/|
+G>F GD|EG D2|EA G/F/E/F/|1 G2 GB/A/:|2 G2 GB/c/||
+|:d>e dG|e2 eB|Ae ed/e/|f>g f/e/d/c/|
+Bf fe/f/|g2 f>e|dG A/G/A/B/|1 G2 GB/c/:|2 G2 GB/A/|| `,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6170#setting6170",
@@ -3192,6 +3196,13 @@ K:Dmajor
 				{
 					url: "https://thesession.org/tunes/8541#setting8541",
 					name: "thesession.org",
+				},
+			],
+			references: [
+				{
+					artist: "Jason O’Rourke, concertina",
+					notes: `album: The Bunch Of Keys
+Well worth a listen! Don’t have link handy though.`,
 				},
 			],
 		},
@@ -7888,15 +7899,29 @@ BAG A2d cAF G2A|`,
 			theSessionId: 37,
 			references: [
 				{
-					artists:
-						"Cillian Vallely, Uilleann pipes; Niall Vallely, concertina; Alan Murray, guitar",
-					url: "https://www.youtube.com/watch?v=0E39mRYES8M",
-					notes: "The Gold Ring / The Hearty Boys of Ballymote",
+					artists: "Dónal Lunny & his band",
+					url: "https://youtu.be/gVLtA4uX_NM?t=155",
+					notes: `1987, Live at the National Concert Hall, Dublin
+Nollaig Ní Cathasaigh: Fiddle, Viola
+Cormac Breathnach: Flute
+Arty McGlynn: Guitar
+Manus Lunny: Bouzouki
+Seá n Óg Potts: Uilleann pipes, Keyboards
+Damien Quinn: Bodhrán
+Steve White: Congas, Percussion
+Dónal Lunny: Bouzouki, Keyboards`,
 				},
+
 				{
 					artists: "Sult Ceol",
 					url: "https://www.youtube.com/watch?v=iPmJHJ0wYiQ&t=7s",
 					notes: "harp, concertina, whistle and Uileann Pipes",
+				},
+				{
+					artists:
+						"Cillian Vallely, Uilleann pipes; Niall Vallely, concertina; Alan Murray, guitar",
+					url: "https://www.youtube.com/watch?v=0E39mRYES8M",
+					notes: "The Gold Ring / The Hearty Boys of Ballymote",
 				},
 			],
 		},
@@ -8052,6 +8077,136 @@ D2|G2GF GABc dcBA GFDE|F2`,
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=56",
 				},
 			],
+		},
+		{
+			abc: `
+X: 1
+T: Denis Doody’s – the “Lunny” effect
+T: The way I hear it, played by Dónal Lunny’s band
+T: 1987, Live at the National Concert Hall, Dublin
+S: Dónal Lunny & his band
+D: Donal Lunny
+R: polka
+F:https://youtu.be/gVLtA4uX_NM?t=354
+M: 2/4
+N: 1. I used [Dr. Dow’s setting](https://thesession.org/tunes/1338#setting14686) as a starting point and then made some tweaks,
+N: as I wasn’t in complete agreement with it.
+N: 2. In a comment made 23 years ago (!), Dr Dow mentions something he calls the
+N: “Lunny Effect” – hearing the same tune in two different ways. It’s something 
+N: I’ve noticed with some other tunes and recordings. It’s a fascinating thing.
+N: On the Dónal Lunny album (link above), I can only hear it the one way; the 
+N: way given here. On theSession.org there are other settings that show the 
+N: “other” way; it seems to be the  “orothodox” or standard way. This spurred me 
+N: on to do a little investigating. I found [another recording](https://youtu.be/X8pqy2uCVno?t=1469), by
+N: Denis Doody himself. It’s recorded under the name “The Green Cottage #1” and indeed,
+N: on that recording I can only hear the “other” way.
+N: 3. To my ears, the “Dónal Lunny” way of hearing/playing it sounds a bit Spanish 
+N: - or Galician - influenced.
+N: 4. An alternative way to write this would to write longer bars using minims 
+N: (half notes) as the basic pulse. This would be a bit fiddly to do as the bars 
+N: would have to be of different lengths. But I think it would perhaps be an even 
+N: better way of capturing the “ideas” in this “non-standard” way of hearing it.
+N: (2025-11-15)
+N: 5. See The Gold Ring, here, for the personnel list for the concert.
+Z:abc-transcription Malcolm Schonfield
+L: 1/8
+K: Emin
+G/F/G/ | EF/E/ DB,|:SEE z/G/F/G/|A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|
+E E>F G|A B/c/B/A/ G|1 Fd FG | EF/E/ DB, :|2 Fd AB||
+|: e e/f/e/d/ B|e e/f/e/d/ B/^c/|de f2|ge f2|
+gf ge|BB AB|zE>F G|1 A B/c/B/A/ B :|2  A B/c/B/A/ G | EF/E/ DB, !D.S.! ||
+
+X: 2
+T: Denis Doody’s
+T: (same as previous but “cut up” differenly)
+N: 1. This is a more concise way to write it; but it’s less accurate 
+N: w.r.t. the A part’s structure, IMO.
+N: I don't hear it this way! Just leaving it here for reference.
+R: polka
+M: 2/4
+L: 1/8
+K: Emin
+G/F/G/|:EF/E/ DB,|EE z/G/F/G/|A/F/ D>E F|GA/c/ B/A/G|
+EF/E/ DB,|E E>F G|AB/c/ B/A/G|1 Fd FG :|2 Fd AB||
+e e/f/e/d/ B|e e/f/e/d/ B/^c/|de f2|ge f2|
+gf ge|BB AB|zE>FG|1 A B/c/B/A/ B :|2 AB/c/ B/A/ G ||
+`,
+			theSessionId: 1338,
+			incipit: `
+X: 1
+M: 2/4
+L:1/8
+K: Emin
+EE z/G/F/G/ | A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|`,
+		},
+		{
+			abc: `X:1
+T:Denis Doody’s
+R:polka
+F:https://youtu.be/X8pqy2uCVno?t=1469
+S:Denis Doody, accordion
+L:1/8
+M:4/4
+N:Denis Doody's own version of The Green Cottage polka from his 1978 LP, which
+N:must have fascinated Donal Lunny & Co. A little nuance that didn't make it to
+N:the ABC is that he added G/F/E instead of GE at the start of the tune when
+N:repeating part A.
+N:---
+N:Imported into *tuneTable* on 2025-11-16,
+N:from https://thesession.org/tunes/1338#setting42834
+N:Setting entered in thesession by user Bregolas on 2022-01-20
+N:(edited after importing)
+K:Eminor
+|: GE ED B,E E>G|FD DE FG AB/A/|
+   GE ED B,E E>F|GA B>A GF E2:|
+|: Be e/f/e/d/ Be e/f/e/d/|Be e f2 g ef|
+   gb/g/ fg/f/ eB BA|BB E>F GA B/d/B/A/:|`,
+
+			theSessionId: 1338,
+			theSessionSettingId: 42834,
+		},
+		{
+			groups: "su",
+			incipit: `X:1
+T:This Is My Love, Do You Like Her?
+S:Denis Doody
+D:Kerry Music [1978 LP]
+F:https://youtu.be/X8pqy2uCVno?t=2059
+R:slide
+L:1/8
+M:12/8
+K:Adorian
+B|A2A AGE c2B c2d|ege edB ~g3 g2`,
+			scores: [
+				{
+					url: "https://thesession.org/tunes/6#setting31114",
+					name: "thesession.org",
+				},
+			],
+			references: [{ notes: "SU: 1st in the This Is My Love slide set" }],
+		},
+		{
+			groups: "su",
+			abc: `X:1
+T:Paddy Cronin’s
+S:from Jack Talty & Cormac Begley
+D:“Na Fir Bolg”, Raelagh Records RRCD002, 2011
+N:Imported into *tuneTable* on 2025-11-16,
+N:from https://thesession.org/tunes/8362#setting19483
+N:Setting entered in thesession by user Josie1957 on 2012-04-02
+N:(edited after importing)
+R:Slide
+Z:transcription Johannes Schiefner (jschiefner@gmx.net)
+Z:id:js_1626
+Q:1/8=420
+M:12/8
+K:Edor
+EFG F2D E2F G2A|B2E GFE B2E GFE|
+D2F FED E2F G2A|1B2E GFE F2E D3:|2B2E GFE F2E D2d||
+|:ded c2d e2d cBA|B2E GFE B2E GFE|
+ded c2d e2d cBA|1B2E GFE F2E D2d:|2B2E GFE F2E D3|]`,
+			theSessionId: 8362,
+			references: [{ notes: "SU: 2nd in the This Is My Love slide set" }],
 		},
 	],
 };

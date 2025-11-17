@@ -363,6 +363,7 @@ function initialiseData() {
 		let n = params.get("n");
 		if (n) {
 			filterByName(n);
+			filtered = true;
 		}
 		populateFilters();
 
@@ -435,19 +436,22 @@ function renderTable() {
 				const formattedNotes = ref.notes
 					.replace(/\n/g, "<br />")
 					.replace(
-						/\[([^\]]+)\]\(([^)]+)\)/g,
+						/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
 						'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>',
 					)
-					.replace(/https?:\/\/[^\s<>"']+/g, (url) => {
-						try {
-							const { hostname, pathname, search } = new URL(url);
-							const display = hostname + pathname + search;
-							return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
-						} catch {
-							// In case URL parsing fails, leave the original
-							return url;
-						}
-					})
+					.replace(
+						/(?<!")https?:\/\/[^\s<>"']+/g, //only match URLs not preceded by `"` so as to avoid handling the ones we did previously for markdown syntax
+						(url) => {
+							try {
+								const { hostname, pathname, search } = new URL(url);
+								const display = hostname + pathname + search;
+								return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
+							} catch {
+								// In case URL parsing fails, leave the original
+								return url;
+							}
+						},
+					)
 					.replace(/```([^`]+)```/g, "<pre>$1</pre>");
 
 				const lines = ref.notes.split("\n");
