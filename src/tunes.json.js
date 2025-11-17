@@ -852,6 +852,7 @@ K:Edorian
 					name: "thesession.org",
 				},
 			],
+			references: [{ notes: "SU: Follows the Beauties Of Autumn" }],
 		},
 		{
 			abc: [
@@ -964,6 +965,7 @@ d^cAy
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:Wellington's Advance
 R:jig
@@ -1858,6 +1860,7 @@ EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:Con Cassidy's
 R:jig
@@ -2640,38 +2643,29 @@ L:1/8
 M:4/2
 N:Imported from https://thesession.org/tunes/4553#setting4553
 N:Setting entered in thesession by user Michael Eskin on 2005-06-02
-N:(edited after importing)
+N:(edited after importing)%251118
 K:Edorian
-E>G|:BEGB AFDE FB,DF A2(3Bcd|efed BAFE FdFE DABA|
- GAGG B,DGB ADFA d2(3efg|afec dBAF[1 F2ED E2EG:|2 F2ED EFGA||
- |:B2ef eBef g2fe fdeB|ABAF Adfa bafe fdef|
- g2ef eBef g2fe fdeB|Aaef deBA[1 F2ED E2GA:|2 F2ED E2EG||`,
+E>G|:BEGB AFDE FB,DF A2(3Bcd|e>fed BAFE FdFE D2BA|
+ G>AGE BEGB ADFA d2e>f|afef deBA[1 F2E2 E2E>G:|2 F2E2 E2F/G/A||
+ |:B2ef eBef g2fe fdeB|ABAF defa bafe fdef|
+ B2ef eBef g2fe fdeB|Aaef deBA[1 F2ED E2GA:|2 F2ED E2EG||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4553#setting4553",
 					name: "thesession.org",
 				},
 			],
+			references: [{ notes: "SU: Followed by An Paistinn Fionn" }],
 		},
 		{
 			groups: "su",
-			abc: `X:1
+			incipit: `X:1
 T:The Tax Max
 R:mazurka
 L:1/8
 M:3/4
-N:Second tune of the Tax Max Mazurkas set. I couldn't find any name for it so I've
-N:just named it The Tax Max Mazurkas II.
-N:From At the Racket's 1997 album "At the Racket". Track #9.
-N:---
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/19631#setting38741
-N:Setting entered in thesession by user DaveF on 2020-08-14
 K:F
-(3CDE|:F4 (3GFE|F3C FG|A3F EC|D3C DE|
- FG BA FG|ED CG, CD|EF GF (3EDC|1 D3 C DE:|2 D3E FG||
- |:A3G AB|cd cB AG|A3F EC|D3C DE|
- FG BA FG|ED CG, CD|EF GF (3EDC|1 D3E FG:|2 D4||`,
+C DE|F3G FE|F3E FG|A3F EC|D3C `,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/19631#setting38741",
@@ -8207,6 +8201,67 @@ D2F FED E2F G2A|1B2E GFE F2E D3:|2B2E GFE F2E D2d||
 ded c2d e2d cBA|1B2E GFE F2E D2d:|2B2E GFE F2E D3|]`,
 			theSessionId: 8362,
 			references: [{ notes: "SU: 2nd in the This Is My Love slide set" }],
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: Crowley’s
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+A3d B2dB AD (3FED AD (3FED|`,
+			theSessionId: 759,
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: The Star Above The Garter
+R: slide
+M: 12/8
+L: 1/8
+K: Gmaj
+d2B BAG ~A3 ABA|G2E c2`,
+			theSessionId: 1398,
+			references: [{ notes: "SU: 3rd in the This Is My Love slide set" }],
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: The Rookery
+C:Vincent Broderick
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+BGAG EGDG EGDG EGDE|G2`,
+			theSessionId: 2958,
+			references: [{ notes: "SU: followed by The Morning Dew" }],
+		},
+
+		{
+			groups: "su",
+			incipit: `X: 1
+T: The Morning Dew
+R: reel
+M: 4/4
+L: 1/16
+K: Edor
+E3B- BAFD EDEB BAFD|E3B- BAFA`,
+			theSessionId: 69,
+			references: [{ notes: "SU: after the Rookery" }],
+		},
+		{
+			groups: "su",
+			incipit: `X: 3
+T: The Edenderry
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+B2AG BGGA B2AG (3Bcd gd|B2AG`,
+			theSessionId: 9639,
+			references: [{ notes: "SU: after the Morning Dew" }],
 		},
 	],
 };
