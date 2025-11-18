@@ -29,7 +29,7 @@ export default class AbcModal extends Modal {
 			size: "large",
 			title: "Score viewer",
 			autoHideHeader: true,
-			autoHideDelay: 2000,
+			autoHideDelay: 0,
 			content: `
         <div class="modal-controls">
           <div class="control-row">

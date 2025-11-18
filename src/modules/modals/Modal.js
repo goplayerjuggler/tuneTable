@@ -20,7 +20,10 @@ export default class Modal {
 		this.onClose = options.onClose || null;
 		this.size = options.size || "medium";
 		this.autoHideHeader = options.autoHideHeader || false;
-		this.autoHideDelay = options.autoHideDelay || 2000;
+		this.autoHideDelay =
+			options.autoHideDelay === null || options.autoHideDelay === undefined
+				? 2000
+				: options.autoHideDelay;
 		this.element = null;
 		this.escHandler = null;
 		this.hideHeaderTimeout = null;
