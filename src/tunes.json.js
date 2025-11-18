@@ -250,6 +250,11 @@ K: E dorian
 "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "A"AG"Bm"FE "Bm"FD"Em"E2 :|
 |: "Em"B2Bc "A"dedc  "Em".B2B2 "D"AGFE  "Em"B2AG "Bm"F2E2 |
 [M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`,
+			incipit: `X:1
+M:6/4
+L:1/16
+K: E dorian
+EFGE FGA2  AGFE GAB2  BdcB AGFE | EF`,
 		},
 		{
 			groups: "su",
@@ -3400,6 +3405,20 @@ K:Adorian
 		},
 		{
 			abc: [
+				`X: 14
+T: Christmas Eve
+T: version as of 2025-11-18
+Z:abc-transcription Malcolm Schonfield% 2025-11-13
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+|:GE|~D3E ~G3A B2dB ABGB|ABGE ~D3E G2BG ABGE|
+~D3E ~G3A B2dB ABGA|BAGE D2BG ABGF G2:| 
+|:GA|BGBd edeg a2ge g2eg|a3f g2ge dedB A2GA | 
+BGBd ~e3g abge g2eg | abge ~d3B ABGE G2:| 
+|:dc|B~G3 D2Bd e~g3 egdc|B~G3 DGBG E~A3 F~A3|
+B~G3 BGBd e~g3 g3a|bgaf gedB ABGF G2:|`,
 				`X: 14
 T: Christmas Eve
 T: version with rolls; 2025-11-13
@@ -8262,6 +8281,18 @@ K: Gmaj
 B2AG BGGA B2AG (3Bcd gd|B2AG`,
 			theSessionId: 9639,
 			references: [{ notes: "SU: after the Morning Dew" }],
+		},
+
+		{
+			groups: "alora",
+			incipit: `X: 1
+T: The Otter's Holt
+R: reel
+M: 4/4
+L: 1/16
+K: Bmin
+e|fBBA FEFB (3ABA FB ABde|fBBA`,
+			theSessionId: 636,
 		},
 	],
 };
