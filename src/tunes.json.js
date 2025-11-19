@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-18",
+	lastUpdate: "2025-11-19",
 	tunes: [
 		{
 			abc: `
@@ -11,6 +11,7 @@ S: John Doherty, fiddle
 N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 D: The Floating Bow (1996; recorded between 1968 and 1974)
 C:Traditional
+Z:abc-transcription Malcolm Schonfield
 M: 2/2
 L: 1/8
 K: D
@@ -208,7 +209,7 @@ M: 4/2
 L: 1/8
 K: G
 |: ge|"G or Emin"dG GA B2AG d2 .G2 G2 ge|dG GA B2 AG "D"B2 .A2 A2 Bc |
-"Emin"dG GA B2 AG B2d2 "C"g3e|"G"d2de "D"dB Ad "G"B2 .G2 G2:|
+"Emin"dG GA B2 AG "C"B2d2 g3e|"G"d2de "D"dB Ad "G"B2 .G2 G2:|
 |: Bd|"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2 de dB GA "D"B2 A2 A2 Bd|
 "G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2de "D"dB Ad "G"B2 .G2 G2:|`,
 		},
@@ -2095,7 +2096,7 @@ T:Seanamhac Tube Station
 C:John Carty
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/280#setting280
 N:Setting entered in thesession by user scottythefiddler on 2001-09-09
@@ -5645,7 +5646,7 @@ K: Dmix
 (3AAAGB A2dB cBcG EFGB|A2GB A`,
 			references: [
 				{
-					notes: `The star of Munster; The cherry tree (1974)`,
+					notes: `(1974) The star of Munster; The cherry tree (at 1:07)`,
 					artists: "Paddy Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=2",
 				},
@@ -8231,6 +8232,13 @@ L: 1/16
 K: Dmaj
 A3d B2dB AD (3FED AD (3FED|`,
 			theSessionId: 759,
+			references: [
+				{
+					artists: "Joe Burke, accordion; Martin Byrnes, fiddle",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=1",
+					notes: "“Crowley’s reels”. 1973. Poor audio quality",
+				},
+			],
 		},
 		{
 			groups: "su",
@@ -8293,6 +8301,134 @@ L: 1/16
 K: Bmin
 e|fBBA FEFB (3ABA FB ABde|fBBA`,
 			theSessionId: 636,
+		},
+		{
+			groups: "alora",
+			incipit: `X: 1
+T: The Rose In The Heather
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+D2F EDB, DFA BAF|ABd ede fdB`,
+			references: [
+				{
+					artists: "Kilfenora Céilí Band",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=3",
+					notes: "(1959) Old man Dillon; Rose in the heather (0:57)",
+				},
+			],
+			theSessionId: 447,
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: Helvic Head
+R: jig
+M: 12/8
+L: 1/8
+K: Gmaj
+G3 AGE A3 AGE|G3 AGE`,
+			references: [
+				{
+					artist: "Brendan McGlinchey, fiddle",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=6",
+					notes: "(1993) Helvic Head; Wallop the spot (variation)",
+				},
+			],
+			theSessionId: 3110,
+		},
+		{
+			incipit: `X: 1
+T: Darby The Driver
+R: jig
+M: 12/8
+L: 1/8
+K: Ador
+G|EAA ABd ege dBA|GEF GAB `,
+			references: [
+				{
+					artists: "Tulla Céilí band",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=3",
+					notes:
+						"(1959) Joe Burke’s; Leitrim fancy. Poor audio quality. Joe Burke’s AKA Darby The Driver.",
+				},
+			],
+			theSessionId: 1137,
+		},
+		{
+			incipit: `X: 1
+T: Jack Daniels’
+C:John Morris Rankin
+R: reel
+M: 4/4
+L: 1/16
+K: Amaj
+|:a2ea (3f=ga ec Acaf e2ce|`,
+			theSessionId: 9268,
+		},
+		{
+			incipit: `X: 3
+T: The Scartaglen
+R: reel
+M: 4/2
+L: 1/8
+K: Dmaj
+DFEF D2Ad cAAG EFGE|`,
+			theSessionId: 900,
+		},
+		{
+			incipit: `X: 1
+T: Bonny Anne
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+f2ed cAAB cAdB cAA2|f2ed`,
+			theSessionId: 1562,
+		},
+		{
+			incipit: `X: 3
+T: The Bunch Of Green Rushes
+R: reel
+M: 4/4
+L: 1/16
+K: Dmix
+d|cAGE ~=F3d cAGc AddB|`,
+			theSessionId: 1335,
+		},
+
+		{
+			incipit: `X: 1
+T: Jenny Picking Cockles
+R: reel
+M: 4/4
+L: 1/16
+K: Dmix
+Addc AGEF GEcE dEcE|`,
+			theSessionId: 1357,
+		},
+		{
+			incipit: `X: 2
+T: Leppadumdowledum
+C:Dónal Lunny
+R: slip jig
+M: 9/8
+L: 1/8
+K: Dmix
+ABc cBA GAB|BAG cGE GED|~D3`,
+			theSessionId: 852,
+		},
+		{
+			incipit: `X: 3
+T: Stone Of Destiny
+C:Maurice Lennon
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+BddB G2Bd d2Bd edBA|BddB`,
+			theSessionId: 804,
 		},
 	],
 };
