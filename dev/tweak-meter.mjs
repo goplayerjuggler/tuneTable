@@ -1,16 +1,33 @@
 import fs from "fs";
 import path from "path";
+import { format, resolveConfig } from "prettier";
 import { fileURLToPath } from "url";
 import abcTools from "@goplayerjuggler/abc-tools";
-const { getIncipit, toggleMeter_4_4_to_4_2, javascriptify } = abcTools;
+const { convertStandardReel, javascriptify, getMetadata } = abcTools;
+
+/**
+ *
+ * @param {*} javascript - string of javascript to format
+ * @returns
+ */
+async function formatJavascript(javascript) {
+  const options = await resolveConfig(TUNES_FILE); // Resolves current config
+  const formatted = format(javascript, {
+    ...options,
+    parser: "espree", // Default parser for JavaScript
+    //https://prettier.io/blog/2020/11/20/2.2.0
+  });
+  return formatted;
+}
 
 // Get current directory in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const makeBackup = true;
+// other constants
 const TUNES_FILE = path.join(__dirname, "..", "src", "tunes.json.js");
-const BACKUP_FILE = path.join(__dirname, "tunes.json.js.backup");
-
+const BACKUP_FILE = path.join(__dirname, "..", "src", "tunes.json.js.backup");
+const maxNbToProcess = 3;
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)
@@ -54,11 +71,13 @@ async function process() {
       const tune = tunesData.tunes[i];
 
       // Skip if no abc property
-      // , or if it's not in the cohort imported yesterday
+      // , or if it's not in the cohort imported on 2025-10-25
+      // , or if it has the comment "edited"
       if (
         !tune ||
         !tune.abc ||
-        tune.abc.indexOf("N:Imported into *tuneTable* on 2025-10-25") < 0
+        tune.abc.indexOf("N:Imported into *tuneTable* on 2025-10-25") < 0 ||
+        tune.abc.match(/N:[^\n]*edited/i)
       ) {
         skippedCount++;
         continue;
@@ -72,31 +91,39 @@ async function process() {
         skippedCount++;
         continue;
       }
+      // get metadata
+      const metadata = getMetadata(abcString);
 
-      //barndances in 4/4 => 4/2
+      //reels in 4/4 1/8 => 4/4 1/16
       if (
         !abcString.match(/\n\s*M:\s*4\/4\s*\n/) ||
         !abcString.match(/\n\s*R:\s*reel\s*\n/i) ||
-        abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
+        // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
         abcString.match(/\[M:/) || //inline meter marking
+        abcString.match(/\[L:/) || //inline unit length marking
         !abcString.match(/\n\s*L:\s*1\/8\s*\n/)
       ) {
+        // console.log(`skip: ${metadata.title}`);
         skippedCount++;
         continue;
       }
 
       try {
-        // 251026 - know that for yesterday's cohort, there's only one abc
-        tune.abc = toggleMeter_4_4_to_4_2(abcString)
-          .replace("M:4/2", "M:4/4")
-          .replace("L:1/8", "L:1/16");
+        console.log(`process: ${metadata.title}`);
+        tune.abc = convertStandardReel(abcString);
 
-        tune.incipit = getIncipit(tune.abc);
+        // tune.incipit = getIncipit(tune.abc);
 
-        console.log(`  Tune ${i}: processed`);
+        console.log(`  Tune ${i} - ${metadata.title}: processed`);
         processedCount++;
+        if (processedCount >= maxNbToProcess) {
+          break;
+        }
       } catch (error) {
-        console.error(`  Tune ${i}: Error :`, error.message);
+        console.error(
+          `  Tune ${i} - ${metadata.title}: Error :`,
+          error.message,
+        );
         skippedCount++;
       }
     }
@@ -112,12 +139,14 @@ async function process() {
     // Now update the file
     console.log("\nUpdating tunes.json.js...");
 
-    // Write the updated file
-    fs.writeFileSync(
-      TUNES_FILE,
+    const formatted = await formatJavascript(
       `export default ${javascriptify(tunesData)}`,
-      "utf8"
+      {
+        parser: "js",
+      },
     );
+    // Write the updated file
+    fs.writeFileSync(TUNES_FILE, formatted, "utf8");
     console.log("tunes.json.js updated successfully!");
   } catch (error) {
     console.error("Error:", error);

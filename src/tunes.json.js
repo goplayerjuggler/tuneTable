@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-19",
+	lastUpdate: "2025-11-20",
 	tunes: [
 		{
 			abc: `
@@ -858,7 +858,11 @@ K:Edorian
 					name: "thesession.org",
 				},
 			],
-			references: [{ notes: "SU: Follows the Beauties Of Autumn" }],
+			references: [
+				{
+					notes: "SU: Follows the Beauties Of Autumn",
+				},
+			],
 		},
 		{
 			abc: [
@@ -2661,7 +2665,11 @@ E>G|:BEGB AFDE FB,DF A2(3Bcd|e>fed BAFE FdFE D2BA|
 					name: "thesession.org",
 				},
 			],
-			references: [{ notes: "SU: Followed by An Paistinn Fionn" }],
+			references: [
+				{
+					notes: "SU: Followed by An Paistinn Fionn",
+				},
+			],
 		},
 		{
 			groups: "su",
@@ -2922,7 +2930,6 @@ live; 2012`,
 					url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
 					notes: "EP",
 				},
-				//{artists:"", url:"", notes:""}
 			],
 			scores: [
 				{
@@ -3138,8 +3145,7 @@ R: polka
 M: 4/4
 L: 1/8
 K: Ador
-|: \
-"C"!tenuto!cd/c/ "G"!tenuto!Bc/B/ "Am"!tenuto!AB/A/ "Em"!tenuto!G>A| "G".Bd. ed "Em"(ga/g/) .ed|
+|: "C"!tenuto!cd/c/ "G"!tenuto!Bc/B/ "Am"!tenuto!AB/A/ "Em"!tenuto!G>A| "G".Bd. ed "Em"(ga/g/) .ed|
 "Am".ea g>e "G".dB GA/B/ |"C".ce "Em".dB "Am"A2A2:|
 "Am".ea ag/e/ "G".dg g>d |"Am".ea ab "Em"(ga/g/) .ed|
 "Am".ea g>e "G".dB GA/B/ |"Am".ce "Em"dB "Am"A2A2:|`,
@@ -3360,19 +3366,20 @@ a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 T:The Red Crow
 C:Mairéad Ní Mhaonaigh
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/184#setting184
 N:Setting entered in thesession by user Will Harmon on 2001-07-03
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Adorian
-|:A,2 EA, B,G,G,B,|(3A,A,A, EG FDEG|AGED EA,A,D|ECDC B,G,G,B,|
- (3A,A,A, EA, B,G,G,B,|(3A,A,A, EG (3FFD EG|
- [1 AGED EA,A,C|DB,G,B, A,2 (3G,A,B,:|2 AGED EA,A,C DB,G,B, A,2 (3AAA||
- A2 eA ceAc|eAce dcBA|(3GGG dc BdGB|dGBd edcB|
- (3AAA eA ceAc|eAcb ageg|age^c d=fed|(3cBA BG A2 AG|
- A2 eA ceAc|eAce dcBA|(3GGG dc BdGB|dGBd edcB|
- (3AAA aA gAfA|(3AAA cA BAGB|(3cBA BG AGED|ECDB, CA,B,G,||`,
+|:A,2EA, B,G,G,B, (3A,A,A, EG FDEG|AGED EA,A,D ECDC B,G,G,B,|
+(3A,A,A, EA, B,G,G,B, (3A,A,A, EG (3FFD EG|
+[1 AGED EA,A,C DB,G,B, A,2 (3G,A,B,:|2 AGED EA,A,C DB,G,B, A,2 (3AAA||
+A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
+(3AAA eA ceAc eAcb ageg|age^c d=fed (3cBA BG A2AG|
+A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
+(3AAA aA gAfA (3AAA cA BAGB|(3cBA BG AGED ECDB, CA,B,G,||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/184#setting184",
@@ -3385,18 +3392,19 @@ K:Adorian
 T:The Green Fields Of Glentown
 C:Tommy Peoples
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/671#setting671
 N:Setting entered in thesession by user Kuddel on 2002-05-04
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Adorian
-|:EA,~A,2 E2DB,|G,B,~B,2 G,A,B,D|EA,~A,2 E2DE|GBeB dBAB|
- eB~B2 eBdB|AE~E2 DG,B,G,|A,E~E2 E2DE|GEDB, B,A,~A,2:|
- |:A2EA cAEA|G2DB, G,A,B,D|EA~A2 GABd|edBA aged|
- bg~g2 afge|dB~B2 GEDB,|A,E~E2 E2DE|GEDB, B,A,~A,2:|
- |:A2EA cAEA|aged bage|dG~G2 DGBd|gded Bdgd|
- e2Be eBdB|AE~E2 DG,B,G,|A,E~E2 E2DE|GEDB, B,A,~A,2:|`,
+|:EA,~A,2 E2DB, G,B,~B,2 G,A,B,D|EA,~A,2 E2DE GBeB dBAB|
+eB~B2 eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|
+|:A2EA cAEA G2DB, G,A,B,D|EA~A2 GABd edBA aged|
+bg~g2 afge dB~B2 GEDB,|A,E~E2 E2DE GEDB, B,A,~A,2:|
+|:A2EA cAEA aged bage|dG~G2 DGBd gded Bdgd|
+e2Be eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/671#setting671",
@@ -3506,16 +3514,17 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`,
 T:Mick O'Connor's
 C:Mick O'Connor
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4198#setting4198
 N:Setting entered in thesession by user Limeretti Lumeretti Hillhocker on 2005-02-04
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Dmajor
-|:A,B,DE FDED|B,EED EDB,D|A,B,DE FABc|dBAG FDDD|
- A,B,DE FDED|B,EED EDB,E|A,B,DE FABc|dBAG FDDD:|
- |:d2fd adfd|edBd edBA|defa defa|e2de fddc|
- d2fd adfd|edBd edBA|faab afdf|1 gefd e4:|2 e2de fdd2||`,
+|:A,B,DE FDED B,EED EDB,D|A,B,DE FABc dBAG FDDD|
+A,B,DE FDED B,EED EDB,E|A,B,DE FABc dBAG FDDD:|
+|:d2fd adfd edBd edBA|defa defa e2de fddc|
+d2fd adfd edBd edBA|faab afdf[1 gefd e4:|2 e2de fdd2||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4198#setting4198",
@@ -4142,27 +4151,6 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1272#setting1272",
-					name: "thesession.org",
-				},
-			],
-		},
-		{
-			abc: `X:1
-T:Farewell To Erin
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/846#setting846
-N:Setting entered in thesession by user b.maloney on 2002-07-19
-K:Dmajor
-|:D2 (3FED ADFA|Ad~d2 Adfd|D2 (3FED ADFA|dBcA BFAF|
- D2 (3FED ADFA|Ad~d2 defg|afge fdec|dBAG FD D2:|
- |:dcdB AF~F2|DFBF AFEF|dcdB ADFA|BF~F2 GFEF|
- d2 cd (3Bcd AF|Addc defg|afge fdec|dBAG FD D2:|`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/846#setting846",
 					name: "thesession.org",
 				},
 			],
@@ -5646,7 +5634,7 @@ K: Dmix
 (3AAAGB A2dB cBcG EFGB|A2GB A`,
 			references: [
 				{
-					notes: `(1974) The star of Munster; The cherry tree (at 1:07)`,
+					notes: "(1974) The star of Munster; The cherry tree (at 1:07)",
 					artists: "Paddy Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=2",
 				},
@@ -5675,11 +5663,10 @@ P:Coda
 P:Variations/embellishments
 "_v1"Be||"_v2"dG||"_v3"(3ege||"_v4"eBdB ABGA||"_v5"ABGA||"_v6"A/B/AGA||"_v7"(3GGG||"_v8"BeeB||||"_v9"efge||"_v10"eage||"_v11"e2(3gfe||`,
 			references: [
-				//	{url:"", artists:"", notes:``}
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2024/?track=8",
 					artists: "Seán Maguire, fiddle",
-					notes: `The skylark; Maud Miller`,
+					notes: "The skylark; Maud Miller",
 				},
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=9",
@@ -5690,12 +5677,12 @@ He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good st
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=3",
 					artists: "Andy McGann, fiddle, speech; Felix Dolan, piano",
-					notes: `Maud Miller; Hand me down the tackle [Tom Steele's]`,
+					notes: "Maud Miller; Hand me down the tackle [Tom Steele's]",
 				},
 				{
 					url: "https://www.youtube.com/watch?v=Mk5llmB-rLY",
 					artists: "Brid Harper, fiddle; Harry Bradley, flute",
-					notes: `Maud Miller; Donegal reel`,
+					notes: "Maud Miller; Donegal reel",
 				},
 			],
 			theSessionId: 1177,
@@ -6311,7 +6298,6 @@ K:Amajor
 				},
 			],
 		},
-
 		{
 			groups: "ALORA,SU",
 			abc: `X:1
@@ -7842,13 +7828,16 @@ K:Gmajor
 		{
 			name: "The Holly Bush",
 			rhythm: "reel",
-
 			incipit: `X: 1
 M: 4/2
 L: 1/8
 K: Dmix
 A2FA DAFG ABde fded|`,
-			references: [{ notes: "Composed by Finbarr Dwyer" }],
+			references: [
+				{
+					notes: "Composed by Finbarr Dwyer",
+				},
+			],
 			theSessionId: 1566,
 		},
 		{
@@ -7874,7 +7863,11 @@ K:Gmajor
 					name: "thesession.org",
 				},
 			],
-			references: [{ notes: "Nb 1 / 2nd polka set" }],
+			references: [
+				{
+					notes: "Nb 1 / 2nd polka set",
+				},
+			],
 			theSessionId: 11600,
 		},
 		{
@@ -7886,7 +7879,11 @@ M: 4/4
 L: 1/8
 K: Amin
 AA ~a2 ge ~g2|ed`,
-			references: [{ notes: "Nb 2 / 2nd polka set" }],
+			references: [
+				{
+					notes: "Nb 2 / 2nd polka set",
+				},
+			],
 			theSessionId: 647,
 		},
 		{
@@ -7898,7 +7895,11 @@ M: 4/4
 L: 1/8
 K: Emin
 EB B>A BG E/F/G|FA`,
-			references: [{ notes: "Nb 3 / 2nd polka set" }],
+			references: [
+				{
+					notes: "Nb 3 / 2nd polka set",
+				},
+			],
 			theSessionId: 11676,
 		},
 		{
@@ -7925,7 +7926,6 @@ Damien Quinn: Bodhrán
 Steve White: Congas, Percussion
 Dónal Lunny: Bouzouki, Keyboards`,
 				},
-
 				{
 					artists: "Sult Ceol",
 					url: "https://www.youtube.com/watch?v=iPmJHJ0wYiQ&t=7s",
@@ -7978,7 +7978,7 @@ K:Gdorian
 			name: "The Silver Spire",
 			groups: "alora",
 			rhythm: "reel",
-			theSessionId: 240, //todo
+			theSessionId: 240,
 			incipit: `X: 1
 M: 4/4
 L: 1/16
@@ -8049,7 +8049,8 @@ eaab ageg a2ba agef|~g3b a2ab- bc'ba [1 gedg :| [2 gedB !D.S.!||`,
 				{
 					artists: "Seán Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=2",
-					notes: "1960s",
+					notes:
+						"(1960s) A setting in a major or mixo mode. (sort of; ishg). Interesting! ",
 				},
 				{
 					artists: "Joe Ryan, fiddle; John Kelly, fiddle ",
@@ -8175,7 +8176,6 @@ K:Eminor
    GE ED B,E E>F|GA B>A GF E2:|
 |: Be e/f/e/d/ Be e/f/e/d/|Be e f2 g ef|
    gb/g/ fg/f/ eB BA|BB E>F GA B/d/B/A/:|`,
-
 			theSessionId: 1338,
 			theSessionSettingId: 42834,
 		},
@@ -8197,7 +8197,11 @@ B|A2A AGE c2B c2d|ege edB ~g3 g2`,
 					name: "thesession.org",
 				},
 			],
-			references: [{ notes: "SU: 1st in the This Is My Love slide set" }],
+			references: [
+				{
+					notes: "SU: 1st in the This Is My Love slide set",
+				},
+			],
 		},
 		{
 			groups: "su",
@@ -8220,7 +8224,11 @@ D2F FED E2F G2A|1B2E GFE F2E D3:|2B2E GFE F2E D2d||
 |:ded c2d e2d cBA|B2E GFE B2E GFE|
 ded c2d e2d cBA|1B2E GFE F2E D2d:|2B2E GFE F2E D3|]`,
 			theSessionId: 8362,
-			references: [{ notes: "SU: 2nd in the This Is My Love slide set" }],
+			references: [
+				{
+					notes: "SU: 2nd in the This Is My Love slide set",
+				},
+			],
 		},
 		{
 			groups: "su",
@@ -8250,7 +8258,11 @@ L: 1/8
 K: Gmaj
 d2B BAG ~A3 ABA|G2E c2`,
 			theSessionId: 1398,
-			references: [{ notes: "SU: 3rd in the This Is My Love slide set" }],
+			references: [
+				{
+					notes: "SU: 3rd in the This Is My Love slide set",
+				},
+			],
 		},
 		{
 			groups: "su",
@@ -8263,9 +8275,12 @@ L: 1/16
 K: Gmaj
 BGAG EGDG EGDG EGDE|G2`,
 			theSessionId: 2958,
-			references: [{ notes: "SU: followed by The Morning Dew" }],
+			references: [
+				{
+					notes: "SU: followed by The Morning Dew",
+				},
+			],
 		},
-
 		{
 			groups: "su",
 			incipit: `X: 1
@@ -8276,7 +8291,11 @@ L: 1/16
 K: Edor
 E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			theSessionId: 69,
-			references: [{ notes: "SU: after the Rookery" }],
+			references: [
+				{
+					notes: "SU: after the Rookery",
+				},
+			],
 		},
 		{
 			groups: "su",
@@ -8288,9 +8307,12 @@ L: 1/16
 K: Gmaj
 B2AG BGGA B2AG (3Bcd gd|B2AG`,
 			theSessionId: 9639,
-			references: [{ notes: "SU: after the Morning Dew" }],
+			references: [
+				{
+					notes: "SU: after the Morning Dew",
+				},
+			],
 		},
-
 		{
 			groups: "alora",
 			incipit: `X: 1
@@ -8397,7 +8419,6 @@ K: Dmix
 d|cAGE ~=F3d cAGc AddB|`,
 			theSessionId: 1335,
 		},
-
 		{
 			incipit: `X: 1
 T: Jenny Picking Cockles
@@ -8429,6 +8450,54 @@ L: 1/16
 K: Gmaj
 BddB G2Bd d2Bd edBA|BddB`,
 			theSessionId: 804,
+		},
+		{
+			incipit: `X: 1
+T: The Broken Pledge
+R: reel
+M: 4/4
+L: 1/16
+K: Ddor
+dcAG ADDB cAGF ECCE|DEFG`,
+			theSessionId: 1423,
+			references: [
+				{
+					artists: "Seán Ryan, fiddle",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=1",
+					notes: "(1960s)",
+				},
+			],
+		},
+		{
+			incipit: `X: 1
+T: Farewell To Erin
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+D2 (3FED ADFA Ad~d2 Adfd|`,
+			theSessionId: 846,
+			references: [
+				{
+					artists: "Catherine Brennan Grant, fiddle; Tommy Mulvihill, piano",
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=5",
+					notes: "1970s?",
+				},
+			],
+		},
+		{
+			incipit: `X: 1
+T: The Skylark
+R: reel
+M: 4/4
+L: 1/16
+K: Cmaj
+G2ge decA GEE2 CEGc|`,
+			references: [
+				{
+					notes: "See entry for Maud Millar - with recordings by Seán Maguire",
+				},
+			],
 		},
 	],
 };

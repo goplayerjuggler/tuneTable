@@ -30,7 +30,7 @@ Here are some features I hope to add at some point:
 * have several incipits for a single tune - indexing by B, C parts etc
 * choose from a preset list of lists of tunes
 * meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers,  4/4 + semiquavers, and 4/2 + quavers. The first way is the standard/orthodox/traditional way, but I often prefer the other two options.
-* statistics & other UI improvements
+* filtering & other UI improvements
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
