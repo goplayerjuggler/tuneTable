@@ -28,6 +28,7 @@ const makeBackup = true;
 const TUNES_FILE = path.join(__dirname, "..", "src", "tunes.json.js");
 const BACKUP_FILE = path.join(__dirname, "..", "src", "tunes.json.js.backup");
 const maxNbToProcess = 3;
+const title = null; //"Lad O’Beirne’s"
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)
@@ -96,6 +97,7 @@ async function process() {
 
       //reels in 4/4 1/8 => 4/4 1/16
       if (
+        (title && metadata.title !== title) ||
         !abcString.match(/\n\s*M:\s*4\/4\s*\n/) ||
         !abcString.match(/\n\s*R:\s*reel\s*\n/i) ||
         // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings

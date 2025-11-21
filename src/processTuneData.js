@@ -123,7 +123,7 @@ function processTuneData(tune) {
 			: "";
 		processed.scores.push({
 			url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
-			name: "thesession.org",
+			name: "thesession",
 		});
 		delete tune.theSessionId;
 		delete tune.theSessionSettingId;

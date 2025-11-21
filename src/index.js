@@ -22,17 +22,20 @@ import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
 const storageKey = "tunesData";
 const comparable = [
-	[
-		"jig",
-		"slide",
-		"single jig",
-		"double jig",
-		"hornpipe",
-		"barndance",
-		"fling",
-	],
+	["jig", "slide", "single jig", "double jig"],
 	["reel", "single reel", "reel (single)", "strathspey", "double reel"],
+	["hornpipe", "barndance", "fling"],
 ];
+const comparableMap = {};
+//set up comparableMap s.t. all entries in each list of index i go under i_<first entry of i>
+//that way we show the jigs with similar rhythms followed by reels etc.
+for (let i = 0; i < comparable.length; i++) {
+	const list = comparable[i];
+	//map subsequent entries to the first entry
+	for (let j = 0; j < list.length; j++) {
+		comparableMap[list[j]] = `${i}_${list[0]}`;
+	}
+}
 
 const getEmptySort = () => {
 	return { column: null, direction: "asc" };
@@ -215,13 +218,6 @@ function canBeCompared(tune1, tune2) {
 	}
 	if (!tune1.contour || !tune2.contour) return false;
 
-	if (
-		tune1.rhythm?.indexOf("reel") >= 0 &&
-		tune2.rhythm?.indexOf("reel") >= 0
-	) {
-		return true;
-	}
-
 	// but not hop jigs with different meters
 	if (
 		tune1.rhythm?.indexOf("hop jig") >= 0 &&
@@ -230,50 +226,40 @@ function canBeCompared(tune1, tune2) {
 	)
 		return false;
 
-	comparable.forEach((list) => {
-		if (list.indexOf(tune1.rhythm) >= 0 && list.indexOf(tune2.rhythm) >= 0) {
-			return true;
-		}
-	});
+	return true;
+}
 
-	return tune1.rhythm?.toLowerCase() === tune2.rhythm.toLowerCase();
+function getBaseRhythmForComparison(r) {
+	const mapped = comparableMap[r];
+
+	return mapped ?? r;
 }
 
 function sortWithDefaultSort() {
-	// debugger;
-	window.tunesData.sort(
-		(a, b) =>
-			// a.rhythm === b.rhythm
-			//   ? a.name === b.name
-			//     ? 0
-			//     : a.name < b.name
-			//     ? -1
-			//     : 1
-			{
-				const comparison = canBeCompared(a, b)
+	window.tunesData.sort((a, b) => {
+		[a, b].map((t) => {
+			if (!t.baseRhythm) t.baseRhythm = getBaseRhythmForComparison(t.rhythm);
+		});
+
+		const comparison =
+			a.baseRhythm !== b.baseRhythm
+				? a.baseRhythm < b.baseRhythm
+					? -1
+					: 1
+				: canBeCompared(a, b)
 					? compare(a.contour, b.contour)
 					: a.contour && !b.contour
 						? -1
 						: b.contour && !a.contour
 							? 1
-							: a.rhythm !== b.rhythm
-								? a.rhythm < b.rhythm
+							: a.name !== b.name
+								? a.name < b.name
 									? -1
 									: 1
-								: a.name !== b.name
-									? a.name < b.name
-										? -1
-										: 1
-									: 0;
-				return comparison;
-			},
-
-		// a.rhythm !== b.rhythm
-		// 	? a.rhythm < b.rhythm
-		// 		? -1
-		// 		: 1
-		// 	: compare(a.contour, b.contour)
-	);
+								: 0;
+		return comparison;
+	});
+	window.tunesData.forEach((t) => delete t.baseRhythm); //todo: could handle baseRhythm in processTuneData instead
 }
 
 function openSessionImport() {

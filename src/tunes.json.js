@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-20",
+	lastUpdate: "2025-11-21",
 	tunes: [
 		{
 			abc: `
@@ -44,7 +44,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3515#setting3515",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -68,7 +68,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2067#setting2067",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -97,7 +97,7 @@ D|:G3A B3A|GAGE D3E|GABd edgd|eege edBA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/16299#setting30857",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -121,7 +121,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1726#setting1726",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -143,7 +143,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/20543#setting40673",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -166,7 +166,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3536#setting3536",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -234,7 +234,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4321#setting4321",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -278,7 +278,7 @@ e2|:fdAd f2fa gece g2ge| fdAd f2fe[1 defd e2de:|[2 defd e2df||
   |:aaag fgaf efgf efge| aaag fgaf[1 defd e2df:|[2 defd e2de||`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/8204#setting52726",
 				},
 			],
@@ -301,7 +301,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1340#setting14690",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -387,7 +387,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1058#setting1058",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -410,7 +410,7 @@ K:Aminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/445#setting445",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -434,7 +434,7 @@ K:Ebmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/922#setting922",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -455,7 +455,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/32#setting32",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -476,7 +476,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/974#setting974",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -497,7 +497,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/38#setting38",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -518,7 +518,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1980#setting1980",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -539,7 +539,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/478#setting478",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -561,7 +561,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/9800#setting9800",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -583,7 +583,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/337#setting337",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -604,7 +604,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/49#setting49",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -634,7 +634,7 @@ Gardiner, John Joe, 1893-1979`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/573#setting573",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -656,7 +656,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1249#setting1249",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -678,7 +678,7 @@ G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>d|c>b a>g f>e d>c|(3dfe (3dcB (3ABA (3GFE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1755#setting1755",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -700,7 +700,7 @@ AG|:(3FGF EF DFAF|GAFG E2 EF|GFGA (3Bcd ed|cded cAGE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/130#setting130",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -732,7 +732,7 @@ K:Eminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/21525#setting43012",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -753,7 +753,7 @@ K:Gmixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2001#setting2001",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -774,7 +774,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2488#setting2488",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -795,7 +795,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6274#setting6274",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -816,7 +816,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/309#setting309",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -838,7 +838,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/869#setting869",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -851,11 +851,11 @@ C:Jackie Daly
 L:1/8
 M:4/2
 K:Edorian
-(3B,CD|E2FE DFEF GEAG (3FGAGF|EFED`,
+(3B,CD|E2FE DFEF GEAG (3FGA GF|EFED`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/5675#setting17673",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -886,7 +886,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/820#setting42781",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -908,7 +908,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/839#setting839",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -930,7 +930,7 @@ K:C
 			scores: [
 				{
 					url: "https://thesession.org/tunes/803",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -996,7 +996,7 @@ E.A.A AGA|cBA c2d|~e3 efg|dBG GFG|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2191#setting2191",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1019,7 +1019,7 @@ K:Gdorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/7352#setting7352",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1046,7 +1046,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/13036#setting22413",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1070,7 +1070,7 @@ K:Emajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8853#setting8853",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1092,7 +1092,7 @@ BDB cDc|~d3 ABc|~B3 cAF|1 AGF G2A:|2 AGF GAG||
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2096#setting2096",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1113,7 +1113,7 @@ B|:AGE G2E G2E G2E|A2B c2d e2d efg|
    efg ded BAG Bcd|edc BAG [1 B2A A2e:| [|2] B2A A2B||`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/770#setting29548",
 				},
 			],
@@ -1140,7 +1140,7 @@ K:Adorian
     c2B c2d ecA ABc|BAG GEG A3 A2:|`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/1043#setting1043",
 				},
 			],
@@ -1209,7 +1209,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/417#setting417",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1230,7 +1230,7 @@ D|:~G3 AGA|~B3 gdB|GAB cBA|BGE EDE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/372#setting372",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1251,7 +1251,7 @@ D|:~E3 GFE|~B3 dBA|BdB BAB|GBG AFD|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/160#setting160",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1272,7 +1272,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1447#setting1447",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1297,7 +1297,7 @@ B,|E2 E EFB,|GFG AGA|~B3 ABA|GFG EDB,|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/217#setting217",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1330,7 +1330,7 @@ G2 G GBd|e2 f gfe|dBG A2 B|E2 F G2 A|BgB TB2 A|G3 G2:|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2257#setting22264",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -1362,7 +1362,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8000#setting8000",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1388,7 +1388,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2309#setting2309",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1409,7 +1409,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1805#setting1805",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1435,7 +1435,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2156#setting2156",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1458,7 +1458,7 @@ D|:GAG GAB|ded dBG|AGA BGD|EFE E2 D|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/385#setting385",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1503,7 +1503,7 @@ K:Aminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2540#setting2540",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1524,7 +1524,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4844#setting4844",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1545,7 +1545,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/307#setting307",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1567,7 +1567,7 @@ K:Dminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/736#setting736",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1591,7 +1591,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1642#setting1642",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1614,7 +1614,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2134#setting2134",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1640,7 +1640,7 @@ K:Bminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1902#setting1902",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1661,7 +1661,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1076#setting1076",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1692,7 +1692,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/693#setting23367",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1713,7 +1713,7 @@ B|:cAd cAG|EDE GAB|cBc BAG|EAA ~A2B|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/830#setting830",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1737,7 +1737,7 @@ DE|:FDB BAG|FAd faf|fgb ege|Bcc AGE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2132#setting2132",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1760,7 +1760,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1334#setting1334",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1789,7 +1789,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/34#setting34",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1810,7 +1810,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/810#setting810",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1865,7 +1865,7 @@ EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/23818#setting49004",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1887,7 +1887,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1570#setting1570",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1926,7 +1926,7 @@ T: The Rambling Pitchfork
 T: Tommy Potts’ Rambling Pitchfork
 %C: Tommy Potts
 T: As played by Paddy O’Brien and Nathan Gourley
-S: Paddy O’Brien, accordeon; Nathan Gourley, fiddle
+S: Paddy O’Brien, accordion; Nathan Gourley, fiddle
 D: Bright And Early - The Ballykeale / The Rambling Pitchfork 
 F: https://music.youtube.com/watch?v=FqNstTlVggE&t=64
 F: https://open.spotify.com/track/05m3z6WmKqWGd4xluoujTT
@@ -1965,7 +1965,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2481#setting2481",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -1991,7 +1991,7 @@ K:Fmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/23388#setting47849",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2016,7 +2016,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4234#setting4234",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2037,7 +2037,7 @@ c|:B3BAB|GBd gdB|A3AGA|Bee dBA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2838#setting2838",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2068,7 +2068,7 @@ K:Cmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/21254#setting42412",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2090,7 +2090,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4236#setting4236",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2115,7 +2115,7 @@ K:Gdor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/280#setting280",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2139,7 +2139,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/488#setting488",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2162,7 +2162,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/5405#setting5405",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2186,7 +2186,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6807#setting6807",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2208,7 +2208,7 @@ K:Emixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4440#setting4440",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2229,7 +2229,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/327#setting327",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2254,7 +2254,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/62#setting62",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2275,7 +2275,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1301#setting1301",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2296,7 +2296,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/833#setting833",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2318,7 +2318,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1497#setting1497",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2344,7 +2344,7 @@ AGG AEE|AGE EDD|cdc A2G|EAA D3:|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/870#setting870",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2366,7 +2366,7 @@ K:Dmixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/351#setting351",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2388,7 +2388,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4435#setting4435",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2410,7 +2410,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/11868#setting11868",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2438,7 +2438,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/620#setting620",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2460,7 +2460,7 @@ K:Dmixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/942#setting942",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2487,7 +2487,7 @@ ABc|:dAG FED|=c3 ed^c|dAF GFE|FED gfe|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2607#setting2607",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2508,7 +2508,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/825#setting825",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2529,7 +2529,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1831#setting1831",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2552,7 +2552,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1822#setting1822",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2574,7 +2574,7 @@ K:Cmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2667#setting2667",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2595,7 +2595,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/387#setting387",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2617,7 +2617,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8121#setting8121",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2639,7 +2639,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1649#setting1649",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2662,7 +2662,7 @@ E>G|:BEGB AFDE FB,DF A2(3Bcd|e>fed BAFE FdFE D2BA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4553#setting4553",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -2683,7 +2683,7 @@ C DE|F3G FE|F3E FG|A3F EC|D3C `,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/19631#setting38741",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2707,7 +2707,7 @@ GA|:B2 BG Bd|A4 AB|(3cBA Bcde|dc BA GA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/7885#setting7885",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2728,7 +2728,7 @@ GA|:"G"B2BAGE|DB, D2B,D|"C"EC E2CE|"G"DB, D2GA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1332#setting1332",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2749,7 +2749,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1276#setting1276",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2829,7 +2829,7 @@ Fidil one; it also has some very pretty things going on on the cello.`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/23320#setting47650",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2859,7 +2859,7 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/15563#setting29178",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -2934,7 +2934,7 @@ live; 2012`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1302#setting1302",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3003,7 +3003,7 @@ K:Eminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/5182#setting5182",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3025,7 +3025,7 @@ Bf fe/f/|g2 f>e|dG A/G/A/B/|1 G2 GB/c/:|2 G2 GB/A/|| `,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6170#setting6170",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3046,7 +3046,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/11600#setting11600",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3068,7 +3068,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6015#setting6015",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3091,7 +3091,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8918#setting8918",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3112,7 +3112,7 @@ d/c/|:BG D>D|Ec cA/B/|cE F>E|Dd d/e/d/c/|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1560#setting1560",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3133,7 +3133,7 @@ K:Eminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8904#setting8904",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3152,7 +3152,7 @@ K: Ador
 			scores: [
 				{
 					url: "https://thesession.org/tunes/239",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3180,7 +3180,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/18688#setting36502",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3201,7 +3201,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8541#setting8541",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -3234,7 +3234,7 @@ B>c|:d/e/d/c/ BG|DG B2|B/d/c/B/ AG|c2 A>B|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3479#setting3479",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3255,7 +3255,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/564#setting564",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3276,7 +3276,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8624#setting8624",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3297,7 +3297,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2105#setting2105",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3347,7 +3347,7 @@ Z:Malcolm Schonfield%230427,250325,251025
 N:On the recording, it’s played “ABABA2BC”
 R:Polska?
 O:Sweden
-S:Per Gudmundson, fiddle; Bengan Janson, accordeon
+S:Per Gudmundson, fiddle; Bengan Janson, accordion
 D:Hjeltamôs
 F:https://music.youtube.com/watch?v=m8mfkFcY17Q
 M:3/4
@@ -3366,12 +3366,12 @@ a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 T:The Red Crow
 C:Mairéad Ní Mhaonaigh
 R:reel
-L:1/16
-M:4/4
+L:1/8
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/184#setting184
 N:Setting entered in thesession by user Will Harmon on 2001-07-03
-N:*abc-tools: convert reel to M:4/4 & L:1/16*
+N:(edited after importing)
 K:Adorian
 |:A,2EA, B,G,G,B, (3A,A,A, EG FDEG|AGED EA,A,D ECDC B,G,G,B,|
 (3A,A,A, EA, B,G,G,B, (3A,A,A, EG (3FFD EG|
@@ -3383,7 +3383,7 @@ A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/184#setting184",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3408,7 +3408,7 @@ e2Be eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/671#setting671",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3528,7 +3528,7 @@ d2fd adfd edBd edBA|faab afdf[1 gefd e4:|2 e2de fdd2||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4198#setting4198",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3537,20 +3537,21 @@ d2fd adfd edBd edBA|faab afdf[1 gefd e4:|2 e2de fdd2||`,
 T:The Reel Of Rio
 C:Sean Ryan
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/575#setting575
 N:Setting entered in thesession by user laura nesbit on 2002-03-03
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gmajor
-|:GE|DEGA BABd|egg2 agef|gede gedB|AcBA GEE2|
- DEGA BABd|egg2 agef|gede gedB|AcBA G2:|
- |:Bc|dgg2 bgg2|bgag edBd|eBB2 GABd|e2dB AGEG|
- DEGA BABd|egg2 agef|gede gedB|AcBA G2:|`,
+|:GE|DEGA BABd egg2 agef|gede gedB AcBA GEE2|
+DEGA BABd egg2 agef|gede gedB AcBA G2:|
+|:Bc|dgg2 bgg2 bgag edBd|eBB2 GABd e2dB AGEG|
+DEGA BABd egg2 agef|gede gedB AcBA G2:|`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/575#setting575",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3562,7 +3563,7 @@ T:Paddy on the Turnpike
 T:as played by Fidel Martin
 S:Fidel Martin, fiddle
 O:USA
-M:C|
+M:4/4
 Q:1/4=110
 L:1/16
 R:reel
@@ -3570,20 +3571,18 @@ N:Probably was played on a fiddle tuned one tone down from the standard tuning.
 D: https://bmac.libs.uga.edu/index.php/Detail/objects/331630
 F:UGA Brown Media Archives: identifier artrosen_00180 (Track 3 -29:03 of the tape
 Z:abc-transcription Malcolm Schonfield (using A. Kuntz’s transcription 
-Z:as a starting point)%2024-06-26
+Z:as a starting point)%2024-06-26, 2025-11-21
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-%abcjs_soundfont fluid
-%%MIDI program 40
 K:Fmajor
 P:A
 FD||SCFCF F_EFF AFcF dFcF|CD_EF EDEE (CE)BE cEBE|
 CFF_E {FE}F2FG Acde f-eff|[M:3/4] cABG ABG_E F2FD|
-[M:C|]CFCF F_EFF "*"AFcF dFcF|CD_EF ED(E/D/E) (CE)BE cEBE|
+[M:4/4]CFCF F_EFF "*"AFcF dFcF|CD_EF ED(E/D/E) (CE)BE cEBE|
 CFF_E {FE}F2FG "**"Acde f2{g}fd|[M:3/4]cABB AcG_E F2Ac | 
 P:B
-[M:C|]dfeg feff afcf afcf|dgdg edee gece gece|
+[M:4/4]dfeg feff afcf afcf|dgdg edee gece gece|
 dfeg {g}f-e(f/e/f) afcf afcf| [M:5/4]d(cAc) fgff cABG AFGE F2Ac | 
-[M:C|]dfeg feff afcf afcc|dgdg {ef}edee gece gece|
+[M:4/4]dfeg feff afcf afcc|dgdg {ef}edee gece gece|
 dfeg (f/g/f/e/)ff afcf afcf|[M:5/4]!coda!d(cAc) fgfd cABG (A/B/G/A/)GE .Fz FDS||
 P:Substitution
 "*"AccA dAcA||"**"Acde fe(f/e/f)||
@@ -3613,23 +3612,24 @@ DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4
 T:Gallow's Hill
 C:Kevin O'Connor
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7898#setting7898
 N:Setting entered in thesession by user Yvan on 2007-10-23
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Bminor
-|:FBBA B2FB|dBcB BAFA|EAdB cAAc|dBcA BAGA|
- FBBA B2FB|dBcB BAFA|EAdB cAAc|dBcA ~B2BA:|
- K:Bdor
- effe f2Bf|fece gaec|A2Aa geea|~f3a edcd|
- ~B3f fece|~f3g afec|A2af geea|f2ec ABBA|
- ~f4 fece|~f3g afec|A2af geea|~f3a edcd|
- ~B3f fece|~f3g afec|A2af geea|f2ec ABBA||`,
+|:FBBA B2FB dBcB BAFA|EAdB cAAc dBcA BAGA|
+FBBA B2FB dBcB BAFA|EAdB cAAc dBcA ~B2BA:|
+K:Bdor
+effe f2Bf fece gaec|A2Aa geea ~f3a edcd|
+~B3f fece ~f3g afec|A2af geea f2ec ABBA|
+~f4 fece ~f3g afec|A2af geea ~f3a edcd|
+~B3f fece ~f3g afec|A2af geea f2ec ABBA||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/7898#setting7898",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3637,20 +3637,21 @@ K:Bminor
 			abc: `X:1
 T:The Bunch Of Keys
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/344#setting344
 N:Setting entered in thesession by user Will Harmon on 2001-10-30
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gdorian
-|:DGGF G2 Ac|BG (3GGG dGBG|DFFE EF2 B|A~F3 DFAF|
- DGGF G2 Ac|BGGA Bcde|~f3 d cAFA|1 ABAF DGGF:|2 BGAF DGGA||
- |:dgg^f fgdg|(3ggg dg agfd|cffe efcf|(3fff ag fAcf|
- dgg^f fgdg|(3ggg dg agfd|c~f3 cAFA|1 BGAF DGGA:|2 BGAF DGGF||`,
+|:DGGF G2Ac BG (3GGG dGBG|DFFE EF2B A~F3 DFAF|
+DGGF G2Ac BGGA Bcde|~f3d cAFA[1 ABAF DGGF:|2 BGAF DGGA||
+|:dgg^f fgdg (3ggg dg agfd|cffe efcf (3fff ag fAcf|
+dgg^f fgdg (3ggg dg agfd|c~f3 cAFA[1 BGAF DGGA:|2 BGAF DGGF||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/344#setting344",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -3676,7 +3677,7 @@ EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
 |: [M:7/8] e/f/gdBA2 e/f/gdB GABd|[M:4/4]eBdA a3f gedB [1BAA2 :| [2 BAAG !D.C.! |]`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/40",
 				},
 			],
@@ -3701,7 +3702,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/676#setting676",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3723,7 +3724,7 @@ K:Bminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/556#setting556",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3750,7 +3751,7 @@ GF|DG~G2 dGcG dGcA GFDC|DG~G2`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/675",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3771,7 +3772,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2120#setting2120",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3793,7 +3794,7 @@ K:Gdorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/229#setting229",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3814,7 +3815,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/281#setting281",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3863,7 +3864,7 @@ CFAF DFAF|CFAF cFAF|GddG (^cd)Gd|dGAd c/B/A F/E/D|
  c2 ac ca^Bc|ac^Bc acac|^Bcac a^bag|fdcA [F4A,4]||(3efg [a2f2] [g2d2] [f2d2]||`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/1091#setting14331",
 				},
 			],
@@ -3886,7 +3887,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2584#setting2584",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3908,7 +3909,7 @@ K:Bminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/973#setting973",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3929,7 +3930,7 @@ EAAB GABG|EAAB G2ED|EAA2 GABd|edge dBAG|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/430#setting430",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3951,7 +3952,7 @@ A2-|:AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EAAc B2 cB|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/313#setting313",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3970,7 +3971,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/141#setting530",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -3992,7 +3993,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/302#setting302",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4012,7 +4013,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/477#setting477",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4031,7 +4032,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4263#setting4263",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4053,7 +4054,7 @@ G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG EDB,D|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1767#setting1767",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4077,7 +4078,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/891#setting891",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4104,7 +4105,7 @@ C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/20851#setting41404",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4126,7 +4127,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1703#setting1703",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4151,7 +4152,7 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1272#setting1272",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4172,7 +4173,7 @@ G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/227#setting227",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4192,7 +4193,7 @@ K:Aminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/21#setting21",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4216,7 +4217,7 @@ BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3#setting3",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4237,7 +4238,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/75#setting75",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4256,7 +4257,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1100#setting1100",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4278,7 +4279,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2172#setting2172",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4299,7 +4300,7 @@ K:Dmixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/138#setting138",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4319,7 +4320,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1268#setting1268",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4341,7 +4342,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/181#setting181",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4366,7 +4367,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/579#setting579",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4386,7 +4387,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/27#setting27",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4408,7 +4409,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/426#setting426",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4430,7 +4431,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1050#setting1050",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4452,7 +4453,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2881#setting2881",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4475,7 +4476,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/17457#setting33504",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4497,7 +4498,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2739#setting2739",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4516,7 +4517,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/136#setting136",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4539,7 +4540,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/727#setting727",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4562,7 +4563,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/212#setting212",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4586,7 +4587,7 @@ B|:AFFCF2Ac|dfcf AGGB|AFFC DEFd|cAfc AFFB:|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/18630#setting36343",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4608,7 +4609,7 @@ K:Bminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2870#setting2870",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4627,7 +4628,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/704#setting704",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4648,7 +4649,7 @@ dc|BG G2 AGFG|DG G2 A2 dc|BG G2 AGAB|cABG A2 dc|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1619#setting1619",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4673,7 +4674,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/565#setting565",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4693,7 +4694,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2854#setting2854",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4715,7 +4716,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/195#setting195",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4735,7 +4736,7 @@ AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/237#setting237",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4757,7 +4758,7 @@ K:Ddorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/263#setting263",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4779,7 +4780,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/24#setting24",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4800,7 +4801,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/257#setting242",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4824,7 +4825,7 @@ A2G2 S|:F3d dcde|d2A2 F2A2|G3d dcde|d2B2 G2B2|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/17379#setting33333",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4846,7 +4847,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2896#setting2896",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4869,7 +4870,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/605#setting605",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4894,15 +4895,13 @@ N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23211#setting47315
 N:Setting entered in thesession by user GoPlayer on 2023-06-02
 K:Gmajor
-|:B2BB EBGB dedB cdcB|1 ,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
- [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1 ,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2
-D.C.
-z2||`,
+|:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
+ [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`,
 			],
 			scores: [
 				{
 					url: "https://thesession.org/tunes/23211#setting47315",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4923,7 +4922,7 @@ K:Dmixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2154#setting2154",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4945,7 +4944,7 @@ AAG|:F2AF DFAF|G2BG DGBG|A2cA EABc|dzde edAG|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1024#setting1024",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4966,7 +4965,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/408#setting408",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -4990,7 +4989,7 @@ EF|:GBEG (3BBB AF|GFGA BdAG|FADF ADFA|(3ddd cd BAGF|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/367#setting367",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5015,7 +5014,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1040#setting1040",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5037,7 +5036,7 @@ K:Dminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2805#setting2805",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5126,7 +5125,7 @@ e|B<E Ec B2 Bc|BE (3EEE cBGe|BE (3EEE B2GB|cBce fefg|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2686#setting2686",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5150,7 +5149,7 @@ a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/504#setting504",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5171,7 +5170,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1596#setting1596",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5192,7 +5191,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/363#setting363",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5216,7 +5215,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3435#setting3435",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5238,7 +5237,7 @@ K:Eminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1020#setting1020",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5260,7 +5259,7 @@ Bc|:dGBd c=FAc|BGBd gfdc|Bcde =fdeg|fdBd c=FAc|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/4525#setting4525",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5284,7 +5283,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3943#setting3943",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5310,7 +5309,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2716#setting2716",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5332,7 +5331,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/50#setting50",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5356,7 +5355,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1333#setting1333",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5376,7 +5375,7 @@ B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1370#setting1370",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5398,7 +5397,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/474#setting22920",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -5429,7 +5428,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/511#setting511",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5451,7 +5450,7 @@ K:Bdorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3531#setting3531",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5489,7 +5488,7 @@ K:Gminor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/140#setting140",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5511,7 +5510,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/177#setting177",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5532,7 +5531,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1963#setting1963",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5552,7 +5551,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1522#setting1522",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5573,7 +5572,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3033#setting3033",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5595,7 +5594,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/754#setting754",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5619,7 +5618,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/5933#setting5933",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5631,10 +5630,11 @@ R: reel
 M: 4/4
 L: 1/16
 K: Dmix
-(3AAAGB A2dB cBcG EFGB|A2GB A`,
+A2GB A2dB cBcG EFGB|A2GB A`,
 			references: [
 				{
-					notes: "(1974) The star of Munster; The cherry tree (at 1:07)",
+					notes: `(1974) The star of Munster; The cherry tree (at 1:07)
+Cherry Tree AKA Beauty Spot`,
 					artists: "Paddy Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=2",
 				},
@@ -5689,25 +5689,26 @@ He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good st
 		},
 		{
 			abc: `X:1
-T:Lad O'Beirne's
-C:Lad O'Beirne
+T:Lad O’Beirne’s
+C:Lad O’Beirne 
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2316#setting2316
 N:Setting entered in thesession by user jdicarlo on 2003-12-28
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Fmajor
-|:d2cA dAcA|GcAF GAFD|CF~F2 CFAc|dcde fagf|
- d2cA dAcA|GcAF GAFD|CF~F2 DFBd|1 cbag f3e:|2 cbag f3g||
- a2gf afgf|dgfd cFAd|c2Bd cdfa|gfga g2fg|
- af~f2 afgf|dgfd cFAd|c2Bd cdfa|gfga f3g|
- a2gf afgf|dgfd cFAd|c2Bd cdfa|gfga bagf|
- ~a3g ~f3c|dcfd cAFD|CF~F2 DFBd|cbag f3e||`,
+|:d2cA dAcA GcAF GAFD|CF~F2 CFAc dcde fagf|
+d2cA dAcA GcAF GAFD|CF~F2 DFBd [1 cbag f3e:|2 cbag f3g||
+a2gf afgf dgfd cFAd|c2Bd cdfa gfga g2fg|
+af~f2 afgf dgfd cFAd|c2Bd cdfa gfga f3g|
+a2gf afgf dgfd cFAd|c2Bd cdfa gfga bagf|
+~a3g ~f3c dcfd cAFD|CF~F2 DFBd cbag f3e||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2316#setting2316",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5733,7 +5734,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/15517#setting29085",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5755,7 +5756,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/800#setting800",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5778,7 +5779,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2911#setting2911",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5801,7 +5802,7 @@ ABc||dD (3DDD EDB,E|DEFA BAFA|d2cd (3Bcd AF|DEFD EDB,D|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1949#setting1949",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5822,7 +5823,7 @@ gf|:eBBA A~B3|dBAc BAGF|EDB,D G2 FG|EDB,E DB,A,G,|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/129#setting129",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5843,7 +5844,7 @@ gf|:eB~B2 eBdB|AF~F2 EDB,A,|B,E~E2 B,EGE|FB~B2 FBdf|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/649#setting649",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5862,7 +5863,7 @@ K:Ddorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/589#setting589",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5884,7 +5885,7 @@ d2 Ad fdAF|GFEF GABc|d2 Ad fdAF|GAAG FDDd|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1941#setting1941",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5904,7 +5905,7 @@ K:Edorian
  fgeg fedB|edBA BAFA|EFGB AFdF|FEdA FEE2:|`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/1004#setting14222",
 				},
 			],
@@ -5926,7 +5927,7 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/15252#setting5373",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5947,7 +5948,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/538#setting538",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5969,7 +5970,7 @@ eg|a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 eg|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/880#setting880",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -5990,7 +5991,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/97#setting97",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6011,7 +6012,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1027#setting1027",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6031,7 +6032,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1428#setting1428",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6056,7 +6057,7 @@ geg|:decd BcAB|GG G3 geg|decd BcAc|BB B3 geg|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6183#setting6183",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6077,7 +6078,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1934#setting1934",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6098,7 +6099,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/103#setting103",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6118,7 +6119,7 @@ K:Dmixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2610#setting2610",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6150,27 +6151,6 @@ P:Ⅱ
 		},
 		{
 			abc: `X:1
-T:Patsy Geary's
-R:slide
-L:1/8
-M:12/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/325#setting325
-N:Setting entered in thesession by user Will Harmon on 2001-10-13
-K:Dmajor
-AG|:F2 A AFA B=cB A2 G|F2 A d2 e ~f3 fef|
- ~g3 fgf efe d2 B|1 ABA AFD ~E3 EAG:|2 ABA efe ~d3 d2 e||
- |:f2 e f2 e f2 e fga|ABA BAF ABA ABd|
- efe efe efe dfa|1 baf afe ~d3 d2 e:|2 baf afe ~d3 d2 A||`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/325#setting325",
-					name: "thesession.org",
-				},
-			],
-		},
-		{
-			abc: `X:1
 T:Denis Murphy's
 R:slide
 L:1/8
@@ -6186,7 +6166,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/159#setting159",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6207,7 +6187,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/7444#setting7444",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6229,7 +6209,7 @@ g3|:fed B2d A2d F2B|A2F DEF E3 E2g|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1527#setting1527",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6251,7 +6231,7 @@ D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G GFD G2F|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/11427#setting11427",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6273,7 +6253,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3511#setting3511",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6294,7 +6274,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2410#setting2410",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6319,7 +6299,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/953#setting953",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6338,7 +6318,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/953#setting953",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6371,6 +6351,13 @@ K: E minor
 |:[P:D]"Em"eBB e2f gfg eBB efg "Bm7"afd|"Em"eBB e2f g2a bag "D"fag fed:|
 |:[P:E]"Em"edB "D"dBA "G"G2A Bee "Bm7"dBA BGE|"G"edB "D"dBA "G"G2A BAG "D"FAG FED:|
 |:[P:F]"Em"B,EE ABG "Bm7"E2D "Em"B,EE EFG "Bm7"AFD | "Em"B,EE ABG E2B BAG "D"FAG FED :|`,
+			incipit: `
+X: 1
+R: slip jig
+M: 18/16
+L: 1/16
+K: E minor
+E3 FEF G2F E3 BcA BGD|`,
 			references: [
 				{
 					artists: "Michael Gorman",
@@ -6406,7 +6393,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2087#setting2087",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6428,7 +6415,7 @@ D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF AFE|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2143#setting2143",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6448,7 +6435,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8976#setting8976",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6471,7 +6458,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/17637#setting34009",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6492,7 +6479,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/612#setting612",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6505,14 +6492,15 @@ M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1550#setting1550
 N:Setting entered in thesession by user Dr. Dow on 2003-03-27
+N:(edited after importing)
 K:Gmajor
-|:B3 BAB c3|BAG B/c/dB ABc|BAG B/c/dB c2e|1 dBG GAF G2A:|2 dBG GAF GB/^c/d||
+|:BcB BAB c3|BAG B/c/dB ABc|BAG B/c/dB c2e|1 dBG GAF G2A:|2 dBG GAF GB/^c/d||
  g3 ed=c Bcd|ecA ABG A2d|~g3 edc Bcd|gdB G/A/BA GB/^c/d|
  g3 ed=c Bcd|ecA ABG A2d|def gfe def|g/a/bg agf ged||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1550#setting1550",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6545,7 +6533,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/104#setting104",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6564,11 +6552,12 @@ d|:cAG GAG GBd|cAG GAB cAd|cAG GAG GAG|1 cAA fed cAd:|2 cAA fed cAG||
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2337#setting2337",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:The Turf Cutter
 C:Paddy (Offaly) O'Brien
@@ -6588,7 +6577,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/14242#setting25937",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6607,7 +6596,7 @@ K:Edorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1030#setting1030",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6722,7 +6711,7 @@ K:Adorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3012#setting3012",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6744,7 +6733,7 @@ A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/11206#setting11206",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6764,7 +6753,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/2918#setting2918",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6784,7 +6773,7 @@ B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>ED/C/B,/A,/ G,>B,|~A,>A E>D C<A, 
 			scores: [
 				{
 					url: "https://thesession.org/tunes/7681#setting7681",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6804,7 +6793,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3007#setting3007",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6827,7 +6816,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/170#setting170",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6848,7 +6837,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1762#setting1762",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6880,7 +6869,7 @@ A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/16343#setting30955",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6901,7 +6890,7 @@ A|BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGGA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/655#setting655",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6923,7 +6912,7 @@ O:Cape Breton
 			scores: [
 				{
 					url: "https://thesession.org/tunes/14694#setting27107",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6943,7 +6932,7 @@ A2 B>c d2 A>F|G2 E<D E2 G2|A<AB>c d2 F>G|A2 G<E D2 D2-|HD8||
 			scores: [
 				{
 					url: "https://thesession.org/tunes/10313#setting10313",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6962,7 +6951,7 @@ K:Amixolydian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6366#setting6366",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -6983,7 +6972,7 @@ a|f2 e>c e>fae|f2 ec fBBa|f2 e>c e>fae|faec eAAa|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/24127#setting49877",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7012,7 +7001,7 @@ K:Amajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1194#setting1194",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7046,7 +7035,7 @@ M:3/4
  CE GA Bc|ec AF GE|D2 GA B2|A2 c4-|1 c2 D2 E2|F2 G2 A2:|2 c2 B2 c2|[D6G,6B6]||`,
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/1016#setting36756",
 				},
 			],
@@ -7080,7 +7069,7 @@ DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/10668#setting10668",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7105,7 +7094,7 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/8296#setting8296",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7123,7 +7112,7 @@ B2 Be BA|FG E2 GA`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/3809#setting3809",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7149,7 +7138,7 @@ K:Dmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/5067#setting5067",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7171,7 +7160,7 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
 			scores: [
 				{
 					url: "https://thesession.org/tunes/449#setting449",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7329,7 +7318,7 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `,
 			],
 			scores: [
 				{
-					name: "thesession.org",
+					name: "thesession",
 					url: "https://thesession.org/tunes/124",
 				},
 			],
@@ -7800,6 +7789,12 @@ d3 ege c2A d3 faf ged|f3 ged c2A BAG FAF GED|
 [P:E] d3 ege d2A d3 f2d g2d|f2d ged c2A BAG FAF GED|
 !coda!d3 ege d2A d3 faf ged|f3 ged c2A BAG FAF GE!D.C.!D||
 !coda!d3 ege d2A d3 faf g3|afd ged c2A BAG FAF GED | !fermata!D6 |]`,
+			incipit: `
+X: 1
+M: 18/16
+L: 1/16
+K: D mixo
+FGA AFA Bc2 BAG FAF GED|`,
 		},
 		{
 			abc: [
@@ -7821,7 +7816,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/661#setting661",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 		},
@@ -7860,7 +7855,7 @@ K:Gmajor
 			scores: [
 				{
 					url: "https://thesession.org/tunes/11600#setting21930",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -7960,7 +7955,7 @@ K:Gdorian
 			scores: [
 				{
 					url: "https://thesession.org/tunes/1885#setting52765",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			groups: "su",
@@ -8194,7 +8189,7 @@ B|A2A AGE c2B c2d|ege edB ~g3 g2`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/6#setting31114",
-					name: "thesession.org",
+					name: "thesession",
 				},
 			],
 			references: [
@@ -8277,7 +8272,7 @@ BGAG EGDG EGDG EGDE|G2`,
 			theSessionId: 2958,
 			references: [
 				{
-					notes: "SU: followed by The Morning Dew",
+					notes: "SU: followed by (JC’s) Morning Dew",
 				},
 			],
 		},
@@ -8291,11 +8286,23 @@ L: 1/16
 K: Edor
 E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			theSessionId: 69,
+		},
+		{
+			incipit: `X: 2
+T: Joe Cooley’s Morning Dew
+R: reel
+M: 4/4
+L: 1/16
+K: Edor
+~B2EB GBEB ~B2EB ADFA|~B2EB `,
+			theSessionId: 9828,
 			references: [
 				{
-					notes: "SU: after the Rookery",
+					notes:
+						"SU: after the Rookery. AKA Mountain Dew; Morning Dew is a different reel!",
 				},
 			],
+			groups: "su",
 		},
 		{
 			groups: "su",
@@ -8309,7 +8316,7 @@ B2AG BGGA B2AG (3Bcd gd|B2AG`,
 			theSessionId: 9639,
 			references: [
 				{
-					notes: "SU: after the Morning Dew",
+					notes: "SU: after (JC’s) Morning Dew",
 				},
 			],
 		},
@@ -8499,5 +8506,117 @@ G2ge decA GEE2 CEGc|`,
 				},
 			],
 		},
+		{
+			incipit: `X: 8
+T: Give Us A Drink Of Water
+R: slip jig
+M: 9/8
+L: 1/8
+N: Interesting to compare with the Swaggering jig
+K: Gmaj
+GBd gdc BAG|BdB cAA A3|`,
+			theSessionId: 635,
+		},
+		{
+			incipit: `X:2
+T:Merrily Kiss the Quaker 
+R: slide
+M:12/8
+L:1/8
+K:G
+D|GAB DED cBA BGE |`,
+			theSessionId: 20553,
+		},
+		{
+			incipit: `X: 1
+T: Larry's Favourite
+C:Paddy O’Brien
+R: reel
+M: 4/4
+L: 1/16
+K: Ador
+EAAG A2Bd eA3 BAGE|G2DG`,
+			theSessionId: 2389,
+		},
+		{
+			incipit: `X: 4
+T: Paddy On The Turnpike
+R: reel
+M: 4/4
+L: 1/16
+K: Gdor
+DGG^F G2GA =BGdG eGdG|AF{G}FE`,
+			theSessionId: 338,
+			theSessionSettingId: 22051,
+		},
+		{
+			incipit: `X: 1
+T: The Hare's Paw
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+~G3B A2GA BE~E2 GEDE|GFGA`,
+			theSessionId: 1462,
+		},
+		{
+			groups: "su",
+			incipit: `X:1
+T:Tiny The Trooper
+C:Paddy O’Brien
+S:Paddy O’Brien, accordion; Tommy O’Sullivan, guitar
+F:https://youtu.be/uuDHzzQIGZE
+N:Tiny the Trooper & The Turf Cutter | TG4 Composer of the Year 2012 | Gradam TG4
+R:slip jig
+L:1/8
+M:9/8
+K:Edorian
+E2G FDB, E3| efe dBd efe| cAA`,
+		},
+		{
+			incipit: `X: 5
+T: The Fxhunter
+R: slip jig
+M: 9/8
+L: 1/8
+K: Dmaj
+FGF FED G2 E|FGF FED E2 D|FGF`,
+			theSessionId: 482,
+		},
+		{
+			incipit: `X: 6
+T: Gusty's Frolics
+R: slip jig
+M: 9/8
+L: 1/8
+K: Dmaj
+A,DD A,DD FEF|A,DD DFA GED|A,`,
+			theSessionId: 169,
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: The Virginia
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+DBBA ~B3A BAdB AFEF|DF~F2 A3B`,
+			theSessionId: 812,
+		},
+		{
+			incipit: `X: 2
+T: Bantry Bay
+R: hornpipe
+M: 4/2
+L: 1/8
+K: Gmaj
+GA|BGAG EGDE G2GF GBAG|EAAB `,
+			theSessionId: 1061,
+			theSessionSettingId: 55525,
+		},
+		/*
+		{incipit:``,theSessionId:},
+		 */
 	],
 };
