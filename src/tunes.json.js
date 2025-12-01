@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-11-21",
+	lastUpdate: "2025-12-01",
 	tunes: [
 		{
 			abc: `
@@ -1765,33 +1765,14 @@ K:Gmajor
 			],
 		},
 		{
-			abc: `X:1
-T:The Frieze Breeches
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/34#setting34
-N:Setting entered in thesession by user Jeremy on 2001-05-21
-K:Dmajor
-|:FED EFG|Add cAG|A2A BAG|F2F GED|
- FED EFG|Add cAG|F2F GEA|DED D3:|
- |:d2e fed|efd cAG|A2A BAG|FAF GED|
- d2e fed|efd cAG|F2F GEA|DED D3:|
- K:Dmix
- |:DED c3|AdB cAG|ABc ded|ded cAG|
- DED c3|AdB cAG|F2F GEA|DED D3:|
- K:Dmaj
- |:d2e fed|Add fed|c2d ecA|fed ecA|
- d2e fed|Add fed|faf gfe|dfe d3:|
- |:fed ecA|ded cAG|A2A BAG|F2F GED|
- fed ecA|ded cAG|F2F GEA|DED D3:|`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/34#setting34",
-					name: "thesession",
-				},
-			],
+			incipit: `X: 11
+T: The Frieze Breeches
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+FED EFG A2 d cAG|A`,
+			theSessionId: 34,
 		},
 		{
 			abc: `X:1
@@ -3416,18 +3397,19 @@ e2Be eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|`,
 			abc: [
 				`X: 14
 T: Christmas Eve
-T: version as of 2025-11-18
-Z:abc-transcription Malcolm Schonfield% 2025-11-13
+T: version as of 2025-12-01
+C:Tommy Coen
+Z:abc-transcription Malcolm Schonfield% 2025-11-13, chords from 2025-10-23
 R: reel
 M: 4/4
 L: 1/16
 K: Gmaj
-|:GE|~D3E ~G3A B2dB ABGB|ABGE ~D3E G2BG ABGE|
-~D3E ~G3A B2dB ABGA|BAGE D2BG ABGF G2:| 
-|:GA|BGBd edeg a2ge g2eg|a3f g2ge dedB A2GA | 
-BGBd ~e3g abge g2eg | abge ~d3B ABGE G2:| 
-|:dc|B~G3 D2Bd e~g3 egdc|B~G3 DGBG E~A3 F~A3|
-B~G3 BGBd e~g3 g3a|bgaf gedB ABGF G2:|`,
+|:GE|"G/B" ~D3E ~G3A B2dB ABGB|"C"ABGE ~D3E "C"G2BG ABGE|
+"G/B"~D3E ~G3A B2dB ABGA|"C"BAGE D2BG "C"ABGF G2:| 
+|:GA|"G/B"BGBd edeg "C"a2ge g2eg|"C"a3f g2ge "D"dedB A2GA | 
+"G/B"BGBd ~e3g "C"abge g2eg |"D"abge ~d3B "D"ABGE G2:| 
+|:dc|"G/B"B~G3 D2Bd "C"e~g3 egdc|"G"B~G3 DGBG "Am"E~A3 F~A3|
+"G/B"B~G3 BGBd "C"e~g3 g3a|"D"bgaf gedB "G"ABGF G2:|`,
 				`X: 14
 T: Christmas Eve
 T: version with rolls; 2025-11-13
@@ -3459,18 +3441,6 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`,
 			groups: "ALORA",
 			origin: "Ireland",
 			references: [
-				{
-					notes: `Composed by Tommy Coen.
-Chords: (version of 2025-10-23)
-\`\`\`
-|: G/B - - - | C - C - |
-   G/B - - - | C - C - :|
-|: G/B - C - | C - D - |
-   G/B - C - | D - D - :|
-|: G/B - C - | G - Am- |
-   G/B - C - | D - G - :|
-\`\`\``,
-				},
 				{
 					artists:
 						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
@@ -3686,19 +3656,20 @@ EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
 			abc: `X:1
 T:Kiss The Maid Behind The Barrel
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/676#setting676
 N:Setting entered in thesession by user Josh Kane on 2002-05-10
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gmajor
-|:DG~G2 AG (3GGG|DG~G2 cAFA|DG~G2 ADFA|defd cAFA:|
- dg~g2 aggf|dg~g2 agfe|df~f2 af~f2|defd cAFA|
- dg~g2|agfg|a2ag ~f2fg|afge fde^c|d2eg fdcA||
- G2dG BGdG|~G2dB cAFA| G2dG BGBc|defd cAFA|
- G2dG BGdG|~G2dB cAFA| ~B3G ADFA|defd cAFA||
- B3G ~A2AG|BABd gedc|B2GB ADFA|defd cAFA|
- B3G ~A2AG|BABd gedc|BG~G2 ADFA|defd cAFA||`,
+|:DG~G2 AG (3GGG DG~G2 cAFA|DG~G2 ADFA defd cAFA:|
+dg~g2 aggf dg~g2 agfe|df~f2 af~f2 defd cAFA|
+dg~g2 agfg a2ag ~f2fg|afge fde^c d2eg fdcA||
+G2dG BGdG ~G2dB cAFA| G2dG BGBc defd cAFA|
+G2dG BGdG ~G2dB cAFA| ~B3G ADFA defd cAFA||
+B3G ~A2AG BABd gedc|B2GB ADFA defd cAFA|
+B3G ~A2AG BABd gedc|BG~G2 ADFA defd cAFA||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/676#setting676",
@@ -3730,7 +3701,7 @@ K:Bminor
 		},
 		{
 			groups: "su",
-			incipit: `X: 6
+			incipit: `X: 1
 T: Paddy Canny’s Toast
 C:Charlie Lennon
 R: reel
@@ -3780,17 +3751,18 @@ K:Adorian
 			abc: `X:1
 T:Dowd's Favourite
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/229#setting229
 N:Setting entered in thesession by user JD on 2001-08-08
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gdorian
-|:F|DGGA BABF|DFF2 DFCF|DGGA BABd|cAfA AGG:|
- A|B2dB fBdB|B2dB cAFA|B2dB fBdB|cAFA BGGA|
- B2dB fBdB|B2dB cAFA|BAGF Ggge|fdcA BGG||
- z|gdd2 g2ag|fcc2 fcAc|gdd2 g2ag|fdcA BGG2|
- gdd2 g2ag|fcc2 fcAF|GABc dgge|fdcA BGG||`,
+|:F|DGGA BABF DFF2 DFCF|DGGA BABd cAfA AGG:|
+A|B2dB fBdB B2dB cAFA|B2dB fBdB cAFA BGGA|
+B2dB fBdB B2dB cAFA|BAGF Ggge fdcA BGG||
+z|gdd2 g2ag fcc2 fcAc|gdd2 g2ag fdcA BGG2|
+gdd2 g2ag fcc2 fcAF|GABc dgge fdcA BGG||`,
 			scores: [
 				{
 					url: "https://thesession.org/tunes/229#setting229",
@@ -4741,6 +4713,7 @@ AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
 			],
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:Porthole Of The Kelp
 C:Bobby Casey
@@ -4923,6 +4896,12 @@ K:Dmixolydian
 				{
 					url: "https://thesession.org/tunes/2154#setting2154",
 					name: "thesession",
+				},
+			],
+			references: [
+				{
+					artist: "Denis Ryan, fiddle; Cathal McConnell, flute",
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=16",
 				},
 			],
 		},
@@ -5623,6 +5602,7 @@ K:Dmajor
 			],
 		},
 		{
+			aka: ["Cherry Tree", "Beauty Spot"],
 			groups: "su",
 			incipit: `X: 1
 T: The Beauty Spot
@@ -5877,6 +5857,8 @@ M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1941#setting1941
 N:Setting entered in thesession by user Conway on 2003-09-02
+N:
+N:Goes well in a set after Maud Millar
 K:Dmajor
 d2 Ad fdAF|GFEF GABc|d2 Ad fdAF|GAAG FDDd|
  dcde fdAF|GFEF GABc|d2 Ad fdAF|GAAG FD D2|
@@ -5903,6 +5885,13 @@ K:Edorian
  e2dB AFF2|EFdF eFdF|EFGB AFdF|FEdA FEE2:|
  e2fe dBAB|Beed BAFA|e2fe defg|fedf e3B|
  fgeg fedB|edBA BAFA|EFGB AFdF|FEdA FEE2:|`,
+			references: [
+				{
+					artist: "Denis Ryan, fiddle",
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=15",
+				},
+			],
+
 			scores: [
 				{
 					name: "thesession",
@@ -5932,6 +5921,7 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
 			],
 		},
 		{
+			aka: ["The Connacht"],
 			abc: `X:1
 T:Devils Of Dublin
 R:reel
@@ -5945,6 +5935,13 @@ K:Dmajor
  d2dA BAGB|AFBF A~F3|ABde fdce|1 dBAG FDFA:|2 dBAG FDD2||
  |:agfe~f3e|dcBA BAFB|Ad(3ddd Adfd|(3efe df e~B3|
  a2ag ~f3e|dcBA BAFB|ABde fdce|1 dBAG FDD2:|2 dBAG FDFA||`,
+			references: [
+				{
+					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=17",
+					notes: "The Connacht; Cooley's; The Bucks of Oranmore",
+				},
+			],
 			scores: [
 				{
 					url: "https://thesession.org/tunes/538#setting538",
@@ -6146,27 +6143,6 @@ P:Ⅱ
 					type: "tune",
 					name: "thesession",
 					url: "https://thesession.org/tunes/325",
-				},
-			],
-		},
-		{
-			abc: `X:1
-T:Denis Murphy's
-R:slide
-L:1/8
-M:12/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/159#setting159
-N:Setting entered in thesession by user Jeremy on 2001-06-25
-K:Dmajor
-|:A2D FED F2A A2f|gfe fed e2d BdB|
- A2D FED F2A A2f|a2f efe d3 d3:|
- |:d2e f3 gfe f3|gfe fed e2d BdB|
- d2e f3 gfe f2f|a2f efe d3 d3:|`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/159#setting159",
-					name: "thesession",
 				},
 			],
 		},
@@ -7209,7 +7185,7 @@ GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`,
 		},
 		{
 			groups: "su",
-			incipit: `X: 8
+			incipit: `X: 1
 M: 4/2
 L: 1/8
 K: Ador
@@ -7242,7 +7218,7 @@ EG| A2A>B A2(3Bcd eged B2AG|EG`,
 		{
 			name: "Shanahan’s",
 			rhythm: "hornpipe",
-			incipit: `X: 6
+			incipit: `X: 1
 M: 4/2
 L: 1/8
 K: Gmaj
@@ -7370,7 +7346,7 @@ EDE BAB EBE AFD|EDE ~B3`,
 		{
 			name: "My Darling Asleep",
 			groups: "ALORA",
-			incipit: `X: 5
+			incipit: `X: 1
 M: 12/8
 L: 1/8
 K: D
@@ -7467,7 +7443,7 @@ Ad Bd/B/ AD FA|GE BE`,
 			name: "Palmer’s Gate",
 			rhythm: "reel",
 			groups: "SU",
-			incipit: `X: 3
+			incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Emin
@@ -7514,7 +7490,7 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
 			name: "Jerry McMahon’s",
 			groups: "SU",
 			rhythm: "reel (single)",
-			incipit: `X: 2
+			incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Ador
@@ -7869,7 +7845,7 @@ K:Gmajor
 			name: "Cutting Bracken",
 			groups: "su",
 			rhythm: "polka",
-			incipit: `X: 9
+			incipit: `X: 1
 M: 4/4
 L: 1/8
 K: Amin
@@ -7901,7 +7877,7 @@ EB B>A BG E/F/G|FA`,
 			name: "The Gold Ring",
 			groups: "su",
 			rhythm: "jig",
-			incipit: `X: 7
+			incipit: `X: 1
 M: 12/8
 L: 1/8
 K: Gmaj
@@ -7994,7 +7970,7 @@ FG|AFDE FEDF (3ABA GB AFD2|`,
 		{
 			name: "Farrel O’Gara’s",
 			rhythm: "reel",
-			incipit: `X: 5
+			incipit: `X: 1
 M: 4/4
 L: 1/16
 K: Dmaj
@@ -8074,7 +8050,7 @@ A2eA (3cBA eA A2eA BAGB|A2eA (3Bcd ef`,
 		{
 			groups: "su",
 			theSessionId: 553,
-			incipit: `X: 7
+			incipit: `X: 1
 T: The Drunken Sailor's
 R: hornpipe
 M: 4/4
@@ -8288,7 +8264,7 @@ E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			theSessionId: 69,
 		},
 		{
-			incipit: `X: 2
+			incipit: `X: 1
 T: Joe Cooley’s Morning Dew
 R: reel
 M: 4/4
@@ -8306,7 +8282,7 @@ K: Edor
 		},
 		{
 			groups: "su",
-			incipit: `X: 3
+			incipit: `X: 1
 T: The Edenderry
 R: reel
 M: 4/4
@@ -8368,6 +8344,7 @@ G3 AGE A3 AGE|G3 AGE`,
 			theSessionId: 3110,
 		},
 		{
+			aka: ["Joe Burke’s", "Cronin’s Favourite"],
 			incipit: `X: 1
 T: Darby The Driver
 R: jig
@@ -8382,9 +8359,16 @@ G|EAA ABd ege dBA|GEF GAB `,
 					notes:
 						"(1959) Joe Burke’s; Leitrim fancy. Poor audio quality. Joe Burke’s AKA Darby The Driver.",
 				},
+				{
+					artists: "Charlie Mulvihill, concertina",
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=11",
+					notes:
+						"Followed by the jig Hetty O’Hady. Neither jig is identified on the ITMA page.",
+				},
 			],
 			theSessionId: 1137,
 		},
+
 		{
 			incipit: `X: 1
 T: Jack Daniels’
@@ -8397,7 +8381,7 @@ K: Amaj
 			theSessionId: 9268,
 		},
 		{
-			incipit: `X: 3
+			incipit: `X: 1
 T: The Scartaglen
 R: reel
 M: 4/2
@@ -8417,7 +8401,7 @@ f2ed cAAB cAdB cAA2|f2ed`,
 			theSessionId: 1562,
 		},
 		{
-			incipit: `X: 3
+			incipit: `X: 1
 T: The Bunch Of Green Rushes
 R: reel
 M: 4/4
@@ -8437,7 +8421,7 @@ Addc AGEF GEcE dEcE|`,
 			theSessionId: 1357,
 		},
 		{
-			incipit: `X: 2
+			incipit: `X: 1
 T: Leppadumdowledum
 C:Dónal Lunny
 R: slip jig
@@ -8448,7 +8432,7 @@ ABc cBA GAB|BAG cGE GED|~D3`,
 			theSessionId: 852,
 		},
 		{
-			incipit: `X: 3
+			incipit: `X: 1
 T: Stone Of Destiny
 C:Maurice Lennon
 R: reel
@@ -8507,7 +8491,7 @@ G2ge decA GEE2 CEGc|`,
 			],
 		},
 		{
-			incipit: `X: 8
+			incipit: `X: 1
 T: Give Us A Drink Of Water
 R: slip jig
 M: 9/8
@@ -8539,7 +8523,7 @@ EAAG A2Bd eA3 BAGE|G2DG`,
 			theSessionId: 2389,
 		},
 		{
-			incipit: `X: 4
+			incipit: `X: 1
 T: Paddy On The Turnpike
 R: reel
 M: 4/4
@@ -8574,8 +8558,8 @@ K:Edorian
 E2G FDB, E3| efe dBd efe| cAA`,
 		},
 		{
-			incipit: `X: 5
-T: The Fxhunter
+			incipit: `X: 1
+T: The Foxhunter
 R: slip jig
 M: 9/8
 L: 1/8
@@ -8584,7 +8568,7 @@ FGF FED G2 E|FGF FED E2 D|FGF`,
 			theSessionId: 482,
 		},
 		{
-			incipit: `X: 6
+			incipit: `X: 1
 T: Gusty's Frolics
 R: slip jig
 M: 9/8
@@ -8605,7 +8589,7 @@ DBBA ~B3A BAdB AFEF|DF~F2 A3B`,
 			theSessionId: 812,
 		},
 		{
-			incipit: `X: 2
+			incipit: `X: 1
 T: Bantry Bay
 R: hornpipe
 M: 4/2
@@ -8615,7 +8599,326 @@ GA|BGAG EGDE G2GF GBAG|EAAB `,
 			theSessionId: 1061,
 			theSessionSettingId: 55525,
 		},
+		{
+			incipit: `X: 19
+T: Garrett Barry's
+R: jig
+M: 12/8
+L: 1/8
+K: Dmixo
+DEF ~G3 AGE c2A|dcA d2e`,
+			theSessionId: 544,
+		},
+		{
+			incipit: `X: 1
+T: The Tenpenny Bit
+R: jig
+M: 12/8
+L: 1/8
+K: Ador
+eAA eAA BAB GBd|eAA`,
+			theSessionId: 109,
+		},
+		{
+			incipit: `X: 1
+T: King Of The Pipers
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+cAG A3 DED A2B|cAG A2A`,
+			theSessionId: 54,
+			references: [
+				{
+					notes:
+						"for most of my life I “heard” this tune the “wrong” wrong way: for me the first three notes were a pickup/anacrucis. Only realised my mistake quite recently! (2025-12-01)",
+				},
+			],
+		},
+
+		{
+			aka: ["King Of The Pipers"],
+			incipit: `X: 1
+T: Franc A'Phoill
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+A2F B2F A2G FED|A2F B2F`,
+			theSessionId: 31,
+		},
+		{
+			incipit: `X: 1
+T: Another Jig Will Do
+R: slip jig
+M: 9/8
+L: 1/8
+K: Dmaj
+ABA A2 G F2 G|ABA AGF G3`,
+			theSessionId: 276,
+		},
+
+		{
+			groups: "su",
+			incipit: `X: 1
+T: Doctor O'Neill
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+A|dcd AFD E2F G2A|B`,
+			theSessionId: 1304,
+		},
+		{
+			incipit: `X: 1
+T: Lord Gordon's
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+ADFD A,DFB ADFD FAdc|BE`,
+			theSessionId: 1774,
+		},
+		{
+			incipit: `X: 1
+T: The Harp And The Shamrock
+R: hornpipe
+M: 4/2
+L: 1/8
+K: Gmaj
+gf|edBc dBGB AGEF GA (3Bcd|e2`,
+			theSessionId: 1802,
+		},
+		{
+			aka: ["Lancers"],
+			incipit: `X: 1
+T: The Beauties Of Ireland
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+F2D DED DFD DFD|ECA, A,CA, A,CA,`,
+			theSessionId: 5949,
+		},
+		{
+			incipit: `X: 1
+T: Banish Misfortune
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+fed cAG A2d cAG|F2D`,
+			theSessionId: 9,
+		},
+
+		{
+			incipit: `X: 1
+T: The Milky Way
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+D2 (3FED ADFA d2fd efd2|D2`,
+			theSessionId: 2241,
+		},
+		{
+			incipit: `X: 1
+T: Luke Skywalker Walks On Sunshine
+R: 7/8
+M:7/8
+L: 1/8
+K: Amaj
+A2 BA cea|f2 af ecB`,
+			theSessionId: 15398,
+		},
+		{
+			incipit: `X: 1
+T: Byrne's
+R: hornpipe
+M: 4/2
+L: 1/8
+K: Dmaj
+AG|FD (3EFG AFD2 dA (3Bcd ecAg|fd`,
+			theSessionId: 1143,
+		},
+		{
+			incipit: `X: 1
+T: Cooley's
+R: reel
+M: 4/4
+L: 1/16
+K: Emin
+EBBA B2EB B2AB dBAG|FDAD`,
+			theSessionId: 1,
+		},
+		{
+			incipit: `X: 1
+T: The Cock And The Hen
+R: slip jig
+M: 9/8
+L: 1/8
+K: Bmin
+~B3 BAB g2A|BcB BAB dBA|`,
+			theSessionId: 93,
+			references: [
+				{
+					artists: "Denis Ryan, fiddle",
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=18",
+				},
+			],
+		},
+		{
+			incipit: `X: 1
+T: Sonny Murray's
+R: hornpipe
+M: 4/2
+L: 1/8
+K: Dmaj
+FG|ABAF DEFG AG (3FED =c2 (3AB^c|dcde`,
+			theSessionId: 309,
+		},
+		{
+			incipit: `X: 1
+T: Spootiskerry
+C: Ian Burns
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+DE|G2DE GDEG DEGA B2AB|G2`,
+			theSessionId: 857,
+		},
+		{
+			abc: `X:1
+T:Bunker Hill
+T:from ITMA | Selections from the McConnell Family Collection | October 2024
+M:4/4
+Q:1/4=110
+L:1/16
+D:ITMA | Selections from the McConnell Family Collection | October 2024
+S:Gussie Russel
+F: https://www.itma.ie/playlists/mcconnell-playlist-october24/?track=4
+N:0. As played by Gussie Russel (1927-2004) on a whistle; 1974-01-19; Doonagore, Co. Clare.
+N:1. Just a rough attempt to transcribe how it was played the first 
+N:time round.
+N:2. I’m using my own, admittedly idiosyncratic choice of time
+N:signature and note length. The standard way has bars that are
+N:half as long, using 4/4 with quavers. Here it’s 4/4 with
+N:semiquavers. (I did consider using 4/2 with quavers. That 
+N:would be closer to the standard way but the four beats to a
+N:bar would be slightly less clear IMO.)
+Z:abc-transcription Malcolm Schonfield %2024-11-22,28
+Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+I:abc-charset utf-8
+K:D mixo
+P:Intro
+~d2cA | GE~E2 D2z2 d2z2 D2z2 | ~d2z2 d2z2 d2z2 d2cA  ||
+[P:Ⅰ]G~e3 d2z2 EDEG .c2~B2 | ABAG eg~g2 ABcA .d2cA | G~e3 d2z2 edeG .c2~B2 | ABAG eg~g2 ABcA .d2cA |
+G~e3 d2z2 edeG .c2~B2 | ABAg eg~g2 ABcA .d2cA | G~e3 d2z2 edeG .c2~B2 | ABAg eg~g2 ABcA .d2cA ||
+P:Ⅱ
+GccB c2z2 Gcc2 cBAG | Add^c d2z2 dedB cBAG | EGAB c2z2 BAdB c2Bc | dB (3cBA Bg~g2 ABcA .d2cA |
+GBcB c2z2 GBc2 cBAG | Add^c d2z2 dedB cBAG | EGAB c2z2 cAdB c2Bc | dB (3cBA Bg~g2 ABcA d2z2 ||
+P:Ⅲ
+ed~d2 aded aded a2z2 | ge~e2 e2ed (3Bcd ef g2ag | fAeA d2z2 (3cBA dB c2Bc | dB (3cBA BGG2 ABcA d2z2 |
+ed~d2 aded aded a2z2 | g~eed e2ed (3Bcd ef g2ag | fAeA d2z2 (3cBA dB c2Bc | dB (3cBA Bgg2 ABcA .d2cA |]`,
+			theSessionId: 207,
+		},
+		{
+			incipit: `X: 1
+T: Hetty O'Hady
+R: jig
+M: 12/8
+L: 1/8
+K: Gmaj
+GBA B2d edB AGE|GBA B2G`,
+			theSessionId: 15402,
+			references: [
+				{
+					notes: "see entry for Darby The Driver / Charlie Mulvihill",
+				},
+			],
+		},
+		{
+			incipit: `X: 1
+T: Old Man Dillon
+R: jig
+M: 12/8
+L: 1/8
+K: Ador
+EAA ABd edB cBA|BGG DGG Bdc `,
+			theSessionId: 2200,
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: Winnie Hayes'
+R: jig
+M: 12/8
+L: 1/8
+K: Emin
+BAF ~E3 FED ~E3|BAF EAG FED`,
+			theSessionId: 797,
+		},
+		{
+			incipit: `
+X: 1
+T: The New Policeman
+S: Oisin McAuley
+D: Up In The Air
+F: https://youtu.be/CxAYuvcfslQ?si=Y0y7AnAa8NbZk_9i&t=99
+Z: abc-transcription Malcolm Schonfield% 2024-05-28
+Z: abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+R: jig
+M: 6/8
+L: 1/8
+K: G
+[P:A]Bc | dBG B,DG | Bdd d^cd | e^cA A,EE | A^ce gfe | dBG B,DG | Bd/d/d dcB | Ace a2g | fd^c d 
+Bc | dBG B,DG | Bd/d/d d^cd | e^cA A,^CE | A^ce gfe | dBG B,DG | Bd/d/d dcB | Ace a2g | fd^c d 
+[P:B]ef | gea fdg | ece dBG | GBd gfe | dBG GBd | gea fdg | ece dcB | Ace ^ga=g | fd^c d 
+ef | gea fdf | ece dBG | GBd fg/f/g | dBG GBd | g3 fed | e/f/ge dcB | Ace ^ga=g | fd^c d
+[P:C]|: ^c=c | Bc^c dbf | agd fe_e | dbf agd | g/f/ed bge | dbf aed | ~B3 gdB | Ace a2g | fd^c d :|`,
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: Jim Donoghue's
+C: Jim Donoghue
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+~A3F BFAF BFAF EDB,D|~A3F`,
+			theSessionId: 2536,
+			references: [
+				{
+					artists: "John Carty, fiddle",
+					url: "https://youtu.be/2fibzyiSZ3k",
+					notes: `
+Album: At It Again, 2003
+A comment on thesession I wholeheartedly agree with: “I think John Carty’s version on the fiddle is pure magic where he plays it innumerable times but each one is that bit different so that one could almost listen to it forever!”`,
+				},
+			],
+		},
+		{
+			incipit: `X: 1
+T: George White's Favourite
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+eB~B2 eBdB AGAB GEDE|GB (3BBB`,
+			theSessionId: 718,
+			references: [
+				{
+					url: "https://youtu.be/lQ1d3TvE1Ow",
+					artists: "John Carty, fiddle; Brian McGrath, piano",
+					notes: `Album: Last Night’s Fun, 1996
+George White's Favourite / The Lass Of Carracastle`,
+				},
+			],
+		},
 		/*
+		
 		{incipit:``,theSessionId:},
 		 */
 	],
