@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-12-01",
+	lastUpdate: "2025-12-05",
 	tunes: [
 		{
 			abc: `
@@ -1277,29 +1277,15 @@ K:Edorian
 			],
 		},
 		{
-			abc: `X:1
-T:The Orphan
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/217#setting217
-N:Setting entered in thesession by user Will Harmon on 2001-07-27
-K:Eminor
-B,|E2 E EFB,|GFG AGA|~B3 ABA|GFG EDB,|
- A,2 E EDB,|~G3 AGA|~B3 ABA|GED E2 B,|
- E2 E EFB,|~G3 AGA|~B3 ABA|GE/F/G EDB,|
- A,2 E EDB,|~G3 AGA|~B3 ABA|GED E3||
- efe dBA|GAB dBd|edB AGA|BdB AGF|
- G2 F EDB,|~G3 AGA|BdB ABA|GED E3|
- [g3B] dBA|GAB dBd|edB AGA|~B3 AGF|
- G2 F EDB,|~G3 AGA|~B3 ABA|GED E3||`,
-			scores: [
-				{
-					url: "https://thesession.org/tunes/217#setting217",
-					name: "thesession",
-				},
-			],
+			incipit: `X: 5
+T: The Orphan
+R: jig
+M: 12/8
+L: 1/8
+K: Emin
+~E3 EDB, GFG A3|B3 ABA`,
+			theSessionId: 217,
+			theSessionSettingId: 12898,
 		},
 		{
 			abc: `%251029
@@ -3395,6 +3381,21 @@ e2Be eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|`,
 		},
 		{
 			abc: [
+				`X: 14
+T: Christmas Eve
+T: version as of 2025-12-05
+C:Tommy Coen
+Z:abc-transcription Malcolm Schonfield
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+|:GE|"G/B" ~D3E ~G3A B2dB ABGB|"C"ABGE ~D3E "C"G2BG ABGE|
+"G/B"~D3E ~G3A B2dB ABGA|"C"B~A3 GEBG "C"ABGE G2:| 
+|:GA|"G/B"BGBd edeg "C"abge g2eg|"C"a3f g2ge "C"dedB "D"A2GA | 
+"G/B"BGBd ~e3g "C"abge g2eg |"C"abge ~d3B "D"ABGE G2:| 
+|:dc|"G/B"B~G3 BGBd "C"e~g3 egdc|"G"B~G3 DGBG "Am"EAAG A2dc|
+"G/B"B~G3 BGBd "C"e~g3 g3a|"C"bgaf gedB "D"ABGF G2:|`,
 				`X: 14
 T: Christmas Eve
 T: version as of 2025-12-01
@@ -8351,7 +8352,7 @@ R: jig
 M: 12/8
 L: 1/8
 K: Ador
-G|EAA ABd ege dBA|GEF GAB `,
+G|EAA ABd ege dBA|GEF GAB`,
 			references: [
 				{
 					artists: "Tulla Céilí band",
@@ -8891,7 +8892,8 @@ K: Dmaj
 			theSessionId: 2536,
 			references: [
 				{
-					artists: "John Carty, fiddle",
+					artists:
+						"John Carty, fiddle; Alec Finn, bouzouki; Artie McGlynn: guitar",
 					url: "https://youtu.be/2fibzyiSZ3k",
 					notes: `
 Album: At It Again, 2003
@@ -8916,6 +8918,40 @@ eB~B2 eBdB AGAB GEDE|GB (3BBB`,
 George White's Favourite / The Lass Of Carracastle`,
 				},
 			],
+		},
+		{
+			incipit: `X: 2
+T: The Banks Of The Ilen
+R: reel
+M: 4/4
+L: 1/8
+K: Dmaj
+FDFA d2fd ~d2fd ecAG|FDFA defe
+`,
+			theSessionId: 747,
+		},
+
+		{
+			incipit: `X: 1
+T: I'm Not Fed Up With The Pacific Ocean
+C:Ola Bäckström
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+F3F- FDEG F3F- FDEG|F2EF `,
+			theSessionId: 16478,
+		},
+		{
+			incipit: `X: 1
+T: McGoldrick's
+C:Michael McGoldrick
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+~f3 efg fdA ~G3|FAd`,
+			theSessionId: 628,
 		},
 		/*
 		
