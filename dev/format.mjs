@@ -3,12 +3,7 @@ import path from "path";
 import { format, resolveConfig } from "prettier";
 import { fileURLToPath } from "url";
 import abcTools from "@goplayerjuggler/abc-tools";
-const {
-  contourToSvg,
-  getContour,
-  getIncipitForContourGeneration,
-  javascriptify,
-} = abcTools;
+const { javascriptify } = abcTools;
 
 // Get current directory in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -26,21 +21,6 @@ async function format2(s) {
     //https://prettier.io/blog/2020/11/20/2.2.0
   });
   return formatted;
-}
-
-/**
- * Get the first ABC string from a tune entry
- * @param {string|string[]} abc - ABC notation (string or array)
- * @returns {string|null} - First ABC string or null
- */
-function getFirstAbc(abc) {
-  if (typeof abc === "string") {
-    return abc;
-  }
-  if (Array.isArray(abc) && abc.length > 0) {
-    return abc[0];
-  }
-  return null;
 }
 
 /**
