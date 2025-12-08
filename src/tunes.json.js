@@ -722,17 +722,18 @@ T:The Butlers Of Glen Avenue
 C:Tony Sullivan
 R:jig
 L:1/8
-M:6/8
-N:Pretty much as written by JACKB before
+M:6/4
 N:---
 N:Imported into *tuneTable* on 2025-10-27,
 N:from https://thesession.org/tunes/820#setting42781
+N:(edited after importing)
 N:Setting entered in thesession by user James Dumbelton on 2022-01-13
 K:Gmajor
-|:DEG EDB,|DEG ~B3|DEG B2 e|dBe dBA|
- DEG EDB,|DEG ~B3|dBd gfe|dBA G3:|
- |:gab age|deg ~B3|gab gab|dBd e2 d|
- gab age|deg ~B3|dBd gfe|dBA G3:|`,
+|:DEG EDB, DEG ~B3|DEG B2 e dBe dBA|
+DEG EDB, DEG ~B3|dBd gfe dBA G3:|
+|:gab age deg ~B3|gab gab dBd e2 d|
+gab age deg ~B3|dBd gfe dBA G3:|
+`,
 			],
 			theSessionId: "820",
 			theSessionSettingId: "42781",
@@ -4177,26 +4178,6 @@ F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 		},
 		{
 			abc: `X:1
-T:Hull's
-C:John Morris Rankin
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/2686#setting2686
-N:Setting entered in thesession by user Angela Michelle on 2004-03-19
-K:Emajor
-e|B<E Ec B2 Bc|BE (3EEE cBGe|BE (3EEE B2GB|cBce fefg|
- B<E Ec B2 Bc|BE (3EEE cBce|fgfe c2 fg|eccB ceec|
- B<E Ec B2 Bc|BE (3EEE cBGe|BE (3EEE B2 GB|cBce fefg|
- B<E Ec B2 Bc|BE (3EEE cBcE|fgfe c2 gf|eccB ceef|
- |:gB (3BBB g2fe|fc (3ccc c2 Bc|fc (3ccc c2 Bc|
- eB (3BBB Bcef|gB (3BBB g2 fe|fc (3ccc c2 ce|
- [1fgfe c2 fg|eccB ceef:|2 fgfe c2 gf|eccB ceec||`,
-			theSessionId: "2686",
-		},
-		{
-			abc: `X:1
 T:Branohm
 C:Máire Breatnach
 R:reel
@@ -7347,6 +7328,7 @@ DE|G2DE GDEG DEGA B2AB|G2`,
 			abc: `X:1
 T:Bunker Hill
 T:from ITMA | Selections from the McConnell Family Collection | October 2024
+R:reel
 M:4/4
 Q:1/4=110
 L:1/16
@@ -7376,6 +7358,11 @@ GBcB c2z2 GBc2 cBAG | Add^c d2z2 dedB cBAG | EGAB c2z2 cAdB c2Bc | dB (3cBA Bg~g
 P:Ⅲ
 ed~d2 aded aded a2z2 | ge~e2 e2ed (3Bcd ef g2ag | fAeA d2z2 (3cBA dB c2Bc | dB (3cBA BGG2 ABcA d2z2 |
 ed~d2 aded aded a2z2 | g~eed e2ed (3Bcd ef g2ag | fAeA d2z2 (3cBA dB c2Bc | dB (3cBA Bgg2 ABcA .d2cA |]`,
+			incipit: `X:1
+M:4/4
+K:D mixo
+L:1/16
+cA|GEE2 D3G E/F/GAB c2Bc|A3G EFGE ABcA d2`,
 			theSessionId: 207,
 		},
 		{
