@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2025-12-20",
+	lastUpdate: "2026-01-02",
 	tunes: [
 		{
 			abc: `
@@ -23,9 +23,9 @@ FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
 			references: [
 				{
 					notes:
-						"1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)",
-				},
-			],
+						"1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -41,7 +41,7 @@ K:Gmajor
  D2GA B2B2|(3ABA GA B<d dg|e<d ge dBGB|1 AGEF G2FE:|2 AGEF G2Gg||
  gfga bage|d^cde dBGg|gfga baga|agab a2ef|
  gfga bage|dcde d2ef|g2(3fgf (3efe dB|c2(3BcB A2(3GFE||`,
-			theSessionId: "3515",
+			theSessionId: 3515
 		},
 		{
 			abc: `X:1
@@ -60,7 +60,7 @@ K:Dmajor
  DdDd Dfed|cBcd ccBA|B2BA BcdB|AFEF DEFA|
  d2(3ddc dfed|cBcd ccBA|(^AB)B=A BcdB|AFEF DB,B,D|
  A,B,DE D2 DE|(3FED FA dDcd|[D^A]BBB [DB]=AFD|DEFE D4||`,
-			theSessionId: "2067",
+			theSessionId: 2067
 		},
 		{
 			abc: `X:1
@@ -84,8 +84,8 @@ D|:G3A B3A|GAGE D3E|GABd edgd|eege edBA|
  G3A B3A|GAGE D3E|GABd edBG|1 ~A2G2 G2BA:|2 ~A2G2 GABc||
  d3e dBGB|d^cde dBGB|A3B AGEG|AGAB AGED|
  d3e dBGB|d^cde dBGD|GABd edBG|1 ~A2G2 GABc:|2 ~A2G2 G3D||`,
-			theSessionId: "16299",
-			theSessionSettingId: "30857",
+			theSessionId: 16299,
+			theSessionSettingId: "30857"
 		},
 		{
 			abc: `X:1
@@ -104,7 +104,14 @@ K:Gmajor
  b2ba g3a|bgag e/g/e d2|edge dBAc|B2G2 G2ga|
  b2ba g3a|bgag e/g/e d2|edge dBGA|BAAG AcBA|
  G3B d2Bd|e/g/e dB d2Bd|edge dBAc|B2G2 G2(3DEF||`,
-			theSessionId: "1726",
+			theSessionId: 1726,
+			references: [
+				{
+					url: "http://media.comhaltas.ie/audio/cl351/cl351_7_64K.mp3",
+					artists: "Antóin Mac Gabhann",
+					notes: `The New Broom, Down the Old Boreen (2011-04-30) - from [comhaltas.ie](https://comhaltas.ie/comhaltaslive/comhaltaslive_351_7_antoin_mac_gabhann/)`
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -121,8 +128,8 @@ K:Gmajor
  G2 (3GGG G2G2|GABc dBGg|efge Bege|(3efg ab gedB:|
  |:c4 B4|(3ABc BA GEDB|c4 B2 (3GBd|eage dcBd|
  c4 B4|(3ABc BA GEDG|EFGE B,EGE|1 FGAF GBdB:|2 FGAB cBAd||`,
-			theSessionId: "20543",
-			theSessionSettingId: "40673",
+			theSessionId: 20543,
+			theSessionSettingId: "40673"
 		},
 		{
 			abc: `X:1
@@ -140,7 +147,7 @@ K:Dmajor
  f2 f2 f2 e>d|c>Bc>d e2- e>f|g2 g2 A2 B>c|(3efe d2 d2- d>e|
  f2 f2 f2 e>d|c>Bc>d e2- e>f|g2 g2 g2 (3ABc|d>ef>g a2- a>g|
  f2 f2 f2 e>d|c>Bc>d e2 e>f|g2 g2 A2 B>c|(3efe d2 d2- d3/2||`,
-			theSessionId: "3536",
+			theSessionId: 3536
 		},
 		{
 			groups: "ALORA",
@@ -163,7 +170,7 @@ K: A
 "F#m"c2-cc .c2c2 "D"BcBA F2 E"<("">)"F|"A"A2-Ac efec  "E"B2 .A2 [1 "A"A2-AB:| [2 "A"A2-Ac||
 |:"A"e2-ee .e2 e2 BccB ABce|"D"f2-ff .f2 f2 "A"BccB ABcd|
 e2-ee .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [1 A2 Ac:| [2 A2 AB||
-`,
+`
 		},
 		{
 			groups: "ALORA",
@@ -183,7 +190,7 @@ K: G
 |: ge|"G or Emin"dG GA B2AG d2 .G2 G2 ge|dG GA B2 AG "D"B2 .A2 A2 Bc |
 "Emin"dG GA B2 AG "C"B2d2 g3e|"G"d2de "D"dB Ad "G"B2 .G2 G2:|
 |: Bd|"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2 de dB GA "D"B2 A2 A2 Bd|
-"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2de "D"dB Ad "G"B2 .G2 G2:|`,
+"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2de "D"dB Ad "G"B2 .G2 G2:|`
 		},
 		{
 			abc: `X:1
@@ -203,7 +210,7 @@ K:Dmajor
  dB ed B2 g2|fe ge c2 eg|(3fgf ed ^cd ef|g2 b2 g2 Bc:|
  d2 b2 b2 c'b|a2 e2 e2 ag|(3fgf ed (3fgf ed|(3BcB AG B2 Bc|
  d2 b2 b2 c'b|a2 e2 e2 ag|(3fgf ed ^cd ef|g2 b2 g2 Bc|g2 b2 g4||`,
-			theSessionId: "4321",
+			theSessionId: 4321
 		},
 		{
 			groups: "ALORA",
@@ -222,7 +229,7 @@ K: E dorian
 M:6/4
 L:1/16
 K: E dorian
-EFGE FGA2  AGFE GAB2  BdcB AGFE | EF`,
+EFGE FGA2  AGFE GAB2  BdcB AGFE | EF`
 		},
 		{
 			groups: "su",
@@ -239,12 +246,12 @@ N:on the 4th track, titled "Gan Ainm."
 N:---
 N:Imported from https://thesession.org/tunes/8204#setting52726
 N:Setting entered in thesession by user Nigel Gatherer on 2024-12-24
-N:Transposed up a 4th & edited
+N:Transposed up a fourth & edited
 K:Dmajor
 e2|:fdAd f2fa gece g2ge| fdAd f2fe[1 defd e2de:|[2 defd e2df||
   |:aaag fgaf efgf efge| aaag fgaf[1 defd e2df:|[2 defd e2de||`,
-			theSessionId: "8204",
-			theSessionSettingId: "52726",
+			theSessionId: 8204,
+			theSessionSettingId: "52726"
 		},
 		{
 			abc: [
@@ -259,10 +266,10 @@ K:Gmajor
 |:"G" D2 G G2 A B2 d|"C" ege d2 e g3|"G" D2 G G2 B d2 B|"Am"AGA B2 G "D"E2 G|
  "G" D2 G G2 A B2 d|"C" ege d2 e "D"g2 a|"Em"b2 a g2 e d2 B|"Am"AGA B2 G E2 G:|
  "C" B2 d d2 B d2 B|"D" dBd e2 f "G"g3|"C" B2 d d2 B d2 B|"Am"AGA B2 G E2 G|
- "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`,
+ "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`
 			],
-			theSessionId: "1340",
-			theSessionSettingId: "14690",
+			theSessionId: 1340,
+			theSessionSettingId: "14690"
 		},
 		{
 			groups: "ALORA",
@@ -292,7 +299,7 @@ P:Ⅰ
 P:Ⅱ
 "G"~b2 ag fd|"Am"ea2g fd|"C"{d}e2 dc BG|"G"DG2B Ad|
 "G"~b2 ag fd|"Am"ea2g fd|"Am/C"{d}e2 dc BA|"D"GB Ac BA!D.C.!|]
-`,
+`
 		},
 		{
 			groups: "ALORA",
@@ -325,9 +332,9 @@ P:Ⅱ
 `,
 			references: [
 				{
-					notes: "#2 in the (ALORA) Top The Candle set",
-				},
-			],
+					notes: "#2 in the (ALORA) Top The Candle set"
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -343,7 +350,7 @@ K:Gmajor
  G,B, DG B,D GB|DG Bd GB dg|ed cB cD EF|G2 B2 G2:|
  |:Bc|dB GB dB gd|ba gf ed cB|cA FA cA fd|ag fe dc BA|
  (3BcB GB (3cdc Ac|(3ded Bd e2 dc|Bg dB dc AF|G2 B2 G2:|`,
-			theSessionId: "1058",
+			theSessionId: 1058
 		},
 		{
 			abc: `X:1
@@ -361,7 +368,7 @@ K:Aminor
  a6 g2|b6 a2|aeae "Dm"a2{ba}gf|"Am"e4 e2|
  "C"cdef efef|efef "Dm"e2d2|"Dm"dAAd dAAd|dAAd "C"d2{ed}c2|
  "E7"cddc cBB_B|"Am"A4 Adc2|"E7"cddc cBB_B|1 "Am"A2A2 c2:|2 "Am"A2z2 a2||`,
-			theSessionId: "445",
+			theSessionId: 445
 		},
 		{
 			abc: `X:1
@@ -380,7 +387,7 @@ K:Ebmajor
  DBfB DBfB|EBgB EBgB|=ABcd ecAc|B=ABc B_AGF|
  EGBG eBFE|DFBF dFED|CEGE cBAG|FGFE DCB,A,|
  G,EBE G,EBE|A,EcE A,EcE|DEFG AFDF|E2 G2 E2:|`,
-			theSessionId: "922",
+			theSessionId: 922
 		},
 		{
 			abc: `X:1
@@ -396,7 +403,7 @@ K:Gmajor
  (3GFG DG BGBd|(3cBc AB cdef|gdBG FAdc|B2 G2 G2:|
  |:(3GBd|g2 dB GBdg|e2 cA FGAg|f2 ed cdeg|(3fgf (3efe dcBA|
  (3GFG DG BGBd|(3cBc AB cdef|gdBG FAdc|B2 G2 G2:|`,
-			theSessionId: "32",
+			theSessionId: 32
 		},
 		{
 			abc: `X:1
@@ -412,7 +419,7 @@ K:Gmajor
  GB,DG BdGB|dGBd gbag|fed^c =cAFD|(3GGG GF G2:|
  |:(3bbb|bB^df bagf|e^def gfg^g|aA^ce agfe|e=dd^c d2ab|
  c'afd ^cdef|gfga bgag|fed^c =cAFD|(3GGG GF G2:|`,
-			theSessionId: "974",
+			theSessionId: 974
 		},
 		{
 			abc: `X:1
@@ -428,7 +435,7 @@ K:Dmajor
  D2 FA dAFD|CDEF G2FG|AdcB AGFE|D2 CE D2:|
  |:de|f2 fg fedc|BABc B2 Bd|e2 ef edcB|A2 ce a2 AB|
  d2 df edAF|GFGA BdcB|AdcB AGFE|D2 CE D2:|`,
-			theSessionId: "38",
+			theSessionId: 38
 		},
 		{
 			abc: `X:1
@@ -444,7 +451,7 @@ K:Gmajor
  GABA g~g2z|fefd e^cAG|FAdB cADF|AGGF G2:|
  |:B^c|d2Bd gdBd|gbaf gdBd|g2fg ed^cd|(3efe d^c d2ef|
  g2dc B2Gd|ecAG FAD2|GBdB cADF|AGGF G2:|`,
-			theSessionId: "1980",
+			theSessionId: 1980
 		},
 		{
 			abc: `X:1
@@ -460,7 +467,7 @@ K:Gmajor
  GABd dBde|gage dega|bage dBAc|AGGF G2:|
  |:(3efg|afd^c d2ga|beed e2ga|bg (3agf gedB|BAAG AcBA|
  GABd dBde|gage dega|bage dBAB|G2 GF G2:|`,
-			theSessionId: "478",
+			theSessionId: 478
 		},
 		{
 			abc: `X:1
@@ -477,7 +484,7 @@ K:Gmajor
  BGBd g2fg|eceg f2ga|bgdB cGEG|(3FED BA G2:|
  |:(3ABc|d2d^c dAFA|BAGF G2AB|c2cd edcB|Adfg a2fa|
  g2dg e2ce|d2Bd cece|dcAG FDBA|G2 (3FGA G2:|`,
-			theSessionId: "9800",
+			theSessionId: 9800
 		},
 		{
 			abc: `X:1
@@ -494,7 +501,7 @@ K:Gmajor
  GdBG FcAF|(3GFG BG D2GF|Eedc BAGF|A2G2 G2:|
  |:AG|FAd^c dBAG|FAd^c dfed|^cdef (3gfe ^ce|d^cde d2 =c2|
  BcBA ^GBe2|ABA=G FAd2|egfe (3ded (3cBA|GgdB G2:|`,
-			theSessionId: "337",
+			theSessionId: 337
 		},
 		{
 			abc: `X:1
@@ -510,7 +517,7 @@ K:Dmajor
  DAFA DAFA|defe dcBA|eAfA gfec|d2 f2 d2:|
  |:cd|eAAA fAAA|gAfA eAAA|eAfA gAfA|(3efe (3dcB (3ABA (3GFE|
  DAFA DAFA|defe dcBA|eAfA gfec|d2 f2 d2:|`,
-			theSessionId: "49",
+			theSessionId: 49
 		},
 		{
 			abc: `X:1
@@ -532,10 +539,10 @@ K:Gmajor
 					artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
 					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=8",
 					notes: `(78 rpm) The cuckoo, hornpipe; The sweeps [Jim Coleman’s], hornpipe
-Gardiner, John Joe, 1893-1979`,
-				},
+Gardiner, John Joe, 1893-1979`
+				}
 			],
-			theSessionId: "573",
+			theSessionId: 573
 		},
 		{
 			abc: `X:1
@@ -552,7 +559,7 @@ K:Gmajor
  G,B,DG cBcd|edef ga (3gfe|d<b c<a B<g A<f|1 ecAF G3A:|2 ecAF G2 (3def||
  |:ga (3gfe dgbd|ceac Bdg2|dBG2 (3gfg ag|fgef defd|
  ga (3gfe dgbd|ceac Bdg2|(3gag (3fgf egfg|1 ecAF G2 (3def:|2 ecAF G4||`,
-			theSessionId: "1249",
+			theSessionId: 1249
 		},
 		{
 			abc: `X:1
@@ -569,7 +576,7 @@ G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>d|c>b a>g f>e d>c|(3dfe (3dcB (3ABA (3GFE|
  F>G ^G>A (3fed (3cBA|G>A _B>=B (3gfe (3dcB|(3cba (3gfe (3dcB (3ABc|(3dAf (3dAF D3 a|
  d'>a f>d A>F D>=C|B,>^D E>G B>e g>b|e'>b g>e B>G E>D|C>E A>c e>a c'>e'|
  f'>d' a>f d>A F>D|G>B d>g b>d' g'>b|(3ad'c' (3bag (3fgf (3gfe|(3dfa (3d'af d4|`,
-			theSessionId: "1755",
+			theSessionId: 1755
 		},
 		{
 			abc: `X:1
@@ -586,7 +593,7 @@ AG|:(3FGF EF DFAF|GAFG E2 EF|GFGA (3Bcd ed|cded cAGE|
  FGEF DFAF|(3GAG (3FGF E2 EF|GFGA (3Bcd ed|1 cAGE D2 DE:|2 cAGE D2 (3ABc||
  |:d2 ad fded|(3Bcd AF DFAd|Beed Bded|cdef gece|
  d2 ad fded|(3Bcd AF DEFA|Bdef gfed|1 cAGE D2 (3ABc:|2 cAGE D2 DE||`,
-			theSessionId: "130",
+			theSessionId: 130
 		},
 		{
 			abc: `X:1
@@ -613,8 +620,8 @@ K:Eminor
  BEED E2DE|GABG AAGA|B2BA GEDE|G2GF G2GA:|
  |:BABd e2eg|fedf edBA|BA (3Bcd e2eg|fe (3def e2ed|
  edBA d2ed|BAGA BAGE|B2BA GEDE|G2GF G2GA:|`,
-			theSessionId: "21525",
-			theSessionSettingId: "43012",
+			theSessionId: 21525,
+			theSessionSettingId: "43012"
 		},
 		{
 			abc: `X:1
@@ -630,7 +637,7 @@ K:Gmixolydian
  dg dB (3GBG AB|cf cA (3FAF GA|(3BAG gG ^fG e^F|1 AG G^F GA:|2 AG G^F G2-|:GA||
  Bc de fd ce|dD E^F GF GA|Bc de =fd (3e^fg|a^f d^c d2 (3def|
  gd BG ec A^F|G^F Gc AG EG|(3^FED AB ce d^F|AG G^F G2:|`,
-			theSessionId: "2001",
+			theSessionId: 2001
 		},
 		{
 			abc: `X:1
@@ -646,7 +653,7 @@ K:Dmajor
  AFEF (3DDD DE|FDFA d2 de|fedB AFEF|D2 DE D2:|
  |:dB|ABde f2 ef|gfed e2 de|f2 fe dBAF|FEED E2 dB|
  AFEF (3DDD DE|FDFA d2 de|fedB AFEF|D2 DE D2:|`,
-			theSessionId: "2488",
+			theSessionId: 2488
 		},
 		{
 			abc: `X:1
@@ -662,7 +669,7 @@ K:Dmajor
  AF~F2 DEFA|dced BAdB|AdcB AFGE|D/E/D CE D2:|
  dc|BABc dcdf|b z fa gfgf|ecec BA B/c/d|AFAF EA,CE|
  AF~F2 DEFA|dced BAdB|AdcB AFGE|D/E/D CE D2:|`,
-			theSessionId: "6274",
+			theSessionId: 6274
 		},
 		{
 			abc: `X:1
@@ -678,7 +685,7 @@ K:Dmajor
  ABAF DEFG|AG (3FED =c2 (3AB^c|dcde fdAG|F2D2 D2:|
  de|f2fd ecAF|Gggf g2fg|a2ab agec|dcAF G2FG|
  ABAF DEFG|AG (3FED =c2 (3AB^c|dcde fdAG|F2D2 D2:|`,
-			theSessionId: "309",
+			theSessionId: 309
 		},
 		{
 			abc: `X:1
@@ -695,7 +702,7 @@ K:Dmajor
  d2Bd A2FA|BAFA D2 ED|B,DA,D DFBF|AFEF D2:|
  |:fg|afed bafd|Adfd edBd|DFAd FAde|fdgf e2fg|
  afed bafd|Adfd edBd|DFAd FAdf|eABc d2:|`,
-			theSessionId: "869",
+			theSessionId: 869
 		},
 		{
 			groups: "su",
@@ -709,11 +716,11 @@ K:Edorian
 (3B,CD|E2FE DFEF GEAG (3FGA GF|EFED`,
 			references: [
 				{
-					notes: "SU: Follows the Beauties Of Autumn",
-				},
+					notes: "SU: Follows the Beauties Of Autumn"
+				}
 			],
-			theSessionId: "5675",
-			theSessionSettingId: "17673",
+			theSessionId: 5675,
+			theSessionSettingId: "17673"
 		},
 		{
 			abc: [
@@ -733,10 +740,10 @@ K:Gmajor
 DEG EDB, DEG ~B3|dBd gfe dBA G3:|
 |:gab age deg ~B3|gab gab dBd e2 d|
 gab age deg ~B3|dBd gfe dBA G3:|
-`,
+`
 			],
-			theSessionId: "820",
-			theSessionSettingId: "42781",
+			theSessionId: 820,
+			theSessionSettingId: "42781"
 		},
 		{
 			abc: `X:1
@@ -753,7 +760,7 @@ K:Gmajor
  DEG GAB|Bdg gab|age ege|dBG A3:|
  ~a3 aga|ega ega|deg ged|ged BAG|
  DEG GAB|Bdg gab|age ege|dBG A3:|`,
-			theSessionId: "839",
+			theSessionId: 839
 		},
 		{
 			abc: `X:1
@@ -770,7 +777,7 @@ K:C
  cde g2a ged c2d|eaa e2d cAA A2:|
  |:d|egg ged egg g2d|eaa aga baa a2g|
  cde g2a ged c2d|eaa e2d cAA A2:|`,
-			theSessionId: "803",
+			theSessionId: 803
 		},
 		{
 			aka: ["The Lilting Banshee", "The Miller Of Glanmire"],
@@ -804,7 +811,7 @@ EAA EAA   BAB "here"E2A|
 P:note for (**): the first time round maybe it was a C#, like this (but I’m not sure):
 d^cAy
 `,
-			theSessionId: "60",
+			theSessionId: 60
 		},
 		{
 			groups: "su",
@@ -825,7 +832,7 @@ E.A.A AGA|cBA c2d|~e3 efg|dBG GFG|
  e2a a^ga|e2g gfg|e(3.g.f.e dcB|cAG A2e|
  aea a.ea|aed cBA|BAB ~g3|dBG GBd|
  e2a a^ga|e2g gfg|e(3.g.f.e dcB|c.A.A A2G|`,
-			theSessionId: "2191",
+			theSessionId: 2191
 		},
 		{
 			abc: `X:1
@@ -843,7 +850,7 @@ K:Gdorian
  dgg g2a|b/a/g/a/b/g/ a/g/f/g/a/f/|gfd cAd|~G3 G2:|
  |:=B/d/|gd=B G>Bd/B/|G>=Bd/B/ c_BA|fcA F>Ac/A/|F/G/AB cBA|
  B/A/G/A/B/G/ c/B/A/B/c/A/|dg^f gab|gfd cAd|~G3 G2:|`,
-			theSessionId: "7352",
+			theSessionId: 7352
 		},
 		{
 			abc: `X:1
@@ -865,8 +872,8 @@ K:Gmajor
  DGA Bcd|cAG FGA|(B/c/d)B AFD|DGG G2:|
  B/c/|ded dcB|cdc cBc|ded fef|dgg g2a|
  bag fed|cAG FGA|(B/c/d)B AFD|DGG G2:|`,
-			theSessionId: "13036",
-			theSessionSettingId: "22413",
+			theSessionId: 13036,
+			theSessionSettingId: "22413"
 		},
 		{
 			abc: `X:1
@@ -885,7 +892,7 @@ K:Emajor
  G3 GFE|C3 CB,C|E2 F2 GF|1 E3 EGB:|2 E6||
  |:ece d2 (c|c)eg f2 d|edc Bec|BGE F2 E|
  ece d2 (c|c)eg f2 d|edc BGE|F2 E4:|`,
-			theSessionId: "8853",
+			theSessionId: 8853
 		},
 		{
 			abc: `X: 2
@@ -902,7 +909,7 @@ F2D DAG|F2D DAD|BDB cAF|1 AGF GAG:|2 AGF G2A||
 |:~B3 cBc|~d3 ABc|B2G GAG|F2D DAD|
 BDB cDc|~d3 ABc|~B3 cAF|1 AGF G2A:|2 AGF GAG||
  `,
-			theSessionId: "2096",
+			theSessionId: 2096
 		},
 		{
 			groups: "su",
@@ -921,11 +928,11 @@ B|:AGE G2E G2E G2E|A2B c2d e2d efg|
    efg ded BAG Bcd|edc BAG [1 B2A A2e:| [|2] B2A A2B||`,
 			references: [
 				{
-					notes: "SU #1 in Elisabeth Kelly set",
-				},
+					notes: "SU #1 in Elisabeth Kelly set"
+				}
 			],
-			theSessionId: "770",
-			theSessionSettingId: "29548",
+			theSessionId: 770,
+			theSessionSettingId: "29548"
 		},
 		{
 			groups: "su",
@@ -946,10 +953,10 @@ K:Adorian
 				{
 					artists: "The Kelly Family",
 					url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
-					notes: "SU #2 in Elisabeth Kelly set",
-				},
+					notes: "SU #2 in Elisabeth Kelly set"
+				}
 			],
-			theSessionId: "1043",
+			theSessionId: 1043
 		},
 		{
 			abc: [
@@ -984,8 +991,8 @@ dcd e^de f=dA  BdA | B/c/dB AFD D/E/EE EDB, | DDD DFA [Dd]ef edB | BAB dBA FED D
 DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE | DDA, DDA [Dd]ef edB | BAB dBA FED DDA, |
 DDA, DFA [Dd]ef edB | B/B/AB dBA FED  EFE | DDA, DDA def edB | BAB dBA FED D2A ||
 dcd e^de f=dA  BdA | B/c/dB AFD DEE  FDA, |
-`,
-			],
+`
+			]
 		},
 		{
 			abc: `X:1
@@ -1005,7 +1012,7 @@ K:Amixolydian
  A=ff fef|A=ff f2g|=fed ed^c|d2d d2e:|
  |:fgf edc|dAA BAD|FED EDC|DEF CDE|
  Ddd Aee|Aff Agg|fed edc|d2d d3:|`,
-			theSessionId: "417",
+			theSessionId: 417
 		},
 		{
 			abc: `X:1
@@ -1021,7 +1028,7 @@ D|:~G3 AGA|~B3 gdB|GAB cBA|BGE EDE|
  ~G3 AGA|~B3 gdB|cBA (3Bcd B|1 AGG G2D:|2 AGG G2f||
  |:gfg efg|eag edB|gfg efg|afd d2f|
  gfe agf|gfe fdB|cBA (3Bcd B|1 AGG G2f:|2 AGG G3||`,
-			theSessionId: "372",
+			theSessionId: 372
 		},
 		{
 			abc: `X:1
@@ -1037,7 +1044,7 @@ D|:~E3 GFE|~B3 dBA|BdB BAB|GBG AFD|
  ~E3 GFE|BAB dBA|BAG FAF|1 GEE E2 D:|2 GEE E2 e||
  |:e2 g gfe|g2 b bge|dcd fed|fad fed|
  e2 f gfe|dfe dBA|BAG FAF|1 GEE E2 e:|2 GEE E2 D||`,
-			theSessionId: "160",
+			theSessionId: 160
 		},
 		{
 			abc: `X:1
@@ -1053,7 +1060,7 @@ K:Edorian
  ~E3 BAF|FEB AFA|B/c/dB BAF|dAF FED:|
  |:BAB ~e3|fed e2d|BAB g2e|fdB AFA|
  ~B3 ede|fed e2 f|gbg faf|edB AFA:|`,
-			theSessionId: "1447",
+			theSessionId: 1447
 		},
 		{
 			incipit: `X: 5
@@ -1064,7 +1071,7 @@ L: 1/8
 K: Emin
 ~E3 EDB, GFG A3|B3 ABA`,
 			theSessionId: 217,
-			theSessionSettingId: 12898,
+			theSessionSettingId: 12898
 		},
 		{
 			abc: `%251029
@@ -1097,11 +1104,11 @@ G2 G GBd|e2 f gfe|dBG A2 B|E2 F G2 A|BgB TB2 A|G3 G2:|
 					artists: "Pat Barton, button accordion",
 					url: "https://www.youtube.com/watch?v=TZPPskWXqIw",
 					notes:
-						"“Jockey To The Fair - Irish traditional jig/ set dance on button accordion”",
-				},
+						"“Jockey To The Fair - Irish traditional jig/ set dance on button accordion”"
+				}
 			],
-			theSessionId: "2257",
-			theSessionSettingId: "22264",
+			theSessionId: 2257,
+			theSessionSettingId: "22264"
 		},
 		{
 			abc: `X:1
@@ -1120,7 +1127,7 @@ K:Dmajor
  d2 f ede|fdB AFA|B/c/dB AFE|EDC D2 A||
  d2 f ede|fdB AFA|B/c/dB AFE|CDE A,3|
  ABc d2 f|edB AFE|FEF DEF|EDC D2z|`,
-			theSessionId: "8000",
+			theSessionId: 8000
 		},
 		{
 			abc: `X:1
@@ -1141,7 +1148,7 @@ K:Dmajor
  afd dAF|G2B gdB|c2e age|fdc d3||
  D2F dAF|G2B gdB|c2e a2a|ba^g a2f|
  afd dAF|G2B gdB|c2e age|fdd d3||`,
-			theSessionId: "2309",
+			theSessionId: 2309
 		},
 		{
 			abc: `X:1
@@ -1157,7 +1164,7 @@ K:Gmajor
  G2e dBG|~B3 deg|age dBG|~A3 BGE:|
  ~g3 faf|e/f/ge def|gfg efg|aga bge|
  gbg f/g/af|ege deg|age dBG|~A3 BGE:|`,
-			theSessionId: "1805",
+			theSessionId: 1805
 		},
 		{
 			abc: `X:1
@@ -1178,7 +1185,7 @@ K:Gmajor
  d2f afd|fad faf|d^cd ((3gfe) d|cAF G2|
  |:A|B2.B {c}BAG|FFF AFD|BBB {c}BAG|BdB cBA|
  B2.B {c}BAG|FFF AFD|d^cd ((3gfe) d|cAF G2:|`,
-			theSessionId: "2156",
+			theSessionId: 2156
 		},
 		{
 			abc: `X:1
@@ -1196,7 +1203,7 @@ D|:GAG GAB|ded dBG|AGA BGD|EFE E2 D|
  def gag|fed efg|dBG GAB|ded dBG|
  AGA BGD|EFE E2 D|GAG GBd|gfe dBG|
  AGA BGD|1 E2 FG2 B:|2 E2 FG2 D||`,
-			theSessionId: "385",
+			theSessionId: 385
 		},
 		{
 			groups: "ALORA",
@@ -1220,7 +1227,7 @@ P:Ⅰ
 P:Ⅱ
 |:"D"d2 e fed faf gfe| d2 e fed      "Asus4"dcA dcA|
 "D"d2 e fed   faf gfe|"G"dcA "A"BAG [1 "D"AFD DFA:|2 "D"AFD D3!D.C.!|]
-`,
+`
 		},
 		{
 			abc: `X:1
@@ -1236,7 +1243,7 @@ K:Aminor
  (ABA) ~a3|a(ge) g3|ege deg|1 edB A3:|2 edB A2 B||
  |:~c3 cec|~d3 ded|~c3 edc|Bdg dBG|
  ~c3 edc|deg a2 (a|{b}a)ge deg|1 edB A2 B:|2 edB A3||`,
-			theSessionId: "2540",
+			theSessionId: 2540
 		},
 		{
 			abc: `X:1
@@ -1252,7 +1259,7 @@ K:Adorian
  fed efg|aAA e2a|g2e dBd|eAA A2:|
  |:d|ege ege|dBA A2B|ded dgd|BGG G2g|
  fed efg|aAA e2a|g2e dBd|eAA A2:|`,
-			theSessionId: "4844",
+			theSessionId: 4844
 		},
 		{
 			abc: `X:1
@@ -1268,7 +1275,7 @@ K:Gmajor
  GBA G2B|def gfg|efe dBA|BGG G2:|
  |:d|efe edB|def gfg|efe edB|dBA ABd|
  efe edB|def gfg|efe dBA|BGG G2:|`,
-			theSessionId: "307",
+			theSessionId: 307
 		},
 		{
 			abc: `X:1
@@ -1285,7 +1292,7 @@ K:Dminor
  DFA ^G2 A|DFA ^G2 A|dAA BAG|FGE D3:|
  d2 e fed|e2 f gfe|d2 e fed|A^GA B2 A|
  d2 e fed|e2 f gfe|dAA BAG|FGE D3:|`,
-			theSessionId: "736",
+			theSessionId: 736
 		},
 		{
 			abc: `X:1
@@ -1304,7 +1311,7 @@ K:Dmajor
  Adf ~a3|baf afd|b2a afd|Ace d2:|
  |:e|fdd ceA|d2g fdB|c2B ceA|~a3 bag|
  ~f2d ecA|d2g fdA|FAD GBD|Aec d2:|`,
-			theSessionId: "1642",
+			theSessionId: 1642
 		},
 		{
 			abc: `X:1
@@ -1322,7 +1329,7 @@ K:Dmajor
  "A"e^de A2f|"A"e^de a2f|"A"efe "E7"dcB|"A"ABA "E7"GFE:|
  "D"D2f fef|"D"d2A AGA|"D"D2f fef|"A7"gfe ecA|
  "D"D2f fef|"D"d2A AGA|"G"Bed "A7"cBc|"D"dAG "A7"FGE:|`,
-			theSessionId: "2134",
+			theSessionId: 2134
 		},
 		{
 			abc: `X:1
@@ -1343,7 +1350,7 @@ K:Bminor
   BAF E2F FDE FDE|FAB def [1 fed edB:|2 fed e3||
 |:fef b2B fef ~a3|fba fed fee ede|
   fef b2B fef ~a3|baf aba [1 fee ede:|2 fee edB||`,
-			theSessionId: "1902",
+			theSessionId: 1902
 		},
 		{
 			abc: `X:1
@@ -1359,7 +1366,7 @@ K:Amixolydian
  cAA BGG|cAA AFD|G2 A (B/c/d)B|1 AFD D2 B:|2 AFD D3||
  |:~f3 ~g3|afd cBA|~f3 gfg|afd dfg|
  agf gfe|fed e/f/ed|cBA BAG|AFD D3:|`,
-			theSessionId: "1076",
+			theSessionId: 1076
 		},
 		{
 			groups: "su",
@@ -1378,15 +1385,15 @@ K:Gmajor
 |:dcB cAA dcB cAF|DGG GFG DGG G(3ABc|
   dcB cAA dcB cAF|D2E F2G ADE FGA:|
 |:B3 cBc d(3Bcd dBd|g3 gfd gba gdc|
-  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`,
+  B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`
 			],
 			references: [
 				{
-					notes: "SU: 2nd in the Fahey’s Fiddle set",
-				},
+					notes: "SU: 2nd in the Fahey’s Fiddle set"
+				}
 			],
-			theSessionId: "693",
-			theSessionSettingId: "23367",
+			theSessionId: 693,
+			theSessionSettingId: "23367"
 		},
 		{
 			abc: `X:1
@@ -1402,7 +1409,7 @@ B|:cAd cAG|EDE GAB|cBc BAG|EAA ~A2B|
  cAd cAG|EDE GAB|cde =fed|1 cAA A2B:|2 cAA A2f||
  gea ged|cAB cde|eaa age|ed^c def|
  geg fed|cAB cde|=fed cAG|1 EAA A2f:|2 EAA A2||`,
-			theSessionId: "830",
+			theSessionId: 830
 		},
 		{
 			abc: `X:1
@@ -1421,7 +1428,7 @@ DE|:FDB BAG|FAd faf|fgb ege|Bcc AGE|
  B2e bge|A2f afd|FAd gec|AGE DED:|
  |:ABA eff|aba afd|BGE G,A,A,|CEA gec|
  dcd eff|aba afd|Bge cAF|GFE DED:|`,
-			theSessionId: "2132",
+			theSessionId: 2132
 		},
 		{
 			abc: `X:1
@@ -1439,7 +1446,7 @@ K:Gmajor
  bag agf|g2g fd^c|def gdB|1 cAF G2B:|2 cA F GBc||
  |:dBG GFG|DGB dBG|cA=F FEF|C=FA cBA|
  dBG GBd|g2g fd^c|def gdB|1 cAF GBc:|2 cAF G2A||`,
-			theSessionId: "1334",
+			theSessionId: 1334
 		},
 		{
 			incipit: `X: 11
@@ -1449,7 +1456,7 @@ M: 12/8
 L: 1/8
 K: Dmix
 FED EFG A2 d cAG|A`,
-			theSessionId: 34,
+			theSessionId: 34
 		},
 		{
 			abc: `X:1
@@ -1465,7 +1472,7 @@ K:Amixolydian
  cBA ecA|fed cBA|c2e dBG|1 ABA Aed:|2 ABA Afg||
  |:agf gfe|fed cBA|def gfg|~B3 Bfg|
  agf gfe|fed cBA|c2e dBG|1 ABA Afg:|2 ABA Aed||`,
-			theSessionId: "810",
+			theSessionId: 810
 		},
 		{
 			abc: [
@@ -1513,10 +1520,10 @@ EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
  efg fed|ecA d^cd|cGE _BFD|Cec =Bcd|
  efg ~f3|~e3 ~d3|cGE _BFD|CDC C2E||
  efg fed|{f}e(3Gce d(3GBd|c(3GEG _B(3FDF|
- C(3EGc =Bcd|efg ~f3|efg fed|cGE _BFD|CDC C3||`,
+ C(3EGc =Bcd|efg ~f3|efg fed|cGE _BFD|CDC C3||`
 			],
-			theSessionId: "23818",
-			theSessionSettingId: "49004",
+			theSessionId: 23818,
+			theSessionSettingId: "49004"
 		},
 		{
 			groups: "su",
@@ -1533,7 +1540,7 @@ K:Gmajor
  BAB cBc|dgg d2g|fed cAF|1 ~G3 G2A:|2 ~G3 G2d||
  |:gGG fGG|efg d2c|BA^G Aag|fe^d efg|
  azf gfe|fed fga|gfe def|1 gGG G2d:|2 gGG G2A||`,
-			theSessionId: "1570",
+			theSessionId: 1570
 		},
 		{
 			abc: [
@@ -1586,9 +1593,9 @@ FDD ADD CDD A,DF | G2A BAG [1 AFD DCD :| [2 AFC D2d ||
 |:[P:B] d^cd ^fed e^cA =B/c/de | d^cd e^fg a2^f gfe |
 d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
 [P:C] fed ecA dAc AFD | G2A Bde fed cAG |
-FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`,
+FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`
 			],
-			theSessionId: 2329,
+			theSessionId: 2329
 		},
 		{
 			groups: "su",
@@ -1606,7 +1613,7 @@ K:Amixolydian
  c2A ABA|d2e fec|d2f c2e|B2g gdB:|
  |:c2e efe|ef^g a3|c2e efe|B2g gdB|
  c2e efe|ef^g a2e|d2f c2e|B2g gdB:|`,
-			theSessionId: "2481",
+			theSessionId: 2481
 		},
 		{
 			abc: `X:1
@@ -1627,8 +1634,8 @@ K:Fmajor
  B2A Bdc|B2A Bdc|[M:9/8]B2A GBd g2f|1 ege cde fcB:|2 )[M:6/8]ege cde|fcA F3|
  |:a2a aga|b3 b2a|g2g gfg|ac'a cde|
  f2f fef|g3 g2f|ege cde||1 )fcA F3:|2 )fcA FcB|`,
-			theSessionId: "23388",
-			theSessionSettingId: "47849",
+			theSessionId: 23388,
+			theSessionSettingId: "47849"
 		},
 		{
 			abc: `X:1
@@ -1648,7 +1655,7 @@ K:Gmajor
  GBd cAc|BGG G2g|fed cAF|1 DGG G2:|2 DGG G||
  (3Bcd|~g3 dBG|fed cAF|GBd deg|~f3 def|
  ~g3 afd|bag afd|fed cAF|1 DGG G:|2 DGG G2||`,
-			theSessionId: "4234",
+			theSessionId: 4234
 		},
 		{
 			abc: `X:1
@@ -1664,7 +1671,7 @@ c|:B3BAB|GBd gdB|A3AGA|Bee dBA|
  BcB BAB|GBd g3|efg eag|1 fdd d2c:|2 fdd def||
  |:g3fgf|efe dBA|G3AGA|Bee def|
  gag fgf|efe d3|efg eag|1 fdd def:|2 fdd dcA||`,
-			theSessionId: "2838",
+			theSessionId: 2838
 		},
 		{
 			abc: `X:1
@@ -1690,8 +1697,8 @@ K:Cmajor
 |:E3 FGA|G3 G,CD|E3 cGE|DCC CA,G,|E3 FGA|G3 EGB|c2c B/c/dB|ced c3:|
  |:g3 ege|c3 ceg|a3 faf|Acf afd|g3 ege|c3 agf|gfe fed|ced c3:|
  |:ecf g2g|f/g/af gec|f/g/af e/f/ge|dcA G2E|F3 Acf|a3 gfe|fed edc|B/c/dB c3:|`,
-			theSessionId: "21254",
-			theSessionSettingId: "42412",
+			theSessionId: 21254,
+			theSessionSettingId: "42412"
 		},
 		{
 			abc: `X:1
@@ -1708,7 +1715,7 @@ K:Dmajor
  F2A AFA|Bdd efg|fed ~B3|AFD D2:|
  |:e|fed BdB|AFE EDF|AFB AFB|AFB AFA|
  fed BdB|AFE E2e|fed BdB|AFD D2:|`,
-			theSessionId: "4236",
+			theSessionId: 4236
 		},
 		{
 			abc: `X:1
@@ -1728,7 +1735,7 @@ K:Gdor
    d3 dcA c3 cAc|dcA cAF G3 G3|
    d3 dcA c3 cAc|dcA cAF GFD C3|
  GFD D2F GAc d3|dcA cAF G3 G3||`,
-			theSessionId: "280",
+			theSessionId: 280
 		},
 		{
 			abc: `X:1
@@ -1747,7 +1754,7 @@ K:Gmajor
  Bc/d/B Ggf|ecA E3|DBc BDF|AGF G2:|
  |:D|GBd ~g3|edB cBA|Bc/d/B a2g|fdc d2f|
  gdB Ggf|ecA ~E3|DGc BDF|AGF G2:|`,
-			theSessionId: "488",
+			theSessionId: 488
 		},
 		{
 			abc: `X:1
@@ -1765,7 +1772,7 @@ K:Edorian
  |:Bee efe|def f2e|edB BAF|d2f edB|Bee efe|
  [1def f2e|edB BAF|AFE EFA:|
  [2def b2a|fed BAF|AFE EFA||`,
-			theSessionId: "5405",
+			theSessionId: 5405
 		},
 		{
 			abc: `X:1
@@ -1784,7 +1791,7 @@ K:Dmajor
  ABA f~g2|g~a2 d=cA|B~=c2 E=cE|DFA d2 z:|
  |:DED DED|dAd cAF|[E3/2A,3/2][E/A,/][EA,] GEC|A,CE GEC|
  (3.D.D.DD DED|dAd cAF|[E3/2A,3/2][E/A,/][EA,] GEC|A,EC D2 z:|`,
-			theSessionId: "6807",
+			theSessionId: 6807
 		},
 		{
 			abc: `X:1
@@ -1801,7 +1808,7 @@ K:Emixolydian
  Bec d2B|cAB GEF|=GDB, BA^G|1 AFB EGA:|2 AFB EGB||
  ege d2B|cAE AFD|B,EG ABA|FBG ABc|
  BGB e2c|dAF DFA|GBG AFB|1 EFE EGB:|2 EFE EGA||`,
-			theSessionId: "4440",
+			theSessionId: 4440
 		},
 		{
 			abc: `X:1
@@ -1817,7 +1824,7 @@ K:Amajor
  ecA BAF|AFE EFA|Bdc BAB|cAA A2:|
  A|cee dff|cee ecA|cee dff|ecA B2A|
  cee dff|cee ecA|Bdc BAB|cAA A2:|`,
-			theSessionId: "327",
+			theSessionId: 327
 		},
 		{
 			abc: `X:1
@@ -1837,7 +1844,7 @@ K:Dmajor
  dff fef|fef def|g2e f2d|edB BdB:|
  |:Add fdd|edd fdd|Add fdd|edB BdB|
  Add fdd|edB def|g2e f2d|edB BdB:|`,
-			theSessionId: "62",
+			theSessionId: 62
 		},
 		{
 			abc: `X:1
@@ -1853,7 +1860,7 @@ K:Dmajor
  ABA D2d|{e}dcA AGF|GFG Ade|1 fdc d2d:|2 fdc d2e||
  |:fed edc|Adc Ade|fed efg|AB=c def|
  ~g3 age|{a}ed=c AGF|~G3 Ade|1 fdc d2e:|2 fdc d2d||`,
-			theSessionId: "1301",
+			theSessionId: 1301
 		},
 		{
 			abc: `X:1
@@ -1869,7 +1876,7 @@ K:Gmajor
  dgd BAB|cBc AFD|DGG FGA|1 BGF GBc:|2 BGF GBd||
  gfe d^cd|edc Bcd|ecA dBG|FAG FED|
  gfe d^cd|edc Bcd|efg eag|1 fd^c def:|2 fd^c dB=c||`,
-			theSessionId: "833",
+			theSessionId: 833
 		},
 		{
 			abc: `X:1
@@ -1886,7 +1893,7 @@ K:Dmajor
  Ace aed|cdB A2a|aed cdB|ABG A3:|
  GBd G3|FAd F3|e2e ecA|e2e ecA|
  GBd G3|FAd F2a|aed cdB|ABG A3:|`,
-			theSessionId: "1497",
+			theSessionId: 1497
 		},
 		{
 			abc: `
@@ -1907,7 +1914,7 @@ fef gfg|faf d2e|fdF AFA|GEA D2 A:|
 |:AGG AEE|AGE EDD|AGG c2 e|dcA AGE|
 AGG AEE|AGE EDD|cdc A2G|EAA D3:|
 `,
-			theSessionId: "870",
+			theSessionId: 870
 		},
 		{
 			abc: `X:1
@@ -1924,7 +1931,7 @@ K:Dmixolydian
  K:DMaj
  |:ABc dcd|fed efe|ABc dcd|eag edc|
  ABc dcd|fed efg|age cde|dcA GED:|`,
-			theSessionId: "351",
+			theSessionId: 351
 		},
 		{
 			abc: `X:1
@@ -1941,7 +1948,7 @@ K:Dmajor
  Add dcd|BAG A3|AdA eAf|gec d2:|
  |:g|a2a fdA|g2g ecB|AdA eAf|g2g efg|
  a2a fdA|g2g ecB|AdA eAf|gecd2:|`,
-			theSessionId: "4435",
+			theSessionId: 4435
 		},
 		{
 			abc: `X:1
@@ -1958,7 +1965,7 @@ K:Dmajor
  Bcd efg|~a3 age|dcd Bed|cAA A2:|
  |:B|=c2 e dBB|=cAF GAB|=cBc d^cd|efg ecA|
  {B}=c2 e dBB|=cAF GAB|=cee dBB|BAA A2:|`,
-			theSessionId: "11868",
+			theSessionId: 11868
 		},
 		{
 			abc: `X:1
@@ -1981,7 +1988,7 @@ K:Dmajor
  aAA Aaf|gfg efg|fdd fed|cAA Afg|
  aAA Aaf|gfg efg|GGG GBd|gfg efd|
  aAA Aaf|gfg efg|fdd fed|cAA A2|`,
-			theSessionId: "620",
+			theSessionId: 620
 		},
 		{
 			abc: `X:1
@@ -1998,7 +2005,7 @@ K:Dmixolydian
  c3 BdB|ABA AGE|DEG AGA|1 AGF GAB:|2 AGF G2 D||
  |:GBd gfg|ede gdB|GBd gdB|AGA AGE|
  GBd gfg|ede gdB|GAB AGA|AGF G3:|`,
-			theSessionId: "942",
+			theSessionId: 942
 		},
 		{
 			abc: `X:1
@@ -2020,7 +2027,7 @@ ABc|:dAG FED|=c3 ed^c|dAF GFE|FED gfe|
  ~g2 e ~f3|ecA ABc|dAF AFD|EDC DFA|
  ~d3 efg|fed cBA|dc/c/d efg|fdc def|
  gbb faa|ecA ABc|dAF AFD|EDC DFA|`,
-			theSessionId: "2607",
+			theSessionId: 2607
 		},
 		{
 			abc: `X:1
@@ -2036,7 +2043,7 @@ K:Gmajor
  ~G3 GFG|~A3 fga|gfd cAd|1 GAG G2g:|2 GAG G2d||
  |:d2g gfg|ade fga|gfd cAd|cAG FGA|
  G2g gfg|ade fga|gfd cAd|1 GAG G2d:|2 GAG G2g||`,
-			theSessionId: "825",
+			theSessionId: 825
 		},
 		{
 			abc: `X:1
@@ -2052,7 +2059,7 @@ K:Gmajor
  ~g3 eGd|BeB dBA|BGG dBA|AGF GA/B/d:|
  |:~g3 afd|~g3 a2a|bag agf|gef g2a|
  bag agf|~g3 e2d|Bee dBA|AGF GA/B/d:|`,
-			theSessionId: "1831",
+			theSessionId: 1831
 		},
 		{
 			abc: `X:1
@@ -2070,7 +2077,7 @@ K:Dmajor
  "D"aga fdf|aba afg|afd "Em"bge|"A"edc "D"d2f|
  "D"aga fdf|aba agf|"A"g3 gec|Ace gfe|
  "D"d3 "Em"ede|"F#m"fef "G"gfg|"D"afd "Em"bge|"D"dAF D2 "(A)"A||`,
-			theSessionId: "1822",
+			theSessionId: 1822
 		},
 		{
 			abc: `X:1
@@ -2087,7 +2094,7 @@ K:Cmajor
  c3 dcB|cGE CEG|F3 DGF|ECC C3:|
  |:c3 g^fg|ea^f gec|A2 f fef|Adf afd|
  c3 g^fg|ea^f g2 a|gec fdB|cGE C3:|`,
-			theSessionId: "2667",
+			theSessionId: 2667
 		},
 		{
 			abc: `X:1
@@ -2103,7 +2110,7 @@ K:Dmajor
  FAA FAA|BAG FGE|DED AFA|dfd e2 d:|
  fef gfg|afd ede|fef gfg|afd e2 d|
  fef gfg|afd fga|ABA AFA|dfd e2 d:|`,
-			theSessionId: "387",
+			theSessionId: 387
 		},
 		{
 			abc: `X:1
@@ -2120,7 +2127,7 @@ K:Amixolydian
  A>e c<e A>e c<e|e>Af>A e2d>c|B<dG>B g>fe>d|c2A2 A<A:|
  |:e2|c<ea2 c<ea2|c<ea>f e2d>c|BBg2 BBg2|BBg2 a>gf>d|
  c<ea2 g>ea2|g>ef>d e2d>c|B<dG>B g>fe>d|c2A2 A<A:|`,
-			theSessionId: "8121",
+			theSessionId: 8121
 		},
 		{
 			abc: `X:1
@@ -2137,7 +2144,7 @@ K:Amajor
  eAAB c3 B|ABce a3 f|e3 f ecAc|B2 A2 A2:|
  |:ce|a3 a afea|f3 e faaf|e3 f ecAB|c2 B2 B2 ce|
  a3 a afea|fece faaf|e3 f ecAc|B2 A2 A2:|`,
-			theSessionId: "1649",
+			theSessionId: 1649
 		},
 		{
 			groups: "su",
@@ -2157,10 +2164,10 @@ E>G|:BEGB AFDE FB,DF A2(3Bcd|e>fed BAFE FdFE D2BA|
  B2ef eBef g2fe fdeB|Aaef deBA[1 F2ED E2GA:|2 F2ED E2EG||`,
 			references: [
 				{
-					notes: "SU: Followed by An Paistinn Fionn",
-				},
+					notes: "SU: Followed by An Paistinn Fionn"
+				}
 			],
-			theSessionId: "4553",
+			theSessionId: 4553
 		},
 		{
 			groups: "su",
@@ -2171,8 +2178,8 @@ L:1/8
 M:3/4
 K:F
 C DE|F3G FE|F3E FG|A3F EC|D3C `,
-			theSessionId: "19631",
-			theSessionSettingId: "38741",
+			theSessionId: 19631,
+			theSessionSettingId: "38741"
 		},
 		{
 			abc: `X:1
@@ -2191,7 +2198,7 @@ GA|:B2 BG Bd|A4 AB|(3cBA Bcde|dc BA GA|
  dc Bd cB|cB Ac BA|B2 GA Bc|A2 AF GA|
  B2 BG Bd|A4 FA|c2 cd (3edc|d2 dB GA|
  B2 GB dc|A2 FA cB|G2 G2 (3AGF|1 G4 GA:|2 G6||`,
-			theSessionId: "7885",
+			theSessionId: 7885
 		},
 		{
 			abc: `X:1
@@ -2207,7 +2214,7 @@ GA|:"G"B2BAGE|DB, D2B,D|"C"EC E2CE|"G"DB, D2GA|
  B2BAGE|DB, D2B,D|"C"E2"D"F2D2|"G"G4GA:|
  |:"G"B2B2dB|"C"cB c2AF|"D"A2A2dc|"G"BA B2GA|
  B2B2dB|"C"cB c2DF|"D"A2AcBA|1 "G"G4GA:|2 "G"G6||`,
-			theSessionId: "1332",
+			theSessionId: 1332
 		},
 		{
 			abc: `X:1
@@ -2223,7 +2230,7 @@ K:Gmajor
  B2 BA GB|d2 dB AB|c2 cA FA|1 G4:|2 G3 ggf||
  |:e2 ce ce|d2 dB AB|c2 cA FA|B2 B ggf|
  e2 ce ce|d2 dB AB|c2 cA FA|1 G3 ggf:|2 G4||`,
-			theSessionId: "1276",
+			theSessionId: 1276
 		},
 		{
 			abc: [
@@ -2289,17 +2296,17 @@ M:9/16
  b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d(g2 {a}g2)f g2a|
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
  d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
- E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
+ E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`
 			],
 			references: [
 				{
 					artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle",
 					notes: `a version that’s quite close to the
-Fidil one; it also has some very pretty things going on on the cello.`,
-				},
+Fidil one; it also has some very pretty things going on on the cello.`
+				}
 			],
-			theSessionId: "23320",
-			theSessionSettingId: "47650",
+			theSessionId: 23320,
+			theSessionSettingId: "47650"
 		},
 		{
 			groups: "su",
@@ -2324,8 +2331,8 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
  DF AF GA|Bc BA GF|Gc BG EC|F2-FA BA|
  GC AB AF|GC AB AF|GA GF EF|G2- GF FE|
  DF AF GA|Bc BA GF|Gc BG EC|F2-FG AB:|`,
-			theSessionId: "15563",
-			theSessionSettingId: "29178",
+			theSessionId: 15563,
+			theSessionSettingId: "29178"
 		},
 		{
 			groups: "su",
@@ -2379,23 +2386,23 @@ Dd fd ad | ba Bg g/g/g | fd AG FA || [P:Ⅱ]dA FE DD |
 "_(V2)"ED Df aa| gd "_(V3)"(3Bcd gg| [M: 5/4] fd AG FA "_(V1)"dd AA!D.C.! |]
 P:Variations / embellishments
 "_(V1)"dA B/B/A ||"_(V2)"D/D/D || "_(V3)"Bd |]
-`,
+`
 			],
 			references: [
 				{
 					artists: "Éamonn Coyne, banjo; Kris Drever, guitar",
 					url: "https://www.youtube.com/watch?v=xGEHMm_zOgc",
 					notes: `mazurka / highland / guns of the magnificent seven (reel)
-live; 2012`,
+live; 2012`
 				},
 				{
 					artists:
 						"Éamonn Coyne, banjo; Kris Drever, guitar; Megan Henderson, fiddle",
 					url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
-					notes: "EP",
-				},
+					notes: "EP"
+				}
 			],
-			theSessionId: "1302",
+			theSessionId: 1302
 		},
 		{
 			abc: `
@@ -2441,7 +2448,7 @@ P:D
 cd BA eA | cd BA eA | !coda!GA Bc (3dBG |[1 A2 A2 ed :|[2 A2 A2 E2 !D.S.! |] 
 P:E (coda)
 !coda! GA Bc (3dBG | !fermata!A4|]
-`,
+`
 		},
 		{
 			abc: `X:1
@@ -2459,7 +2466,7 @@ K:Eminor
  ee- ed/B/|b/^a/b- b2|ee- ed/B/|d2- de/f/|e2 {f/e/} dB|
  g>B f>B|e>f ed|B/^c/d- d>e|E/F/G- Ge|B(4c/B/A/G/ F>B|
  EE- E2|B|EF G>B|E>^cd2|`,
-			theSessionId: "5182",
+			theSessionId: 5182
 		},
 		{
 			abc: `X:1
@@ -2476,7 +2483,7 @@ K: Gmaj
 G>F GD|EG D2|EA G/F/E/F/|1 G2 GB/A/:|2 G2 GB/c/||
 |:d>e dG|e2 eB|Ae ed/e/|f>g f/e/d/c/|
 Bf fe/f/|g2 f>e|dG A/G/A/B/|1 G2 GB/c/:|2 G2 GB/A/|| `,
-			theSessionId: "6170",
+			theSessionId: 6170
 		},
 		{
 			abc: `X:1
@@ -2492,7 +2499,7 @@ K:Dmajor
  DF FD|CE EF/G/|AG EC|D2 D2:|
  Ad de|fd dc/B/|Ad df|e2 e2|
  Ad de|fd dc/B/|AF EF|D2 D2:|`,
-			theSessionId: "11600",
+			theSessionId: 11600
 		},
 		{
 			groups: "alora",
@@ -2509,7 +2516,7 @@ K:Gmajor
  GB B/c/B/A/|FA AB|cA FA|G2:|
  |:Bd|g2 fe|fA A>B|cd ef|g2 fe|
  dg fe|fA AB|cd/c/ BA|G2:|`,
-			theSessionId: "6015",
+			theSessionId: 6015
 		},
 		{
 			groups: "alora",
@@ -2527,7 +2534,7 @@ K:Amajor
  Ac ef|ec c/d/c/B/|AF FE|A3:|
  |:d/e/|fe cB|AF FE|A>A Ac|e2 ed/e/|
  fe cB|AF FE|A>A AF|A3:|`,
-			theSessionId: "8918",
+			theSessionId: 8918
 		},
 		{
 			abc: `X:1
@@ -2543,7 +2550,7 @@ d/c/|:BG D>D|Ec cA/B/|cE F>E|Dd d/e/d/c/|
  BG D>D|Ec cA/B/|c/B/A/G/ F/D/E/F/|1 GB Gd/c/:|2 GB GB/d/||
  |:g2 f2|c7/ d/|ee dd|B3 B/c/|
  d>e dc|A2 AB/A/|1 G>A Bc|d2 de/f/:|2 Gg fa|g2 g||`,
-			theSessionId: "1560",
+			theSessionId: 1560
 		},
 		{
 			abc: `X:1
@@ -2559,7 +2566,7 @@ K:Eminor
 |:G2 EG|DE GD|E/G/A GE|DG DE|AG/E/ GA|G/E/D GD/E/|GA/G/ EG|DE E2:|
  BA/G/ AE|DE GE|GA/G/ ED/E/|GE AG|BA/G/ AE|DG EG|GE GE|DE E2|
  BA/G/ AE|DG EG|GE GD|GE GG/E/|D/G/E D/E/G|EA GE|A/G/E GE|DE E2||`,
-			theSessionId: "8904",
+			theSessionId: 8904
 		},
 		{
 			groups: "alora",
@@ -2573,7 +2580,7 @@ K: Ador
 "Am".ea g>e "G".dB GA/B/ |"C".ce "Em".dB "Am"A2A2:|
 "Am".ea ag/e/ "G".dg g>d |"Am".ea ab "Em"(ga/g/) .ed|
 "Am".ea g>e "G".dB GA/B/ |"Am".ce "Em"dB "Am"A2A2:|`,
-			theSessionId: "239",
+			theSessionId: 239
 		},
 		{
 			abc: `X:1
@@ -2596,8 +2603,8 @@ K:Gmajor
 [K:D mix]F>G AB|cA AG|Ad cA|AG FD|
  F>G AB|1 cA AG|Ad cA|G2 G2:|
  [2 cA c/d/e|dc AF|G2 G2||`,
-			theSessionId: "18688",
-			theSessionSettingId: "36502",
+			theSessionId: 18688,
+			theSessionSettingId: "36502"
 		},
 		{
 			abc: `X:1
@@ -2617,10 +2624,10 @@ K:Dmajor
 				{
 					artist: "Jason O’Rourke, concertina",
 					notes: `album: The Bunch Of Keys
-Well worth a listen! Don’t have link handy though.`,
-				},
+Well worth a listen! Don’t have link handy though.`
+				}
 			],
-			theSessionId: "8541",
+			theSessionId: 8541
 		},
 		{
 			abc: `X:1
@@ -2641,7 +2648,7 @@ B>c|:d/e/d/c/ BG|DG B2|B/d/c/B/ AG|c2 A>B|
  cA dA|cB/c/ d/c/B/A/|B2 B>c|dB eB|
  dB eB|gf/g/ a/g/f/g/|e2 e>f|g/a/g/f/ e/g/f/e/|
  e/d/B/G/ D/G/B/d/|d^c =cf/a/|1 g2 B>c:|2 g2 z2||`,
-			theSessionId: "3479",
+			theSessionId: 3479
 		},
 		{
 			abc: `X:1
@@ -2657,7 +2664,7 @@ K:Dmajor
  dA FA|dg fe|d/B/A/F/ A/B/d/e/|1 fd df/e/:|2 fd df/g/||
  |:af ge|fd df/g/|af g/f/g/a/|be ef/g/|
  af ge|fd fe|d/B/A/F/ A/B/d/e/|1 fd df/g/:|2 fd d||`,
-			theSessionId: "564",
+			theSessionId: 564
 		},
 		{
 			abc: `X:1
@@ -2673,7 +2680,7 @@ K:Gmajor
  g>f gd|BGGA/B/|c/B/A dF|G2 G>d:|
  BG dG|BG GA/B/|c/B/A eA|cAA>c|
  BG dG|BG GA/B/|c/B/A dF|G2GA:|`,
-			theSessionId: "8624",
+			theSessionId: 8624
 		},
 		{
 			abc: `X:1
@@ -2689,7 +2696,7 @@ K:Dmajor
  a2 af/a/|ba fa|g2 Bc|ed d:|
  |:e|f>e fe|dc BA|g>f ga|ba f/g/a|
  f>e fe|dc BA|g2 Bc|ed d:|`,
-			theSessionId: "2105",
+			theSessionId: 2105
 		},
 		{
 			abc: `X:1
@@ -2710,7 +2717,7 @@ K:G
 "G" [DB]3[DB] [Dc]2[Dc]2 [DB]2[DB]2 |"D7"A2d2 d8|"G"G2AB "C"cdcA "G" BcBG|"D7"ABAF "G"G8 ||
 "Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"ABAF D8|
 "Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"G" G2AB "C" cdcA "G" BcBG|"D7"ABAF "G" G8|]
-`,
+`
 		},
 		{
 			groups: "ALORA",
@@ -2728,7 +2735,7 @@ K: E dorian
         "Em"EF GE "Em"FG | "D"AG FE "D or Bm"GA |  "Em" (3BAG "Bm"FE FD :|
 [P:B]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" FE | "Em"B2 AG "D" FE | 
         "Em"B2 Bc "D"dc | "Em"(3BAG "Bm"FE FD :|
-[P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`,
+[P:C]|: "Em"B2 Bc "D"dc | "Em"B2 AG "D" (3BAG | "Em"FE Bc "D"dc | "Em"(3BAG "Bm"FE FD :|`
 		},
 		{
 			abc: `X:1
@@ -2749,7 +2756,7 @@ P:ABABA2BC
 |: [P:B]ag bf af/e/ | f>a f2 df | ag bf af/e/ | f>a f2 df | eg fe df/e/ | ed BG A2 | 
 a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 [P:C (la dernière fois)]|: d2 ce d2 | eg fe d2 | eg fa/f/ [1 dd | ed BG A2 :| [2 de | cd !fermata!d4 |]
-`,
+`
 		},
 		{
 			abc: `X:1
@@ -2770,7 +2777,7 @@ A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
 (3AAA eA ceAc eAcb ageg|age^c d=fed (3cBA BG A2AG|
 A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
 (3AAA aA gAfA (3AAA cA BAGB|(3cBA BG AGED ECDB, CA,B,G,||`,
-			theSessionId: "184",
+			theSessionId: 184
 		},
 		{
 			abc: `X:1
@@ -2790,7 +2797,7 @@ eB~B2 eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|
 bg~g2 afge dB~B2 GEDB,|A,E~E2 E2DE GEDB, B,A,~A,2:|
 |:A2EA cAEA aged bage|dG~G2 DGBd gded Bdgd|
 e2Be eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|`,
-			theSessionId: "671",
+			theSessionId: 671
 		},
 		{
 			abc: [
@@ -2850,7 +2857,7 @@ DB,DE GFGA B2dB ABGA|BAAB G~E3 [1 ABGF G2EG:| [2 ABGF G2GA||
 |:BG (3Bcd edeg a2ge g2eg|a2ge g2ge dedB A2GA | 
 BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
 |:BG (3GGG BGBd eg (3ggg egdc|BG (3GGG DGBG FAAG FAdc|
-BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`,
+BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 			],
 			groups: "ALORA",
 			origin: "Ireland",
@@ -2860,34 +2867,33 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`,
 						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
 					url: "https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel",
 					notes: `1:48 onwards
-The Drunken Landlady / Christmas Eve / The Abbey Reel`,
+The Drunken Landlady / Christmas Eve / The Abbey Reel`
 				},
 				{
 					artists: "Fintan Vallely, flute; Mark Simos, guitar",
 					url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2",
-					notes: "Christmas Eve / The Reel of Rio",
+					notes: "Christmas Eve / The Reel of Rio"
 				},
 				{
 					artists:
 						"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
 					url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
-					notes: "Christmas Eve / Reel of Mullinavat / Bucks of Oranmore",
+					notes: "Christmas Eve / Reel of Mullinavat / Bucks of Oranmore"
 				},
 				{
 					artists: "Micho Russel, flute",
 					url: "https://youtu.be/1FUi3f3pDFc",
 					notes:
-						"album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond",
+						"album: Rarities & Old Favorites 1949–1993: Tin Whistle, Flute & Songs from North Clare & Beyond"
 				},
 				{
 					artists: "Sonny Murray, concertina",
 					url: "https://music.youtube.com/watch?v=MNscUYF0ybU",
-					notes:
-						"album: It Was Mighty! the Early Days of Irish Music in London",
-				},
+					notes: "album: It Was Mighty! the Early Days of Irish Music in London"
+				}
 			],
-			theSessionId: "440",
-			theSessionSettingId: "48642",
+			theSessionId: 440,
+			theSessionSettingId: "48642"
 		},
 		{
 			abc: `X:1
@@ -2905,7 +2911,7 @@ K:Dmajor
 A,B,DE FDED B,EED EDB,E|A,B,DE FABc dBAG FDDD:|
 |:d2fd adfd edBd edBA|defa defa e2de fddc|
 d2fd adfd edBd edBA|faab afdf[1 gefd e4:|2 e2de fdd2||`,
-			theSessionId: "4198",
+			theSessionId: 4198
 		},
 		{
 			abc: `X:1
@@ -2923,7 +2929,7 @@ K:Gmajor
 DEGA BABd egg2 agef|gede gedB AcBA G2:|
 |:Bc|dgg2 bgg2 bgag edBd|eBB2 GABd e2dB AGEG|
 DEGA BABd egg2 agef|gede gedB AcBA G2:|`,
-			theSessionId: "575",
+			theSessionId: 575
 		},
 		{
 			name: "Paddy on the Turnpike – crooked settings",
@@ -2974,8 +2980,8 @@ K:Gmixolydian
 GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
 DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
-[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`,
-			],
+[M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
+			]
 		},
 		{
 			abc: `X:1
@@ -2996,7 +3002,7 @@ effe f2Bf fece gaec|A2Aa geea ~f3a edcd|
 ~B3f fece ~f3g afec|A2af geea f2ec ABBA|
 ~f4 fece ~f3g afec|A2af geea ~f3a edcd|
 ~B3f fece ~f3g afec|A2af geea f2ec ABBA||`,
-			theSessionId: "7898",
+			theSessionId: 7898
 		},
 		{
 			abc: `X:1
@@ -3018,10 +3024,10 @@ dgg^f fgdg (3ggg dg agfd|c~f3 cAFA[1 BGAF DGGA:|2 BGAF DGGF||`,
 					artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
 					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=9",
 					notes: `(78 rpm) The mountain top; Lord Wellington’s [The bunch of keys]
-Gardiner, John Joe, 1893-1979`,
-				},
+Gardiner, John Joe, 1893-1979`
+				}
 			],
-			theSessionId: "344",
+			theSessionId: 344
 		},
 		{
 			groups: "su",
@@ -3035,7 +3041,7 @@ K: Ador
 EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
 |:ABcd eAA2 gedc BAGB|ABcd eaaf gedB BAA2 :|
 |: [M:7/8] e/f/gdBA2 e/f/gdB GABd|[M:4/4]eBdA a3f gedB [1BAA2 :| [2 BAAG !D.C.! |]`,
-			theSessionId: "40",
+			theSessionId: 40
 		},
 		{
 			abc: `X:1
@@ -3055,7 +3061,7 @@ G2dG BGdG ~G2dB cAFA| G2dG BGBc defd cAFA|
 G2dG BGdG ~G2dB cAFA| ~B3G ADFA defd cAFA||
 B3G ~A2AG BABd gedc|B2GB ADFA defd cAFA|
 B3G ~A2AG BABd gedc|BG~G2 ADFA defd cAFA||`,
-			theSessionId: "676",
+			theSessionId: 676
 		},
 		{
 			abc: `X:1
@@ -3072,7 +3078,7 @@ K:Bminor
  f3 a fecf|ec c2 BAFE|FB B2 ABce|afec B2 BA:|
  |:FBdc BF F2|EAcB AE E2|FBdB cefb|afec d3 c|
  Bcde fB B2|afec ABce|f2 bf afea|afec B2 BA:|`,
-			theSessionId: "556",
+			theSessionId: 556
 		},
 		{
 			groups: "su",
@@ -3083,7 +3089,7 @@ R: reel
 M: 4/4
 L: 1/16
 K: Gdor
-FGcG dGcG EFcF dFcF|FGcG`,
+FGcG dGcG EFcF dFcF|FGcG`
 		},
 		{
 			incipit: `X:1
@@ -3094,7 +3100,7 @@ L:1/16
 M:4/4
 K:Gdor
 GF|DG~G2 dGcG dGcA GFDC|DG~G2`,
-			theSessionId: "675",
+			theSessionId: 675
 		},
 		{
 			abc: `X:1
@@ -3110,7 +3116,7 @@ K:Adorian
 [M:5/4]EAAB cABd cABA G2GF GAGD | [M:4/4]EAAB cABd cABG [1 EAAG :| [K:A mixo] [2 ABcd ||
  |: eeec d2cd efec d2cd|[1 eeec dfed cABG A2cd:| [2 eage dged [K:Ador] cABd cABG||
  `,
-			theSessionId: "2120",
+			theSessionId: 2120
 		},
 		{
 			abc: `X:1
@@ -3128,7 +3134,7 @@ A|B2dB fBdB B2dB cAFA|B2dB fBdB cAFA BGGA|
 B2dB fBdB B2dB cAFA|BAGF Ggge fdcA BGG||
 z|gdd2 g2ag fcc2 fcAc|gdd2 g2ag fdcA BGG2|
 gdd2 g2ag fcc2 fcAF|GABc dgge fdcA BGG||`,
-			theSessionId: "229",
+			theSessionId: 229
 		},
 		{
 			abc: `X:1
@@ -3144,7 +3150,7 @@ K:Edorian
  B,E (3EEE B,EFE|EDB,D A,DFD|B,E (3EEE B,EGB|1 AFdF FEED:|2 AFdF FEEA||
  |:Bbab fgeg|fd (3ddd Adfd|Bbab fgeg|fdAF FEEA|
  Bbab fgeg|fd (3ddd Adfd|EFGA BABd|1 AFdF FEEA:|2 AFdF FEED||`,
-			theSessionId: "281",
+			theSessionId: 281
 		},
 		{
 			abc: `X:1
@@ -3189,8 +3195,8 @@ CFAF DFAF|CFAF cFAF|GddG (^cd)Gd|dGAd c/B/A F/E/D|
  c2 ac ca^Bc|acac ^Bcac|^Bcac a^bag|fdcA CCA^B||
  c2 ac ca^Bc|acac ^Bcac|d2 bd bbdb|bdbb dbdb|
  c2 ac ca^Bc|ac^Bc acac|^Bcac a^bag|fdcA [F4A,4]||(3efg [a2f2] [g2d2] [f2d2]||`,
-			theSessionId: "1091",
-			theSessionSettingId: "14331",
+			theSessionId: 1091,
+			theSessionSettingId: "14331"
 		},
 		{
 			abc: `X:1
@@ -3207,7 +3213,7 @@ K:Gmajor
  DGBG dGBG|~c3 d efga|bg ~g2 aged|1 cAFA ~G3 E:|2 cAFA G2 ga||
  |:bg ~g2 agef|gedB AGEG|DB, ~B,2 DEGA|Bdgb ageg|
  bg ~g2 agef|gedB AGEG|DB, ~B,2 DEGA|1 BdAF G2 ga:|2 BdAF ~G3 E||`,
-			theSessionId: "2584",
+			theSessionId: 2584
 		},
 		{
 			abc: `X:1
@@ -3224,7 +3230,7 @@ K:Bminor
  FBfe dB B2|ce e2 ce e2|f3e dB B2|cedc dB B2:|
  |:df f2 df f2|ce e2 ce e2|df f2 df f2|c2ec dB B2|
  dfaf dfaf|cege cege|dfeg fB B2|f3e fedc:|`,
-			theSessionId: "973",
+			theSessionId: 973
 		},
 		{
 			abc: `X:1
@@ -3240,7 +3246,7 @@ EAAB GABG|EAAB G2ED|EAA2 GABd|edge dBAG|
  EAAB GABG|EAAB G2ED|EAA2 GABd|edge d2ef||
  geee gede|geee a2ba|gee2 ged2|efge d2ef|
  geee gede|geee a2ga|bgab gabg|efge dBAG||`,
-			theSessionId: "430",
+			theSessionId: 430
 		},
 		{
 			abc: `X:1
@@ -3257,7 +3263,7 @@ A2-|:AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EAAc B2 cB|
  AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EA-AG A2 AB:|
  |:c2 ec Acec|=Gcec F2 FE|DEFA dAFA|GBef edcB|
  c2 ec Acec|=Gcec F2 FE|DEFA dAFA|GBAG A2 AB:|`,
-			theSessionId: "313",
+			theSessionId: 313
 		},
 		{
 			abc: `X:1
@@ -3271,8 +3277,8 @@ N:Setting entered in thesession by user Josh Kane on 2002-01-31
 K:Gmajor
 |:G2DG EGDE|G2BG AGEF|G2DG EGDG|(3EFG AB c2BA:|
  |:dBAB GB~B2|dB~B2 c2Bc|dBAB GBAB|(3EFG AB c2Bc:|`,
-			theSessionId: "141",
-			theSessionSettingId: "530",
+			theSessionId: 141,
+			theSessionSettingId: "530"
 		},
 		{
 			abc: `X:1
@@ -3289,7 +3295,7 @@ K:Gmajor
  gbag efge|dged B^cde|g2 fa gedB|AcBA GEED:|
  |:E2 BE dEBE|Ed^cB AFDF|~E3 F GFGB|AF (3FFF DFAF|
  EBBA B3 B|BAGA B^cde|f2 af gfe^c|dBAF GEED:|`,
-			theSessionId: "302",
+			theSessionId: 302
 		},
 		{
 			abc: `X:1
@@ -3304,7 +3310,7 @@ K:Adorian
 |:B|A3B A2GE|A2GA BddB|A3B AGEF|G3A Bdd:|
  g|egg2 a2ba|gabg aged|egg2 a2ga|bgaf gedg|
  egg2 a2bg|agbg aged|egg2 a2ga|bgaf ged|`,
-			theSessionId: "477",
+			theSessionId: 477
 		},
 		{
 			abc: `X:1
@@ -3318,7 +3324,7 @@ N:Setting entered in thesession by user gian marco on 2005-02-27
 K:Adorian
 |:A2AG A2cA|EGDE GEDG|EAAG ABcd|1 e/f/ged eAdc:|2 edcA G3^G||
  Addc d2cA|d2cA G2EG|Addc AB^cd|1 e/f/ged cAGG:|2 e/f/ged cAdc||`,
-			theSessionId: "4263",
+			theSessionId: 4263
 		},
 		{
 			abc: `X:1
@@ -3335,7 +3341,7 @@ G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG EDB,D|
  G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG ED D2||
  g2 eg fdBd|ge e2 gaba|ge e2 edBd|egfg edef|
  g2 fg edBd|ge e2 gaba|g2 ge a2 af|dgbg egdB||`,
-			theSessionId: "1767",
+			theSessionId: 1767
 		},
 		{
 			abc: `X:1
@@ -3354,7 +3360,7 @@ K:Dmajor
  d2de fefg|afdf gfed|(3Bcd ef gbag|fdec d2de|
  fdec d2de|fded B3c|dBBA dBBA|FADE FE E2|
  D2DF ADFA|dfed B3c|dBBA FAdB|AFEG FD D2:|`,
-			theSessionId: "891",
+			theSessionId: 891
 		},
 		{
 			abc: `X:1
@@ -3376,8 +3382,8 @@ C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
  C2DB,C2DF|GFGAB4-|BcBA F2BA|FDCDB,4||
  |:Gccc B3c|dcBG cAGF|GccB c2Bc|dcBG c3e|
  dGBG cAGA|BcBA FDB,C|DFFF GABG|FDCD B,4:|`,
-			theSessionId: "20851",
-			theSessionSettingId: "41404",
+			theSessionId: 20851,
+			theSessionSettingId: "41404"
 		},
 		{
 			abc: `X:1
@@ -3394,7 +3400,7 @@ K:Dmajor
  D2 FA FEED|d2 ef edfd|BD D2 Bd d2|AFEF D4:|
  |:afef d2 dB|A2 FD EDDb|afef d2 da|efae f2 fe|
  d2 ef edBA|BcdD FE E2|BD D2 Bd d2|AFEF D4:|`,
-			theSessionId: "1703",
+			theSessionId: 1703
 		},
 		{
 			abc: `X:1
@@ -3414,7 +3420,7 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
  fa{b}ag fddf|efgf e=cc2|dfeg (3fga gb|afge fdd2||
  f2df f2df|~e2=ce ~e2ce|f2df f2ed|cAGE {F}EDD2|
  f2df f2df|~e2=ce ~e2ce|dfeg (3fga gb|afge fdd2||`,
-			theSessionId: "1272",
+			theSessionId: 1272
 		},
 		{
 			abc: `X:1
@@ -3430,7 +3436,7 @@ G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
  GBAG FGAF|GBAc BdcA|GBAG FGAg|fdcA d2 Bc|
  d~g3 fgaf|d~g3 agfe|d~g3 fgag|fdcA dBcA|
  d~g3 fgaf|d~g3 afga|bgaf gbag|fdcA BGAF|`,
-			theSessionId: "227",
+			theSessionId: 227
 		},
 		{
 			abc: `X:1
@@ -3445,7 +3451,7 @@ K:Aminor
 |:A2 cA ABcA|GcEG G2 EG|A2 cA ABcd|ecdB cA A2:|
  agec dfed|cAGE G2 eg|agec d2cd|eaag a2ba|
  gedc dfed|cAGE|G2 EG|A2 cA ABcd|ecdB cA A2|`,
-			theSessionId: "21",
+			theSessionId: 21
 		},
 		{
 			groups: "su",
@@ -3464,7 +3470,7 @@ BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
    d2fd eBAB d2fa g2fg| afge fded BGEG c2Bc||
    dAAA dAFA dAAA defe| dAAA dAFA GEEG c2Bc|
    dAAA dAFA d^cde dgfe|dBcA BGAF GEEG c2||`,
-			theSessionId: "3",
+			theSessionId: 3
 		},
 		{
 			abc: `X:1
@@ -3480,7 +3486,7 @@ K:Gmajor
  G2 BG AGBG|B2 BA B2 d2|e2 ef edef|gfed BcBA:|
  |:G2 gf edeg|B2 BA BcBA|G2 gf edeg|a2 ag aeef|
  g2 gf edeg|BcBA B2 d2|edef edef|gfed BcBA:|`,
-			theSessionId: "75",
+			theSessionId: 75
 		},
 		{
 			abc: `X:1
@@ -3494,7 +3500,7 @@ N:Setting entered in thesession by user slainte on 2002-10-31
 K:Gmajor
 |:G2BG cGBG|ADDE FGAF|G2BG cGBG|1 Addc BGGF:|2 Addc BGGf||
  |:g2dg egde|g2bg fgaf|g2dg egdB|1 cAdc BGGf:|2 cAdc BGGF||`,
-			theSessionId: "1100",
+			theSessionId: 1100
 		},
 		{
 			abc: `X:1
@@ -3511,7 +3517,7 @@ K:Dmajor
  D2 FD GEFE|(3DDD FA dfef|geaf edcd|1 ed (3ddc dBAF:|2 edce d3 g||
  |:fdfa (3ggg ag|fdfa (3ggg ag|fd=cA BG (3GGG|ABcA dcAg|
  fdfa (3ggg ag|fdfa (3ggg ag|fd=cA BG (3GGG|1 ABcA [d3DA3] g:|2 ABcA dBAF||`,
-			theSessionId: "2172",
+			theSessionId: 2172
 		},
 		{
 			abc: `X:1
@@ -3527,7 +3533,7 @@ K:Dmixolydian
  (3DDD AD (3DDD AD|ABcA G~E3|cABG A2 AB|1 cded cAGE:|2 cded cAGc||
  |:Ad (3ddd Ad (3ddd|Ad (3ddd ed^cd|eaag a2 ag|eaag ed^cd|
  efge afge|dfed cAGB|cABG A2 AB|1 cded cAGc:|2 cded cAGE||`,
-			theSessionId: "138",
+			theSessionId: 138
 		},
 		{
 			abc: `X:1
@@ -3542,7 +3548,7 @@ K:Gmajor
 |:G2BG dGBG|G/G/G BG AFDF|G2BG dGBG|c/c/c Bc AFDF:|
  |:E6 cA|BGEB AFDF|E2~E2 E2cA|1 BdcB AFDF:|2 BdcB AFDf||
  |:gagf e3f|g2fg e^cAf|gagf eaaf|1 g2fg e^cAf:|2 g2 fg e^cAF||`,
-			theSessionId: "1268",
+			theSessionId: 1268
 		},
 		{
 			abc: `X:1
@@ -3559,7 +3565,7 @@ K:Dmajor
  fd ~d2 edcA|BcdB AGFD|EFGA (3Bcd ed|1 cAGE FDCE:|2 cAGE D2 z2||
  |:fd ~d2 AF ~F2|DFAd fdef|ge~e2 bece|dfed cAGE|
  DF~F2 AddA|B2gf edcB|Adfa gbed|1 cAGE D2 z2:|2 cAGE FDCE||`,
-			theSessionId: "181",
+			theSessionId: 181
 		},
 		{
 			abc: `X:1
@@ -3579,7 +3585,7 @@ K:Adorian
  A2eA cAeA|ABcd e2dB|ABcd eg~g2|dBGA BAA2:|
  |:a2ea a2ea|agbg agef|gedc BGBd|gfga bgeg|
  a2ea ageg|agbg agef|gedc BGBd|1 gedB BAA2:|2 gfge dBGB||`,
-			theSessionId: "579",
+			theSessionId: 579
 		},
 		{
 			abc: `X:1
@@ -3594,7 +3600,7 @@ K:Edorian
 |:E2BE dEBE|E2BE AFDF|E2BE dEBE|BABc dAFD:|
  d2fd c2ec|defg afge|d2fd c2ec|BABc dAFA|
  d2fd c2ec|defg afge|afge fdec|BABc dAFD|`,
-			theSessionId: "27",
+			theSessionId: 27
 		},
 		{
 			abc: `X:1
@@ -3611,7 +3617,7 @@ K:Adorian
  eA (3AAA BedB|AGEF G3 A|EA (3AAA GABd|1 gedB A2 (3EFG:|2 gedB A3 e||
  |:efge agfg|e ~a3 edBd|(3efg fa ~g3 e|dgge dBGB|
  cBcA d^cdB|efge a2 ga|bg (3ggg agab|1 gedB A3 e:|2 gedB A2 (3EFG||`,
-			theSessionId: "426",
+			theSessionId: 426
 		},
 		{
 			abc: `X:1
@@ -3628,7 +3634,7 @@ K:Edorian
  E (3EEE F GE (3EEE|B2AB AGED|Beed BA (3AAA|B2AB AGED:|
  |:Beed efg2|Beed edBA|Beed efge|a2eg fedA|
  Beed efg2|Beed edB2|a2eg fedA|B2AB AGED:|`,
-			theSessionId: "1050",
+			theSessionId: 1050
 		},
 		{
 			abc: `X:1
@@ -3645,7 +3651,7 @@ K:Dmajor
  DFAB AFAB|defe dBAf|efdB AF F2|AFEG FD D2:|
  |:faab afdf|a2 fd edBd|ABde fd d2|e2 fd edBd|
  ABde fd d2|edfd edBd|A2 dB AF F2|AFEG FD D2:|`,
-			theSessionId: "2881",
+			theSessionId: 2881
 		},
 		{
 			abc: `X:1
@@ -3663,8 +3669,8 @@ K:Dmajor
  DFAF DFAF|EGAG EGAG|DFAF DFAd|1 fedc d2AF:|2 feBc d2fd||
  |:Adfd Adfa|gfed e2B2|ABcd edeg|fdec d2fd|
  Adfd Adfa|gfed e2B2|ABcd efeg|fedc d2fd:|`,
-			theSessionId: "17457",
-			theSessionSettingId: "33504",
+			theSessionId: 17457,
+			theSessionSettingId: "33504"
 		},
 		{
 			abc: `X:1
@@ -3681,7 +3687,7 @@ K:Dmajor
  FD D2 FAGA|BG G2 Bcdg|fgaf gecd|1 eddc dBAF:|2 eddc d2 Ad||
  |:fddc dfaf|gfed cdeg|f2 fa gfed|cAAG A2 EG|
  FDA,D FA A2|BG G2 Bcdg|fgaf gecd|1 eddc d2 Ad:|2 eddc d4||`,
-			theSessionId: "2739",
+			theSessionId: 2739
 		},
 		{
 			abc: `X:1
@@ -3695,7 +3701,7 @@ N:Setting entered in thesession by user Will Harmon on 2001-06-12
 K:Amixolydian
 |:(3AAA Ag fdec|A2 A=c BG(3GGG|AGAg fdef|1 ~g3d BGGB:|2 ~g3d BG(3GGG||
  |:faaf gfed|(3cBA eA fAeA|faaf gfef|1 ~g3d BG(3GGG:|2 ~g3d BGGB||`,
-			theSessionId: "136",
+			theSessionId: 136
 		},
 		{
 			abc: `X:1
@@ -3713,7 +3719,7 @@ K:Adorian
  |:B|A/A/A a2 A/A/A g2|Aage ageg|G2 (BA) BGGB|c2 (BA) BGGB|
  [1A/A/A a2 A/A/A g2|Aage agea|gedB GABd|{B}e2 dB eAA:|
  [2A/A/A (BA) GAAB|A/A/A (BA) edda|gedB GABd|{d}e2 dB eAA||`,
-			theSessionId: "727",
+			theSessionId: 727
 		},
 		{
 			abc: `X:1
@@ -3731,7 +3737,7 @@ K:Dmajor
  fB (3BBB fa^ge|fece (3f^ga ec|ABce ~a3e|1 faec dfeg:|2 faec ~B3c||
  |:d2fd Adfd|c2ec Acec|d2fd Adfg|gfed cABc|
  d2fd Adfd|c2ec Acec|dfaf gfed|1 B2ec dcBc:|2 B2ec dBAG||[F8A8]||`,
-			theSessionId: "212",
+			theSessionId: 212
 		},
 		{
 			abc: `X:1
@@ -3750,8 +3756,8 @@ K:Fmajor
 B|:AFFCF2Ac|dfcf AGGB|AFFC DEFd|cAfc AFFB:|
  Acfc Afcf|dfcf AGGB|Acfc Afcf|egce fFFB|
  Acfc Afcf|dfcA GABd|cAFB AFAc|defg aff||`,
-			theSessionId: "18630",
-			theSessionSettingId: "36343",
+			theSessionId: 18630,
+			theSessionSettingId: "36343"
 		},
 		{
 			abc: `X:1
@@ -3768,7 +3774,7 @@ K:Bminor
  dB~B2 FB~B2|dfBd f2cB|~A3c e2fe|1 dAcA B2fe:|2 dAcA B2Bc||
  d2dc defg|a2ab afed|d'2 b2 afed|edef edBA|
  d2dc defg|a2ab afed|d'2 b2 afed|1 edef d2Bc:|2 edef d2fe||`,
-			theSessionId: "2870",
+			theSessionId: 2870
 		},
 		{
 			abc: `X:1
@@ -3782,7 +3788,7 @@ N:Setting entered in thesession by user Josh Kane on 2002-05-27
 K:Edorian
 |:GE~E2 E2AF|GE~E2 AFDF|GE~E2 EFGA|1 BcdB AFDF:|2 BcdB ABde||
  |:f2df efde|fedB ABde|f2df efdA|1 BcdB ABde:|2 BcdB AFDF||`,
-			theSessionId: "704",
+			theSessionId: 704
 		},
 		{
 			abc: `X:1
@@ -3798,7 +3804,7 @@ dc|BG G2 AGFG|DG G2 A2 dc|BG G2 AGAB|cABG A2 dc|
  BG G2 AGFG|DGG2 A2 dc|BG G2 AGAB|cABG A2 Bd|
  e2 dg e2 dg|e2 dB A2 Bd|eB B2 gB B2|cABG A2 Bd|
  e2 ed ea a2|gedB AcBA|G2 Bd g2 gb|agef gedc|`,
-			theSessionId: "1619",
+			theSessionId: 1619
 		},
 		{
 			abc: `X:1
@@ -3818,7 +3824,7 @@ K:Gmajor
  dgg2 bgag|eaab adga|bg~g2 agef|(3gfe dc BGGA||
  dgg2 abag|~e2ab adga|bg~g2 agef|(3gfe dc BGGA|
  dgg2 bgag|eaab adga|bg~g2 agef|(3gfe dc (3Bcd gd:|`,
-			theSessionId: "565",
+			theSessionId: 565
 		},
 		{
 			abc: `X:1
@@ -3833,7 +3839,7 @@ K:Dmajor
 |:FDDF ABAF|GAAF GFED|FGAF D2 (3efg|1 fdec dBBG:|2 fdec defg||
  a2fa dafa|g2e=c Gceg|a2fa dafa|g2ag fdd2|
  a2fa dafa|g2e=c Gceg|fage fdec|dBBG FDD2||`,
-			theSessionId: "2854",
+			theSessionId: 2854
 		},
 		{
 			abc: `X:1
@@ -3850,7 +3856,7 @@ K:Gmajor
  Gfge ~d2Bd|gfge fgag|(3bag (3agf gedB|cBAG FGAB||
  Bdgd edgd|(3Bcd gd BG (3GGG|(3ABc gc acgc|(3ABc gc BG (3GGG|
  Bdgd edgd|(3Bcd ef ~g3a|(3bag (3agf gedB|cBAG FGAB||[B,4G4]||`,
-			theSessionId: "195",
+			theSessionId: 195
 		},
 		{
 			abc: `X:1
@@ -3865,7 +3871,7 @@ K:Adorian
 AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
  cdef g2 ge|f2 fd gfed|cdef ~g3e|fdec A2 AB|
  cdef gfeg|~f3d g2 fg|(3agf ge fdec|dfec A2 AB||`,
-			theSessionId: "237",
+			theSessionId: 237
 		},
 		{
 			groups: "su",
@@ -3883,7 +3889,7 @@ K:Ddorian
  F2DE FGAB|cAGF EDCE|DEFG AddB|cAGE EDD2:|
  d2 Ad dcAG|F2DF ECC2|d3(d d)cAG|ABcA d3e|
  fded cAAG|EGcG EDCE|DEFG AddB|cAGE EDD2:|`,
-			theSessionId: "263",
+			theSessionId: 263
 		},
 		{
 			abc: `X:1
@@ -3900,7 +3906,7 @@ K:Amixolydian
  cdBc ABcd|egfg edBd|gfgd efed|c2B2 A2:|
  |:eg|aAAA aAbA|aAAA agef|gBBB gBaB|gBBB gfeg|
  aAAA aAbA|aAAA agef|gfgd efed|cdBc A2:|`,
-			theSessionId: "24",
+			theSessionId: 24
 		},
 		{
 			abc: `X:1
@@ -3916,8 +3922,8 @@ K:Edorian
  efed B2Bc|dedA FDDF|Beed B3c|d2AF GEED:|
  |:GBeB GEED|FAAG FDED|GBeB GEED|FEDF E3F|
  GBeB GEED|FAAG FDED|G2GF GFEG|BGFG E3F:|`,
-			theSessionId: "257",
-			theSessionSettingId: "242",
+			theSessionId: 257,
+			theSessionSettingId: "242"
 		},
 		{
 			abc: `X:1
@@ -3936,8 +3942,8 @@ A2G2 S|:F3d dcde|d2A2 F2A2|G3d dcde|d2B2 G2B2|
  A3e edef|e2c2 B2A2|1 dFAd fedc|B2A2 {B}A2G2:|2 d2AA BAFA|d6ed||
  [K:A]|:cecA EAce|d2B2 B4|GBBB ddBd|ffed c2ed|
  cecA EAce|d2B2 B4|GBBB ddBd|fece [1 a2ed:|2 a2ASG||`,
-			theSessionId: "17379",
-			theSessionSettingId: "33333",
+			theSessionId: 17379,
+			theSessionSettingId: "33333"
 		},
 		{
 			abc: `X:1
@@ -3954,7 +3960,7 @@ K:Gmajor
  BdBG ABGE|DGBG AGAc|BG G2 A2 Bd|gedc BG G2:|
  dgbg ageg|gedB GABd|eaag ageg|dgbg ageg|
  dgbg ageg|gedB GABd|eaag egfa|gedc BG G2:|`,
-			theSessionId: "2896",
+			theSessionId: 2896
 		},
 		{
 			abc: `X:1
@@ -3972,7 +3978,7 @@ K:Gmajor
  AG~G2 AGBG|DGBG AGEG|DGGF GABc|dBAc BG~G2||
  d2 (3Bcd edge|dGBG AGEG|d2 (3Bcd eg~g2|agbg ageg|
  d2 (3Bcd edge|dGBG AGEG|d2 (3Bcd eg~g2|agab aged||`,
-			theSessionId: "605",
+			theSessionId: 605
 		},
 		{
 			abc: [
@@ -3996,10 +4002,10 @@ N:from https://thesession.org/tunes/23211#setting47315
 N:Setting entered in thesession by user GoPlayer on 2023-06-02
 K:Gmajor
 |:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
- [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`,
+ [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`
 			],
-			theSessionId: "23211",
-			theSessionSettingId: "47315",
+			theSessionId: 23211,
+			theSessionSettingId: "47315"
 		},
 		{
 			abc: `X:1
@@ -4018,10 +4024,10 @@ K:Dmixolydian
 			references: [
 				{
 					artist: "Denis Ryan, fiddle; Cathal McConnell, flute",
-					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=16",
-				},
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=16"
+				}
 			],
-			theSessionId: "2154",
+			theSessionId: 2154
 		},
 		{
 			abc: `X:1
@@ -4038,7 +4044,7 @@ AAG|:F2AF DFAF|G2BG DGBG|A2cA EABc|dzde edAG|
  F2AF DFAF|GBBA ~B3z|cdef gecA|1 eddc dAAG:|2 eddc defg||
  |:a2fd Adfd|Adfd edcd|~e3f ~g3a|be (3eee bege|
  azfd Adfd|Adfd edcB|A2FA BcdB|1 AFEF defg:|2 AFEF DAAG||`,
-			theSessionId: "1024",
+			theSessionId: 1024
 		},
 		{
 			abc: `X:1
@@ -4054,7 +4060,7 @@ K:Dmajor
  F2 AF GFED|DFAF GFED|cdef gece|1 eddc d2 AG:|2 eddc d2 ef||
  |:gB (3BBB gBaB|gB (3BBB gfed|(3cBA eA fAeA|(3Bcd ef gfef|
  gB (3BBB gBaB|gB (3BBB gfed|cdef gece|1 eddc d2 ef:|2 eddc d2 AG||`,
-			theSessionId: "408",
+			theSessionId: 408
 		},
 		{
 			abc: `X:1
@@ -4073,7 +4079,7 @@ EF|:GBEG (3BBB AF|GFGA BdAG|FADF ADFA|(3ddd cd BAGF|
  Beed e2 ef|g2 fg edBc|dedB AGFA|1 GEFD ~E3 A:|2 GEFD ~E3 F||
  |:G2 GF GABc|dBAG FDDA|Be (3eee edef|gefd e2 (3ABc|
  dcdB AGFA|GEFD EFGA|dedB AGFA|GEFD E2 (3DEF:|`,
-			theSessionId: "367",
+			theSessionId: 367
 		},
 		{
 			abc: `X:1
@@ -4093,7 +4099,7 @@ K:Dmajor
  FA(3AAA FADF|ADFA BAGF|GABd AF(3FFF|E(3EEEG FDD2:|
  |:dffe fgfe|dBAB ADFA|ceec e2ec|B2dA BAFA|
  dffe fgfe|dBAB AFDF|GABd AF(3FFF|E(3EEEG FDD2:|`,
-			theSessionId: "1040",
+			theSessionId: 1040
 		},
 		{
 			abc: `X:1
@@ -4110,13 +4116,13 @@ K:Dminor
  d3 e f2 ag|fedc AFDE|1 F3 G AGFG|Addc d2 (3CDE:|2 F3 G AFDE|FDEC D2 de||
  f2 ag fedf|ecgc acgc|f2 ag fede|fdec Adde|
  f3 g (3agf (3gfe|fedc AFDE|F3 G AGFG|1 Addc d2 de:|2 Addc d2 (3CDE||`,
-			theSessionId: "2805",
+			theSessionId: 2805
 		},
 		{
 			references: [
 				{
-					notes: "A crooked tune",
-				},
+					notes: "A crooked tune"
+				}
 			],
 			abc: [
 				`X: 1
@@ -4173,8 +4179,8 @@ cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG  ||
 P:Ⅱ
 F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 [M:3/2]dgeg ^fdcA G2gf | [M:4/2] egce ^fdaf gbag fgfd!D.C.!|]
-`,
-			],
+`
+			]
 		},
 		{
 			abc: `X:1
@@ -4193,7 +4199,7 @@ a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
  eA ~A2 cdec|degd BAGB|AEEE cdec|d2gd BAAd|
  |:edef g2af|gedc Bcdg|eaag a3 a|aged ^cdef|geaf fgef|
  gedc BAGB|AEEE cdec|d2gd BAag:|`,
-			theSessionId: "504",
+			theSessionId: 504
 		},
 		{
 			abc: `X:1
@@ -4209,7 +4215,7 @@ K:Gmajor
  dg g2 dgeg|d2 de dcAG|FGAd fdeg|fdcA G4:|
  |:dggf gagf|dg g2 bgaf|dffe fgfe|df f2 afgf|
  dggf gagf|dg g2 bgaf|dcde fdeg|fdcA G4:|`,
-			theSessionId: "1596",
+			theSessionId: 1596
 		},
 		{
 			abc: `X:1
@@ -4225,7 +4231,7 @@ K:Edorian
  BE~E2 BAFA|BE~E2 BAFA|A2Bc dfec|dBAF E4:|
  |:Beed e2de|f2df efdB|ABAF D2FD|FA~A2 BAFA|
  Beed e2de|f2df efdB|A2Bc dfec|dBAF E4:|`,
-			theSessionId: "363",
+			theSessionId: 363
 		},
 		{
 			abc: `X:1
@@ -4244,7 +4250,7 @@ K:Edorian
  g2 (3(fga) gedB|(3(EFG) BG AFDF|EFGB {c}d2 (B/c/d)|1 DFAF GEE:|2 DFAF GEE z||
  |:B2 ef gbef|dfaf dfbf|g3 a (3(bag) gf|gefd Beeg|
  bg (3(efg) fedA|(3(Bcd) fe dBAF|EFGB {c}d2 (B/c/d)|DFAF GEE z:|`,
-			theSessionId: "3435",
+			theSessionId: 3435
 		},
 		{
 			abc: `X:1
@@ -4261,7 +4267,7 @@ K:Eminor
  BE (3EEE Gz BG|AcBA GEDE|G2 (3Bcd edBA|GEFD E2:|
  |:GA|Beed ~e3f|g2fg edBA|G2BG dGBA|GABe dBA2|
  Beed ~e3f|g2fg edBA|G2 (3Bcd edBA|GEFD E2:|`,
-			theSessionId: "1020",
+			theSessionId: 1020
 		},
 		{
 			abc: `X:1
@@ -4278,7 +4284,7 @@ Bc|:dGBd c=FAc|BGBd gfdc|Bcde =fdeg|fdBd c=FAc|
  BGGF GABc|dGBd c2 Bc|dgfa gbag|1 fdcA GABc:|2 fdcA G2 Bc||
  dggf g2 gf|dgBg dcBc|de=fe f2 fe|d=fcf dcBc|
  dggf gfga|bgaf gfde|=f2 fe fdeg|1 fdcA GABc:|2 fdcA G4||`,
-			theSessionId: "4525",
+			theSessionId: 4525
 		},
 		{
 			abc: `X:1
@@ -4297,7 +4303,7 @@ K:Dmajor
  FAdf a2bf|afdf eB~B2|GBge fgef|dBAG FDDE|
  FAdf a2bf|afdf eB~B2|ABde f2af|g2fg efge|
  af~f2 dB~B2|ABdf eB~B2|GBge fgef|dBAG FDD||`,
-			theSessionId: "3943",
+			theSessionId: 3943
 		},
 		{
 			abc: `X:1
@@ -4318,7 +4324,7 @@ K:Dmajor
  adfa bdgb|affe fgaf|gefd ecdB|1 cABc defg:|2 AFGE D2 DE||
  |:FA A2 FADF|ADFA bagf|g2 fg efde|cdBc ABAG|
  FA A2 FADF|ADFA bagf|gefd ecdB|1 AFGE D2 DE:|2 AFGE D4||`,
-			theSessionId: "2716",
+			theSessionId: 2716
 		},
 		{
 			abc: `X:1
@@ -4335,7 +4341,7 @@ K:Dmajor
  AFFF EFDE|F2 AF BFAF|E2 BE dEBE|ABde fd d2:|
  |:fddc dfag|fddc dfaf|eA A2 eAfA|eA A2 efge|
  fddc dfag|fddc dfaf|g2 gf gbag|faeg fd d2:|`,
-			theSessionId: "50",
+			theSessionId: 50
 		},
 		{
 			abc: `X:1
@@ -4354,7 +4360,7 @@ K:Gmajor
  ~f2ef defg|(3agf ga fdAB|c2cB cBAB|~c2dc AGG2|
  fd~d2 ad~d2|fded cAAB|cedB cdeg|abga fdde|
  ~f3g ~a3g|~f2ed cAAB|cBcB cBAB|~c2dc AGGB||`,
-			theSessionId: "1333",
+			theSessionId: 1333
 		},
 		{
 			abc: `X:1
@@ -4369,7 +4375,7 @@ K:Dmajor
 B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
  cdec A3d|cdec ABcB|cdec ABAG|EG=cA BGEd|
  cdec A3d|cdec ABcd|cdeg fdec|ABcA BdcB||`,
-			theSessionId: "1370",
+			theSessionId: 1370
 		},
 		{
 			groups: "su",
@@ -4392,11 +4398,11 @@ K:Gmajor
 album: The High Seas`,
 					url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
 					artists:
-						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
-				},
+						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
+				}
 			],
-			theSessionId: "474",
-			theSessionSettingId: "22920",
+			theSessionId: 474,
+			theSessionSettingId: "22920"
 		},
 		{
 			abc: `X:1
@@ -4413,7 +4419,7 @@ K:Gmajor
  |:gedB GABd|gdBd eaaf|gedB GABG|ABcd eA~A2:|
  |:dggf ~g2ge|dggd egdB|dggf ~g2gd|egdB AGAB:|
  |:G2BG dGBG|GABG AGAB|~G2BG dGBd|egdB AGAB:|`,
-			theSessionId: "511",
+			theSessionId: 511
 		},
 		{
 			abc: `X:1
@@ -4430,7 +4436,7 @@ K:Bdorian
  f2ef dB~B2|f2ef defg|a2ed cAec|ABBA B2 z2:|
  |:=GBBA Bcde|fdec defd|eA~A2 cAFA|EFAB cABA|
  =GBBA Bcde|f2ec defd|ea~a2 efec|ABBA B2 z2:|`,
-			theSessionId: "3531",
+			theSessionId: 3531
 		},
 		{
 			groups: "ALORA",
@@ -4446,7 +4452,7 @@ K: B minor
 de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
-"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
+"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `
 		},
 		{
 			abc: `X:1
@@ -4463,24 +4469,24 @@ K:Gminor
  d2 cd BGGB|AFcF dFcF|d2 Bd AFFA|1 Ggdc BGBc:|2 Ggdc BGGF||
  |:DGBG EGcB|Acfe dbfd|DGBG EGcB|AfcA BGGF|
  DGBG EGcB|Acfe dbfd|fdBe cAFE|1 DG^FA BGG=F:|2 DG^FA BGBc||`,
-			theSessionId: "140",
+			theSessionId: 140
 		},
 		{
-			abc: `X:1
-T:Seán Sa Cheo
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/177#setting177
-N:Setting entered in thesession by user JD on 2001-06-29
-K:Adorian
-(3Bcd|e2df eABd|~e3c d2BA|Beed eggd|(3Bcd ge dG (3Bcd|
- e2df eA (3Bcd|~e3c d2Ba|beed eggd|(3Bcd ge dG (3Bcd||
- cA~A2 cA (3Bcd|cA~A2 dG (3Bcd|cA~A2 EAcA|(3Bcd gd BG (3Bcd|
- cA~A2 cA (3Bcd|cA~A2 d3d|cA~A2 eA~A2|(3Bcd ge defg||
- |:a2c'a bac'a|~a2c'a ~e3f|1 g2bg agbg|~g2bg efge:|2 ~g3b agef|feed ed||`,
-			theSessionId: "177",
+			incipit: `X: 6
+T: Seán Sa Cheo
+R: reel
+M: 4/4
+L: 1/16
+K: Amix
+e2df eABd e2ef d2BA|`,
+			theSessionId: 177,
+			references: [
+				{
+					url: "https://donegalfiddlemusic.bandcamp.com/track/sean-sa-cheo",
+					artists: "Néillidh Boyle, fiddle",
+					notes: `1930s`
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -4496,7 +4502,7 @@ K:Edorian
  B2A=c BEED|EB,EB ~B2EB|BAGF GABc|dBAG FDFA:|
  |:d2ef gfed|fB~B2 fB~B2|d2ef gfed|ceae ceae|
  d2ef gfed|fB~B2 fB~B2|~a2ge fdec|dBAG FDFA:|`,
-			theSessionId: "1963",
+			theSessionId: 1963
 		},
 		{
 			abc: `X:1
@@ -4511,7 +4517,7 @@ K:Dmajor
 |:~A3G FAdB|AGFD EA,~A,2|~A3G FAdB|1 ABde fddB:|2 ABde fdde||
  f2df efdf|afdf edBd|f2df efdA|B/c/dAG FDDe|
  f2df efdf|afdf edB2|ABAB dfbf|afeg fddB||`,
-			theSessionId: "1522",
+			theSessionId: 1522
 		},
 		{
 			abc: `X:1
@@ -4527,7 +4533,7 @@ K:Dmajor
  FD D2 FDGE|FD D2 GECE|FD D2 F2 FD|1 EDCD EFGE:|2 EDCD EFGA||
  dffe f2 fe|dcdB AF F2|ceed efec|dcdB AFDF|
  dffe fgfe|d2 dB AF F2|cdef gecd|1 eddc d2 AB:|2 eddc d4||`,
-			theSessionId: "3033",
+			theSessionId: 3033
 		},
 		{
 			abc: `X:1
@@ -4544,7 +4550,7 @@ K:Dmajor
  A2dA BdAF|DFAF EGFE|DFAF GBed|cABc d2:|
  |:fg|(3aba fd Adfa|(3gag ec Acef|~g3f gbag|fgef d2 ef|
  (3aba fd Adfa|(3gag ec Acef|~g3f gbag|fgef d2:|`,
-			theSessionId: "754",
+			theSessionId: 754
 		},
 		{
 			abc: `X:1
@@ -4563,7 +4569,7 @@ K:Dmajor
  "G"(3BcB GB d2cB|"D"(3ABA FA d2cd|"A"efed cBAG|FABc "D"d2:|
  |:d2|"G"dBGd BGdA|"D"FdAF d2cd|"A"e2d2 (3cdc (3BcB|"D"ABAG Fddd|
  "G"dBGd BGdA|"D"FdAF d2cd|"A"efed cBAG|FABc "D"d2:|`,
-			theSessionId: "5933",
+			theSessionId: 5933
 		},
 		{
 			aka: ["Cherry Tree", "Beauty Spot"],
@@ -4580,10 +4586,10 @@ A2GB A2dB cBcG EFGB|A2GB A`,
 					notes: `(1974) The star of Munster; The cherry tree (at 1:07)
 Cherry Tree AKA Beauty Spot`,
 					artists: "Paddy Ryan, fiddle",
-					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=2",
-				},
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=2"
+				}
 			],
-			theSessionId: 1270,
+			theSessionId: 1270
 		},
 		{
 			groups: "ALORA,su",
@@ -4610,26 +4616,26 @@ P:Variations/embellishments
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2024/?track=8",
 					artists: "Seán Maguire, fiddle",
-					notes: "The skylark; Maud Miller",
+					notes: "The skylark; Maud Miller"
 				},
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=9",
 					artists: "Seán Maguire, fiddle",
 					notes: `Joe O'Dowds; Skylark; Maud Millar
-He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good stuff!`,
+He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good stuff!`
 				},
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=3",
 					artists: "Andy McGann, fiddle, speech; Felix Dolan, piano",
-					notes: "Maud Miller; Hand me down the tackle [Tom Steele's]",
+					notes: "Maud Miller; Hand me down the tackle [Tom Steele's]"
 				},
 				{
 					url: "https://www.youtube.com/watch?v=Mk5llmB-rLY",
 					artists: "Brid Harper, fiddle; Harry Bradley, flute",
-					notes: "Maud Miller; Donegal reel",
-				},
+					notes: "Maud Miller; Donegal reel"
+				}
 			],
-			theSessionId: 1177,
+			theSessionId: 1177
 		},
 		{
 			abc: `X:1
@@ -4649,7 +4655,7 @@ a2gf afgf dgfd cFAd|c2Bd cdfa gfga g2fg|
 af~f2 afgf dgfd cFAd|c2Bd cdfa gfga f3g|
 a2gf afgf dgfd cFAd|c2Bd cdfa gfga bagf|
 ~a3g ~f3c dcfd cAFD|CF~F2 DFBd cbag f3e||`,
-			theSessionId: "2316",
+			theSessionId: 2316
 		},
 		{
 			abc: `X:1
@@ -4670,8 +4676,8 @@ K:Dmajor
  cFFc dFFd|cFFc BFFB|cFFc d2cB|AcBA AF (3FFF:|
  cAAc dBBd|ecce fdaf|eaad caac|BeeB e4|
  cAAc dBBd|ecce fdaf|eaad caac|Beec A4:|`,
-			theSessionId: "15517",
-			theSessionSettingId: "29085",
+			theSessionId: 15517,
+			theSessionSettingId: "29085"
 		},
 		{
 			abc: `X:1
@@ -4688,7 +4694,7 @@ K:Dmajor
  d2 fd Adfd|~d2 fd edBc|d2 fd Adfd|BdAG FDDA|
  [1 d2 fd Adfd|cdef ~g2 fg|afge fede|BdAG FDD2:|
  [2 ~a3b agfa|~g2 ef gbag|faeg fdAF|GFEF GABc||`,
-			theSessionId: "800",
+			theSessionId: 800
 		},
 		{
 			abc: `X:1
@@ -4706,7 +4712,7 @@ K:Amajor
  cAEA cAeA|Bcde f2fg|agfe fedc|1 dfec A2ed:|2 dfec A2AF||
  EAAB cABA|GABc dBEB|GBEB GBEB|GBEB A2cA|
  eAAB c2BA|GABc defg|agfe fedc|1 dfec A2AF:|2 defg a2||`,
-			theSessionId: "2911",
+			theSessionId: 2911
 		},
 		{
 			abc: `X:1
@@ -4724,7 +4730,7 @@ ABc||dD (3DDD EDB,E|DEFA BAFA|d2cd (3Bcd AF|DEFD EDB,D|
  FD (3DDD EDB,E|DEFA BAFA|dfec dBAG|FDEF D4|
  |:{^g}a2^ga fd (3ddd|fdad fddf|(3gfe be geef|(3gfe be geeg|
  ~f3a ~g3e|fdec dcBA|Bcde (3f^ga ec|dBAG FDD2:|`,
-			theSessionId: "1949",
+			theSessionId: 1949
 		},
 		{
 			abc: `X:1
@@ -4740,7 +4746,7 @@ gf|:eBBA A~B3|dBAc BAGF|EDB,D G2 FG|EDB,E DB,A,G,|
  B,E (3EEE EDB,D|GE (3EEE EFGA|(3Bcd ed Bdgb|afdf efgf:|
  |:e~B3 g~B3|defg afdf|(3ggg bg fgaf|egfd e~B3|
  afdf edB^c|dBAF FEDF|EAcA Bdgb|afdf efgf:|`,
-			theSessionId: "129",
+			theSessionId: 129
 		},
 		{
 			abc: `X:1
@@ -4756,7 +4762,7 @@ gf|:eB~B2 eBdB|AF~F2 EDB,A,|B,E~E2 B,EGE|FB~B2 FBdf|
  eB~B2 eBdB|AF~F2 EDB,A,|B,E{G}ED EFGA|(3Bcd ed e2gf:|
  |:eB~B2 A2FA|d2 df edef|df~f2 dfbf|afdf edBc|
  d2 fd BcdB|AF~F2 ABde|~f2ef dfbf|afdf e2gf:|`,
-			theSessionId: "649",
+			theSessionId: 649
 		},
 		{
 			abc: `X:1
@@ -4770,7 +4776,7 @@ N:Setting entered in thesession by user b.maloney on 2002-03-13
 K:Ddorian
 |:dcAG ~F2EF|~E2 DE FD D2|dcAG FGAA|Addc d2 fe:|
  |:f2fe fagf|ecgc acgc|f2fe fagf|edcG Add2:|`,
-			theSessionId: "589",
+			theSessionId: 589
 		},
 		{
 			abc: `X:1
@@ -4789,7 +4795,7 @@ d2 Ad fdAF|GFEF GABc|d2 Ad fdAF|GAAG FDDd|
  dcde fdAF|GFEF GABc|d2 Ad fdAF|GAAG FD D2|
  fggf gbag|fggf gfeg|fggf gbag|(3fga ea fddc|
  dfaf gbag|fgaf gfeg|feec dcBA|^GABc dgfe||`,
-			theSessionId: "1941",
+			theSessionId: 1941
 		},
 		{
 			abc: `X:1
@@ -4808,11 +4814,11 @@ K:Edorian
 			references: [
 				{
 					artist: "Denis Ryan, fiddle",
-					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=15",
-				},
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=15"
+				}
 			],
-			theSessionId: "1004",
-			theSessionSettingId: "14222",
+			theSessionId: 1004,
+			theSessionSettingId: "14222"
 		},
 		{
 			abc: `X:1
@@ -4828,8 +4834,8 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
  e2 dB eBdB|A2 GA BAAB|GB B2 GBdB|A2 GA BG G2||
  g2 fg egde|g2 fg eaaf|g2 fg egdB|A2 AG BGBd|
  g2 fg egde|gbag eaaf|gbag egdB|A2 GA BG G2||`,
-			theSessionId: "15252",
-			theSessionSettingId: "5373",
+			theSessionId: 15252,
+			theSessionSettingId: "5373"
 		},
 		{
 			aka: ["The Connacht"],
@@ -4850,10 +4856,10 @@ K:Dmajor
 				{
 					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=17",
-					notes: "The Connacht; Cooley's; The Bucks of Oranmore",
-				},
+					notes: "The Connacht; Cooley's; The Bucks of Oranmore"
+				}
 			],
-			theSessionId: "538",
+			theSessionId: 538
 		},
 		{
 			abc: `X:1
@@ -4870,7 +4876,7 @@ eg|a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 eg|
  ^cAcA B2 ed|^cAcA E2 ed|^cAcA B2 ed|^c2 A2 A2 ed|
  ^cAcA B2 ed|^cAcA E2 ed|^cAcA B2 ed|^c2 A2 A2 AB||
  |:cdec BcdB|ABAF GF E2|cdec BcdB|1 c2 A2 A2 AB:|2 c2 A2A2||`,
-			theSessionId: "880",
+			theSessionId: 880
 		},
 		{
 			abc: `X:1
@@ -4886,7 +4892,7 @@ K:Dmajor
  d2fd Adfe|defg afdf|(3fga fd (3fga fd|Bgec d2:|
  |:cd|eAfA gAaA|eaaf gfed|AeBe cede|efed cABc|
  dAeA fAgA|eaaf gfed|(3fga fd (3fga fd|Bgec d2:|`,
-			theSessionId: "97",
+			theSessionId: 97
 		},
 		{
 			abc: `X:1
@@ -4902,7 +4908,7 @@ K:Dmajor
  d2fd gefe|dfed cdeg|~f3d ~g3e|cdec dcdf:|
  |:edcB ABcd|eA~A2 eAfA|edcB A2de|fgfe dcdf|
  edcB ABcd|eA (3AAA eAfA|edcB ~A3e|fgfe d3c:|`,
-			theSessionId: "1027",
+			theSessionId: 1027
 		},
 		{
 			abc: `X:1
@@ -4917,7 +4923,7 @@ K:Dmajor
 |:A|defe dBAF|BFAF E3A|defe dBAF|BFAF D3:|
  E|:F/E/DAD BDAD|G/F/EBE G/F/EBE|F/E/DAD FA A2|1 B/c/dAF D2DE:|2 B/c/dAF Defg||
  |:a2af a3f|gece gece|faaf abag|1 faec defg:|2 faec d3||`,
-			theSessionId: "1428",
+			theSessionId: 1428
 		},
 		{
 			abc: `X:1
@@ -4937,7 +4943,7 @@ geg|:decd BcAB|GG G3 geg|decd BcAc|BB B3 geg|
  {DEF}G3 {G}A BGBd|gg g3 GBd|gg g3 GBd|g^fga g=fed|
  A3 {A}B cBcd|eaae aAaa|eaae aAaa|eaae a2 b2|
  c'4 c'2 ef|g^fga gecd|egec dedB|1 c6 B2:|2 c2 z2 [c4E4]||`,
-			theSessionId: "6183",
+			theSessionId: 6183
 		},
 		{
 			abc: `X:1
@@ -4953,7 +4959,7 @@ K:Dmajor
  fdec d2AG|FGAB =cAGc|Ad~d2 fdec|Addc d2e:|
  |:~f3g a2ga|bgag fdde|~f3g afga|bgaf g2ag|~f3g a2ga|
  bgag fdda|1 bgaf gbag|fdef g2ag:|2 bgaf gfed|(3Bcd ef gaag||`,
-			theSessionId: "1934",
+			theSessionId: 1934
 		},
 		{
 			abc: `X:1
@@ -4969,7 +4975,7 @@ K:Dmajor
  fedf edcB|A2FA DAFA|BGed cABc|eddc d2 de:|
  |:f2fg fedc|Bggf g2gf|edcB ABce|baa^g abag|
  f2fg fedc|Bggf g2gf|edcB ABcd|eddc d2 de:|`,
-			theSessionId: "103",
+			theSessionId: 103
 		},
 		{
 			abc: `X:1
@@ -4984,7 +4990,7 @@ K:Dmixolydian
 |:fage d2dB|AD (3FED EFGB|A3B cGcd|ed (3B^cd efge:|
  f2df afdf|f2df efge|f2df afdf|eA (3B^cd efge|
  f2df afdf|f2df efge|fa~a2 afdf|eA (3B^cd efge||`,
-			theSessionId: "2610",
+			theSessionId: 2610
 		},
 		{
 			groups: "ALORA",
@@ -5004,7 +5010,7 @@ P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
 `,
-			theSessionId: "325",
+			theSessionId: 325
 		},
 		{
 			abc: `X:1
@@ -5020,7 +5026,7 @@ K:Amajor
  [1 edB d2B A3 ABd:|2 edB d2B A3 A2||
  a|a2e ede f2e d2f|edB d2B A2B d2a|a2e ede f2e d2f|
  [1 edB d2B A3 A2:|2 edB d2B A3 ABd||`,
-			theSessionId: "7444",
+			theSessionId: 7444
 		},
 		{
 			abc: `X:1
@@ -5037,7 +5043,7 @@ g3|:fed B2d A2d F2B|A2F DEF E3 E2g|
  |:fef a2a baf a2f|fef a2f g3 f2e|
  [1fef a2a baf a2f|d2f a2f d3 d2g:|
  [2fga efg fed B2d|ABA GFE D3||`,
-			theSessionId: "1527",
+			theSessionId: 1527
 		},
 		{
 			abc: `X:1
@@ -5054,7 +5060,7 @@ D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G GFD G2F|
  D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G B2A G2F|
  G3 GFG Bcd|c3 cBc d2g|f2d dcB Bcd|cAF AGF G2F|
  G3 GFG Bcd|c3 cBc d2g|f2d dcB Bcd|cAF AGF G3||`,
-			theSessionId: "11427",
+			theSessionId: 11427
 		},
 		{
 			abc: `X:1
@@ -5071,7 +5077,7 @@ K:Amajor
  E2 c E2 c cBA|F2 d F2 d dcB|G2 B E2 e fed|1 cec BAG AGF:|2 cec BAG Aag||
  |:~f3 edc ~e3|efe edc eag|~f3 fed e2 c|dcB BcA GFE|
  EAc A2 E A2 =G|FAd A2 F ABA|GBe d2 B fed|1 cec BAG Aag:|2 cec BAG A3||`,
-			theSessionId: "3511",
+			theSessionId: 3511
 		},
 		{
 			abc: `X:1
@@ -5087,7 +5093,7 @@ K:Amajor
 |:F2c BA~F- F2E|F2c BAc fec|B3 BAB c2A|1 ~B3 BAB cBA:|2 ~B3 BAB cef||
  a3 fec fec|B3 BAB cef|a3 baf afe|fec Bce fec|
  a2f fec fec|B3 BAB cef|a3 baf afe|fec fec BAB||`,
-			theSessionId: "2410",
+			theSessionId: 2410
 		},
 		{
 			groups: "ALORA,SU",
@@ -5104,10 +5110,10 @@ K:Adorian
  |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
 			references: [
 				{
-					notes: "SU #3 in Elisabeth Kelly set",
-				},
+					notes: "SU #3 in Elisabeth Kelly set"
+				}
 			],
-			theSessionId: "953",
+			theSessionId: 953
 		},
 		{
 			abc: `X:1
@@ -5121,7 +5127,7 @@ N:Setting entered in thesession by user Will Harmon on 2002-09-07
 K:Adorian
 |:A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|~G3 G2 E DEG:|
  |:c2 A BAG AGE|cBA BGE DEG|c2 A BAG AGE|~G3 G2 E DEG:|`,
-			theSessionId: "953",
+			theSessionId: 953
 		},
 		{
 			name: "The Kid On The Mountain",
@@ -5162,14 +5168,14 @@ E3 FEF G2F E3 BcA BGD|`,
 			references: [
 				{
 					artists: "Michael Gorman",
-					url: "https://music.youtube.com/watch?v=Ftm1147osmo",
+					url: "https://music.youtube.com/watch?v=Ftm1147osmo"
 				},
 				{
 					artists: "Andy McGann",
-					url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
-				},
+					url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm"
+				}
 			],
-			theSessionId: "52",
+			theSessionId: 52
 		},
 		{
 			abc: `X:1
@@ -5185,7 +5191,7 @@ K:Gmajor
 |:G2B BAG ABc|d2g gfd BcA|G2B BAG ABc|1 ded ded ((3BcB) A:|2 ded dge fga||
  b2a bge dgb|a2a aga bge|e2e edB ABc|d2d dge fga|
  b2g gba ged|e2e ede ged|A2A ABG ABc|d2d dgf dcA||`,
-			theSessionId: "2087",
+			theSessionId: 2087
 		},
 		{
 			abc: `X:1
@@ -5202,7 +5208,7 @@ D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF AFE|
  D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF EFG|
  AB/c/d def ede|f2a abf afd|g2f ede fdA|B2B BAF EFG|
  AB/c/d def ede|f2a abf afd|g2f ede fdA|B2B BAF AFE|`,
-			theSessionId: "2143",
+			theSessionId: 2143
 		},
 		{
 			abc: `X:1
@@ -5217,7 +5223,7 @@ K:Gmajor
 |:AAA dcA d2c|AGA dcA GFG|AAA dcA d2e|fag ege dBG:|
  GBB GBd ~g3|GBB GBG FED|GBB GBd gag|fgf efe dBA|
  GBB GBd ~g3|GBB GBG FED|GBB GBd gag|fgf efe dBG||`,
-			theSessionId: "8976",
+			theSessionId: 8976
 		},
 		{
 			abc: `X:1
@@ -5235,8 +5241,8 @@ N:Setting entered in thesession by user Daniel Parker on 2019-01-09
 K:Amixolydian
 |:c2A AEA ABA|cBc Ace ded|c2A AEA ABA|BGB gfe ded:|
  |:cde efd e3|cae efd ged|cae efd efg|1 agf gfe dBG:|2 agf gfe ded||`,
-			theSessionId: "17637",
-			theSessionSettingId: "34009",
+			theSessionId: 17637,
+			theSessionSettingId: "34009"
 		},
 		{
 			abc: `X:1
@@ -5252,7 +5258,7 @@ N:Setting entered in thesession by user b.maloney on 2002-03-22
 K:Gmajor
 |:B2 G AGE GED|E/F/GE DEG A2 c|BAG AGE GED|E/F/GE DEF G2 A:|
  Bd/d/d edB BAG|Bd/d/d edB A3|Bd/d/d edB BAG|GED DEF G3:|`,
-			theSessionId: "612",
+			theSessionId: 612
 		},
 		{
 			abc: `X:1
@@ -5268,7 +5274,7 @@ K:Gmajor
 |:BcB BAB c3|BAG B/c/dB ABc|BAG B/c/dB c2e|1 dBG GAF G2A:|2 dBG GAF GB/^c/d||
  g3 ed=c Bcd|ecA ABG A2d|~g3 edc Bcd|gdB G/A/BA GB/^c/d|
  g3 ed=c Bcd|ecA ABG A2d|def gfe def|g/a/bg agf ged||`,
-			theSessionId: "1550",
+			theSessionId: 1550
 		},
 		{
 			groups: "alora",
@@ -5287,16 +5293,16 @@ K:Dmajor
 |"D"F2A B2F A2F|"G"G2B d2e dBG|"D"F2A B2F A2F|"A"E2D E2F GFE|
  "D"F2A B2F A2F|"G"G2B d2e dBG|"Bm"F2A B2F A2F|"A"E2D E2F GAB||
  "F#m"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"A"A2G F2G A2B|
- "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`,
+ "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`
 			],
 			references: [
 				{
 					artists: "Altan, 1991",
 					url: "https://music.youtube.com/watch?v=BP_nsOCubf0",
-					notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm",
-				},
+					notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm"
+				}
 			],
-			theSessionId: "104",
+			theSessionId: 104
 		},
 		{
 			abc: `X:1
@@ -5310,7 +5316,7 @@ N:Setting entered in thesession by user gian marco on 2004-01-02
 K:Gmajor
 d|:cAG GAG GBd|cAG GAB cAd|cAG GAG GAG|1 cAA fed cAd:|2 cAA fed cAG||
  ddg gbf g2f|ddg gfg abc'|bag afa gfd|1 cAA fed cAG:|2 cAA fed cAd||`,
-			theSessionId: "2337",
+			theSessionId: 2337
 		},
 		{
 			groups: "su",
@@ -5330,8 +5336,8 @@ K:Adorian
 |:edB ABA Agf|edB def gfg|edB ABA ABA|G2B dB/c/d dgf:|
  |:efg aba a2g|efg aba ged|1 efg aba a2g|ede age dBG:|
  [2 ede aga b2a|gfg age dBG||`,
-			theSessionId: "14242",
-			theSessionSettingId: "25937",
+			theSessionId: 14242,
+			theSessionSettingId: "25937"
 		},
 		{
 			abc: `X:1
@@ -5345,7 +5351,7 @@ N:Setting entered in thesession by user EldKatt on 2002-10-11
 K:Edorian
 |:B2E E2F G2A|Bcd e2c d3|B2E E2F G2A|~B3 ABG FED:|
  |:g2e e2d efg|f2d d2c def|g2e e2d e2c|dcB AGF G2E:|`,
-			theSessionId: "1030",
+			theSessionId: 1030
 		},
 		{
 			groups: "ALORA,SU",
@@ -5440,7 +5446,7 @@ w: And~in all me life I ne’er did see A maid so neat a-bout the sole
 [P:Chorus]F/E/| [M:3/4]"D"DD DE FE | [M:4/4] "Bm"DB,-B,2 z4, | [M:3/4] "D"D>D DE FA | [M:4/4] "G"B4z2z
 w: She had twen-ty eight-een six-teen four-teen * Twelve ten eight six four two none 
 B/c/ | "Bm"dc BA "F#m"FE DE | [M:3/4] "Em7"FF "F#m7"FE "G6"DB, | [M:4/4]"A"A,4 z2z
-w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`,
+w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`
 		},
 		{
 			abc: `X:1
@@ -5455,7 +5461,7 @@ K:Adorian
 [A,2E2] ~(3A,/B,/A,/A, E>A,B,>A,|G,>A,B,>G D<G,B,>G,|[A,2E2] ~(3A,/B,/A,/A, E>A,B,>A,|G,>A,B,>G, (3A,B,A, G,>B,:|
  [A,E]>ba>g e>de>f|g2 ~(3g/f/g/g d>gB>G|A>ba>g e>de>f|(3gfe d>B (3ABA ^G>B|
  [AE]>ba>g e>^de>f|g2 ~(3g/f/g/g d>gf>g|(3agf g>e f>dA>F|(3GFE D>B, (3A,B,A, G,>B,||`,
-			theSessionId: "3012",
+			theSessionId: 3012
 		},
 		{
 			abc: `X:1
@@ -5472,7 +5478,7 @@ A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]|
  A,>CE>C D>FA>F|E>A .d/.c/.B/.A/ B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]||
  {g}a>A c<f e>Ac>A|E>Ac>A B<B, B,>g|{g}a>A c<f e>Ac>A|E>A B<e c<A A>g|
  {g}a>A c<f e<c {g}a>A|e>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]||`,
-			theSessionId: "11206",
+			theSessionId: 11206
 		},
 		{
 			abc: `X:1
@@ -5487,7 +5493,7 @@ K:Amajor
 |:A,>EC>E (3D/D/D/D F>D|E>Ac>A B<B, B,2| ~A,2 A,>E (3D/D/D/D F>D |1 E>BG>B c<A A2:|2 E>BG>B c<A ||
  (3Ace||a>e (3fga e>Ac>A|d2 (3cdc B<B, B,2| a>ef>a e>Ac>A| E>BG>B c<A (3Ace|
  a>ef>a e>Ac>A|d2 (3cdc B<B,B,>C|A,>EC>E (3D/D/D/D F>D |E>BG>B c<A A2||`,
-			theSessionId: "2918",
+			theSessionId: 2918
 		},
 		{
 			abc: `X:1
@@ -5502,7 +5508,7 @@ K:Amixolydian
 B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>ED/C/B,/A,/ G,>B,|~A,>A E>D C<A, ~A,>B,|
  ~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>E D/C/B,/A,/ G,>d|c>e B/c/d/B/ c<A ~A||
  |:^g|~a>e c>A B<=G ~ =G>^g|~a>e c>A e<Ac>A|d>B c>A d/c/B/A/ =G>g|f/g/a/f/ e>a c<A ~A:|`,
-			theSessionId: "7681",
+			theSessionId: 7681
 		},
 		{
 			abc: `X:1
@@ -5517,7 +5523,7 @@ K:Amajor
 |:AFEF AB c2|(3dcB cA BAFA|AFEF ABcd|efec (3BcB A2:|
  feae f2 af|eccA BAFA|feae f2 af|eccA (3BcB A2|
  feae f2 af|eccA BAFA|AFEF ABcd|efec (3BcB A2|`,
-			theSessionId: "3007",
+			theSessionId: 3007
 		},
 		{
 			abc: `X:1
@@ -5535,7 +5541,7 @@ K:Amajor
  [2 (3GFE (3dcB A2 (3efg|:a2e>a c>aA>a|(3cBA e>A a>ec>e|b2f>b d>bB>f|
  (3dcB f>B b>fd>f|a2e>a c>aA>a|(3cBA e>A a>ec>e|(3def (3efg (3aed (3cBA|
  [1 (3GFE (3dcB A2 (3efg:|2 (3GFE (3dcB A2||`,
-			theSessionId: "170",
+			theSessionId: 170
 		},
 		{
 			abc: `X:1
@@ -5551,7 +5557,7 @@ K:Dmajor
  D2 F>A D>A F<A|A,2 C>E A,>E C<E|D2 F>A D>A F<A|(3Bcd (3efg f<d d:|
  A|d2 f>d g>e f>d|g2 e>d c>B (3ABc|d2 f>d g>e f>d|(3Bcd (3efg f<d d>A|
  d/d/d f>d g>e f>d|B2 c>d (3efd (3cBA|(3fga (3gfe (3dcB (3AGF|(3GAB (3ABc d2 d:|`,
-			theSessionId: "1762",
+			theSessionId: 1762
 		},
 		{
 			abc: `X:1
@@ -5578,8 +5584,8 @@ A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
  A2 e>d c<e A>d|(3cBA c>e a>e c>A|(3agf (3gfe (3fed (3ed=c|(3BAG B>d g<d B<G|
  a2 c/B/c a2 {cB}c<a|A2 c>e a>e c>A|a2 f>a g2 d>=c|(3BAG B>d g<d B<G|
  a2 c/B/c a2 {cB}c<a|A2 c>e a>e c>A|(3agf (3gfe (3fed (3ed=c|(3BAG B>d (3gfe (3dcB|`,
-			theSessionId: "16343",
-			theSessionSettingId: "30955",
+			theSessionId: 16343,
+			theSessionSettingId: "30955"
 		},
 		{
 			abc: `X:1
@@ -5595,7 +5601,7 @@ A|BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGGA|
  BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGBd||
  (3gag fg (3BBB BA|G2 ag fdef|(3gag fg (3BBB BA|GBdc BGBd|
  (3gag fg (3BBB BA|G2 ag fdcA|GBdB cdef|gbaf g3 A||`,
-			theSessionId: "655",
+			theSessionId: 655
 		},
 		{
 			abc: `X:1
@@ -5612,8 +5618,8 @@ K:Dmajor
 O:Cape Breton
  F>G|:A>BA>F !uppermordent!E2F>uG|A>B!uppermordent!A>F A/A/A {A}!mordent!c2|d<BA>F !uppermordent!E>DE>F|1 D<B,!mordent!C>A,!uppermordent!D2(3DFG:|2 D<B,!mordent!C>A,!uppermordent!D2(3DDF||
  |:A>fa>f !mordent!g2f>e|d>fa>b !uppermordent!a>fe>f|d<B!uppermordent!A>F !uppermordent!E>D (3EEF|1 D<B, (3CCA,!uppermordent!D2 (3DDE:|2 D<B, (3CCA,!uppermordent!D2(3DFG||`,
-			theSessionId: "14694",
-			theSessionSettingId: "27107",
+			theSessionId: 14694,
+			theSessionSettingId: "27107"
 		},
 		{
 			abc: `X:1
@@ -5628,7 +5634,7 @@ K:Dmajor
 A2 B>c d2 A>F|G2 E<D E2 G2|A<AB>c d2 F>G|A2 G<E D2 D2-|HD8||
  K: DMix
  A>GE>D C>DE<G|A>GE>D G2 G2|A>GE>D C>DE>G|A>AG>E D2 D2-|HD8||`,
-			theSessionId: "10313",
+			theSessionId: 10313
 		},
 		{
 			abc: `X:1
@@ -5642,7 +5648,7 @@ N:Setting entered in thesession by user Erik-Fiddler on 2006-11-13
 K:Amixolydian
 |:B/c/d[A3e3] f e^d e2|efed BA B/c/d|e2 efed .g2|BGGA BA B/c/d:|
  |:eaa^g a2 ed|c<AAB cdef|g2 .f/g/a g2 d=c|BGGA BA B/c/d:|`,
-			theSessionId: "6366",
+			theSessionId: 6366
 		},
 		{
 			abc: `X:1
@@ -5658,8 +5664,8 @@ a|f2 e>c e>fae|f2 ec fBBa|f2 e>c e>fae|faec eAAa|
  f2 ec efae|f2 ec fBBa|f2 ec efge|faec eAA||
  ||a|eAec A/A/A ef|e<Ae>c f>BB>a|e<Ae>c e<f=g<e|f>ae>c e>AA>a|
  e<Ae>c A/A/A e>f|e>fe>c f>BB>=a|f2 e>c e>f=g<e|f>ae>c e>AA|`,
-			theSessionId: "24127",
-			theSessionSettingId: "49877",
+			theSessionId: 24127,
+			theSessionSettingId: "49877"
 		},
 		{
 			origin: "England, Northumberland",
@@ -5680,10 +5686,10 @@ K:Amajor
 				{
 					artists: "Kevin Lees, fiddle; Sebastian Bloch, guitar",
 					url: "https://youtu.be/R4pu91Lt7sc",
-					notes: "“The Good Tune”. 2020-08-06",
-				},
+					notes: "“The Good Tune”. 2020-08-06"
+				}
 			],
-			theSessionId: "1194",
+			theSessionId: 1194
 		},
 		{
 			groups: "alora",
@@ -5718,11 +5724,11 @@ M:3/4
 					artists:
 						"Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
 					url: "https://youtu.be/_ZrfjHeFEr0",
-					notes: "@ Gamla Teatern, Östersund 2010",
-				},
+					notes: "@ Gamla Teatern, Östersund 2010"
+				}
 			],
-			theSessionId: "1016",
-			theSessionSettingId: "36756",
+			theSessionId: 1016,
+			theSessionSettingId: "36756"
 		},
 		{
 			groups: "su",
@@ -5742,7 +5748,7 @@ DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
  |:"C"e2d2G2|"G"B4Bd|"C"e2d2G2|"G"B4Bd|"C"e2d2g2|"Em"B2dB AG|
  "Am"A2AG AB|"D"A4Bd|"C"e2d2g2|"G"B2dB AG|"D7"A2d3c|"Em"B3B AG|
  "Am"EA AG AB|"Em"AG E2GE|1 "C"DEG2"D7"G2|"G"G4Bd:|2 "C"DEG2"D7"A2|"G"G4||`,
-			theSessionId: "10668",
+			theSessionId: 10668
 		},
 		{
 			abc: `X:1
@@ -5762,7 +5768,7 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
  =c3G E2|B3G E2|(A6|A4)FG|
  A3d AF|G2A2 FD|=C2 (D4|D4) B,2|
  =C3B, =C2|D4 D=C|(D6|D4)||`,
-			theSessionId: "8296",
+			theSessionId: 8296
 		},
 		{
 			groups: "alora",
@@ -5775,7 +5781,7 @@ M: 3/4
 L: 1/8
 K: Emin
 B2 Be BA|FG E2 GA`,
-			theSessionId: "3809",
+			theSessionId: 3809
 		},
 		{
 			abc: `X:1
@@ -5796,7 +5802,7 @@ K:Dmajor
  g3 a g2|g2 f2 g2|a3 b a2|a2 f2 g2|
  a3 b a2|a4 g2|f3 g f2|f2 e2 d2|
  B4 g2|f a3 c2|e d3 c2|1 d3 A df:|2 d6||`,
-			theSessionId: "5067",
+			theSessionId: 5067
 		},
 		{
 			abc: `X:1
@@ -5813,7 +5819,7 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
  d4 f2|B4 e2|A4 d2|F4 E2|D4 e2|B4 e2|A4 dc|d6|d4 de:|
  |:f2 fe d2|ed ef a2|b4 a2|f4 ed|e4 a2|f4 e2|d4 B2|A4 BA|
  F4 E2|D4 f2|B4 e2|A4 a2|ba gf ed|e4 dc|d6|1 d4 de:|2 d6||`,
-			theSessionId: "449",
+			theSessionId: 449
 		},
 		{
 			groups: "su",
@@ -5823,8 +5829,8 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
 				{
 					artists: "Tommy Peoples, fiddle",
 					url: "https://www.itma.ie/playlists/tommy-peoples-mcconnell-recordings/?track=14",
-					notes: "The Cathal McConnell Tapes: Tape One; early 1970s",
-				},
+					notes: "The Cathal McConnell Tapes: Tape One; early 1970s"
+				}
 			],
 			incipit: `
 X: 1
@@ -5833,7 +5839,7 @@ L: 1/16
 K: Dmaj
 FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
 `,
-			theSessionId: "5516",
+			theSessionId: 5516
 		},
 		{
 			groups: "su",
@@ -5843,14 +5849,14 @@ FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
 				{
 					artists: "Tommy Peoples, fiddle",
 					url: "https://www.itma.ie/playlists/tommy-peoples-mcconnell-recordings/?track=6",
-					notes: "The Cathal McConnell Tapes: Tape One; early 1970s",
-				},
+					notes: "The Cathal McConnell Tapes: Tape One; early 1970s"
+				}
 			],
 			incipit: `X:1
 M: 4/4
 L: 1/16
 K: G
-GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`,
+GA|B2BA B2ge d2ge dBGA | B2BA B2ge dB`
 		},
 		{
 			groups: "su",
@@ -5868,10 +5874,10 @@ EG| A2A>B A2(3Bcd eged B2AG|EG`,
 					notes: `Fintan Vallely - Traditional Irish Flute Music, 1979
  Doolin whistle player Micho Russell’s version of an old Scottish tune, as notated by Mícheál Ó hÁlmháin.
  [F. Vallely’s notes](https://imusic.ie/fintan-vallely-traditional-irish-flute-music/)`,
-					url: "https://fintanvallely.bandcamp.com/track/johnny-cope-2",
-				},
+					url: "https://fintanvallely.bandcamp.com/track/johnny-cope-2"
+				}
 			],
-			theSessionId: "4953",
+			theSessionId: 4953
 		},
 		{
 			name: "Shanahan’s",
@@ -5884,11 +5890,11 @@ K: Gmaj
 			references: [
 				{
 					artists: "Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar",
-					url: "https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush",
-				},
+					url: "https://brianhughesdavesheridan.bandcamp.com/track/hornpipe-reels-shanahans-eanach-mhic-coil-n-the-leitrim-thrush"
+				}
 			],
-			theSessionId: "8753",
-			theSessionSettingId: "44975",
+			theSessionId: 8753,
+			theSessionSettingId: "44975"
 		},
 		{
 			name: "The Boys Of Bluehill",
@@ -5901,7 +5907,7 @@ L: 1/8
 K: Dmaj
 FA| BAFA DAFA BA (3Bcd e2de|fagf 
 `,
-			theSessionId: "651",
+			theSessionId: 651
 		},
 		{
 			name: "The Home Ruler",
@@ -5913,7 +5919,7 @@ L: 1/8
 K: Dmaj
 AF|D2FA DAFA dfed B2dB|A2AB AFDE 
 `,
-			theSessionId: "1020",
+			theSessionId: 1020
 		},
 		{
 			name: "Fahey’s Fiddle",
@@ -5930,10 +5936,10 @@ DFA d2e dcA ~G3 | A`,
 					artists: "Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars",
 					url: "https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
 					notes: `album: The Northern Concertina
-SU: 1st & 3rd in the Fahey’s Fiddle set `,
-				},
+SU: 1st & 3rd in the Fahey’s Fiddle set `
+				}
 			],
-			theSessionId: "124",
+			theSessionId: 124
 		},
 		{
 			name: "Haste To The Wedding",
@@ -5944,15 +5950,15 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `,
 				{
 					artists: "Malachy Bourke, Brian Bourke & Frankie Gavin",
 					url: "https://music.youtube.com/watch?v=hF9fGvdO8gw&t=106",
-					notes: "in G",
-				},
+					notes: "in G"
+				}
 			],
 			incipit: `X: 1
 L: 1/8
 M: 12/8
 K: D
 AFA Agf ede fdB|`,
-			theSessionId: "582",
+			theSessionId: 582
 		},
 		{
 			incipit: `X: 19
@@ -5969,9 +5975,9 @@ EDE BAB EBE AFD|EDE ~B3`,
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
 					artists:
 						"Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
-					notes: "Miss Walsh, jig ; Morrison's, jig",
-				},
-			],
+					notes: "Miss Walsh, jig ; Morrison's, jig"
+				}
+			]
 		},
 		{
 			name: "My Darling Asleep",
@@ -5986,10 +5992,10 @@ e|fdd cAA BGG A2G|`,
 			references: [
 				{
 					artists: "Stockton’s Wing",
-					url: "https://music.youtube.com/watch?v=HkuABOYkWws",
-				},
+					url: "https://music.youtube.com/watch?v=HkuABOYkWws"
+				}
 			],
-			theSessionId: "76",
+			theSessionId: 76
 		},
 		{
 			name: "Denis Murphy’s",
@@ -6006,11 +6012,11 @@ f/g/f/e/ d>B AD FA | GE e>d`,
 					artists: "Planxty",
 					url: "https://youtu.be/q5Blc3k16rE",
 					notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
-        `,
-				},
+        `
+				}
 			],
-			theSessionId: "357",
-			theSessionSettingId: "46411",
+			theSessionId: 357,
+			theSessionSettingId: "46411"
 		},
 		{
 			name: "John Ryan’s",
@@ -6024,11 +6030,11 @@ K: D
 d2d2 BcdB A2F2 A2F2 | `,
 			references: [
 				{
-					notes: "#3 in the (ALORA) Denis Murphy’s set",
-				},
+					notes: "#3 in the (ALORA) Denis Murphy’s set"
+				}
 			],
-			theSessionId: "441",
-			theSessionSettingId: "28845",
+			theSessionId: 441,
+			theSessionSettingId: "28845"
 		},
 		{
 			name: "The £42 Cheque",
@@ -6042,10 +6048,10 @@ Ad Bd/B/ AD FA|GE BE`,
 			rhythm: "polka",
 			references: [
 				{
-					notes: "#2 in the (ALORA) Denis Murphy’s set",
-				},
+					notes: "#2 in the (ALORA) Denis Murphy’s set"
+				}
 			],
-			theSessionId: "786",
+			theSessionId: 786
 		},
 		{
 			name: "Palmer’s Gate",
@@ -6060,10 +6066,10 @@ GA|BE~E2 GABG AdBA GEED|~G3A `,
 				{
 					artists:
 						"Brian Hughes, whistle; Dave Sheridan, fiddle; ? guitar; ? bodhrán",
-					url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1",
-				},
+					url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1"
+				}
 			],
-			theSessionId: "1020",
+			theSessionId: 1020
 		},
 		{
 			name: "The Wise Maid",
@@ -6077,11 +6083,11 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
 			rhythm: "reel",
 			references: [
 				{
-					notes: "#3 in the (ALORA) Maud Millar set",
-				},
+					notes: "#3 in the (ALORA) Maud Millar set"
+				}
 			],
-			theSessionId: "118",
-			theSessionSettingId: "55404",
+			theSessionId: 118,
+			theSessionSettingId: "55404"
 		},
 		{
 			name: "Jerry McMahon’s",
@@ -6098,11 +6104,11 @@ EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
 					url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs",
 					notes: `From 2:10 onwards. Dunno who the backing guitar & perc are by.
           I think he’s playing this in G (dorian), not A.
-          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`,
-				},
+          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`
+				}
 			],
-			theSessionId: "4263",
-			theSessionSettingId: "45736",
+			theSessionId: 4263,
+			theSessionSettingId: "45736"
 		},
 		{
 			name: "Lucy Campbell",
@@ -6116,13 +6122,13 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
 			rhythm: "reel (single)",
 			references: [
 				{
-					notes: "Compare with The Bucks Of Oranmore",
+					notes: "Compare with The Bucks Of Oranmore"
 				},
 				{
 					artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
 					url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
 					notes: `I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
-Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`,
+Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`
 				},
 				{
 					notes: `Chords (TBC):
@@ -6145,10 +6151,10 @@ D D D A  | G D A D
 
 Part A - alternative 1st bar
 D - (D/F) (D, Dsus4, G or Em) D - Em - 
-\`\`\``,
-				},
+\`\`\``
+				}
 			],
-			theSessionId: "1552",
+			theSessionId: 1552
 		},
 		{
 			name: "The Bucks Of Oranmore",
@@ -6162,26 +6168,26 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
 			rhythm: "reel (single)",
 			references: [
 				{
-					notes: "Compare with Lucy Campbell",
+					notes: "Compare with Lucy Campbell"
 				},
 				{
 					artists: "Stockton’s Wing",
 					url: "https://open.spotify.com/track/4BRY3qk2hYUcVkmnIhLthV",
-					notes: "0:46 onwards",
+					notes: "0:46 onwards"
 				},
 				{
 					artists: "Paddy Glackin & Paddy Keenan",
-					url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104",
+					url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104"
 				},
 				{
 					artists:
 						"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
 					url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
 					notes: `3:04 onwards.
-        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`,
-				},
+        Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
+				}
 			],
-			theSessionId: "2",
+			theSessionId: 2
 		},
 		{
 			name: "The Dogs Among The Bushes",
@@ -6197,7 +6203,7 @@ BGG2 DGG2 BGG2 cedc | `,
 				{
 					artists: "Éimhear Flannery, whistle; Paul De Grae, guitar",
 					url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
-					notes: "in a set with The Killavil Fancy",
+					notes: "in a set with The Killavil Fancy"
 				},
 				{
 					notes: `Chords (TBC):
@@ -6205,16 +6211,16 @@ BGG2 DGG2 BGG2 cedc | `,
 G - - C | G - D - | G - - C | G - D - ||
 G - - - | D - - - | G - - (D) | G - D - ||
 \`\`\`
-`,
-				},
+`
+				}
 			],
 			scores: [
 				{
 					type: "tune",
 					name: "tradchords",
-					url: "https://tradchords.org/?tune=595",
-				},
-			],
+					url: "https://tradchords.org/?tune=595"
+				}
+			]
 		},
 		{
 			name: "The Drunken Tinker",
@@ -6229,10 +6235,10 @@ EAAG EGDG EA~A2 fAeA| `,
 			references: [
 				{
 					url: "https://comhaltas.ie/comhaltaslive/comhaltaslive_628_9tribute_concert_to_the_late_ashling_murphy/",
-					notes: "from 4:32 onwards",
-				},
+					notes: "from 4:32 onwards"
+				}
 			],
-			theSessionId: "1555",
+			theSessionId: 1555
 		},
 		{
 			name: "The Killavil Fancy",
@@ -6248,7 +6254,7 @@ DGBG A2BA GEE2 cEGE | `,
 				{
 					artists: "Éimhear Flannery, whistle; Paul De Grae, guitar",
 					url: "https://www.youtube.com/watch?v=EjNKOWT7RL8",
-					notes: "in a set with The Dogs Among The Bushes",
+					notes: "in a set with The Dogs Among The Bushes"
 				},
 				{
 					notes: `Chords (TBC):
@@ -6256,10 +6262,10 @@ DGBG A2BA GEE2 cEGE | `,
 G (D) C - | G (D) C - | G (D) C - | G (D) C - ||
 G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
 \`\`\`
-`,
-				},
+`
+				}
 			],
-			theSessionId: "576",
+			theSessionId: 576
 		},
 		{
 			name: "The Wind That Shakes The Barley",
@@ -6276,11 +6282,11 @@ A2AB AFED B2BA BcdB |`,
 					artists: "Tony DeMarco, fiddle; Felix Dolan, piano",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=3",
 					notes: `Wind that shakes the barley; Reel of Bogie 
-          #2 in the (ALORA) Maud Millar set`,
-				},
+          #2 in the (ALORA) Maud Millar set`
+				}
 			],
-			theSessionId: "116",
-			theSessionSettingId: "45357",
+			theSessionId: 116,
+			theSessionSettingId: "45357"
 		},
 		{
 			name: "Denis Murphy’s",
@@ -6292,8 +6298,8 @@ K: Dmaj
 A2D FED F2A A2f|gfe`,
 			origin: "Ireland",
 			rhythm: "slide",
-			theSessionId: "159",
-			theSessionSettingId: "35527",
+			theSessionId: 159,
+			theSessionSettingId: "35527"
 		},
 		{
 			groups: "su",
@@ -6328,7 +6334,7 @@ X: 1
 M: 18/16
 L: 1/16
 K: D mixo
-FGA AFA Bc2 BAG FAF GED|`,
+FGA AFA Bc2 BAG FAF GED|`
 		},
 		{
 			abc: [
@@ -6345,9 +6351,9 @@ N:Setting entered in thesession by user Jeremy on 2002-04-27
 K:Gmajor
 |:BGG AGE DEG|BAG DEG A3|BGG AGE DEG|cBA BGE D3:|
  Bdd dge dBG|Bdd dBG A3|Bdd dge dBG|cBA BGE D3|
- Bdd dge dBG|Bdd dBG A3|gfe fdB cBA|cBA BGE D3||`,
+ Bdd dge dBG|Bdd dBG A3|gfe fdB cBA|cBA BGE D3||`
 			],
-			theSessionId: "661",
+			theSessionId: 661
 		},
 		{
 			name: "The Holly Bush",
@@ -6359,10 +6365,10 @@ K: Dmix
 A2FA DAFG ABde fded|`,
 			references: [
 				{
-					notes: "Composed by Finbarr Dwyer",
-				},
+					notes: "Composed by Finbarr Dwyer"
+				}
 			],
-			theSessionId: 1566,
+			theSessionId: 1566
 		},
 		{
 			groups: "su",
@@ -6379,15 +6385,15 @@ K:Gmajor
 |:D|GB BG|FA- AD|GA Bc|de/d/ cA|
  GB- BG|FA AB|c/B/A FA|G2 G:|
  |:B/c/|dg ga|bg gf/e/|dg- gb|ab/a/ g/f/e|
- dg- ga|bg ge|dB c/B/A|G2- G:|`,
+ dg- ga|bg ge|dB c/B/A|G2- G:|`
 			],
 			references: [
 				{
-					notes: "Nb 1 / 2nd polka set",
-				},
+					notes: "Nb 1 / 2nd polka set"
+				}
 			],
-			theSessionId: "11600",
-			theSessionSettingId: "21930",
+			theSessionId: 11600,
+			theSessionSettingId: "21930"
 		},
 		{
 			name: "Cutting Bracken",
@@ -6400,10 +6406,10 @@ K: Amin
 AA ~a2 ge ~g2|ed`,
 			references: [
 				{
-					notes: "Nb 2 / 2nd polka set",
-				},
+					notes: "Nb 2 / 2nd polka set"
+				}
 			],
-			theSessionId: 647,
+			theSessionId: 647
 		},
 		{
 			name: "The Sliabh Lucan",
@@ -6416,10 +6422,10 @@ K: Emin
 EB B>A BG E/F/G|FA`,
 			references: [
 				{
-					notes: "Nb 3 / 2nd polka set",
-				},
+					notes: "Nb 3 / 2nd polka set"
+				}
 			],
-			theSessionId: 11676,
+			theSessionId: 11676
 		},
 		{
 			name: "The Gold Ring",
@@ -6443,20 +6449,20 @@ Manus Lunny: Bouzouki
 Seá n Óg Potts: Uilleann pipes, Keyboards
 Damien Quinn: Bodhrán
 Steve White: Congas, Percussion
-Dónal Lunny: Bouzouki, Keyboards`,
+Dónal Lunny: Bouzouki, Keyboards`
 				},
 				{
 					artists: "Sult Ceol",
 					url: "https://www.youtube.com/watch?v=iPmJHJ0wYiQ&t=7s",
-					notes: "harp, concertina, whistle and Uileann Pipes",
+					notes: "harp, concertina, whistle and Uileann Pipes"
 				},
 				{
 					artists:
 						"Cillian Vallely, Uilleann pipes; Niall Vallely, concertina; Alan Murray, guitar",
 					url: "https://www.youtube.com/watch?v=0E39mRYES8M",
-					notes: "The Gold Ring / The Hearty Boys of Ballymote",
-				},
-			],
+					notes: "The Gold Ring / The Hearty Boys of Ballymote"
+				}
+			]
 		},
 		{
 			abc: [
@@ -6474,7 +6480,7 @@ K:Gdorian
  ~A,3 F3 | ~A,3 CA,C |1 [M:9/8] FCA, G,A,G, G,A,/B,/C :|2 FCA, G,A,G, G,GF ||
  [M:6/8] |:DGA Bdc | =BGE FED | ~F3 ~G3 | Add d3 |
  [1 DGA Bdc | =BGE FED | FCA, DCA, | G,A,G, G,GF :|
- [2 dcA B2 G | AFD DCD | C2 F A,CA, | G,A,G, G,3||`,
+ [2 dcA B2 G | AFD DCD | C2 F A,CA, | G,A,G, G,3||`
 			],
 			groups: "su",
 			references: [
@@ -6483,11 +6489,11 @@ K:Gdorian
 						"Martin Hayes, fiddle; Mairéad Ní Mhaonaigh, fiddle; Dermot Byrne, accordion; Dennis Cahill guitar",
 					url: "https://www.youtube.com/watch?v=tsd8nlPJSx8",
 					notes:
-						"A Tune for Frankie [composed by Mairéad Ní Mhaonaigh] (Jig 0:00), The Tempest (Reel 1:30) & Love At The Endings [composed by Ed Reavy] (Reel 2:46), on a Christmas episode of the TG4 music series Geantraí, recorded in 1999.",
-				},
+						"A Tune for Frankie [composed by Mairéad Ní Mhaonaigh] (Jig 0:00), The Tempest (Reel 1:30) & Love At The Endings [composed by Ed Reavy] (Reel 2:46), on a Christmas episode of the TG4 music series Geantraí, recorded in 1999."
+				}
 			],
-			theSessionId: "1885",
-			theSessionSettingId: "52765",
+			theSessionId: 1885,
+			theSessionSettingId: "52765"
 		},
 		{
 			name: "The Silver Spire",
@@ -6498,7 +6504,7 @@ K:Gdorian
 M: 4/4
 L: 1/16
 K: Dmaj
-D2FE DFAc dcde fdAF|`,
+D2FE DFAc dcde fdAF|`
 		},
 		{
 			name: "The Plains Of Boyle",
@@ -6509,7 +6515,7 @@ L: 1/8
 K: Dmaj
 FG|AFDE FEDF (3ABA GB AFD2|`,
 			theSessionId: 652,
-			theSessionSettingId: 52321,
+			theSessionSettingId: 52321
 		},
 		{
 			name: "Farrel O’Gara’s",
@@ -6524,11 +6530,11 @@ A,3B, DEFA BFAF EFAc|d2`,
 					artists: "Kathleen Harrington, fiddle; Moya Acheson, piano",
 					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=8",
 					notes: `(78 rpm) Farrell Gara; The scholar
-Mrs Kathleen Harrington née Gardiner (1897-1984)`,
-				},
+Mrs Kathleen Harrington née Gardiner (1897-1984)`
+				}
 			],
 			theSessionId: 234,
-			groups: "alora",
+			groups: "alora"
 		},
 		{
 			groups: "alora",
@@ -6559,19 +6565,19 @@ eaab ageg a2ba agef|~g3b a2ab- bc'ba [1 gedg :| [2 gedB !D.S.!||`,
 |: Am - - -   | G -  -  Em |
    Am - - -   | G Am Em -  :|
 \`\`\`
-	`,
+	`
 				},
 				{
 					artists: "Seán Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=2",
 					notes:
-						"(1960s) A setting in a major or mixo mode. (sort of; ishg). Interesting! ",
+						"(1960s) A setting in a major or mixo mode. (sort of; ishg). Interesting! "
 				},
 				{
 					artists: "Joe Ryan, fiddle; John Kelly, fiddle ",
-					url: "https://youtu.be/NOs3GW161Co?t=163",
-				},
-			],
+					url: "https://youtu.be/NOs3GW161Co?t=163"
+				}
+			]
 		},
 		{
 			groups: "alora",
@@ -6587,9 +6593,9 @@ A2eA (3cBA eA A2eA BAGB|A2eA (3Bcd ef`,
 				{
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=55",
 					artists: "Frank Kelly, fiddle; Michael McNamara, flute",
-					notes: "The bird in the bush, The gravel walks",
-				},
-			],
+					notes: "The bird in the bush, The gravel walks"
+				}
+			]
 		},
 		{
 			groups: "su",
@@ -6604,9 +6610,9 @@ D2|G2GF GABc dcBA GFDE|F2`,
 			references: [
 				{
 					artists: "Frank Kelly, fiddle",
-					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=56",
-				},
-			],
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=56"
+				}
+			]
 		},
 		{
 			abc: `
@@ -6667,7 +6673,7 @@ X: 1
 M: 2/4
 L:1/8
 K: Emin
-EE z/G/F/G/ | A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|`,
+EE z/G/F/G/ | A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|`
 		},
 		{
 			abc: `X:1
@@ -6692,7 +6698,7 @@ K:Eminor
 |: Be e/f/e/d/ Be e/f/e/d/|Be e f2 g ef|
    gb/g/ fg/f/ eB BA|BB E>F GA B/d/B/A/:|`,
 			theSessionId: 1338,
-			theSessionSettingId: 42834,
+			theSessionSettingId: 42834
 		},
 		{
 			groups: "su",
@@ -6708,11 +6714,11 @@ K:Adorian
 B|A2A AGE c2B c2d|ege edB ~g3 g2`,
 			references: [
 				{
-					notes: "SU: 1st in the This Is My Love slide set",
-				},
+					notes: "SU: 1st in the This Is My Love slide set"
+				}
 			],
-			theSessionId: "6",
-			theSessionSettingId: "31114",
+			theSessionId: 6,
+			theSessionSettingId: "31114"
 		},
 		{
 			groups: "su",
@@ -6737,9 +6743,9 @@ ded c2d e2d cBA|1B2E GFE F2E D2d:|2B2E GFE F2E D3|]`,
 			theSessionId: 8362,
 			references: [
 				{
-					notes: "SU: 2nd in the This Is My Love slide set",
-				},
-			],
+					notes: "SU: 2nd in the This Is My Love slide set"
+				}
+			]
 		},
 		{
 			groups: "su",
@@ -6755,9 +6761,9 @@ A3d B2dB AD (3FED AD (3FED|`,
 				{
 					artists: "Joe Burke, accordion; Martin Byrnes, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=1",
-					notes: "“Crowley’s reels”. 1973. Poor audio quality",
-				},
-			],
+					notes: "“Crowley’s reels”. 1973. Poor audio quality"
+				}
+			]
 		},
 		{
 			groups: "su",
@@ -6771,9 +6777,9 @@ d2B BAG ~A3 ABA|G2E c2`,
 			theSessionId: 1398,
 			references: [
 				{
-					notes: "SU: 3rd in the This Is My Love slide set",
-				},
-			],
+					notes: "SU: 3rd in the This Is My Love slide set"
+				}
+			]
 		},
 		{
 			groups: "su",
@@ -6788,9 +6794,9 @@ BGAG EGDG EGDG EGDE|G2`,
 			theSessionId: 2958,
 			references: [
 				{
-					notes: "SU: followed by (JC’s) Morning Dew",
-				},
-			],
+					notes: "SU: followed by (JC’s) Morning Dew"
+				}
+			]
 		},
 		{
 			groups: "su",
@@ -6802,6 +6808,15 @@ L: 1/16
 K: Edor
 E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			theSessionId: 69,
+
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6",
+					artists:
+						"Larry Redican, fiddle; Andy McGann, fiddle; Felix Dolan, piano ",
+					notes: `Morning dew; Hunter's house (1960s)`
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -6815,10 +6830,10 @@ K: Edor
 			references: [
 				{
 					notes:
-						"SU: after the Rookery. AKA Mountain Dew; Morning Dew is a different reel!",
-				},
+						"SU: after the Rookery. AKA Mountain Dew; Morning Dew is a different reel!"
+				}
 			],
-			groups: "su",
+			groups: "su"
 		},
 		{
 			groups: "su",
@@ -6832,9 +6847,9 @@ B2AG BGGA B2AG (3Bcd gd|B2AG`,
 			theSessionId: 9639,
 			references: [
 				{
-					notes: "SU: after (JC’s) Morning Dew",
-				},
-			],
+					notes: "SU: after (JC’s) Morning Dew"
+				}
+			]
 		},
 		{
 			groups: "alora",
@@ -6845,7 +6860,7 @@ M: 4/4
 L: 1/16
 K: Bmin
 e|fBBA FEFB (3ABA FB ABde|fBBA`,
-			theSessionId: 636,
+			theSessionId: 636
 		},
 		{
 			groups: "alora",
@@ -6860,10 +6875,10 @@ D2F EDB, DFA BAF|ABd ede fdB`,
 				{
 					artists: "Kilfenora Céilí Band",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=3",
-					notes: "(1959) Old man Dillon; Rose in the heather (0:57)",
-				},
+					notes: "(1959) Old man Dillon; Rose in the heather (0:57)"
+				}
 			],
-			theSessionId: 447,
+			theSessionId: 447
 		},
 		{
 			groups: "su",
@@ -6878,10 +6893,10 @@ G3 AGE A3 AGE|G3 AGE`,
 				{
 					artist: "Brendan McGlinchey, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=6",
-					notes: "(1993) Helvic Head; Wallop the spot (variation)",
-				},
+					notes: "(1993) Helvic Head; Wallop the spot (variation)"
+				}
 			],
-			theSessionId: 3110,
+			theSessionId: 3110
 		},
 		{
 			aka: ["Joe Burke’s", "Cronin’s Favourite"],
@@ -6897,16 +6912,16 @@ G|EAA ABd ege dBA|GEF GAB`,
 					artists: "Tulla Céilí band",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=3",
 					notes:
-						"(1959) Joe Burke’s; Leitrim fancy. Poor audio quality. Joe Burke’s AKA Darby The Driver.",
+						"(1959) Joe Burke’s; Leitrim fancy. Poor audio quality. Joe Burke’s AKA Darby The Driver."
 				},
 				{
 					artists: "Charlie Mulvihill, concertina",
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=11",
 					notes:
-						"Followed by the jig Hetty O’Hady. Neither jig is identified on the ITMA page.",
-				},
+						"Followed by the jig Hetty O’Hady. Neither jig is identified on the ITMA page."
+				}
 			],
-			theSessionId: 1137,
+			theSessionId: 1137
 		},
 		{
 			incipit: `X: 1
@@ -6917,7 +6932,7 @@ M: 4/4
 L: 1/16
 K: Amaj
 |:a2ea (3f=ga ec Acaf e2ce|`,
-			theSessionId: 9268,
+			theSessionId: 9268
 		},
 		{
 			incipit: `X: 1
@@ -6927,7 +6942,7 @@ M: 4/2
 L: 1/8
 K: Dmaj
 DFEF D2Ad cAAG EFGE|`,
-			theSessionId: 900,
+			theSessionId: 900
 		},
 		{
 			incipit: `X: 1
@@ -6937,7 +6952,7 @@ M: 4/4
 L: 1/16
 K: Dmaj
 f2ed cAAB cAdB cAA2|f2ed`,
-			theSessionId: 1562,
+			theSessionId: 1562
 		},
 		{
 			incipit: `X: 1
@@ -6947,7 +6962,7 @@ M: 4/4
 L: 1/16
 K: Dmix
 d|cAGE ~=F3d cAGc AddB|`,
-			theSessionId: 1335,
+			theSessionId: 1335
 		},
 		{
 			incipit: `X: 1
@@ -6957,7 +6972,7 @@ M: 4/4
 L: 1/16
 K: Dmix
 Addc AGEF GEcE dEcE|`,
-			theSessionId: 1357,
+			theSessionId: 1357
 		},
 		{
 			incipit: `X: 1
@@ -6968,7 +6983,7 @@ M: 9/8
 L: 1/8
 K: Dmix
 ABc cBA GAB|BAG cGE GED|~D3`,
-			theSessionId: 852,
+			theSessionId: 852
 		},
 		{
 			incipit: `X: 1
@@ -6979,7 +6994,7 @@ M: 4/4
 L: 1/16
 K: Gmaj
 BddB G2Bd d2Bd edBA|BddB`,
-			theSessionId: 804,
+			theSessionId: 804
 		},
 		{
 			incipit: `X: 1
@@ -6994,9 +7009,15 @@ dcAG ADDB cAGF ECCE|DEFG`,
 				{
 					artists: "Seán Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=1",
-					notes: "(1960s)",
+					notes: "(1960s)"
 				},
-			],
+				{
+					artists: "Máirtín Byrnes, fiddle ",
+					url: "https://www.itma.ie/playlists/larry-masterson-collection/?track=3",
+					notes: `The broken pledge; Rakish Paddy (late 1960s)
+A v. nice mixo setting of BP (the Broken Pledge), with an improvised intro à la Tommy Potts. A fine rendition of RP too.`
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -7011,9 +7032,9 @@ D2 (3FED ADFA Ad~d2 Adfd|`,
 				{
 					artists: "Catherine Brennan Grant, fiddle; Tommy Mulvihill, piano",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=5",
-					notes: "1970s?",
-				},
-			],
+					notes: "1970s?"
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -7025,9 +7046,9 @@ K: Cmaj
 G2ge decA GEE2 CEGc|`,
 			references: [
 				{
-					notes: "See entry for Maud Millar - with recordings by Seán Maguire",
-				},
-			],
+					notes: "See entry for Maud Millar - with recordings by Seán Maguire"
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -7038,7 +7059,7 @@ L: 1/8
 N: Interesting to compare with the Swaggering jig
 K: Gmaj
 GBd gdc BAG|BdB cAA A3|`,
-			theSessionId: 635,
+			theSessionId: 635
 		},
 		{
 			incipit: `X:2
@@ -7048,7 +7069,7 @@ M:12/8
 L:1/8
 K:G
 D|GAB DED cBA BGE |`,
-			theSessionId: 20553,
+			theSessionId: 20553
 		},
 		{
 			incipit: `X: 1
@@ -7059,7 +7080,7 @@ M: 4/4
 L: 1/16
 K: Ador
 EAAG A2Bd eA3 BAGE|G2DG`,
-			theSessionId: 2389,
+			theSessionId: 2389
 		},
 		{
 			incipit: `X: 1
@@ -7070,7 +7091,7 @@ L: 1/16
 K: Gdor
 DGG^F G2GA =BGdG eGdG|AF{G}FE`,
 			theSessionId: 338,
-			theSessionSettingId: 22051,
+			theSessionSettingId: 22051
 		},
 		{
 			incipit: `X: 1
@@ -7080,7 +7101,7 @@ M: 4/4
 L: 1/16
 K: Gmaj
 ~G3B A2GA BE~E2 GEDE|GFGA`,
-			theSessionId: 1462,
+			theSessionId: 1462
 		},
 		{
 			groups: "su",
@@ -7094,7 +7115,7 @@ R:slip jig
 L:1/8
 M:9/8
 K:Edorian
-E2G FDB, E3| efe dBd efe| cAA`,
+E2G FDB, E3| efe dBd efe| cAA`
 		},
 		{
 			incipit: `X: 1
@@ -7104,7 +7125,7 @@ M: 9/8
 L: 1/8
 K: Dmaj
 FGF FED G2 E|FGF FED E2 D|FGF`,
-			theSessionId: 482,
+			theSessionId: 482
 		},
 		{
 			incipit: `X: 1
@@ -7114,7 +7135,7 @@ M: 9/8
 L: 1/8
 K: Dmaj
 A,DD A,DD FEF|A,DD DFA GED|A,`,
-			theSessionId: 169,
+			theSessionId: 169
 		},
 		{
 			groups: "su",
@@ -7125,7 +7146,7 @@ M: 4/4
 L: 1/16
 K: Gmaj
 DBBA ~B3A BAdB AFEF|DF~F2 A3B`,
-			theSessionId: 812,
+			theSessionId: 812
 		},
 		{
 			incipit: `X: 1
@@ -7136,7 +7157,7 @@ L: 1/8
 K: Gmaj
 GA|BGAG EGDE G2GF GBAG|EAAB `,
 			theSessionId: 1061,
-			theSessionSettingId: 55525,
+			theSessionSettingId: 55525
 		},
 		{
 			incipit: `X: 19
@@ -7146,7 +7167,7 @@ M: 12/8
 L: 1/8
 K: Dmixo
 DEF ~G3 AGE c2A|dcA d2e`,
-			theSessionId: 544,
+			theSessionId: 544
 		},
 		{
 			incipit: `X: 1
@@ -7156,7 +7177,7 @@ M: 12/8
 L: 1/8
 K: Ador
 eAA eAA BAB GBd|eAA`,
-			theSessionId: 109,
+			theSessionId: 109
 		},
 		{
 			incipit: `X: 1
@@ -7170,9 +7191,9 @@ cAG A3 DED A2B|cAG A2A`,
 			references: [
 				{
 					notes:
-						"for most of my life I “heard” this tune the “wrong” wrong way: for me the first three notes were a pickup/anacrucis. Only realised my mistake quite recently! (2025-12-01)",
-				},
-			],
+						"for most of my life I “heard” this tune the “wrong” wrong way: for me the first three notes were a pickup/anacrucis. Only realised my mistake quite recently! (2025-12-01)"
+				}
+			]
 		},
 		{
 			aka: ["King Of The Pipers"],
@@ -7183,7 +7204,7 @@ M: 12/8
 L: 1/8
 K: Dmix
 A2F B2F A2G FED|A2F B2F`,
-			theSessionId: 31,
+			theSessionId: 31
 		},
 		{
 			incipit: `X: 1
@@ -7193,7 +7214,7 @@ M: 9/8
 L: 1/8
 K: Dmaj
 ABA A2 G F2 G|ABA AGF G3`,
-			theSessionId: 276,
+			theSessionId: 276
 		},
 		{
 			groups: "su",
@@ -7204,7 +7225,7 @@ M: 12/8
 L: 1/8
 K: Dmaj
 A|dcd AFD E2F G2A|B`,
-			theSessionId: 1304,
+			theSessionId: 1304
 		},
 		{
 			incipit: `X: 1
@@ -7214,7 +7235,7 @@ M: 4/4
 L: 1/16
 K: Dmaj
 ADFD A,DFB ADFD FAdc|BE`,
-			theSessionId: 1774,
+			theSessionId: 1774
 		},
 		{
 			incipit: `X: 1
@@ -7224,7 +7245,7 @@ M: 4/2
 L: 1/8
 K: Gmaj
 gf|edBc dBGB AGEF GA (3Bcd|e2`,
-			theSessionId: 1802,
+			theSessionId: 1802
 		},
 		{
 			aka: ["Lancers"],
@@ -7235,7 +7256,7 @@ M: 12/8
 L: 1/8
 K: Dmaj
 F2D DED DFD DFD|ECA, A,CA, A,CA,`,
-			theSessionId: 5949,
+			theSessionId: 5949
 		},
 		{
 			incipit: `X: 1
@@ -7245,7 +7266,7 @@ M: 12/8
 L: 1/8
 K: Dmix
 fed cAG A2d cAG|F2D`,
-			theSessionId: 9,
+			theSessionId: 9
 		},
 		{
 			incipit: `X: 1
@@ -7255,7 +7276,7 @@ M: 4/4
 L: 1/16
 K: Dmaj
 D2 (3FED ADFA d2fd efd2|D2`,
-			theSessionId: 2241,
+			theSessionId: 2241
 		},
 		{
 			incipit: `X: 1
@@ -7265,7 +7286,7 @@ M:7/8
 L: 1/8
 K: Amaj
 A2 BA cea|f2 af ecB`,
-			theSessionId: 15398,
+			theSessionId: 15398
 		},
 		{
 			incipit: `X: 1
@@ -7275,7 +7296,7 @@ M: 4/2
 L: 1/8
 K: Dmaj
 AG|FD (3EFG AFD2 dA (3Bcd ecAg|fd`,
-			theSessionId: 1143,
+			theSessionId: 1143
 		},
 		{
 			incipit: `X: 1
@@ -7285,7 +7306,7 @@ M: 4/4
 L: 1/16
 K: Emin
 EBBA B2EB B2AB dBAG|FDAD`,
-			theSessionId: 1,
+			theSessionId: 1
 		},
 		{
 			incipit: `X: 1
@@ -7299,9 +7320,9 @@ K: Bmin
 			references: [
 				{
 					artists: "Denis Ryan, fiddle",
-					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=18",
-				},
-			],
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=18"
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -7311,7 +7332,7 @@ M: 4/2
 L: 1/8
 K: Dmaj
 FG|ABAF DEFG AG (3FED =c2 (3AB^c|dcde`,
-			theSessionId: 309,
+			theSessionId: 309
 		},
 		{
 			incipit: `X: 1
@@ -7322,7 +7343,7 @@ M: 4/4
 L: 1/16
 K: Gmaj
 DE|G2DE GDEG DEGA B2AB|G2`,
-			theSessionId: 857,
+			theSessionId: 857
 		},
 		{
 			abc: `X:1
@@ -7363,7 +7384,7 @@ M:4/4
 K:D mixo
 L:1/16
 cA|GEE2 D3G E/F/GAB c2Bc|A3G EFGE ABcA d2`,
-			theSessionId: 207,
+			theSessionId: 207
 		},
 		{
 			incipit: `X: 1
@@ -7376,9 +7397,9 @@ GBA B2d edB AGE|GBA B2G`,
 			theSessionId: 15402,
 			references: [
 				{
-					notes: "see entry for Darby The Driver / Charlie Mulvihill",
-				},
-			],
+					notes: "see entry for Darby The Driver / Charlie Mulvihill"
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -7388,7 +7409,7 @@ M: 12/8
 L: 1/8
 K: Ador
 EAA ABd edB cBA|BGG DGG Bdc `,
-			theSessionId: 2200,
+			theSessionId: 2200
 		},
 		{
 			groups: "su",
@@ -7399,7 +7420,7 @@ M: 12/8
 L: 1/8
 K: Emin
 BAF ~E3 FED ~E3|BAF EAG FED`,
-			theSessionId: 797,
+			theSessionId: 797
 		},
 		{
 			incipit: `
@@ -7418,7 +7439,7 @@ K: G
 Bc | dBG B,DG | Bd/d/d d^cd | e^cA A,^CE | A^ce gfe | dBG B,DG | Bd/d/d dcB | Ace a2g | fd^c d 
 [P:B]ef | gea fdg | ece dBG | GBd gfe | dBG GBd | gea fdg | ece dcB | Ace ^ga=g | fd^c d 
 ef | gea fdf | ece dBG | GBd fg/f/g | dBG GBd | g3 fed | e/f/ge dcB | Ace ^ga=g | fd^c d
-[P:C]|: ^c=c | Bc^c dbf | agd fe_e | dbf agd | g/f/ed bge | dbf aed | ~B3 gdB | Ace a2g | fd^c d :|`,
+[P:C]|: ^c=c | Bc^c dbf | agd fe_e | dbf agd | g/f/ed bge | dbf aed | ~B3 gdB | Ace a2g | fd^c d :|`
 		},
 		{
 			groups: "su",
@@ -7438,9 +7459,9 @@ K: Dmaj
 					url: "https://youtu.be/2fibzyiSZ3k",
 					notes: `
 Album: At It Again, 2003
-A comment on thesession I wholeheartedly agree with: “I think John Carty’s version on the fiddle is pure magic where he plays it innumerable times but each one is that bit different so that one could almost listen to it forever!”`,
-				},
-			],
+A comment on thesession I wholeheartedly agree with: “I think John Carty’s version on the fiddle is pure magic where he plays it innumerable times but each one is that bit different so that one could almost listen to it forever!”`
+				}
+			]
 		},
 		{
 			incipit: `X: 1
@@ -7456,9 +7477,9 @@ eB~B2 eBdB AGAB GEDE|GB (3BBB`,
 					url: "https://youtu.be/lQ1d3TvE1Ow",
 					artists: "John Carty, fiddle; Brian McGrath, piano",
 					notes: `Album: Last Night’s Fun, 1996
-George White's Favourite / The Lass Of Carracastle`,
-				},
-			],
+George White's Favourite / The Lass Of Carracastle`
+				}
+			]
 		},
 		{
 			incipit: `X: 2
@@ -7469,7 +7490,7 @@ L: 1/8
 K: Dmaj
 FDFA d2fd ~d2fd ecAG|FDFA defe
 `,
-			theSessionId: 747,
+			theSessionId: 747
 		},
 		{
 			incipit: `X: 1
@@ -7480,7 +7501,7 @@ M: 4/4
 L: 1/16
 K: Dmaj
 F3F- FDEG F3F- FDEG|F2EF `,
-			theSessionId: 16478,
+			theSessionId: 16478
 		},
 		{
 			incipit: `X: 1
@@ -7491,11 +7512,117 @@ M: 12/8
 L: 1/8
 K: Dmaj
 ~f3 efg fdA ~G3|FAd`,
-			theSessionId: 628,
+			theSessionId: 628
 		},
+		{
+			incipit: `X: 6
+T: The Mason's Apron
+R: reel
+M: 4/4
+L: 1/16
+K: Amaj
+eg|aA (3AAA cBAF EFAB cABc|dB 
+`,
+			theSessionId: 74
+		},
+		{
+			incipit: `X: 1
+T: The Monaghan
+R: jig
+M: 12/8
+L: 1/8
+K: Emin
+BGE F2E BGE FGA|BGE F2E AFD FGA|`,
+			theSessionId: 67,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=1",
+					artists:
+						"Brian Conway, fiddle; Tony DeMarco, fiddle; Felix Dolan, piano",
+					notes: `Monaghan; Larry O'Gaff (1996)`
+				}
+			]
+		},
+		{
+			incipit: `X: 1
+T: The Hunter's House
+C: Ed Reavy
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+B2dB cAFA G2BG DGBG |`,
+			theSessionId: 472,
+			references: [
+				{
+					notes: `See the entry for the Mountain Road`
+				}
+			]
+		},
+		{
+			groups: "su",
+			incipit: `X: 9
+T: The Dunmore Lasses
+R: reel
+M: 4/4
+L: 1/8
+K: Emin
+|:E3F G3A Beed Beed|E2EF G2BG `,
+			theSessionId: 462,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/furls-leitrim-performers/?track=3",
+					artists: "The Leitrim Trio",
+					notes: `The Dunmore lasses; The youngest daughter; The Aughavas reel. 
+0:24 onwards.
+“The Furls of Music – The Michael McNamara Collection” From field recordings made by Leitrim flute player Michael McNamara from 1959 to the mid-1990s.`
+				}
+			]
+		},
+		{
+			groups: "su",
+			incipit: `X: 1
+T: The New Copperplate
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+G2dG BGdG ~G2dc BGGB|A2`,
+			theSessionId: 887,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=23",
+					artists: "Cathal McConnell, flute",
+					notes: "“The Copperplate”"
+				}
+			]
+		},
+		{
+			incipit: `X: 1
+T: The Mountain Road
+C: Michael Gorman
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+F2AF BFAF F2AF EFDE|F2`,
+			theSessionId: 68,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=2",
+					artists: "The mountain road; The hunter's house",
+					notes: `Charlie Mulvihill, button accordion; Michael McNamara, flute; Pee Fitzpatrick, fiddle`
+				},
+				{
+					url: "https://www.cranfordpub.com/mp3s/michaelgorman2.mp3",
+					artists: "Michael Gorman, fiddle",
+					notes: `The original six part version, as played by the tune's composer. [More info from Cranford Publications](https://www.cranfordpub.com/tunes/Irish/Mountain_Road.htm)`
+				}
+			]
+		}
 		/*
 		{incipit:``,theSessionId:},
-		{incipit:``,theSessionId:,
+		,{incipit:``,theSessionId:,
 			references: [
 				{
 					url: "",
@@ -7503,6 +7630,7 @@ K: Dmaj
 					notes: ``,
 				},
 			],},
+
 		 */
-	],
+	]
 };
