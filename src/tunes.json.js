@@ -6508,6 +6508,16 @@ K: Dmaj
 D2FE DFAc dcde fdAF|G2BG`,
 			references: [
 				{
+					notes: `Chords from The Portland Collection: 
+\`\`\`
+|: D - - - | G D Em A |
+   D - - - | G D A D :|
+|: A - D - | Bm - D A |
+   D A G D | G D A D :|
+\`\`\`
+	`
+				},
+				{
 					url: "https://www.youtube.com/watch?v=HnDsa6dk52w",
 					artists:
 						"Matt Molloy, flute; Tommy Peoples, fiddle; Paul Brady, guitar",
