@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-01-07",
+	lastUpdate: "2026-01-13",
 	tunes: [
 		{
 			abc: `
@@ -6505,7 +6505,20 @@ K:Gdorian
 M: 4/4
 L: 1/16
 K: Dmaj
-D2FE DFAc dcde fdAF|`
+D2FE DFAc dcde fdAF|G2BG`,
+			references: [
+				{
+					url: "https://www.youtube.com/watch?v=HnDsa6dk52w",
+					artists:
+						"Matt Molloy, flute; Tommy Peoples, fiddle; Paul Brady, guitar",
+					notes: `(1978) John Brennan's (Silver Spire) / Drag Her Round The Road (Reels) `
+				},
+				{
+					url: "https://www.youtube.com/watch?v=jHqFlS3gNMs",
+					artists: "Tommy Peoples, fiddle",
+					notes: `(Date unknown.) Followed by a T. Peoples composition: the reel “Beautiful Gortree”.`
+				}
+			]
 		},
 		{
 			name: "The Plains Of Boyle",
@@ -7630,7 +7643,8 @@ F2AF BFAF F2AF EFDE|F2`,
 					artists: "",
 					notes: ``,
 				},
-			],},
+			]
+				,},
 
 		 */
 	]
