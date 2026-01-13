@@ -6517,6 +6517,12 @@ D2FE DFAc dcde fdAF|G2BG`,
 					url: "https://www.youtube.com/watch?v=jHqFlS3gNMs",
 					artists: "Tommy Peoples, fiddle",
 					notes: `(Date unknown.) Followed by a T. Peoples composition: the reel “Beautiful Gortree”.`
+				},
+				{
+					url: "https://open.spotify.com/track/0jLnKZeYtUZmEMJ2lFgFLd",
+					artists:
+						"Sean Maguire, fiddle; Wilcil McDowell, bass and accordion (?)",
+					notes: `(2004?) Fergal O'Gara / Miss Monaghan's / The Silver Spire (from 02:20 onwards)`
 				}
 			]
 		},
@@ -6833,6 +6839,7 @@ E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			]
 		},
 		{
+			aka: ["Mountain Dew"],
 			incipit: `X: 1
 T: Joe Cooley’s Morning Dew
 R: reel
