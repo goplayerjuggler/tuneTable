@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-01-13",
+	lastUpdate: "2026-01-14",
 	tunes: [
 		{
 			abc: `
@@ -6508,7 +6508,7 @@ K: Dmaj
 D2FE DFAc dcde fdAF|G2BG`,
 			references: [
 				{
-					notes: `Chords from The Portland Collection: 
+					notes: `Chords (via The Portland Collection): 
 \`\`\`
 |: D - - - | G D Em A |
    D - - - | G D A D :|
@@ -6524,6 +6524,12 @@ D2FE DFAc dcde fdAF|G2BG`,
 					notes: `(1978) John Brennan's (Silver Spire) / Drag Her Round The Road (Reels) `
 				},
 				{
+					url: "https://youtu.be/hNLuj5SZS_M?t=26",
+					artists:
+						"Ross Cooper, fiddle; Andrew Gifford, fiddle; Margaret Scollay, piano; Graham Dolan, guitar; plus other fine musicians",
+					notes: `(2007) Session in Lounge Bar, Lerwick Shetland`
+				},
+				{
 					url: "https://www.youtube.com/watch?v=jHqFlS3gNMs",
 					artists: "Tommy Peoples, fiddle",
 					notes: `(Date unknown.) Followed by a T. Peoples composition: the reel “Beautiful Gortree”.`
@@ -6533,6 +6539,12 @@ D2FE DFAc dcde fdAF|G2BG`,
 					artists:
 						"Sean Maguire, fiddle; Wilcil McDowell, bass and accordion (?)",
 					notes: `(2004?) Fergal O'Gara / Miss Monaghan's / The Silver Spire (from 02:20 onwards)`
+				},
+				{
+					url: "https://youtu.be/jZsiWNtc5EE",
+					artists:
+						"Paddy O’Brien, Button Accordion; Tom Schaefer, fiddle; Paul Wehling, bouzouki",
+					notes: `The Silver Spire / Sean Ryan's. The B part is an interesting, unusual setting. From the album: “The Sailor’s Cravat”`
 				}
 			]
 		},
