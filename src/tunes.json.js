@@ -6172,6 +6172,7 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
 		{
 			name: "The Dogs Among The Bushes",
 			groups: "ALORA",
+			theSessionId: 595,
 			incipit: `X: 1
 M: 4/4
 L: 1/16
@@ -6222,6 +6223,7 @@ EAAG EGDG EA~A2 fAeA| `,
 		},
 		{
 			name: "The Killavil Fancy",
+			theSessionId: 576,
 			groups: "ALORA",
 			incipit: `X: 1
 M: 4/4
@@ -6244,8 +6246,7 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
 \`\`\`
 `
 				}
-			],
-			theSessionId: 576
+			]
 		},
 		{
 			name: "The Wind That Shakes The Barley",
@@ -7781,6 +7782,16 @@ cBA EAB cBA aed|c`,
 Steam up: played in a set followed by Drummond Castle`
 				}
 			]
+		},
+		{
+			incipit: `X: 3
+T: The Roscommon
+R: reel
+M: 4/4
+L: 1/16
+K: Edor
+EFGA BAGB AFF2 dFAF|EFGA`,
+			theSessionId: 637
 		}
 	]
 	/*
@@ -7791,9 +7802,8 @@ Steam up: played in a set followed by Drummond Castle`
 				url: "",
 				artists: "",
 				notes: ``,
-			},
-		]
-			,},
+			}
+		]}
 
 	 */
 };

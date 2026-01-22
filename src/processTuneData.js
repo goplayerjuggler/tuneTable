@@ -123,7 +123,7 @@ function processTuneData(tune) {
 	];
 	delete processed.processedFromAbc;
 	if (!processed.scores) processed.scores = [];
-	if (tune.theSessionId && processed.scores.length === 0) {
+	if (tune.theSessionId) {
 		const setting = tune.theSessionSettingId
 			? `#setting${tune.theSessionSettingId}`
 			: "";
