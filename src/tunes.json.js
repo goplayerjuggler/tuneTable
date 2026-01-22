@@ -4629,26 +4629,15 @@ a2gf afgf dgfd cFAd|c2Bd cdfa gfga bagf|
 			theSessionId: 2316
 		},
 		{
-			abc: `X:1
-T:Gigue Du Plateau
-R:reel
-L:1/8
-M:4/4
-N:This tune is in F# Phrygian. For those not fully familiar with the Major Modes,
-N:D Major is a relative key.
-N:---
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/15517#setting29085
-N:Setting entered in thesession by user Jesse on 2016-08-26
-K:Dmajor
-|:cFAc fdBF|cFce dFBd|cFAc BdcB|cdcB c4|
- cFAc fdBF|cFce dFBd|cFAc BdcB|cdcA F4:|
- cFFc dFFd|cFFc BFFB|cFFc dFcB|cCCc CCcC
- cFFc dFFd|cFFc BFFB|cFFc d2cB|AcBA AF (3FFF:|
- cAAc dBBd|ecce fdaf|eaad caac|BeeB e4|
- cAAc dBBd|ecce fdaf|eaad caac|Beec A4:|`,
-			theSessionId: 15517,
-			theSessionSettingId: "29085"
+			abc: `X: 1
+T: Gigue Du Plateau
+C:Jean Claude Belanger
+R: reel
+M: 4/2
+L: 1/8
+K: F# aeol
+cFAc fdBF cFce dFBd|cFAc BdcB`,
+			theSessionId: 15517
 		},
 		{
 			abc: `X:1
