@@ -2307,8 +2307,8 @@ L: 1/8
 K:G
 DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/B cA | "G"G<B DG FG |
 "C"EG ce "D"DF | "G"G2 G2 :| ga | "G"ba gb a^g | "D"af d2 =gf | "C"ec ef g/f/e | "G"dB G2 ga |
-"G"ba gb a^g | "D"af de f=g | "Em"eB eg "D"f/e/d | "C"[e3c3] f ge | "D"d<B G2 gf | "C"ec Gg fe | 
-"D"dA FG A/B/c | "G"B<G DG FG| "C"EG ce d^c | "D"dB GB DG | "C"EG ce "D"DF | "G"G2 G2 ||`
+"G"ba gb a^g | "D"af de f=g | "Em"eB eg "D"f/e/d | "C"[e3c3] f ge | "G"d<B G2 gf | "C"ec Gg fe | 
+"D"dA FG A/B/c | "G"B<G DG FG| "C"EG ce d^c | "G"dB GB DG | "C"EG ce "D"DF | "G"G2 G2 ||`
 			],
 			references: [
 				{
