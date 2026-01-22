@@ -5,7 +5,7 @@ import {
 	normaliseKey,
 	getKey,
 	getFirstBars,
-	getMetadata,
+	getMetadata
 } from "@goplayerjuggler/abc-tools";
 
 const applySwingTransform = ["hornpipe", "barndance", "fling", "mazurka"];
@@ -14,7 +14,7 @@ function updateFromMetadata(
 	metaData,
 	processed,
 	setIsFromAbc = true,
-	updateBasicInfo = true,
+	updateBasicInfo = true
 ) {
 	if (updateBasicInfo) {
 		if (!processed.name && metaData.title) {
@@ -51,21 +51,22 @@ function updateFromMetadata(
 			notes: `${metaData.recording ? `recording/album: ${metaData.recording}\n` : ""}${
 				metaData.comments ? metaData.comments.join("\n") : ""
 			}`,
-			fromAbc: true,
+			fromAbc: true
 		};
+		if (abcRef.notes) abcRef.notes += " (notes extracted from ABC)";
 
-		processed.references.splice(0, 0, abcRef);
+		processed.processedFromAbc.push(abcRef);
 	}
 }
 
 function processTuneData(tune) {
-	const processed = { ...tune };
+	const processed = { processedFromAbc: [], ...tune };
 
 	if (tune.incipit && !tune.abc) {
 		const abcMeta = getMetadata(tune.incipit);
 		updateFromMetadata(abcMeta, processed, false);
 		processed.incipit = getFirstBars(tune.incipit, 4, true, false, {
-			all: true,
+			all: true
 		});
 	} else if (tune.abc) {
 		const abcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
@@ -96,7 +97,7 @@ function processTuneData(tune) {
 				if (shortAbc) {
 					processed.contour = getContour(shortAbc, {
 						withSvg: true,
-						withSwingTransform,
+						withSwingTransform
 					});
 				}
 				// tune.contour = getContourFromFullAbc(tune.abc || tune.incipit, {
@@ -116,6 +117,11 @@ function processTuneData(tune) {
 	if (!processed.rhythm) processed.rhythm = "";
 	else processed.rhythm = processed.rhythm.toLowerCase();
 	if (!processed.references) processed.references = [];
+	processed.references = [
+		...processed.processedFromAbc,
+		...processed.references
+	];
+	delete processed.processedFromAbc;
 	if (!processed.scores) processed.scores = [];
 	if (tune.theSessionId && processed.scores.length === 0) {
 		const setting = tune.theSessionSettingId
@@ -123,7 +129,7 @@ function processTuneData(tune) {
 			: "";
 		processed.scores.push({
 			url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
-			name: "thesession",
+			name: "thesession"
 		});
 		delete tune.theSessionId;
 		delete tune.theSessionSettingId;

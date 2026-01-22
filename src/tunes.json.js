@@ -2319,7 +2319,8 @@ DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/
 				},
 				{
 					url: "https://music.youtube.com/watch?v=S7JhPQI9Uew",
-					artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle",
+					artists:
+						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Natalie Haas, cello",
 					notes: `A version that’s quite close to the
 Fidil one; it also has some very pretty things going on on the cello.`
 				}
