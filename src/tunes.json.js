@@ -1215,6 +1215,7 @@ P:Ⅱ
 `
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:Drummond Castle
 R:jig
@@ -2226,6 +2227,7 @@ K:Gmajor
 			theSessionId: 1276
 		},
 		{
+			groups: "alora",
 			abc: [
 				`X:1
 T:The First Draft
@@ -2289,12 +2291,36 @@ M:9/16
  b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d(g2 {a}g2)f g2a|
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
  d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
- E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`
+ E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
+				`X:1
+T:The First Draft
+T:with chords added by M. Schonfield, 2025-01-26
+%T:(second score from https://www.itma.ie/scores/first-draft/)
+C:Siobhán Peoples
+N: 1. This is the first score here, with added chords. They may not be quite right, but 
+N: should be better than nothing.
+N: 3. I put a passing D chord on the third beat in a couple of places; it can 
+N: played or left out, depending on how you feel.
+R: Mazurka
+M: 3/4
+L: 1/8
+K:G
+DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/B cA | "G"G<B DG FG |
+"C"EG ce "D"DF | "G"G2 G2 :| ga | "G"ba gb a^g | "D"af d2 =gf | "C"ec ef g/f/e | "G"dB G2 ga |
+"G"ba gb a^g | "D"af de f=g | "Em"eB eg "D"f/e/d | "C"[e3c3] f ge | "D"d<B G2 gf | "C"ec Gg fe | 
+"D"dA FG A/B/c | "G"B<G DG FG| "C"EG ce d^c | "D"dB GB DG | "C"EG ce "D"DF | "G"G2 G2 ||`
 			],
 			references: [
 				{
+					url: "https://raelachrecords.bandcamp.com/track/the-first-draft-mazurka",
+					artists:
+						"Fidil: Aidan O'Donnell, Ciarán Ó Maonaigh, and Damien McGeehan, on fiddles",
+					notes: `(2019) album: Decade.`
+				},
+				{
+					url: "https://music.youtube.com/watch?v=S7JhPQI9Uew",
 					artists: "Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle",
-					notes: `a version that’s quite close to the
+					notes: `A version that’s quite close to the
 Fidil one; it also has some very pretty things going on on the cello.`
 				}
 			],
@@ -4372,7 +4398,7 @@ K:Gmajor
 			references: [
 				{
 					notes: `Éigse an Spidéil / Come West Along the Road
-album: The High Seas`,
+album: The High Seas (2018)`,
 					url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
 					artists:
 						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
@@ -7731,6 +7757,27 @@ A2BA Bdef gedB AGEF|G2`,
 					notes: `(2004) Donegal Reel / Sligo Maid / The White Leaf
 From 1:07 onwards
 Album: A Man Apart`
+				}
+			]
+		},
+		{
+			group: "su",
+			aka: ["Fisher street"],
+			incipit: `X: 2
+T: Paddy Fahey's No. 4
+C: Paddy Fahey
+R: jig
+M: 12/8
+L: 1/8
+K: Ador
+cBA EAB cBA aed|c`,
+			theSessionId: 4930,
+			references: [
+				{
+					url: "https://open.spotify.com/track/20Grwxqv2wiZy3aBbO7Kd1",
+					artists: "Fisher Street",
+					notes: `(1991) album: Out in the night
+Steam up: played in a set followed by Drummond Castle`
 				}
 			]
 		}
