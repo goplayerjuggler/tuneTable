@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-01-14",
+	lastUpdate: "2026-01-22",
 	tunes: [
 		{
 			abc: `
@@ -670,22 +670,6 @@ K:Dmajor
  dc|BABc dcdf|b z fa gfgf|ecec BA B/c/d|AFAF EA,CE|
  AF~F2 DEFA|dced BAdB|AdcB AFGE|D/E/D CE D2:|`,
 			theSessionId: 6274
-		},
-		{
-			abc: `X:1
-T:Sonny Murray's
-R:hornpipe
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/309#setting309
-N:Setting entered in thesession by user Jdharv on 2001-10-03
-K:Dmajor
-|:FG|ABAF DEFG|AG (3FED =c2 (3AB^c|dcde fdAF|G2GF G2FG|
- ABAF DEFG|AG (3FED =c2 (3AB^c|dcde fdAG|F2D2 D2:|
- de|f2fd ecAF|Gggf g2fg|a2ab agec|dcAF G2FG|
- ABAF DEFG|AG (3FED =c2 (3AB^c|dcde fdAG|F2D2 D2:|`,
-			theSessionId: 309
 		},
 		{
 			abc: `X:1
@@ -1367,7 +1351,15 @@ K:Amixolydian
  cAA BGG|cAA AFD|G2 A (B/c/d)B|1 AFD D2 B:|2 AFD D3||
  |:~f3 ~g3|afd cBA|~f3 gfg|afd dfg|
  agf gfe|fed e/f/ed|cBA BAG|AFD D3:|`,
-			theSessionId: 1076
+			theSessionId: 1076,
+			references: [
+				{
+					url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
+					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
+					notes: `(2004) The Black Rogue; Morrison’s
+Album: A Man Apart`
+				}
+			]
 		},
 		{
 			groups: "su",
@@ -2485,22 +2477,6 @@ G>F GD|EG D2|EA G/F/E/F/|1 G2 GB/A/:|2 G2 GB/c/||
 |:d>e dG|e2 eB|Ae ed/e/|f>g f/e/d/c/|
 Bf fe/f/|g2 f>e|dG A/G/A/B/|1 G2 GB/c/:|2 G2 GB/A/|| `,
 			theSessionId: 6170
-		},
-		{
-			abc: `X:1
-T:Joan Martin's
-R:polka
-L:1/8
-M:2/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/11600#setting11600
-N:Setting entered in thesession by user Kenny on 2011-11-24
-K:Dmajor
-|:DF FD|CE EF/E/|DE FG|A2 A2|
- DF FD|CE EF/G/|AG EC|D2 D2:|
- Ad de|fd dc/B/|Ad df|e2 e2|
- Ad de|fd dc/B/|AF EF|D2 D2:|`,
-			theSessionId: 11600
 		},
 		{
 			groups: "alora",
@@ -4446,31 +4422,25 @@ T: Tommy’s Tarbukas
 C: Alasdair Fraser
 R: reel
 M: 4/4
-N: Setting from thesession (*) adapted in 13 & 14 May 2025%250514
+N: Setting from thesession (*) adapted 13 & 14 May 2025%250514
 N: (*) https://thesession.org/tunes/140#setting46226
 L: 1/8
 K: B minor
 de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
 "Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
 |:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
-"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `
-		},
-		{
-			abc: `X:1
-T:Tommy's Tarbukas
-C:Alasdair Fraser
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/140#setting140
-N:Setting entered in thesession by user Will Harmon on 2001-06-15
-K:Gminor
-(3ABc|:d2 cd BGGB|AFcF dFcF|d2 cd BGGB|AFcA BGBc|
- d2 cd BGGB|AFcF dFcF|d2 Bd AFFA|1 Ggdc BGBc:|2 Ggdc BGGF||
- |:DGBG EGcB|Acfe dbfd|DGBG EGcB|AfcA BGGF|
- DGBG EGcB|Acfe dbfd|fdBe cAFE|1 DG^FA BGG=F:|2 DG^FA BGBc||`,
-			theSessionId: 140
+"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
+			theSessionId: 140,
+			references: [
+				{
+					url: "https://open.spotify.com/track/1aa6Xuy5F4F2Sv1rZSN7m7",
+					artists:
+						"Seán Maguire, fiddle; Wilcil McDowell, piano; Sean O’Driscoll, banjo",
+					notes: `(2004) Segs Hornpipe / Allister Frazer's Reel
+From 1:33 onwards
+Album: A Man Apart`
+				}
+			]
 		},
 		{
 			incipit: `X: 6
@@ -5114,20 +5084,6 @@ K:Adorian
 					notes: "SU #3 in Elisabeth Kelly set"
 				}
 			],
-			theSessionId: 953
-		},
-		{
-			abc: `X:1
-T:Elizabeth Kelly's Delight
-R:slip jig
-L:1/8
-M:9/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/953#setting953
-N:Setting entered in thesession by user Will Harmon on 2002-09-07
-K:Adorian
-|:A3 ABA AGE|A2 EG2 E DEG|A3 ABA AGE|~G3 G2 E DEG:|
- |:c2 A BAG AGE|cBA BGE DEG|c2 A BAG AGE|~G3 G2 E DEG:|`,
 			theSessionId: 953
 		},
 		{
@@ -5973,6 +5929,13 @@ EDE BAB EBE AFD|EDE ~B3`,
 			theSessionId: 71,
 			references: [
 				{
+					url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
+					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
+					notes: `(2004) The Black Rogue; Morrison’s
+From 1:05 onwards
+Album: A Man Apart`
+				},
+				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
 					artists:
 						"Larry Redican, fiddle; Joe Burke, accordion; Jack Coen, flute; Felix Dolan, piano",
@@ -6335,7 +6298,16 @@ X: 1
 M: 18/16
 L: 1/16
 K: D mixo
-FGA AFA Bc2 BAG FAF GED|`
+FGA AFA Bc2 BAG FAF GED|`,
+			references: [
+				{
+					url: "https://jasonorourke.bandcamp.com/track/the-peacock-following-the-hen-ofarrells-welcome-to-limerick-my-mind-will-never-be-easy",
+					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
+					notes: `(2015) The Peacock Following the Hen/O'Farrell's Welcome to Limerick/My Mind will never be Easy
+From ):45 onwards
+Is the  guitarist S Dunne? See my remark under John Brosnan's polka.`
+				}
+			]
 		},
 		{
 			abc: [
@@ -6538,13 +6510,14 @@ D2FE DFAc dcde fdAF|G2BG`,
 					url: "https://open.spotify.com/track/0jLnKZeYtUZmEMJ2lFgFLd",
 					artists:
 						"Sean Maguire, fiddle; Wilcil McDowell, bass and accordion (?)",
-					notes: `(2004?) Fergal O'Gara / Miss Monaghan's / The Silver Spire (from 02:20 onwards)`
+					notes: `(2004?) Fergal O'Gara / Miss Monaghan's / The Silver Spire (from 02:20 onwards)
+This setting of Miss Monaghan is quite unusual; it’s almost (but not quite) like a different tune!`
 				},
 				{
 					url: "https://youtu.be/jZsiWNtc5EE",
 					artists:
 						"Paddy O’Brien, Button Accordion; Tom Schaefer, fiddle; Paul Wehling, bouzouki",
-					notes: `The Silver Spire / Sean Ryan's. The B part is an interesting, unusual setting. From the album: “The Sailor’s Cravat”`
+					notes: `The Silver Spire / Sean Ryan's. The B part (of the Silver Spire) is an interesting, unusual setting. From the album: “The Sailor’s Cravat”.`
 				}
 			]
 		},
@@ -7662,19 +7635,128 @@ F2AF BFAF F2AF EFDE|F2`,
 					notes: `The original six part version, as played by the tune's composer. [More info from Cranford Publications](https://www.cranfordpub.com/tunes/Irish/Mountain_Road.htm)`
 				}
 			]
-		}
-		/*
-		{incipit:``,theSessionId:},
-		,{incipit:``,theSessionId:,
+		},
+		{
+			groups: "alora",
+			incipit: `X: 1
+T: John Brosnan's
+R: polka
+M: 4/2
+L: 1/8
+K: Dmaj
+D>E DB AF FB|AF DE FEEF/E/|`,
+			theSessionId: 3835,
 			references: [
 				{
-					url: "",
-					artists: "",
-					notes: ``,
-				},
+					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
+					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
+					notes: `(2015) John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
+album:  The Northern Concertina
+The guitar could be Tim Edey and not S Dunne, going from the meagre info available online; but I suspect it’s S Dunne as he seems to be the main backer for JO’R.
+3 parts`
+				}
 			]
-				,},
-
-		 */
+		},
+		{
+			groups: "alora",
+			incipit: `X: 1
+T: The Frozen Mouse
+C:Jason O’Rourke
+R: polka
+M: 4/2
+L: 1/8
+K: Gmaj
+B>c de dB Bd|cA AB/d/ ed BA|`,
+			theSessionId: 18688,
+			references: [
+				{
+					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
+					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
+					notes: `(2015) John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
+album:  The Northern Concertina
+2 parts`
+				}
+			],
+			scores: [
+				{
+					type: "tune",
+					name: "composer’s score",
+					url: "http://jasonorourke.info/wp-content/uploads/2020/11/The-Frozen-Mouse-Polka.pdf"
+				}
+			]
+		},
+		{
+			groups: "alora",
+			incipit: `X: 5
+T: Neilí's
+R: polka
+M: 4/2
+L: 1/8
+K: Amix
+ed cA ed c2|AA/c/ ef ge d2|`,
+			theSessionId: 7386,
+			references: [
+				{
+					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
+					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
+					notes: `(2015) John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
+Here this polka, Neilí's, is given the name Timmy McCarthy’s/
+album:  The Northern Concertina
+3 parts`
+				}
+			]
+		},
+		{
+			incipit: `X: 1
+T: My Mind Will Never Be Easy
+R: slip jig
+M: 9/8
+L: 1/8
+K: Cmaj
+AGE EDE C2 D|E2 G GAE GcB|`,
+			theSessionId: 191,
+			references: [
+				{
+					url: "https://jasonorourke.bandcamp.com/track/the-peacock-following-the-hen-ofarrells-welcome-to-limerick-my-mind-will-never-be-easy",
+					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
+					notes: `(2015) The Peacock Following the Hen/O'Farrell's Welcome to Limerick/My Mind will never be Easy
+From 2:40 onwards
+Is the  guitarist S Dunne? See my remark under John Brosnan's polka.`
+				}
+			]
+		},
+		{
+			groups: "alora",
+			incipit: `X: 3
+T: The Sligo Maid
+R: reel
+M: 4/4
+L: 1/16
+K: Ador
+A2BA Bdef gedB AGEF|G2`,
+			theSessionId: 399,
+			references: [
+				{
+					url: "https://open.spotify.com/track/0y4zNhYmRi4mb4njDGztZR",
+					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
+					notes: `(2004) Donegal Reel / Sligo Maid / The White Leaf
+From 1:07 onwards
+Album: A Man Apart`
+				}
+			]
+		}
 	]
+	/*
+	{incipit:``,theSessionId:},
+	,{incipit:``,theSessionId:,
+		references: [
+			{
+				url: "",
+				artists: "",
+				notes: ``,
+			},
+		]
+			,},
+
+	 */
 };
