@@ -462,19 +462,20 @@ function renderTable() {
 					notesHtml = `<div class="notes">${formattedNotes}</div>`;
 				}
 			}
-
+			const domain = ref.url
+				? ref.url.match(/^(?:https?:\/\/)?(?:www\.)?([^/]+)/)[1]
+				: "";
+			const refHeader =
+				ref.artists && ref.url
+					? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank">${domain}</a></div>`
+					: ref.artists
+						? `<div class="artists">${ref.artists}</div>`
+						: ref.url
+							? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
+							: "";
 			referencesHtml += `
                         <div class="reference-item">
-                            ${
-															ref.artists
-																? `<div class="artists">${ref.artists}</div>`
-																: ""
-														}
-                            ${
-															ref.url
-																? `<div class="url"><a href="${ref.url}" target="_blank">${ref.url}</a></div>`
-																: ""
-														}
+                            ${refHeader}
                             ${notesHtml}
                         </div>
                     `;
@@ -497,16 +498,7 @@ function renderTable() {
 					: `<div class="${tuneNameClass}" data-tune-index="${index}">
         ${tune.name}
       </div>`
-			}
-      <div class="tune-actions">
-        <button class="btn-icon btn-edit" title="Edit tune">
-          ✎
-        </button>
-        <button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
-          🗑
-        </button>
-      </div>
-    </div>`;
+			}`;
 
 		row.innerHTML = `
     <td>
@@ -515,11 +507,21 @@ function renderTable() {
             ${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
         </div>
         <div id="${incipitId}" class="incipitClass"></div>
+      <div class="tune-actions">
+        <button class="btn-icon btn-edit" title="Edit tune">
+          ✎
+        </button>
+        <button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
+          🗑
+        </button>
+      </div>
+    </div>
     </td>
                     <td><span class="badge">${tune.key}</span></td>
                     <td><span class="badge">${tune.rhythm}</span></td>
                     <td class="references">${referencesHtml}</td>
-                    <td class="scores">
+                    <td class="
+					">
     ${
 			tune.scores && tune.scores.length > 0
 				? tune.scores

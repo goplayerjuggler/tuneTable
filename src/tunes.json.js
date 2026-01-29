@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-01-22",
+	lastUpdate: "2026-01-29",
 	tunes: [
 		{
 			abc: `
@@ -109,7 +109,8 @@ K:Gmajor
 				{
 					url: "http://media.comhaltas.ie/audio/cl351/cl351_7_64K.mp3",
 					artists: "Antóin Mac Gabhann",
-					notes: `The New Broom, Down the Old Boreen (2011-04-30) - from [comhaltas.ie](https://comhaltas.ie/comhaltaslive/comhaltaslive_351_7_antoin_mac_gabhann/)`
+					notes:
+						"The New Broom, Down the Old Boreen (2011-04-30) - from [comhaltas.ie](https://comhaltas.ie/comhaltaslive/comhaltaslive_351_7_antoin_mac_gabhann/)"
 				}
 			]
 		},
@@ -216,9 +217,9 @@ K:Dmajor
 			groups: "ALORA",
 			abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d’Écosse
-M: 6/4
+M: 6/2
 R: bransle
-L: 1/16
+L: 1/8
 Q: 1/4=80
 K: E dorian
 |: "Em"EFGE "D"FGA2  "Bm"AGFE "Em"GAB2  "Em"BdcB "A"AG"Bm"FE |
@@ -226,8 +227,8 @@ K: E dorian
 |: "Em"B2Bc "A"dedc  "Em".B2B2 "D"AGFE  "Em"B2AG "Bm"F2E2 |
 [M:5/4] "Em"B2Bc "A"dedc  "Em".B2B2 "A"AG"Bm"FE "B"F<D"Em"E2 :|`,
 			incipit: `X:1
-M:6/4
-L:1/16
+M:6/2
+L:1/8
 K: E dorian
 EFGE FGA2  AGFE GAB2  BdcB AGFE | EF`
 		},
@@ -1357,8 +1358,8 @@ K:Amixolydian
 				{
 					url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
 					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
-					notes: `(2004) The Black Rogue; Morrison’s
-Album: A Man Apart`
+					notes: `The Black Rogue; Morrison’s
+Album: A Man Apart (2004)`
 				}
 			]
 		},
@@ -2315,7 +2316,7 @@ DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/
 					url: "https://raelachrecords.bandcamp.com/track/the-first-draft-mazurka",
 					artists:
 						"Fidil: Aidan O'Donnell, Ciarán Ó Maonaigh, and Damien McGeehan, on fiddles",
-					notes: `(2019) album: Decade.`
+					notes: "(2019) album: Decade."
 				},
 				{
 					url: "https://music.youtube.com/watch?v=S7JhPQI9Uew",
@@ -2382,7 +2383,7 @@ T:Toonagh Mazurka
 C:Tommy Peoples; and possibly Eamonn Coyne too
 S:Eamonn Coyne
 Z:abc-transcription Malcolm Schonfield, 2018-11-19,26; 2024-12-04,05; 2025-01-28
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: Mazurka
 N: 1. Mostly swung throughout – so in general “♪♪=♩♪”.
 N: 2. I asked Eamonn Coyne about this tune and he told me it’s a version of a Tommy
@@ -2707,7 +2708,7 @@ K:Dmajor
 T:Eklundapolska nr 3
 C:Viksta-Lasse
 R:Polska
-O:Sweden, Uppland
+O:Sweden; Uppland.
 Z:Erik Ronström 2008-01-31
 F:https://youtu.be/wS-iUNnb_wU?t=23
 N:Youtube: Erik Svansbo
@@ -2933,7 +2934,12 @@ K:Gmajor
 DEGA BABd egg2 agef|gede gedB AcBA G2:|
 |:Bc|dgg2 bgg2 bgag edBd|eBB2 GABd e2dB AGEG|
 DEGA BABd egg2 agef|gede gedB AcBA G2:|`,
-			theSessionId: 575
+			theSessionId: 575,
+			references: [
+				{
+					notes: "see also: Christmas Eve"
+				}
+			]
 		},
 		{
 			name: "Paddy on the Turnpike – crooked settings",
@@ -3157,50 +3163,24 @@ K:Edorian
 			theSessionId: 281
 		},
 		{
-			abc: `X:1
-T:The Moving Cloud
-C:Neillidh Boyle
-R:reel
-L:1/8
+			incipit: `X:1
+T:The Moving Clouds
+O:Ireland; Donegal.
+C:Néillidh Boyle
+F: https://donegalfiddlemusic.bandcamp.com/album/a-feeling-in-the-blood
+N:1. Composed in 1942.
+N:2. The album [A Feeling In The Blood](https://donegalfiddlemusic.bandcamp.com/album/a-feeling-in-the-blood) has
+N: several recordings of the composer playing his tune. They were are real eye-opener to me and I’m very fond
+N: of them; N Boyle has a unique way of playing. His playing may not be to everyone’s taste these days of course – pity!
+N:3. It’s quite unlike the standard setting, which is often heard these days. For me they could be seen as 
+N: two separate tunes, even though there’s a very strong link between them.
 M:4/4
-N:Imported into *tuneTable* on 2025-10-27,
-N:from https://thesession.org/tunes/1091#setting14331
-N:Setting entered in thesession by user klhsadhfahslkdfhsalk on 2009-02-10
-K:Fmajor
-CFAF DFAF|CFAF cFAF|GddG (^cd)Gd|dGAd c/B/A F/E/D|
- CFA(^C D)FAF|CFAF EFAF|GA ~c2 defd|gfdc AG F/E/D||
- CFA(^C D)FAF|CFAF D/D/F AF|G2 ~c2 ^BGGd|dGAc ^BGFD|
- CFA(^C D)FAF|C/C/F AF G,FAF|G2 ~c2 defd|gfdc [^Bf]cde||
- ~f2 ga f ~c3|^Bcfc AFFA|GA ~g2 ^fgag|g2 ^fa g=fde|
- ~f2 ga f~c3|fcfc AFFA|GA ~c2 defd|gfdc [^Bf]cde||
- ~f2 ga fcfc|^Bcfc AFFA|G2 ~g2 ^fgag|g2 ^fa g=fde|
- ~f2 ga f~c3|fcfc AFFA|G2 ~c2 defd|gfdc AGFD||
- CFAF DFAF|CFAF D/D/F AF|G2 dG ^deAf|fB^fg AG =F/E/D|
- CFA(^C D)FAF|CFAF E/E/F AF|G2 ~c2 defd|gfdc AG F/E/D||
- C3A D2A2|CFAF D/D/F AF|Gd^dA eB^Bf|c^fgc AG=FA|
- C2 F/F/A DFAF|CFAF G,FAF|G~c3 defd|gfdc [^Bf]cde||
- f2 ga f~c3|^Bcfc AFFA|G2 ~g2 ^fgag|g2 ^fa g=fde|
- ~f2 ga fcgc|gc^Bc AFFA|GA ~c2 defd|gfdc [^Bf]cde||
- ~f2 ga f~c3|fcfc AFFA|GA ~g2 ^fgag|~g2 ^fa g=fde|
- f2 ga f~c3|f~c3 AFFA|GA ~c2 defd|gfdc AGA^B||
- c2 ac ca^Bc|acac ^Bc^cc|d2 bd dbdb|bdbb dbbd|
- c2 ac ac^Bc|acaa ^Bcac|^Bcac a^bag|f/f/d cA cF D/D/^B,||
- [c2C2]ac ca^Bc|acac ^Bc^cc|d2 bd bbdb|bdbb dbbd|
- c2 ac ca^Bc|ac^Bc acac|^Bcac a^bag|fdcA C3 A||
- CFAF DFAF|CF A2 CF A/A/F|GddG (^cd)Gd|dGAc ^BG F/E/D|
- C2 F/F/A DFAF|CFAF EFAF|GA ~c2 defd|gfdc AGFD||
- C4 D2 A2|CFAF G,FAF|Gd^dA eB^Bf|c^fgc AG =F/F/A|
- CF A/A/A DFAF|C/C/F AF G,FAF|GA ~c2 defd|gfdc [^Bf]cde||
- ~f2 ga f~c3|fcfc AFFA|G2 ~g2 ^fgag|g2 ^fa g=fde|
- ~f2 ga f~c3|fcfc AFFA|GA ~c2 defd|gfdc [^Bf]cde||
- ~f2 ga f~c3|^Bcfc AFFA|G2 ~g2 ^fgag|~g2 ^fa g=fde|
- ~f2 ga fc A/B/c|fcfc AFFA|G2 ~c2 defd|g^fdc AGA^B||
- c2 ac ca^Bc|acac ^Bc^cc|d2 bd dbdb|bdbb dbbd|
- c2 ac ca^Bc|acac ^Bcac|^Bcac a^bag|fdcA CCA^B||
- c2 ac ca^Bc|acac ^Bcac|d2 bd bbdb|bdbb dbdb|
- c2 ac ca^Bc|ac^Bc acac|^Bcac a^bag|fdcA [F4A,4]||(3efg [a2f2] [g2d2] [f2d2]||`,
+L:1/16
+R:Reel
+K:Dmin
+CFAF DFAF CFAF cFAF | GddG (^cd)Gd dGAd c/B/AF/E/D |`,
 			theSessionId: 1091,
-			theSessionSettingId: "14331"
+			theSessionSettingId: "14333"
 		},
 		{
 			abc: `X:1
@@ -4399,7 +4379,7 @@ K:Gmajor
 			references: [
 				{
 					notes: `Éigse an Spidéil / Come West Along the Road
-album: The High Seas (2018)`,
+Album: The High Seas (2018)`,
 					url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
 					artists:
 						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
@@ -4448,24 +4428,25 @@ K:Bdorian
 T: Tommy’s Tarbukas
 C: Alasdair Fraser
 R: reel
-M: 4/4
+M:4/4
 N: Setting from thesession (*) adapted 13 & 14 May 2025%250514
 N: (*) https://thesession.org/tunes/140#setting46226
-L: 1/8
+L: 1/16
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K: B minor
-de|:"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 ef dBBd|"A"cAec "Bm"dBde|
-"Bm"f2 ef dBBd|"A"cAeA fAeA|"Bm"f2 df "A"cAAc|1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
-|:"Bm"FBdB "G"GBed|"A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed|"A"caec "Bm"dBBA|
-"Bm"FBdB "G"GBed|"A"ceag "D"fdAF|"Bm"afdg "A"ecAG|1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde|| `,
+de|:"Bm"f2ef dBBd "A"cAeA fAeA|"Bm"f2ef dBBd "A"cAec "Bm"dBde|
+"Bm"f2ef dBBd "A"cAeA fAeA|"Bm"f2df "A"cAAc[1 "Bm"Bbfe dBde:|2 "Bm"Bbfe dBBA||
+|:"Bm"FBdB "G"GBed "A"ceag "D"fdA(F|"Bm"F)BdB "G"GBed "A"caec "Bm"dBBA|
+"Bm"FBdB "G"GBed "A"ceag "D"fdAF|"Bm"afdg "A"ecAG[1 "Bm"FB^Ac dBB=A:|2 "Bm"FB^Ac dBde||`,
 			theSessionId: 140,
 			references: [
 				{
 					url: "https://open.spotify.com/track/1aa6Xuy5F4F2Sv1rZSN7m7",
 					artists:
 						"Seán Maguire, fiddle; Wilcil McDowell, piano; Sean O’Driscoll, banjo",
-					notes: `(2004) Segs Hornpipe / Allister Frazer's Reel
+					notes: `Segs Hornpipe / Allister Frazer's Reel
 From 1:33 onwards
-Album: A Man Apart`
+Album: A Man Apart (2004)`
 				}
 			]
 		},
@@ -4482,7 +4463,7 @@ e2df eABd e2ef d2BA|`,
 				{
 					url: "https://donegalfiddlemusic.bandcamp.com/track/sean-sa-cheo",
 					artists: "Néillidh Boyle, fiddle",
-					notes: `1930s`
+					notes: "1930s"
 				}
 			]
 		},
@@ -5947,9 +5928,9 @@ EDE BAB EBE AFD|EDE ~B3`,
 				{
 					url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
 					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
-					notes: `(2004) The Black Rogue; Morrison’s
+					notes: `The Black Rogue; Morrison’s
 From 1:05 onwards
-Album: A Man Apart`
+Album: A Man Apart (2004)`
 				},
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=7",
@@ -6296,7 +6277,7 @@ F: https://open.spotify.com/track/1KaCOZYDak3wuTToNlUxpv
 N: 1. See comments here: https://goplayerjuggler.blogspot.com/2024/06/ofarrells-welcome-to-limerick.html
 N: 2. AKA An Phis Fhliuch
 Z:abc-transcription Malcolm Schonfield%2024-06-17
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: Slip jig
 M: 18/16
 L: 1/16
@@ -6510,18 +6491,20 @@ D2FE DFAc dcde fdAF|G2BG`,
 					url: "https://www.youtube.com/watch?v=HnDsa6dk52w",
 					artists:
 						"Matt Molloy, flute; Tommy Peoples, fiddle; Paul Brady, guitar",
-					notes: `(1978) John Brennan's (Silver Spire) / Drag Her Round The Road (Reels) `
+					notes:
+						"(1978) John Brennan's (Silver Spire) / Drag Her Round The Road (Reels) "
 				},
 				{
 					url: "https://youtu.be/hNLuj5SZS_M?t=26",
 					artists:
 						"Ross Cooper, fiddle; Andrew Gifford, fiddle; Margaret Scollay, piano; Graham Dolan, guitar; plus other fine musicians",
-					notes: `(2007) Session in Lounge Bar, Lerwick Shetland`
+					notes: "(2007) Session in Lounge Bar, Lerwick Shetland"
 				},
 				{
 					url: "https://www.youtube.com/watch?v=jHqFlS3gNMs",
 					artists: "Tommy Peoples, fiddle",
-					notes: `(Date unknown.) Followed by a T. Peoples composition: the reel “Beautiful Gortree”.`
+					notes:
+						"(Date unknown.) Followed by a T. Peoples composition: the reel “Beautiful Gortree”."
 				},
 				{
 					url: "https://open.spotify.com/track/0jLnKZeYtUZmEMJ2lFgFLd",
@@ -6534,7 +6517,8 @@ This setting of Miss Monaghan is quite unusual; it’s almost (but not quite) li
 					url: "https://youtu.be/jZsiWNtc5EE",
 					artists:
 						"Paddy O’Brien, Button Accordion; Tom Schaefer, fiddle; Paul Wehling, bouzouki",
-					notes: `The Silver Spire / Sean Ryan's. The B part (of the Silver Spire) is an interesting, unusual setting. From the album: “The Sailor’s Cravat”.`
+					notes:
+						"The Silver Spire / Sean Ryan's. The B part (of the Silver Spire) is an interesting, unusual setting. From the album: “The Sailor’s Cravat”."
 				}
 			]
 		},
@@ -6840,13 +6824,12 @@ L: 1/16
 K: Edor
 E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			theSessionId: 69,
-
 			references: [
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6",
 					artists:
 						"Larry Redican, fiddle; Andy McGann, fiddle; Felix Dolan, piano ",
-					notes: `Morning dew; Hunter's house (1960s)`
+					notes: "Morning dew; Hunter's house (1960s)"
 				}
 			]
 		},
@@ -7399,7 +7382,7 @@ N:semiquavers. (I did consider using 4/2 with quavers. That
 N:would be closer to the standard way but the four beats to a
 N:bar would be slightly less clear IMO.)
 Z:abc-transcription Malcolm Schonfield %2024-11-22,28
-Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 I:abc-charset utf-8
 K:D mixo
 P:Intro
@@ -7463,7 +7446,7 @@ S: Oisin McAuley
 D: Up In The Air
 F: https://youtu.be/CxAYuvcfslQ?si=Y0y7AnAa8NbZk_9i&t=99
 Z: abc-transcription Malcolm Schonfield% 2024-05-28
-Z: abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: jig
 M: 6/8
 L: 1/8
@@ -7491,7 +7474,7 @@ K: Dmaj
 						"John Carty, fiddle; Alec Finn, bouzouki; Artie McGlynn: guitar",
 					url: "https://youtu.be/2fibzyiSZ3k",
 					notes: `
-Album: At It Again, 2003
+Album: At It Again (2003)
 A comment on thesession I wholeheartedly agree with: “I think John Carty’s version on the fiddle is pure magic where he plays it innumerable times but each one is that bit different so that one could almost listen to it forever!”`
 				}
 			]
@@ -7572,7 +7555,7 @@ BGE F2E BGE FGA|BGE F2E AFD FGA|`,
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=1",
 					artists:
 						"Brian Conway, fiddle; Tony DeMarco, fiddle; Felix Dolan, piano",
-					notes: `Monaghan; Larry O'Gaff (1996)`
+					notes: "Monaghan; Larry O'Gaff (1996)"
 				}
 			]
 		},
@@ -7588,7 +7571,7 @@ B2dB cAFA G2BG DGBG |`,
 			theSessionId: 472,
 			references: [
 				{
-					notes: `See the entry for the Mountain Road`
+					notes: "See the entry for the Mountain Road"
 				}
 			]
 		},
@@ -7644,12 +7627,14 @@ F2AF BFAF F2AF EFDE|F2`,
 				{
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=2",
 					artists: "The mountain road; The hunter's house",
-					notes: `Charlie Mulvihill, button accordion; Michael McNamara, flute; Pee Fitzpatrick, fiddle`
+					notes:
+						"Charlie Mulvihill, button accordion; Michael McNamara, flute; Pee Fitzpatrick, fiddle"
 				},
 				{
 					url: "https://www.cranfordpub.com/mp3s/michaelgorman2.mp3",
 					artists: "Michael Gorman, fiddle",
-					notes: `The original six part version, as played by the tune's composer. [More info from Cranford Publications](https://www.cranfordpub.com/tunes/Irish/Mountain_Road.htm)`
+					notes:
+						"The original six part version, as played by the tune's composer. [More info from Cranford Publications](https://www.cranfordpub.com/tunes/Irish/Mountain_Road.htm)"
 				}
 			]
 		},
@@ -7667,8 +7652,8 @@ D>E DB AF FB|AF DE FEEF/E/|`,
 				{
 					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
 					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
-					notes: `(2015) John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
-album:  The Northern Concertina
+					notes: `John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
+Album:  The Northern Concertina (2015)
 The guitar could be Tim Edey and not S Dunne, going from the meagre info available online; but I suspect it’s S Dunne as he seems to be the main backer for JO’R.
 3 parts`
 				}
@@ -7689,8 +7674,8 @@ B>c de dB Bd|cA AB/d/ ed BA|`,
 				{
 					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
 					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
-					notes: `(2015) John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
-album:  The Northern Concertina
+					notes: `John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
+Album:  The Northern Concertina (2015)
 2 parts`
 				}
 			],
@@ -7716,9 +7701,9 @@ ed cA ed c2|AA/c/ ef ge d2|`,
 				{
 					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
 					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
-					notes: `(2015) John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
-Here this polka, Neilí's, is given the name Timmy McCarthy’s/
-album:  The Northern Concertina
+					notes: `John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
+Here this polka, Neilí's, is given the name Timmy McCarthy’s.
+Album:  The Northern Concertina (2015)
 3 parts`
 				}
 			]
@@ -7756,9 +7741,9 @@ A2BA Bdef gedB AGEF|G2`,
 				{
 					url: "https://open.spotify.com/track/0y4zNhYmRi4mb4njDGztZR",
 					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
-					notes: `(2004) Donegal Reel / Sligo Maid / The White Leaf
+					notes: `Donegal Reel / Sligo Maid / The White Leaf
 From 1:07 onwards
-Album: A Man Apart`
+Album: A Man Apart (2004)`
 				}
 			]
 		},
@@ -7792,6 +7777,67 @@ L: 1/16
 K: Edor
 EFGA BAGB AFF2 dFAF|EFGA`,
 			theSessionId: 637
+		},
+		{
+			groups: "su,alora",
+			abc: `
+X:4
+T:SNCF jigs
+R:jig
+C:Malcolm Schonfield
+L:1/8
+M:12/8
+K:Am
+%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol 
+P:A
+"Am"EBc "F"~G3 \\ % or { EBc G2G } or { .E2B cG2 } or { EBc GAF }
+"Am"FBc "F"~G3 | \\ %  or { .F2B cG2 | }  or { .E2B cG2 |} or { EBc ~G3 | } or { EBc GAF | } or { .E2B cG2 |}
+"Am"~e3  \\ %  or {| efe} or {| d2e} or {| Ace } or {| .e2e }
+dcB \\%
+"Dm"AGF EFd, |  %  or { AGA BAG |}  or { ABG E3 |}
+"Am"EBc "F"~G3 "Am"FBc "F"~G3 | "Am"~e3 dcB 
+[1 AGF "^⇒c or B"~E3 |] \\ % or { AAA A z A |]}
+[2 A"^⇒D"z |] \\
+[3 Az"^⇒F or G"z |]
+P:B
+"Dm"FEd, "G"~B3 "Am"BcG ~A3 | "Dm"FEd, "G"BcG "Am"AEA cBA | % or { B2c B3 A3 }
+"Dm"FEd, \\
+"G"~B3 \\ % or { B2B } or { B2B- }
+"Am"BcG ~A3 | "Dm"FEd, "G"BcG "Am"AAA A z "^⇒B or c""<("">)"A |]
+P:C
+|: c BAG | "F"FEF AB(G "Am"E)d,E AB(G | \\ % or {F2(c B)AG E2c BA(G} or {FEF AB(F E)d,E AB(G}
+"Dm"F)A(e d)B(d c)A(c B)A(G | % or { F)A(e d)c(B c)B(A B)A(G |}
+"F"F)EF AB(G "Am"E)d,E AB(G | \\ %
+"Dm"F)A(e "G"d)B(G \\ % or {| F)A(e d)c(B }
+[1 "Am".A)"^⇒D"z :| \\ % 
+[2 "Am"A)AA A z "^⇒B or c""<("">)"A |]  \\
+[3 "Am"A)AA A "^⇒E"z |]  
+P:D
+|: (E | "Dm".F2)(A "Em".G2)(B "Am".d2)c- cA(E | \\ % or { (B .d3) cA(E | }
+"Dm"F2)(A "G".G2)B "Am"EGF ~E3 | % or { EdE | }
+.F2(A .G2)B d2c- cde | dcB A2G [1 AAA A "^⇒E"z :| [2 "^⇒F"A3 |] 
+P:E
+e2f |: e3-edc dBG F2E | c3 \\
+-cBc \\ % or {ABc} 
+dBd g2f | \\ % or { d3  e2f |} or(?) { a2g |} or { g2 f- | fe2-edc }
+       e3-edc dBG F2E | \\
+ c3 ABc % or { c3-cBc } 
+ \\
+[1 BGE A "^⇒E"z :| \\
+[2 BGE [Ae] z "^⇒F"f :| \\
+[3 BGE A z "^⇒B or c""<("">)"A |] \\ % or { A3 |] }
+[4 "^⇒G or G’"~B3 |] \\ % or {BG"^⇒G or G’"E}
+[5 B "^⇒D"z :| 
+P:F
+|: ABc | F2d B3 BcG A3 | \\ % or { ABc E3 |}
+FAd B3 Bdg e3 | % 
+      F2d B3 BcG A3 | FAd \\
+BcG \\ % or { BGE } 
+~A3 :|
+P:F’
+|: ABc | .F2d -d2 B- BcB ABc | .F2d- d2B- Bcd ecA | % or { Bdg e3 | }
+      .F2d -d2 B- BcB ABc | F2d BGE A3 :|
+`
 		}
 	]
 	/*
@@ -7804,6 +7850,5 @@ EFGA BAGB AFF2 dFAF|EFGA`,
 				notes: ``,
 			}
 		]}
-
 	 */
 };

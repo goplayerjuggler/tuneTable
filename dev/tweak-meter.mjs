@@ -14,7 +14,7 @@ async function formatJavascript(javascript) {
   const options = await resolveConfig(TUNES_FILE); // Resolves current config
   const formatted = format(javascript, {
     ...options,
-    parser: "espree", // Default parser for JavaScript
+    parser: "espree" // Default parser for JavaScript
     //https://prettier.io/blog/2020/11/20/2.2.0
   });
   return formatted;
@@ -28,7 +28,7 @@ const makeBackup = true;
 const TUNES_FILE = path.join(__dirname, "..", "src", "tunes.json.js");
 const BACKUP_FILE = path.join(__dirname, "..", "src", "tunes.json.js.backup");
 const maxNbToProcess = 3;
-const title = null; //"Lad O’Beirne’s"
+const title = "Tommy’s Tarbukas"; //"Lad O’Beirne’s"
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)
@@ -76,9 +76,9 @@ async function process() {
       // , or if it has the comment "edited"
       if (
         !tune ||
-        !tune.abc ||
-        tune.abc.indexOf("N:Imported into *tuneTable* on 2025-10-25") < 0 ||
-        tune.abc.match(/N:[^\n]*edited/i)
+        !tune.abc
+        // || tune.abc.indexOf("N:Imported into *tuneTable* on 2025-10-25") < 0 ||
+        // tune.abc.match(/N:[^\n]*edited/i)
       ) {
         skippedCount++;
         continue;
@@ -124,7 +124,7 @@ async function process() {
       } catch (error) {
         console.error(
           `  Tune ${i} - ${metadata.title}: Error :`,
-          error.message,
+          error.message
         );
         skippedCount++;
       }
@@ -144,8 +144,8 @@ async function process() {
     const formatted = await formatJavascript(
       `export default ${javascriptify(tunesData)}`,
       {
-        parser: "js",
-      },
+        parser: "js"
+      }
     );
     // Write the updated file
     fs.writeFileSync(TUNES_FILE, formatted, "utf8");
