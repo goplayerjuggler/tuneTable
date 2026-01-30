@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-01-29",
+	lastUpdate: "2026-01-30",
 	tunes: [
 		{
 			abc: `
@@ -2233,13 +2233,13 @@ K:Gmajor
 				`X:1
 T:The First Draft
 C:Siobhán Peoples
-S:Fidil
+S:Fidil: Aidan O’Donnell, Ciarán Ó Maonaigh, and Damien McGeehan, on fiddles
 F:https://raelachrecords.bandcamp.com/track/the-first-draft-mazurka
 D:Decade
 R:mazurka
 L:1/8
 M:3/4
-N:This lovely mazurka is a composition by Siobhán Peoples. I first heard it on
+N: This lovely mazurka is a composition by Siobhán Peoples. I first heard it on
 N:www.itma.ie.
 N:Currently there’s a page on itma.ie for this tune:
 N:https://www.itma.ie/scores/first-draft/
@@ -2249,10 +2249,7 @@ N:Fidil on their 2019 recording, Decade, and they kindly allowed us to include t
 N:track here."
 N:The score I’m sharing is, I believe, identical to the one written by S. Peoples;
 N:I copied it from the itma.ie page. I got in touch with S. Peoples and she kindly
-N:agreed for me to do this.
-N:---
-N:Imported from https://thesession.org/tunes/23320#setting47650
-N:Setting entered in thesession by user GoPlayer on 2023-07-13
+N:agreed for me to do this. (MS, 2023)
 K:Gmajor
 DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG |
  Bc d/c/B cA|G<B DG FG|EG ce DF|G2 G2:|
@@ -2313,17 +2310,11 @@ DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/
 			],
 			references: [
 				{
-					url: "https://raelachrecords.bandcamp.com/track/the-first-draft-mazurka",
-					artists:
-						"Fidil: Aidan O'Donnell, Ciarán Ó Maonaigh, and Damien McGeehan, on fiddles",
-					notes: "(2019) album: Decade."
-				},
-				{
-					url: "https://music.youtube.com/watch?v=S7JhPQI9Uew",
+					url: "https://www.youtube.com/watch?v=S7JhPQI9Uew",
 					artists:
 						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Natalie Haas, cello",
-					notes: `A version that’s quite close to the
-Fidil one; it also has some very pretty things going on on the cello.`
+					notes: `(2021; Galway) A version that’s quite close to the Fidil one; it also has some very pretty things going on on the cello.
+More info in youtube - follow the link.`
 				}
 			],
 			theSessionId: 23320,
