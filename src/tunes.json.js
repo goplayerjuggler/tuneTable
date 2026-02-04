@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-01-30",
+	lastUpdate: "2026-02-05",
 	tunes: [
 		{
 			abc: `
@@ -986,18 +986,20 @@ T:Arthur Darley's
 C:Arthur Darley
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/417#setting417
 N:Setting entered in thesession by user Josh Kane on 2001-12-06
-K:Amixolydian
-|:A3 AGF|EDC D3 d2e|fgf edc|d3 d2e|
- fgf edc|dAA BAG|FED EDC|DFE CDE|
- Ddd Aee|Aff Agg|fed edc|d2d dcB:|
- |:A=ff fef|A=ff fef|A=ff Agg|Aaa A_bb|
- A=ff fef|A=ff f2g|=fed ed^c|d2d d2e:|
- |:fgf edc|dAA BAD|FED EDC|DEF CDE|
- Ddd Aee|Aff Agg|fed edc|d2d d3:|`,
+N:(edited after importing)
+N:A crooked tune
+K:D
+[M:15/8]|:A3 AGF EDC D3 d2e|[M:12/8]fgf edc d3 d2e|
+ fgf edc dAA BAG|FED EDC DFE CDE|
+ Ddd Aee Aff Agg|fed edc d2d dcB:|
+ |:A=ff fef A=ff fef|A=ff Agg Aaa A_bb|
+ A=ff fef A=ff f2g|=fed ed^c d2d d2e:|
+ |:fgf edc dAA BAD|FED EDC DEF CDE|
+ Ddd Aee Aff Agg|fed edc d2d d3:|`,
 			theSessionId: 417
 		},
 		{
@@ -1444,14 +1446,23 @@ K:Gmajor
 			theSessionId: 1334
 		},
 		{
+			aka: ["The Frieze Breeches", "Cúnla"],
 			incipit: `X: 11
-T: The Frieze Breeches
+T: The Frieze Britches
 R: jig
 M: 12/8
 L: 1/8
 K: Dmix
 FED EFG A2 d cAG|A`,
-			theSessionId: 34
+			theSessionId: 34,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2025/?track=7",
+					artists:
+						"Tony MacMahon, accordion; Noel Hill, concertina; John Beag Ó Flatharta, guitar",
+					notes: `Cúnla [The frieze britches], jig; Na ceannabháin bhána, slip jig; Cailleach an airgid, jig`
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -1615,7 +1626,7 @@ K:Amixolydian
 T:Partie De Quadrille
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:This is a ‘crooked’ jig from Quebec which features a couple of bars of 9/8 in
 N:the A section. I learnt it from the 2007 self-titled album by the group Tidal
 N:Wave/Raz-de-Marée, where its source is listed as the repertoire of the Verret
@@ -1624,11 +1635,12 @@ N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23388#setting47849
 N:Setting entered in thesession by user Jake on 2023-08-04
+N:(edited after importing)
 K:Fmajor
-|:A2^G AcB|A2^G AcB|A2G FAc|f2f e2d|
- B2A Bdc|B2A Bdc|[M:9/8]B2A GBd g2f|1 ege cde fcB:|2 )[M:6/8]ege cde|fcA F3|
- |:a2a aga|b3 b2a|g2g gfg|ac'a cde|
- f2f fef|g3 g2f|ege cde||1 )fcA F3:|2 )fcA FcB|`,
+|:A2^G AcB A2^G AcB|A2G FAc f2f e2d|
+ B2A Bdc B2A Bdc|[M:9/8]B2A GBd g2f|1 ege cde fcB:|2 [M:12/8]ege cde fcA F3||
+ |:a2a aga b3 b2a|g2g gfg ac'a cde|
+ f2f fef g3 g2f|ege cde [1 fcA F3:|2 fcA FcB !D.C.! |]`,
 			theSessionId: 23388,
 			theSessionSettingId: "47849"
 		},
@@ -1912,21 +1924,20 @@ AGG AEE|AGE EDD|cdc A2G|EAA D3:|
 			theSessionId: 870
 		},
 		{
-			abc: `X:1
+			aka: ["Cailleach an airgid"],
+			incipit: `X:1
 T:The Hag With The Money
 R:jig
 L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/351#setting351
-N:Setting entered in thesession by user Joerg Froese on 2001-11-02
+M:12/8
 K:Dmixolydian
-|:Adc A3|AGE G3|Adc A3|GEA GED|
- Adc A3|AGE G3|AGE cde|dcA GED:|
- K:DMaj
- |:ABc dcd|fed efe|ABc dcd|eag edc|
- ABc dcd|fed efg|age cde|dcA GED:|`,
-			theSessionId: 351
+Add A3 AGE G3|Add ABA AGE EDD|`,
+			theSessionId: 351,
+			references: [
+				{
+					notes: `See the Frieze Britches for a set by McMahon & Hill`
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -2945,8 +2956,8 @@ Q:1/4=110
 L:1/16
 R:reel
 N:Probably was played on a fiddle tuned one tone down from the standard tuning.
-D: https://bmac.libs.uga.edu/index.php/Detail/objects/331630
-F:UGA Brown Media Archives: identifier artrosen_00180 (Track 3 -29:03 of the tape
+F: https://bmac.libs.uga.edu/index.php/Detail/objects/331630
+D:UGA Brown Media Archives: identifier artrosen_00180 (Track 3 -29:03 of the tape)
 Z:abc-transcription Malcolm Schonfield (using A. Kuntz’s transcription 
 Z:as a starting point)%2024-06-26, 2025-11-21
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -5203,7 +5214,12 @@ N:Setting entered in thesession by user b.maloney on 2002-03-22
 K:Gmajor
 |:B2 G AGE GED|E/F/GE DEG A2 c|BAG AGE GED|E/F/GE DEF G2 A:|
  Bd/d/d edB BAG|Bd/d/d edB A3|Bd/d/d edB BAG|GED DEF G3:|`,
-			theSessionId: 612
+			theSessionId: 612,
+			references: [
+				{
+					notes: `See the Frieze Britches for a set by McMahon & Hill`
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -6437,6 +6453,8 @@ M:6/8
 N:Imported into *tuneTable* on 2025-11-02,
 N:from https://thesession.org/tunes/1885#setting52765
 N:Setting entered in thesession by user Jalon on 2024-12-30
+N:(edited after importing)
+N: A crooked tune
 K:Gdorian
 |: D2 G FDC | ~A,3 F3 | ~A,3 C3 | [M:9/8] A,CA, G,A,G, G,GF | [M:6/8] D2 G FDC |
  ~A,3 F3 | ~A,3 CA,C |1 [M:9/8] FCA, G,A,G, G,A,/B,/C :|2 FCA, G,A,G, G,GF ||
@@ -7829,7 +7847,68 @@ P:F’
 |: ABc | .F2d -d2 B- BcB ABc | .F2d- d2B- Bcd ecA | % or { Bdg e3 | }
       .F2d -d2 B- BcB ABc | F2d BGE A3 :|
 `
+		},
+		{
+			incipit: `
+X: 1
+T: The Humours Of Ballyloughlin
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+A3 AGE GED ~D3|c2A ded cAG FED|`,
+			theSessionId: 210,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2025/?track=12",
+					artists:
+						"Liam O'Flynn, uilleann pipes; Liam O'Connor, fiddle; Steve Cooney, guitar"
+				}
+			]
+		},
+		{
+			incipit: `
+X: 1
+T: The Liffey Banks
+R: reel
+M: 4/4
+L: 1/8
+K: Gmaj
+G2GF GBdB ~c3eg2 dc |`,
+			theSessionId: 502,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2025/?track=5",
+					artists:
+						"Brian Conway, fiddle; Andy McGann, fiddle; Martin Wynne, fiddle; Felix Dolan, piano"
+				}
+			]
+		},
+		{
+			incipit: `X: 1
+T: Paddy Fahey's
+R: reel
+M: 4/4
+N: Playable on the cello, IMO
+L: 1/16
+K: Ddor
+D2A,D FEFG AdcA d2de|fedf edcA`,
+			theSessionId: 463,
+			references: [
+				{
+					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2025/?track=3",
+					artists: "Andy McGann, fiddle; Felix Dolan, piano"
+				}
+			]
 		}
+
+		/*  
+
+  
+    
+    
+    
+				*/
 	]
 	/*
 	{incipit:``,theSessionId:},

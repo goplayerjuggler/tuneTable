@@ -406,7 +406,7 @@ function renderTable() {
 
 	if (window.filteredData.length === 0) {
 		tbody.innerHTML =
-			'<tr><td colspan="5" class="no-results">No tunes found matching your criteria.</td></tr>';
+			'<tr><td colspan="2" class="no-results">No tunes found matching your criteria.</td></tr>';
 		return;
 	}
 
@@ -481,21 +481,29 @@ function renderTable() {
                     `;
 		});
 
+		const metadata = [tune.rhythm, tune.key, tune.origin, tune.composer]
+			.filter((m) => m)
+			.map((m) => `<span class="badge">${m}</span>`)
+			.join(" ");
+
+		const aka = tune.aka ? tune.aka.join(", ") : "",
+			akaTitle = aka ? ` title="aka: ${aka}"` : "";
+
 		const hasAbc = !!tune.abc;
 		const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
 		// debugger;
-		let incipitId = `incipit${index}`;
-		let title = `<div class="tune-header">
+		const incipitId = `incipit${index}`;
+		const title = `<div class="tune-header">
       ${
 				hasAbc
-					? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;">
+					? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${akaTitle}>
         ${tune.name}
       </a>${
 				Array.isArray(tune.abc) && tune.abc.length > 1
 					? ` - ${tune.abc.length} settings`
 					: ""
 			}`
-					: `<div class="${tuneNameClass}" data-tune-index="${index}">
+					: `<div class="${tuneNameClass}" data-tune-index="${index}" ${akaTitle}>
         ${tune.name}
       </div>`
 			}`;
@@ -504,6 +512,7 @@ function renderTable() {
     <td>
         <div class="tune-header">
             <div class="tune-title">${title}</div>
+			<div class="notes">${metadata}</div>
             ${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
         </div>
         <div id="${incipitId}" class="incipitClass"></div>
@@ -517,23 +526,16 @@ function renderTable() {
       </div>
     </div>
     </td>
-                    <td><span class="badge">${tune.key}</span></td>
-                    <td><span class="badge">${tune.rhythm}</span></td>
-                    <td class="references">${referencesHtml}</td>
-                    <td class="
-					">
-    ${
-			tune.scores && tune.scores.length > 0
-				? tune.scores
-						.map(
-							(score) =>
-								`<a href="${score.url}" target="_blank">${score.name}</a>`
-						)
-						.join("<br>")
-				: ""
-		}
-</td>
-                `;
+	<td class="references">${referencesHtml}${
+		tune.scores && tune.scores.length > 0
+			? `${tune.scores
+					.map(
+						(score) =>
+							`<a href="${score.url}" target="_blank">${score.name}</a>`
+					)
+					.join(", ")}`
+			: ""
+	}</td>`;
 
 		const tuneNameEl = row.querySelector(".tune-name");
 		if (hasAbc) {

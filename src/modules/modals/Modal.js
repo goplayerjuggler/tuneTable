@@ -35,7 +35,7 @@ export default class Modal {
 	 */
 	render() {
 		this.element = document.createElement("div");
-		this.element.className = `modall modall--${this.size}`;
+		this.element.className = `modall modal-${this.size}`;
 		this.element.id = this.id;
 		this.element.setAttribute("role", "dialog");
 		this.element.setAttribute("aria-modal", "true");
@@ -89,7 +89,7 @@ export default class Modal {
 	 * @returns {boolean} True if this is the top modal
 	 */
 	isTopModal() {
-		const modals = document.querySelectorAll(".modall--active");
+		const modals = document.querySelectorAll(".modal-active");
 		return modals[modals.length - 1] === this.element;
 	}
 
@@ -98,7 +98,7 @@ export default class Modal {
 	 * @returns {boolean} True if modal is open
 	 */
 	isOpen() {
-		return this.element && this.element.classList.contains("modall--active");
+		return this.element && this.element.classList.contains("modal-active");
 	}
 
 	/**
@@ -137,14 +137,14 @@ export default class Modal {
 
 		// Small delay for CSS transition
 		requestAnimationFrame(() => {
-			this.element.classList.add("modall--active");
+			this.element.classList.add("modal-active");
 
 			if (this.onOpen) this.onOpen();
 			this.trapFocus();
 
 			// Focus first focusable element or close button
 			const firstFocusable = this.element.querySelector(
-				'input, button, select, textarea, [tabindex]:not([tabindex="-1"])',
+				'input, button, select, textarea, [tabindex]:not([tabindex="-1"])'
 			);
 			if (firstFocusable) {
 				firstFocusable.focus();
@@ -162,7 +162,7 @@ export default class Modal {
 	 */
 	close() {
 		if (this.element) {
-			this.element.classList.remove("modall--active");
+			this.element.classList.remove("modal-active");
 			this.clearAutoHideTimer();
 
 			// Clean up event listeners
@@ -190,7 +190,7 @@ export default class Modal {
 	 */
 	trapFocus() {
 		const focusableElements = this.element.querySelectorAll(
-			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 		);
 
 		if (focusableElements.length === 0) return;

@@ -33,6 +33,16 @@ function updateFromMetadata(
 			processed.key = metaData.key;
 			if (setIsFromAbc) processed.keyIsFromAbc = true;
 		}
+
+		if (!processed.origin && metaData.origin) {
+			processed.origin = metaData.origin;
+			if (setIsFromAbc) processed.originIsFromAbc = true;
+		}
+
+		if (!processed.composer && metaData.composer) {
+			processed.composer = metaData.composer;
+			if (setIsFromAbc) processed.composerIsFromAbc = true;
+		}
 	}
 
 	if (!processed.references) {
@@ -53,7 +63,7 @@ function updateFromMetadata(
 			}`,
 			fromAbc: true
 		};
-		if (abcRef.notes) abcRef.notes += " (notes extracted from ABC)";
+		//if (abcRef.notes) abcRef.notes += " (notes extracted from ABC)";
 
 		processed.processedFromAbc.push(abcRef);
 	}

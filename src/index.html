@@ -1,72 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/abcjs@6.5.1/dist/abcjs-basic-min.js"></script>
-    <title>Tune table</title>
-  </head>
 
-  <body>
-    <div class="container">
-      <h1>🎵 Tunes</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes" />
+  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.5.1/dist/abcjs-basic-min.js"></script>
+  <title>Tune table</title>
+</head>
 
-      <div class="controls">
-        <input
-          type="text"
-          id="searchInput"
-          class="search-box"
-          placeholder="Search tunes, artists, or rhythms…"
-          autofocus
-        />
-        <select id="rhythmFilter" class="filter-select">
-          <option value="">All rhythms</option>
-        </select>
-        <select id="keyFilter" class="filter-select">
-          <option value="">All keys</option>
-        </select>
-        
-        <!-- Edit Menu Dropdown -->
-        <div class="dropdown">
-          <button id="editMenuBtn" class="add-tunes-btn">
-            ✎ Edit Menu ▼
+<body>
+  <div class="container">
+    <h1>🎵 Tunes</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" class="search-box" placeholder="Search tunes, artists, or rhythms…"
+        autofocus />
+      <select id="rhythmFilter" class="filter-select">
+        <option value="">All rhythms</option>
+      </select>
+      <select id="keyFilter" class="filter-select">
+        <option value="">All keys</option>
+      </select>
+
+      <!-- Edit Menu Dropdown -->
+      <div class="dropdown">
+        <button id="editMenuBtn" class="add-tunes-btn">
+          ✎ Edit Menu ▼
         </button>
-          <div id="editMenuDropdown" class="dropdown-content">
-            <a href="#" id="thesession-import-btn">
-              🎻 Import from thesession.org
-            </a>
-            <a href="#" id="addNewTuneBtn">➕ add new tune</a>
-            <a href="#" id="emptyTunesBtn">🗑️ remove all tunes</a>
-            <a href="#" id="addTunesBtn">📝 add tunes (from ABC)</a>
-            <a href="#" id="loadJsonBtn">⇑ load full tune table</a>
-            <a href="#" id="copyTunesBtn">📋 copy data</a>
-            <a href="#" id="clearStorageBtn">🔄 reset to original</a>
-          </div>
+        <div id="editMenuDropdown" class="dropdown-content">
+          <a href="#" id="thesession-import-btn">
+            🎻 Import from thesession.org
+          </a>
+          <a href="#" id="addNewTuneBtn">➕ add new tune</a>
+          <a href="#" id="emptyTunesBtn">🗑️ remove all tunes</a>
+          <a href="#" id="addTunesBtn">📝 add tunes (from ABC)</a>
+          <a href="#" id="loadJsonBtn">⇑ load full tune table</a>
+          <a href="#" id="copyTunesBtn">📋 copy data</a>
+          <a href="#" id="clearStorageBtn">🔄 reset to original</a>
         </div>
       </div>
+    </div>
 
-      <div class="table-container">
-        <table id="tunesTable">
-          <thead>
-            <tr>
-              <th class="sortable" data-column="name">Name</th>
-              <th class="sortable" data-column="key">Key</th>
-              <th class="sortable" data-column="rhythm">Rhythm</th>
-              <th>Notes/references</th>
-              <th>Other scores</th>
-            </tr>
-          </thead>
-          <tbody id="tunesTableBody"></tbody>
-        </table>
-      </div>
+    <div class="table-container">
+      <table id="tunesTable">
+        <thead>
+          <tr>
+            <th class="sortable" data-column="name">tune</th>
+            <th>notes/references</th>
+          </tr>
+        </thead>
+        <tbody id="tunesTableBody"></tbody>
+      </table>
     </div>
-    <div id="footer">
-      <span id="spCount"></span> tunes<br />
-      Tune data last updated: <span id="spLastUpdated"></span><br />
-      <a href="https://github.com/goplayerjuggler/tuneTable">source code</a>
-    </div>
-  </body>
+  </div>
+  <div id="footer">
+    <span id="spCount"></span> tunes<br />
+    Tune data last updated: <span id="spLastUpdated"></span><br />
+    <a href="https://github.com/goplayerjuggler/tuneTable">source code</a>
+  </div>
+</body>
+
 </html>
