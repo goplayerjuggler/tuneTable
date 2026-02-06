@@ -1223,15 +1223,16 @@ P:Ⅱ
 T:Drummond Castle
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2540#setting2540
 N:Setting entered in thesession by user Jamie on 2004-02-20
+N:*abc-tools: convert jig to M:12/8*
 K:Aminor
-|:ABA a2 (a|{b}a)ge ~g3|~c3 edc|Bdg dBG|
- (ABA) ~a3|a(ge) g3|ege deg|1 edB A3:|2 edB A2 B||
- |:~c3 cec|~d3 ded|~c3 edc|Bdg dBG|
- ~c3 edc|deg a2 (a|{b}a)ge deg|1 edB A2 B:|2 edB A3||`,
+|:ABA a2 (a {b}a)ge ~g3|~c3 edc Bdg dBG|
+(ABA) ~a3 a(ge) g3|ege deg|1 edB A3:|2 edB A2 B||
+|:~c3 cec ~d3 ded|~c3 edc Bdg dBG|
+~c3 edc deg a2 (a|{b}a)ge deg[1 edB A2 B:|2 edB A3||`,
 			theSessionId: 2540
 		},
 		{
@@ -1460,7 +1461,8 @@ FED EFG A2 d cAG|A`,
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2025/?track=7",
 					artists:
 						"Tony MacMahon, accordion; Noel Hill, concertina; John Beag Ó Flatharta, guitar",
-					notes: `Cúnla [The frieze britches], jig; Na ceannabháin bhána, slip jig; Cailleach an airgid, jig`
+					notes:
+						"Cúnla [The frieze britches], jig; Na ceannabháin bhána, slip jig; Cailleach an airgid, jig"
 				}
 			]
 		},
@@ -1895,7 +1897,8 @@ M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1497#setting1497
 N:Setting entered in thesession by user lefthander al on 2003-03-10
-K:Dmajor
+N:(edited after importing)
+K:Amix
 |:Ace aed|edB A3|GBd G3|FAd F3|
  Ace aed|cdB A2a|aed cdB|ABG A3:|
  GBd G3|FAd F3|e2e ecA|e2e ecA|
@@ -1935,7 +1938,7 @@ Add A3 AGE G3|Add ABA AGE EDD|`,
 			theSessionId: 351,
 			references: [
 				{
-					notes: `See the Frieze Britches for a set by McMahon & Hill`
+					notes: "See the Frieze Britches for a set by McMahon & Hill"
 				}
 			]
 		},
@@ -3287,15 +3290,16 @@ K:Gmajor
 			abc: `X:1
 T:The Abbey
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/477#setting477
 N:Setting entered in thesession by user Josh Kane on 2002-01-01
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Adorian
-|:B|A3B A2GE|A2GA BddB|A3B AGEF|G3A Bdd:|
- g|egg2 a2ba|gabg aged|egg2 a2ga|bgaf gedg|
- egg2 a2bg|agbg aged|egg2 a2ga|bgaf ged|`,
+|:B|A3B A2GE A2GA BddB|A3B AGEF G3A Bdd:|
+g|egg2 a2ba gabg aged|egg2 a2ga bgaf gedg|
+egg2 a2bg agbg aged|egg2 a2ga bgaf ged|`,
 			theSessionId: 477
 		},
 		{
@@ -4668,20 +4672,23 @@ K:Dmajor
 		},
 		{
 			abc: `X:1
-T:Reel Eboulement
+T:Reel des Éboulements
 R:reel
-L:1/8
+L:1/16
 M:4/4
+O:Quebec
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2911#setting2911
 N:Setting entered in thesession by user jdave on 2004-04-28
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Amajor
-|:aA~A2 cAeA|Bcde f2fg|aA~A2 cAeA|fdge ~a3g|
- aA~A2 cAeA|Bcde f2fg|agfe fedc|1 dfec A2fg:|2 dfec A2ed||
- cAEA cAeA|Bcde f2ed|cAEA cAeA|fdge a2ed|
- cAEA cAeA|Bcde f2fg|agfe fedc|1 dfec A2ed:|2 dfec A2AF||
- EAAB cABA|GABc dBEB|GBEB GBEB|GBEB A2cA|
- eAAB c2BA|GABc defg|agfe fedc|1 dfec A2AF:|2 defg a2||`,
+|:aA~A2 cAeA Bcde f2fg|aA~A2 cAeA fdge ~a3g|
+aA~A2 cAeA Bcde f2fg|agfe fedc[1 dfec A2fg:|2 dfec A2ed||
+cAEA cAeA Bcde f2ed|cAEA cAeA fdge a2ed|
+cAEA cAeA Bcde f2fg|agfe fedc[1 dfec A2ed:|2 dfec A2AF||
+EAAB cABA GABc dBEB|GBEB GBEB GBEB A2cA|
+eAAB c2BA GABc defg|agfe fedc[1 dfec A2AF:|2 defg a2||`,
+			parts: "AABBCC",
 			theSessionId: 2911
 		},
 		{
@@ -5217,7 +5224,7 @@ K:Gmajor
 			theSessionId: 612,
 			references: [
 				{
-					notes: `See the Frieze Britches for a set by McMahon & Hill`
+					notes: "See the Frieze Britches for a set by McMahon & Hill"
 				}
 			]
 		},
@@ -5883,10 +5890,12 @@ AF|D2FA DAFA dfed B2dB|A2AB AFDE
 			theSessionId: 1020
 		},
 		{
-			name: "Fahey’s Fiddle",
+			aka: ["Paddy Fahey’s"],
 			groups: "su",
 			rhythm: "jig",
 			incipit: `X: 1
+T: Fahey’s Fiddle
+C: Paddy Fahey
 R: jig
 M: 12/8
 L: 1/8
@@ -6983,11 +6992,16 @@ f2ed cAAB cAdB cAA2|f2ed`,
 			incipit: `X: 1
 T: The Bunch Of Green Rushes
 R: reel
+S: Frankie Gavin, fiddle; Alec Finn, bouzouki
+D: Frankie Gavin And Alec Finn (1977)
+F: https://youtu.be/AIpCH6ReCHI
+P: ABC
 M: 4/4
 L: 1/16
-K: Dmix
-d|cAGE ~=F3d cAGc AddB|`,
-			theSessionId: 1335
+K: Ddor
+d|cAGA ~=F3d cAGc AddB|cAGE F2 (3efg fd`,
+			theSessionId: 1335,
+			studied: 1
 		},
 		{
 			incipit: `X: 1

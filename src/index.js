@@ -513,9 +513,11 @@ function renderTable() {
         <div class="tune-header">
             <div class="tune-title">${title}</div>
 			<div class="notes">${metadata}</div>
+			</div>
+			<div>
             ${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
-        </div>
-        <div id="${incipitId}" class="incipitClass"></div>
+        <div id="${incipitId}" class="tune-incipit"></div>
+		</div>
       <div class="tune-actions">
         <button class="btn-icon btn-edit" title="Edit tune">
           ✎

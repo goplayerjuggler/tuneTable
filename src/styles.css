@@ -255,6 +255,7 @@ th.sort-desc::after {
 #tunesTable td:nth-child(2),
 #tunesTable th:nth-child(2) {
   min-width: 500px;
+  width: 60%;
 }
 
 /* ============================================
@@ -280,7 +281,7 @@ th.sort-desc::after {
 /* Badge - transparent with border, inherits parent background */
 .badge {
   display: inline-block;
-  padding: 3px 10px;
+  padding: 3px 5px;
   background: transparent;
   color: var(--badge-text);
   border: 1px solid var(--badge-border);
@@ -288,6 +289,7 @@ th.sort-desc::after {
   font-size: 11px;
   font-weight: 600;
   vertical-align: middle;
+  margin: 3px 1px;
 }
 
 /* ============================================
@@ -329,7 +331,7 @@ th.sort-desc::after {
   color: var(--text-link-hover);
 }
 
-/* Notes - improved contrast for accessibility */
+/* Notes  */
 .notes {
   font-size: 13px;
   color: var(--text-secondary);
@@ -352,18 +354,22 @@ th.sort-desc::after {
 }
 
 /* ============================================
-   TUNE HEADER & CONTOUR
+   TUNE
    ============================================ */
 .tune-header {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 5px;
   margin-bottom: 0;
+}
+.tune-incipit {
+  min-width: 332px;
 }
 
 .tune-title {
   flex: 0 0 auto;
   font-weight: bold;
+  width: 200px;
 }
 
 .tune-contour {

@@ -3,7 +3,8 @@ import path from "path";
 import { format, resolveConfig } from "prettier";
 import { fileURLToPath } from "url";
 import abcTools from "@goplayerjuggler/abc-tools";
-const { convertStandardReel, javascriptify, getMetadata } = abcTools;
+const { convertStandardReel, getMetadata, javascriptify, convertStandardJig } =
+  abcTools;
 
 /**
  *
@@ -26,9 +27,19 @@ const __dirname = path.dirname(__filename);
 const makeBackup = true;
 // other constants
 const TUNES_FILE = path.join(__dirname, "..", "src", "tunes.json.js");
-const BACKUP_FILE = path.join(__dirname, "..", "src", "tunes.json.js.backup");
+const date = new Date();
+const formattedDate = `${date.getFullYear().toString().slice(-2)}_${String(date.getMonth() + 1).padStart(2, "0")}_${String(date.getDate()).padStart(2, "0")}`;
+const BACKUP_FILE = path.join(
+  __dirname,
+  "..",
+  "src",
+  `tunes_${formattedDate}.json.js.backup`
+);
+
 const maxNbToProcess = 3;
-const title = "Tommy’s Tarbukas"; //"Lad O’Beirne’s"
+const title = "Drummond Castle", // "Reel des Éboulements"; //"Lad O’Beirne’s"
+  doJig = true,
+  doReel = false;
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)
@@ -57,7 +68,7 @@ async function process() {
     // Create backup
     if (makeBackup) {
       fs.writeFileSync(BACKUP_FILE, fileContent, "utf8");
-      console.log("Backup created: tunes.json.js.backup");
+      console.log(`Backup created: ${BACKUP_FILE}`);
     }
 
     // Import the data
@@ -93,13 +104,27 @@ async function process() {
         continue;
       }
       // get metadata
-      const metadata = getMetadata(abcString);
+      const metadata = getMetadata(abcString),
+        isReel = abcString.match(/\n\s*R:\s*reel\s*\n/i),
+        isJig = abcString.match(/\n\s*R:\s*jig\s*\n/i);
 
       //reels in 4/4 1/8 => 4/4 1/16
+
       if (
         (title && metadata.title !== title) ||
-        !abcString.match(/\n\s*M:\s*4\/4\s*\n/) ||
-        !abcString.match(/\n\s*R:\s*reel\s*\n/i) ||
+        (doReel && (!abcString.match(/\n\s*M:\s*4\/4\s*\n/) || !isReel)) ||
+        // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
+        abcString.match(/\[M:/) || //inline meter marking
+        abcString.match(/\[L:/) || //inline unit length marking
+        !abcString.match(/\n\s*L:\s*1\/8\s*\n/)
+      ) {
+        // console.log(`skip: ${metadata.title}`);
+        skippedCount++;
+        continue;
+      }
+      if (
+        (title && metadata.title !== title) ||
+        (doJig && (!abcString.match(/\n\s*M:\s*6\/8\s*\n/) || !isJig)) ||
         // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
         abcString.match(/\[M:/) || //inline meter marking
         abcString.match(/\[L:/) || //inline unit length marking
@@ -112,7 +137,11 @@ async function process() {
 
       try {
         console.log(`process: ${metadata.title}`);
-        tune.abc = convertStandardReel(abcString);
+        if (isReel) {
+          tune.abc = convertStandardReel(abcString);
+        } else if (isJig) {
+          tune.abc = convertStandardJig(abcString);
+        }
 
         // tune.incipit = getIncipit(tune.abc);
 
