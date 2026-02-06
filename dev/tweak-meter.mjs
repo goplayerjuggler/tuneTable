@@ -37,9 +37,9 @@ const BACKUP_FILE = path.join(
 );
 
 const maxNbToProcess = 3;
-const title = "Drummond Castle", // "Reel des Éboulements"; //"Lad O’Beirne’s"
-  doJig = true,
-  doReel = false;
+const title = "The Flogging", // "Reel des Éboulements"; //"Lad O’Beirne’s"
+  doJig = false,
+  doReel = true;
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)

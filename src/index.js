@@ -481,7 +481,13 @@ function renderTable() {
                     `;
 		});
 
-		const metadata = [tune.rhythm, tune.key, tune.origin, tune.composer]
+		const metadata = [
+			tune.rhythm,
+			tune.parts,
+			tune.key,
+			tune.origin,
+			tune.composer
+		]
 			.filter((m) => m)
 			.map((m) => `<span class="badge">${m}</span>`)
 			.join(" ");

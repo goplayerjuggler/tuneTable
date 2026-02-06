@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-02-05",
+	lastUpdate: "2026-02-06",
 	tunes: [
 		{
 			abc: `
@@ -3832,21 +3832,30 @@ K:Dmajor
 			theSessionId: 2854
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:The Flogging
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/195#setting195
 N:Setting entered in thesession by user b.maloney on 2001-07-17
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gmajor
-|:BG (3GGG BGdG|BG (3GGG Bdgd|(3BcB Ad ~B2 cB|AGFG AB (3cBA:|
- ~g2e dGBd|~g3 e fgaf|Gfge ~d2Bd|cBAG FGAB|
- Gfge ~d2Bd|gfge fgag|(3bag (3agf gedB|cBAG FGAB||
- Bdgd edgd|(3Bcd gd BG (3GGG|(3ABc gc acgc|(3ABc gc BG (3GGG|
- Bdgd edgd|(3Bcd ef ~g3a|(3bag (3agf gedB|cBAG FGAB||[B,4G4]||`,
-			theSessionId: 195
+|:BG (3GGG BGdG BG (3GGG Bdgd|(3BcB Ad ~B2 cB AGFG AB (3cBA:|
+~g2e dGBd|~g3 e fgaf|Gfge ~d2Bd cBAG FGAB|
+Gfge ~d2Bd gfge fgag|(3bag (3agf gedB cBAG FGAB||
+Bdgd edgd (3Bcd gd BG (3GGG|(3ABc gc acgc (3ABc gc BG (3GGG|
+Bdgd edgd (3Bcd ef ~g3a|(3bag (3agf gedB cBAG FGAB||[B,4G4]||`,
+			theSessionId: 195,
+			parts: "ABC",
+			references: [
+				{
+					notes:
+						"For an amazing Tony MacMahon / Noel Hill setting/rendition, see my note for Lucy Campbell – starting around 06:27"
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -6089,7 +6098,8 @@ EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
 		},
 		{
 			name: "Lucy Campbell",
-			groups: "ALORA",
+			groups: "ALORA, su",
+			parts: "ABCD",
 			incipit: `X: 1
 M: 4/4
 L: 1/16
@@ -6102,9 +6112,10 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
 					notes: "Compare with The Bucks Of Oranmore"
 				},
 				{
-					artists: "Tony MacMahon, accordion ; Noel Hill, concertina",
+					artists: "Tony MacMahon, accordion; Noel Hill, concertina",
 					url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
-					notes: `I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
+					notes: `Sally Gardens/The foxhunters/The humours of Tulla/The flogging reel/Lucy Campbell/Toss the feathers/Trip to Durrow (1993)
+I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
 Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`
 				},
 				{
@@ -7900,7 +7911,8 @@ G2GF GBdB ~c3eg2 dc |`,
 		},
 		{
 			incipit: `X: 1
-T: Paddy Fahey's
+T: Paddy Fahey’s
+C: Paddy Fahey
 R: reel
 M: 4/4
 N: Playable on the cello, IMO
@@ -7915,16 +7927,7 @@ D2A,D FEFG AdcA d2de|fedf edcA`,
 				}
 			]
 		}
-
-		/*  
-
-  
-    
-    
-    
-				*/
-	]
-	/*
+		/*
 	{incipit:``,theSessionId:},
 	,{incipit:``,theSessionId:,
 		references: [
@@ -7935,4 +7938,5 @@ D2A,D FEFG AdcA d2de|fedf edcA`,
 			}
 		]}
 	 */
+	]
 };
