@@ -6146,6 +6146,7 @@ D - (D/F) (D, Dsus4, G or Em) D - Em -
 		},
 		{
 			name: "The Bucks Of Oranmore",
+			parts: "ABCDE",
 			groups: "ALORA",
 			incipit: `X: 1
 M: 4/4
