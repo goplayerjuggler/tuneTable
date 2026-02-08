@@ -13,7 +13,7 @@ export default class TheSessionImportModal extends Modal {
 			title: "Import tunebook or tune from thesession.org",
 			content: TheSessionImportModal.buildContent(),
 			size: "medium",
-			onClose: () => eventBus.emit("refreshTable"),
+			onClose: () => eventBus.emit("refreshTable")
 		});
 
 		this.isLoading = false;
@@ -29,8 +29,8 @@ export default class TheSessionImportModal extends Modal {
       <div class="import-form">
                 
         <div class="form-group">
-          <label for="thesession-username">Username (optional):</label>
-          <input type="text" id="thesession-username" placeholder="e.g. goplayer" />
+          <label for="thesession-user">User ID (optional):</label>
+          <input type="text" id="thesession-user" placeholder="e.g. 1 - ID of Jeremy" />
         </div>
         <div class="form-group">
           <label for="thesession-tune-id">Tune ID (optional):</label>
@@ -64,7 +64,7 @@ export default class TheSessionImportModal extends Modal {
 		super.setupEventListeners();
 
 		const importBtn = this.element.querySelector("#import-btn");
-		const userNameInput = this.element.querySelector("#thesession-username");
+		const userInput = this.element.querySelector("#thesession-user");
 		const limitEl = this.element.querySelector("#import-limit");
 		//todo: add user ID - one fewer API call
 		const tuneIdInput = this.element.querySelector("#thesession-tune-id");
@@ -80,7 +80,7 @@ export default class TheSessionImportModal extends Modal {
 		};
 		// Enter key to import
 		tuneIdInput.addEventListener("keypress", enterKeyImport);
-		userNameInput.addEventListener("keypress", enterKeyImport);
+		userInput.addEventListener("keypress", enterKeyImport);
 		limitEl.addEventListener("keypress", enterKeyImport);
 
 		const clearStatus = () => {
@@ -88,7 +88,7 @@ export default class TheSessionImportModal extends Modal {
 			statusDiv.className = "import-status";
 		};
 		// Clear status on input change
-		userNameInput.addEventListener("input", clearStatus);
+		userInput.addEventListener("input", clearStatus);
 		tuneIdInput.addEventListener("input", clearStatus);
 	}
 
@@ -154,12 +154,10 @@ export default class TheSessionImportModal extends Modal {
 			.value?.trim();
 		//todo - possible improvement: allow the tune URL as an alternative
 
-		const username = this.element
-			.querySelector("#thesession-username")
-			.value?.trim();
+		const user = this.element.querySelector("#thesession-user").value?.trim();
 		const limit = parseInt(document.getElementById("import-limit").value) || 10;
 
-		if (!username && !tuneId) {
+		if (!user && !tuneId) {
 			this.showStatus("Please enter a username and/or a tune ID", "error");
 			return;
 		}
@@ -172,16 +170,20 @@ export default class TheSessionImportModal extends Modal {
 
 		try {
 			let memberId, tuneIds;
-			if (username) {
-				this.showStatus("Fetching member information…", "info");
+			if (user) {
+				if (user.match(/^\d+$/)) {
+					memberId = +user; //unary plus operator (+) can be used to convert a string to a number.
+				} else {
+					this.showStatus("Fetching member information…", "info");
 
-				// Step 1: Get member ID from username
-				memberId = await this.getMemberIdByUsername(username);
-				if (!memberId) {
-					throw new Error(`Member '${username}' not found`);
+					// Step 1: Get member ID from username
+					memberId = await this.getMemberIdByUsername(user);
+					if (!memberId) {
+						throw new Error(`Member '${user}' not found`);
+					}
+
+					this.showStatus(`Found member ${user}.`, "info");
 				}
-
-				this.showStatus(`Found member ${username}.`, "info");
 			}
 			// Step 2: Get tunebook for this member
 			tuneIds = tuneId
@@ -194,7 +196,7 @@ export default class TheSessionImportModal extends Modal {
 
 			this.showStatus(
 				`Found ${tuneIds.length} tunes. Fetching ABC settings…`,
-				"info",
+				"info"
 			);
 
 			// Step 3: Fetch ABC for each tune
@@ -205,7 +207,7 @@ export default class TheSessionImportModal extends Modal {
 				const tuneId = tuneIds[i];
 				this.showStatus(
 					`Processing tune ${i + 1} of ${tuneIds.length}…`,
-					"info",
+					"info"
 				);
 
 				const tuneData = await this.getTuneWithAbc(tuneId, memberId);
@@ -218,8 +220,8 @@ export default class TheSessionImportModal extends Modal {
 						(t.name.trim().toLowerCase() ===
 							tuneData.name.trim().toLowerCase() ||
 							tuneData.aliases?.find(
-								(a) => a?.trim().toLowerCase() === t.name.trim().toLowerCase(),
-							)),
+								(a) => a?.trim().toLowerCase() === t.name.trim().toLowerCase()
+							))
 				);
 
 				if (existingTune) {
@@ -238,7 +240,7 @@ export default class TheSessionImportModal extends Modal {
 				} catch {
 					this.showStatus(
 						`failed to import tune: ${tuneData.name} - continuing`,
-						"error",
+						"error"
 					);
 					continue;
 				}
@@ -285,7 +287,7 @@ export default class TheSessionImportModal extends Modal {
 	 */
 	async getMemberIdByUsername(username) {
 		const searchUrl = `https://thesession.org/members/search?q=${encodeURIComponent(
-			username,
+			username
 		)}&format=json`;
 
 		const response = await fetch(searchUrl);
@@ -297,7 +299,7 @@ export default class TheSessionImportModal extends Modal {
 
 		// Find exact match (case-insensitive)
 		const member = data.members?.find(
-			(m) => m.name.toLowerCase() === username.toLowerCase(),
+			(m) => m.name.toLowerCase() === username.toLowerCase()
 		);
 
 		return member?.id || null;
@@ -318,7 +320,7 @@ export default class TheSessionImportModal extends Modal {
 				`loading tunebook items ${page * perPage + 1} to ${
 					(page + 1) * perPage
 				}`,
-				"info",
+				"info"
 			);
 			const response = await fetch(url);
 			if (!response.ok) {
@@ -365,15 +367,16 @@ export default class TheSessionImportModal extends Modal {
 		const settingsData = tuneData.settings;
 
 		// Select the best setting(s)
-		let selectedSetting = this.selectBestSetting(
+
+		let [selectedSetting, isFromPreferredMember] = this.selectBestSetting(
 			settingsData,
-			preferredMemberId,
+			preferredMemberId
 		);
 		if (!selectedSetting) {
 			throw new Error(`No settings found for tune ${tuneId}`);
 		}
 		let selectedSettings;
-		if (Array.isArray(selectedSetting)) {
+		if (isFromPreferredMember) {
 			selectedSettings = selectedSetting;
 			selectedSetting = selectedSettings[0];
 		}
@@ -431,7 +434,7 @@ N:Imported into *tuneTable* on ${new Date().toISOString().split("T")[0]},
 N:from https://thesession.org/tunes/${tuneId}#setting${setting.id}${
 				setting.member?.name
 					? `
-N:Setting entered in thesession by user ${setting.member.name}`
+N:Setting entered in thesession by user “${setting.member.name}”`
 					: ""
 			} on ${
 				setting.date.substr(0, 10) //just get the date, not the time
@@ -457,13 +460,18 @@ Because thesession encodes line returns with `!`.
 			abc: selectedSettings
 				? selectedSettings.map(getAbc)
 				: getAbc(selectedSetting),
-			scores: [
-				{
-					url: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
-					name: "thesession.org",
-				},
-			],
+			theSessionId: tuneId
+
+			// scores: [
+			// 	{
+			// 		url: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
+			// 		name: "thesession.org"
+			// 	}
+			// ]
 		};
+		if (isFromPreferredMember) {
+			tune.theSessionSettingId = selectedSetting.id;
+		}
 
 		return tune;
 	}
@@ -479,16 +487,16 @@ Because thesession encodes line returns with `!`.
 
 		// First try to find a setting by the preferred member
 		if (preferredMemberId) {
-			const memberSetting = settings.filter(
-				(s) => s.member && s.member.id === preferredMemberId,
+			const memberSettings = settings.filter(
+				(s) => s.member && s.member.id === preferredMemberId
 			);
-			if (memberSetting.length > 0) {
-				return memberSetting;
+			if (memberSettings.length > 0) {
+				return [memberSettings, true];
 			}
 		}
 
 		// Otherwise, take the first setting
 
-		return settings[0];
+		return [settings[0], false];
 	}
 }

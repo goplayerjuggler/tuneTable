@@ -1,5 +1,16 @@
+import {
+	canDoubleBarLength,
+	canHalveBarLength,
+	convertStandardReel,
+	convertToStandardJig,
+	convertToStandardHornpipe,
+	convertToStandardReel,
+	convertStandardJig,
+	convertStandardHornpipe
+} from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
+import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-parser.js";
 
 /**
  * ABC Notation Display Modal
@@ -33,6 +44,12 @@ export default class AbcModal extends Modal {
 			content: `
         <div class="modal-controls">
           <div class="control-row">
+            <button id="doubleBtn" class="transpose-btn">
+              double bar length
+            </button>
+            <button id="halveBtn" class="transpose-btn">
+              halve bar length
+            </button>
             <button id="transposeDownBtn" class="transpose-btn">
               ♭ (down)
             </button>
@@ -51,7 +68,7 @@ export default class AbcModal extends Modal {
         <div id="abcText" class="abc-text">
           <pre id="abcTextContent"></pre>
         </div>
-      `,
+      `
 		});
 	}
 
@@ -65,7 +82,9 @@ export default class AbcModal extends Modal {
 			transposeDownBtn: document.getElementById("transposeDownBtn"),
 			prevBtn: document.getElementById("prevAbcBtn"),
 			nextBtn: document.getElementById("nextAbcBtn"),
-			counter: document.getElementById("abcCounter"),
+			doubleBtn: document.getElementById("doubleBtn"),
+			halveBtn: document.getElementById("halveBtn"),
+			counter: document.getElementById("abcCounter")
 		};
 
 		this.setupControls();
@@ -75,20 +94,38 @@ export default class AbcModal extends Modal {
 		this.elements.text.classList.remove("active");
 		this.elements.toggleBtn.textContent = "Show ABC text";
 
-		this.updateDisplay();
+		this.updateDisplayAfterTranspose();
 		this.updateNavigationButtons();
+		this.updateBarLengthButtons();
+	}
+	updateBarLengthButtons() {
+		if (canDoubleBarLength(this.currentTuneAbc))
+			this.elements.doubleBtn.style.display = "block";
+		else this.elements.doubleBtn.style.display = "none";
+
+		if (canHalveBarLength(this.currentTuneAbc))
+			this.elements.halveBtn.style.display = "block";
+		else this.elements.halveBtn.style.display = "none";
 	}
 
 	setupControls() {
+		this.elements.doubleBtn?.addEventListener("click", () =>
+			this.changeBarLength(1)
+		);
+		this.elements.halveBtn?.addEventListener("click", () =>
+			this.changeBarLength(-1)
+		);
 		this.elements.toggleBtn?.addEventListener("click", () => this.toggleView());
 		this.elements.transposeUpBtn?.addEventListener("click", () =>
-			this.transpose(1),
+			this.transpose(1)
 		);
 		this.elements.transposeDownBtn?.addEventListener("click", () =>
-			this.transpose(-1),
+			this.transpose(-1)
 		);
 		this.elements.prevBtn?.addEventListener("click", () => this.navigate(-1));
 		this.elements.nextBtn?.addEventListener("click", () => this.navigate(1));
+
+		document.addEventListener("keydown", this.handleKeydown);
 	}
 
 	openWithTune(tune) {
@@ -127,13 +164,13 @@ export default class AbcModal extends Modal {
 
 		this.currentTuneAbc = this.currentAbcArray[this.currentAbcIndex];
 		this.currentTranspose = 0;
-		this.updateDisplay();
+		this.updateDisplayAfterTranspose();
 		this.updateNavigationButtons();
 	}
 
 	transpose(semitones) {
 		this.currentTranspose += semitones;
-		this.updateDisplay();
+		this.updateDisplayAfterTranspose();
 	}
 
 	updateNavigationButtons() {
@@ -149,13 +186,47 @@ export default class AbcModal extends Modal {
 		}
 	}
 
-	updateDisplay() {
+	changeBarLength(direction) {
+		const r = getHeaderValue(this.currentTuneAbc, "R");
+		let newAbc = "";
+		if (direction === 1)
+			switch (r) {
+				case "reel":
+					newAbc = convertStandardReel(this.currentTuneAbc);
+					break;
+				case "jig":
+					newAbc = convertStandardJig(this.currentTuneAbc);
+					break;
+				case "hornpipe":
+					newAbc = convertStandardHornpipe(this.currentTuneAbc);
+					break;
+			}
+		else
+			switch (r) {
+				case "reel":
+					newAbc = convertToStandardReel(this.currentTuneAbc);
+					break;
+				case "jig":
+					newAbc = convertToStandardJig(this.currentTuneAbc);
+					break;
+				case "hornpipe":
+					newAbc = convertToStandardHornpipe(this.currentTuneAbc);
+					break;
+			}
+		if (newAbc) {
+			this.currentTuneAbc = newAbc;
+			this.updateBarLengthButtons();
+			this.updateDisplayAfterTranspose();
+		}
+	}
+
+	updateDisplayAfterTranspose() {
 		let transposedAbc = this.currentTuneAbc;
 
 		if (this.currentTranspose !== 0) {
 			transposedAbc = this.transposeAbcNotation(
 				this.currentTuneAbc,
-				this.currentTranspose,
+				this.currentTranspose
 			);
 		}
 
@@ -171,7 +242,7 @@ export default class AbcModal extends Modal {
 			paddingbottom: 10,
 			paddingright: 20,
 			paddingleft: 20,
-			responsive: "resize",
+			responsive: "resize"
 		});
 	}
 
@@ -181,7 +252,7 @@ export default class AbcModal extends Modal {
 	}
 
 	handleKeydown(e) {
-		if (!this.isOpen()) return false;
+		if (!super.isOpen()) return false;
 
 		if (e.key === "ArrowLeft") {
 			this.navigate(-1);

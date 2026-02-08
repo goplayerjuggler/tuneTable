@@ -1,14 +1,9 @@
 "use strict";
 import "./styles.css";
 import tunesDataRaw from "./tunes.json.js";
-import {
-	normaliseKey,
-	compare,
-	getContourFromFullAbc
-	//contourToSvg,
-} from "@goplayerjuggler/abc-tools";
+import { normaliseKey, sort as contourSort } from "@goplayerjuggler/abc-tools";
 
-import { applySwingTransform, processTuneData } from "./processTuneData.js";
+import { processTuneData } from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 import AbcModal from "./modules/modals/AbcModal.js";
@@ -21,21 +16,6 @@ import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
 const storageKey = "tunesData";
-const comparable = [
-	["jig", "slide", "single jig", "double jig"],
-	["reel", "single reel", "reel (single)", "strathspey", "double reel"],
-	["hornpipe", "barndance", "fling"]
-];
-const comparableMap = {};
-//set up comparableMap s.t. all entries in each list of index i go under i_<first entry of i>
-//that way we show the jigs with similar rhythms followed by reels etc.
-for (let i = 0; i < comparable.length; i++) {
-	const list = comparable[i];
-	//map subsequent entries to the first entry
-	for (let j = 0; j < list.length; j++) {
-		comparableMap[list[j]] = `${i}_${list[0]}`;
-	}
-}
 
 const getEmptySort = () => {
 	return { column: null, direction: "asc" };
@@ -192,73 +172,8 @@ function collapseNotes(tuneIndex, refIndex) {
 	}
 }
 
-// function applyDefaultSort() {
-//   currentSort = getEmptySort();
-//   sortData();
-// }
-
-function canBeCompared(tune1, tune2) {
-	//todo: use a Tune class and expose abcOrIncipit
-	if ((!tune1.abc && !tune1.incipit) || (!tune2.abc && !tune2.incipit))
-		return false;
-	try {
-		const f = (tune) => {
-			if (!tune.contour) {
-				const withSwingTransform =
-					applySwingTransform.indexOf(tune.rhythm) >= 0;
-				tune.contour = getContourFromFullAbc(tune.abc || tune.incipit, {
-					withSwingTransform
-				});
-			}
-		};
-		f(tune1);
-		f(tune2);
-	} catch (error) {
-		console.log(error);
-	}
-	if (!tune1.contour || !tune2.contour) return false;
-
-	// but not hop jigs with different meters
-	if (
-		tune1.rhythm?.indexOf("hop jig") >= 0 &&
-		tune2.rhythm?.indexOf("hop jig") >= 0 &&
-		tune1.meter !== tune2.meter
-	)
-		return false;
-
-	return true;
-}
-
-function getBaseRhythmForComparison(r) {
-	const mapped = comparableMap[r];
-
-	return mapped ?? r;
-}
-
 function sortWithDefaultSort() {
-	window.tunesData.sort((a, b) => {
-		[a, b].map((t) => {
-			if (!t.baseRhythm) t.baseRhythm = getBaseRhythmForComparison(t.rhythm);
-		});
-
-		const comparison =
-			a.baseRhythm !== b.baseRhythm
-				? a.baseRhythm < b.baseRhythm
-					? -1
-					: 1
-				: canBeCompared(a, b)
-					? compare(a.contour, b.contour)
-					: a.contour && !b.contour
-						? -1
-						: b.contour && !a.contour
-							? 1
-							: a.name !== b.name
-								? a.name < b.name
-									? -1
-									: 1
-								: 0;
-		return comparison;
-	});
+	contourSort(window.tunesData);
 	window.tunesData.forEach((t) => delete t.baseRhythm); //todo: could handle baseRhythm in processTuneData instead
 }
 
@@ -415,7 +330,8 @@ function renderTable() {
 	window.filteredData.forEach((tune, index) => {
 		const row = document.createElement("tr");
 
-		let referencesHtml = "";
+		let referencesHtml = "",
+			hasTheSessionLink = false;
 		tune.references?.forEach((ref, refIndex) => {
 			let notesHtml = "";
 			if (ref.notes) {
@@ -430,6 +346,13 @@ function renderTable() {
 						(url) => {
 							try {
 								const { hostname, pathname, search } = new URL(url);
+								if (
+									!hasTheSessionLink &&
+									hostname === "thesession.org" &&
+									pathname &&
+									pathname.match(/\/tunes\/\d+/)
+								)
+									hasTheSessionLink = true;
 								const display = hostname + pathname + search;
 								return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
 							} catch {
@@ -481,12 +404,22 @@ function renderTable() {
                     `;
 		});
 
+		const badges = tune.badges
+			? Array.isArray(tune.badges)
+				? tune.badges
+				: [tune.badges]
+			: [];
+		const origin = tune.origin
+			? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
+			: [];
+
 		const metadata = [
 			tune.rhythm,
 			tune.parts,
 			tune.key,
-			tune.origin,
-			tune.composer
+			tune.composer,
+			...origin,
+			...badges
 		]
 			.filter((m) => m)
 			.map((m) => `<span class="badge">${m}</span>`)
@@ -521,26 +454,27 @@ function renderTable() {
 			<div class="notes">${metadata}</div>
 			</div>
 			<div>
-            ${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
+			
+        <div class="tune-header">
+		${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
+			<div class="tune-actions">
+			<button class="btn-icon btn-edit" title="Edit tune">
+				✎
+			</button>
+			<button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
+				🗑
+			</button>
+			</div>
+		</div>
         <div id="${incipitId}" class="tune-incipit"></div>
 		</div>
-      <div class="tune-actions">
-        <button class="btn-icon btn-edit" title="Edit tune">
-          ✎
-        </button>
-        <button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
-          🗑
-        </button>
-      </div>
     </div>
     </td>
 	<td class="references">${referencesHtml}${
 		tune.scores && tune.scores.length > 0
 			? `${tune.scores
-					.map(
-						(score) =>
-							`<a href="${score.url}" target="_blank">${score.name}</a>`
-					)
+					.filter((s) => !hasTheSessionLink || s.name !== "thesession")
+					.map((s) => `<a href="${s.url}" target="_blank">${s.name}</a>`)
 					.join(", ")}`
 			: ""
 	}</td>`;
@@ -613,20 +547,18 @@ function sortData(column) {
 		currentSort.column = column;
 		currentSort.direction = "asc";
 	}
-
-	window.filteredData.sort((a, b) => {
-		let aVal = a[column];
-		let bVal = b[column];
-
-		if (typeof aVal === "string") {
-			aVal = aVal.toLowerCase();
-			bVal = bVal.toLowerCase();
-		}
-
-		if (aVal < bVal) return currentSort.direction === "asc" ? -1 : 1;
-		if (aVal > bVal) return currentSort.direction === "asc" ? 1 : -1;
-		return 0;
-	});
+	const collator = new Intl.Collator("en", { sensitivity: "base" }),
+		compare = (a, b) => {
+			if (typeof a === "string" && typeof b === "string") {
+				return (
+					(currentSort.direction === "asc" ? -1 : 1) * collator.compare(a, b)
+				);
+			}
+			if (a < b) return currentSort.direction === "asc" ? -1 : 1;
+			if (a > b) return currentSort.direction === "asc" ? 1 : -1;
+			return 0;
+		};
+	window.filteredData.sort((a, b) => compare(a[column], b[column]));
 
 	document.querySelectorAll("th").forEach((th) => {
 		th.classList.remove("sort-asc", "sort-desc");

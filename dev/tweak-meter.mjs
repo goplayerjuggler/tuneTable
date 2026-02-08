@@ -3,8 +3,13 @@ import path from "path";
 import { format, resolveConfig } from "prettier";
 import { fileURLToPath } from "url";
 import abcTools from "@goplayerjuggler/abc-tools";
-const { convertStandardReel, getMetadata, javascriptify, convertStandardJig } =
-  abcTools;
+const {
+  convertStandardHornpipe,
+  convertStandardJig,
+  convertStandardReel,
+  getMetadata,
+  javascriptify
+} = abcTools;
 
 /**
  *
@@ -37,9 +42,10 @@ const BACKUP_FILE = path.join(
 );
 
 const maxNbToProcess = 3;
-const title = "The Flogging", // "Reel des Éboulements"; //"Lad O’Beirne’s"
+const title = "Sweeney's Buttermilk",
   doJig = false,
-  doReel = true;
+  doReel = true,
+  doHornpipe = false;
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)
@@ -106,9 +112,22 @@ async function process() {
       // get metadata
       const metadata = getMetadata(abcString),
         isReel = abcString.match(/\n\s*R:\s*reel\s*\n/i),
-        isJig = abcString.match(/\n\s*R:\s*jig\s*\n/i);
+        isJig = abcString.match(/\n\s*R:\s*jig\s*\n/i),
+        isHornpipe = abcString.match(/\n\s*R:\s*hornpipe\s*\n/i);
 
-      //reels in 4/4 1/8 => 4/4 1/16
+      if (
+        (title && metadata.title !== title) ||
+        (doHornpipe &&
+          (!abcString.match(/\n\s*M:\s*4\/4\s*\n/) || !isHornpipe)) ||
+        // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
+        abcString.match(/\[M:/) || //inline meter marking
+        abcString.match(/\[L:/) || //inline unit length marking
+        !abcString.match(/\n\s*L:\s*1\/8\s*\n/)
+      ) {
+        // console.log(`skip: ${metadata.title}`);
+        skippedCount++;
+        continue;
+      }
 
       if (
         (title && metadata.title !== title) ||
@@ -141,6 +160,8 @@ async function process() {
           tune.abc = convertStandardReel(abcString);
         } else if (isJig) {
           tune.abc = convertStandardJig(abcString);
+        } else if (isHornpipe) {
+          tune.abc = convertStandardHornpipe(abcString);
         }
 
         // tune.incipit = getIncipit(tune.abc);

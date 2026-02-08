@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-02-06",
+	lastUpdate: "2026-02-09",
 	tunes: [
 		{
 			abc: `
@@ -23,9 +23,10 @@ FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
 			references: [
 				{
 					notes:
-						"1. A crooked tune. 2. See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
+						"See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
 				}
-			]
+			],
+			badges: "crooked"
 		},
 		{
 			abc: `X:1
@@ -35,7 +36,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3515#setting3515
-N:Setting entered in thesession by user gian marco on 2004-09-10
+N:Setting entered in thesession by user “gian marco” on 2004-09-10
 K:Gmajor
 |:D2GA B2B2|(3ABA GA B<d dg|e<d ge dBGB|A<G BG A<G EG|
  D2GA B2B2|(3ABA GA B<d dg|e<d ge dBGB|1 AGEF G2FE:|2 AGEF G2Gg||
@@ -52,7 +53,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2067#setting2067
-N:Setting entered in thesession by user Gregg Harcourt on 2003-10-14
+N:Setting entered in thesession by user “Gregg Harcourt” on 2003-10-14
 K:Dmajor
 |:A,B,DE DD DE|(3FED FA dDcd|(^AB)BB D=AFD|DEFE DB,B,D|
  A,B,DE DDDE|(3FED FA dDcd|B2(3BcB BAFD|1 DEFE DDDB,:|2 DEFE DDFA||
@@ -78,14 +79,14 @@ N:https://comhaltas.ie/music/detail/comhaltaslive_351_7_antoin_mac_gabhann/
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/16299#setting30857
-N:Setting entered in thesession by user cac on 2017-08-15
+N:Setting entered in thesession by user “cac” on 2017-08-15
 K:Gmajor
 D|:G3A B3A|GAGE D3E|GABd edgd|eege edBA|
  G3A B3A|GAGE D3E|GABd edBG|1 ~A2G2 G2BA:|2 ~A2G2 GABc||
  d3e dBGB|d^cde dBGB|A3B AGEG|AGAB AGED|
  d3e dBGB|d^cde dBGD|GABd edBG|1 ~A2G2 GABc:|2 ~A2G2 G3D||`,
 			theSessionId: 16299,
-			theSessionSettingId: "30857"
+			theSessionSettingId: 30857
 		},
 		{
 			abc: `X:1
@@ -96,7 +97,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1726#setting1726
-N:Setting entered in thesession by user paul19 on 2003-06-04
+N:Setting entered in thesession by user “paul19” on 2003-06-04
 K:Gmajor
 |:G3B d2Bd|e/g/e dB d2BA|GFGA ~B2AG|A2E2 E2(3DEF|
  G3B d2Bd|e/g/e dB d2Bd|edge dBAc|1 B2G2 G2(3DEF:|2 B2G2 G2ga||
@@ -123,14 +124,14 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/20543#setting40673
-N:Setting entered in thesession by user dersulle on 2021-03-02
+N:Setting entered in thesession by user “dersulle” on 2021-03-02
 K:Gmajor
 |:G2 (3GGG G2G2|GABc dBGB|A2 (3AAA A3d|(3efg ab gedB|
  G2 (3GGG G2G2|GABc dBGg|efge Bege|(3efg ab gedB:|
  |:c4 B4|(3ABc BA GEDB|c4 B2 (3GBd|eage dcBd|
  c4 B4|(3ABc BA GEDG|EFGE B,EGE|1 FGAF GBdB:|2 FGAB cBAd||`,
 			theSessionId: 20543,
-			theSessionSettingId: "40673"
+			theSessionSettingId: 40673
 		},
 		{
 			abc: `X:1
@@ -140,7 +141,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3536#setting3536
-N:Setting entered in thesession by user ceolachan on 2004-09-13
+N:Setting entered in thesession by user “ceolachan” on 2004-09-13
 K:Dmajor
 |:A/|F2 F2 A2 A2|G>FG>A B2 B2|A>dc>B A>GF>E|D>E (3FDF (3A,DF A2|
  F2 F2 A2 A2|G>FG>A B2 B2|A>dc>B A>GF>E|D2 (3DFA d2- d3/2:|
@@ -152,6 +153,7 @@ K:Dmajor
 		},
 		{
 			groups: "ALORA",
+			parts: "AABB",
 			abc: `
 %251029
 X: 2
@@ -175,6 +177,7 @@ e2-ee .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [1 A2 Ac:| [2 A2 AB||
 		},
 		{
 			groups: "ALORA",
+			parts: "AABB",
 			abc: `X: 1
 T: Joe Bane’s
 O:Ireland
@@ -201,7 +204,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4321#setting4321
-N:Setting entered in thesession by user *Davy Rogers on 2005-03-16
+N:Setting entered in thesession by user “*Davy Rogers” on 2005-03-16
 K:Dmajor
 |:d2 d2 dB ed|B2 B2 BA GB|d2 c2 cA FA|e2 d2 dB GB|
  d2 d2 dB ed|B2 B2 BA GB|d2 c2 cA FA|1 GD B,D G2 Bc:|2 GD B,D G2 dc||
@@ -246,13 +249,13 @@ N:of this tune but we believe it to have Donegal connections." It's the first tu
 N:on the 4th track, titled "Gan Ainm."
 N:---
 N:Imported from https://thesession.org/tunes/8204#setting52726
-N:Setting entered in thesession by user Nigel Gatherer on 2024-12-24
+N:Setting entered in thesession by user “Nigel Gatherer” on 2024-12-24
 N:Transposed up a fourth & edited
 K:Dmajor
 e2|:fdAd f2fa gece g2ge| fdAd f2fe[1 defd e2de:|[2 defd e2df||
   |:aaag fgaf efgf efge| aaag fgaf[1 defd e2df:|[2 defd e2de||`,
 			theSessionId: 8204,
-			theSessionSettingId: "52726"
+			theSessionSettingId: 52726
 		},
 		{
 			abc: [
@@ -262,7 +265,7 @@ R:hop jig
 L:1/8
 M:9/8
 N:Imported from https://thesession.org/tunes/1340#setting14690
-N:Setting entered in thesession by user FumblinFingersWayne on 2010-09-08
+N:Setting entered in thesession by user “FumblinFingersWayne” on 2010-09-08
 K:Gmajor
 |:"G" D2 G G2 A B2 d|"C" ege d2 e g3|"G" D2 G G2 B d2 B|"Am"AGA B2 G "D"E2 G|
  "G" D2 G G2 A B2 d|"C" ege d2 e "D"g2 a|"Em"b2 a g2 e d2 B|"Am"AGA B2 G E2 G:|
@@ -270,7 +273,7 @@ K:Gmajor
  "Am"B2 d d2 B d2 B|"Bm"dBd e2 f g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 G:|`
 			],
 			theSessionId: 1340,
-			theSessionSettingId: "14690"
+			theSessionSettingId: 14690
 		},
 		{
 			groups: "ALORA",
@@ -345,7 +348,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1058#setting1058
-N:Setting entered in thesession by user fidicen on 2002-10-18
+N:Setting entered in thesession by user “fidicen” on 2002-10-18
 K:Gmajor
 |:(3CB,A,|G,B, DG B,D GB|DG Bd GB dg|ed cB cB AG|Fd AF DC B,A,|
  G,B, DG B,D GB|DG Bd GB dg|ed cB cD EF|G2 B2 G2:|
@@ -361,7 +364,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/445#setting445
-N:Setting entered in thesession by user seara on 2001-12-18
+N:Setting entered in thesession by user “seara” on 2001-12-18
 K:Aminor
 |:^D2|"Am"EAcA Acec|"Dm"d2dc dec2|"C"cege cege|"G7"d2dc "C"dec2|
  "E7"cddc cBB_B|"Am"A4 Adc2|"E7"cddc cBB_B|"Am"A6:|
@@ -379,7 +382,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/922#setting922
-N:Setting entered in thesession by user b.maloney on 2002-08-23
+N:Setting entered in thesession by user “b.maloney” on 2002-08-23
 N:(edited after importing)
 K:Ebmajor
 |:(3B,CD|E2 G2 G2 FE|D2 F2 F2 ED|E2 c2 c2 de|=ABcB _AGFE|
@@ -388,7 +391,8 @@ K:Ebmajor
  DBfB DBfB|EBgB EBgB|=ABcd ecAc|B=ABc B_AGF|
  EGBG eBFE|DFBF dFED|CEGE cBAG|FGFE DCB,A,|
  G,EBE G,EBE|A,EcE A,EcE|DEFG AFDF|E2 G2 E2:|`,
-			theSessionId: 922
+			theSessionId: 922,
+			parts: "AABB"
 		},
 		{
 			abc: `X:1
@@ -398,7 +402,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/32#setting32
-N:Setting entered in thesession by user Jeremy on 2001-05-21
+N:Setting entered in thesession by user “Jeremy” on 2001-05-21
 K:Gmajor
 |:BA|(3GFG DG BGBd|(3cBc AB cdef|g2 dg ecAG|FGAB cBAB|
  (3GFG DG BGBd|(3cBc AB cdef|gdBG FAdc|B2 G2 G2:|
@@ -414,7 +418,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/974#setting974
-N:Setting entered in thesession by user Paul-Kin on 2002-09-18
+N:Setting entered in thesession by user “Paul-Kin” on 2002-09-18
 K:Gmajor
 |:(3cBA|GB,DG BDGB|dGBd gbag|fed^c =cAFD|GBAG (3FED (3cBA|
  GB,DG BdGB|dGBd gbag|fed^c =cAFD|(3GGG GF G2:|
@@ -430,7 +434,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/38#setting38
-N:Setting entered in thesession by user Jeremy on 2001-05-21
+N:Setting entered in thesession by user “Jeremy” on 2001-05-21
 K:Dmajor
 |:FE|D2 FA dAFD|CDEF G2 FE|D2 FA dcdf|edcB AGFE|
  D2 FA dAFD|CDEF G2FG|AdcB AGFE|D2 CE D2:|
@@ -446,7 +450,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1980#setting1980
-N:Setting entered in thesession by user LH on 2003-09-15
+N:Setting entered in thesession by user “LH” on 2003-09-15
 K:Gmajor
 |:(3DEF|GABA GBdg|fefd e^cAG|FADA FGA2|BGAF GFED|
  GABA g~g2z|fefd e^cAG|FAdB cADF|AGGF G2:|
@@ -455,6 +459,7 @@ K:Gmajor
 			theSessionId: 1980
 		},
 		{
+			groups: "su",
 			abc: `X:1
 T:Cronin's
 R:hornpipe
@@ -462,7 +467,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/478#setting478
-N:Setting entered in thesession by user lars on 2002-01-01
+N:Setting entered in thesession by user “lars” on 2002-01-01
 K:Gmajor
 |:BA|GABd dBde|gage dega|bage dBGA|BAAG AcBA|
  GABd dBde|gage dega|bage dBAc|AGGF G2:|
@@ -479,7 +484,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/9800#setting9800
-N:Setting entered in thesession by user laveylad on 2009-08-09
+N:Setting entered in thesession by user “laveylad” on 2009-08-09
 K:Gmajor
 |:(3DEF|GABd g2fg|eGce d2Bd|cece d2BG|DFAB cAFA|
  BGBd g2fg|eceg f2ga|bgdB cGEG|(3FED BA G2:|
@@ -496,7 +501,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/337#setting337
-N:Setting entered in thesession by user Joerg Froese on 2001-10-21
+N:Setting entered in thesession by user “Joerg Froese” on 2001-10-21
 K:Gmajor
 |:(3DEF|GdBG FcAF|(3GFG BG D2GF|EGAB cBAG|Fd (3d^cd ed=cA|
  GdBG FcAF|(3GFG BG D2GF|Eedc BAGF|A2G2 G2:|
@@ -512,7 +517,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/49#setting49
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 K:Dmajor
 |:AF|DAFA DAFA|defe dcBA|eAfA gAfA|(3efe (3dcB AGFE|
  DAFA DAFA|defe dcBA|eAfA gfec|d2 f2 d2:|
@@ -528,7 +533,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/573#setting573
-N:Setting entered in thesession by user b.maloney on 2002-03-02
+N:Setting entered in thesession by user “b.maloney” on 2002-03-02
 K:Gmajor
 |:D2||BGDG cAFA|d^cde dBGF|Ec{d}cB AGFG|
  [1 (3.A.B.A (3.G.F.E (3.D.E.D B,2:|2 (3.A.B.A GF G2|ga||
@@ -554,13 +559,14 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1249#setting1249
-N:Setting entered in thesession by user fidicen on 2002-12-24
+N:Setting entered in thesession by user “fidicen” on 2002-12-24
 K:Gmajor
 |:BGFG (3EFG DB,|G,B,DG cBAG|AGAB cBcB|(3ABA (3GFE (3DED (3CB,A,|
  G,B,DG cBcd|edef ga (3gfe|d<b c<a B<g A<f|1 ecAF G3A:|2 ecAF G2 (3def||
  |:ga (3gfe dgbd|ceac Bdg2|dBG2 (3gfg ag|fgef defd|
  ga (3gfe dgbd|ceac Bdg2|(3gag (3fgf egfg|1 ecAF G2 (3def:|2 ecAF G4||`,
-			theSessionId: 1249
+			theSessionId: 1249,
+			contourShift: 0
 		},
 		{
 			abc: `X:1
@@ -571,7 +577,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1755#setting1755
-N:Setting entered in thesession by user cj on 2003-06-14
+N:Setting entered in thesession by user “cj” on 2003-06-14
 K:Dmajor
 G|F>G ^G>A f>d A>F|G>A _B>=B g>e B>d|c>b a>g f>e d>c|(3dfe (3dcB (3ABA (3GFE|
  F>G ^G>A (3fed (3cBA|G>A _B>=B (3gfe (3dcB|(3cba (3gfe (3dcB (3ABc|(3dAf (3dAF D3 a|
@@ -588,7 +594,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/130#setting130
-N:Setting entered in thesession by user Will Harmon on 2001-06-08
+N:Setting entered in thesession by user “Will Harmon” on 2001-06-08
 K:Dmajor
 AG|:(3FGF EF DFAF|GAFG E2 EF|GFGA (3Bcd ed|cded cAGE|
  FGEF DFAF|(3GAG (3FGF E2 EF|GFGA (3Bcd ed|1 cAGE D2 DE:|2 cAGE D2 (3ABc||
@@ -615,29 +621,33 @@ N:I asked about this tune here: https://thesession.org/discussions/46814
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/21525#setting43012
-N:Setting entered in thesession by user What's the name of this tune? on 2022-02-06
+N:Setting entered in thesession by user “What's the name of this tune?” on 2022-02-06
 K:Eminor
 |:BEED E2DE|GABG A2GA|BEED E2DE|GABG A2d^c|
  BEED E2DE|GABG AAGA|B2BA GEDE|G2GF G2GA:|
  |:BABd e2eg|fedf edBA|BA (3Bcd e2eg|fe (3def e2ed|
  edBA d2ed|BAGA BAGE|B2BA GEDE|G2GF G2GA:|`,
+			parts: "AABB",
 			theSessionId: 21525,
-			theSessionSettingId: "43012"
+			theSessionSettingId: 43012
 		},
 		{
 			abc: `X:1
 T:The New Century
 R:hornpipe
 L:1/8
-M:4/4
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2001#setting2001
-N:Setting entered in thesession by user gian marco on 2003-09-21
+N:Setting entered in thesession by user “gian marco” on 2003-09-21
+N:*abc-tools: convert hornpipe to M:4/2*
+N:(edited after importing)
 K:Gmixolydian
-|:Bc|dB G^F GB (3dcB|cA FE FA cA|BA G^F GB (3de^f|gb (3ag^f ga ge|
- dg dB (3GBG AB|cf cA (3FAF GA|(3BAG gG ^fG e^F|1 AG G^F GA:|2 AG G^F G2-|:GA||
- Bc de fd ce|dD E^F GF GA|Bc de =fd (3e^fg|a^f d^c d2 (3def|
- gd BG ec A^F|G^F Gc AG EG|(3^FED AB ce d^F|AG G^F G2:|`,
+|:Bc|dBG^F GB (3dcB cA=FE FAcA|BAG^F GB (3de^f gb (3agf gage|
+dgdB (3GBG AB cfcA (3FAF GA|(3BAG gG ^fGe^F|1 AGG^F GA:|2 AGG^F G2-|:GA||
+Bcde fdce dDE^F GFGA|Bcde =fd (3e^fg afd^c d2 (3def|
+gdBG ecA^F GFGc AGEG|(3^FED AB cedF AGGF G2:|`,
+			parts: "AABB",
 			theSessionId: 2001
 		},
 		{
@@ -645,15 +655,17 @@ K:Gmixolydian
 T:O'Mahony's
 R:hornpipe
 L:1/8
-M:4/4
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2488#setting2488
-N:Setting entered in thesession by user dafydd on 2003-08-28
+N:Setting entered in thesession by user “dafydd” on 2003-08-28
+N:*abc-tools: convert hornpipe to M:4/2*
 K:Dmajor
-|:dB|AFEF (3DDD DE|FDFA d2 de|fedB AFDE|FEED E2 dB|
- AFEF (3DDD DE|FDFA d2 de|fedB AFEF|D2 DE D2:|
- |:dB|ABde f2 ef|gfed e2 de|f2 fe dBAF|FEED E2 dB|
- AFEF (3DDD DE|FDFA d2 de|fedB AFEF|D2 DE D2:|`,
+|:dB|AFEF (3DDD DE FDFA d2 de|fedB AFDE FEED E2 dB|
+AFEF (3DDD DE FDFA d2 de|fedB AFEF D2 DE D2:|
+|:dB|ABde f2 ef gfed e2 de|f2 fe dBAF FEED E2 dB|
+AFEF (3DDD DE FDFA d2 de|fedB AFEF D2 DE D2:|`,
+			parts: "AABB",
 			theSessionId: 2488
 		},
 		{
@@ -664,7 +676,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/6274#setting6274
-N:Setting entered in thesession by user LongNote on 2006-10-20
+N:Setting entered in thesession by user “LongNote” on 2006-10-20
 K:Dmajor
 |:dB|AF~F2 DEFA|dced BAdB|AF~F2 DEFD|G2FG EA,CE|
  AF~F2 DEFA|dced BAdB|AdcB AFGE|D/E/D CE D2:|
@@ -678,15 +690,16 @@ T:Kitty's Wedding
 C:George Saunders
 R:hornpipe
 L:1/8
-M:4/4
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/869#setting869
-N:Setting entered in thesession by user Bannerman on 2002-08-01
+N:Setting entered in thesession by user “Bannerman” on 2002-08-01
+N:*abc-tools: convert hornpipe to M:4/2*
 K:Dmajor
-|:fe|d2Bd A2FA|BAFA D2 ED|B,DA,D DFBF|AFDF E2fe|
- d2Bd A2FA|BAFA D2 ED|B,DA,D DFBF|AFEF D2:|
- |:fg|afed bafd|Adfd edBd|DFAd FAde|fdgf e2fg|
- afed bafd|Adfd edBd|DFAd FAdf|eABc d2:|`,
+|:fe|d2Bd A2FA BAFA D2 ED|B,DA,D DFBF AFDF E2fe|
+d2Bd A2FA BAFA D2 ED|B,DA,D DFBF AFEF D2:|
+|:fg|afed bafd Adfd edBd|DFAd FAde fdgf e2fg|
+afed bafd Adfd edBd|DFAd FAdf eABc d2:|`,
 			theSessionId: 869
 		},
 		{
@@ -705,7 +718,7 @@ K:Edorian
 				}
 			],
 			theSessionId: 5675,
-			theSessionSettingId: "17673"
+			theSessionSettingId: 17673
 		},
 		{
 			abc: [
@@ -714,12 +727,12 @@ T:The Butlers Of Glen Avenue
 C:Tony Sullivan
 R:jig
 L:1/8
-M:6/4
+M:12/8
 N:---
 N:Imported into *tuneTable* on 2025-10-27,
 N:from https://thesession.org/tunes/820#setting42781
+N:Setting entered in thesession by user “James Dumbelton” on 2022-01-13
 N:(edited after importing)
-N:Setting entered in thesession by user James Dumbelton on 2022-01-13
 K:Gmajor
 |:DEG EDB, DEG ~B3|DEG B2 e dBe dBA|
 DEG EDB, DEG ~B3|dBd gfe dBA G3:|
@@ -728,7 +741,7 @@ gab age deg ~B3|dBd gfe dBA G3:|
 `
 			],
 			theSessionId: 820,
-			theSessionSettingId: "42781"
+			theSessionSettingId: 42781
 		},
 		{
 			abc: `X:1
@@ -736,15 +749,17 @@ T:The Old Flail
 C:Vincent Broderick
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/839#setting839
-N:Setting entered in thesession by user gian marco on 2002-07-14
+N:Setting entered in thesession by user “gian marco” on 2002-07-14
+N:*abc-tools: convert jig to M:12/8*
 K:Gmajor
-|:DEG GAB|Bdg gab|age ege|dBG AGE|
- DEG GAB|Bdg gab|age ege|dBG A3:|
- ~a3 aga|ega ega|deg ged|ged BAG|
- DEG GAB|Bdg gab|age ege|dBG A3:|`,
+|:DEG GAB Bdg gab|age ege dBG AGE|
+DEG GAB Bdg gab|age ege dBG A3:|
+~a3 aga ega ega|deg ged ged BAG|
+DEG GAB Bdg gab|age ege dBG A3:|`,
+			parts: "AABB",
 			theSessionId: 839
 		},
 		{
@@ -755,7 +770,7 @@ L:1/8
 M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/803#setting803
-N:Setting entered in thesession by user slainte on 2002-06-24
+N:Setting entered in thesession by user “slainte” on 2002-06-24
 N:(edited after importing)
 K:C
 |:G|EGG GED EGG c2B|AcA AGA cde ecd|
@@ -804,19 +819,21 @@ d^cAy
 T:Wellington's Advance
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2191#setting2191
-N:Setting entered in thesession by user swisspiper on 2003-11-25
+N:Setting entered in thesession by user “swisspiper” on 2003-11-25
+N:*abc-tools: convert jig to M:12/8*
 K:Adorian
-E.A.A AGA|cBA c2d|~e3 efg|dBG GFG|
- E.A.A AGA|cBA Bcd|e(3.g.f.e dcB|c.A.A BAG|
- E.A.A AGA|cBA c2d|~e3 efg|dBG GFG|
- E.A.A AGA|cBA Bcd|e(3.g.f.e dcB|c.A.A ~A2 e|
- aea a.ea|aed cBA|BAG ~g3|dBG GBd|
- e2a a^ga|e2g gfg|e(3.g.f.e dcB|cAG A2e|
- aea a.ea|aed cBA|BAB ~g3|dBG GBd|
- e2a a^ga|e2g gfg|e(3.g.f.e dcB|c.A.A A2G|`,
+E.A.A AGA cBA c2d|~e3 efg dBG GFG|
+E.A.A AGA cBA Bcd|e(3.g.f.e dcB c.A.A BAG|
+E.A.A AGA cBA c2d|~e3 efg dBG GFG|
+E.A.A AGA cBA Bcd|e(3.g.f.e dcB c.A.A ~A2 e|
+aea a.ea aed cBA|BAG ~g3 dBG GBd|
+e2a a^ga e2g gfg|e(3.g.f.e dcB cAG A2e|
+aea a.ea aed cBA|BAB ~g3 dBG GBd|
+e2a a^ga e2g gfg|e(3.g.f.e dcB c.A.A A2G|`,
+			parts: "AABB",
 			theSessionId: 2191
 		},
 		{
@@ -827,7 +844,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7352#setting7352
-N:Setting entered in thesession by user ethical blend on 2007-06-14
+N:Setting entered in thesession by user “ethical blend” on 2007-06-14
 N:(edited after importing)
 K:Gdorian
 |:G/F/|DGG G2A|B/A/G/A/B/G/ A/G/F/G/A/F/|G/F/D/C/D/E/ F2G|
@@ -843,7 +860,7 @@ K:Gdorian
 T:Jackson's Maid
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:A nice melodic jig, as it can be found in O'Neill's 1850 (#1066) as well as in
 N:his 1001 (#272). The former version is with f naturals in bars 3 and 5 of the B
 N:part; but I'm not entirely convinced of that. Oh well, it's O'Neill...
@@ -852,33 +869,39 @@ N:Apart from that, both versions are similar.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/13036#setting22413
-N:Setting entered in thesession by user sebastian the m3g4p0p on 2013-10-04
+N:Setting entered in thesession by user “sebastian the m3g4p0p” on 2013-10-04
+N:*abc-tools: convert jig to M:12/8*
 K:Gmajor
-|:D|DGA B2d|cAG FGA|BdB AFD|GBG AFD|
- DGA Bcd|cAG FGA|(B/c/d)B AFD|DGG G2:|
- B/c/|ded dcB|cdc cBc|ded fef|dgg g2a|
- bag fed|cAG FGA|(B/c/d)B AFD|DGG G2:|`,
+|:D|DGA B2d cAG FGA|BdB AFD GBG AFD|
+DGA Bcd cAG FGA|(B/c/d)B AFD DGG G2:|
+B/c/|ded dcB cdc cBc|ded fef dgg g2a|
+bag fed cAG FGA|(B/c/d)B AFD DGG G2:|`,
 			theSessionId: 13036,
-			theSessionSettingId: "22413"
+			theSessionSettingId: 22413
 		},
 		{
+			groups: "alora",
 			abc: `X:1
 T:The Lounge Bar
 C:Annlaug Børsheim
+O:Norway
 R:jig
 L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/8853#setting8853
-N:Setting entered in thesession by user Joe CSS on 2008-08-28
-K:Emajor
-|:CEG F2 (E|E)GB e2 d|c3 BGE|FAG F2 E|
- CEG F2 (E|E)GB e2 d|c3 BGE|1 F2 E4:|2 F2 E2 GB||
- |:e3 edB|G3 GFG|Ac(e e)dB|F3 FEF|
- G3 GFE|C3 CB,C|E2 F2 GF|1 E3 EGB:|2 E6||
- |:ece d2 (c|c)eg f2 d|edc Bec|BGE F2 E|
- ece d2 (c|c)eg f2 d|edc BGE|F2 E4:|`,
-			theSessionId: 8853
+M:12/8
+N:Imported into *tuneTable* on 2026-02-06,
+N:from https://thesession.org/tunes/8853#setting53996
+N:Setting entered in thesession by user “chansherly212” on 2025-05-04
+N:*abc-tools: convert jig to M:12/8*
+K:Dmajor
+A,|:"Bm"B,DF "D"E2 D "D"DFA d2 c|"G"BGB "D"AFD "A"EGF EDA,|
+"Bm"B,DF "D"E2 D- "D"DFA d2 c|"G"BGB "D"AFD[1 "A"E2 D-"D" D2 A,:|2 "A"E2 D-"D" DFA||
+|:"D"d2 d dcA "D"F3 FEF|"G"GBd dcA "A"E3 EDE|
+"Bm"F3 FED "G"B,3 B,A,B,|"A"D2 (E E)FE [1 "D"D3 DFA:|2 "D"(D3 D2) c||
+|:"Bm"dBd c2 B- "G"Bdf e2 c|"G"dcB "D"AdB "D"AFD "A"E2 c|
+"Bm"dBd c2 B- "G"Bdf e2 c|"G"dcB "D"AFD[1 "A"E2 D- "D"DFA:|2 "A"E2 D- "D"D3||`,
+			parts: "AABBCC",
+			theSessionId: 8853,
+			theSessionSettingId: 53996
 		},
 		{
 			abc: `X: 2
@@ -888,7 +911,7 @@ M: 6/8
 L: 1/8
 N:Imported into *tuneTable* on 2025-11-07,
 N:from https://thesession.org/tunes/2096#setting15489
-N:Setting entered in thesession by user Dr. Dow on 2004-12-23
+N:Setting entered in thesession by user “Dr. Dow” on 2004-12-23
 K: Dmix
 |:F2D DAG|F2D DAG|F2D DED|C2A, A,AG|
 F2D DAG|F2D DAD|BDB cAF|1 AGF GAG:|2 AGF G2A||
@@ -905,7 +928,7 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/770#setting29548
-N:Setting entered in thesession by user JACKB on 2016-12-24
+N:Setting entered in thesession by user “JACKB” on 2016-12-24
 N:(edited after importing)
 K:Adorian
 B|:AGE G2E G2E G2E|A2B c2d e2d efg|
@@ -918,7 +941,7 @@ B|:AGE G2E G2E G2E|A2B c2d e2d efg|
 				}
 			],
 			theSessionId: 770,
-			theSessionSettingId: "29548"
+			theSessionSettingId: 29548
 		},
 		{
 			groups: "su",
@@ -928,7 +951,7 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/1043#setting1043
-N:Setting entered in thesession by user slainte on 2002-10-14
+N:Setting entered in thesession by user “slainte” on 2002-10-14
 N:(edited after importing)
 K:Adorian
 |:B|AGE G2E c2E G2E|DED D2E GED D2B|
@@ -948,6 +971,7 @@ K:Adorian
 			abc: [
 				`X:1
 T:Unknown
+C: Mick O’Connor (?)
 R:jig
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2025-02-07
@@ -989,9 +1013,8 @@ L:1/8
 M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/417#setting417
-N:Setting entered in thesession by user Josh Kane on 2001-12-06
+N:Setting entered in thesession by user “Josh Kane” on 2001-12-06
 N:(edited after importing)
-N:A crooked tune
 K:D
 [M:15/8]|:A3 AGF EDC D3 d2e|[M:12/8]fgf edc d3 d2e|
  fgf edc dAA BAG|FED EDC DFE CDE|
@@ -1000,22 +1023,24 @@ K:D
  A=ff fef A=ff f2g|=fed ed^c d2d d2e:|
  |:fgf edc dAA BAD|FED EDC DEF CDE|
  Ddd Aee Aff Agg|fed edc d2d d3:|`,
-			theSessionId: 417
+			theSessionId: 417,
+			badges: "crooked"
 		},
 		{
 			abc: `X:1
 T:The Munster
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/372#setting372
-N:Setting entered in thesession by user Jdharv on 2001-11-14
+N:Setting entered in thesession by user “Jdharv” on 2001-11-14
+N:*abc-tools: convert jig to M:12/8*
 K:Gmajor
-D|:~G3 AGA|~B3 gdB|GAB cBA|BGE EDE|
- ~G3 AGA|~B3 gdB|cBA (3Bcd B|1 AGG G2D:|2 AGG G2f||
- |:gfg efg|eag edB|gfg efg|afd d2f|
- gfe agf|gfe fdB|cBA (3Bcd B|1 AGG G2f:|2 AGG G3||`,
+D|:~G3 AGA ~B3 gdB|GAB cBA BGE EDE|
+~G3 AGA ~B3 gdB|cBA (3Bcd B[1 AGG G2D:|2 AGG G2f||
+|:gfg efg eag edB|gfg efg afd d2f|
+gfe agf gfe fdB|cBA (3Bcd B[1 AGG G2f:|2 AGG G3||`,
 			theSessionId: 372
 		},
 		{
@@ -1026,7 +1051,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/160#setting160
-N:Setting entered in thesession by user Will Harmon on 2001-06-28
+N:Setting entered in thesession by user “Will Harmon” on 2001-06-28
 K:Edorian
 D|:~E3 GFE|~B3 dBA|BdB BAB|GBG AFD|
  ~E3 GFE|BAB dBA|BAG FAF|1 GEE E2 D:|2 GEE E2 e||
@@ -1042,7 +1067,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1447#setting1447
-N:Setting entered in thesession by user gian marco on 2003-02-17
+N:Setting entered in thesession by user “gian marco” on 2003-02-17
 K:Edorian
 |:~E3 BAF|FEB AFD|~E3 BAF|dAF FED|
  ~E3 BAF|FEB AFA|B/c/dB BAF|dAF FED:|
@@ -1096,7 +1121,7 @@ G2 G GBd|e2 f gfe|dBG A2 B|E2 F G2 A|BgB TB2 A|G3 G2:|
 				}
 			],
 			theSessionId: 2257,
-			theSessionSettingId: "22264"
+			theSessionSettingId: 22264
 		},
 		{
 			abc: `X:1
@@ -1107,7 +1132,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8000#setting8000
-N:Setting entered in thesession by user fidkid on 2007-11-24
+N:Setting entered in thesession by user “fidkid” on 2007-11-24
 K:Dmajor
 |:A,|D2 F EDB,|DFA dcd|edB AFE|FEF EDB,|
  D2 F EDB,|DFA dcd|edB AFE|EDC D2:|
@@ -1126,7 +1151,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2309#setting2309
-N:Setting entered in thesession by user fidicen on 2003-12-26
+N:Setting entered in thesession by user “fidicen” on 2003-12-26
 K:Dmajor
 |:D2F FEF|AFA d3|baf afd|ege fdA|
  D3 FEF|AFA d2a|baf gfe|fdB A3:|
@@ -1146,7 +1171,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1805#setting1805
-N:Setting entered in thesession by user nobu on 2003-07-07
+N:Setting entered in thesession by user “nobu” on 2003-07-07
 K:Gmajor
 |:G2e dBG|~B3 dBA|G2e dBG|~A3 BGE|
  G2e dBG|~B3 deg|age dBG|~A3 BGE:|
@@ -1163,7 +1188,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2156#setting2156
-N:Setting entered in thesession by user Peter Piper on 2003-11-15
+N:Setting entered in thesession by user “Peter Piper” on 2003-11-15
 K:Gmajor
 |:D|GGG BAG|FFF AFD|GGG BAG|BdB cBA|
  G2A BAG|FFF AFD|d^cd ((3gfe) d|cAF G2:|
@@ -1183,7 +1208,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/385#setting385
-N:Setting entered in thesession by user Will Harmon on 2001-11-19
+N:Setting entered in thesession by user “Will Harmon” on 2001-11-19
 K:Gmajor
 D|:GAG GAB|ded dBG|AGA BGD|EFE E2 D|
  GAG GAB|ded dBG|AGA BGD|1 E2 FG2 D:|2 E2 FG2 B||
@@ -1226,7 +1251,7 @@ L:1/8
 M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2540#setting2540
-N:Setting entered in thesession by user Jamie on 2004-02-20
+N:Setting entered in thesession by user “Jamie” on 2004-02-20
 N:*abc-tools: convert jig to M:12/8*
 K:Aminor
 |:ABA a2 (a {b}a)ge ~g3|~c3 edc Bdg dBG|
@@ -1243,7 +1268,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4844#setting4844
-N:Setting entered in thesession by user slainte on 2005-08-11
+N:Setting entered in thesession by user “slainte” on 2005-08-11
 K:Adorian
 |:E|ABd edB|dBA A2B|GAB dgd|BGG G2g|
  fed efg|aAA e2a|g2e dBd|eAA A2:|
@@ -1259,7 +1284,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/307#setting307
-N:Setting entered in thesession by user Jdharv on 2001-10-03
+N:Setting entered in thesession by user “Jdharv” on 2001-10-03
 K:Gmajor
 |:D|GBA G2B|def gdB|GBA G2B|AFD AFD|
  GBA G2B|def gfg|efe dBA|BGG G2:|
@@ -1276,7 +1301,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/736#setting736
-N:Setting entered in thesession by user Musicalbison on 2002-06-05
+N:Setting entered in thesession by user “Musicalbison” on 2002-06-05
 K:Dminor
 |:DFA ^G2 A|DFA ^G2 A|dAA dAA|BAG F3|
  DFA ^G2 A|DFA ^G2 A|dAA BAG|FGE D3:|
@@ -1290,36 +1315,39 @@ T:The Wishing Well
 C:Tommy Peoples
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1642#setting1642
-N:Setting entered in thesession by user pchaffee on 2003-05-06
+N:Setting entered in thesession by user “pchaffee” on 2003-05-06
+N:*abc-tools: convert jig to M:12/8*
 K:Dmajor
-|:F|DFA d2e|fdB BAF|d2B BAF|B/c/dB BAF|
- DFA d2e|fdB BAF|BAF dBA|fac d2:|
- |:B|Adf ~a3|baf afd|~f2g afd|Bdg bge|
- Adf ~a3|baf afd|b2a afd|Ace d2:|
- |:e|fdd ceA|d2g fdB|c2B ceA|~a3 bag|
- ~f2d ecA|d2g fdA|FAD GBD|Aec d2:|`,
-			theSessionId: 1642
+|:F|DFA d2e fdB BAF|d2B BAF B/c/dB BAF|
+DFA d2e fdB BAF|BAF dBA fac d2:|
+|:B|Adf ~a3 baf afd|~f2g afd Bdg bge|
+Adf ~a3 baf afd|b2a afd Ace d2:|
+|:e|fdd ceA d2g fdB|c2B ceA ~a3 bag|
+~f2d ecA d2g fdA|FAD GBD Aec d2:|`,
+			theSessionId: 1642,
+			parts: "AABBCC"
 		},
 		{
-			abc: `X:1
-T:Captain White's
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/2134#setting2134
-N:Setting entered in thesession by user pjmacd on 2003-11-09
-K:Dmajor
-|:A|"D"DFA d2f|"G"edc B2d|"D"A2d F2B|"A7"AGF E2A|
- "D"DFA d2f|"G"edc B2d|"D"A2d F2B|"A7"ABc "D"d2:|f|:
- "A"e^de A2f|"A"e^de a2f|"A"efe "A7"dcB|"A"A2B c2f|
- "A"e^de A2f|"A"e^de a2f|"A"efe "E7"dcB|"A"ABA "E7"GFE:|
- "D"D2f fef|"D"d2A AGA|"D"D2f fef|"A7"gfe ecA|
- "D"D2f fef|"D"d2A AGA|"G"Bed "A7"cBc|"D"dAG "A7"FGE:|`,
-			theSessionId: 2134
+			incipit: `X: 4
+T: Captain White’s
+R: jig
+M: 12/8
+N: Apparently it’s sometimes played AABBC or AABC or AABCBC or ABC or …
+L: 1/8
+K: Dmaj
+DFA d2 f edc B2d|A2 d F2 B AGF E2 F`,
+			theSessionId: 2134,
+			parts: "AABBCC",
+			references: [
+				{
+					url: "https://www.youtube.com/watch?v=0qAH2ravRrU",
+					artists: "Tommy & Siobhán Peoples, fiddles",
+					notes: "Captain White’s / The Bank Of Turf "
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -1329,7 +1357,7 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/1902#setting1902
-N:Setting entered in thesession by user Dr. Dow on 2003-08-24
+N:Setting entered in thesession by user “Dr. Dow” on 2003-08-24
 N:(edited after importing)
 K:Bminor
 |:dBA ~B3 def ede|f2e ede faf efe|
@@ -1350,7 +1378,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1076#setting1076
-N:Setting entered in thesession by user b.maloney on 2002-10-24
+N:Setting entered in thesession by user “b.maloney” on 2002-10-24
 K:Amixolydian
 |:cAA BGG|cAA ABd|cAA BAG|AFD D2 B|
  cAA BGG|cAA AFD|G2 A (B/c/d)B|1 AFD D2 B:|2 AFD D3||
@@ -1375,7 +1403,7 @@ R:jig
 L:1/8
 M:12/8
 N:Imported from https://thesession.org/tunes/693#setting23367
-N:Setting entered in thesession by user JACKB on 2014-02-01
+N:Setting entered in thesession by user “JACKB” on 2014-02-01
 N:(edited after importing)
 K:Gmajor
 |:BGG AGG BGG AGF|DGG GAG DGG G2A|
@@ -1391,7 +1419,7 @@ K:Gmajor
 				}
 			],
 			theSessionId: 693,
-			theSessionSettingId: "23367"
+			theSessionSettingId: 23367
 		},
 		{
 			abc: `X:1
@@ -1401,7 +1429,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/830#setting830
-N:Setting entered in thesession by user Mark Cordova on 2002-07-08
+N:Setting entered in thesession by user “Mark Cordova” on 2002-07-08
 K:Adorian
 B|:cAd cAG|EDE GAB|cBc BAG|EAA ~A2B|
  cAd cAG|EDE GAB|cde =fed|1 cAA A2B:|2 cAA A2f||
@@ -1418,7 +1446,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2132#setting2132
-N:Setting entered in thesession by user heike on 2003-11-08
+N:Setting entered in thesession by user “heike” on 2003-11-08
 K:Dmajor
 DE|:FDB BAG|FAd faf|fgb ege|Bcc AGE|
  FDB BAG|FAd faa|bge cAF|GFE DED:|
@@ -1436,7 +1464,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1334#setting1334
-N:Setting entered in thesession by user Bannerman on 2003-01-15
+N:Setting entered in thesession by user “Bannerman” on 2003-01-15
 K:Gmajor
 |:BAG AFD|G2G FGA|BAG BdB|cAG Fdc|
  BAG AFD|GBd ~g3|def gdB|1 cAF G2A:|2 cAF G2B||
@@ -1474,7 +1502,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/810#setting810
-N:Setting entered in thesession by user Mark Cordova on 2002-06-27
+N:Setting entered in thesession by user “Mark Cordova” on 2002-06-27
 K:Amixolydian
 |:cBA ecA|fed cBA|def gfg|~B3 Bed|
  cBA ecA|fed cBA|c2e dBG|1 ABA Aed:|2 ABA Afg||
@@ -1517,7 +1545,7 @@ N:Looking forward to playing this in a session myself one of these days.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23818#setting49004
-N:Setting entered in thesession by user GoPlayer on 2023-12-13
+N:Setting entered in thesession by user “GoPlayer” on 2023-12-13
 K:Cmajor
 EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
  EDE CDC EFG AdB|cGE _BFD|CDC C2E|
@@ -1531,7 +1559,7 @@ EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
  C(3EGc =Bcd|efg ~f3|efg fed|cGE _BFD|CDC C3||`
 			],
 			theSessionId: 23818,
-			theSessionSettingId: "49004"
+			theSessionSettingId: 49004
 		},
 		{
 			groups: "su",
@@ -1542,7 +1570,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1570#setting1570
-N:Setting entered in thesession by user gian marco on 2003-04-04
+N:Setting entered in thesession by user “gian marco” on 2003-04-04
 K:Gmajor
 |:BAB cBc|dgg d2g|fed cAF|Ggg d2c|
  BAB cBc|dgg d2g|fed cAF|1 ~G3 G2A:|2 ~G3 G2d||
@@ -1615,7 +1643,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2481#setting2481
-N:Setting entered in thesession by user dafydd on 2003-08-28
+N:Setting entered in thesession by user “dafydd” on 2003-08-28
 K:Amixolydian
 |:c2A ABA|d2e fed|c2A ABA|B2g gdB|
  c2A ABA|d2e fec|d2f c2e|B2g gdB:|
@@ -1636,7 +1664,7 @@ N:family.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23388#setting47849
-N:Setting entered in thesession by user Jake on 2023-08-04
+N:Setting entered in thesession by user “Jake” on 2023-08-04
 N:(edited after importing)
 K:Fmajor
 |:A2^G AcB A2^G AcB|A2G FAc f2f e2d|
@@ -1644,7 +1672,7 @@ K:Fmajor
  |:a2a aga b3 b2a|g2g gfg ac'a cde|
  f2f fef g3 g2f|ege cde [1 fcA F3:|2 fcA FcB !D.C.! |]`,
 			theSessionId: 23388,
-			theSessionSettingId: "47849"
+			theSessionSettingId: 47849
 		},
 		{
 			abc: `X:1
@@ -1654,7 +1682,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4234#setting4234
-N:Setting entered in thesession by user CreadurMawnOrganig on 2005-02-17
+N:Setting entered in thesession by user “CreadurMawnOrganig” on 2005-02-17
 K:Gmajor
 |:G/A/|~B3 ABA|GAG FGA|B/c/dB cAF|DGG G2A|
  B2G AGF|DGE FGA|fed cAF|DGG G2:|
@@ -1674,7 +1702,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2838#setting2838
-N:Setting entered in thesession by user Stewart on 2004-04-17
+N:Setting entered in thesession by user “Stewart” on 2004-04-17
 K:Gmajor
 c|:B3BAB|GBd gdB|A3AGA|Bee dBA|
  BcB BAB|GBd g3|efg eag|1 fdd d2c:|2 fdd def||
@@ -1701,13 +1729,13 @@ N:in D major, but it's lovely on the fiddle in C.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/21254#setting42412
-N:Setting entered in thesession by user Robert Engelman on 2021-11-23
+N:Setting entered in thesession by user “Robert Engelman” on 2021-11-23
 K:Cmajor
 |:E3 FGA|G3 G,CD|E3 cGE|DCC CA,G,|E3 FGA|G3 EGB|c2c B/c/dB|ced c3:|
  |:g3 ege|c3 ceg|a3 faf|Acf afd|g3 ege|c3 agf|gfe fed|ced c3:|
  |:ecf g2g|f/g/af gec|f/g/af e/f/ge|dcA G2E|F3 Acf|a3 gfe|fed edc|B/c/dB c3:|`,
 			theSessionId: 21254,
-			theSessionSettingId: "42412"
+			theSessionSettingId: 42412
 		},
 		{
 			abc: `X:1
@@ -1718,7 +1746,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4236#setting4236
-N:Setting entered in thesession by user gian marco on 2005-02-18
+N:Setting entered in thesession by user “gian marco” on 2005-02-18
 K:Dmajor
 |:A|F2A AFA|Bdd efg|fed ~B3|AFE EDE|
  F2A AFA|Bdd efg|fed ~B3|AFD D2:|
@@ -1735,7 +1763,7 @@ L:1/8
 M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/280#setting280
-N:Setting entered in thesession by user scottythefiddler on 2001-09-09
+N:Setting entered in thesession by user “scottythefiddler” on 2001-09-09
 N:(edited after importing)
 K:Gdor
 |:GFD D2F GAc d3|dcA cAF GFD C3|
@@ -1755,7 +1783,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/488#setting488
-N:Setting entered in thesession by user radriano on 2002-01-06
+N:Setting entered in thesession by user “radriano” on 2002-01-06
 K:Gmajor
 |:B|dGF GDB,|G,A,G, DB,D|EcB ABA|FED cBA|
  B2/^c2/d2/B G3|EF/G/E CEG|DGc BDF|AGF G2:|
@@ -1774,7 +1802,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/5405#setting5405
-N:Setting entered in thesession by user gian marco on 2006-01-07
+N:Setting entered in thesession by user “gian marco” on 2006-01-07
 K:Edorian
 |:BEE EFA|Bee d2f|edB BAF|d2B AFE|
  BEE EFA|Bee d2f|edB BAF|AFE EFA:|
@@ -1792,7 +1820,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/6807#setting6807
-N:Setting entered in thesession by user Ger the Rigger on 2007-02-13
+N:Setting entered in thesession by user “Ger the Rigger” on 2007-02-13
 K:Dmajor
 |:ADD B2 D|ADD FGA|d2 e fdB|ecA fdB|
  ADD ~F2 G|ABA fec|dcA~G3|ecA ~G3:|
@@ -1811,7 +1839,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4440#setting4440
-N:Setting entered in thesession by user petemay on 2005-04-27
+N:Setting entered in thesession by user “petemay” on 2005-04-27
 K:Emixolydian
 |:BGE EDB,|DEF EGB|e3 geB|edB AFA|
  Bec d2B|cAB GEF|=GDB, BA^G|1 AFB EGA:|2 AFB EGB||
@@ -1827,7 +1855,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/327#setting327
-N:Setting entered in thesession by user Jdharv on 2001-10-14
+N:Setting entered in thesession by user “Jdharv” on 2001-10-14
 K:Amajor
 |:f|ecA BAF|AFE EFA|Bdc BAB|cBB B2f|
  ecA BAF|AFE EFA|Bdc BAB|cAA A2:|
@@ -1843,7 +1871,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/62#setting62
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 K:Dmajor
 |:AFA AFA|BGB BdB|AFA AFA|fed BdB|
  AFA AFA|BGB BdB|def afe|dBB BdB:|
@@ -1860,15 +1888,16 @@ K:Dmajor
 T:The Trip To Athlone
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1301#setting1301
-N:Setting entered in thesession by user fidicen on 2003-01-06
+N:Setting entered in thesession by user “fidicen” on 2003-01-06
+N:*abc-tools: convert jig to M:12/8*
 K:Dmajor
-|:ABA D2d|{e}dcA AGF|ABG ABc|dAB =cde|
- ABA D2d|{e}dcA AGF|GFG Ade|1 fdc d2d:|2 fdc d2e||
- |:fed edc|Adc Ade|fed efg|AB=c def|
- ~g3 age|{a}ed=c AGF|~G3 Ade|1 fdc d2e:|2 fdc d2d||`,
+|:ABA D2d {e}dcA AGF|ABG ABc dAB =cde|
+ABA D2d {e}dcA AGF|GFG Ade [1 fdc d2d:|2 fdc d2e||
+|:fed edc Adc Ade|fed efg AB=c def|
+~g3 age {a}ed=c AGF|~G3 Ade[1 fdc d2e:|2 fdc d2d||`,
 			theSessionId: 1301
 		},
 		{
@@ -1879,7 +1908,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/833#setting833
-N:Setting entered in thesession by user Mark Cordova on 2002-07-10
+N:Setting entered in thesession by user “Mark Cordova” on 2002-07-10
 K:Gmajor
 |:ded ~B3|cBc AFD|DGG FGA|~B3 ABc|
  dgd BAB|cBc AFD|DGG FGA|1 BGF GBc:|2 BGF GBd||
@@ -1896,7 +1925,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1497#setting1497
-N:Setting entered in thesession by user lefthander al on 2003-03-10
+N:Setting entered in thesession by user “lefthander al” on 2003-03-10
 N:(edited after importing)
 K:Amix
 |:Ace aed|edB A3|GBd G3|FAd F3|
@@ -1915,7 +1944,7 @@ M: 6/8
 L: 1/8
 N:Imported into *tuneTable* on 2025-11-01,
 N:from https://thesession.org/tunes/870#setting14042
-N:Setting entered in thesession by user daveboling on 2012-10-01
+N:Setting entered in thesession by user “daveboling” on 2012-10-01
 K: Dmaj
 |:AdF A2 A|GBE G2 G|AdF A2 A|GEd cEA|
 AdF A2 A|GBE G2 A|cdc A2A|GEA D3:|
@@ -1951,7 +1980,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4435#setting4435
-N:Setting entered in thesession by user Yooval on 2005-04-26
+N:Setting entered in thesession by user “Yooval” on 2005-04-26
 K:Dmajor
 |:A|Add dcd|BAG A3|AdA eAf|g2g ecB|
  Add dcd|BAG A3|AdA eAf|gec d2:|
@@ -1968,7 +1997,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/11868#setting11868
-N:Setting entered in thesession by user jaychoons on 2012-03-28
+N:Setting entered in thesession by user “jaychoons” on 2012-03-28
 K:Dmajor
 |:B|Bcd efg|aba age|~d3 dcd|efg ecA|
  Bcd efg|~a3 age|dcd Bed|cAA A2:|
@@ -1985,7 +2014,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/620#setting620
-N:Setting entered in thesession by user crannog on 2002-03-26
+N:Setting entered in thesession by user “crannog” on 2002-03-26
 K:Dmajor
 |:B|cAA edb|cAA ABc|dff gfg|aee fed|
  cAA BAG|Eaa AGE|DFF GFG|BAA A2:|
@@ -2008,7 +2037,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/942#setting942
-N:Setting entered in thesession by user Bryce on 2002-08-31
+N:Setting entered in thesession by user “Bryce” on 2002-08-31
 K:Dmixolydian
 |:cec BdB|AGA AGE|DEG AGA|BdB AGE|
  c3 BdB|ABA AGE|DEG AGA|1 AGF GAB:|2 AGF G2 D||
@@ -2024,7 +2053,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2607#setting2607
-N:Setting entered in thesession by user Will Harmon on 2004-03-05
+N:Setting entered in thesession by user “Will Harmon” on 2004-03-05
 K:Dmajor
 ABc|:dAG FED|=c3 ed^c|dAF GFE|FED gfe|
  dAG FED|=cBc ed^c|dAF GFE|FDC DFA:|
@@ -2046,7 +2075,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/825#setting825
-N:Setting entered in thesession by user gian marco on 2002-07-04
+N:Setting entered in thesession by user “gian marco” on 2002-07-04
 K:Gmajor
 |:gfd cAd|GAG B2c|dcB cAG|FED cBA|
  ~G3 GFG|~A3 fga|gfd cAd|1 GAG G2g:|2 GAG G2d||
@@ -2062,7 +2091,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1831#setting1831
-N:Setting entered in thesession by user gian marco on 2003-07-20
+N:Setting entered in thesession by user “gian marco” on 2003-07-20
 K:Gmajor
 |:gfg e2d|Bee dBA|BGG dBG|BAG AB/c/d|
  ~g3 eGd|BeB dBA|BGG dBA|AGF GA/B/d:|
@@ -2078,7 +2107,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1822#setting1822
-N:Setting entered in thesession by user KeepFiddlin' on 2003-07-14
+N:Setting entered in thesession by user “KeepFiddlin'” on 2003-07-14
 K:Dmajor
 |:"D"dcd faf|dcd AFD|"G"GBG FAF|"A"EFG ABc|
  "D"d3 faf|dcd AFD|"G"GBG "D"FAF|1 "A"EDE D2A:|2 "A"EDE D2f||
@@ -2097,7 +2126,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2667#setting2667
-N:Setting entered in thesession by user carrie on 2004-03-15
+N:Setting entered in thesession by user “carrie” on 2004-03-15
 K:Cmajor
 |:c3 dcB|cGE CEG|F3 DEF|GAB ced|
  c3 dcB|cGE CEG|F3 DGF|ECC C3:|
@@ -2113,7 +2142,7 @@ L:1/8
 M:6/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/387#setting387
-N:Setting entered in thesession by user Jdharv on 2001-11-21
+N:Setting entered in thesession by user “Jdharv” on 2001-11-21
 K:Dmajor
 |:fAA fAA|BAG FGE|DED AFA|dfd efg|
  FAA FAA|BAG FGE|DED AFA|dfd e2 d:|
@@ -2130,7 +2159,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8121#setting8121
-N:Setting entered in thesession by user benhockenberry on 2008-01-06
+N:Setting entered in thesession by user “benhockenberry” on 2008-01-06
 K:Amixolydian
 |:e2|A>e c<e A>e c<e|e>Af>A e2d>B|G>d B<d G>d B<d|G>AB>c d>Be>c|
  A>e c<e A>e c<e|e>Af>A e2d>c|B<dG>B g>fe>d|c2A2 A<A:|
@@ -2147,7 +2176,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1649#setting1649
-N:Setting entered in thesession by user gian marco on 2003-05-10
+N:Setting entered in thesession by user “gian marco” on 2003-05-10
 K:Amajor
 |:af|eAAB c2 BA|e2 A2 Aaaf|eA AB c2 BA|c2 B2 B2 Ac|
  eAAB c3 B|ABce a3 f|e3 f ecAc|B2 A2 A2:|
@@ -2164,7 +2193,7 @@ R:march
 L:1/8
 M:4/2
 N:Imported from https://thesession.org/tunes/4553#setting4553
-N:Setting entered in thesession by user Michael Eskin on 2005-06-02
+N:Setting entered in thesession by user “Michael Eskin” on 2005-06-02
 N:(edited after importing)%251118
 K:Edorian
 E>G|:BEGB AFDE FB,DF A2(3Bcd|e>fed BAFE FdFE D2BA|
@@ -2188,7 +2217,7 @@ M:3/4
 K:F
 C DE|F3G FE|F3E FG|A3F EC|D3C `,
 			theSessionId: 19631,
-			theSessionSettingId: "38741"
+			theSessionSettingId: 38741
 		},
 		{
 			abc: `X:1
@@ -2199,7 +2228,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7885#setting7885
-N:Setting entered in thesession by user mehitabel23 on 2007-10-19
+N:Setting entered in thesession by user “mehitabel23” on 2007-10-19
 K:Gminor
 GA|:B2 BG Bd|A4 AB|(3cBA Bcde|dc BA GA|
  B2 BG Bd|A4 AB|(3cBA dc BA|G4 GA:|
@@ -2217,7 +2246,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1332#setting1332
-N:Setting entered in thesession by user ScottC on 2003-01-15
+N:Setting entered in thesession by user “ScottC” on 2003-01-15
 K:Gmajor
 GA|:"G"B2BAGE|DB, D2B,D|"C"EC E2CE|"G"DB, D2GA|
  B2BAGE|DB, D2B,D|"C"E2"D"F2D2|"G"G4GA:|
@@ -2233,7 +2262,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1276#setting1276
-N:Setting entered in thesession by user fidicen on 2003-01-01
+N:Setting entered in thesession by user “fidicen” on 2003-01-01
 K:Gmajor
 |:DG|B2 BA GB|d2 dB AB|c2 ce dc|(3Bcd g2 DG|
  B2 BA GB|d2 dB AB|c2 cA FA|1 G4:|2 G3 ggf||
@@ -2290,7 +2319,7 @@ N:precisely; I wanted to get closer to the variations and ornaments played in th
 N:recording.
 N:---
 N:Imported from https://thesession.org/tunes/23320#setting47651
-N:Setting entered in thesession by user GoPlayer on 2023-07-13
+N:Setting entered in thesession by user “GoPlayer” on 2023-07-13
 K:Gmajor
 M:9/16
  L: 1/16
@@ -2332,7 +2361,7 @@ More info in youtube - follow the link.`
 				}
 			],
 			theSessionId: 23320,
-			theSessionSettingId: "47650"
+			theSessionSettingId: 47650
 		},
 		{
 			groups: "su",
@@ -2347,7 +2376,7 @@ N:this is the first Mazurka in the "The Tax Max Mazurkas"
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/15563#setting29178
-N:Setting entered in thesession by user Yooval on 2016-09-26
+N:Setting entered in thesession by user “Yooval” on 2016-09-26
 K:Fmajor
 AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
  CA, CF AF|AB Bc BA|Gc BA BA|G4 AB|
@@ -2358,7 +2387,7 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
  GC AB AF|GC AB AF|GA GF EF|G2- GF FE|
  DF AF GA|Bc BA GF|Gc BG EC|F2-FG AB:|`,
 			theSessionId: 15563,
-			theSessionSettingId: "29178"
+			theSessionSettingId: 29178
 		},
 		{
 			groups: "su",
@@ -2375,7 +2404,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1302#setting1302
-N:Setting entered in thesession by user gian marco on 2003-01-06
+N:Setting entered in thesession by user “gian marco” on 2003-01-06
 N:(edited after importing)
 K:Dmajor
 |:(3AAA|d2 f2 ag|bg B2 (3ggg|fe Ac eg|fd A2 (3AAA|
@@ -2485,7 +2514,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/5182#setting5182
-N:Setting entered in thesession by user Red Crow on 2005-11-11
+N:Setting entered in thesession by user “Red Crow” on 2005-11-11
 K:Eminor
 |:E>F G/E/-E|{A}B2{^c/B/}A>B|G<E d2|B/^c/d B/c/d|e>f d>f|
  e3 B|g>B f>B|ef|eB F>B|E4:|
@@ -2503,7 +2532,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-11-16,
 N:from https://thesession.org/tunes/6170#setting36341
-N:Setting entered in thesession by user NfldWhistler on 2019-10-19
+N:Setting entered in thesession by user “NfldWhistler” on 2019-10-19
 K: Gmaj
 |:G>F GD|EG D2|EA AG/A/|BA AB/A/|
 G>F GD|EG D2|EA G/F/E/F/|1 G2 GB/A/:|2 G2 GB/c/||
@@ -2520,7 +2549,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/6015#setting6015
-N:Setting entered in thesession by user ceolachan on 2006-07-24
+N:Setting entered in thesession by user “ceolachan” on 2006-07-24
 K:Gmajor
 |:GD|GB B/c/B/A/|FA AD|G>A Bc|d2 cA|
  GB B/c/B/A/|FA AB|cA FA|G2:|
@@ -2538,7 +2567,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8918#setting8918
-N:Setting entered in thesession by user bogman on 2008-09-14
+N:Setting entered in thesession by user “bogman” on 2008-09-14
 K:Amajor
 |:E|Ac ef|ec c/d/c/B/|Ac ef|e2 ec|
  Ac ef|ec c/d/c/B/|AF FE|A3:|
@@ -2554,7 +2583,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1560#setting1560
-N:Setting entered in thesession by user Bannerman on 2003-04-01
+N:Setting entered in thesession by user “Bannerman” on 2003-04-01
 K:Gmajor
 d/c/|:BG D>D|Ec cA/B/|cE F>E|Dd d/e/d/c/|
  BG D>D|Ec cA/B/|c/B/A/G/ F/D/E/F/|1 GB Gd/c/:|2 GB GB/d/||
@@ -2571,7 +2600,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8904#setting8904
-N:Setting entered in thesession by user bogman on 2008-09-11
+N:Setting entered in thesession by user “bogman” on 2008-09-11
 K:Eminor
 |:G2 EG|DE GD|E/G/A GE|DG DE|AG/E/ GA|G/E/D GD/E/|GA/G/ EG|DE E2:|
  BA/G/ AE|DE GE|GA/G/ ED/E/|GE AG|BA/G/ AE|DG EG|GE GE|DE E2|
@@ -2606,7 +2635,7 @@ N:nice !
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/18688#setting36502
-N:Setting entered in thesession by user fiddlebzh on 2019-11-07
+N:Setting entered in thesession by user “fiddlebzh” on 2019-11-07
 K:Gmajor
 |:B>c de|dB Bd|cA AB/d/|ed BA|
  B>c de|de/d/ Bd|cA DF|AG G2:|
@@ -2614,7 +2643,7 @@ K:Gmajor
  F>G AB|1 cA AG|Ad cA|G2 G2:|
  [2 cA c/d/e|dc AF|G2 G2||`,
 			theSessionId: 18688,
-			theSessionSettingId: "36502"
+			theSessionSettingId: 36502
 		},
 		{
 			abc: `X:1
@@ -2624,7 +2653,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8541#setting8541
-N:Setting entered in thesession by user gian marco on 2008-05-17
+N:Setting entered in thesession by user “gian marco” on 2008-05-17
 K:Dmajor
 |:AD FA|dc AB|=c>B cE|EF GF/G/|
  AD FA|dc AB|=c>B cE|1 ED D2:|2 ED D>e||
@@ -2632,7 +2661,7 @@ K:Dmajor
  fd ed|cA AB|=c>B cE|1 ED D>e:|2 ED D2||`,
 			references: [
 				{
-					artist: "Jason O’Rourke, concertina",
+					artists: "Jason O’Rourke, concertina",
 					notes: `album: The Bunch Of Keys
 Well worth a listen! Don’t have link handy though.`
 				}
@@ -2648,7 +2677,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3479#setting3479
-N:Setting entered in thesession by user jakki S on 2004-09-02
+N:Setting entered in thesession by user “jakki S” on 2004-09-02
 K:Gmajor
 B>c|:d/e/d/c/ BG|DG B2|B/d/c/B/ AG|c2 A>B|
  c/d/c/B/ AF|DF A2|B/c/B/A/ GA|B2 B>c|
@@ -2668,7 +2697,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/564#setting564
-N:Setting entered in thesession by user Josh Kane on 2002-02-25
+N:Setting entered in thesession by user “Josh Kane” on 2002-02-25
 K:Dmajor
 |:dA FA|dc d/e/f/e/|dA FA|Be ef/e/|
  dA FA|dg fe|d/B/A/F/ A/B/d/e/|1 fd df/e/:|2 fd df/g/||
@@ -2684,7 +2713,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8624#setting8624
-N:Setting entered in thesession by user swisspiper on 2008-06-17
+N:Setting entered in thesession by user “swisspiper” on 2008-06-17
 K:Gmajor
 |:g>f gd|BG GA/B/|c/B/A a>g|fd ef|
  g>f gd|BGGA/B/|c/B/A dF|G2 G>d:|
@@ -2700,7 +2729,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2105#setting2105
-N:Setting entered in thesession by user gian marco on 2003-10-31
+N:Setting entered in thesession by user “gian marco” on 2003-10-31
 K:Dmajor
 |:f|a2 af/a/|ba fa|g2 Bc|ed c/B/A|
  a2 af/a/|ba fa|g2 Bc|ed d:|
@@ -2777,7 +2806,7 @@ L:1/8
 M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/184#setting184
-N:Setting entered in thesession by user Will Harmon on 2001-07-03
+N:Setting entered in thesession by user “Will Harmon” on 2001-07-03
 N:(edited after importing)
 K:Adorian
 |:A,2EA, B,G,G,B, (3A,A,A, EG FDEG|AGED EA,A,D ECDC B,G,G,B,|
@@ -2798,7 +2827,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/671#setting671
-N:Setting entered in thesession by user Kuddel on 2002-05-04
+N:Setting entered in thesession by user “Kuddel” on 2002-05-04
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Adorian
 |:EA,~A,2 E2DB, G,B,~B,2 G,A,B,D|EA,~A,2 E2DE GBeB dBAB|
@@ -2903,7 +2932,7 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`
 				}
 			],
 			theSessionId: 440,
-			theSessionSettingId: "48642"
+			theSessionSettingId: 48642
 		},
 		{
 			abc: `X:1
@@ -2914,7 +2943,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4198#setting4198
-N:Setting entered in thesession by user Limeretti Lumeretti Hillhocker on 2005-02-04
+N:Setting entered in thesession by user “Limeretti Lumeretti Hillhocker” on 2005-02-04
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Dmajor
 |:A,B,DE FDED B,EED EDB,D|A,B,DE FABc dBAG FDDD|
@@ -2932,7 +2961,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/575#setting575
-N:Setting entered in thesession by user laura nesbit on 2002-03-03
+N:Setting entered in thesession by user “laura nesbit” on 2002-03-03
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gmajor
 |:GE|DEGA BABd egg2 agef|gede gedB AcBA GEE2|
@@ -2996,7 +3025,8 @@ GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
 DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
 [M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
-			]
+			],
+			badges: "crooked"
 		},
 		{
 			abc: `X:1
@@ -3007,7 +3037,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7898#setting7898
-N:Setting entered in thesession by user Yvan on 2007-10-23
+N:Setting entered in thesession by user “Yvan” on 2007-10-23
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Bminor
 |:FBBA B2FB dBcB BAFA|EAdB cAAc dBcA BAGA|
@@ -3027,7 +3057,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/344#setting344
-N:Setting entered in thesession by user Will Harmon on 2001-10-30
+N:Setting entered in thesession by user “Will Harmon” on 2001-10-30
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gdorian
 |:DGGF G2Ac BG (3GGG dGBG|DFFE EF2B A~F3 DFAF|
@@ -3056,7 +3086,8 @@ K: Ador
 EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
 |:ABcd eAA2 gedc BAGB|ABcd eaaf gedB BAA2 :|
 |: [M:7/8] e/f/gdBA2 e/f/gdB GABd|[M:4/4]eBdA a3f gedB [1BAA2 :| [2 BAAG !D.C.! |]`,
-			theSessionId: 40
+			theSessionId: 40,
+			badges: "crooked"
 		},
 		{
 			abc: `X:1
@@ -3066,7 +3097,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/676#setting676
-N:Setting entered in thesession by user Josh Kane on 2002-05-10
+N:Setting entered in thesession by user “Josh Kane” on 2002-05-10
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gmajor
 |:DG~G2 AG (3GGG DG~G2 cAFA|DG~G2 ADFA defd cAFA:|
@@ -3083,16 +3114,18 @@ B3G ~A2AG BABd gedc|BG~G2 ADFA defd cAFA||`,
 T:Sweeney's Buttermilk
 C:Brendan McGlinchey
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/556#setting556
-N:Setting entered in thesession by user barney morgan on 2002-02-20
+N:Setting entered in thesession by user “barney morgan” on 2002-02-20
+N:*abc-tools: convert reel to M:4/4 & L:1/16*
+N:(edited after importing)
 K:Bminor
-|:FB B2 fB B2|dcBc AE E2|FB B2 ABce|afec Ba^ga|
- f3 a fecf|ec c2 BAFE|FB B2 ABce|afec B2 BA:|
- |:FBdc BF F2|EAcB AE E2|FBdB cefb|afec d3 c|
- Bcde fB B2|afec ABce|f2 bf afea|afec B2 BA:|`,
+|:FBB2 fBB2 dcBc AEE2|FBB2 ABce afec Ba^ga|
+  f3a  fecf ecc2 BAFE|FBB2 ABce afec B2BA:|
+|:FBdc BFF2 EAcB AE E2|FBdB cefb afec d3c|
+  Bcde fBB2 afec ABce|f2bf afea afec B2BA:|`,
 			theSessionId: 556
 		},
 		{
@@ -3125,7 +3158,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2120#setting2120
-N:Setting entered in thesession by user Peter Piper on 2003-11-05
+N:Setting entered in thesession by user “Peter Piper” on 2003-11-05
 N:(edited after importing)
 K:Adorian
 [M:5/4]EAAB cABd cABA G2GF GAGD | [M:4/4]EAAB cABd cABG [1 EAAG :| [K:A mixo] [2 ABcd ||
@@ -3141,7 +3174,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/229#setting229
-N:Setting entered in thesession by user JD on 2001-08-08
+N:Setting entered in thesession by user “JD” on 2001-08-08
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gdorian
 |:F|DGGA BABF DFF2 DFCF|DGGA BABd cAfA AGG:|
@@ -3159,7 +3192,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/281#setting281
-N:Setting entered in thesession by user Will Harmon on 2001-09-13
+N:Setting entered in thesession by user “Will Harmon” on 2001-09-13
 K:Edorian
 |:B,E (3EEE B,EFE|EDB,D A,DFD|B,E (3EEE B,EGB|AFDE FEED|
  B,E (3EEE B,EFE|EDB,D A,DFD|B,E (3EEE B,EGB|1 AFdF FEED:|2 AFdF FEEA||
@@ -3185,7 +3218,7 @@ R:Reel
 K:Dmin
 CFAF DFAF CFAF cFAF | GddG (^cd)Gd dGAd c/B/AF/E/D |`,
 			theSessionId: 1091,
-			theSessionSettingId: "14333"
+			theSessionSettingId: 14333
 		},
 		{
 			abc: `X:1
@@ -3196,7 +3229,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2584#setting2584
-N:Setting entered in thesession by user Conway on 2004-02-29
+N:Setting entered in thesession by user “Conway” on 2004-02-29
 K:Gmajor
 |:DGBG dGBG|~c3 d efga|bg ~g2 agef|gedB AGEG|
  DGBG dGBG|~c3 d efga|bg ~g2 aged|1 cAFA ~G3 E:|2 cAFA G2 ga||
@@ -3213,7 +3246,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/973#setting973
-N:Setting entered in thesession by user Mark Cordova on 2002-09-18
+N:Setting entered in thesession by user “Mark Cordova” on 2002-09-18
 K:Bminor
 |:FBfe dB (3BBB|Aced cA A2|FBfe dB B2|FB B2 cB B2|
  FBfe dB B2|ce e2 ce e2|f3e dB B2|cedc dB B2:|
@@ -3229,7 +3262,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/430#setting430
-N:Setting entered in thesession by user Josh Kane on 2001-12-09
+N:Setting entered in thesession by user “Josh Kane” on 2001-12-09
 K:Gmajor
 EAAB GABG|EAAB G2ED|EAA2 GABd|edge dBAG|
  EAAB GABG|EAAB G2ED|EAA2 GABd|edge d2ef||
@@ -3246,7 +3279,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/313#setting313
-N:Setting entered in thesession by user Zina Lee on 2001-10-07
+N:Setting entered in thesession by user “Zina Lee” on 2001-10-07
 K:Amajor
 A2-|:AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EAAc B2 cB|
  AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EA-AG A2 AB:|
@@ -3262,12 +3295,12 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/141#setting530
-N:Setting entered in thesession by user Josh Kane on 2002-01-31
+N:Setting entered in thesession by user “Josh Kane” on 2002-01-31
 K:Gmajor
 |:G2DG EGDE|G2BG AGEF|G2DG EGDG|(3EFG AB c2BA:|
  |:dBAB GB~B2|dB~B2 c2Bc|dBAB GBAB|(3EFG AB c2Bc:|`,
 			theSessionId: 141,
-			theSessionSettingId: "530"
+			theSessionSettingId: 530
 		},
 		{
 			abc: `X:1
@@ -3278,7 +3311,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/302#setting302
-N:Setting entered in thesession by user Will Harmon on 2001-10-01
+N:Setting entered in thesession by user “Will Harmon” on 2001-10-01
 K:Gmajor
 |:G3 D E2 DB,|G,A,B,D EGDB,|G,A,B,D GABd|gabg eaaf|
  gbag efge|dged B^cde|g2 fa gedB|AcBA GEED:|
@@ -3294,7 +3327,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/477#setting477
-N:Setting entered in thesession by user Josh Kane on 2002-01-01
+N:Setting entered in thesession by user “Josh Kane” on 2002-01-01
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Adorian
 |:B|A3B A2GE A2GA BddB|A3B AGEF G3A Bdd:|
@@ -3310,7 +3343,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4263#setting4263
-N:Setting entered in thesession by user gian marco on 2005-02-27
+N:Setting entered in thesession by user “gian marco” on 2005-02-27
 K:Adorian
 |:A2AG A2cA|EGDE GEDG|EAAG ABcd|1 e/f/ged eAdc:|2 edcA G3^G||
  Addc d2cA|d2cA G2EG|Addc AB^cd|1 e/f/ged cAGG:|2 e/f/ged cAdc||`,
@@ -3325,7 +3358,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1767#setting1767
-N:Setting entered in thesession by user Kenny on 2003-06-20
+N:Setting entered in thesession by user “Kenny” on 2003-06-20
 K:Gmajor
 G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG EDB,D|
  G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG ED D2||
@@ -3342,7 +3375,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/891#setting891
-N:Setting entered in thesession by user SPeak on 2002-08-12
+N:Setting entered in thesession by user “SPeak” on 2002-08-12
 K:Dmajor
 |:D2DF ADFA|dfed B3c|dBBA dBBA|FADE FE E2|
  D2DF ADFA|dfed B3c|dBBA FAdB|AFEG FD D2:|
@@ -3364,7 +3397,7 @@ N:Flynn album The Housekeepers. Those long lonesome notes...
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/20851#setting41404
-N:Setting entered in thesession by user benhockenberry on 2021-06-03
+N:Setting entered in thesession by user “benhockenberry” on 2021-06-03
 K:Cdorian
 C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
  C2DB,C2DF|GFGAB4-|BcBA F2BA|FDCDB,4|
@@ -3373,7 +3406,7 @@ C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
  |:Gccc B3c|dcBG cAGF|GccB c2Bc|dcBG c3e|
  dGBG cAGA|BcBA FDB,C|DFFF GABG|FDCD B,4:|`,
 			theSessionId: 20851,
-			theSessionSettingId: "41404"
+			theSessionSettingId: 41404
 		},
 		{
 			abc: `X:1
@@ -3384,7 +3417,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1703#setting1703
-N:Setting entered in thesession by user Kenny on 2003-05-28
+N:Setting entered in thesession by user “Kenny” on 2003-05-28
 K:Dmajor
 |:D2 EF ED D2|d2 ef edBA|D2 FA FEED|BcdD FE E2|
  D2 FA FEED|d2 ef edfd|BD D2 Bd d2|AFEF D4:|
@@ -3400,7 +3433,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1272#setting1272
-N:Setting entered in thesession by user fidicen on 2002-12-30
+N:Setting entered in thesession by user “fidicen” on 2002-12-30
 K:Dmajor
 D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
  D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDD2||
@@ -3420,7 +3453,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/227#setting227
-N:Setting entered in thesession by user Will Harmon on 2001-08-06
+N:Setting entered in thesession by user “Will Harmon” on 2001-08-06
 K:Gmajor
 G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
  GBAG FGAF|GBAc BdcA|GBAG FGAg|fdcA d2 Bc|
@@ -3436,7 +3469,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/21#setting21
-N:Setting entered in thesession by user Jeremy on 2001-05-21
+N:Setting entered in thesession by user “Jeremy” on 2001-05-21
 K:Aminor
 |:A2 cA ABcA|GcEG G2 EG|A2 cA ABcd|ecdB cA A2:|
  agec dfed|cAGE G2 eg|agec d2cd|eaag a2ba|
@@ -3451,7 +3484,7 @@ R:reel
 L:1/16
 M:4/4
 N:Imported from https://thesession.org/tunes/3#setting3
-N:Setting entered in thesession by user Jeremy on 2001-05-14
+N:Setting entered in thesession by user “Jeremy” on 2001-05-14
 N:(edited after importing)
 K:Gmajor
 BA|G2BG AFDF G2Bd c2BA| G2BG AFDF GEEG c2BA|
@@ -3470,7 +3503,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/75#setting75
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 K:Gmajor
 |:G2 BG AGBG|B2 BA BcBA|G2 BG AGBG|A2 AG AcBA|
  G2 BG AGBG|B2 BA B2 d2|e2 ef edef|gfed BcBA:|
@@ -3486,7 +3519,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1100#setting1100
-N:Setting entered in thesession by user slainte on 2002-10-31
+N:Setting entered in thesession by user “slainte” on 2002-10-31
 K:Gmajor
 |:G2BG cGBG|ADDE FGAF|G2BG cGBG|1 Addc BGGF:|2 Addc BGGf||
  |:g2dg egde|g2bg fgaf|g2dg egdB|1 cAdc BGGf:|2 cAdc BGGF||`,
@@ -3501,7 +3534,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2172#setting2172
-N:Setting entered in thesession by user Will Harmon on 2003-11-19
+N:Setting entered in thesession by user “Will Harmon” on 2003-11-19
 K:Dmajor
 |:D2 FD GEFE|(3DDD FA d2 ef|geaf fged|cA (3AAA EFGE|
  D2 FD GEFE|(3DDD FA dfef|geaf edcd|1 ed (3ddc dBAF:|2 edce d3 g||
@@ -3517,7 +3550,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/138#setting138
-N:Setting entered in thesession by user Will Harmon on 2001-06-13
+N:Setting entered in thesession by user “Will Harmon” on 2001-06-13
 K:Dmixolydian
 |:D2 FD ADFD|ABcA G~E3|D2 (3FED ADFA|d2 ed cAGE|
  (3DDD AD (3DDD AD|ABcA G~E3|cABG A2 AB|1 cded cAGE:|2 cded cAGc||
@@ -3533,7 +3566,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1268#setting1268
-N:Setting entered in thesession by user emily_bmore on 2002-12-29
+N:Setting entered in thesession by user “emily_bmore” on 2002-12-29
 K:Gmajor
 |:G2BG dGBG|G/G/G BG AFDF|G2BG dGBG|c/c/c Bc AFDF:|
  |:E6 cA|BGEB AFDF|E2~E2 E2cA|1 BdcB AFDF:|2 BdcB AFDf||
@@ -3549,7 +3582,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/181#setting181
-N:Setting entered in thesession by user CreadurMawnOrganig on 2001-06-30
+N:Setting entered in thesession by user “CreadurMawnOrganig” on 2001-06-30
 K:Dmajor
 |:D2 FA d2 cA|BAGB AFDF|GEFD EFGA|(3Bcd ed cAAg|
  fd ~d2 edcA|BcdB AGFD|EFGA (3Bcd ed|1 cAGE FDCE:|2 cAGE D2 z2||
@@ -3565,7 +3598,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/579#setting579
-N:Setting entered in thesession by user Toni Ribas on 2002-03-06
+N:Setting entered in thesession by user “Toni Ribas” on 2002-03-06
 K:Adorian
 |:A2eA cAeA|ABcd edBA|G2dG BGdG|GABc dcBG|
  A2eA cAeA|ABcd edcB|ABcd efge|dBGA BAA2:|
@@ -3585,7 +3618,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/27#setting27
-N:Setting entered in thesession by user Jeremy on 2001-05-21
+N:Setting entered in thesession by user “Jeremy” on 2001-05-21
 K:Edorian
 |:E2BE dEBE|E2BE AFDF|E2BE dEBE|BABc dAFD:|
  d2fd c2ec|defg afge|d2fd c2ec|BABc dAFA|
@@ -3601,7 +3634,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/426#setting426
-N:Setting entered in thesession by user Will Harmon on 2001-12-08
+N:Setting entered in thesession by user “Will Harmon” on 2001-12-08
 K:Adorian
 |:A2 ed BedB|AG (3GGG AGEG|A2 ed (3B^cd ef|gfga gedg|
  eA (3AAA BedB|AGEF G3 A|EA (3AAA GABd|1 gedB A2 (3EFG:|2 gedB A3 e||
@@ -3618,7 +3651,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1050#setting1050
-N:Setting entered in thesession by user SPeak on 2002-10-16
+N:Setting entered in thesession by user “SPeak” on 2002-10-16
 K:Edorian
 |:E (3EEE F GE (3EEE|B2AB AGED|EDEF GFGA|B2dB AGED|
  E (3EEE F GE (3EEE|B2AB AGED|Beed BA (3AAA|B2AB AGED:|
@@ -3635,7 +3668,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2881#setting2881
-N:Setting entered in thesession by user Kenny on 2004-04-23
+N:Setting entered in thesession by user “Kenny” on 2004-04-23
 K:Dmajor
 |:DF F2 AFAB|d2 fe dBAF|DFAF BFAF|E2 ED EGFE|
  DFAB AFAB|defe dBAf|efdB AF F2|AFEG FD D2:|
@@ -3653,14 +3686,14 @@ N:Quebec reel, composer unknown.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/17457#setting33504
-N:Setting entered in thesession by user Siúlóir on 2018-11-10
+N:Setting entered in thesession by user “Siúlóir” on 2018-11-10
 K:Dmajor
 |:DFAF DFAF|EGAG EGAG|DFAF DFAd|fedf e2AF|
  DFAF DFAF|EGAG EGAG|DFAF DFAd|1 fedc d2AF:|2 feBc d2fd||
  |:Adfd Adfa|gfed e2B2|ABcd edeg|fdec d2fd|
  Adfd Adfa|gfed e2B2|ABcd efeg|fedc d2fd:|`,
 			theSessionId: 17457,
-			theSessionSettingId: "33504"
+			theSessionSettingId: 33504
 		},
 		{
 			abc: `X:1
@@ -3671,7 +3704,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2739#setting2739
-N:Setting entered in thesession by user Kenny on 2004-03-30
+N:Setting entered in thesession by user “Kenny” on 2004-03-30
 K:Dmajor
 |:DFAd f2 fe|dcde fdAF|G2 FG E2 EF|GBAF EA,CE|
  FD D2 FAGA|BG G2 Bcdg|fgaf gecd|1 eddc dBAF:|2 eddc d2 Ad||
@@ -3687,7 +3720,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/136#setting136
-N:Setting entered in thesession by user Will Harmon on 2001-06-12
+N:Setting entered in thesession by user “Will Harmon” on 2001-06-12
 K:Amixolydian
 |:(3AAA Ag fdec|A2 A=c BG(3GGG|AGAg fdef|1 ~g3d BGGB:|2 ~g3d BG(3GGG||
  |:faaf gfed|(3cBA eA fAeA|faaf gfef|1 ~g3d BG(3GGG:|2 ~g3d BGGB||`,
@@ -3702,7 +3735,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/727#setting727
-N:Setting entered in thesession by user seara on 2002-06-03
+N:Setting entered in thesession by user “seara” on 2002-06-03
 K:Adorian
 |:B|A/A/A (BA) GAAB|A/A/A (BA) edde|G2 (BA) BGGB|c2 (BA) BGGB|
  A/A/A (BA) GAAB|A/A/A (BA) edda|gedB GABd|{d}e2 dB eAA:|
@@ -3719,7 +3752,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/212#setting212
-N:Setting entered in thesession by user laura nesbit on 2001-07-22
+N:Setting entered in thesession by user “laura nesbit” on 2001-07-22
 K:Dmajor
 |:(3FED AD FDAD|FAAF GFEC|~A,3B, CA, (3A,A,A,|A,G,A,B, CDEG|
  (3FED AD FDAD|FAAF GFEA|~B2eg fgec|1 dcce dBAG:|2 (3ded ce dfeg||
@@ -3741,13 +3774,13 @@ N:Daniel Dow.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/18630#setting36343
-N:Setting entered in thesession by user Connor Hickey on 2019-10-19
+N:Setting entered in thesession by user “Connor Hickey” on 2019-10-19
 K:Fmajor
 B|:AFFCF2Ac|dfcf AGGB|AFFC DEFd|cAfc AFFB:|
  Acfc Afcf|dfcf AGGB|Acfc Afcf|egce fFFB|
  Acfc Afcf|dfcA GABd|cAFB AFAc|defg aff||`,
 			theSessionId: 18630,
-			theSessionSettingId: "36343"
+			theSessionSettingId: 36343
 		},
 		{
 			abc: `X:1
@@ -3758,7 +3791,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2870#setting2870
-N:Setting entered in thesession by user jdave on 2004-04-21
+N:Setting entered in thesession by user “jdave” on 2004-04-21
 K:Bminor
 |:dB~B2 FB~B2|dfBd f2ed|cA~A2 EA~A2|ceAc e2fe|
  dB~B2 FB~B2|dfBd f2cB|~A3c e2fe|1 dAcA B2fe:|2 dAcA B2Bc||
@@ -3774,7 +3807,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/704#setting704
-N:Setting entered in thesession by user Josh Kane on 2002-05-27
+N:Setting entered in thesession by user “Josh Kane” on 2002-05-27
 K:Edorian
 |:GE~E2 E2AF|GE~E2 AFDF|GE~E2 EFGA|1 BcdB AFDF:|2 BcdB ABde||
  |:f2df efde|fedB ABde|f2df efdA|1 BcdB ABde:|2 BcdB AFDF||`,
@@ -3788,7 +3821,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1619#setting1619
-N:Setting entered in thesession by user Kenny on 2003-04-28
+N:Setting entered in thesession by user “Kenny” on 2003-04-28
 K:Gmajor
 dc|BG G2 AGFG|DG G2 A2 dc|BG G2 AGAB|cABG A2 dc|
  BG G2 AGFG|DGG2 A2 dc|BG G2 AGAB|cABG A2 Bd|
@@ -3804,7 +3837,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/565#setting565
-N:Setting entered in thesession by user Josh Kane on 2002-02-25
+N:Setting entered in thesession by user “Josh Kane” on 2002-02-25
 K:Gmajor
 |:BG~G2 AGFG|EG~G2 AEGE|DEGA ~B2Bd|(3=fed ^cd Bdgd|
  BG~G2 AFGF|ECC2 ACGE|DEGA B2Bd|ecdc BGGA||
@@ -3824,7 +3857,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2854#setting2854
-N:Setting entered in thesession by user Dr. Dow on 2004-04-19
+N:Setting entered in thesession by user “Dr. Dow” on 2004-04-19
 K:Dmajor
 |:FDDF ABAF|GAAF GFED|FGAF D2 (3efg|1 fdec dBBG:|2 fdec defg||
  a2fa dafa|g2e=c Gceg|a2fa dafa|g2ag fdd2|
@@ -3840,7 +3873,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/195#setting195
-N:Setting entered in thesession by user b.maloney on 2001-07-17
+N:Setting entered in thesession by user “b.maloney” on 2001-07-17
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Gmajor
 |:BG (3GGG BGdG BG (3GGG Bdgd|(3BcB Ad ~B2 cB AGFG AB (3cBA:|
@@ -3865,7 +3898,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/237#setting237
-N:Setting entered in thesession by user Will Harmon on 2001-08-15
+N:Setting entered in thesession by user “Will Harmon” on 2001-08-15
 K:Adorian
 AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
  cdef g2 ge|f2 fd gfed|cdef ~g3e|fdec A2 AB|
@@ -3882,7 +3915,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/263#setting263
-N:Setting entered in thesession by user Zina Lee on 2001-08-30
+N:Setting entered in thesession by user “Zina Lee” on 2001-08-30
 K:Ddorian
 |:DE||F2DE F2DE|FEFG ECCE|F2DE FGAG|FDEC A,D DE|
  F2DE FGAB|cAGF EDCE|DEFG AddB|cAGE EDD2:|
@@ -3899,7 +3932,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/24#setting24
-N:Setting entered in thesession by user Jeremy on 2001-05-21
+N:Setting entered in thesession by user “Jeremy” on 2001-05-21
 K:Amixolydian
 |:ed|c2B2 ABcd|egfg edBd|gBBB gBaB|gBBB gfed|
  cdBc ABcd|egfg edBd|gfgd efed|c2B2 A2:|
@@ -3915,14 +3948,14 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/257#setting242
-N:Setting entered in thesession by user Brando  on 2001-08-20
+N:Setting entered in thesession by user “Brando ” on 2001-08-20
 K:Edorian
 |:G3B A3B|G3B AFDF|Eeed efgf|e3d Bcdf|
  efed B2Bc|dedA FDDF|Beed B3c|d2AF GEED:|
  |:GBeB GEED|FAAG FDED|GBeB GEED|FEDF E3F|
  GBeB GEED|FAAG FDED|G2GF GFEG|BGFG E3F:|`,
 			theSessionId: 257,
-			theSessionSettingId: "242"
+			theSessionSettingId: 242
 		},
 		{
 			abc: `X:1
@@ -3935,14 +3968,14 @@ N:Reel from Quebec.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/17379#setting33333
-N:Setting entered in thesession by user Siúlóir on 2018-10-14
+N:Setting entered in thesession by user “Siúlóir” on 2018-10-14
 K:Dmajor
 A2G2 S|:F3d dcde|d2A2 F2A2|G3d dcde|d2B2 G2B2|
  A3e edef|e2c2 B2A2|1 dFAd fedc|B2A2 {B}A2G2:|2 d2AA BAFA|d6ed||
  [K:A]|:cecA EAce|d2B2 B4|GBBB ddBd|ffed c2ed|
  cecA EAce|d2B2 B4|GBBB ddBd|fece [1 a2ed:|2 a2ASG||`,
 			theSessionId: 17379,
-			theSessionSettingId: "33333"
+			theSessionSettingId: 33333
 		},
 		{
 			abc: `X:1
@@ -3953,7 +3986,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2896#setting2896
-N:Setting entered in thesession by user Kenny on 2004-04-26
+N:Setting entered in thesession by user “Kenny” on 2004-04-26
 K:Gmajor
 |:B2 BG ABGE|DGBG A3 c|BdBG ABde|gedB eA A2|
  BdBG ABGE|DGBG AGAc|BG G2 A2 Bd|gedc BG G2:|
@@ -3969,7 +4002,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/605#setting605
-N:Setting entered in thesession by user Josh Kane on 2002-03-20
+N:Setting entered in thesession by user “Josh Kane” on 2002-03-20
 K:Gmajor
 ~B2BA BAGA|B2GB AGEG|~B2BA BAGB|cABG AGEG|
  ~B2BA BAGA|B2GB AGEG|Bd~d2 eBdB|AcBG AGEG||
@@ -3998,13 +4031,13 @@ N:https://thesession.org/tunes/6749
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23211#setting47315
-N:Setting entered in thesession by user GoPlayer on 2023-06-02
+N:Setting entered in thesession by user “GoPlayer” on 2023-06-02
 K:Gmajor
 |:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
  [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`
 			],
 			theSessionId: 23211,
-			theSessionSettingId: "47315"
+			theSessionSettingId: 47315
 		},
 		{
 			abc: `X:1
@@ -4014,7 +4047,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2154#setting2154
-N:Setting entered in thesession by user gian marco on 2003-11-15
+N:Setting entered in thesession by user “gian marco” on 2003-11-15
 K:Dmixolydian
 |:AG|~F2 FG ~A3B|cAdB cABG|AddA d3e|fdeA d^cAG|
  ~F2DF ~A3B|cAdB cABG|Add^c ~A3G|EFGE FD:|
@@ -4022,7 +4055,7 @@ K:Dmixolydian
  eaag efge|(3Bcd ed ^cAGG|Add^c~A3G|EFGE FD:|`,
 			references: [
 				{
-					artist: "Denis Ryan, fiddle; Cathal McConnell, flute",
+					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=16"
 				}
 			],
@@ -4037,7 +4070,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1024#setting1024
-N:Setting entered in thesession by user Brando  on 2002-10-10
+N:Setting entered in thesession by user “Brando ” on 2002-10-10
 K:Dmajor
 AAG|:F2AF DFAF|G2BG DGBG|A2cA EABc|dzde edAG|
  F2AF DFAF|GBBA ~B3z|cdef gecA|1 eddc dAAG:|2 eddc defg||
@@ -4053,7 +4086,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/408#setting408
-N:Setting entered in thesession by user Will Harmon on 2001-12-02
+N:Setting entered in thesession by user “Will Harmon” on 2001-12-02
 K:Dmajor
 |:F2 AF GFED|DFAF GFED|EDEF GFED|~E3 F GFED|
  F2 AF GFED|DFAF GFED|cdef gece|1 eddc d2 AG:|2 eddc d2 ef||
@@ -4070,7 +4103,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/367#setting367
-N:Setting entered in thesession by user Will Harmon on 2001-11-12
+N:Setting entered in thesession by user “Will Harmon” on 2001-11-12
 K:Edorian
 EF|:GBEG (3BBB AF|GFGA BdAG|FADF ADFA|(3ddd cd BAGF|
  GBEG (3BBB AF|GFGA ~B3 c|dedB AGFA|1 GEFD ~E3 F:|2 GEFD ~E3 A||
@@ -4088,7 +4121,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1040#setting1040
-N:Setting entered in thesession by user SPeak on 2002-10-14
+N:Setting entered in thesession by user “SPeak” on 2002-10-14
 K:Dmajor
 |:FA(3AAA FADF|ADFA BAFD|GBBA B(3BBBG|ABdf edBA|
  FA(3AAA FADF|ADFA BAFD|GB(3BBB AFDF|EFGE FDD2:|
@@ -4109,7 +4142,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2805#setting2805
-N:Setting entered in thesession by user Kerri Coombs on 2004-04-12
+N:Setting entered in thesession by user “Kerri Coombs” on 2004-04-12
 K:Dminor
 |:FdcB AGFD|G2 dG eGdG|FEFG Acde|fedc A=BcA|
  d3 e f2 ag|fedc AFDE|1 F3 G AGFG|Addc d2 (3CDE:|2 F3 G AFDE|FDEC D2 de||
@@ -4118,11 +4151,7 @@ K:Dminor
 			theSessionId: 2805
 		},
 		{
-			references: [
-				{
-					notes: "A crooked tune"
-				}
-			],
+			badges: "crooked",
 			abc: [
 				`X: 1
 T: The Cameronian
@@ -4190,7 +4219,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/504#setting504
-N:Setting entered in thesession by user CreadurMawnOrganig on 2002-01-13
+N:Setting entered in thesession by user “CreadurMawnOrganig” on 2002-01-13
 K:Adorian
 a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
  eA ~A2 cdec|degd BAGB|AEEE cdec|d2gd BAag|
@@ -4208,7 +4237,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1596#setting1596
-N:Setting entered in thesession by user Kenny on 2003-04-16
+N:Setting entered in thesession by user “Kenny” on 2003-04-16
 K:Gmajor
 |:dG G2 dGeG|d2 de dcAB|cF F2 cF F2|(3Bcd ed cABc|
  dg g2 dgeg|d2 de dcAG|FGAd fdeg|fdcA G4:|
@@ -4224,7 +4253,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/363#setting363
-N:Setting entered in thesession by user Jdharv on 2001-11-11
+N:Setting entered in thesession by user “Jdharv” on 2001-11-11
 K:Edorian
 |:BE~E2 BAFA|BE~E2 BAFA|ABAF D2FD|FA~A2 BAFA|
  BE~E2 BAFA|BE~E2 BAFA|A2Bc dfec|dBAF E4:|
@@ -4241,7 +4270,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3435#setting3435
-N:Setting entered in thesession by user gian marco on 2004-08-23
+N:Setting entered in thesession by user “gian marco” on 2004-08-23
 K:Edorian
 |:B(E ~E2) B2 AF|{e}(3cBB AF AdAG|FDAD A,DAD|FAdA (3Bcd ed|
  B(E ~E2) B2 AF|{e}(3cBB AF D3 z|afed fedB|1 AF (3(DEF) E3 d:|2 AF (3(DEF) E3:|
@@ -4260,7 +4289,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1020#setting1020
-N:Setting entered in thesession by user Brando  on 2002-10-08
+N:Setting entered in thesession by user “Brando ” on 2002-10-08
 K:Eminor
 |:GA|BE (3EEE Gz BG|AcBA GEDE|~G3A BAGA|BedB A2 GA|
  BE (3EEE Gz BG|AcBA GEDE|G2 (3Bcd edBA|GEFD E2:|
@@ -4277,7 +4306,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4525#setting4525
-N:Setting entered in thesession by user Kenny on 2005-05-23
+N:Setting entered in thesession by user “Kenny” on 2005-05-23
 K:Gmajor
 Bc|:dGBd c=FAc|BGBd gfdc|Bcde =fdeg|fdBd c=FAc|
  BGGF GABc|dGBd c2 Bc|dgfa gbag|1 fdcA GABc:|2 fdcA G2 Bc||
@@ -4294,7 +4323,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3943#setting3943
-N:Setting entered in thesession by user Dr. Dow on 2004-11-29
+N:Setting entered in thesession by user “Dr. Dow” on 2004-11-29
 K:Dmajor
 |:B|AF~F2 DEFA|dfaf eB~B2|dAea ~f3e|dBAF FEEB|
  AF~F2 DEFA|dfaf eB~B2|GBge fgef|dBAG FDD:|
@@ -4313,7 +4342,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2716#setting2716
-N:Setting entered in thesession by user Kenny on 2004-03-26
+N:Setting entered in thesession by user “Kenny” on 2004-03-26
 K:Dmajor
 |:AF F2 DF F2|AF F2 ABde|fdad bdad|efge cABc|
  d2 cd BAFE|D2 FD ADFA|BG G2 cA A2|1 faeg fddB:|2 faeg fdde||
@@ -4334,7 +4363,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/50#setting50
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 K:Dmajor
 |:AF F2 EFDE|F2 AF BFAF|E2 BE dEBE|ABde fedB|
  AFFF EFDE|F2 AF BFAF|E2 BE dEBE|ABde fd d2:|
@@ -4351,7 +4380,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1333#setting1333
-N:Setting entered in thesession by user Dr. Dow on 2003-01-15
+N:Setting entered in thesession by user “Dr. Dow” on 2003-01-15
 K:Gmajor
 |:dB~B2 dBGB|dA~A2 dAFA|DEFG ABcA|defg abge|
  dB~B2 dBgB|dA~A2 fdAF|DEFG ABcA|1 d2cd AGGB:|2 d2cd AGGg||
@@ -4369,7 +4398,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1370#setting1370
-N:Setting entered in thesession by user fidicen on 2003-01-24
+N:Setting entered in thesession by user “fidicen” on 2003-01-24
 K:Dmajor
 B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
  cdec A3d|cdec ABcB|cdec ABAG|EG=cA BGEd|
@@ -4384,7 +4413,7 @@ R:reel (single)
 L:1/16
 M:4/4
 N:Imported from https://thesession.org/tunes/474#setting31703
-N:Setting entered in thesession by user JACKB on 2018-01-19
+N:Setting entered in thesession by user “JACKB” on 2018-01-19
 N:(edited after importing)
 K:Gmajor
  d2BG dGBG G2(3Bcd efge|d2BG dGBG ABcd edBe|
@@ -4401,7 +4430,7 @@ Album: The High Seas (2018)`,
 				}
 			],
 			theSessionId: 474,
-			theSessionSettingId: "22920"
+			theSessionSettingId: 22920
 		},
 		{
 			abc: `X:1
@@ -4411,7 +4440,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/511#setting511
-N:Setting entered in thesession by user Josh Kane on 2002-01-19
+N:Setting entered in thesession by user “Josh Kane” on 2002-01-19
 K:Gmajor
 |:d2BG d2BG|d2BG AGEG|d2BG dGBG|AcBG AGEG:|
  |:D~D2B BAGE|DGBG AGEG|D~D2B BAGB|AcBG AGEG:|
@@ -4429,7 +4458,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3531#setting3531
-N:Setting entered in thesession by user jdicarlo on 2004-09-12
+N:Setting entered in thesession by user “jdicarlo” on 2004-09-12
 K:Bdorian
 |:f2ef dB~B2|f2ef defg|a2ed cAAF|EFAB cAde|
  f2ef dB~B2|f2ef defg|a2ed cAec|ABBA B2 z2:|
@@ -4490,7 +4519,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1963#setting1963
-N:Setting entered in thesession by user Dr. Dow on 2003-09-09
+N:Setting entered in thesession by user “Dr. Dow” on 2003-09-09
 K:Edorian
 |:B2Ad BEED|EB,EB ~B2EB|BAFA D3E|FDFA BAFA|
  B2A=c BEED|EB,EB ~B2EB|BAGF GABc|dBAG FDFA:|
@@ -4506,7 +4535,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1522#setting1522
-N:Setting entered in thesession by user gian marco on 2003-03-15
+N:Setting entered in thesession by user “gian marco” on 2003-03-15
 K:Dmajor
 |:~A3G FAdB|AGFD EA,~A,2|~A3G FAdB|1 ABde fddB:|2 ABde fdde||
  f2df efdf|afdf edBd|f2df efdA|B/c/dAG FDDe|
@@ -4521,7 +4550,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3033#setting3033
-N:Setting entered in thesession by user Kenny on 2004-05-18
+N:Setting entered in thesession by user “Kenny” on 2004-05-18
 K:Dmajor
 |:A3 B AFDF|A2 FA GECE|A2 AB AFDF|EDCD EFGE:|
  FD D2 FDGE|FD D2 GECE|FD D2 F2 FD|1 EDCD EFGE:|2 EDCD EFGA||
@@ -4538,7 +4567,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/754#setting754
-N:Setting entered in thesession by user b.maloney on 2002-06-11
+N:Setting entered in thesession by user “b.maloney” on 2002-06-11
 K:Dmajor
 |:dB|A2dA (3Bcd AF|DFAF EA,CE|DFAF GBed|cABc d2 dB|
  A2dA BdAF|DFAF EGFE|DFAF GBed|cABc d2:|
@@ -4555,7 +4584,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/5933#setting5933
-N:Setting entered in thesession by user domhnall. on 2006-07-05
+N:Setting entered in thesession by user “domhnall.” on 2006-07-05
 K:Dmajor
 |:FG|"D"A2df "G"edcB|"D"ABAG F2EF|"A"GAGF EBBB|"D"ABAG FDFG|
  "D"A2df "G"edcB|"D"ABAG F2EF|"Em"GFEF "A"GABc|"D"dfec d2:|
@@ -4640,7 +4669,7 @@ L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2316#setting2316
-N:Setting entered in thesession by user jdicarlo on 2003-12-28
+N:Setting entered in thesession by user “jdicarlo” on 2003-12-28
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Fmajor
 |:d2cA dAcA GcAF GAFD|CF~F2 CFAc dcde fagf|
@@ -4670,7 +4699,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/800#setting800
-N:Setting entered in thesession by user b.maloney on 2002-06-23
+N:Setting entered in thesession by user “b.maloney” on 2002-06-23
 K:Dmajor
 |:dD~D2 FDFA|dfaf gfec|dD~D2 FDFA|GFEF GABc|
  dD~D2 FDFA|dfaf gfec|d2 ec dBAF|GFEF GABc:|
@@ -4688,7 +4717,7 @@ M:4/4
 O:Quebec
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2911#setting2911
-N:Setting entered in thesession by user jdave on 2004-04-28
+N:Setting entered in thesession by user “jdave” on 2004-04-28
 N:*abc-tools: convert reel to M:4/4 & L:1/16*
 K:Amajor
 |:aA~A2 cAeA Bcde f2fg|aA~A2 cAeA fdge ~a3g|
@@ -4708,7 +4737,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1949#setting1949
-N:Setting entered in thesession by user fidicen on 2003-09-05
+N:Setting entered in thesession by user “fidicen” on 2003-09-05
 K:Dmajor
 ABc||dD (3DDD EDB,E|DEFA BAFA|d2cd (3Bcd AF|DEFD EDB,D|
  FD (3DDD EDB,E|DEFA BAFA|dfec dBAG|FDEF D2Bc|
@@ -4726,7 +4755,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/129#setting129
-N:Setting entered in thesession by user Will Harmon on 2001-06-08
+N:Setting entered in thesession by user “Will Harmon” on 2001-06-08
 K:Eminor
 gf|:eBBA A~B3|dBAc BAGF|EDB,D G2 FG|EDB,E DB,A,G,|
  B,E (3EEE EDB,D|GE (3EEE EFGA|(3Bcd ed Bdgb|afdf efgf:|
@@ -4742,7 +4771,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/649#setting649
-N:Setting entered in thesession by user Caoimghgin on 2002-04-18
+N:Setting entered in thesession by user “Caoimghgin” on 2002-04-18
 K:Edorian
 gf|:eB~B2 eBdB|AF~F2 EDB,A,|B,E~E2 B,EGE|FB~B2 FBdf|
  eB~B2 eBdB|AF~F2 EDB,A,|B,E{G}ED EFGA|(3Bcd ed e2gf:|
@@ -4758,7 +4787,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/589#setting589
-N:Setting entered in thesession by user b.maloney on 2002-03-13
+N:Setting entered in thesession by user “b.maloney” on 2002-03-13
 K:Ddorian
 |:dcAG ~F2EF|~E2 DE FD D2|dcAG FGAA|Addc d2 fe:|
  |:f2fe fagf|ecgc acgc|f2fe fagf|edcG Add2:|`,
@@ -4773,7 +4802,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1941#setting1941
-N:Setting entered in thesession by user Conway on 2003-09-02
+N:Setting entered in thesession by user “Conway” on 2003-09-02
 N:
 N:Goes well in a set after Maud Millar
 K:Dmajor
@@ -4791,7 +4820,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-27,
 N:from https://thesession.org/tunes/1004#setting14222
-N:Setting entered in thesession by user birlibirdie on 2012-07-19
+N:Setting entered in thesession by user “birlibirdie” on 2012-07-19
 K:Edorian
 |:e2dB AFF2|EFdF eFdF|e2dB AF F2|EFBF AFEF|
  e2dB AFF2|EFdF eFdF|EFGB AFdF|FEdA FEE2:|
@@ -4799,12 +4828,12 @@ K:Edorian
  fgeg fedB|edBA BAFA|EFGB AFdF|FEdA FEE2:|`,
 			references: [
 				{
-					artist: "Denis Ryan, fiddle",
+					artists: "Denis Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=15"
 				}
 			],
 			theSessionId: 1004,
-			theSessionSettingId: "14222"
+			theSessionSettingId: 14222
 		},
 		{
 			abc: `X:1
@@ -4814,14 +4843,14 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/15252#setting5373
-N:Setting entered in thesession by user Avery on 2005-12-28
+N:Setting entered in thesession by user “Avery” on 2005-12-28
 K:Eminor
 e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
  e2 dB eBdB|A2 GA BAAB|GB B2 GBdB|A2 GA BG G2||
  g2 fg egde|g2 fg eaaf|g2 fg egdB|A2 AG BGBd|
  g2 fg egde|gbag eaaf|gbag egdB|A2 GA BG G2||`,
 			theSessionId: 15252,
-			theSessionSettingId: "5373"
+			theSessionSettingId: 5373
 		},
 		{
 			aka: ["The Connacht"],
@@ -4832,7 +4861,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/538#setting538
-N:Setting entered in thesession by user Will Harmon on 2002-02-09
+N:Setting entered in thesession by user “Will Harmon” on 2002-02-09
 K:Dmajor
 |:d2dA BAGB|AFBF A~F3|Ad(3ddd Adfd|(3efe df e~B3|
  d2dA BAGB|AFBF A~F3|ABde fdce|1 dBAG FDFA:|2 dBAG FDD2||
@@ -4855,7 +4884,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/880#setting880
-N:Setting entered in thesession by user Musicalbison on 2002-08-08
+N:Setting entered in thesession by user “Musicalbison” on 2002-08-08
 K:Adorian
 eg|a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 eg|
  a2 ab ageg|a2 ab agef|g2 gg fgag|f2 d2 d2 ed||
@@ -4872,7 +4901,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/97#setting97
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 K:Dmajor
 |:AB|d2fd Adfe|defg afdf|e2 ge Bege|cdef gece|
  d2fd Adfe|defg afdf|(3fga fd (3fga fd|Bgec d2:|
@@ -4888,7 +4917,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1027#setting1027
-N:Setting entered in thesession by user Mark Cordova on 2002-10-10
+N:Setting entered in thesession by user “Mark Cordova” on 2002-10-10
 K:Dmajor
 |:d2fd gefe|dfed cdec|d2fd gefd|g2fe dcBc|
  d2fd gefe|dfed cdeg|~f3d ~g3e|cdec dcdf:|
@@ -4904,7 +4933,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1428#setting1428
-N:Setting entered in thesession by user milesnagopaleen on 2003-02-11
+N:Setting entered in thesession by user “milesnagopaleen” on 2003-02-11
 K:Dmajor
 |:A|defe dBAF|BFAF E3A|defe dBAF|BFAF D3:|
  E|:F/E/DAD BDAD|G/F/EBE G/F/EBE|F/E/DAD FA A2|1 B/c/dAF D2DE:|2 B/c/dAF Defg||
@@ -4919,7 +4948,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/6183#setting6183
-N:Setting entered in thesession by user Ken Brown on 2006-09-11
+N:Setting entered in thesession by user “Ken Brown” on 2006-09-11
 K:Cmajor
 geg|:decd BcAB|GG G3 geg|decd BcAc|BB B3 geg|
  decd BcAc|BB B4 g2|ageg agec|GG G3 gec|
@@ -4939,7 +4968,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1934#setting1934
-N:Setting entered in thesession by user Dr. Dow on 2003-09-01
+N:Setting entered in thesession by user “Dr. Dow” on 2003-09-01
 K:Dmajor
 |:fdec d2AG|FGAB =cAGc|Ad~d2 fded|(3Bcd ef geag|
  fdec d2AG|FGAB =cAGc|Ad~d2 fdec|Addc d2e:|
@@ -4955,7 +4984,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/103#setting103
-N:Setting entered in thesession by user Jeremy on 2001-05-25
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 K:Dmajor
 |:fedf edcB|A2FA DAFA|B2GB EBGB|A2FA DAFA|
  fedf edcB|A2FA DAFA|BGed cABc|eddc d2 de:|
@@ -4971,7 +5000,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2610#setting2610
-N:Setting entered in thesession by user Dr. Dow on 2004-03-06
+N:Setting entered in thesession by user “Dr. Dow” on 2004-03-06
 K:Dmixolydian
 |:fage d2dB|AD (3FED EFGB|A3B cGcd|ed (3B^cd efge:|
  f2df afdf|f2df efge|f2df afdf|eA (3B^cd efge|
@@ -5006,7 +5035,7 @@ L:1/8
 M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7444#setting7444
-N:Setting entered in thesession by user Nigel Gatherer on 2007-07-04
+N:Setting entered in thesession by user “Nigel Gatherer” on 2007-07-04
 K:Amajor
 |:e3 ede f2e d2f|edB d2B A2B d3|e3 ede f2e d2f|
  [1 edB d2B A3 ABd:|2 edB d2B A3 A2||
@@ -5022,7 +5051,7 @@ L:1/8
 M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1527#setting1527
-N:Setting entered in thesession by user gian marco on 2003-03-17
+N:Setting entered in thesession by user “gian marco” on 2003-03-17
 K:Dmajor
 g3|:fed B2d A2d F2B|A2F DEF E3 E2g|
  fed B2d A2d F2B|A2F EFE D3 D2g:|
@@ -5040,7 +5069,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/11427#setting11427
-N:Setting entered in thesession by user zaivanbuijs on 2011-08-16
+N:Setting entered in thesession by user “zaivanbuijs” on 2011-08-16
 K:Gminor
 D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G GFD G2F|
  D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G B2A G2F|
@@ -5057,7 +5086,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3511#setting3511
-N:Setting entered in thesession by user lottiemaus on 2004-09-09
+N:Setting entered in thesession by user “lottiemaus” on 2004-09-09
 K:Amajor
 |:E2 c E2 c cBA|E2 c E2 c cBA|F2 A D2 F AGF|E2 C EAB cAF|
  E2 c E2 c cBA|F2 d F2 d dcB|G2 B E2 e fed|1 cec BAG AGF:|2 cec BAG Aag||
@@ -5074,7 +5103,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2410#setting2410
-N:Setting entered in thesession by user kiwi on 2004-01-19
+N:Setting entered in thesession by user “kiwi” on 2004-01-19
 K:Amajor
 |:F2c BA~F- F2E|F2c BAc fec|B3 BAB c2A|1 ~B3 BAB cBA:|2 ~B3 BAB cef||
  a3 fec fec|B3 BAB cef|a3 baf afe|fec Bce fec|
@@ -5088,7 +5117,7 @@ T:Elizabeth Kelly’s Delight
 R:slip jig
 L:1/8
 M:9/8
-N:Based on a setting entered in thesession by user Will Harmon on 2002-09-07
+N:Based on a setting entered in thesession by user “Will Harmon” on 2002-09-07
 N:Chords by Malcolm Schonfield
 N:A pentatonic tune
 K:Adorian
@@ -5136,7 +5165,8 @@ R: slip jig
 M: 18/16
 L: 1/16
 K: E minor
-E3 FEF G2F E3 BcA BGD|`,
+E3 FEF G2F E3 BcA BGD|E3 FEF G2A`,
+			parts: "AABBCCDDEEFF",
 			references: [
 				{
 					artists: "Michael Gorman",
@@ -5158,7 +5188,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2087#setting2087
-N:Setting entered in thesession by user Peter Piper on 2003-10-25
+N:Setting entered in thesession by user “Peter Piper” on 2003-10-25
 K:Gmajor
 |:G2B BAG ABc|d2g gfd BcA|G2B BAG ABc|1 ded ded ((3BcB) A:|2 ded dge fga||
  b2a bge dgb|a2a aga bge|e2e edB ABc|d2d dge fga|
@@ -5174,7 +5204,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2143#setting2143
-N:Setting entered in thesession by user heike on 2003-11-11
+N:Setting entered in thesession by user “heike” on 2003-11-11
 K:Dmajor
 D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF AFE|
  D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF EFG|
@@ -5190,7 +5220,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8976#setting8976
-N:Setting entered in thesession by user didier on 2008-10-04
+N:Setting entered in thesession by user “didier” on 2008-10-04
 K:Gmajor
 |:AAA dcA d2c|AGA dcA GFG|AAA dcA d2e|fag ege dBG:|
  GBB GBd ~g3|GBB GBG FED|GBB GBd gag|fgf efe dBA|
@@ -5209,12 +5239,12 @@ N:it is.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/17637#setting34009
-N:Setting entered in thesession by user Daniel Parker on 2019-01-09
+N:Setting entered in thesession by user “Daniel Parker” on 2019-01-09
 K:Amixolydian
 |:c2A AEA ABA|cBc Ace ded|c2A AEA ABA|BGB gfe ded:|
  |:cde efd e3|cae efd ged|cae efd efg|1 agf gfe dBG:|2 agf gfe ded||`,
 			theSessionId: 17637,
-			theSessionSettingId: "34009"
+			theSessionSettingId: 34009
 		},
 		{
 			abc: `X:1
@@ -5226,7 +5256,7 @@ N:1. It’s interesting to compare this with the Swaggering,
 N:which has a similar contour.
 N:2. Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/612#setting612
-N:Setting entered in thesession by user b.maloney on 2002-03-22
+N:Setting entered in thesession by user “b.maloney” on 2002-03-22
 K:Gmajor
 |:B2 G AGE GED|E/F/GE DEG A2 c|BAG AGE GED|E/F/GE DEF G2 A:|
  Bd/d/d edB BAG|Bd/d/d edB A3|Bd/d/d edB BAG|GED DEF G3:|`,
@@ -5245,7 +5275,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1550#setting1550
-N:Setting entered in thesession by user Dr. Dow on 2003-03-27
+N:Setting entered in thesession by user “Dr. Dow” on 2003-03-27
 N:(edited after importing)
 K:Gmajor
 |:BcB BAB c3|BAG B/c/dB ABc|BAG B/c/dB c2e|1 dBG GAF G2A:|2 dBG GAF GB/^c/d||
@@ -5263,7 +5293,7 @@ R:slip jig
 L:1/8
 M:9/8
 N:Imported from https://thesession.org/tunes/104#setting104
-N:Based on a setting entered in thesession by user Jeremy on 2001-05-25
+N:Based on a setting entered in thesession by user “Jeremy” on 2001-05-25
 N:(edited after importing)
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K:Dmajor
@@ -5289,7 +5319,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2337#setting2337
-N:Setting entered in thesession by user gian marco on 2004-01-02
+N:Setting entered in thesession by user “gian marco” on 2004-01-02
 K:Gmajor
 d|:cAG GAG GBd|cAG GAB cAd|cAG GAG GAG|1 cAA fed cAd:|2 cAA fed cAG||
  ddg gbf g2f|ddg gfg abc'|bag afa gfd|1 cAA fed cAG:|2 cAA fed cAd||`,
@@ -5308,13 +5338,13 @@ N:https://www.youtube.com/watch?v=Gj001lFt0k4 Does anyone know the name of it?
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/14242#setting25937
-N:Setting entered in thesession by user hnorbeck on 2015-03-07
+N:Setting entered in thesession by user “hnorbeck” on 2015-03-07
 K:Adorian
 |:edB ABA Agf|edB def gfg|edB ABA ABA|G2B dB/c/d dgf:|
  |:efg aba a2g|efg aba ged|1 efg aba a2g|ede age dBG:|
  [2 ede aga b2a|gfg age dBG||`,
 			theSessionId: 14242,
-			theSessionSettingId: "25937"
+			theSessionSettingId: 25937
 		},
 		{
 			abc: `X:1
@@ -5324,7 +5354,7 @@ L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1030#setting1030
-N:Setting entered in thesession by user EldKatt on 2002-10-11
+N:Setting entered in thesession by user “EldKatt” on 2002-10-11
 K:Edorian
 |:B2E E2F G2A|Bcd e2c d3|B2E E2F G2A|~B3 ABG FED:|
  |:g2e e2d efg|f2d d2c def|g2e e2d e2c|dcB AGF G2E:|`,
@@ -5332,6 +5362,7 @@ K:Edorian
 		},
 		{
 			groups: "ALORA,SU",
+			badges: "crooked",
 			abc: `
 %The Spanish Lady
 %abc-2.1
@@ -5433,7 +5464,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3012#setting3012
-N:Setting entered in thesession by user Erik-Fiddler on 2004-05-14
+N:Setting entered in thesession by user “Erik-Fiddler” on 2004-05-14
 K:Adorian
 [A,2E2] ~(3A,/B,/A,/A, E>A,B,>A,|G,>A,B,>G D<G,B,>G,|[A,2E2] ~(3A,/B,/A,/A, E>A,B,>A,|G,>A,B,>G, (3A,B,A, G,>B,:|
  [A,E]>ba>g e>de>f|g2 ~(3g/f/g/g d>gB>G|A>ba>g e>de>f|(3gfe d>B (3ABA ^G>B|
@@ -5449,7 +5480,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/11206#setting11206
-N:Setting entered in thesession by user b.maloney on 2011-04-30
+N:Setting entered in thesession by user “b.maloney” on 2011-04-30
 K:Amajor
 A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]|
  A,>CE>C D>FA>F|E>A .d/.c/.B/.A/ B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]||
@@ -5465,7 +5496,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2918#setting2918
-N:Setting entered in thesession by user Erik-Fiddler on 2004-04-28
+N:Setting entered in thesession by user “Erik-Fiddler” on 2004-04-28
 K:Amajor
 |:A,>EC>E (3D/D/D/D F>D|E>Ac>A B<B, B,2| ~A,2 A,>E (3D/D/D/D F>D |1 E>BG>B c<A A2:|2 E>BG>B c<A ||
  (3Ace||a>e (3fga e>Ac>A|d2 (3cdc B<B, B,2| a>ef>a e>Ac>A| E>BG>B c<A (3Ace|
@@ -5480,7 +5511,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7681#setting7681
-N:Setting entered in thesession by user drone on 2007-09-04
+N:Setting entered in thesession by user “drone” on 2007-09-04
 K:Amixolydian
 B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>ED/C/B,/A,/ G,>B,|~A,>A E>D C<A, ~A,>B,|
  ~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>E D/C/B,/A,/ G,>d|c>e B/c/d/B/ c<A ~A||
@@ -5495,7 +5526,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3007#setting3007
-N:Setting entered in thesession by user dafydd on 2003-08-28
+N:Setting entered in thesession by user “dafydd” on 2003-08-28
 K:Amajor
 |:AFEF AB c2|(3dcB cA BAFA|AFEF ABcd|efec (3BcB A2:|
  feae f2 af|eccA BAFA|feae f2 af|eccA (3BcB A2|
@@ -5511,7 +5542,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/170#setting170
-N:Setting entered in thesession by user JD on 2001-06-29
+N:Setting entered in thesession by user “JD” on 2001-06-29
 K:Amajor
 (3EFG|:A2c>A E>Ac>e|a2g>a f>ae>c|(3def (3efg (3aed (3cBA|(3Bcd (3cBA (3G FE (3dcB|
  A2c>A E>Ac>e|a2g>a f>ae>c|(3def (3efg (3aed (3cBA|1 (3GFE (3dcB A2 (3EFG:|
@@ -5528,7 +5559,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1762#setting1762
-N:Setting entered in thesession by user cj on 2003-06-19
+N:Setting entered in thesession by user “cj” on 2003-06-19
 K:Dmajor
 |:A|D2 F>A D>A F<A|A,2 C>E A,>E C<E|D2 F>A D>A F<A|(3Bcd (3efg (3fed (3cBA|
  D2 F>A D>A F<A|A,2 C>E A,>E C<E|D2 F>A D>A F<A|(3Bcd (3efg f<d d:|
@@ -5553,7 +5584,7 @@ N:obviously inspired by piping.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/16343#setting30955
-N:Setting entered in thesession by user Daniel Parker on 2017-09-03
+N:Setting entered in thesession by user “Daniel Parker” on 2017-09-03
 K:Amixolydian
 A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
  A2 e2 (3fed {f}e>d|(3cBA c>e a>e c>A|(3agf (3gfe (3fed (3ed=c|(3BAG B>d (3gfe (3dcB|
@@ -5562,7 +5593,7 @@ A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
  a2 c/B/c a2 {cB}c<a|A2 c>e a>e c>A|a2 f>a g2 d>=c|(3BAG B>d g<d B<G|
  a2 c/B/c a2 {cB}c<a|A2 c>e a>e c>A|(3agf (3gfe (3fed (3ed=c|(3BAG B>d (3gfe (3dcB|`,
 			theSessionId: 16343,
-			theSessionSettingId: "30955"
+			theSessionSettingId: 30955
 		},
 		{
 			abc: `X:1
@@ -5572,7 +5603,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/655#setting655
-N:Setting entered in thesession by user Will Harmon on 2002-04-21
+N:Setting entered in thesession by user “Will Harmon” on 2002-04-21
 K:Eminor
 A|BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGGA|
  BEBE cBcA|BEBE cAFA|BEBE cBcB|Addc BGBd||
@@ -5590,13 +5621,13 @@ N:As played By Angus Allan Gillis and Dan J. Campbell.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/14694#setting27107
-N:Setting entered in thesession by user Joe MacMaster on 2015-08-30
+N:Setting entered in thesession by user “Joe MacMaster” on 2015-08-30
 K:Dmajor
 O:Cape Breton
  F>G|:A>BA>F !uppermordent!E2F>uG|A>B!uppermordent!A>F A/A/A {A}!mordent!c2|d<BA>F !uppermordent!E>DE>F|1 D<B,!mordent!C>A,!uppermordent!D2(3DFG:|2 D<B,!mordent!C>A,!uppermordent!D2(3DDF||
  |:A>fa>f !mordent!g2f>e|d>fa>b !uppermordent!a>fe>f|d<B!uppermordent!A>F !uppermordent!E>D (3EEF|1 D<B, (3CCA,!uppermordent!D2 (3DDE:|2 D<B, (3CCA,!uppermordent!D2(3DFG||`,
 			theSessionId: 14694,
-			theSessionSettingId: "27107"
+			theSessionSettingId: 27107
 		},
 		{
 			abc: `X:1
@@ -5606,7 +5637,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/10313#setting10313
-N:Setting entered in thesession by user ceolachan on 2010-03-01
+N:Setting entered in thesession by user “ceolachan” on 2010-03-01
 K:Dmajor
 A2 B>c d2 A>F|G2 E<D E2 G2|A<AB>c d2 F>G|A2 G<E D2 D2-|HD8||
  K: DMix
@@ -5621,7 +5652,7 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/6366#setting6366
-N:Setting entered in thesession by user Erik-Fiddler on 2006-11-13
+N:Setting entered in thesession by user “Erik-Fiddler” on 2006-11-13
 K:Amixolydian
 |:B/c/d[A3e3] f e^d e2|efed BA B/c/d|e2 efed .g2|BGGA BA B/c/d:|
  |:eaa^g a2 ed|c<AAB cdef|g2 .f/g/a g2 d=c|BGGA BA B/c/d:|`,
@@ -5635,14 +5666,14 @@ L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/24127#setting49877
-N:Setting entered in thesession by user DòchasLeoA on 2024-03-10
+N:Setting entered in thesession by user “DòchasLeoA” on 2024-03-10
 K:Amixolydian
 a|f2 e>c e>fae|f2 ec fBBa|f2 e>c e>fae|faec eAAa|
  f2 ec efae|f2 ec fBBa|f2 ec efge|faec eAA||
  ||a|eAec A/A/A ef|e<Ae>c f>BB>a|e<Ae>c e<f=g<e|f>ae>c e>AA>a|
  e<Ae>c A/A/A e>f|e>fe>c f>BB>=a|f2 e>c e>f=g<e|f>ae>c e>AA|`,
 			theSessionId: 24127,
-			theSessionSettingId: "49877"
+			theSessionSettingId: 49877
 		},
 		{
 			origin: "England, Northumberland",
@@ -5653,7 +5684,7 @@ L:1/8
 M:3/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1194#setting1194
-N:Setting entered in thesession by user Dr. Dow on 2002-12-10
+N:Setting entered in thesession by user “Dr. Dow” on 2002-12-10
 K:Amajor
 |:{g}a4 e2fg agfe|(3cdcA2 .a2(A2 cdec)|a4 e2fg agfe|d2B2 {g}.f2(B2 d2f2):|
  |:ABcd (3efec2 (3efec2|ABcd (3efec2 e2{g}a2|ABcd (3efec2 (3efec2|Bcde {g}.f2(B2 d2f2):|
@@ -5681,7 +5712,7 @@ M:3/4
 N:Here's a two-part arrangement by The Rude Mechanicals.
 N:---
 N:Imported from https://thesession.org/tunes/1016#setting36756
-N:Setting entered in thesession by user Bazza on 2019-12-09
+N:Setting entered in thesession by user “Bazza” on 2019-12-09
 K:Gmajor
 M:3/4
  V:1
@@ -5705,7 +5736,7 @@ M:3/4
 				}
 			],
 			theSessionId: 1016,
-			theSessionSettingId: "36756"
+			theSessionSettingId: 36756
 		},
 		{
 			groups: "su",
@@ -5717,7 +5748,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/10668#setting10668
-N:Setting entered in thesession by user onscuba on 2010-08-27
+N:Setting entered in thesession by user “onscuba” on 2010-08-27
 K:Gmajor
 DE|:"G"G2G2DE|G2G2Bd|"C"e2d2G2|"G"B4DE|G2G2DE|"Am"A2A2GA|
  "Em"B2AG ED|"C"E4DE|"G"G2G2DE|G2G2Bd|"C"e2d2g2|"G"B4dB|
@@ -5735,7 +5766,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8296#setting8296
-N:Setting entered in thesession by user geoffwright on 2008-02-24
+N:Setting entered in thesession by user “geoffwright” on 2008-02-24
 K:Dmajor
 FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
  A3d AF|G4A2|(G6|G3)E FG|
@@ -5769,7 +5800,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/5067#setting5067
-N:Setting entered in thesession by user Daithi_C on 2005-10-12
+N:Setting entered in thesession by user “Daithi_C” on 2005-10-12
 K:Dmajor
 |:d3 e d2|d2 c2 B2|A3 B A2|A2 G2 F2|
  G2 GA BG|A2 AB cA|G2 GA BG|A2 B2 c2|
@@ -5790,7 +5821,7 @@ L:1/8
 M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/449#setting449
-N:Setting entered in thesession by user dirk on 2001-12-19
+N:Setting entered in thesession by user “dirk” on 2001-12-19
 K:Dmajor
 de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
  d4 f2|B4 e2|A4 d2|F4 E2|D4 e2|B4 e2|A4 dc|d6|d4 de:|
@@ -5871,7 +5902,7 @@ K: Gmaj
 				}
 			],
 			theSessionId: 8753,
-			theSessionSettingId: "44975"
+			theSessionSettingId: 44975
 		},
 		{
 			name: "The Boys Of Bluehill",
@@ -5909,7 +5940,7 @@ R: jig
 M: 12/8
 L: 1/8
 K: Dmaj
-DFA d2e dcA ~G3 | A`,
+DFA d2e dcA ~G3 | AGE ~=c3`,
 			references: [
 				{
 					artists: "Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars",
@@ -6002,7 +6033,7 @@ f/g/f/e/ d>B AD FA | GE e>d`,
 				}
 			],
 			theSessionId: 357,
-			theSessionSettingId: "46411"
+			theSessionSettingId: 46411
 		},
 		{
 			name: "John Ryan’s",
@@ -6020,7 +6051,7 @@ d2d2 BcdB A2F2 A2F2 | `,
 				}
 			],
 			theSessionId: 441,
-			theSessionSettingId: "28845"
+			theSessionSettingId: 28845
 		},
 		{
 			name: "The £42 Cheque",
@@ -6073,7 +6104,7 @@ DE|F2FG FEDE FAAB AFED|d2eg`,
 				}
 			],
 			theSessionId: 118,
-			theSessionSettingId: "55404"
+			theSessionSettingId: 55404
 		},
 		{
 			name: "Jerry McMahon’s",
@@ -6094,7 +6125,7 @@ EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
 				}
 			],
 			theSessionId: 4263,
-			theSessionSettingId: "45736"
+			theSessionSettingId: 45736
 		},
 		{
 			name: "Lucy Campbell",
@@ -6276,7 +6307,7 @@ A2AB AFED B2BA BcdB |`,
 				}
 			],
 			theSessionId: 116,
-			theSessionSettingId: "45357"
+			theSessionSettingId: 45357
 		},
 		{
 			name: "Denis Murphy’s",
@@ -6289,7 +6320,7 @@ A2D FED F2A A2f|gfe`,
 			origin: "Ireland",
 			rhythm: "slide",
 			theSessionId: 159,
-			theSessionSettingId: "35527"
+			theSessionSettingId: 35527
 		},
 		{
 			groups: "su",
@@ -6346,9 +6377,10 @@ N:1. It’s interesting to compare this with Na Ceannabháin Bhána,
 N:which has a similar contour.
 N:2. Imported into *tuneTable* on 2025-10-31,
 N:from https://thesession.org/tunes/661#setting661
-N:Setting entered in thesession by user Jeremy on 2002-04-27
+N:Setting entered in thesession by user “Jeremy” on 2002-04-27
+N:(edited after importing)
 K:Gmajor
-|:BGG AGE DEG|BAG DEG A3|BGG AGE DEG|cBA BGE D3:|
+|:B2G AGE DEG|BAG DEG A3|BGG AGE DEG|cBA BGE D3:|
  Bdd dge dBG|Bdd dBG A3|Bdd dge dBG|cBA BGE D3|
  Bdd dge dBG|Bdd dBG A3|gfe fdB cBA|cBA BGE D3||`
 			],
@@ -6379,7 +6411,7 @@ L:1/8
 M:2/4
 N:Imported into *tuneTable* on 2025-11-02,
 N:from https://thesession.org/tunes/11600#setting21930
-N:Setting entered in thesession by user ceolachan on 2013-07-18
+N:Setting entered in thesession by user “ceolachan” on 2013-07-18
 K:Gmajor
 |:D|GB BG|FA- AD|GA Bc|de/d/ cA|
  GB- BG|FA AB|c/B/A FA|G2 G:|
@@ -6392,7 +6424,7 @@ K:Gmajor
 				}
 			],
 			theSessionId: 11600,
-			theSessionSettingId: "21930"
+			theSessionSettingId: 21930
 		},
 		{
 			name: "Cutting Bracken",
@@ -6464,25 +6496,27 @@ Dónal Lunny: Bouzouki, Keyboards`
 			]
 		},
 		{
+			parts: "AABB",
 			abc: [
 				`X:1
 T:A Tune For Frankie
 C:Mairéad Ní Mhaonaigh
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-11-02,
 N:from https://thesession.org/tunes/1885#setting52765
-N:Setting entered in thesession by user Jalon on 2024-12-30
+N:Setting entered in thesession by user “Jalon” on 2024-12-30
 N:(edited after importing)
-N: A crooked tune
 K:Gdorian
-|: D2 G FDC | ~A,3 F3 | ~A,3 C3 | [M:9/8] A,CA, G,A,G, G,GF | [M:6/8] D2 G FDC |
- ~A,3 F3 | ~A,3 CA,C |1 [M:9/8] FCA, G,A,G, G,A,/B,/C :|2 FCA, G,A,G, G,GF ||
- [M:6/8] |:DGA Bdc | =BGE FED | ~F3 ~G3 | Add d3 |
- [1 DGA Bdc | =BGE FED | FCA, DCA, | G,A,G, G,GF :|
- [2 dcA B2 G | AFD DCD | C2 F A,CA, | G,A,G, G,3||`
+|: D2 G FDC ~A,3 F3 | [M:15/8] ~A,3 C3 A,CA, G,A,G, G,GF | 
+M:12/8
+   D2 G FDC ~A,3 F3 | [M:15/8] ~A,3 CA,C FCA, G,A,G, [1 G,A,/B,/C :|2  G,GF ||
+ [M:12/8] |:DGA Bdc =BGE FED | ~F3 ~G3  Add d3 |
+ [1 DGA Bdc  =BGE FED | FCA, DCA,  G,A,G, G,GF :|
+ [2 dcA B2 G  AFD DCD | C2 F A,CA, G,A,G, G,3||`
 			],
+			badges: "crooked",
 			groups: "su",
 			references: [
 				{
@@ -6494,7 +6528,7 @@ K:Gdorian
 				}
 			],
 			theSessionId: 1885,
-			theSessionSettingId: "52765"
+			theSessionSettingId: 52765
 		},
 		{
 			name: "The Silver Spire",
@@ -6736,7 +6770,7 @@ N:repeating part A.
 N:---
 N:Imported into *tuneTable* on 2025-11-16,
 N:from https://thesession.org/tunes/1338#setting42834
-N:Setting entered in thesession by user Bregolas on 2022-01-20
+N:Setting entered in thesession by user “Bregolas” on 2022-01-20
 N:(edited after importing)
 K:Eminor
 |: GE ED B,E E>G|FD DE FG AB/A/|
@@ -6764,7 +6798,7 @@ B|A2A AGE c2B c2d|ege edB ~g3 g2`,
 				}
 			],
 			theSessionId: 6,
-			theSessionSettingId: "31114"
+			theSessionSettingId: 31114
 		},
 		{
 			groups: "su",
@@ -6774,7 +6808,7 @@ S:from Jack Talty & Cormac Begley
 D:“Na Fir Bolg”, Raelagh Records RRCD002, 2011
 N:Imported into *tuneTable* on 2025-11-16,
 N:from https://thesession.org/tunes/8362#setting19483
-N:Setting entered in thesession by user Josie1957 on 2012-04-02
+N:Setting entered in thesession by user “Josie1957” on 2012-04-02
 N:(edited after importing)
 R:Slide
 Z:transcription Johannes Schiefner (jschiefner@gmx.net)
@@ -6937,7 +6971,7 @@ K: Gmaj
 G3 AGE A3 AGE|G3 AGE`,
 			references: [
 				{
-					artist: "Brendan McGlinchey, fiddle",
+					artists: "Brendan McGlinchey, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=6",
 					notes: "(1993) Helvic Head; Wallop the spot (variation)"
 				}
@@ -7156,6 +7190,7 @@ K: Gmaj
 		},
 		{
 			groups: "su",
+			parts: "AABBCC",
 			incipit: `X:1
 T:Tiny The Trooper
 C:Paddy O’Brien
@@ -7682,6 +7717,7 @@ M: 4/2
 L: 1/8
 K: Dmaj
 D>E DB AF FB|AF DE FEEF/E/|`,
+			parts: "AABBCC",
 			theSessionId: 3835,
 			references: [
 				{
@@ -7689,8 +7725,7 @@ D>E DB AF FB|AF DE FEEF/E/|`,
 					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
 					notes: `John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
 Album:  The Northern Concertina (2015)
-The guitar could be Tim Edey and not S Dunne, going from the meagre info available online; but I suspect it’s S Dunne as he seems to be the main backer for JO’R.
-3 parts`
+The guitar could be Tim Edey and not S Dunne, going from the meagre info available online; but I suspect it’s S Dunne as he seems to be the main backer for JO’R.`
 				}
 			]
 		},
@@ -7704,6 +7739,7 @@ M: 4/2
 L: 1/8
 K: Gmaj
 B>c de dB Bd|cA AB/d/ ed BA|`,
+			parts: "AABB",
 			theSessionId: 18688,
 			references: [
 				{
@@ -7732,14 +7768,14 @@ L: 1/8
 K: Amix
 ed cA ed c2|AA/c/ ef ge d2|`,
 			theSessionId: 7386,
+			parts: "AABBCC",
 			references: [
 				{
 					url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
 					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
 					notes: `John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
 Here this polka, Neilí's, is given the name Timmy McCarthy’s.
-Album:  The Northern Concertina (2015)
-3 parts`
+Album:  The Northern Concertina (2015)`
 				}
 			]
 		},
@@ -7815,6 +7851,11 @@ EFGA BAGB AFF2 dFAF|EFGA`,
 		},
 		{
 			groups: "su,alora",
+			incipit: `X:4
+L:1/8
+M:12/8
+K:Am
+EBc ~G3 FBc ~G3 | ~e3 dcB AGF EFD |`,
 			abc: `
 X:4
 T:SNCF jigs
@@ -7823,26 +7864,26 @@ C:Malcolm Schonfield
 L:1/8
 M:12/8
 K:Am
-%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol 
+%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax
 P:A
 "Am"EBc "F"~G3 \\ % or { EBc G2G } or { .E2B cG2 } or { EBc GAF }
 "Am"FBc "F"~G3 | \\ %  or { .F2B cG2 | }  or { .E2B cG2 |} or { EBc ~G3 | } or { EBc GAF | } or { .E2B cG2 |}
 "Am"~e3  \\ %  or {| efe} or {| d2e} or {| Ace } or {| .e2e }
 dcB \\%
-"Dm"AGF EFd, |  %  or { AGA BAG |}  or { ABG E3 |}
+"Dm"AGF EFD |  %  or { AGA BAG |}  or { ABG E3 |}
 "Am"EBc "F"~G3 "Am"FBc "F"~G3 | "Am"~e3 dcB 
 [1 AGF "^⇒c or B"~E3 |] \\ % or { AAA A z A |]}
 [2 A"^⇒D"z |] \\
 [3 Az"^⇒F or G"z |]
 P:B
-"Dm"FEd, "G"~B3 "Am"BcG ~A3 | "Dm"FEd, "G"BcG "Am"AEA cBA | % or { B2c B3 A3 }
-"Dm"FEd, \\
+"Dm"FED "G"~B3 "Am"BcG ~A3 | "Dm"FED "G"BcG "Am"AEA cBA | % or { B2c B3 A3 }
+"Dm"FED \\
 "G"~B3 \\ % or { B2B } or { B2B- }
-"Am"BcG ~A3 | "Dm"FEd, "G"BcG "Am"AAA A z "^⇒B or c""<("">)"A |]
+"Am"BcG ~A3 | "Dm"FED "G"BcG "Am"AAA A z "^⇒B or c""<("">)"A |]
 P:C
-|: c BAG | "F"FEF AB(G "Am"E)d,E AB(G | \\ % or {F2(c B)AG E2c BA(G} or {FEF AB(F E)d,E AB(G}
+|: c BAG | "F"FEF AB(G "Am"E)DE AB(G | \\ % or {F2(c B)AG E2c BA(G} or {FEF AB(F E)DE AB(G}
 "Dm"F)A(e d)B(d c)A(c B)A(G | % or { F)A(e d)c(B c)B(A B)A(G |}
-"F"F)EF AB(G "Am"E)d,E AB(G | \\ %
+"F"F)EF AB(G "Am"E)DE AB(G | \\ %
 "Dm"F)A(e "G"d)B(G \\ % or {| F)A(e d)c(B }
 [1 "Am".A)"^⇒D"z :| \\ % 
 [2 "Am"A)AA A z "^⇒B or c""<("">)"A |]  \\
@@ -7927,9 +7968,159 @@ D2A,D FEFG AdcA d2de|fedf edcA`,
 					artists: "Andy McGann, fiddle; Felix Dolan, piano"
 				}
 			]
+		},
+		{
+			aka: ["Paddy Fahey’s No. 10"],
+			incipit: `X: 2
+T: Paddy Fahey's
+C: Paddy Fahey
+R: jig
+M: 12/8
+L: 1/8
+K: Gmaj
+DGA B2d cBG AFD|dBd cAc BGB AFD|`,
+			theSessionId: 2561,
+			theSessionSettingId: 46659,
+			parts: "AABB"
+		},
+		{
+			incipit: `X: 5
+T: The Gooseberry Bush
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+ADFD EFGE  AGAB =c2 AG|AB=cA d^cAG FGAF GBAF|`,
+			parts: "AABBCC",
+			theSessionId: 2732
+		},
+		{
+			incipit: `X: 5
+T: Up And About In The Morning
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+A3 DED ABG AdB|=cAG EFG ~FFD EFG| `,
+			theSessionId: 3145,
+			theSessionSettingId: 54859,
+			parts: "AABBCC"
+		},
+		{
+			aka: ["Fahey’s Favourite, Paddy Fahey’s Jig #1"],
+			incipit: `X: 3
+T: Paddy Fahey's
+C: Paddy Fahey
+R: jig
+M: 12/8
+L: 1/8
+K: Gmaj
+DGA ~B3 cBc d2g|gfd Bcd
+%todo:check title`,
+			parts: "AABB",
+			theSessionId: 532
+		},
+		{
+			groups: "alora",
+			incipit: `
+X: 6
+T: Allistrum's March
+R: jig
+F:https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-january-2026/?track=11
+S:Liam O'Flynn, uilleann pipes; Arty McGlynn, guitar; Rod McVey, keyboards
+N:Allistrum's march / Paddy whack
+M: 12/8
+L: 1/8
+K: Dmix
+B2G AGF G2g fdc|B2G AGF Ggf d2c|`,
+			theSessionId: 6188,
+			parts: "AABB"
+		},
+		{
+			incipit: `X: 7
+T: The Humours Of Drinagh
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+FDF ABc dfd ecA|FDF ABc`,
+			parts: "AABB",
+			theSessionId: 413
+		},
+		{
+			incipit: `X: 1
+T: The Bank Of Turf
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+ABA DFA BAF DFA|dcd ede ~f3 def|`,
+			theSessionId: 1819,
+			parts: "AABB"
+		},
+		{
+			abc: `X: 1
+T:La Vicoise
+O:France; Massif central.
+R: Bourrée à 3 temps
+M:3/8
+L:1/16
+K:C
+GAB|c2e2de|c2e2de|f4e2|degGAB|c2e2de|c2e2de|f2e2d2|1 c3:|2 c6||
+|:ABcdcA|d2c2B2|ABc2d2|ABcdcA|d2edcB|1 cdefg2:|2 c3 !D.C.!|]
+`,
+			parts: "AABB",
+			badges: "pas carrée"
+		},
+		{
+			abc: `X:1
+T:Le curé de la chapelle
+M:3/8
+L:1/8
+R:Bourrée à 3 temps
+O:France; Massif central
+Z:Malcolm Schonfield%2013-03-21
+K:G dor
+P:A
+D|:G^F/G/A|BA/B/c|d/c/d/e/d/c/|ABA|D/G/^F/G/A/|BA/B/c|d/c/d/e/d/c/|d3-|d2(D|
+D/)G/^F/G/A|BA/B/c|d/c/d/e/d/c/|ABA|D/G/^F/G/A/|BA/B/c|d/c/d/e/d/c/|d3-|dAB||
+P:B
+|:c/A/BA/G/|^FDA-|A/G/^F/G/A|BA/B/c-|c/A/BA/G/|^FDG|^F/G/A/B/A/F/|GAB:|
+`,
+			parts: "AABB",
+			badges: "pas carrée"
+		},
+		{
+			badges: "pas carrée",
+			parts: "AABB",
+			abc: `X: 1
+R:Bourrée à 3 temps
+O:France; Massif central
+M:3/8
+L:1/8
+K:C
+G, |: C2D | C/D/.E(F | .E)D2 | C2D | C/D/.E.F | D2G, :|
+G, |: A,2G, | A,2G, | A,/B,/CD | CB,G, | A,2G, | A,2G, | A,/B,/CD | CE.G,:|`
+		},
+		{
+			badges: "pas carrée",
+			parts: "AABB",
+			abc: `X:2
+T:La Giate de Coualhon
+R:Bourrée à 3 temps
+O:France; Massif central(?)
+Z:Malcolm Schonfield, 2023-04-02
+Q:3/8=90
+M:3/8
+L:1/8
+K:Gmix
+[P:A]|: .G2B | .AD2 | G.B.c | d2(e | f/2)e/2d/2c/2B/2A/2 | 
+.BGB | .AD2 | G.B.c | d2(e | f/2)e/2d/2c/2B/2A/2 :| G2.G ||
+[P:B]|: A/2B/2cB/2A/2 | B/2c/2dc/2B/2 | A/2B/2cB/2A/2 | .BGB |
+A/2B/2cB/2A/2 | B/2c/2dc/2B/2 |  [1 A/2B/2cB/2A/2 | G2B :|  [2 A/2B/2cB/2A/2 A,.G,|]`
 		}
 		/*
-	{incipit:``,theSessionId:},
+		,{incipit:``,theSessionId:}
 	,{incipit:``,theSessionId:,
 		references: [
 			{

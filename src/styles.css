@@ -377,6 +377,9 @@ th.sort-desc::after {
   display: flex;
   align-items: center;
 }
+.tune-contour svg {
+  width: 100%;
+}
 
 /* ============================================
    UTILITY CLASSES
