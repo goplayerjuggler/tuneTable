@@ -134,17 +134,17 @@ function processTuneData(tune) {
 	];
 	delete processed.processedFromAbc;
 	if (!processed.scores) processed.scores = [];
-	if (tune.theSessionId) {
-		const setting = tune.theSessionSettingId
-			? `#setting${tune.theSessionSettingId}`
-			: "";
-		processed.scores.push({
-			url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
-			name: "thesession"
-		});
-		delete tune.theSessionId;
-		delete tune.theSessionSettingId;
-	}
+	// if (tune.theSessionId) {
+	// 	const setting = tune.theSessionSettingId
+	// 		? `#setting${tune.theSessionSettingId}`
+	// 		: "";
+	// 	processed.scores.push({
+	// 		url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
+	// 		name: "thesession"
+	// 	});
+	// 	delete tune.theSessionId;
+	// 	delete tune.theSessionSettingId;
+	// }
 
 	return processed;
 }

@@ -4230,20 +4230,28 @@ a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
 			theSessionId: 504
 		},
 		{
-			abc: `X:1
-T:The Old Pigeon On The Gate
+			incipit: `X:140
+T:Pigeon on the Gate, The
 R:reel
-L:1/8
 M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/1596#setting1596
-N:Setting entered in thesession by user “Kenny” on 2003-04-16
-K:Gmajor
-|:dG G2 dGeG|d2 de dcAB|cF F2 cF F2|(3Bcd ed cABc|
- dg g2 dgeg|d2 de dcAG|FGAd fdeg|fdcA G4:|
- |:dggf gagf|dg g2 bgaf|dffe fgfe|df f2 afgf|
- dggf gagf|dg g2 bgaf|dcde fdeg|fdcA G4:|`,
-			theSessionId: 1596
+L:1/16
+K:Edor
+dc | BE~E2 BEdE BE~E2 BAFE |`,
+			theSessionId: 1596,
+			parts: "AABB",
+			norbeckId: 140
+		},
+		{
+			incipit: `T:Pigeon on the Gate, The
+N:Neillidh Boyle's version
+R:reel
+M:4/4
+L:1/16
+K:Gmix
+dG~G2 GedG G2ce dcAG | FEFd cF~F2 `,
+			theSessionId: 1596,
+			parts: "AABB",
+			norbeckId: 935
 		},
 		{
 			abc: `X:1
@@ -4280,23 +4288,7 @@ K:Edorian
  bg (3(efg) fedA|(3(Bcd) fe dBAF|EFGB {c}d2 (B/c/d)|DFAF GEE z:|`,
 			theSessionId: 3435
 		},
-		{
-			abc: `X:1
-T:Palmer's Gate
-C:Joe Liddy
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/1020#setting1020
-N:Setting entered in thesession by user “Brando ” on 2002-10-08
-K:Eminor
-|:GA|BE (3EEE Gz BG|AcBA GEDE|~G3A BAGA|BedB A2 GA|
- BE (3EEE Gz BG|AcBA GEDE|G2 (3Bcd edBA|GEFD E2:|
- |:GA|Beed ~e3f|g2fg edBA|G2BG dGBA|GABe dBA2|
- Beed ~e3f|g2fg edBA|G2 (3Bcd edBA|GEFD E2:|`,
-			theSessionId: 1020
-		},
+
 		{
 			abc: `X:1
 T:The Ceilier
@@ -5177,7 +5169,8 @@ E3 FEF G2F E3 BcA BGD|E3 FEF G2A`,
 					url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm"
 				}
 			],
-			theSessionId: 52
+			theSessionId: 52,
+			norbeckId: 31
 		},
 		{
 			abc: `X:1
@@ -6073,9 +6066,11 @@ Ad Bd/B/ AD FA|GE BE`,
 		{
 			name: "Palmer’s Gate",
 			rhythm: "reel",
+			parts: "AABB",
 			groups: "SU",
 			incipit: `X: 1
 M: 4/4
+C:Joe Liddy
 L: 1/16
 K: Emin
 GA|BE~E2 GABG AdBA GEED|~G3A `,

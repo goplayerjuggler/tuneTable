@@ -172,6 +172,32 @@ function collapseNotes(tuneIndex, refIndex) {
 	}
 }
 
+/**
+ * Extract all metadata values from a tune for display and filtering.
+ * Returns an array of metadata strings including rhythm, parts, key, composer, origin, and badges.
+ * @param {Object} tune - The tune object
+ * @returns {Array<string>} Array of metadata strings
+ */
+function getTuneMetadata(tune) {
+	const badges = tune.badges
+		? Array.isArray(tune.badges)
+			? tune.badges
+			: [tune.badges]
+		: [];
+	const origin = tune.origin
+		? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
+		: [];
+
+	return [
+		tune.rhythm,
+		tune.parts,
+		tune.key,
+		tune.composer,
+		...origin,
+		...badges
+	].filter((m) => m);
+}
+
 function sortWithDefaultSort() {
 	contourSort(window.tunesData);
 	window.tunesData.forEach((t) => delete t.baseRhythm); //todo: could handle baseRhythm in processTuneData instead
@@ -404,24 +430,7 @@ function renderTable() {
                     `;
 		});
 
-		const badges = tune.badges
-			? Array.isArray(tune.badges)
-				? tune.badges
-				: [tune.badges]
-			: [];
-		const origin = tune.origin
-			? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
-			: [];
-
-		const metadata = [
-			tune.rhythm,
-			tune.parts,
-			tune.key,
-			tune.composer,
-			...origin,
-			...badges
-		]
-			.filter((m) => m)
+		const metadata = getTuneMetadata(tune)
 			.map((m) => `<span class="badge">${m}</span>`)
 			.join(" ");
 
@@ -447,6 +456,24 @@ function renderTable() {
       </div>`
 			}`;
 
+		const scores = [...tune.scores];
+		if (tune.theSessionId && !hasTheSessionLink) {
+			const setting = tune.theSessionSettingId
+				? `#setting${tune.theSessionSettingId}`
+				: "";
+
+			scores.push({
+				url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
+				name: "thesession"
+			});
+		}
+		if (tune.norbeckId) {
+			scores.push({
+				url: `https://www.norbeck.nu/abc/display.asp?rhythm=${tune.rhythm.replace(" ", "")}&ref=${tune.norbeckId}`,
+				name: "norbeck"
+			});
+		}
+
 		row.innerHTML = `
     <td>
         <div class="tune-header">
@@ -471,9 +498,8 @@ function renderTable() {
     </div>
     </td>
 	<td class="references">${referencesHtml}${
-		tune.scores && tune.scores.length > 0
-			? `${tune.scores
-					.filter((s) => !hasTheSessionLink || s.name !== "thesession")
+		scores && scores.length > 0
+			? `${scores
 					.map((s) => `<a href="${s.url}" target="_blank">${s.name}</a>`)
 					.join(", ")}`
 			: ""
@@ -512,21 +538,62 @@ function applyFilters() {
 	const keyFilter = document.getElementById("keyFilter").value;
 
 	window.filteredData = window.tunesData.filter((tune) => {
-		const matchesSearch =
-			searchTerm === "" ||
-			tune.name.toLowerCase().includes(searchTerm) ||
-			tune.rhythm.toLowerCase().includes(searchTerm) ||
-			tune.key.toLowerCase().includes(searchTerm) ||
-			tune.references.some(
+		if (searchTerm === "") {
+			// No search term, skip all search checks
+			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
+			const matchesKey = keyFilter === "" || tune.key === keyFilter;
+			return matchesRhythm && matchesKey;
+		}
+
+		// Search in tune name
+		if (tune.name?.toLowerCase().includes(searchTerm)) {
+			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
+			const matchesKey = keyFilter === "" || tune.key === keyFilter;
+			return matchesRhythm && matchesKey;
+		}
+
+		// Search in aka (alternate names)
+		if (tune.aka?.some((aka) => aka.toLowerCase().includes(searchTerm))) {
+			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
+			const matchesKey = keyFilter === "" || tune.key === keyFilter;
+			return matchesRhythm && matchesKey;
+		}
+
+		// Search in metadata (rhythm, parts, key, composer, origin, badges)
+		const metadata = getTuneMetadata(tune);
+		if (metadata.some((m) => m.toLowerCase().includes(searchTerm))) {
+			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
+			const matchesKey = keyFilter === "" || tune.key === keyFilter;
+			return matchesRhythm && matchesKey;
+		}
+
+		// Search in references (artists and notes)
+		if (
+			tune.references?.some(
 				(ref) =>
 					ref.artists?.toLowerCase().includes(searchTerm) ||
 					ref.notes?.toLowerCase().includes(searchTerm)
-			);
+			)
+		) {
+			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
+			const matchesKey = keyFilter === "" || tune.key === keyFilter;
+			return matchesRhythm && matchesKey;
+		}
 
-		const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
-		const matchesKey = keyFilter === "" || tune.key === keyFilter;
+		// Search in ABC content
+		if (tune.abc) {
+			const abcContent = Array.isArray(tune.abc)
+				? tune.abc.join(" ")
+				: tune.abc;
+			if (abcContent.toLowerCase().includes(searchTerm)) {
+				const matchesRhythm =
+					rhythmFilter === "" || tune.rhythm === rhythmFilter;
+				const matchesKey = keyFilter === "" || tune.key === keyFilter;
+				return matchesRhythm && matchesKey;
+			}
+		}
 
-		return matchesSearch && matchesRhythm && matchesKey;
+		return false;
 	});
 
 	renderTable();
@@ -576,9 +643,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	// debugger;
 	initialiseData();
 
-	document
-		.getElementById("searchInput")
-		.addEventListener("input", applyFilters);
+	// document
+	// 	.getElementById("searchInput")
+	// 	.addEventListener("input", applyFilters);
+	document.getElementById("searchForm").addEventListener("submit", (e) => {
+		e.preventDefault();
+		applyFilters();
+	});
 	document
 		.getElementById("rhythmFilter")
 		.addEventListener("change", applyFilters);

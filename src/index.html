@@ -14,8 +14,18 @@
     <h1>🎵 Tunes</h1>
 
     <div class="controls">
-      <input type="text" id="searchInput" class="search-box" placeholder="Search tunes, artists, or rhythms…"
-        autofocus />
+      <form class="search-container" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button type="submit" class="search-icon" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </form>
+      <!-- <input type="text" id="searchInput" class="search-box" placeholder="Search tunes, artists, or rhythms…"
+autofocus /> -->
       <select id="rhythmFilter" class="filter-select">
         <option value="">All rhythms</option>
       </select>
