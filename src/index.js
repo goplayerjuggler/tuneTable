@@ -609,11 +609,27 @@ function filterByName(searchTerm) {
 
 function sortData(column) {
 	if (currentSort.column === column) {
-		currentSort.direction = currentSort.direction === "asc" ? "desc" : "asc";
+		currentSort.direction =
+			currentSort.direction === "asc"
+				? "desc"
+				: currentSort.direction === "desc"
+					? "default"
+					: "asc";
 	} else {
 		currentSort.column = column;
 		currentSort.direction = "asc";
 	}
+
+	if (currentSort.direction === "default") {
+		contourSort(window.filteredData);
+
+		document.querySelectorAll("th").forEach((th) => {
+			th.classList.remove("sort-asc", "sort-desc");
+		});
+		applyFilters();
+		return;
+	}
+
 	const collator = new Intl.Collator("en", { sensitivity: "base" }),
 		compare = (a, b) => {
 			if (typeof a === "string" && typeof b === "string") {

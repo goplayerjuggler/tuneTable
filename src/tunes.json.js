@@ -5,7 +5,7 @@ export default {
 			abc: `
 %230717
 X: 1
-T: The Silver Slipper
+T: Silver Slipper, The
 R: ? + hop jig
 S: John Doherty, fiddle
 N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
@@ -905,7 +905,7 @@ A,|:"Bm"B,DF "D"E2 D "D"DFA d2 c|"G"BGB "D"AFD "A"EGF EDA,|
 		},
 		{
 			abc: `X: 2
-T: The Chicago
+T: Chicago, The
 R: jig
 M: 6/8
 L: 1/8
@@ -1077,7 +1077,7 @@ K:Edorian
 		},
 		{
 			incipit: `X: 5
-T: The Orphan
+T: Orphan, The
 R: jig
 M: 12/8
 L: 1/8
@@ -1477,7 +1477,7 @@ K:Gmajor
 		{
 			aka: ["The Frieze Breeches", "Cúnla"],
 			incipit: `X: 11
-T: The Frieze Britches
+T: Frieze Britches, The
 R: jig
 M: 12/8
 L: 1/8
@@ -1513,7 +1513,7 @@ K:Amixolydian
 		{
 			abc: [
 				`X:1
-T: The Sunny Side of the Latch
+T: Sunny Side of the Latch, The
 R:jig
 Z: Malcolm Schonfield % 231212,3,4
 C: Jason O’Rourke
@@ -1609,7 +1609,7 @@ d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:|
 `,
 				`
 X: 2
-T: The Rambling Pitchfork
+T: Rambling Pitchfork, The
 T: Tommy Potts’ Rambling Pitchfork
 %C: Tommy Potts
 T: As played by Paddy O’Brien and Nathan Gourley
@@ -2610,7 +2610,7 @@ K:Eminor
 		{
 			groups: "alora",
 			abc: `X: 1
-T: The Ballydesmond
+T: Ballydesmond, The
 R: polka
 M: 4/4
 L: 1/8
@@ -3077,7 +3077,7 @@ Gardiner, John Joe, 1893-1979`
 		{
 			groups: "su",
 			abc: `X: 7
-T: The Guns Of The Magnificent Seven
+T: Guns Of The Magnificent Seven, The
 R: reel
 M: 4/4
 L: 1/16
@@ -4154,7 +4154,7 @@ K:Dminor
 			badges: "crooked",
 			abc: [
 				`X: 1
-T: The Cameronian
+T: Cameronian, The
 R: reel
 S:Rónán Galvin, fiddle
 D: The Fiddle Music of Donegal Volume 2
@@ -4183,7 +4183,7 @@ defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 [M:5/2]defg fada egcf gbag fdcB!D.S.!|]
 `,
 				`X: 1
-T: The Cameronian
+T: Cameronian, The
 R: reel
 S: Consuelo Nerea Breschi, fiddle; Eoghan O’Shaughnessy, fiddle
 D: The Morning Tree
@@ -4243,7 +4243,10 @@ dc | BE~E2 BEdE BE~E2 BAFE |`,
 		},
 		{
 			incipit: `T:Pigeon on the Gate, The
-N:Neillidh Boyle's version
+F:https://donegalfiddlemusic.bandcamp.com/album/a-feeling-in-the-blood
+D:A Feeling In The Blood
+N:Néillidh Boyle's version
+N:There are two different N. B. recordings here
 R:reel
 M:4/4
 L:1/16
@@ -4590,7 +4593,7 @@ K:Dmajor
 			aka: ["Cherry Tree", "Beauty Spot"],
 			groups: "su",
 			incipit: `X: 1
-T: The Beauty Spot
+T: Beauty Spot, The
 R: reel
 M: 4/4
 L: 1/16
@@ -5129,7 +5132,7 @@ K:Adorian
 			rhythm: "slip jig",
 			abc: `
 X: 1
-T: The Kid On The Mountain
+T: Kid On The Mountain, The
 N: 1. I attempt here to write the notes more or less as played by Michael Coleman on the It Was Mighty! album.
 N: 2. With added chords - version of 2024-07-18
 N: 3. Using 16/18 rather than the standard 9/8 on purpose (personal preference).
@@ -6614,7 +6617,7 @@ Mrs Kathleen Harrington née Gardiner (1897-1984)`
 		{
 			groups: "alora",
 			abc: `X: 1
-T: The Star Of Munster
+T: Star Of Munster, The
 T: (as played by Patsy Hanly – more or less!)
 S:Patsy Hanly, flute
 R: reel
@@ -6657,7 +6660,7 @@ eaab ageg a2ba agef|~g3b a2ab- bc'ba [1 gedg :| [2 gedB !D.S.!||`,
 		{
 			groups: "alora",
 			incipit: `X: 1
-T: The Gravel Walks
+T: Gravel Walks, The
 R: reel
 M: 4/4
 L: 1/16
@@ -6676,7 +6679,7 @@ A2eA (3cBA eA A2eA BAGB|A2eA (3Bcd ef`,
 			groups: "su",
 			theSessionId: 553,
 			incipit: `X: 1
-T: The Drunken Sailor's
+T: Drunken Sailor's, The
 R: hornpipe
 M: 4/4
 L: 1/16
@@ -6843,7 +6846,7 @@ A3d B2dB AD (3FED AD (3FED|`,
 		{
 			groups: "su",
 			incipit: `X: 1
-T: The Star Above The Garter
+T: Star Above The Garter, The
 R: slide
 M: 12/8
 L: 1/8
@@ -6859,7 +6862,7 @@ d2B BAG ~A3 ABA|G2E c2`,
 		{
 			groups: "su",
 			incipit: `X: 1
-T: The Rookery
+T: Rookery, The
 C:Vincent Broderick
 R: reel
 M: 4/4
@@ -6876,7 +6879,7 @@ BGAG EGDG EGDG EGDE|G2`,
 		{
 			groups: "su",
 			incipit: `X: 1
-T: The Morning Dew
+T: Morning Dew, The
 R: reel
 M: 4/4
 L: 1/16
@@ -6913,7 +6916,7 @@ K: Edor
 		{
 			groups: "su",
 			incipit: `X: 1
-T: The Edenderry
+T: Edenderry, The
 R: reel
 M: 4/4
 L: 1/16
@@ -6929,7 +6932,7 @@ B2AG BGGA B2AG (3Bcd gd|B2AG`,
 		{
 			groups: "alora",
 			incipit: `X: 1
-T: The Otter's Holt
+T: Otter's Holt, The
 R: reel
 M: 4/4
 L: 1/16
@@ -6940,7 +6943,7 @@ e|fBBA FEFB (3ABA FB ABde|fBBA`,
 		{
 			groups: "alora",
 			incipit: `X: 1
-T: The Rose In The Heather
+T: Rose In The Heather, The
 R: jig
 M: 12/8
 L: 1/8
@@ -7011,7 +7014,7 @@ K: Amaj
 		},
 		{
 			incipit: `X: 1
-T: The Scartaglen
+T: Scartaglen, The
 R: reel
 M: 4/2
 L: 1/8
@@ -7031,7 +7034,7 @@ f2ed cAAB cAdB cAA2|f2ed`,
 		},
 		{
 			incipit: `X: 1
-T: The Bunch Of Green Rushes
+T: Bunch Of Green Rushes, The
 R: reel
 S: Frankie Gavin, fiddle; Alec Finn, bouzouki
 D: Frankie Gavin And Alec Finn (1977)
@@ -7078,7 +7081,7 @@ BddB G2Bd d2Bd edBA|BddB`,
 		},
 		{
 			incipit: `X: 1
-T: The Broken Pledge
+T: Broken Pledge, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7118,7 +7121,7 @@ D2 (3FED ADFA Ad~d2 Adfd|`,
 		},
 		{
 			incipit: `X: 1
-T: The Skylark
+T: Skylark, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7175,7 +7178,7 @@ DGG^F G2GA =BGdG eGdG|AF{G}FE`,
 		},
 		{
 			incipit: `X: 1
-T: The Hare's Paw
+T: Hare's Paw, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7200,7 +7203,7 @@ E2G FDB, E3| efe dBd efe| cAA`
 		},
 		{
 			incipit: `X: 1
-T: The Foxhunter
+T: Foxhunter, The
 R: slip jig
 M: 9/8
 L: 1/8
@@ -7221,7 +7224,7 @@ A,DD A,DD FEF|A,DD DFA GED|A,`,
 		{
 			groups: "su",
 			incipit: `X: 1
-T: The Virginia
+T: Virginia, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7252,7 +7255,7 @@ DEF ~G3 AGE c2A|dcA d2e`,
 		},
 		{
 			incipit: `X: 1
-T: The Tenpenny Bit
+T: Tenpenny Bit, The
 R: jig
 M: 12/8
 L: 1/8
@@ -7320,7 +7323,7 @@ ADFD A,DFB ADFD FAdc|BE`,
 		},
 		{
 			incipit: `X: 1
-T: The Harp And The Shamrock
+T: Harp And The Shamrock, The
 R: hornpipe
 M: 4/2
 L: 1/8
@@ -7331,7 +7334,7 @@ gf|edBc dBGB AGEF GA (3Bcd|e2`,
 		{
 			aka: ["Lancers"],
 			incipit: `X: 1
-T: The Beauties Of Ireland
+T: Beauties Of Ireland, The
 R: jig
 M: 12/8
 L: 1/8
@@ -7351,7 +7354,7 @@ fed cAG A2d cAG|F2D`,
 		},
 		{
 			incipit: `X: 1
-T: The Milky Way
+T: Milky Way, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7391,7 +7394,7 @@ EBBA B2EB B2AB dBAG|FDAD`,
 		},
 		{
 			incipit: `X: 1
-T: The Cock And The Hen
+T: Cock And The Hen, The
 R: slip jig
 M: 9/8
 L: 1/8
@@ -7506,7 +7509,7 @@ BAF ~E3 FED ~E3|BAF EAG FED`,
 		{
 			incipit: `
 X: 1
-T: The New Policeman
+T: New Policeman, The
 S: Oisin McAuley
 D: Up In The Air
 F: https://youtu.be/CxAYuvcfslQ?si=Y0y7AnAa8NbZk_9i&t=99
@@ -7564,7 +7567,7 @@ George White's Favourite / The Lass Of Carracastle`
 		},
 		{
 			incipit: `X: 2
-T: The Banks Of The Ilen
+T: Banks Of The Ilen, The
 R: reel
 M: 4/4
 L: 1/8
@@ -7597,7 +7600,7 @@ K: Dmaj
 		},
 		{
 			incipit: `X: 6
-T: The Mason's Apron
+T: Mason's Apron, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7608,7 +7611,7 @@ eg|aA (3AAA cBAF EFAB cABc|dB
 		},
 		{
 			incipit: `X: 1
-T: The Monaghan
+T: Monaghan, The
 R: jig
 M: 12/8
 L: 1/8
@@ -7626,7 +7629,7 @@ BGE F2E BGE FGA|BGE F2E AFD FGA|`,
 		},
 		{
 			incipit: `X: 1
-T: The Hunter's House
+T: Hunter's House, The
 C: Ed Reavy
 R: reel
 M: 4/4
@@ -7643,7 +7646,7 @@ B2dB cAFA G2BG DGBG |`,
 		{
 			groups: "su",
 			incipit: `X: 9
-T: The Dunmore Lasses
+T: Dunmore Lasses, The
 R: reel
 M: 4/4
 L: 1/8
@@ -7663,7 +7666,7 @@ K: Emin
 		{
 			groups: "su",
 			incipit: `X: 1
-T: The New Copperplate
+T: New Copperplate, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7680,7 +7683,7 @@ G2dG BGdG ~G2dc BGGB|A2`,
 		},
 		{
 			incipit: `X: 1
-T: The Mountain Road
+T: Mountain Road, The
 C: Michael Gorman
 R: reel
 M: 4/4
@@ -7727,7 +7730,7 @@ The guitar could be Tim Edey and not S Dunne, going from the meagre info availab
 		{
 			groups: "alora",
 			incipit: `X: 1
-T: The Frozen Mouse
+T: Frozen Mouse, The
 C:Jason O’Rourke
 R: polka
 M: 4/2
@@ -7796,7 +7799,7 @@ Is the  guitarist S Dunne? See my remark under John Brosnan's polka.`
 		{
 			groups: "alora",
 			incipit: `X: 3
-T: The Sligo Maid
+T: Sligo Maid, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7836,7 +7839,7 @@ Steam up: played in a set followed by Drummond Castle`
 		},
 		{
 			incipit: `X: 3
-T: The Roscommon
+T: Roscommon, The
 R: reel
 M: 4/4
 L: 1/16
@@ -7913,7 +7916,7 @@ P:F’
 		{
 			incipit: `
 X: 1
-T: The Humours Of Ballyloughlin
+T: Humours Of Ballyloughlin, The
 R: jig
 M: 12/8
 L: 1/8
@@ -7931,7 +7934,7 @@ A3 AGE GED ~D3|c2A ded cAG FED|`,
 		{
 			incipit: `
 X: 1
-T: The Liffey Banks
+T: Liffey Banks, The
 R: reel
 M: 4/4
 L: 1/8
@@ -7980,7 +7983,7 @@ DGA B2d cBG AFD|dBd cAc BGB AFD|`,
 		},
 		{
 			incipit: `X: 5
-T: The Gooseberry Bush
+T: Gooseberry Bush, The
 R: reel
 M: 4/4
 L: 1/16
@@ -8033,7 +8036,7 @@ B2G AGF G2g fdc|B2G AGF Ggf d2c|`,
 		},
 		{
 			incipit: `X: 7
-T: The Humours Of Drinagh
+T: Humours Of Drinagh, The
 R: jig
 M: 12/8
 L: 1/8
@@ -8044,7 +8047,7 @@ FDF ABc dfd ecA|FDF ABc`,
 		},
 		{
 			incipit: `X: 1
-T: The Bank Of Turf
+T: Bank Of Turf, The
 R: jig
 M: 12/8
 L: 1/8
