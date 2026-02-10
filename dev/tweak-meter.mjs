@@ -42,10 +42,9 @@ const BACKUP_FILE = path.join(
 );
 
 const maxNbToProcess = 3;
-const title = "Sweeney's Buttermilk",
+const title = "Jamesy Gannon's",
   doJig = false,
-  doReel = true,
-  doHornpipe = false;
+  doReel = true;
 /**
  * Get the first ABC string from a tune entry
  * @param {string|string[]} abc - ABC notation (string or array)
@@ -110,28 +109,16 @@ async function process() {
         continue;
       }
       // get metadata
+      const rhythmMatch = abcString.match(/R:\s*(.+)/i),
+        rhythm = rhythmMatch ? rhythmMatch[1] : null;
       const metadata = getMetadata(abcString),
-        isReel = abcString.match(/\n\s*R:\s*reel\s*\n/i),
-        isJig = abcString.match(/\n\s*R:\s*jig\s*\n/i),
-        isHornpipe = abcString.match(/\n\s*R:\s*hornpipe\s*\n/i);
+        isReelLike = ["reel", "barndance", "hornpipe"].indexOf(rhythm) >= 0,
+        isReel = rhythm?.indexOf("reel") > 0,
+        isJig = abcString.match(/\n\s*R:\s*jig\s*\n/i);
 
       if (
         (title && metadata.title !== title) ||
-        (doHornpipe &&
-          (!abcString.match(/\n\s*M:\s*4\/4\s*\n/) || !isHornpipe)) ||
-        // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
-        abcString.match(/\[M:/) || //inline meter marking
-        abcString.match(/\[L:/) || //inline unit length marking
-        !abcString.match(/\n\s*L:\s*1\/8\s*\n/)
-      ) {
-        // console.log(`skip: ${metadata.title}`);
-        skippedCount++;
-        continue;
-      }
-
-      if (
-        (title && metadata.title !== title) ||
-        (doReel && (!abcString.match(/\n\s*M:\s*4\/4\s*\n/) || !isReel)) ||
+        (doReel && (!abcString.match(/\n\s*M:\s*4\/4\s*\n/) || !isReelLike)) ||
         // abcString.match(/\[\d/) || //skip those with 1st & 2nd repeats / variant endings
         abcString.match(/\[M:/) || //inline meter marking
         abcString.match(/\[L:/) || //inline unit length marking
@@ -156,12 +143,11 @@ async function process() {
 
       try {
         console.log(`process: ${metadata.title}`);
-        if (isReel) {
-          tune.abc = convertStandardReel(abcString);
+        if (isReelLike) {
+          if (isReel) tune.abc = convertStandardReel(abcString);
+          else tune.abc = convertStandardHornpipe(abcString);
         } else if (isJig) {
           tune.abc = convertStandardJig(abcString);
-        } else if (isHornpipe) {
-          tune.abc = convertStandardHornpipe(abcString);
         }
 
         // tune.incipit = getIncipit(tune.abc);

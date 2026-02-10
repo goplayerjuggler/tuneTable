@@ -469,8 +469,14 @@ function renderTable() {
 		}
 		if (tune.norbeckId) {
 			scores.push({
-				url: `https://www.norbeck.nu/abc/display.asp?rhythm=${tune.rhythm.replace(" ", "")}&ref=${tune.norbeckId}`,
+				url: `https://www.norbeck.nu/abc/display.asp?rhythm=${tune.norbeckR ?? tune.rhythm.replace(" ", "+")}&ref=${tune.norbeckId}`,
 				name: "norbeck"
+			});
+		}
+		if (tune.itiId) {
+			scores.push({
+				url: `https://www.irishtune.info/tune/${tune.norbeckId}/`,
+				name: "irishtune.info"
 			});
 		}
 
@@ -497,7 +503,7 @@ function renderTable() {
 		</div>
     </div>
     </td>
-	<td class="references">${referencesHtml}${
+	<td class="notes">${referencesHtml}${
 		scores && scores.length > 0
 			? `${scores
 					.map((s) => `<a href="${s.url}" target="_blank">${s.name}</a>`)

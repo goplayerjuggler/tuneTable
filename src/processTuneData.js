@@ -106,7 +106,7 @@ function processTuneData(tune) {
 
 				if (shortAbc) {
 					processed.contour = getContour(shortAbc, {
-						contourShift: tune.contourShift,
+						contourShift: processed.contourShift,
 						withSvg: true,
 						withSwingTransform
 					});
