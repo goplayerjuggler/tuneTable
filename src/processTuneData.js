@@ -53,13 +53,15 @@ function updateFromMetadata(
 		metaData.source ||
 		metaData.url ||
 		metaData.recording ||
-		metaData.comments
+		metaData.comments ||
+		metaData.hComments
 	) {
 		const abcRef = {
 			artists: metaData.source || "",
 			url: metaData.url || "",
 			notes: `${metaData.recording ? `recording/album: ${metaData.recording}\n` : ""}${
-				metaData.comments ? metaData.comments.join("\n") : ""
+				(metaData.comments ? metaData.comments.join("\n") + "\n" : "") +
+				(metaData.hComments ? metaData.hComments : "")
 			}`,
 			fromAbc: true
 		};

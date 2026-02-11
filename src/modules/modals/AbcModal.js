@@ -13,8 +13,6 @@ import AbcJs from "abcjs";
 import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-parser.js";
 
 /**
- * ABC Notation Display Modal
- * Shows rendered sheet music with transposition controls
  *
  * ### AbcModal
  * **Purpose**: Display sheet music with interactive controls
@@ -24,7 +22,7 @@ import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-pars
  * - Toggle between rendered and text views
  * - Transpose music up/down by semitones
  * - Navigate between multiple tune settings
- * - Keyboard navigation support
+ * - Pagination for long scores with click navigation
  * - Auto-hiding header to maximise score viewing area
  *
  * **Key Methods**:
@@ -32,6 +30,8 @@ import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-pars
  * - `transpose(semitones)`: Transpose the displayed music
  * - `navigate(direction)`: Move between tune settings
  * - `toggleView()`: Switch between rendered and text views
+ * - `nextPage()`: Navigate to next page of score
+ * - `prevPage()`: Navigate to previous page of score
  */
 export default class AbcModal extends Modal {
 	constructor() {
@@ -42,6 +42,10 @@ export default class AbcModal extends Modal {
 			autoHideHeader: true,
 			autoHideDelay: 0,
 			content: `
+        <div id="abcRendered" class="abc-rendered"></div>
+        <div id="abcText" class="abc-text">
+          <pre id="abcTextContent"></pre>
+        </div>
         <div class="modal-controls">
           <div class="control-row">
             <button id="doubleBtn" class="transpose-btn">
@@ -63,10 +67,11 @@ export default class AbcModal extends Modal {
             <span id="abcCounter"></span>
             <button id="nextAbcBtn" class="nav-btn">Next →</button>
           </div>
-        </div>
-        <div id="abcRendered" class="abc-rendered"></div>
-        <div id="abcText" class="abc-text">
-          <pre id="abcTextContent"></pre>
+          <div class="control-row pagination-controls">
+            <button id="prevPageBtn" class="nav-btn">◄ Prev page</button>
+            <span id="pageCounter"></span>
+            <button id="nextPageBtn" class="nav-btn">Next page ►</button>
+          </div>
         </div>
       `
 		});
@@ -84,8 +89,16 @@ export default class AbcModal extends Modal {
 			nextBtn: document.getElementById("nextAbcBtn"),
 			doubleBtn: document.getElementById("doubleBtn"),
 			halveBtn: document.getElementById("halveBtn"),
-			counter: document.getElementById("abcCounter")
+			counter: document.getElementById("abcCounter"),
+			prevPageBtn: document.getElementById("prevPageBtn"),
+			nextPageBtn: document.getElementById("nextPageBtn"),
+			pageCounter: document.getElementById("pageCounter")
 		};
+
+		// Pagination state
+		this.currentPage = 0;
+		this.allSvgs = [];
+		this.LINES_PER_PAGE = 9;
 
 		this.setupControls();
 
@@ -94,10 +107,14 @@ export default class AbcModal extends Modal {
 		this.elements.text.classList.remove("active");
 		this.elements.toggleBtn.textContent = "Show ABC text";
 
+		// Add cursor pointer style to rendered area
+		this.elements.rendered.style.cursor = "pointer";
+
 		this.updateDisplayAfterTranspose();
 		this.updateNavigationButtons();
 		this.updateBarLengthButtons();
 	}
+
 	updateBarLengthButtons() {
 		if (canDoubleBarLength(this.currentTuneAbc))
 			this.elements.doubleBtn.style.display = "block";
@@ -125,6 +142,45 @@ export default class AbcModal extends Modal {
 		this.elements.prevBtn?.addEventListener("click", () => this.navigate(-1));
 		this.elements.nextBtn?.addEventListener("click", () => this.navigate(1));
 
+		// Pagination controls
+		this.elements.prevPageBtn?.addEventListener("click", () => this.prevPage());
+		this.elements.nextPageBtn?.addEventListener("click", () => this.nextPage());
+
+		// Click navigation on the rendered score
+		this.elements.rendered?.addEventListener("click", (e) => {
+			if (this.currentViewMode !== "rendered") return;
+
+			const rect = this.elements.rendered.getBoundingClientRect();
+			const clickX = e.clientX - rect.left;
+			const midpoint = rect.width / 2;
+
+			if (clickX < midpoint) {
+				this.prevPage();
+			} else {
+				this.nextPage();
+			}
+		});
+
+		this.handleKeydown = (e) => {
+			if (!super.isOpen()) return false;
+
+			if (e.key === "ArrowLeft") {
+				this.prevPage();
+				return false;
+			} else if (e.key === "ArrowRight") {
+				this.nextPage();
+				return false;
+			} else if (e.key === "ArrowUp") {
+				this.navigate(-1);
+				return false;
+			} else if (e.key === "ArrowDown") {
+				this.navigate(1);
+				return false;
+			}
+
+			return false;
+		};
+
 		document.addEventListener("keydown", this.handleKeydown);
 	}
 
@@ -135,6 +191,7 @@ export default class AbcModal extends Modal {
 		this.currentTuneAbc = this.currentAbcArray[0];
 		this.currentTranspose = 0;
 		this.currentViewMode = "rendered";
+		this.currentPage = 0;
 
 		this.open();
 	}
@@ -164,6 +221,7 @@ export default class AbcModal extends Modal {
 
 		this.currentTuneAbc = this.currentAbcArray[this.currentAbcIndex];
 		this.currentTranspose = 0;
+		this.currentPage = 0;
 		this.updateDisplayAfterTranspose();
 		this.updateNavigationButtons();
 	}
@@ -171,6 +229,64 @@ export default class AbcModal extends Modal {
 	transpose(semitones) {
 		this.currentTranspose += semitones;
 		this.updateDisplayAfterTranspose();
+	}
+
+	nextPage() {
+		if (this.allSvgs.length === 0) return;
+
+		const totalLines = this.allSvgs.length;
+		const totalPages = Math.ceil(totalLines / this.LINES_PER_PAGE);
+
+		if (this.currentPage < totalPages - 1) {
+			this.currentPage++;
+			this.updatePagination();
+		}
+	}
+
+	prevPage() {
+		if (this.currentPage > 0) {
+			this.currentPage--;
+			this.updatePagination();
+		}
+	}
+
+	updatePagination() {
+		if (this.allSvgs.length === 0) return;
+
+		const totalLines = this.allSvgs.length;
+		const totalPages = Math.ceil(totalLines / this.LINES_PER_PAGE);
+
+		// Clear the display
+		this.elements.rendered.innerHTML = "";
+
+		// Add only the SVGs for the current page
+		const startLine = this.currentPage * this.LINES_PER_PAGE;
+		const endLine = Math.min(startLine + this.LINES_PER_PAGE, totalLines);
+
+		for (let i = startLine; i < endLine; i++) {
+			if (this.allSvgs[i]) {
+				this.elements.rendered.appendChild(this.allSvgs[i].cloneNode(true));
+			}
+		}
+
+		// Update pagination UI
+		this.updatePaginationButtons(totalPages);
+	}
+
+	updatePaginationButtons(totalPages) {
+		if (totalPages > 1) {
+			this.elements.prevPageBtn.style.display = "inline-block";
+			this.elements.nextPageBtn.style.display = "inline-block";
+			this.elements.pageCounter.style.display = "inline-block";
+			this.elements.pageCounter.textContent = `Page ${this.currentPage + 1} / ${totalPages}`;
+
+			this.elements.prevPageBtn.disabled = this.currentPage === 0;
+			this.elements.nextPageBtn.disabled = this.currentPage >= totalPages - 1;
+		} else {
+			this.elements.prevPageBtn.style.display = "none";
+			this.elements.nextPageBtn.style.display = "none";
+			this.elements.pageCounter.style.display = "none";
+		}
 	}
 
 	updateNavigationButtons() {
@@ -215,6 +331,7 @@ export default class AbcModal extends Modal {
 			}
 		if (newAbc) {
 			this.currentTuneAbc = newAbc;
+			this.currentPage = 0;
 			this.updateBarLengthButtons();
 			this.updateDisplayAfterTranspose();
 		}
@@ -233,7 +350,7 @@ export default class AbcModal extends Modal {
 		// Update text view
 		this.elements.textContent.textContent = transposedAbc;
 
-		// Update rendered view
+		// Update rendered view with pagination support
 		this.elements.rendered.innerHTML = "";
 		AbcJs.renderAbc("abcRendered", transposedAbc, {
 			scale: 1.0,
@@ -242,8 +359,15 @@ export default class AbcModal extends Modal {
 			paddingbottom: 10,
 			paddingright: 20,
 			paddingleft: 20,
-			responsive: "resize"
+			responsive: "resize",
+			oneSvgPerLine: true
 		});
+
+		// Store all SVG elements for pagination
+		this.allSvgs = Array.from(this.elements.rendered.querySelectorAll("svg"));
+
+		// Apply pagination
+		this.updatePagination();
 	}
 
 	transposeAbcNotation(abc, transposeAmount) {
@@ -251,22 +375,10 @@ export default class AbcModal extends Modal {
 		return AbcJs.strTranspose(abc, visualObj, transposeAmount);
 	}
 
-	handleKeydown(e) {
-		if (!super.isOpen()) return false;
-
-		if (e.key === "ArrowLeft") {
-			this.navigate(-1);
-			return true;
-		} else if (e.key === "ArrowRight") {
-			this.navigate(1);
-			return true;
-		}
-
-		return false;
-	}
-
 	onClose() {
 		this.currentTranspose = 0;
 		this.currentAbcIndex = 0;
+		this.currentPage = 0;
+		this.allSvgs = [];
 	}
 }

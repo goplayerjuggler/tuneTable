@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-02-10",
+	lastUpdate: "2026-02-12",
 	tunes: [
 		{
 			abc: `
@@ -762,7 +762,8 @@ DEG GAB Bdg gab|age ege dBG A3:|
 ~a3 aga ega ega|deg ged ged BAG|
 DEG GAB Bdg gab|age ege dBG A3:|`,
 			parts: "AABB",
-			theSessionId: 839
+			theSessionId: 839,
+			norbeckId: 320
 		},
 		{
 			abc: `X:1
@@ -1053,32 +1054,36 @@ gfe agf gfe fdB|cBA (3Bcd B[1 AGG G2f:|2 AGG G3||`,
 T:Gallagher’s Frolics
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/160#setting160
 N:Setting entered in thesession by user “Will Harmon” on 2001-06-28
+N:*abc-tools: convert to M:12/8*
 K:Edorian
-D|:~E3 GFE|~B3 dBA|BdB BAB|GBG AFD|
- ~E3 GFE|BAB dBA|BAG FAF|1 GEE E2 D:|2 GEE E2 e||
- |:e2 g gfe|g2 b bge|dcd fed|fad fed|
- e2 f gfe|dfe dBA|BAG FAF|1 GEE E2 e:|2 GEE E2 D||`,
-			theSessionId: 160
+D|:~E3 GFE ~B3 dBA|BdB BAB GBG AFD|
+~E3 GFE BAB dBA|BAG FAF[1 GEE E2 D:|2 GEE E2 e||
+|:e2 g gfe g2 b bge|dcd fed fad fed|
+e2 f gfe dfe dBA|BAG FAF[1 GEE E2 e:|2 GEE E2 D||`,
+			theSessionId: 160,
+			parts: "AABB"
 		},
 		{
 			abc: `X:1
 T:Whelan’s
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1447#setting1447
 N:Setting entered in thesession by user “gian marco” on 2003-02-17
+N:*abc-tools: convert to M:12/8*
 K:Edorian
-|:~E3 BAF|FEB AFD|~E3 BAF|dAF FED|
- ~E3 BAF|FEB AFA|B/c/dB BAF|dAF FED:|
- |:BAB ~e3|fed e2d|BAB g2e|fdB AFA|
- ~B3 ede|fed e2 f|gbg faf|edB AFA:|`,
-			theSessionId: 1447
+|:~E3 BAF FEB AFD|~E3 BAF dAF FED|
+~E3 BAF FEB AFA|B/c/dB BAF dAF FED:|
+|:BAB ~e3 fed e2d|BAB g2e fdB AFA|
+~B3 ede fed e2 f|gbg faf edB AFA:|`,
+			theSessionId: 1447,
+			parts: "AABB"
 		},
 		{
 			incipit: `X: 5
@@ -1134,17 +1139,9 @@ T:Andy McGann’s
 C:Andy McGann
 R:jig
 L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/8000#setting8000
-N:Setting entered in thesession by user “fidkid” on 2007-11-24
+M:12/8
 K:Dmajor
-|:A,|D2 F EDB,|DFA dcd|edB AFE|FEF EDB,|
- D2 F EDB,|DFA dcd|edB AFE|EDC D2:|
- A|d2 f ede|fdB AFA|BdB AFD|FEE EFA|
- d2 f ede|fdB AFA|B/c/dB AFE|EDC D2 A||
- d2 f ede|fdB AFA|B/c/dB AFE|CDE A,3|
- ABc d2 f|edB AFE|FEF DEF|EDC D2z|`,
+A,|D2 F EDB, DFA dcd|edB AFE `,
 			theSessionId: 8000
 		},
 		{
@@ -1153,19 +1150,20 @@ T:Don’t Touch That Green Linnet
 C:Tommy Peoples
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2309#setting2309
 N:Setting entered in thesession by user “fidicen” on 2003-12-26
+N:(edited after importing)
+N:*abc-tools: convert to M:12/8*
 K:Dmajor
-|:D2F FEF|AFA d3|baf afd|ege fdA|
- D3 FEF|AFA d2a|baf gfe|fdB A3:|
- |:a3 fdf|g2B bge|afd B/c/de|dcB A3|
- afd dfa|bge efg|afd d2e|1 fdc d3:|2 fdc dAG||
- F3 dAF|G2B gdB|c2e a2a|ba^g a2f|
- afd dAF|G2B gdB|c2e age|fdc d3||
- D2F dAF|G2B gdB|c2e a2a|ba^g a2f|
- afd dAF|G2B gdB|c2e age|fdd d3||`,
+|:D2F FEF AFA d3|baf afd ege fdA|
+D3 FEF AFA d2a|baf gfe fdB A3:|
+|:a3 fdf g2B bge|afd B/c/de dcB A3|
+afd dfa bge efg|afd d2e[1 fdc d3:|2 fdc dAG||
+F3 dAF G2B gdB|c2e a2a ba^g a2f|
+afd dAF G2B gdB|c2e age fdc d3||`,
+			parts: "AABBCC",
 			theSessionId: 2309
 		},
 		{
@@ -1173,15 +1171,17 @@ K:Dmajor
 T:Pay The Reckoning
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1805#setting1805
 N:Setting entered in thesession by user “nobu” on 2003-07-07
+N:*abc-tools: convert to M:12/8*
 K:Gmajor
-|:G2e dBG|~B3 dBA|G2e dBG|~A3 BGE|
- G2e dBG|~B3 deg|age dBG|~A3 BGE:|
- ~g3 faf|e/f/ge def|gfg efg|aga bge|
- gbg f/g/af|ege deg|age dBG|~A3 BGE:|`,
+|:G2e dBG ~B3 dBA|G2e dBG ~A3 BGE|
+G2e dBG ~B3 deg|age dBG ~A3 BGE:|
+~g3 faf e/f/ge def|gfg efg aga bge|
+gbg f/g/af ege deg|age dBG ~A3 BGE:|`,
+			parts: "AABB",
 			theSessionId: 1805
 		},
 		{
@@ -1190,41 +1190,26 @@ T:Father Kelly’s
 C:Father P.J. Kelly
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2156#setting2156
 N:Setting entered in thesession by user “Peter Piper” on 2003-11-15
+N:*abc-tools: convert to M:12/8*
 K:Gmajor
-|:D|GGG BAG|FFF AFD|GGG BAG|BdB cBA|
- G2A BAG|FFF AFD|d^cd ((3gfe) d|cAF G2:|
- A|B2d gdB|dgB dgB|c2e gec|egc ege|
- d2f afd|fad faf|gfg efg|afd cBA|
- B2d gdB|dgB dgB|c2e gec|egc ege|
- d2f afd|fad faf|d^cd ((3gfe) d|cAF G2|
- |:A|B2.B {c}BAG|FFF AFD|BBB {c}BAG|BdB cBA|
- B2.B {c}BAG|FFF AFD|d^cd ((3gfe) d|cAF G2:|`,
+|:D|GGG BAG FFF AFD|GGG BAG BdB cBA|
+G2A BAG FFF AFD|d^cd ((3gfe) d cAF G2:|
+A|B2d gdB dgB dgB|c2e gec egc ege|
+d2f afd fad faf|gfg efg afd cBA|
+B2d gdB dgB dgB|c2e gec egc ege|
+d2f afd fad faf|d^cd ((3gfe) d cAF G2|
+|:A|B2.B {c}BAG FFF AFD|BBB {c}BAG BdB cBA|
+B2.B {c}BAG FFF AFD|d^cd ((3gfe) d cAF G2:|`,
 			theSessionId: 2156
 		},
 		{
-			abc: `X:1
-T:Saint Patrick’s Day
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/385#setting385
-N:Setting entered in thesession by user “Will Harmon” on 2001-11-19
-K:Gmajor
-D|:GAG GAB|ded dBG|AGA BGD|EFE E2 D|
- GAG GAB|ded dBG|AGA BGD|1 E2 FG2 D:|2 E2 FG2 B||
- |:def gag|fed edB|def gag|fed e2 d|
- def gag|fed efg|dBG GAB|ded dBG|
- AGA BGD|EFE E2 D|GAG GBd|gfe dBG|
- AGA BGD|1 E2 FG2 B:|2 E2 FG2 D||`,
-			theSessionId: 385
-		},
-		{
 			groups: "ALORA",
+			norbeckId: 88,
+			parts: "AABB",
 			abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
 C: Traditional
@@ -1265,36 +1250,22 @@ K:Aminor
 ~c3 edc deg a2 (a|{b}a)ge deg[1 edB A2 B:|2 edB A3||`,
 			theSessionId: 2540
 		},
-		{
-			abc: `X:1
-T:The Further, The Deeper
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/4844#setting4844
-N:Setting entered in thesession by user “slainte” on 2005-08-11
-K:Adorian
-|:E|ABd edB|dBA A2B|GAB dgd|BGG G2g|
- fed efg|aAA e2a|g2e dBd|eAA A2:|
- |:d|ege ege|dBA A2B|ded dgd|BGG G2g|
- fed efg|aAA e2a|g2e dBd|eAA A2:|`,
-			theSessionId: 4844
-		},
+
 		{
 			abc: `X:1
 T:Saddle The Pony
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/307#setting307
 N:Setting entered in thesession by user “Jdharv” on 2001-10-03
+N:*abc-tools: convert to M:12/8*
 K:Gmajor
-|:D|GBA G2B|def gdB|GBA G2B|AFD AFD|
- GBA G2B|def gfg|efe dBA|BGG G2:|
- |:d|efe edB|def gfg|efe edB|dBA ABd|
- efe edB|def gfg|efe dBA|BGG G2:|`,
+|:D|GBA G2B def gdB|GBA G2B AFD AFD|
+GBA G2B def gfg|efe dBA BGG G2:|
+|:d|efe edB def gfg|efe edB dBA ABd|
+efe edB def gfg|efe dBA BGG G2:|`,
 			theSessionId: 307
 		},
 		{
@@ -1522,22 +1493,6 @@ T: Sunny Side of the Latch, The
 R:jig
 Z: Malcolm Schonfield % 231212,3,4
 C: Jason O’Rourke
-Q:3/8=100
-M:12/8
-L:1/8
-K:C
-%swing 0.3 0
-EDE CDC EFG AdB | cBc ABc GEC ~D2C | EDE CDC EFG AdB | cGE _BFD CDC C2E | 
-EDE CDC EFG A2{^c}d | cBc ABc GEC ~D3 | EDE CDC EFG AdB | cGE _BFD CDC C2e || 
-efg fed ecA dBG | cGE _BFD CGc =Bcd | efg fed ecA d^cd | cGE _BFD CDC C2e |
-efg fed ecA d^cd | cGE _BFD Cec =Bcd | efg ~f3 ~e3 ~d3 | cGE _BFD CDC C2E !D.C.! |]
-"^second time, at the end"efg f(3edf e(3Gce d(3GBd | c(3GEG _B(3FDF C(3EGc =Bcd | efg ~f3 efg fed | cGE _BFD CDC C3 |]`,
-				`X:1
-T:The Sunny Side Of The Latch
-C:Jason O’Rourke
-R:jig
-L:1/8
-M:6/8
 N:This pretty jig composed by Jason O’Rourke is from his latest album, also called
 N:The Sunny Side of the Latch. In the sleeve notes for the album he tells the
 N:story behind the title but I can't fully remember the details (don’t have it to
@@ -1546,22 +1501,15 @@ N:out for yourself!
 N:It’s a lovely album with lots of great compositions on it, all very well played.
 N:My transcription aims to give a feel of how Jason plays it, without going into
 N:too much detail.
-N:Looking forward to playing this in a session myself one of these days.
-N:---
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/23818#setting49004
-N:Setting entered in thesession by user “GoPlayer” on 2023-12-13
-K:Cmajor
-EDE CDC|EFG AdB|cBc ABc|GEC ~D2C|
- EDE CDC EFG AdB|cGE _BFD|CDC C2E|
- EDE CDC|EFG A2{^c}d|cBc ABc|GEC ~D3|
- EDE CDC|EFG AdB|cGE _BFD|CDC C2e||
- efg fed|ecA dBG|cGE _BFD|CGc =Bcd|
- efg fed|ecA d^cd|cGE _BFD|CDC C2e|
- efg fed|ecA d^cd|cGE _BFD|Cec =Bcd|
- efg ~f3|~e3 ~d3|cGE _BFD|CDC C2E||
- efg fed|{f}e(3Gce d(3GBd|c(3GEG _B(3FDF|
- C(3EGc =Bcd|efg ~f3|efg fed|cGE _BFD|CDC C3||`
+Q:3/8=100
+M:12/8
+L:1/8
+K:C
+EDE CDC EFG AdB | cBc ABc GEC ~D2C | EDE CDC EFG AdB | cGE _BFD CDC C2E | 
+EDE CDC EFG A2{^c}d | cBc ABc GEC ~D3 | EDE CDC EFG AdB | cGE _BFD CDC C2e || 
+efg fed ecA dBG | cGE _BFD CGc =Bcd | efg fed ecA d^cd | cGE _BFD CDC C2e |
+efg fed ecA d^cd | cGE _BFD Cec =Bcd | efg ~f3 ~e3 ~d3 | cGE _BFD CDC C2E !D.C.! |]
+"^second time, at the end"efg f(3edf e(3Gce d(3GBd | c(3GEG _B(3FDF C(3EGc =Bcd | efg ~f3 efg fed | cGE _BFD CDC C3 |]`
 			],
 			theSessionId: 23818,
 			theSessionSettingId: 49004
@@ -1602,9 +1550,9 @@ M: 12/8
 L: 1/8
 K: D minor
 [P:A] D2SE || FEF GFG  AGA dA^F | G/G/^FG A2g  fed cAG |
-^FDD ADD  CDD A,DD | [(GG,3]FG) ABG AFD D2E | 
+^FDD ADD  CDD A,DD | ([GG,3]FG) ABG AFD D2E | 
 FEF [GG,]FG AGA dA^F |  G/G/^FG A2g fed cAG |
-^FDD ADD CDD A,DD | [(GG,3]FG)  A/A/BG AFD
+^FDD ADD CDD A,DD | ([GG,3]FG)  A/A/BG AFD
  [P:B] D2A |:  d2g fed ecA ABc |  d/d/de fed  f/g/af gec |
 d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:| 
 [2 [P:C] D2E |: FEF AFF cFF AFF | GFG A2g fed cAG |
@@ -1927,16 +1875,17 @@ T:The Donegal Lass
 C:Brian Finnegan
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1497#setting1497
 N:Setting entered in thesession by user “lefthander al” on 2003-03-10
 N:(edited after importing)
+N:*abc-tools: convert to M:12/8*
 K:Amix
-|:Ace aed|edB A3|GBd G3|FAd F3|
- Ace aed|cdB A2a|aed cdB|ABG A3:|
- GBd G3|FAd F3|e2e ecA|e2e ecA|
- GBd G3|FAd F2a|aed cdB|ABG A3:|`,
+|:Ace aed edB A3|GBd G3 FAd F3|
+Ace aed cdB A2a|aed cdB ABG A3:|
+GBd G3 FAd F3|e2e ecA e2e ecA|
+GBd G3 FAd F2a|aed cdB ABG A3:|`,
 			theSessionId: 1497
 		},
 		{
@@ -1945,20 +1894,22 @@ X: 3
 T: Spórt
 C:Peadar Ó Riada
 R: jig
-M: 6/8
+M:12/8
 L: 1/8
 N:Imported into *tuneTable* on 2025-11-01,
 N:from https://thesession.org/tunes/870#setting14042
 N:Setting entered in thesession by user “daveboling” on 2012-10-01
+N:*abc-tools: convert to M:12/8*
 K: Dmaj
-|:AdF A2 A|GBE G2 G|AdF A2 A|GEd cEA|
-AdF A2 A|GBE G2 A|cdc A2A|GEA D3:|
-|:cBc dcd|cec A2g|fed ged|cec A3|
-fef gfg|faf d2e|fdF AFA|GEA D2 A:|
-|:AGG AEE|AGE EDD|AGG c2 e|dcA AGE|
-AGG AEE|AGE EDD|cdc A2G|EAA D3:|
+|:AdF A2 A GBE G2 G|AdF A2 A GEd cEA|
+AdF A2 A GBE G2 A|cdc A2A GEA D3:|
+|:cBc dcd cec A2g|fed ged cec A3|
+fef gfg faf d2e|fdF AFA GEA D2 A:|
+|:AGG AEE AGE EDD|AGG c2 e dcA AGE|
+AGG AEE AGE EDD|cdc A2G EAA D3:|
 `,
-			theSessionId: 870
+			theSessionId: 870,
+			norbeckId: 469
 		},
 		{
 			aka: ["Cailleach an airgid"],
@@ -1982,56 +1933,51 @@ T:The Road To Banff
 C:Malcolm Reavell
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/4435#setting4435
 N:Setting entered in thesession by user “Yooval” on 2005-04-26
+N:*abc-tools: convert to M:12/8*
 K:Dmajor
-|:A|Add dcd|BAG A3|AdA eAf|g2g ecB|
- Add dcd|BAG A3|AdA eAf|gec d2:|
- |:g|a2a fdA|g2g ecB|AdA eAf|g2g efg|
- a2a fdA|g2g ecB|AdA eAf|gecd2:|`,
+|:A|Add dcd BAG A3|AdA eAf g2g ecB|
+Add dcd BAG A3|AdA eAf gec d2:|
+|:g|a2a fdA g2g ecB|AdA eAf g2g efg|
+a2a fdA g2g ecB|AdA eAf gecd2:|`,
 			theSessionId: 4435
 		},
 		{
+			aka: ["A Curious Denis Murphy Jig"],
 			abc: `X:1
 T:Trip To The Quarry
 C:Thady Murphy
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/11868#setting11868
 N:Setting entered in thesession by user “jaychoons” on 2012-03-28
-K:Dmajor
-|:B|Bcd efg|aba age|~d3 dcd|efg ecA|
- Bcd efg|~a3 age|dcd Bed|cAA A2:|
- |:B|=c2 e dBB|=cAF GAB|=cBc d^cd|efg ecA|
- {B}=c2 e dBB|=cAF GAB|=cee dBB|BAA A2:|`,
-			theSessionId: 11868
+N:(edited after importing)
+N:*abc-tools: convert to M:12/8*
+K:Amix
+|:B|Bcd efg aba age|~d3 dcd efg ecA|
+Bcd efg ~a3 age|dcd Bed cAA A2:|
+|:B|=c2 e dBB cAF GAB|=cBc d^cd efg ecA|
+{B}=c2 e dBB cAF GAB|=cee dBB BAA A2:|`,
+			theSessionId: 11868,
+			norbeckId: 491,
+			parts: "AABB"
 		},
 		{
-			abc: `X:1
-T:The Diplodocus
-C:Liz Carroll
-R:jig
-L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/620#setting620
-N:Setting entered in thesession by user “crannog” on 2002-03-26
-K:Dmajor
-|:B|cAA edb|cAA ABc|dff gfg|aee fed|
- cAA BAG|Eaa AGE|DFF GFG|BAA A2:|
- e|efe eed|cAB AGE|GGG EFG|GAG FDD|
- efe eed|cAB AGE|DFF GFG|BAA A2 e|
- efe eed|cAB AGE|fgg gef|gag fdd|
- efe eed|cAB AGE|DFF GFG|BAA efg|
- aAA Aaf|gfg efg|fdd def|gfg efd|
- aAA Aaf|gfg efg|fdd fed|cAA Afg|
- aAA Aaf|gfg efg|GGG GBd|gfg efd|
- aAA Aaf|gfg efg|fdd fed|cAA A2|`,
-			theSessionId: 620
+			incipit: `X: 2
+T: The Diplodocus
+R: jig
+M: 12/8
+L: 1/8
+K: Amix
+cAA edB cAA ABc|def g3 a2e`,
+			parts: "AABBCC",
+			theSessionId: 620,
+			theSessionSettingId: 22648
 		},
 		{
 			abc: `X:1
@@ -3555,20 +3501,29 @@ K:Dmajor
 			theSessionId: 2172
 		},
 		{
-			abc: `X:1
-T:Toss The Feathers
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/138#setting138
-N:Setting entered in thesession by user “Will Harmon” on 2001-06-13
-K:Dmixolydian
-|:D2 FD ADFD|ABcA G~E3|D2 (3FED ADFA|d2 ed cAGE|
- (3DDD AD (3DDD AD|ABcA G~E3|cABG A2 AB|1 cded cAGE:|2 cded cAGc||
- |:Ad (3ddd Ad (3ddd|Ad (3ddd ed^cd|eaag a2 ag|eaag ed^cd|
- efge afge|dfed cAGB|cABG A2 AB|1 cded cAGc:|2 cded cAGE||`,
-			theSessionId: 138
+			abc: `X: 1 %230502, 260210
+T: Toss The Feathers
+R: reel
+M: 4/4
+L: 1/16
+Z: Malcolm Schonfield
+D: Mícheál Ó Raghallaigh • Inside Out
+F: https://music.youtube.com/watch?v=-5TqQuQyPS8&t=157
+K: D mixolydian
+[P:A] 
+DDFD  ADFD  ABc-[ce]- cAGE | DDFD  A2FA  dfed ^cAGE |
+d3B   AFFF  ABcA       GEEE | cABG  ABcA  dfed  cAGE |
+DDFD  ADFD  ABcA       GECE | DDFD  A2FA  dfed ^cAGE |
+d3B   AFFF  ABc-[ce]-  AGE | cABG  ABcA  dfed  c3d  ||
+[P:B] 
+Ad^cd  Adcd   Adcd   edcd   | efge  a3g   e3a-  aged |
+efge   ~a2ge  dfed   ^ceAB  | c3B   ABcA  dfed  cAGc  |
+Ad~d2  Ad~d2  Ad~d2  edcd   | efge  a3g   e2ag  ed^cd |
+efge   ~a2ge  dfed   ^ceAB  | c3B   ABcA  dfed  ^cAGE !D.C.! |]
+`,
+			theSessionId: 138,
+			parts: "AABB",
+			norbeckId: 110
 		},
 		{
 			abc: `X:1
@@ -5020,6 +4975,7 @@ X: 1
 T: Patsy Geary’s
 R: slide
 M: 12/8
+N: H. Norbeck has this as a single jig rather than a slide. (I’m not sure, meself!)
 L: 1/8
 Z:abc-transcription Malcolm Schonfield %2025-03-26
 Z:abc-transcription used this score as a starting point: https://thesession.org/tunes/325#setting325
@@ -5031,7 +4987,9 @@ P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
 `,
-			theSessionId: 325
+			theSessionId: 325,
+			norbeckId: 6,
+			parts: "AB"
 		},
 		{
 			abc: `X:1
@@ -5042,12 +5000,15 @@ M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/7444#setting7444
 N:Setting entered in thesession by user “Nigel Gatherer” on 2007-07-04
-K:Amajor
+N:(edited after importing)
+K:Amix
 |:e3 ede f2e d2f|edB d2B A2B d3|e3 ede f2e d2f|
  [1 edB d2B A3 ABd:|2 edB d2B A3 A2||
  a|a2e ede f2e d2f|edB d2B A2B d2a|a2e ede f2e d2f|
  [1 edB d2B A3 A2:|2 edB d2B A3 ABd||`,
-			theSessionId: 7444
+			theSessionId: 7444,
+			norbeckId: 85,
+			parts: "AABB"
 		},
 		{
 			abc: `X:1
@@ -5965,7 +5926,6 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `
 		{
 			name: "Haste To The Wedding",
 			groups: "ALORA",
-			origin: "Ireland",
 			rhythm: "jig",
 			references: [
 				{
@@ -5976,10 +5936,13 @@ SU: 1st & 3rd in the Fahey’s Fiddle set `
 			],
 			incipit: `X: 1
 L: 1/8
+O:Ireland
 M: 12/8
 K: D
-AFA Agf ede fdB|`,
-			theSessionId: 582
+AFA Agf ede fdB|ABA AGF`,
+			theSessionId: 582,
+			norbeckId: 18,
+			parts: "AABB"
 		},
 		{
 			incipit: `X: 19
@@ -5989,7 +5952,9 @@ M: 12/8
 L: 1/8
 K: Edor
 EDE BAB EBE AFD|EDE ~B3`,
+			parts: "AABB",
 			groups: "alora",
+			norbeckId: 30,
 			theSessionId: 71,
 			references: [
 				{
@@ -6323,7 +6288,8 @@ A2AB AFED B2BA BcdB |`,
 			theSessionSettingId: 45357
 		},
 		{
-			name: "Denis Murphy’s",
+			aka: ["Denis Murphy’s", "Gleanntan Slide"],
+			name: "Girl in the Dress, The",
 			groups: "ALORA",
 			incipit: `X: 1
 M: 12/8
@@ -6333,7 +6299,8 @@ A2D FED F2A A2f|gfe`,
 			origin: "Ireland",
 			rhythm: "slide",
 			theSessionId: 159,
-			theSessionSettingId: 35527
+			theSessionSettingId: 35527,
+			norbeckId: 5
 		},
 		{
 			groups: "su",
@@ -6502,7 +6469,7 @@ Dónal Lunny: Bouzouki, Keyboards`
 				},
 				{
 					artists:
-						"Cillian Vallely, Uilleann pipes; Niall Vallely, concertina; Alan Murray, guitar",
+						"Cillian Vallely, uilleann pipes; Niall Vallely, concertina; Alan Murray, guitar",
 					url: "https://www.youtube.com/watch?v=0E39mRYES8M",
 					notes: "The Gold Ring / The Hearty Boys of Ballymote"
 				}
@@ -6964,7 +6931,7 @@ R: jig
 M: 12/8
 L: 1/8
 K: Dmaj
-D2F EDB, DFA BAF|ABd ede fdB`,
+~F3 EFE DFA BAF|ABd ede fdB`,
 			references: [
 				{
 					artists: "Kilfenora Céilí Band",
@@ -6972,7 +6939,9 @@ D2F EDB, DFA BAF|ABd ede fdB`,
 					notes: "(1959) Old man Dillon; Rose in the heather (0:57)"
 				}
 			],
-			theSessionId: 447
+			theSessionId: 447,
+			norbeckId: 60,
+			parts: "AABB"
 		},
 		{
 			groups: "su",
@@ -7163,12 +7132,15 @@ GBd gdc BAG|BdB cAA A3|`,
 		{
 			incipit: `X:2
 T:Merrily Kiss the Quaker 
-R: slide
+R: jig
+N: H. Norbeck has this as a single jig, and thession.org has it as a slide. It doesn’t feel like a slide to me…
 M:12/8
 L:1/8
 K:G
 D|GAB DED cBA BGE |`,
-			theSessionId: 20553
+			theSessionId: 70,
+			norbeckId: 4,
+			norbeckR: "single+jig"
 		},
 		{
 			incipit: `X: 1
@@ -7950,13 +7922,15 @@ L: 1/8
 K: Dmix
 A3 AGE GED ~D3|c2A ded cAG FED|`,
 			theSessionId: 210,
+			norbeckId: 65,
 			references: [
 				{
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2025/?track=12",
 					artists:
 						"Liam O'Flynn, uilleann pipes; Liam O'Connor, fiddle; Steve Cooney, guitar"
 				}
-			]
+			],
+			parts: "AABBCCDD"
 		},
 		{
 			incipit: `
@@ -8028,6 +8002,7 @@ L: 1/8
 K: Dmaj
 A3 DED ABG AdB|=cAG EFG ~FFD EFG| `,
 			theSessionId: 3145,
+			norbeckId: 162,
 			theSessionSettingId: 54859,
 			parts: "AABBCC"
 		},
@@ -8043,7 +8018,8 @@ K: Gmaj
 DGA ~B3 cBc d2g|gfd Bcd
 %todo:check title`,
 			parts: "AABB",
-			theSessionId: 532
+			theSessionId: 532,
+			norbeckId: 208
 		},
 		{
 			groups: "alora",
@@ -8154,6 +8130,7 @@ C:Paddy Fahey
 R: reel
 F:https://www.youtube.com/watch?v=T0e_og0XaKo
 D:The Bunch Of Keys
+N:Paddy Fahey's/Paddy Kelly's/Father O'Grady's Trip To Bucca
 S:Jason O’Rourke, button accordion; Ruadhrai O’Kane, fiddle; Paul McSherry, guitar; ?, bodhrán
 M: 4/4
 L: 1/16
@@ -8187,11 +8164,87 @@ EAA ABd cAG E2D|EFG EFG EAF GED|
 			norbeckId: 212,
 			theSessionId: 373,
 			parts: "AABB"
+		},
+		{
+			aka: ["Martin Wynne's #1"],
+			incipit: `
+X:1
+T:
+T:Martin Wynne's
+R:reel
+C:Martin Wynne 
+M:C|
+K:D
+AF~F2 GE~E2 F2AF EFDB,|A,B,DE FEFB AB`,
+			theSessionId: 347,
+			norbeckId: 210
+		},
+		{
+			incipit: `
+X:1
+T:The Hag at the Churn
+R:jig
+N:1. Classified by A. Ng as a single jig, but as a jig (not as a single jig) by H. Norbeck.
+N:2. H. Norbeck’s site gives some interesting background on this tune.
+M:12/8
+K:Dmix
+A2G ADD A2G Adc|A2G ADD EFG EFG:|`,
+			norbeckId: 102,
+			theSessionId: 829,
+			parts: "AB"
+		},
+		{
+			incipit: `
+X:1
+T:Donnybrook Fair
+R:jig
+M:12/8
+K:G
+~G3 AGA B2e dBA|~B3 GAB AGE EDE|`,
+			norbeckId: 176,
+			parts: "AABB",
+			incipitB: `gfe fed e/f/ge dBA|Bee dBA`
+		},
+		{
+			incipit: `X: 1
+M: 12/8
+L: 1/8
+K: D mixolydian
+FED c2A d^cd efg | fed cAG FAF GFE |`,
+			parts: "AABBCC",
+			abc: `X: 1
+T: Kitty’s Rambles
+S: Leo Rowsome, uilleann pipes
+F:https://www.itma.ie/playlists/leo-rowsome/?track=1
+%D:
+I:abc-charset utf-8
+%Z:abc-transcription Malcolm Schonfield% 2025-07-31
+%Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+R: Jig
+M: 12/8
+N: Kitty’s Rambles / Donnybrook Fair
+H: The first time round he does something a bit different (part A; start of bar nb. 3)
+H: that somewhat throws my ear off w.r.t. where the downbeat/start of the bar is. 
+H: It’s interesting and is probably what spurred me to attempt this transcription.
+H: The second time round he doesn’t do this.
+L: 1/8
+K: D mixolydian
+!fermata!A-{B}AF || ~D3 cBA d^cd efg | fed ^cAF GFE AFD | 
+AFD cBA d^cd efg | fed ^cAG ABc dAF |
+~D3 cBA d^cd efg | afd ^cAF GFE AFD | 
+~D3 cBA d^cd efg | fed ^cAF ABc d3 ||
+df/g/a df/g/a df/g/a afd | ceg ceg ceg gfe | 
+~f3 ~g3 afd efg | fed ^cAG ABc d3 |
+df/g/a df/g/a df/g/a afd | ceg ceg ceg gfe | 
+~f3 ~g3 ~a3 bag | fed ^cAG ABc dAF ||
+~D3 cBA d^cd efg | afd ^cAF GFE AFD | 
+~D3 cBA d^cd efg | fed ^cAG ABc dAF| 
+"^The rest is omitted"y `,
+			norbeckId: 300
 		}
 		/*
-		,{incipit:``,theSessionId:}
-	,{incipit:``,theSessionId:,
-		references: [
+		,{abc:[``]}
+		,references: [
 			{
 				url: "",
 				artists: "",

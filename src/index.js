@@ -395,7 +395,10 @@ function renderTable() {
 					const truncatedNotes = truncatedLines
 						.join("\n")
 						.replace(/\n/g, "<br />")
-						.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+						.replace(
+							/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
+							'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+						);
 
 					notesHtml = `
             <div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
