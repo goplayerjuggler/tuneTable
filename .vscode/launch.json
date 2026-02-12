@@ -7,9 +7,10 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Format tunes file",
+      "name": "tweak tunes file",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\dev\\format.mjs"
+      "program": "${workspaceFolder}\\dev\\tweak-meter.mjs"
+      //"${workspaceFolder}\\dev\\format.mjs"
       // "${workspaceFolder}\\test\\manipulation.js"
     },
     // {

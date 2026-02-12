@@ -7,7 +7,7 @@ This project is in the alpha stage of development. Which is one reason why I hav
 
 ## Features
 * sort tunes based on the tune’s _contour_ w.r.t. to the tonic
-  * key- and mode- agnostic
+  * key and mode agnostic, also to some extent octave agnostic - more details [here](https://github.com/goplayerjuggler/abc-tools/blob/main/docs/contour_sort.md).
   * contours are displayed next to the tune’s title
 * incipit generator (incipit: a short score giving the first few notes)
 * I try to have at least one setting or incipit for each tune
@@ -18,19 +18,21 @@ This project is in the alpha stage of development. Which is one reason why I hav
 * optional simple sorting and filtering of the tune list
 * comments/notes for tunes, optionally with links to audio references
 * optional external links to scores
-* all entries can be fully edited within the tool
+* entries can be edited within the tool
 * import & export functions
   * lists of tunes in ABC format can be imported
   * complete data for the current tune list can be exported/imported in Javascript literal or JSON format
   * integration with thesession.org: load a member’s tune book or one specific tune
 * persistence: all changes to the tune list are automatically saved (to `localStorage`) so you can close the browser, or reboot, and still see your most recent list the next time you load the page
+* meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers and  4/4 + semiquavers. The first way is the standard/orthodox/traditional way, but I often prefer the other way. 
+  For the moment this feature is limited to reels, jigs, and hornpipes.
 
 ## Upcoming features / wishlist
 Here are some features I hope to add at some point:
 * choose from a preset list of lists of tunes
 * have several incipits for a single tune - indexing by B, C parts etc
 * meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers,  4/4 + semiquavers, and 4/2 + quavers. The first way is the standard/orthodox/traditional way, but I often prefer the other two options.
-* filtering & other UI improvements
+* other UI improvements like an advanced search
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
@@ -85,8 +87,11 @@ This project uses dual licensing:
 
 ## Setup & dev notes
 ``` PowerShell
+# setup
 npm install
+# run local version
 npm run dev
+# build
 npm run build
 # working with abc-tools
 npm link ..\abctools
