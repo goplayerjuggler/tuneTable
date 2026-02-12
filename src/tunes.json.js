@@ -1957,7 +1957,7 @@ a2a fdA g2g ecB|AdA eAf gecd2:|`,
 T:Trip To The Quarry
 C:Thady Murphy
 S:Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle
-D:Deadly buzz
+D:Deadly buzz | Aoibhinn Crónán 
 H:https://irishmusic.bandcamp.com/track/a-curious-denis-murphy-jig-the-belles-of-liscarroll
 R:jig
 L:1/8
@@ -2270,9 +2270,6 @@ N:It may well not be to many people’s taste, but it’s how I wanted to do it.
 N:feel it’s better suited to getting down the swung rhythm and the variations more
 N:precisely; I wanted to get closer to the variations and ornaments played in the
 N:recording.
-N:---
-N:Imported from https://thesession.org/tunes/23320#setting47651
-N:Setting entered in thesession by user “GoPlayer” on 2023-07-13
 K:Gmajor
 M:9/16
  L: 1/16
@@ -2282,7 +2279,7 @@ M:9/16
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|.[e3c3] z2f g2e|
  d2B G2g f2g|ec2 G2g f2e|d2A F2z ABc|B2G D2G F2G|
  E2G c2e d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 (G3 G2)g||
- b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d(g2 {a}g2)f g2a|
+ b2a g2b a2^g|a2f d2g f2g|ec2 e2f gfe|d2(g {a}g2)f g2a|
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
  d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
  E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
@@ -4505,7 +4502,17 @@ K:Dmajor
 |:~A3G FAdB|AGFD EA,~A,2|~A3G FAdB|1 ABde fddB:|2 ABde fdde||
  f2df efdf|afdf edBd|f2df efdA|B/c/dAG FDDe|
  f2df efdf|afdf edB2|ABAB dfbf|afeg fddB||`,
-			theSessionId: 1522
+			references: [
+				{
+					url: "https://irishmusic.bandcamp.com/track/an-buailteoir-aerach-the-enchanted-lady-the-holy-land",
+					artists:
+						"Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle",
+					notes: `An Buailteoir Aerach / The Enchanted Lady / The Holy Land`,
+					album: "Deadly Buzz | Aoibhinn Crónán "
+				}
+			],
+			theSessionId: 1522,
+			norbeckId: 211
 		},
 		{
 			abc: `X:1
@@ -5760,7 +5767,7 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
 			groups: "alora",
 			abc: `
 X:1
-T:Flatbush
+T:Flatbush Waltz
 C:Andy Statman
 R:waltz
 L:1/8
@@ -5776,7 +5783,16 @@ B2 Be BA|GF EF GA|B2Be BG|A3c BA|EF GA BG|AE Ac BA|G2GA =FG|E6|
  B2 Be BA|GF EF GA|B2Be BG|A3c BA|GA Bc dB|AE Ac BA|G2GA =FG|E6|
  g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 e2 ef|g3 f ga|f6|
  g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 G2 EF|G2 GA =FG|E6||`,
-			theSessionId: 3809
+			badges: ["klezmer"],
+			theSessionId: 3809,
+			references: [
+				{
+					url: "https://youtu.be/muwdHjcAhNA",
+					artists:
+						"Andy Statman, mandolin; others (see [discogs](https://www.discogs.com/release/33879498-Andy-Statman-Flatbush-Waltz))",
+					notes: "Eponymous album (1980)"
+				}
+			]
 		},
 		{
 			abc: `X:1
@@ -6880,6 +6896,7 @@ BGAG EGDG EGDG EGDE|G2`,
 			incipit: `X: 1
 T:The Morning Dew
 R: reel
+N: This is a different tune from Joe Cooley’s Morning Dew
 M: 4/4
 L: 1/16
 K: Edor
@@ -6895,7 +6912,7 @@ E3B- BAFD EDEB BAFD|E3B- BAFA`,
 			]
 		},
 		{
-			aka: ["Mountain Dew"],
+			aka: ["Mountain Dew, The Morning Dew"],
 			incipit: `X: 1
 T: Joe Cooley’s Morning Dew
 R: reel
@@ -6908,6 +6925,13 @@ K: Edor
 				{
 					notes:
 						"SU: after the Rookery. AKA Mountain Dew; Morning Dew is a different reel!"
+				},
+				{
+					artists:
+						"Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle",
+					notes:
+						"The Lass of Carracastle, The Morning Dew, Lad O'Beirne's Geese in the Bog",
+					url: "https://irishmusic.bandcamp.com/track/the-lass-of-carracastle-the-morning-dew-lad-obeirnes-geese-in-the-bog"
 				}
 			],
 			groups: "su"
@@ -8361,6 +8385,17 @@ D2B2 D2BA GFGA B3d | (3edc (3dc=B (3cBG (3AGF DEFD E2DE |
 C2c2 =BGFD C2DE FGFD | CDCD CDCD C4-C2 :|
 P:variations
 (3"^v1"EDC (3FED (3EDC FD`
+		},
+		{
+			incipit: `X:216
+T:The Holy Land
+R:reel
+M:4/4
+L:1/16
+K:D
+B3d A2Bc dF~F2 DFAd|BG~G2 ABdf`,
+			theSessionId: 616,
+			norbeckId: 216
 		}
 
 		/*
