@@ -390,7 +390,7 @@ function renderTable() {
 					.replace(/```([^`]+)```/g, "<pre>$1</pre>");
 
 				const lines = ref.notes.split("\n");
-				if (lines.length > 5) {
+				if (lines.length > 12) {
 					const truncatedLines = lines.slice(0, 5);
 					const truncatedNotes = truncatedLines
 						.join("\n")
@@ -401,15 +401,15 @@ function renderTable() {
 						);
 
 					notesHtml = `
-            <div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
-              ${truncatedNotes}
-              <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More...</button>
-            </div>
-            <div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
-              ${formattedNotes}
-              <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
-            </div>
-          `;
+				    <div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
+				      ${truncatedNotes}
+				      <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
+				    </div>
+				    <div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
+				      ${formattedNotes}
+				      <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
+				    </div>
+				  `;
 				} else {
 					notesHtml = `<div class="notes">${formattedNotes}</div>`;
 				}

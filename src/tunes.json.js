@@ -1274,15 +1274,17 @@ T:Jump At The Sun
 C:John Kirkpatrick
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/736#setting736
 N:Setting entered in thesession by user “Musicalbison” on 2002-06-05
+N:(edited after importing)
 K:Dminor
-|:DFA ^G2 A|DFA ^G2 A|dAA dAA|BAG F3|
- DFA ^G2 A|DFA ^G2 A|dAA BAG|FGE D3:|
- d2 e fed|e2 f gfe|d2 e fed|A^GA B2 A|
- d2 e fed|e2 f gfe|dAA BAG|FGE D3:|`,
+|:DFA ^G2 A DFA G2 A|dAA dAA BAG F3|
+DFA ^G2 A DFA G2 A|dAA BAG FGE D3:|
+d2 e fed e2 f gfe|d2 e fed A^GA B2 A|
+d2 e fed e2 f gfe|dAA BAG FGE D3:|`,
+			parts: "AABB",
 			theSessionId: 736
 		},
 		{
@@ -1351,15 +1353,16 @@ K:Baeol
 T:The Black Rogue
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1076#setting1076
 N:Setting entered in thesession by user “b.maloney” on 2002-10-24
+N:*abc-tools: convert to M:12/8*
 K:Amixolydian
-|:cAA BGG|cAA ABd|cAA BAG|AFD D2 B|
- cAA BGG|cAA AFD|G2 A (B/c/d)B|1 AFD D2 B:|2 AFD D3||
- |:~f3 ~g3|afd cBA|~f3 gfg|afd dfg|
- agf gfe|fed e/f/ed|cBA BAG|AFD D3:|`,
+|:cAA BGG cAA ABd|cAA BAG AFD D2 B|
+cAA BGG cAA AFD|G2 A (B/c/d)B[1 AFD D2 B:|2 AFD D3||
+|:~f3 ~g3 afd cBA|~f3 gfg afd dfg|
+agf gfe fed e/f/ed|cBA BAG AFD D3:|`,
 			theSessionId: 1076,
 			references: [
 				{
@@ -1402,15 +1405,16 @@ K:Gmajor
 T:Brian O’Lynn
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/830#setting830
 N:Setting entered in thesession by user “Mark Cordova” on 2002-07-08
+N:*abc-tools: convert to M:12/8*
 K:Adorian
-B|:cAd cAG|EDE GAB|cBc BAG|EAA ~A2B|
- cAd cAG|EDE GAB|cde =fed|1 cAA A2B:|2 cAA A2f||
- gea ged|cAB cde|eaa age|ed^c def|
- geg fed|cAB cde|=fed cAG|1 EAA A2f:|2 EAA A2||`,
+B|:cAd cAG EDE GAB|cBc BAG EAA ~A2B|
+cAd cAG EDE GAB|cde =fed[1 cAA A2B:|2 cAA A2f||
+gea ged cAB cde|eaa age ed^c def|
+geg fed cAB cde|=fed cAG[1 EAA A2f:|2 EAA A2||`,
 			theSessionId: 830
 		},
 		{
@@ -1886,6 +1890,7 @@ K:Amix
 Ace aed cdB A2a|aed cdB ABG A3:|
 GBd G3 FAd F3|e2e ecA e2e ecA|
 GBd G3 FAd F2a|aed cdB ABG A3:|`,
+			parts: "AABB",
 			theSessionId: 1497
 		},
 		{
@@ -2342,9 +2347,7 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
 		},
 		{
 			groups: "su",
-			name: "The Walking Stick / The Toonagh Mazurka",
-			abc: [
-				`X:1
+			abc: `X:1
 T:The Walking Stick
 C:Tommy Peoples
 F:https://youtu.be/1UhBWPM4uA8?t=62
@@ -2362,22 +2365,27 @@ K:Dmajor
  d2 f2 ag|bg B2(3ggg|fe Ac ec|d2d2:||:AF|
  D2 (3FGA df|a2 ge Ad|g2 fd Ad|(3fff dA FE|
  D2 (3FGA df|a2 ge Ad|fg fd AG|FA d2:|`,
+			theSessionId: 1302
+		},
+		{
+			groups: "su",
+
+			abc: [
 				`%abc-2.1
 X: 1
 T:Toonagh Mazurka
-C:Tommy Peoples; and possibly Eamonn Coyne too
+C:Eamonn Coyne
 S:Eamonn Coyne
-Z:abc-transcription Malcolm Schonfield, 2018-11-19,26; 2024-12-04,05; 2025-01-28
+Z:abc-transcription Malcolm Schonfield%, 2018-11-19,26; 2024-12-04,05; 2025-01-28, 2026-02-12
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: Mazurka
 N: 1. Mostly swung throughout – so in general “♪♪=♩♪”.
 N: 2. I asked Eamonn Coyne about this tune and he told me it’s a version of a Tommy
-N: Peoples tune that he learned from TP’s and TP’s daughter (Siobhán)’s playing. He 
+N: Peoples tune that he learned from T. Peoples’ and T. Peoples’ daughter (Siobhán)’s playing. He 
 N: never intended it to be a new tune of his.
-N: 3. The TP tune in question is called the Walking Stick.
-N: 4. I personally think this tune, or setting or variation of a TP tune, is sufficiently 
-N: different from the TP tune to be considered as a different tune in its own right. So 
-N: one might argue it’s EC’s tune too as well.
+N: 3. The T. Peoples tune in question is called the Walking Stick.
+N: 4. I personally think this tune, or setting or variation of a T. Peoples tune, is sufficiently 
+N: different from the T. Peoples tune to be considered as a different tune in its own right. 
 M: 3/4
 L: 1/8
 K: D
@@ -2407,8 +2415,7 @@ live; 2012`
 					url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
 					notes: "EP"
 				}
-			],
-			theSessionId: 1302
+			]
 		},
 		{
 			abc: `
@@ -5752,15 +5759,24 @@ FG|:A3d AF|G2A2 FD|=C2 (D4|D4) FG|
 		},
 		{
 			groups: "alora",
-			incipit: `
-X: 7
+			abc: `
+X:1
+T:Flatbush
 C:Andy Statman
-T: Flatbush
-R: waltz
-M: 3/4
-L: 1/8
-K: Emin
-B2 Be BA|FG E2 GA`,
+R:waltz
+L:1/8
+M:3/4
+N:An approximate version of what people at my local session in Kassel, Germany are
+N:playing.
+N:---
+N:Imported into *tuneTable* on 2026-02-11,
+N:from https://thesession.org/tunes/3809#setting36852
+N:Setting entered in thesession by user “bravesentry” on 2019-12-18
+K:Eminor
+B2 Be BA|GF EF GA|B2Be BG|A3c BA|EF GA BG|AE Ac BA|G2GA =FG|E6|
+ B2 Be BA|GF EF GA|B2Be BG|A3c BA|GA Bc dB|AE Ac BA|G2GA =FG|E6|
+ g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 e2 ef|g3 f ga|f6|
+ g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 G2 EF|G2 GA =FG|E6||`,
 			theSessionId: 3809
 		},
 		{
@@ -5905,6 +5921,7 @@ AF|D2FA DAFA dfed B2dB|A2AB AFDE
 			aka: ["Paddy Fahey’s"],
 			groups: "su",
 			rhythm: "jig",
+			parts: "AABB",
 			incipit: `X: 1
 T: Fahey’s Fiddle
 C:Paddy Fahey
@@ -6632,7 +6649,7 @@ eaab ageg a2ba agef|~g3b a2ab- bc'ba [1 gedg :| [2 gedB !D.S.!||`,
 					artists: "Seán Ryan, fiddle",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=2",
 					notes:
-						"(1960s) A setting in a major or mixo mode. (sort of; ishg). Interesting! "
+						"(1960s) A setting in a major or mixo mode. (Sort of; ish). Interesting! H. Norbeck wrote a [score for it](https://www.norbeck.nu/abc/display.asp?rhythm=reel&ref=853)."
 				},
 				{
 					artists: "Joe Ryan, fiddle; John Kelly, fiddle ",
@@ -7859,9 +7876,13 @@ T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
 L:1/8
+N: 1. This tune came to me sometime between 2010 and 2016. I’ve chose not to completely fix the order the 
+N: parts are played in; and whether or not to double them. 
+N: 2. Obviously the SNCF jingle is prominent in the tune, hence its name.
+N: 3. This score has many defects and maybe sometime I’ll get round to redoing it.
 M:12/8
 K:Am
-%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax
+%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax, 260212 comments
 P:A
 "Am"EBc "F"~G3 \\ % or { EBc G2G } or { .E2B cG2 } or { EBc GAF }
 "Am"FBc "F"~G3 | \\ %  or { .F2B cG2 | }  or { .E2B cG2 |} or { EBc ~G3 | } or { EBc GAF | } or { .E2B cG2 |}
@@ -8241,16 +8262,52 @@ df/g/a df/g/a df/g/a afd | ceg ceg ceg gfe |
 ~D3 cBA d^cd efg | fed ^cAG ABc dAF| 
 "^The rest is omitted"y `,
 			norbeckId: 300
+		},
+		{
+			groups: "alora",
+			abc: [
+				`X:1
+T:Säckpipslåt från Norra Råda
+R: March
+O:Sweden;Värmland.
+N:Copied from [folkwiki.se](http://www.folkwiki.se/Musik/1869)
+Z: Jimmy U, 2011-07-21
+M:4/4
+L:1/8
+K:Ddor
+DE|F2EFD2EF|G2FGE2FG|A2BA GFEF|D2EDC2DE|
+F2EFD2EF|G2FGE2FG|A2BA GFEF|D6:|]|:DF|
+A2FA cBGB|BAced2dc|A2FA cBGB|BAAG FEFG|
+A2FA cBGB|BAced2dc|A2BA GFEF|D6:|]`,
+				`X: 71
+T: Murar Jans marsch
+O:Sweden;Västmanland.
+R: Gånglåt
+Z: Nils L
+N:Copied from [folkwiki.se](http://www.folkwiki.se/Musik/1786)
+M: 2/4
+L: 1/16
+K: Am
+(,AB | c2)(Bc) A2(Bc) | (d2cd) B2"#"cd | e2^fe (d^cBc) | A2A2 [E2A,2]AB | 
+       c2(Bc A2)Bc | d2(^cd B2)cd | e2fe (d^c)(Bc) | !>![A6A6] :: [K:D]
+(Ac) | e2(ce) gfdf | (fe)gb a2>(g2 | e2)ce gfdf | feed (cB)(cd) |
+       e2ce gfdf | (fe)gb a2>(g2 | e2)fe (dc)(Bc) | [AA]6 :|`
+			],
+			references: [
+				{
+					url: "https://open.spotify.com/track/3mQDLVbdR6oSxhsrXWG4iN",
+					artists: "Blå Bergens Borduner",
+					notes: `[discogs](https://www.discogs.com/release/4225382-Bl%C3%A5-Bergens-Borduner-Bl%C3%A5-Bergens-Borduner)`
+				},
+				{
+					url: "https://open.spotify.com/track/5HxW6YtjoooW0xgnekPPax",
+					artists: "Anders Norudde, bagpipes",
+					notes: "Album: Kan Själv! Track name: Sura Råda"
+				}
+			]
 		}
+
 		/*
-		,{abc:[``]}
-		,references: [
-			{
-				url: "",
-				artists: "",
-				notes: ``,
-			}
-		]}
-	 */
+		 */
 	]
 };
