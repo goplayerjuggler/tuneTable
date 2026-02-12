@@ -438,23 +438,26 @@ function renderTable() {
 			.join(" ");
 
 		const aka = tune.aka ? tune.aka.join(", ") : "",
-			akaTitle = aka ? ` title="aka: ${aka}"` : "";
+			tooltip =
+				aka || tune.titles
+					? ` title="${tune.titles ? tune.titles.join(", ") + (aka && tune.titles ? "; " : "") : ""}${aka ? `AKA: ${aka}` : ""}"`
+					: "";
 
 		const hasAbc = !!tune.abc;
 		const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
-		// debugger;
+
 		const incipitId = `incipit${index}`;
 		const title = `<div class="tune-header">
       ${
 				hasAbc
-					? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${akaTitle}>
+					? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
         ${tune.name}
       </a>${
 				Array.isArray(tune.abc) && tune.abc.length > 1
 					? ` - ${tune.abc.length} settings`
 					: ""
 			}`
-					: `<div class="${tuneNameClass}" data-tune-index="${index}" ${akaTitle}>
+					: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
         ${tune.name}
       </div>`
 			}`;

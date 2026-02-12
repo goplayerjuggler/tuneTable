@@ -43,6 +43,8 @@ function updateFromMetadata(
 			processed.composer = metaData.composer;
 			if (setIsFromAbc) processed.composerIsFromAbc = true;
 		}
+
+		if (metaData.titles) processed.titles = metaData.titles;
 	}
 
 	if (!processed.references) {
