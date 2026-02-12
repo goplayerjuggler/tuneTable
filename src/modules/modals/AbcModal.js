@@ -63,14 +63,14 @@ export default class AbcModal extends Modal {
             </button>
           </div>
           <div class="control-row">
-            <button id="prevAbcBtn" class="nav-btn">← Previous</button>
+            <button id="prevAbcBtn" class="nav-btn">↑ Previous setting</button>
             <span id="abcCounter"></span>
-            <button id="nextAbcBtn" class="nav-btn">Next →</button>
+            <button id="nextAbcBtn" class="nav-btn">↓ Next setting</button>
           </div>
           <div class="control-row pagination-controls">
-            <button id="prevPageBtn" class="nav-btn">◄ Prev page</button>
+            <button id="prevPageBtn" class="nav-btn">← Prev page</button>
             <span id="pageCounter"></span>
-            <button id="nextPageBtn" class="nav-btn">Next page ►</button>
+            <button id="nextPageBtn" class="nav-btn">Next page →</button>
           </div>
         </div>
       `
