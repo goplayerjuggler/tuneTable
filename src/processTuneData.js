@@ -5,7 +5,8 @@ import {
 	normaliseKey,
 	getKey,
 	getFirstBars,
-	getMetadata
+	getMetadata,
+	getTunes
 } from "@goplayerjuggler/abc-tools";
 
 const applySwingTransform = ["hornpipe", "barndance", "fling", "mazurka"];
@@ -76,14 +77,24 @@ function updateFromMetadata(
 function processTuneData(tune) {
 	const processed = { processedFromAbc: [], ...tune };
 
-	if (tune.incipit && !tune.abc) {
+	if (typeof tune.aka === "string") processed.aka = [tune.aka];
+	if (typeof tune.badges === "string") processed.badges = [tune.badges];
+	if (tune.incipit && !processed.abc) {
 		const abcMeta = getMetadata(tune.incipit);
 		updateFromMetadata(abcMeta, processed, false);
 		processed.incipit = getFirstBars(tune.incipit, 4, true, false, {
 			all: true
 		});
 	} else if (tune.abc) {
-		const abcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
+		if (typeof tune.abc === "string") {
+			const firstX = tune.abc.indexOf("X:");
+
+			if (firstX !== -1 && tune.abc.indexOf("X:", firstX + 2) !== -1)
+				processed.abc = getTunes(tune.abc);
+		}
+		const abcArray = Array.isArray(processed.abc)
+			? processed.abc
+			: [processed.abc];
 
 		abcArray.forEach((abcString, index) => {
 			const abcMeta = getMetadata(abcString);
@@ -91,6 +102,7 @@ function processTuneData(tune) {
 			if (index === 0) updateFromMetadata(abcMeta, processed);
 			else updateFromMetadata(abcMeta, processed, false, false);
 		});
+
 		if (!tune.incipit) {
 			try {
 				processed.incipit = getIncipit({ abc: abcArray[0] });

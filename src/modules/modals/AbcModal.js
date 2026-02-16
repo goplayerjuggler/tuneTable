@@ -163,22 +163,29 @@ export default class AbcModal extends Modal {
 
 		this.handleKeydown = (e) => {
 			if (!super.isOpen()) return false;
+			let handled = true;
+			switch (e.key) {
+				case "ArrowLeft":
+					this.prevPage();
 
-			if (e.key === "ArrowLeft") {
-				this.prevPage();
-				return false;
-			} else if (e.key === "ArrowRight") {
-				this.nextPage();
-				return false;
-			} else if (e.key === "ArrowUp") {
-				this.navigate(-1);
-				return false;
-			} else if (e.key === "ArrowDown") {
-				this.navigate(1);
-				return false;
+					break;
+				case "ArrowRight":
+					this.nextPage();
+					break;
+				case "ArrowUp":
+					this.navigate(-1);
+					break;
+				case "ArrowDown":
+					this.navigate(1);
+					break;
+				default:
+					handled = false;
+					break;
 			}
-
-			return false;
+			if (handled) {
+				e.preventDefault();
+				e.stopPropagation();
+			}
 		};
 
 		document.addEventListener("keydown", this.handleKeydown);
