@@ -6,22 +6,24 @@ The tool sorts tunes, or indexes them, based on something I call the _contour_ o
 This project is in the alpha stage of development. Which is one reason why I have so far hardly done any publicity for it.
 
 ## Features
-* sort tunes based on the tune’s _contour_ w.r.t. to the tonic
+* sort tunes based on the tune’s _contour_ w.r.t. to the tonic:
   * key and mode agnostic, also to some extent octave agnostic - more details [here](https://github.com/goplayerjuggler/abc-tools/blob/main/docs/contour_sort.md).
   * contours are displayed next to the tune’s title
+  * can toggle between “contour” sorting  and simple sorting on the tune name
 * incipit generator (incipit: a short score giving the first few notes)
 * I try to have at least one setting or incipit for each tune
 * tunes can have:
   * zero, one or more settings in ABC
   * zero or one incipits
 * a popup score viewer with transpose buttons, for tunes with one or more settings in ABC
-* optional simple sorting and filtering of the tune list
+* search/filtering by text / key / rhythm
 * comments/notes for tunes, optionally with links to audio references
 * optional external links to scores
 * entries can be edited within the tool
 * import & export functions
   * lists of tunes in ABC format can be imported
   * complete data for the current tune list can be exported/imported in Javascript literal or JSON format
+  * data for one single tune can be exported
   * integration with thesession.org: load a member’s tune book or one specific tune
 * persistence: all changes to the tune list are automatically saved (to `localStorage`) so you can close the browser, or reboot, and still see your most recent list the next time you load the page
 * meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers and  4/4 + semiquavers. The first way is the standard/orthodox/traditional way, but I often prefer the other way. 
@@ -29,9 +31,10 @@ This project is in the alpha stage of development. Which is one reason why I hav
 
 ## Upcoming features / wishlist
 Here are some features I hope to add at some point:
+* a set list creation and management feature that allows users to select tunes from the main table and arrange them into ordered sets for sessions, or gigs, or classes, or other events. With Print functionalities too. 
+Set lists could also be called tune selections.
 * choose from a preset list of lists of tunes
 * have several incipits for a single tune - indexing by B, C parts etc
-* meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers,  4/4 + semiquavers, and 4/2 + quavers. The first way is the standard/orthodox/traditional way, but I often prefer the other two options.
 * other UI improvements like an advanced search
 
 ## Live demo
@@ -51,8 +54,6 @@ It’s a hodgepodge list of tunes I either like, am interested in, or want to sh
 A fair number of the scores there are my own work, either transcriptions of other people’s tunes or original pieces. I reserve some rights on this via a CC licence; details below.
 
 A good proportion of the tunes was loaded from [thesession.org](https://thesession.org) based on my tune book there; but I haven’t yet gone through the tunes to check important things like the key – for contour sorting, it makes a big difference, e.g. having `K:G` instead of `K: Dmix`!
-
-The current default list of tunes can be changed easily using the tool’s edit and import functionalities.
 
 ## Dev notes
 I used Claude.ai to do a lot of the dev work. Tune rendering and transposing is done by [abcjs](https://github.com/paulrosen/abcjs), a library written by by Paul Rosen and Gregory Dyke.

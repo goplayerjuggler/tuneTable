@@ -6367,6 +6367,7 @@ M: 18/16
 L: 1/16
 K: D mixo
 FGA AFA Bc2 BAG FAF GED|`,
+			parts: "AABBCCDDEE",
 			references: [
 				{
 					url: "https://jasonorourke.bandcamp.com/track/the-peacock-following-the-hen-ofarrells-welcome-to-limerick-my-mind-will-never-be-easy",
@@ -8570,6 +8571,7 @@ edB BAF EDB, DEF|G2E FED B,ED E3:|`,
 		},
 		{
 			groups: "su",
+			parts: "AABB",
 			incipit: `%abc-2.1
 X: 1
 T: The Sour Mash
