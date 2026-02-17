@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-02-16",
+	lastUpdate: "2026-02-17",
 	tunes: [
 		{
 			abc: `
@@ -1231,7 +1231,6 @@ K:Aminor
 ~c3 edc deg a2 (a|{b}a)ge deg[1 edB A2 B:|2 edB A3||`,
 			theSessionId: 2540
 		},
-
 		{
 			abc: `X:1
 T:Saddle The Pony
@@ -1592,6 +1591,7 @@ K:Amixo
 		{
 			abc: `X:1
 T:Partie De Quadrille
+O:Quebec
 R:jig
 L:1/8
 M:12/8
@@ -1610,7 +1610,8 @@ K:Fmajor
  |:a2a aga b3 b2a|g2g gfg ac'a cde|
  f2f fef g3 g2f|ege cde [1 fcA F3:|2 fcA FcB !D.C.! |]`,
 			theSessionId: 23388,
-			theSessionSettingId: 47849
+			theSessionSettingId: 47849,
+			badges: "crooked"
 		},
 		{
 			abc: `X:1
@@ -2347,7 +2348,6 @@ K:Dmajor
 		},
 		{
 			groups: "su",
-
 			abc: [
 				`%abc-2.1
 X: 1
@@ -3409,16 +3409,19 @@ G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
 			abc: `X:1
 T:Castle Kelly
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/21#setting21
 N:Setting entered in thesession by user “Jeremy” on 2001-05-21
+N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Aminor
-|:A2 cA ABcA|GcEG G2 EG|A2 cA ABcd|ecdB cA A2:|
- agec dfed|cAGE G2 eg|agec d2cd|eaag a2ba|
- gedc dfed|cAGE|G2 EG|A2 cA ABcd|ecdB cA A2|`,
-			theSessionId: 21
+|:A2cA ABcA GcEG G2EG|A2cA ABcd ecdB cAA2:|
+  agec dfed cAGE G2eg|agec d2cd eaag a2ba|
+  gedc dfed cAGE|G2EG|A2cA ABcd ecdB cAA2|`,
+			theSessionId: 21,
+			parts: "AABB",
+			norbeckId: 118
 		},
 		{
 			groups: "su",
@@ -3632,19 +3635,21 @@ K:Dmajor
 		{
 			abc: `X:1
 T:Reel De Valleyfield
+O:Quebec
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Quebec reel, composer unknown.
 N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/17457#setting33504
 N:Setting entered in thesession by user “Siúlóir” on 2018-11-10
+N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Dmajor
-|:DFAF DFAF|EGAG EGAG|DFAF DFAd|fedf e2AF|
- DFAF DFAF|EGAG EGAG|DFAF DFAd|1 fedc d2AF:|2 feBc d2fd||
- |:Adfd Adfa|gfed e2B2|ABcd edeg|fdec d2fd|
- Adfd Adfa|gfed e2B2|ABcd efeg|fedc d2fd:|`,
+|:DFAF DFAF EGAG EGAG|DFAF DFAd fedf e2AF|
+DFAF DFAF EGAG EGAG|DFAF DFAd[1 fedc d2AF:|2 feBc d2fd||
+|:Adfd Adfa gfed e2B2|ABcd edeg fdec d2fd|
+Adfd Adfa gfed e2B2|ABcd efeg fedc d2fd:|`,
 			theSessionId: 17457,
 			theSessionSettingId: 33504
 		},
@@ -3829,7 +3834,6 @@ K:Gmajor
 BG~G2 BGcG|BG~G2 Bdgd|BG~G2 BdcB`,
 			theSessionId: 195,
 			norbeckId: 1,
-
 			references: [
 				{
 					notes:
@@ -3908,19 +3912,20 @@ K:Edorian
 			abc: `X:1
 T:La Grande Traversée
 C:Marcel Messervier
+O:Quebec
 R:reel
-L:1/8
+L:1/16
 M:4/4
-N:Reel from Quebec.
-N:---
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/17379#setting33333
-N:Setting entered in thesession by user “Siúlóir” on 2018-10-14
+N:This setting is a few tweaks of a 
+N: [setting on thesession.org](https://thesession.org/tunes/17379#setting33333).
+N:(Setting entered in thesession by user “Siúlóir” on 2018-10-14)
 K:Dmajor
-A2G2 S|:F3d dcde|d2A2 F2A2|G3d dcde|d2B2 G2B2|
- A3e edef|e2c2 B2A2|1 dFAd fedc|B2A2 {B}A2G2:|2 d2AA BAFA|d6ed||
- [K:A]|:cecA EAce|d2B2 B4|GBBB ddBd|ffed c2ed|
- cecA EAce|d2B2 B4|GBBB ddBd|fece [1 a2ed:|2 a2ASG||`,
+A2G2 S|:F3d dcde d2A2 F2A2|G3d dcde d2B2 G2B2|
+A3e edef e2c2 B2A2 |1 dFAd fedc B2A2 {B}A2G2:|2 [M:3/4]d2AA BAFA d2ed||
+[M:4/4][K:A]|:cecA EAce d2B2 B4 | GBBB ddBd ffed c2ed |
+cecA EAce d2B2 B4 | [1 GBBB ddBd fece  a2ed:|2 [M:5/4]GBBB ddBd fece  a4 A2SG2||
+`,
+			badges: "crooked",
 			theSessionId: 17379,
 			theSessionSettingId: 33333
 		},
@@ -3963,7 +3968,7 @@ K:Gmajor
 			abc: [
 				`X:1
 T:Cotillon De Baie-Ste-Catherine
-O: Québec
+O:Quebec
 R:reel
 L:1/16
 M:4/4
@@ -3983,6 +3988,7 @@ K:Gmajor
 |:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
  [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`
 			],
+			badges: "crooked",
 			theSessionId: 23211,
 			theSessionSettingId: 47315
 		},
@@ -4486,7 +4492,7 @@ K:Dmajor
 					url: "https://irishmusic.bandcamp.com/track/an-buailteoir-aerach-the-enchanted-lady-the-holy-land",
 					artists:
 						"Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle",
-					notes: `An Buailteoir Aerach / The Enchanted Lady / The Holy Land`,
+					notes: "An Buailteoir Aerach / The Enchanted Lady / The Holy Land",
 					album: "Deadly Buzz | Aoibhinn Crónán "
 				}
 			],
@@ -7567,14 +7573,15 @@ F: https://youtu.be/CxAYuvcfslQ?si=Y0y7AnAa8NbZk_9i&t=99
 Z: abc-transcription Malcolm Schonfield% 2024-05-28
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: jig
-M: 6/8
+M:12/8
 L: 1/8
+N:*abc-tools: convert to M:12/8*
 K: G
-[P:A]Bc | dBG B,DG | Bdd d^cd | e^cA A,EE | A^ce gfe | dBG B,DG | Bd/d/d dcB | Ace a2g | fd^c d 
-Bc | dBG B,DG | Bd/d/d d^cd | e^cA A,^CE | A^ce gfe | dBG B,DG | Bd/d/d dcB | Ace a2g | fd^c d 
-[P:B]ef | gea fdg | ece dBG | GBd gfe | dBG GBd | gea fdg | ece dcB | Ace ^ga=g | fd^c d 
-ef | gea fdf | ece dBG | GBd fg/f/g | dBG GBd | g3 fed | e/f/ge dcB | Ace ^ga=g | fd^c d
-[P:C]|: ^c=c | Bc^c dbf | agd fe_e | dbf agd | g/f/ed bge | dbf aed | ~B3 gdB | Ace a2g | fd^c d :|`
+[P:A]Bc | dBG B,DG Bdd d^cd | e^cA A,EE Ace gfe | dBG B,DG Bd/d/d dcB | Ace a2g fd^c d
+B=c | dBG B,DG Bd/d/d d^cd | e^cA A,^CE Ace gfe | dBG B,DG Bd/d/d dcB | Ace a2g fd^c d
+[P:B]ef | gea fdg ece dBG | GBd gfe dBG GBd | gea fdg ece dcB | Ace ^ga=g fd^c d
+ef | gea fdf ece dBG | GBd fg/f/g dBG GBd | g3 fed e/f/ge dcB | Ace ^ga=g fd^c d
+[P:C]|: ^c=c | Bc^c dbf agd fe_e | dbf agd g/f/ed bge | dbf aed ~B3 gdB | Ace a2g fd^c d :|`
 		},
 		{
 			groups: "su",
@@ -7612,7 +7619,7 @@ eB~B2 eBdB AGAB GEDE|GB (3BBB`,
 				{
 					url: "https://youtu.be/lQ1d3TvE1Ow",
 					artists: "John Carty, fiddle; Brian McGrath, piano",
-					notes: `George White's Favourite / The Lass Of Carracastle`
+					notes: "George White's Favourite / The Lass Of Carracastle"
 				}
 			]
 		},
@@ -8204,7 +8211,6 @@ L:1/8
 K:G
 B2A BGG dGG BAG | ~A3 ABA  GB/c/d gdc |
 `,
-
 			norbeckId: 530,
 			theSessionId: 10733,
 			parts: "AABB"
@@ -8261,7 +8267,7 @@ K:G
 			norbeckId: 176,
 			theSessionId: 26,
 			parts: "AABB",
-			incipitB: `gfe fed e/f/ge dBA|Bee dBA`
+			incipitB: "gfe fed e/f/ge dBA|Bee dBA"
 		},
 		{
 			incipit: `X: 1
@@ -8334,7 +8340,8 @@ K: Am
 				{
 					url: "https://open.spotify.com/track/3mQDLVbdR6oSxhsrXWG4iN",
 					artists: "Blå Bergens Borduner",
-					notes: `[discogs](https://www.discogs.com/release/4225382-Bl%C3%A5-Bergens-Borduner-Bl%C3%A5-Bergens-Borduner)`
+					notes:
+						"[discogs](https://www.discogs.com/release/4225382-Bl%C3%A5-Bergens-Borduner-Bl%C3%A5-Bergens-Borduner)"
 				},
 				{
 					url: "https://open.spotify.com/track/5HxW6YtjoooW0xgnekPPax",
@@ -8351,7 +8358,7 @@ C:Angus MacKenzie
 R: jig
 M: 12/8
 L: 1/8
-K: Edor
+K: Baeol
 BAB d2 B efe edB|BAB`,
 			parts: "AABB",
 			theSessionId: 13601
@@ -8533,8 +8540,28 @@ From 1:46 onwards. An “impromptu session of music in the old style led by Jose
 I’m very fond of this reel. There’s a lot of scope for variation in it I think.`
 				}
 			]
+		},
+		{
+			abc: `X:1
+T:Pull The Knife And Stick It Again
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-16,
+N:from https://thesession.org/tunes/398#setting13240
+N:Setting entered in thesession by user “milesnagopaleen” on 2003-02-10
+N:*abc-tools: convert to M:12/8*
+K:Edorian
+|:E3 GFE DB,E DB,D|E3 GFE ABG AFD|
+E2F GFE DB,E DEF|G2E FED B,ED E3:|
+|:edB BAF EDB, D3|edB BAF ABc def|
+edB BAF EDB, DEF|G2E FED B,ED E3:|`,
+			theSessionId: 398,
+			parts: "AABB",
+			norbeckId: 49
 		}
-		/*
+	]
+	/*
 		,{incipit:``,theSessionId:
 			references: [
 				{
@@ -8544,5 +8571,4 @@ I’m very fond of this reel. There’s a lot of scope for variation in it I thi
 				},
 				],},
 		 */
-	]
 };
