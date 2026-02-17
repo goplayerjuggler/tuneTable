@@ -21,7 +21,7 @@ const getEmptySort = () => {
 	return { column: null, direction: "asc" };
 };
 let currentSort = getEmptySort();
-let editModal, addTunesModal, loadJsonModal;
+let editModal, getAbcModal, addTunesModal, loadJsonModal;
 
 // Local Storage Functions
 function saveTunesToStorage() {
@@ -283,6 +283,7 @@ function initialiseData() {
 	};
 
 	editModal = new EditModal(callbacks);
+	getAbcModal = () => new AbcModal(callbacks);
 	addTunesModal = new AddTunesModal(callbacks);
 	loadJsonModal = new LoadJsonModal(callbacks);
 
@@ -373,8 +374,7 @@ function populateFilters() {
 function openAbcModal(tune) {
 	if (!tune.abc) return;
 
-	let abcModal = new AbcModal();
-	abcModal.openWithTune(tune);
+	getAbcModal().openWithTune(tune);
 }
 
 function renderTable() {
@@ -562,7 +562,7 @@ function renderTable() {
 		const tuneNameEl = row.querySelector(".tune-name");
 		if (hasAbc) {
 			tuneNameEl.addEventListener("click", () => {
-				openAbcModal(tune);
+				openAbcModal(window.filteredData[index], index);
 			});
 		}
 		row.querySelector(".btn-select").addEventListener("click", () => {

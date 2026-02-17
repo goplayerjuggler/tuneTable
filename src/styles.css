@@ -455,6 +455,7 @@ th.sort-desc::after {
 }
 
 .modal-controls {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -473,6 +474,7 @@ th.sort-desc::after {
 .toggle-view-btn,
 .close-btn,
 .transpose-btn,
+.save-btn,
 .nav-btn {
   padding: 10px 20px;
   border: none;
@@ -485,7 +487,8 @@ th.sort-desc::after {
 
 .toggle-view-btn,
 .transpose-btn,
-.nav-btn {
+.nav-btn,
+.save-btn {
   background: var(--btn-primary-bg);
   color: white;
 }

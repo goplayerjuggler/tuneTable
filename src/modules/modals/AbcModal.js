@@ -13,6 +13,7 @@ import {
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
 import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-parser.js";
+import { processTuneData } from "../../processTuneData.js";
 
 /**
  *
@@ -26,6 +27,8 @@ import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-pars
  * - Navigate between multiple tune settings
  * - Pagination for long scores with click navigation
  * - Auto-hiding header to maximise score viewing area
+ * - Dirty-state detection: compares current ABC strings against the originals
+ *   opened with, showing a Save button when any setting has been modified
  *
  * **Key Methods**:
  * - `openWithTune(tune)`: Initialise and show modal with tune data
@@ -34,9 +37,27 @@ import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-pars
  * - `toggleView()`: Switch between rendered and text views
  * - `nextPage()`: Navigate to next page of score
  * - `prevPage()`: Navigate to previous page of score
+ * - `save()`: Persist all modified settings back to the tune data
+ *
+ *  **State variables for ABC content:**
+ *  - `currentTuneAbc` — the pre-transposition base for the active setting.
+ *    Only ever changed by `changeBarLength`. Always the input to
+ *    `transposeAbcNotation`, so transpositions accumulate correctly (+1
+ *    then +1 equals +2).
+ *  - `currentTransposedAbc` — the effective ABC for the active setting:
+ *    `currentTuneAbc` transposed by `currentTranspose`, or `currentTuneAbc`
+ *    itself when `currentTranspose === 0`. Used for display, and as the
+ *    value committed to `currentAbcArray` on navigate, and to `tune.abc`
+ *    on save.
+ *  - `currentAbcArray` — working copy of all settings for the open tune.
+ *    Initialised from `tune.abc` at open; only written to in `navigate()`
+ *    (committing the departing setting before switching index). Compared
+ *    against `originalAbcArray` by `isDirty`.
+ *  - `originalAbcArray` — immutable snapshot of `currentAbcArray` at open,
+ *    used solely for dirty-state comparison.
  */
 export default class AbcModal extends Modal {
-	constructor() {
+	constructor(callbacks) {
 		super({
 			id: "abcModal",
 			size: "large",
@@ -50,6 +71,9 @@ export default class AbcModal extends Modal {
         </div>
         <div class="modal-controls">
           <div class="control-row">
+		  <button id="saveAbcBtn" class="save-btn" style="display:none">
+			Save changes
+		  </button>
             <button id="doubleBtn" class="transpose-btn">
               double bar length
             </button>
@@ -77,32 +101,38 @@ export default class AbcModal extends Modal {
         </div>
       `
 		});
+
+		this.callbacks = callbacks;
 	}
 
 	onOpen() {
-		this.elements = {
-			rendered: document.getElementById("abcRendered"),
-			text: document.getElementById("abcText"),
-			textContent: document.getElementById("abcTextContent"),
-			toggleBtn: document.getElementById("toggleViewBtn"),
-			transposeUpBtn: document.getElementById("transposeUpBtn"),
-			transposeDownBtn: document.getElementById("transposeDownBtn"),
-			prevBtn: document.getElementById("prevAbcBtn"),
-			nextBtn: document.getElementById("nextAbcBtn"),
-			doubleBtn: document.getElementById("doubleBtn"),
-			halveBtn: document.getElementById("halveBtn"),
-			counter: document.getElementById("abcCounter"),
-			prevPageBtn: document.getElementById("prevPageBtn"),
-			nextPageBtn: document.getElementById("nextPageBtn"),
-			pageCounter: document.getElementById("pageCounter")
-		};
+		// Resolve element references and set up listeners once — the modal HTML
+		// is created at construction time and persists for the lifetime of the instance
+		if (!this.elements) {
+			this.elements = {
+				rendered: document.getElementById("abcRendered"),
+				text: document.getElementById("abcText"),
+				textContent: document.getElementById("abcTextContent"),
+				toggleBtn: document.getElementById("toggleViewBtn"),
+				transposeUpBtn: document.getElementById("transposeUpBtn"),
+				transposeDownBtn: document.getElementById("transposeDownBtn"),
+				prevBtn: document.getElementById("prevAbcBtn"),
+				nextBtn: document.getElementById("nextAbcBtn"),
+				doubleBtn: document.getElementById("doubleBtn"),
+				halveBtn: document.getElementById("halveBtn"),
+				counter: document.getElementById("abcCounter"),
+				prevPageBtn: document.getElementById("prevPageBtn"),
+				nextPageBtn: document.getElementById("nextPageBtn"),
+				pageCounter: document.getElementById("pageCounter"),
+				saveBtn: document.getElementById("saveAbcBtn")
+			};
+			this.setupControls();
+		}
 
 		// Pagination state
 		this.currentPage = 0;
 		this.allSvgs = [];
 		this.LINES_PER_PAGE = 9;
-
-		this.setupControls();
 
 		// Ensure rendered view is shown
 		this.elements.rendered.style.display = "block";
@@ -115,16 +145,44 @@ export default class AbcModal extends Modal {
 		this.updateDisplayAfterTranspose();
 		this.updateNavigationButtons();
 		this.updateBarLengthButtons();
+		this.updateSaveButton();
 	}
 
 	updateBarLengthButtons() {
-		if (canDoubleBarLength(this.currentTuneAbc))
-			this.elements.doubleBtn.style.display = "block";
-		else this.elements.doubleBtn.style.display = "none";
+		this.elements.doubleBtn.style.display = canDoubleBarLength(
+			this.currentTuneAbc
+		)
+			? "block"
+			: "none";
+		this.elements.halveBtn.style.display = canHalveBarLength(
+			this.currentTuneAbc
+		)
+			? "block"
+			: "none";
+	}
 
-		if (canHalveBarLength(this.currentTuneAbc))
-			this.elements.halveBtn.style.display = "block";
-		else this.elements.halveBtn.style.display = "none";
+	/**
+	 * Returns true if any setting in `currentAbcArray` differs from the
+	 * snapshot taken when the modal was opened (`originalAbcArray`).
+	 * Transposing back to the original key, or reverting a bar-length change,
+	 * will therefore restore a clean state.
+	 *
+	 * Note: `currentAbcArray` is only updated when leaving a setting (navigate)
+	 * or saving — not on every transposition step — so that `currentTuneAbc`
+	 * always remains the unmodified base for cumulative transposition.
+	 */
+	get isDirty() {
+		// Incorporate any uncommitted transposition on the current setting
+		const effectiveArray = this.currentAbcArray.map((abc, i) =>
+			i === this.currentAbcIndex ? this.currentTransposedAbc : abc
+		);
+		return effectiveArray.some((abc, i) => abc !== this.originalAbcArray[i]);
+	}
+
+	updateSaveButton() {
+		this.elements.saveBtn.style.display = this.isDirty
+			? "inline-block"
+			: "none";
 	}
 
 	setupControls() {
@@ -143,6 +201,7 @@ export default class AbcModal extends Modal {
 		);
 		this.elements.prevBtn?.addEventListener("click", () => this.navigate(-1));
 		this.elements.nextBtn?.addEventListener("click", () => this.navigate(1));
+		this.elements.saveBtn?.addEventListener("click", () => this.save());
 
 		// Pagination controls
 		this.elements.prevPageBtn?.addEventListener("click", () => this.prevPage());
@@ -163,13 +222,13 @@ export default class AbcModal extends Modal {
 			}
 		});
 
-		this.handleKeydown = (e) => {
-			if (!super.isOpen()) return false;
+		// Keyboard navigation — added once; isOpen() prevents firing when closed
+		document.addEventListener("keydown", (e) => {
+			if (!this.isOpen()) return;
 			let handled = true;
 			switch (e.key) {
 				case "ArrowLeft":
 					this.prevPage();
-
 					break;
 				case "ArrowRight":
 					this.nextPage();
@@ -188,14 +247,18 @@ export default class AbcModal extends Modal {
 				e.preventDefault();
 				e.stopPropagation();
 			}
-		};
-
-		document.addEventListener("keydown", this.handleKeydown);
+		});
 	}
 
+	/**
+	 * Initialise and open the modal for a given tune.
+	 * @param {object} tune       - The tune object (must have an `abc` property)
+	 */
 	openWithTune(tune) {
 		if (!tune.abc) return;
-		this.currentAbcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
+		this.tune = tune;
+		this.currentAbcArray = Array.isArray(tune.abc) ? [...tune.abc] : [tune.abc];
+		this.originalAbcArray = [...this.currentAbcArray];
 		this.currentAbcIndex = 0;
 		this.currentTuneAbc = this.currentAbcArray[0];
 		this.currentTranspose = 0;
@@ -220,18 +283,19 @@ export default class AbcModal extends Modal {
 	}
 
 	navigate(direction) {
-		this.currentAbcIndex += direction;
-		if (this.currentAbcIndex < 0) {
-			this.currentAbcIndex = this.currentAbcArray.length - 1;
-		}
-		if (this.currentAbcIndex >= this.currentAbcArray.length) {
-			this.currentAbcIndex = 0;
-		}
+		// Commit the effective (possibly transposed) ABC for the current setting
+		// before switching, so isDirty and save() see the right value
+		this.currentAbcArray[this.currentAbcIndex] = this.currentTransposedAbc;
+
+		this.currentAbcIndex =
+			(this.currentAbcIndex + direction + this.currentAbcArray.length) %
+			this.currentAbcArray.length;
 
 		this.currentTuneAbc = this.currentAbcArray[this.currentAbcIndex];
 		this.currentTranspose = 0;
 		this.currentPage = 0;
 		this.updateDisplayAfterTranspose();
+		this.updateBarLengthButtons();
 		this.updateNavigationButtons();
 	}
 
@@ -243,8 +307,7 @@ export default class AbcModal extends Modal {
 	nextPage() {
 		if (this.allSvgs.length === 0) return;
 
-		const totalLines = this.allSvgs.length;
-		const totalPages = Math.ceil(totalLines / this.LINES_PER_PAGE);
+		const totalPages = Math.ceil(this.allSvgs.length / this.LINES_PER_PAGE);
 
 		if (this.currentPage < totalPages - 1) {
 			this.currentPage++;
@@ -260,17 +323,20 @@ export default class AbcModal extends Modal {
 	}
 
 	updatePagination() {
+		// Update pagination UI
 		if (this.allSvgs.length === 0) return;
 
-		const totalLines = this.allSvgs.length;
-		const totalPages = Math.ceil(totalLines / this.LINES_PER_PAGE);
+		const totalPages = Math.ceil(this.allSvgs.length / this.LINES_PER_PAGE);
 
 		// Clear the display
 		this.elements.rendered.innerHTML = "";
 
 		// Add only the SVGs for the current page
 		const startLine = this.currentPage * this.LINES_PER_PAGE;
-		const endLine = Math.min(startLine + this.LINES_PER_PAGE, totalLines);
+		const endLine = Math.min(
+			startLine + this.LINES_PER_PAGE,
+			this.allSvgs.length
+		);
 
 		for (let i = startLine; i < endLine; i++) {
 			if (this.allSvgs[i]) {
@@ -353,21 +419,20 @@ export default class AbcModal extends Modal {
 	}
 
 	updateDisplayAfterTranspose() {
-		let transposedAbc = this.currentTuneAbc;
-
-		if (this.currentTranspose !== 0) {
-			transposedAbc = this.transposeAbcNotation(
-				this.currentTuneAbc,
-				this.currentTranspose
-			);
-		}
+		// currentTuneAbc is always the pre-transposition base; transposition is
+		// applied cumulatively via currentTranspose. The result is held in
+		// currentTransposedAbc for use by isDirty, navigate, and save.
+		this.currentTransposedAbc =
+			this.currentTranspose !== 0
+				? this.transposeAbcNotation(this.currentTuneAbc, this.currentTranspose)
+				: this.currentTuneAbc;
 
 		// Update text view
-		this.elements.textContent.textContent = transposedAbc;
+		this.elements.textContent.textContent = this.currentTransposedAbc;
 
 		// Update rendered view with pagination support
 		this.elements.rendered.innerHTML = "";
-		AbcJs.renderAbc("abcRendered", transposedAbc, {
+		AbcJs.renderAbc("abcRendered", this.currentTransposedAbc, {
 			scale: 1.0,
 			staffwidth: 900,
 			paddingtop: 10,
@@ -380,9 +445,11 @@ export default class AbcModal extends Modal {
 
 		// Store all SVG elements for pagination
 		this.allSvgs = Array.from(this.elements.rendered.querySelectorAll("svg"));
+		//this.allSvgs = Array.from(document.querySelectorAll("abcRendered > svg"));
 
 		// Apply pagination
 		this.updatePagination();
+		this.updateSaveButton();
 	}
 
 	transposeAbcNotation(abc, transposeAmount) {
@@ -390,7 +457,51 @@ export default class AbcModal extends Modal {
 		return AbcJs.strTranspose(abc, visualObj, transposeAmount);
 	}
 
+	/**
+	 * Persist all modified settings to the source tune object and propagate
+	 * the change through to storage and the UI.
+	 * Saves all settings in `currentAbcArray`, not just the one currently visible.
+	 */
+	save() {
+		const tune = this.tune;
+		const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
+
+		// Commit the current setting's effective ABC before building the saved array
+		const abcToSave = this.currentAbcArray.map((abc, i) =>
+			i === this.currentAbcIndex ? this.currentTransposedAbc : abc
+		);
+
+		tune.abc = abcToSave.length === 1 ? abcToSave[0] : abcToSave;
+
+		// Reprocess tune data
+		let reprocessed = Object.assign({}, tune);
+		delete reprocessed.name;
+		delete reprocessed.nameIsFromAbc;
+		delete reprocessed.key;
+		delete reprocessed.keyIsFromAbc;
+		delete reprocessed.rhythm;
+		delete reprocessed.rhythmIsFromAbc;
+		delete reprocessed.references;
+		delete reprocessed.incipit;
+
+		reprocessed = processTuneData(reprocessed);
+
+		Object.assign(tune, reprocessed);
+
+		if (originalTuneDataIndex !== -1) {
+			window.tunesData[originalTuneDataIndex] = tune;
+		}
+
+		this.callbacks.saveTunesToStorage();
+		this.callbacks.renderTable();
+		this.callbacks.populateFilters();
+		this.close();
+	}
+
 	onClose() {
+		document.removeEventListener("keydown", this.handleKeydown);
+		this.handleKeydown = null;
+
 		this.currentTranspose = 0;
 		this.currentAbcIndex = 0;
 		this.currentPage = 0;
