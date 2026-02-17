@@ -35,7 +35,7 @@ export default class Modal {
 	 */
 	render() {
 		this.element = document.createElement("div");
-		this.element.className = `modall modal-${this.size}`;
+		this.element.className = `modal modal-${this.size}`;
 		this.element.id = this.id;
 		this.element.setAttribute("role", "dialog");
 		this.element.setAttribute("aria-modal", "true");

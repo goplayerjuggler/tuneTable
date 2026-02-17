@@ -5,7 +5,8 @@ import {
 	normaliseKey,
 	getKey,
 	getFirstBars,
-	getMetadata
+	getMetadata,
+	getTunes
 } from "@goplayerjuggler/abc-tools";
 
 const applySwingTransform = ["hornpipe", "barndance", "fling", "mazurka"];
@@ -21,28 +22,19 @@ function updateFromMetadata(
 			processed.name = metaData.title;
 			if (setIsFromAbc) processed.nameIsFromAbc = true;
 		}
-		if (!processed.rhythm && metaData.rhythm) {
-			processed.rhythm = metaData.rhythm;
-			if (setIsFromAbc) processed.rhythmIsFromAbc = true;
-		}
-		if (!processed.meter && metaData.meter) {
-			processed.meter = metaData.meter;
-			if (setIsFromAbc) processed.meterIsFromAbc = true;
-		}
-		if (!processed.key && metaData.key) {
-			processed.key = metaData.key;
-			if (setIsFromAbc) processed.keyIsFromAbc = true;
-		}
 
-		if (!processed.origin && metaData.origin) {
-			processed.origin = metaData.origin;
-			if (setIsFromAbc) processed.originIsFromAbc = true;
-		}
-
-		if (!processed.composer && metaData.composer) {
-			processed.composer = metaData.composer;
-			if (setIsFromAbc) processed.composerIsFromAbc = true;
-		}
+		// if (!processed.rhythm && metaData.rhythm) {
+		// 	processed.rhythm = metaData.rhythm;
+		// 	if (setIsFromAbc) processed.rhythmIsFromAbc = true;
+		// }
+		["key", "rhythm", "meter", "composer", "origin", "titles"].forEach(
+			(prop) => {
+				if (!processed[prop] && metaData[prop]) {
+					processed[prop] = metaData[prop];
+					if (setIsFromAbc) processed[prop + "IsFromAbc"] = true;
+				}
+			}
+		);
 	}
 
 	if (!processed.references) {
@@ -74,14 +66,24 @@ function updateFromMetadata(
 function processTuneData(tune) {
 	const processed = { processedFromAbc: [], ...tune };
 
-	if (tune.incipit && !tune.abc) {
+	if (typeof tune.aka === "string") processed.aka = [tune.aka];
+	if (typeof tune.badges === "string") processed.badges = [tune.badges];
+	if (tune.incipit && !processed.abc) {
 		const abcMeta = getMetadata(tune.incipit);
 		updateFromMetadata(abcMeta, processed, false);
 		processed.incipit = getFirstBars(tune.incipit, 4, true, false, {
 			all: true
 		});
 	} else if (tune.abc) {
-		const abcArray = Array.isArray(tune.abc) ? tune.abc : [tune.abc];
+		if (typeof tune.abc === "string") {
+			const firstX = tune.abc.indexOf("X:");
+
+			if (firstX !== -1 && tune.abc.indexOf("X:", firstX + 2) !== -1)
+				processed.abc = getTunes(tune.abc);
+		}
+		const abcArray = Array.isArray(processed.abc)
+			? processed.abc
+			: [processed.abc];
 
 		abcArray.forEach((abcString, index) => {
 			const abcMeta = getMetadata(abcString);
@@ -89,6 +91,7 @@ function processTuneData(tune) {
 			if (index === 0) updateFromMetadata(abcMeta, processed);
 			else updateFromMetadata(abcMeta, processed, false, false);
 		});
+
 		if (!tune.incipit) {
 			try {
 				processed.incipit = getIncipit({ abc: abcArray[0] });
