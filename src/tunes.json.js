@@ -737,6 +737,7 @@ N:Imported into *tuneTable* on 2025-10-27,
 N:from https://thesession.org/tunes/820#setting42781
 N:Setting entered in thesession by user “James Dumbelton” on 2022-01-13
 N:(edited after importing)
+N:*abc-tools: convert to M:12/8*
 K:Gmajor
 |:DEG EDB, DEG ~B3|DEG B2 e dBe dBA|
 DEG EDB, DEG ~B3|dBd gfe dBA G3:|
@@ -1561,7 +1562,7 @@ Z: abc-transcription Malcolm Schonfield% 2024-05-17,24
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 N: Paddy O’Brien, button accordion; Nathan Gourley, fiddle; Dáithí Sproule, guitar
 R: jig
-M: 6/8
+M: 12/8
 L: 1/8
 K: Dmin
 E |:[P:A] F2F AFF cFF AGF | G2A Bde fed cAG | 
@@ -1580,17 +1581,19 @@ T:The Thornton
 C:Donald Cameron
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2481#setting2481
 N:Setting entered in thesession by user “dafydd” on 2003-08-28
+N:*abc-tools: convert to M:12/8*
 K:Amixo
-|:c2A ABA|d2e fed|c2A ABA|B2g gdB|
- c2A ABA|d2e fec|d2f c2e|B2g gdB:|
- |:c2e efe|ef^g a3|c2e efe|B2g gdB|
- c2e efe|ef^g a2e|d2f c2e|B2g gdB:|`,
+|:c2A ABA d2e fed|c2A ABA B2g gdB|
+c2A ABA d2e fec|d2f c2e B2g gdB:|
+|:c2e efe ef^g a3|c2e efe B2g gdB|
+c2e efe ef^g a2e|d2f c2e B2g gdB:|`,
 			theSessionId: 2481
 		},
+
 		{
 			abc: `X:1
 T:Partie De Quadrille
