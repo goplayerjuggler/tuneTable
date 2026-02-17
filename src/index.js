@@ -208,7 +208,7 @@ function collapseNotes(tuneIndex, refIndex) {
 }
 
 // Extract all metadata values from a tune for display and filtering.
-// Returns an array of metadata strings including rhythm, parts, key, composer, origin, and badges.
+// Returns an array of metadata strings including rhythm, parts, key, composer(s), origin, and badges.
 function getTuneMetadata(tune) {
 	const badges = tune.badges
 		? Array.isArray(tune.badges)
@@ -219,11 +219,13 @@ function getTuneMetadata(tune) {
 		? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
 		: [];
 
+	const composer = tune.composer ? tune.composer.split("; ") : [];
+
 	return [
 		tune.rhythm,
 		tune.parts,
 		tune.key,
-		tune.composer,
+		...composer,
 		...origin,
 		...badges
 	].filter((m) => m);

@@ -7919,15 +7919,18 @@ T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
 L:1/8
-N: 1. This tune came to me sometime between 2010 and 2016. I’ve chose not to
+N: 1. This tune came to me sometime between 2010 and 2016. I chose not to
 N:  completely fix the order the parts are played in; and whether or not to double them. 
-N: 2. Obviously the SNCF jingle is prominent in the tune, hence its name.
+N: 2. Obviously the SNCF jingle is prominent in the tune, whence its name.
 N: 3. This score has many defects and maybe sometime soonish I’ll get round to redoing it.
+N: 4. The ABC code here has many hidden comments which are related to “ossia” – alternative
+N: ways of playing a section. Not sure if that idea (ossias embedded in ABC) will be developed
+N: or not in the foreseeable future.
 M:12/8
 K:Am
-%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax, 260212 comments
+%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax, 260212 comments, 260217
 P:A
-"Am"EBc "F"~G3 \\ % or { EBc G2G } or { .E2B cG2 } or { EBc GAF }
+"Am"EBc "F"~G3 \\ % or { EBc G2G } or { .E2B cG2 } or { EBc GAE }
 "Am"FBc "F"~G3 | \\ %  or { .F2B cG2 | }  or { .E2B cG2 |} or { EBc ~G3 | } or { EBc GAF | } or { .E2B cG2 |}
 "Am"~e3  \\ %  or {| efe} or {| d2e} or {| Ace } or {| .e2e }
 dcB \\%
@@ -7973,8 +7976,7 @@ BcG \\ % or { BGE }
 ~A3 :|
 P:G
 |: ABc | .F2d -d2 B- BcB ABc | .F2d- d2B- Bcd ecA | % or { Bdg e3 | }
-      .F2d -d2 B- BcB ABc | F2d BGE A3 :|
-`
+      .F2d -d2 B- BcB ABc | F2d BGE A3 :|`
 		},
 		{
 			incipit: `
@@ -8355,6 +8357,12 @@ K: Am
 			incipit: `X: 2
 T: Barra To Balloch
 C:Angus MacKenzie
+S:Dàimh
+D:Tuneship (2013)
+F:https://daimh.bandcamp.com/track/barra-to-balloch
+N: As far as I can tell from info on Bandcamp, the artist/instrument list here is:
+N: Angus MacKenzie, whistle; Damian Helliwell, mandolin; Gabe McVarish, fiddles; 
+N: Ross Martin, guitar; Griogair Labhruidh, uillean pipes; Eilidh Shaw: fiddle; Duncan Lyall: bass
 R: jig
 M: 12/8
 L: 1/8
@@ -8559,10 +8567,32 @@ edB BAF EDB, DEF|G2E FED B,ED E3:|`,
 			theSessionId: 398,
 			parts: "AABB",
 			norbeckId: 49
+		},
+		{
+			groups: "su",
+			incipit: `%abc-2.1
+X: 1
+T: The Sour Mash
+C: Angus Mackenzie; Gabe McVarish
+S:Dàimh
+D:Tuneship (2013)
+F:https://daimh.bandcamp.com/track/coddywatch
+Z:abc-transcription Malcolm Schonfield
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+I:abc-charset utf-8
+N: As far as I can tell from info on Bandcamp, the artist/instrument list here is:
+N: Angus MacKenzie, uillean pipes; Damian Helliwell, mandolin; Gabe McVarish, fiddles; 
+N: Ross Martin, guitar; Griogair Labhruidh, uillean pipes; Jenny Hill: double bass
+R: strathspey
+M: 4/2
+L: 1/8
+Q:1/2=90
+K: Amin
+d/ |c<AA>G A>ce>d c<AB>d c<AG2 |`
 		}
 	]
 	/*
-		,{incipit:``,theSessionId:
+		,{incipit:``,theSessionId:}
 			references: [
 				{
 					url: "",
