@@ -6,7 +6,9 @@ import {
 	convertToStandardHornpipe,
 	convertToStandardReel,
 	convertStandardJig,
-	convertStandardHornpipe
+	convertStandardHornpipe,
+	convertStandardPolka,
+	convertToStandardPolka
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
@@ -320,6 +322,9 @@ export default class AbcModal extends Modal {
 				case "jig":
 					newAbc = convertStandardJig(this.currentTuneAbc);
 					break;
+				case "polka":
+					newAbc = convertStandardPolka(this.currentTuneAbc);
+					break;
 				case "hornpipe":
 					newAbc = convertStandardHornpipe(this.currentTuneAbc);
 					break;
@@ -331,6 +336,9 @@ export default class AbcModal extends Modal {
 					break;
 				case "jig":
 					newAbc = convertToStandardJig(this.currentTuneAbc);
+					break;
+				case "polka":
+					newAbc = convertToStandardPolka(this.currentTuneAbc);
 					break;
 				case "hornpipe":
 					newAbc = convertToStandardHornpipe(this.currentTuneAbc);

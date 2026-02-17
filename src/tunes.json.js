@@ -650,7 +650,10 @@ dgdB (3GBG AB cfcA (3FAF GA|(3BAG gG ^fGe^F|1 AGG^F GA:|2 AGG^F G2-|:GA||
 Bcde fdce dDE^F GFGA|Bcde =fd (3e^fg afd^c d2 (3def|
 gdBG ecA^F GFGc AGEG|(3^FED AB cedF AGGF G2:|`,
 			parts: "AABB",
-			theSessionId: 2001
+			theSessionId: 2001,
+			references: [
+				{ notes: `See O'Mahony's for a recording by Jason O’Rourke` }
+			]
 		},
 		{
 			abc: `X:1
@@ -2586,20 +2589,22 @@ K:Gmajor
 T:Forde's
 R:polka
 L:1/8
-M:2/4
+M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/8541#setting8541
 N:Setting entered in thesession by user “gian marco” on 2008-05-17
+N:*abc-tools: convert to M:4/4*
 K:Dmajor
-|:AD FA|dc AB|=c>B cE|EF GF/G/|
- AD FA|dc AB|=c>B cE|1 ED D2:|2 ED D>e||
- fd ed|cA Ad/e/|fd ef|ag ef/g/|
- fd ed|cA AB|=c>B cE|1 ED D>e:|2 ED D2||`,
+|:AD FA dc AB|=c>B cE EF GF/G/|
+AD FA dc AB|=c>B cE[1 ED D2:|2 ED D>e||
+fd ed cA Ad/e/|fd ef ag ef/g/|
+fd ed cA AB|=c>B cE[1 ED D>e:|2 ED D2||`,
 			references: [
 				{
+					url: "https://music.youtube.com/watch?v=HKx_-xusj_s",
 					artists: "Jason O’Rourke, concertina",
-					notes: `album: The Bunch Of Keys
-Well worth a listen! Don’t have link handy though.`
+					album: "The Bunch Of Keys",
+					notes: `The first tune on a track entitled “Two Polkas”. Well worth a listen!`
 				}
 			],
 			theSessionId: 8541
@@ -8591,16 +8596,50 @@ L: 1/8
 Q:1/2=90
 K: Amin
 d/ |c<AA>G A>ce>d c<AB>d c<AG2 |`
+		},
+		{
+			incipit: `X: 1
+T: O'Mahony's
+F:https://music.youtube.com/watch?v=yE_iY3Z4FBs
+S:Jason O’Rourke, concertina
+D:The Bunch Of Keys
+R: hornpipe
+M: 4/2
+N:On the album, this is the first in a set with the title: “Gan Ainm/The New Century”
+L: 1/8
+K: Gmaj
+ge|dBAB ~G3A (3BAG Bd ~g3a|bgaf gede`,
+			theSessionId: 2488,
+			parts: "AABB"
+		},
+		{
+			aka: "Allistrum’s",
+			incipit: `X: 3
+T: Martin O'Connor's
+R: polka
+M: 4/4
+S:Jason O’Rourke, concertina
+D:The Bunch Of Keys
+F:https://music.youtube.com/watch?v=HKx_-xusj_s&t=81
+N:On the album, this is the second in a set with the title: “Two Polkas”.
+N: The first one is Forde's.
+L: 1/8
+K: Gmaj
+e>d|BA AG/A/ BG G>A|BG g>a ge ed|`,
+			theSessionId: 5952,
+			norbeckId: 115,
+			parts: "AABB"
 		}
-	]
-	/*
+		/*
 		,{incipit:``,theSessionId:}
+		,{incipit:``,theSessionId:
 			references: [
 				{
 					url: "",
 					artists: "",
 					notes: ``,
 				},
-				],},
+				],}
 		 */
+	]
 };

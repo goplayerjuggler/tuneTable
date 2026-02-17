@@ -26,16 +26,15 @@ This project is in the alpha stage of development. Which is one reason why I hav
   * data for one single tune can be exported
   * integration with thesession.org: load a member’s tune book or one specific tune
 * persistence: all changes to the tune list are automatically saved (to `localStorage`) so you can close the browser, or reboot, and still see your most recent list the next time you load the page
-* meter and bar length switcher: e.g. for reels, toggle between 4/4 + quavers and  4/4 + semiquavers. The first way is the standard/orthodox/traditional way, but I often prefer the other way. 
-  For the moment this feature is limited to reels, jigs, and hornpipes.
+* bar length switcher: toggle between standard bar lengths, and bars that are twice as long, which I often prefer. For the moment this feature is limited to reels, jigs, polkas, and hornpipes. For reels, it switches to semiquavers so the tune stays in 4/4 but uses L:1/16 instead of L:1/18. For the other types of tune it simply goes between the usual meter M:A/B and the doubled-length meter M:(2×A)/B.
 
 ## Upcoming features / wishlist
 Here are some features I hope to add at some point:
 * a set list creation and management feature that allows users to select tunes from the main table and arrange them into ordered sets for sessions, or gigs, or classes, or other events. With Print functionalities too. 
 Set lists could also be called tune selections.
-* choose from a preset list of lists of tunes
+* choice of which tune list to use.
 * have several incipits for a single tune - indexing by B, C parts etc
-* other UI improvements like an advanced search
+* other UI improvements like an advanced search feature.
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
