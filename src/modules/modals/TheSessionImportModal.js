@@ -204,7 +204,7 @@ export default class TheSessionImportModal extends Modal {
 			const skippedTunes = [];
 
 			for (let i = 0; i < tuneIds.length; i++) {
-				const tuneId = tuneIds[i];
+				const tuneId = +tuneIds[i];
 				this.showStatus(
 					`Processing tune ${i + 1} of ${tuneIds.length}…`,
 					"info"
@@ -214,14 +214,7 @@ export default class TheSessionImportModal extends Modal {
 
 				// Check if tune already exists in tunesData
 				const existingTune = this.tunesData.find(
-					(t) =>
-						t.name &&
-						tuneData.name &&
-						(t.name.trim().toLowerCase() ===
-							tuneData.name.trim().toLowerCase() ||
-							tuneData.aliases?.find(
-								(a) => a?.trim().toLowerCase() === t.name.trim().toLowerCase()
-							))
+					(t) => t.theSessionId === tuneId
 				);
 
 				if (existingTune) {

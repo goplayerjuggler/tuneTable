@@ -791,9 +791,11 @@ K:C
 			aka: ["The Lilting Banshee", "The Miller Of Glanmire"],
 			abc: `X: 1
 T: Leave it down easy
-S: As played by Danny Smith, 1992 or 1993
+T: As played by Danny Smith
+S: Danny Smith, whistle
 F:https://www.itma.ie/playlists/first_itma_fieldrecordings_1992/?track=7
 R: jig
+N: 0. 1992 or 1993.
 N: 1. Notated in 12/8 on purpose; I think it’s better that way for this sort of jig.
 N: 2. I tried to transcribe the notes more or less as they were played; as usual 
 N: I’ve omitted the phrasing and ornaments, or embellishments.
@@ -3404,17 +3406,18 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
 			abc: `X:1
 T:The Crooked Road To Dublin
 R:reel
-L:1/8
+L:1/16
 M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/227#setting227
-N:Setting entered in thesession by user “Will Harmon” on 2001-08-06
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/227#setting12914
+N:Setting entered in thesession by user “slainte” on 2006-04-12
+N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Gmajor
-G2 BG FGAF|(3GGG Ac BdcA|GBAG FGAg|fdcA dBcA|
- GBAG FGAF|GBAc BdcA|GBAG FGAg|fdcA d2 Bc|
- d~g3 fgaf|d~g3 agfe|d~g3 fgag|fdcA dBcA|
- d~g3 fgaf|d~g3 afga|bgaf gbag|fdcA BGAF|`,
-			theSessionId: 227
+|:G3G FGAF G2FG AdcA|G2AG FGAg[1 fdcA dBcA:|2 fdcA d2Bc||
+dg~g2 fgaf dg~g2 agfe|dg~g2 fgag fdcA d2Bc|
+dg~g2 fgaf dg~g2 a2ga|bgaf gbag fdcA d2cA||`,
+			theSessionId: 227,
+			theSessionSettingId: 12914
 		},
 		{
 			abc: `X:1
@@ -5807,7 +5810,7 @@ B2 Be BA|GF EF GA|B2Be BG|A3c BA|EF GA BG|AE Ac BA|G2GA =FG|E6|
 		{
 			abc: `X:1
 T:The Belltable
-C:Maurice Lennon, Kieran Hanrahan
+C:Maurice Lennon; Kieran Hanrahan
 R:waltz
 L:1/8
 M:3/4
@@ -7018,13 +7021,20 @@ G3 AGE A3 AGE|G3 AGE`,
 		},
 		{
 			aka: ["Joe Burke’s", "Cronin’s Favourite"],
-			incipit: `X: 1
-T: Darby The Driver
-R: jig
-M: 12/8
-L: 1/8
-K: Ador
-G|EAA ABd ege dBA|GEF GAB`,
+			abc: `X:1
+T:Darby The Driver
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/1137#setting14402
+N:Setting entered in thesession by user “slainte” on 2006-01-09
+N:*abc-tools: convert to M:12/8*
+K:Adorian
+|:G|EAA ABd ege dBA|GEF GAB dBA GED|
+EAA ABd ege def|g2d ege dBA A2:|
+|:g|eag e2d eaa bag|efg dBd eba ged|
+eag e2d eaa bag|efg edB BAG A2:|`,
 			parts: "AABB",
 			references: [
 				{
@@ -7752,15 +7762,24 @@ G2dG BGdG ~G2dc BGGB|A2`,
 			]
 		},
 		{
-			incipit: `X: 1
+			abc: `X:1
 T:The Mountain Road
-C: Michael Gorman
-R: reel
-M: 4/4
-L: 1/16
-K: Dmaj
-F2AF BFAF F2AF EFDE|F2`,
+C:Michael Gorman
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/68#setting25940
+N:Setting entered in thesession by user “slainte” on 2015-03-08
+N:*abc-tools: convert to M:4/4 & L:1/16*
+N:(edited after importing)
+K:Dmajor
+|F2AF BFAF F2AF EFDE|F2AF BFAF GEFD EDB,D|
+F2AF BFAF F2AF EFDE|FA~A2 BAFB ABde ~f3e||
+~d3B A2FA dcde ~f3e|~d3B A2FA GEFD EDB,c|
+~d3B A2FA dcde ~f3e|defd BAFA G2FG EDB,E||`,
 			theSessionId: 68,
+			theSessionSettingId: 25940,
 			references: [
 				{
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=2",
@@ -8067,7 +8086,7 @@ R: reel
 M: 4/4
 L: 1/16
 K: Dmaj
-ADFD EFGE  AGAB =c2 AG|AB=cA d^cAG FGAF GBAF|`,
+ADFD EFGE AGAB =c2AG|AB=cA d^cAG |`,
 			parts: "AABBCC",
 			theSessionId: 2732
 		},
@@ -8635,7 +8654,522 @@ e>d|BA AG/A/ BG G>A|BG g>a ge ed|`,
 			theSessionId: 5952,
 			norbeckId: 115,
 			parts: "AABB"
+		},
+		{
+			abc: `X:1
+T:Out On The Ocean
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/108#setting108
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
+N:*abc-tools: convert to M:12/8*
+K:Gmajor
+|:GE|D2B BAG BdB A2B|GED G2A B2B AGE|
+D2B BAG BdB A2B|GED G2A BGE G:|
+Bd|e2e edB ege edB|d2B def gfe dBA|
+G2A B2d ege d2B|AGE G2A BGE G:|`,
+			theSessionId: 108
+		},
+
+		{
+			abc: `X:1
+T:The Mist Covered Mountain
+C:Junior Crehan
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/256#setting256
+N:Setting entered in thesession by user “glauber” on 2001-08-25
+N:*abc-tools: convert to M:12/8*
+K:Adorian
+|:G|EAA ABd e2 A AGE|~G3 GAB dBA GED|
+EAA ABd e2A AGE|efg dBG BAG A2:|
+a|age a2b age edB|AGE G2A BAB GED|
+age a2b age edB|AGE G2A BAG A3|
+age a2b age edB|AGE G2A BAB GED|
+EDE G2A BAG ABd|efg dBG BAG A2||`,
+			theSessionId: 256
+		},
+		{
+			abc: `X:1
+T:The Kesh
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/55#setting55
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
+N:*abc-tools: convert to M:12/8*
+K:Gmajor
+|:G3 GAB A3 ABd|edd gdd edB dBA|
+GAG GAB ABA ABd|edd gdd BAF G3:|
+|:B2B d2d ege dBA|B2B dBG ABA AGA|
+BAB d^cd ege dBd|gfg aga bgg g3:|`,
+			theSessionId: 55
+		},
+		{
+			abc: `X:1
+T:The Blarney Pilgrim
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/5#setting5
+N:Setting entered in thesession by user “Jeremy” on 2001-05-14
+N:*abc-tools: convert to M:12/8*
+K:Dmixolydian
+|:DED DEG A2A ABc|BAG AGE GEA GED|
+DED DEG A2A ABc|BAG AGE GED D3:|
+ded dBG AGA BGE|ded dBG AGA GAB|
+g2e dBG AGA BGE|B2G AGE GED D3:|
+A2D B2D A2D ABc|BAG AGE GEA GED|
+ADD BDD ADD ABc|BAG AGE GED D3:|`,
+			theSessionId: 5
+		},
+		{
+			abc: `X:1
+T:The Castle
+C:Sean Ryan
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/273#setting273
+N:Setting entered in thesession by user “Will Harmon” on 2001-09-06
+N:*abc-tools: convert to M:12/8*
+K:Adorian
+|:~c3 BAG AGE DB,G,|~A,3 EDB, DEG AGE|
+cBA BAG AGE DB,G,|A,2 E EDE DB,G, A,2 B:|
+|:cBA ~a3 bag edB|GBd ~g3 GBd cBA|
+cBc dcd ede gab|age dBG EFG A2 B:|`,
+			theSessionId: 273
+		},
+		{
+			abc: `X:1
+T:The Pipe On The Hob
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/81#setting81
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
+N:*abc-tools: convert to M:12/8*
+K:Adorian
+B|:c2c edc edc BAG|ABA g3 eaa ged|
+c3 edc edc deg|age edB ABA A3:|
+g2g gea age dBA|ABA g2e aba gef|
+g3 gea age deg|age dBe ABA A3:|
+c2c d2d edc AGE|c3 d2d edc A2B|
+cBc dcd ede gab|age dBe ABA A3:|`,
+			theSessionId: 81
+		},
+		{
+			abc: `X:1
+T:The Connaughtman's Rambles
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/19#setting19
+N:Setting entered in thesession by user “Jeremy” on 2001-05-18
+N:*abc-tools: convert to M:12/8*
+K:Dmajor
+|:FAA dAA BAA dAG|FAA dfe dBB BAG|
+FAA dAA BAA def|gfe dfe[1 dBB BAG:|2 dBB B3||
+|:fbb faf fed ede|fbb faf fed e3|
+fbb faf fed def|gfe dfe[1 dBB B3:|2 dBB BAG||`,
+			theSessionId: 19
+		},
+		{
+			abc: `X:1
+T:The Mug Of Brown Ale
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/888#setting888
+N:Setting entered in thesession by user “gian marco” on 2002-08-11
+N:*abc-tools: convert to M:12/8*
+K:Adorian
+g/f/|:eAA fAA ~g3 age|dBG GAG ~B3 Bcd|
+eAA fAA ~g3 age|dBd gdB ABA ABd:|
+efg ~a3 aba age|dBd ~g3 gba ged|
+efg ~g3 aba age|dBd gdB ABA ABd|
+efg ~a3 aba age|dBd ~g3 gba ged|
+efg a2b ^c'ac' age|dBd gdB ABA A2||`,
+			theSessionId: 888
+		},
+		{
+			abc: `X:1
+T:The Cliffs Of Moher
+R:jig
+L:1/8
+M:12/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/12#setting12
+N:Setting entered in thesession by user “Jeremy” on 2001-05-18
+N:*abc-tools: convert to M:12/8*
+K:Adorian
+|:a3 bag eaf ged|c2A BAG EFG ABd|
+eaa bag eaf ged|c2A BAG EFG A3:|
+e2e dBA e2e dBA|GAB dBA GAB dBd|
+e2e dBA e2e dBA|GAB dBA EFG A3|
+efe dBA efe dBA|GAB dBA GAB dBd|
+efe ded cec BeB|GAB dBA EFG A3|`,
+			theSessionId: 12
+		},
+		{
+			incipit: `X: 7
+T: The Frost Is All Over
+R: jig
+M: 12/8
+L: 1/8
+K: Dmaj
+ef edB AFD E2 D|DFA AFA`,
+			theSessionId: 448
+		},
+		{
+			incipit: `X:1
+T:Tam Lin
+C:Davey Arthur
+R:reel
+L:1/16
+M:4/4
+K:Dminor
+A,2DA, FA,DA, B,2DB, FB,DB,|C2EC GCEC`,
+			theSessionId: 248
+		},
+		{
+			abc: `X:1
+T:The Aughacashel
+C:Josephine Keegan
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/1498#setting1498
+N:Setting entered in thesession by user “MichaelBolton” on 2003-03-10
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Gmajor
+|:DEGA BG (3GGG AGBG ABGE|DEGA Bded gedB ABGE|
+DEGA BG (3GGG AGBG ABGE|Bded Bdge[1 dBAc BGAG:|2 dBAB GABd||
+|:(3ggg dB G3B e2dB G3B|(3AAA AB AE(3EEE c2B2 ABcd|
+(3ggg ga (3bbg ef gage d3B|cABG AGEG[1 DGGF GABd:|2 DGGF G4||`,
+			theSessionId: 1498
+		},
+		{
+			incipit: `X:1
+T:The Musical Priest
+R:reel
+L:1/16
+M:4/4
+K:Bminor
+BA|FBBA B2Bd cBAf ecBA|FBBA B2Bd`,
+			theSessionId: 73
+		},
+		{
+			incipit: `X:1
+T:Farewell To Chernobyl
+C:Michel Ferry
+R:reel
+L:1/16
+M:4/4
+K:Dminor
+D3F ADFA DFAF GFED|A,3C EA,CE`,
+			theSessionId: 767
+		},
+		{
+			incipit: `X:1
+T:The Banshee
+C:James McMahon
+R:reel
+L:1/16
+M:4/4
+K:Gmajor
+G2GD EDEG AGAB d2Bd|eged BAGA `,
+			theSessionId: 8
+		},
+		{
+			abc: `X:1
+T:The Sally Gardens
+R:reel
+L:1/16
+M:4/4
+K:Gmajor
+G2DG BAGB dBeB dBAB|d2Bd efge`,
+			theSessionId: 98
+		},
+		{
+			abc: `X:1
+T:The Mullingar Races
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/225#setting225
+N:Setting entered in thesession by user “b.maloney” on 2001-08-06
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Dmajor
+A,2|D2(FD) EA,A,E DEFA Bcde|(3(fga) ec dcdA (3BcdAF EGFE|
+DEFD EA,A,E DEFG Bcde|(3(fga) ec dBAG FGEF D2||
+(3(ABc)|d2(fd) adfb afdf edBc|d2(fd) adfd Beed egfe|
+d2(fd) adfb afdf edBc|dgfe dBAG FGEF D2||`,
+			theSessionId: 225
+		},
+		{
+			abc: `X:1
+T:The Maids Of Mitchelstown
+R:reel
+L:1/8
+M:4/2
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/120#setting120
+N:Setting entered in thesession by user “Jeremy” on 2001-06-04
+N:(edited after importing))
+K:Dminor
+|:D2AG EEG2 A2GA cAGE|D2AG EEG2 A2GE EDDC:|
+|:EGA=B c2AG Adde f2ed|cAGE F3G [1 AcGE EDD2:|2 Ac=Bd cAGE||`,
+			theSessionId: 120
+		},
+		{
+			incipit: `X:1
+T:The Maid Behind The Bar
+R:reel
+L:1/16
+M:4/4
+K:Dmajor
+FAAB AFED FAAB ABde|fBBA Bcde`,
+			theSessionId: 64
+		},
+		{
+			incipit: `X:1
+T:The Silver Spear
+R:reel
+L:1/16
+M:4/4
+K:Dmajor
+A|:FA (3AAA BAFA dfed BddA|FA (3AAA BAFA `,
+			theSessionId: 182
+		},
+		{
+			groups: "su",
+			parts: "AABB",
+			incipit: `X:1
+T:Sergeant Early's Dream
+R:reel
+L:1/8
+M:4/2
+K:Ddorian
+|:dc|ADDE FAcA GECD ~E3F|DA,DE FEFG`,
+			theSessionId: 1651
+		},
+		{
+			incipit: `X:1
+T:Palmer's Gate
+C:Joe Liddy
+R:reel
+L:1/16
+M:4/4
+K:Eminor
+GA|BE (3EEE Gz BG AcBA GEDE|~G3A BAGA `,
+			theSessionId: 1020,
+			groups: "su",
+			parts: "AABB"
+		},
+		{
+			abc: `X:1
+T:The Concertina
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/18#setting18
+N:Setting entered in thesession by user “Jeremy” on 2001-05-18
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Dmajor
+|:A2FA BAFA A2FA BAFA|B2BA B2BA B2BA BAFA|
+A2FA BAFA A2FA BAFA|FABc d2dA BAFE D4:|
+|:Addd Addd AddA BAFA|B2BA B2BA B2BA BAFA|
+Addd Addd AddA BAFA|FABc d2dA BAFE D4:|`,
+			theSessionId: 18
+		},
+		{
+			abc: `X:1
+T:The Old Bush
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/1499#setting1499
+N:Setting entered in thesession by user “gian marco” on 2003-03-11
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Dmixolydian
+|:d^c|A2GA cA~A2 d^cde fdec|A2GA cA~A2 dfed cAd^c|
+A2AG cAA2 d^cde ~f3g|af (3gfe fde^c dfed =cA:|
+|:Ag|eg~g2 edcd efge c3d|eg~g2 a2ge dfed cAAg|
+eg~g2 ag~g2 efge defg|af (3gfe fde^c dfed =cA:|`,
+			theSessionId: 1499
+		},
+		{
+			abc: `X:1
+T:The Bird In The Bush
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/629#setting629
+N:Setting entered in thesession by user “Josh Kane” on 2002-04-03
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Gmajor
+|:d2eB dB~B2 dBAB GAAG|EGAd BG~G2 BGBd g2ge|
+d2eB dB~B2 dBAB ~G2GE|DEGA B2eB dBAd BG~G2:|
+|:Bdef g2fg afdf gfed|Bdef g~g2b agab g~g2a|
+bg~g2 agef ~g2fe dBGE|DEGA B2eB dBAd BG~G2:|`,
+			theSessionId: 629
+		},
+		{
+			abc: `X:1
+T:Swinging On The Gate
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/236#setting236
+N:Setting entered in thesession by user “b.maloney” on 2001-08-13
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Gmajor
+|:gedB G2AB cABG AGEG|DGBd g2fg eaag fdef|
+gedB G2AB cABG AGEG|cABG AGEG DGGF GABd:|
+|:~g3a bgaf gfed cBAG|EAAB cBAG (3EFG AB cdef|
+~g3a bgaf gfed cBAB|cABG AGEG DGGF GABd:|`,
+			theSessionId: 236
+		},
+		{
+			abc: `X:1
+T:The Road To Monalea
+C:Colm O'Donnell
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/2878#setting2878
+N:Setting entered in thesession by user “gian marco” on 2004-04-23
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Ddorian
+|:dcAc d3e dcAG EDD2|cAGA cded cAGE EDD2|
+dcAc d3e dcAG EGD2|EGAG cded cAGE EDD2:|
+|:dcAc d2cd eaag egd2|gede c3d egag ged2|
+dcAc d2cd eaag egd2|cG~G2 cded cAGE D4:|`,
+			theSessionId: 2878
+		},
+		{
+			abc: `X:1
+T:Dinny O'Brien's
+C:Paddy O'Brien
+R:reel
+L:1/16
+M:4/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/1667#setting1667
+N:Setting entered in thesession by user “Will Harmon” on 2003-05-17
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Dmixolydian
+g|:fd (3ddd d^cAB =c2dB cAGE|D2 (3FED ADFD EGAB cdeg|
+fdd^c d=cAB =c2dB cAGE|D2 ~E3G AB cAGE {G} EDDg:|
+fdd^c defg ad (3ddd dcAB|c2 ~c3d e=f gc (3ccc gceg|
+fd (3ddd d^cAB =cBdB cAGE|D2 ~E3G AB cAGE {G} EDDg:|`,
+			theSessionId: 1667
+		},
+		{
+			abc: `X:1
+T:King Of The Fairies
+R:hornpipe
+L:1/8
+M:4/2
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/475#setting475
+N:Setting entered in thesession by user “Jeremy” on 2002-01-01
+N:*abc-tools: convert to M:4/2*
+K:Edorian
+|:B,2|EDEF GFGA B2B2 G2GA|B2E2 EFGE FGFE D2B,2|
+EDEF GFGA BAGB d3c|B2E2 GFE_E =E6:|
+|:d2|e2e2 Bdef gagf e3f|e2B2 BABc dedc BcdB|
+e2B2 Bdef gagf efed|Bdeg fedf e6 ef|
+g3e f3d edBc d3e|dBAF GABc dBAF GFED|
+B,2E2 EFGA B2e2 edef|e2B2 BAGF E6:|`,
+			theSessionId: 475
+		},
+		{
+			abc: `X:1
+T:The Rights Of Man
+R:hornpipe
+L:1/8
+M:4/2
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/83#setting83
+N:Setting entered in thesession by user “Jeremy” on 2001-05-25
+N:*abc-tools: convert to M:4/2*
+K:Eminor
+|:GA|B2A2 G2F2 EFGA B2ef|gfed edBd cBAG A2GA|
+BcAB GAFG EFGA B2ef|gfed Bgfg e2 E2 E2:|
+|:ga|babg efga babg egfe|d^cde fefg afdf a2gf|
+edef gfga bgaf gfef|gfed Bgfg e2 E2 E2:|`,
+			theSessionId: 83
+		},
+		{
+			abc: `X:1
+T:Peacock Follow The Hen
+R:slip jig
+L:1/8
+M:9/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/1145#setting1145
+N:Setting entered in thesession by user “cuchulain54” on 2002-11-19
+K:Adorian
+|:cde cAA cAA|cde cAA B2G|cde cAA cAA|Bcd dgd B2G:|
+ cde gee gee|cde gee f2d|cde gee gee|Bcd dgd B2G:|`,
+			theSessionId: 1145
+		},
+		{
+			abc: `X:1
+T:The Butterfly
+C:Tommy Potts
+R:slip jig
+L:1/8
+M:9/8
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/10#setting10
+N:Setting entered in thesession by user “Jeremy” on 2001-05-18
+K:Eminor
+|:B2E G2E F3|B2E G2E FED|B2E G2E F3|B2d d2B AFD:|
+ |:B2d e2f g3|B2d g2e dBA|B2d e2f g2a|b2a g2e dBA:|
+ |:B3 B2A G2A|B3 BAB dBA|B3 B2A G2A|B2d g2e dBA:|`,
+			theSessionId: 10
+		},
+		{
+			abc: `X:1
+T:Roly Gentle
+C:Kathryn Tickell
+R:waltz
+L:1/8
+M:3/4
+N:Imported into *tuneTable* on 2026-02-17,
+N:from https://thesession.org/tunes/4037#setting4037
+N:Setting entered in thesession by user “dafydd” on 2003-08-28
+K:Ddorian
+|:D2 DE FA|f2 fe dc|A2 AG FA|E2 ED EF|
+ D2 DE Fd|^c2 cA GE|1 A2 dA GE:|2 D2 DA B^c||
+ d2 de fd|ec A2 AG|F2 FEFA|EA FA EA|
+ d2 de fd|e^c A2 B2|c2 cA cd|ed cA GE|
+ d2 de fd|ec A2 AG|F2 FE FA|EA FA EA|
+ d2 de fa|gf ed ^cA|c2 cA cd|ed cA GE||`,
+			theSessionId: 4037,
+			badges: "crooked"
 		}
+
 		/*
 		,{incipit:``,theSessionId:}
 		,{incipit:``,theSessionId:
