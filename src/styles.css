@@ -394,6 +394,10 @@ th.sort-desc::after {
   gap: 5px;
   margin-bottom: 0;
 }
+
+.tune-header--actions {
+  justify-content: space-between;
+}
 .tune-incipit {
   min-width: 332px;
 }
@@ -405,9 +409,10 @@ th.sort-desc::after {
 }
 
 .tune-contour {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
+  /* margin-left: 200px; */
 }
 .tune-contour svg {
   width: 100%;
@@ -435,21 +440,6 @@ th.sort-desc::after {
 /* ============================================
    MODAL
    ============================================ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  animation: fadeIn 0.3s ease;
-}
-
-.modal.active {
-  display: block;
-}
 
 .modal-content {
   background-color: var(--bg-container);
@@ -870,14 +860,41 @@ textarea.form-control {
   color: var(--accent-hover);
 }
 
+.btn-copy {
+  color: var(--primary-light);
+  font-size: 1rem;
+}
+
+.btn-copy:hover {
+  background: rgba(113, 128, 150, 0.1);
+  color: var(--primary);
+}
+
+.btn-select {
+  color: var(--primary-light);
+  font-size: 1.1rem;
+}
+
+.btn-select:hover,
+.btn-select--checked {
+  color: var(--accent);
+}
+
+tr.tune-selected td {
+  background-color: #ebf4ff;
+}
+
 /* ============================================
    TUNE ACTIONS
    ============================================ */
 .tune-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
   opacity: 0;
   transition: opacity 0.2s;
+  width: 80px;
+  flex-shrink: 0;
 }
 
 .tune-actions:hover {
@@ -896,10 +913,7 @@ textarea.form-control {
   border-top: 1px solid var(--border);
 }
 
-/* ============================================
-   MODALL (alternative modal system)
-   ============================================ */
-.modall {
+.modal {
   position: fixed;
   top: 0;
   left: 0;

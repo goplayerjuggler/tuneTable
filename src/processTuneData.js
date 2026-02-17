@@ -22,30 +22,19 @@ function updateFromMetadata(
 			processed.name = metaData.title;
 			if (setIsFromAbc) processed.nameIsFromAbc = true;
 		}
-		if (!processed.rhythm && metaData.rhythm) {
-			processed.rhythm = metaData.rhythm;
-			if (setIsFromAbc) processed.rhythmIsFromAbc = true;
-		}
-		if (!processed.meter && metaData.meter) {
-			processed.meter = metaData.meter;
-			if (setIsFromAbc) processed.meterIsFromAbc = true;
-		}
-		if (!processed.key && metaData.key) {
-			processed.key = metaData.key;
-			if (setIsFromAbc) processed.keyIsFromAbc = true;
-		}
 
-		if (!processed.origin && metaData.origin) {
-			processed.origin = metaData.origin;
-			if (setIsFromAbc) processed.originIsFromAbc = true;
-		}
-
-		if (!processed.composer && metaData.composer) {
-			processed.composer = metaData.composer;
-			if (setIsFromAbc) processed.composerIsFromAbc = true;
-		}
-
-		if (metaData.titles) processed.titles = metaData.titles;
+		// if (!processed.rhythm && metaData.rhythm) {
+		// 	processed.rhythm = metaData.rhythm;
+		// 	if (setIsFromAbc) processed.rhythmIsFromAbc = true;
+		// }
+		["key", "rhythm", "meter", "composer", "origin", "titles"].forEach(
+			(prop) => {
+				if (!processed[prop] && metaData[prop]) {
+					processed[prop] = metaData[prop];
+					if (setIsFromAbc) processed[prop + "IsFromAbc"] = true;
+				}
+			}
+		);
 	}
 
 	if (!processed.references) {

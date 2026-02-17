@@ -69,30 +69,37 @@ function emptyTunes() {
 	saveTunesToStorage();
 }
 
-function copyTunesToClipboard() {
-	window.tunesData.forEach((tune) => {
-		["name", "key", "rhythm", "meter"].forEach((prop) => {
-			if (tune[`${prop}IsFromAbc`]) {
-				delete tune[prop];
-				delete tune[`${prop}IsFromAbc`];
+function prepareTunesForExport(tunes) {
+	// deep copy so the original data is never mutated.
+	const tunesCopy = JSON.parse(JSON.stringify(tunes));
+	tunesCopy.forEach((tune) => {
+		["name", "key", "rhythm", "meter", "composer", "origin", "titles"].forEach(
+			(prop) => {
+				if (tune[`${prop}IsFromAbc`]) {
+					delete tune[prop];
+					delete tune[`${prop}IsFromAbc`];
+				}
 			}
-		});
+		);
 		tune.references = tune.references?.filter((r) => !r.fromAbc);
-
+		delete tune.selected;
 		if (tune.abc) {
 			//delete data that's derived from the abc in 99% of cases
-			delete tune.contour;
 			delete tune.incipit;
 		}
+		delete tune.contour;
 	});
-	const result = javascriptify(window.tunesData);
+	return tunesCopy;
+}
+
+function copyTuneDataToClipboard(tunes, button) {
+	const result = javascriptify(prepareTunesForExport(tunes));
 	navigator.clipboard.writeText(result).then(
 		() => {
-			const btn = document.getElementById("copyTunesBtn");
-			const originalText = btn.textContent;
-			btn.textContent = "✓ Copied!";
+			const originalText = button.textContent;
+			button.textContent = "✓ Copied!";
 			setTimeout(() => {
-				btn.textContent = originalText;
+				button.textContent = originalText;
 			}, 2000);
 		},
 		(err) => {
@@ -100,6 +107,25 @@ function copyTunesToClipboard() {
 			alert("Failed to copy to clipboard");
 		}
 	);
+}
+
+function copyTunesToClipboard() {
+	copyTuneDataToClipboard(
+		window.tunesData,
+		document.getElementById("copyTunesBtn")
+	);
+}
+
+/**
+ * Copy a single tune's data to clipboard as a JavaScript literal.
+ * @param {number} tuneIndex - Index of the tune in filteredData
+ */
+function copySingleTune(tuneIndex) {
+	const tune = window.filteredData[tuneIndex];
+	const button = document.querySelector(
+		`.btn-copy[data-tune-index="${tuneIndex}"]`
+	);
+	copyTuneDataToClipboard([tune], button);
 }
 
 // Add New Tune
@@ -144,6 +170,15 @@ function deleteTune(tuneIndex) {
 	applyFilters();
 }
 
+function toggleTuneSelected(tuneIndex, row) {
+	const tune = window.filteredData[tuneIndex];
+	tune.selected = !tune.selected;
+	row.classList.toggle("tune-selected", tune.selected);
+	const btn = row.querySelector(".btn-select");
+	btn.textContent = tune.selected ? "☑" : "☐";
+	btn.classList.toggle("btn-select--checked", tune.selected);
+}
+
 function expandNotes(tuneIndex, refIndex) {
 	const truncated = document.querySelector(
 		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
@@ -172,12 +207,8 @@ function collapseNotes(tuneIndex, refIndex) {
 	}
 }
 
-/**
- * Extract all metadata values from a tune for display and filtering.
- * Returns an array of metadata strings including rhythm, parts, key, composer, origin, and badges.
- * @param {Object} tune - The tune object
- * @returns {Array<string>} Array of metadata strings
- */
+// Extract all metadata values from a tune for display and filtering.
+// Returns an array of metadata strings including rhythm, parts, key, composer, origin, and badges.
 function getTuneMetadata(tune) {
 	const badges = tune.badges
 		? Array.isArray(tune.badges)
@@ -216,7 +247,9 @@ function initialiseData() {
 	window.clearStorage = clearStorage;
 	window.collapseNotes = collapseNotes;
 	window.copyTunesToClipboard = copyTunesToClipboard;
+	window.copySingleTune = copySingleTune;
 	window.deleteTune = deleteTune;
+	window.toggleTuneSelected = toggleTuneSelected;
 	window.emptyTunes = emptyTunes;
 	window.expandNotes = expandNotes;
 	window.populateFilters = populateFilters;
@@ -355,6 +388,7 @@ function renderTable() {
 
 	window.filteredData.forEach((tune, index) => {
 		const row = document.createElement("tr");
+		if (tune.selected) row.classList.add("tune-selected");
 
 		let referencesHtml = "",
 			hasTheSessionLink = false;
@@ -494,11 +528,17 @@ function renderTable() {
 			</div>
 			<div>
 			
-        <div class="tune-header">
+        <div class="tune-header tune-header--actions">
 		${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
 			<div class="tune-actions">
+			<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">
+				${tune.selected ? "☑" : "☐"}
+			</button>
 			<button class="btn-icon btn-edit" title="Edit tune">
 				✎
+			</button>
+			<button class="btn-icon btn-copy" data-tune-index="${index}" title="Copy tune data">
+				📋
 			</button>
 			<button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
 				🗑
@@ -523,9 +563,18 @@ function renderTable() {
 				openAbcModal(tune);
 			});
 		}
+		row.querySelector(".btn-select").addEventListener("click", () => {
+			toggleTuneSelected(index, row);
+		});
+
 		const editButtonEl = row.querySelector(".btn-edit");
 		editButtonEl.addEventListener("click", () => {
 			editModal.openWithTune(window.filteredData[index], index);
+		});
+
+		const copyButtonEl = row.querySelector(".btn-copy");
+		copyButtonEl.addEventListener("click", () => {
+			copySingleTune(index);
 		});
 
 		tbody.appendChild(row);
