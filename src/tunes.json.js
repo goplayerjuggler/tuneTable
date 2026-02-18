@@ -57,8 +57,8 @@ T:The Hut On Staffin Island
 C:Phil Cunningham
 O:Scotland
 R:reel
-L:1/8
-M:4/2
+L:1/16
+M:4/4
 K:Dmajor
 A,B,DE D3E FDFA d2cd | B3d BAFD`,
 			theSessionId: 2067,
@@ -6423,7 +6423,7 @@ K:Gmajor
 M: 4/2
 L: 1/8
 K: Dmix
-A2FA DAFG ABde fded|`,
+A2FA DAFG ABde fded|cGG/G/G EGG/G/G`,
 			references: [
 				{
 					notes: "Composed by Finbarr Dwyer"
