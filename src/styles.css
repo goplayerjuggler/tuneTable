@@ -1089,3 +1089,374 @@ tr.tune-selected td {
     max-width: calc(100% - 40px);
   }
 }
+
+/* ============================================
+   TUNE SELECTIONS MODAL
+   ============================================ */
+
+/* Widen the container for the two-pane layout */
+.modal-large.tune-selections-modal .modal__container {
+  max-width: 1100px;
+}
+
+/* Two-pane layout inside modal__body */
+.tune-selections-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  height: 100%;
+  min-height: 0;
+}
+
+/* ── Shared pane styles ── */
+.ts-pane {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ts-pane--available {
+  border-right: 1px solid var(--border);
+  padding-right: 16px;
+}
+
+.ts-pane--builder {
+  padding-left: 16px;
+  overflow-y: auto;
+}
+
+.ts-pane-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.ts-count {
+  font-weight: 400;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.ts-empty-msg {
+  font-style: italic;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  padding: 8px 0;
+}
+
+/* ── Available tunes list (left pane) ── */
+.ts-available-list {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ts-tune-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: var(--bg-table-stripe);
+  cursor: grab;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s,
+    background 0.15s;
+}
+
+.ts-tune-card:hover,
+.ts-tune-card:focus {
+  border-color: var(--accent-light);
+  box-shadow: 0 1px 4px rgba(49, 130, 206, 0.15);
+  outline: none;
+}
+
+.ts-tune-card.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+/* ── Right pane header ── */
+.ts-header {
+  flex-shrink: 0;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ts-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ts-name-input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-container);
+  transition: border-color 0.2s;
+}
+
+.ts-name-input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.1);
+}
+
+.ts-header-btns {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.ts-saved-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.ts-sort-select {
+  font-size: 0.85rem;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-container);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.ts-saved-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+  width: 100%;
+}
+
+.ts-saved-item {
+  font-size: 0.85rem;
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: var(--text-secondary);
+}
+
+.ts-saved-item:hover {
+  border-color: var(--accent-light);
+  color: var(--accent);
+  background: var(--info-bg);
+}
+
+.ts-saved-item--active {
+  border-color: var(--accent);
+  background: var(--info-bg);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Set blocks (right pane builder) ── */
+.ts-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ts-set-block {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-table-stripe);
+  overflow: hidden;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.ts-set-block.ts-drop-target {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+}
+
+.ts-set-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 10px;
+  background: var(--primary);
+  color: white;
+}
+
+.ts-set-name-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 2px 4px;
+}
+
+.ts-set-name-input:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+
+.ts-set-name-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Danger button inside the dark set header needs adjusted colours */
+.ts-set-header .btn-danger {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ts-set-header .btn-danger:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* ── Tune entries within a set block ── */
+.ts-set-tune {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  cursor: grab;
+  transition: background 0.15s;
+}
+
+.ts-set-tune:last-of-type {
+  border-bottom: none;
+}
+
+.ts-set-tune:hover {
+  background: #ebf4ff;
+}
+
+.ts-set-tune:focus {
+  outline: 2px solid var(--border-focus);
+  outline-offset: -2px;
+}
+
+.ts-set-tune.dragging {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.ts-tune-pos {
+  flex-shrink: 0;
+  width: 20px;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  padding-top: 2px;
+  text-align: right;
+}
+
+.ts-tune-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Override the global .tune-name link style inside the builder */
+.ts-set-tune .ts-tune-name,
+.ts-tune-card .ts-tune-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  cursor: default;
+}
+
+.ts-tune-unknown {
+  color: var(--error-text);
+  font-style: italic;
+}
+
+.ts-tune-incipit {
+  line-height: 1;
+}
+
+.ts-tune-notes {
+  width: 100%;
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  background: transparent;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.ts-tune-notes:hover,
+.ts-tune-notes:focus {
+  background: var(--bg-container);
+  border-color: var(--border);
+  outline: none;
+}
+
+.ts-tune-notes:focus {
+  border-color: var(--border-focus);
+}
+
+.ts-tune-rhythm {
+  /* Reuses .badge styles; reset margin for standalone use in left pane */
+  align-self: flex-start;
+  margin: 0;
+}
+
+/* ── "Add set divider" button ── */
+.ts-add-set-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+.ts-add-set-btn:hover {
+  border-color: var(--accent-light);
+  color: var(--accent);
+  background: var(--info-bg);
+}
+
+/* ── Responsive: stack panes vertically on narrow screens ── */
+@media (max-width: 768px) {
+  .tune-selections-body {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-pane--available {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding-right: 0;
+    padding-bottom: 16px;
+    max-height: 40vh;
+  }
+
+  .ts-pane--builder {
+    padding-left: 0;
+  }
+}

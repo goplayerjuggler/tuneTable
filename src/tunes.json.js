@@ -1,5 +1,72 @@
 export default {
 	lastUpdate: "2026-02-17",
+	setLists: [
+		{
+			id: "1771406869982-ukwxx",
+			name: "Steam up sets",
+			dateCreated: "2026-02-18T09:27:49.982Z",
+			dateModified: "2026-02-18T10:23:46.003Z",
+			sets: [
+				{
+					name: "Slides (3-3-3)",
+					tunes: [
+						{
+							theSessionId: 6
+						},
+						{
+							theSessionId: 8362
+						},
+						{
+							theSessionId: 1398
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "SNCF jigs",
+					tunes: [
+						{
+							ttId: "sncf-jigs"
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Rookery set (4-3-4) ",
+					tunes: [
+						{
+							theSessionId: 2958
+						},
+						{
+							theSessionId: 9828
+						},
+						{
+							theSessionId: 9639
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Fahey's Fiddle",
+					tunes: [
+						{
+							theSessionId: 124,
+							notes: "In C; x2"
+						},
+						{
+							theSessionId: 693,
+							notes: "x2"
+						},
+						{
+							theSessionId: 124,
+							notes: "in D; x2"
+						}
+					],
+					collapsed: true
+				}
+			]
+		}
+	],
 	tunes: [
 		{
 			abc: `
@@ -7944,6 +8011,7 @@ EFGA BAGB AFF2 dFAF|EFGA`,
 		},
 		{
 			groups: "su,alora",
+			ttId: "sncf-jigs",
 			incipit: `X:4
 L:1/8
 M:12/8
