@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-02-17",
+	lastUpdate: "2026-02-18",
 	tunes: [
 		{
 			abc: `
@@ -3638,17 +3638,19 @@ K:Edorian
 T:Devanny's Goat
 C:Tommy Whelan
 R:reel
-L:1/8
+L:1/16
 M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/2881#setting2881
-N:Setting entered in thesession by user “Kenny” on 2004-04-23
+N:Imported into *tuneTable* on 2026-02-18,
+N:from https://thesession.org/tunes/2881#setting47359
+N:Setting entered in thesession by user “Fernando Durbán Galnares” on 2023-06-10
+N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Dmajor
-|:DF F2 AFAB|d2 fe dBAF|DFAF BFAF|E2 ED EGFE|
- DFAB AFAB|defe dBAf|efdB AF F2|AFEG FD D2:|
- |:faab afdf|a2 fd edBd|ABde fd d2|e2 fd edBd|
- ABde fd d2|edfd edBd|A2 dB AF F2|AFEG FD D2:|`,
-			theSessionId: 2881
+|:E|"D"DFAB AFAB "G"defe dBAF|"D"DFAF BFAF "A"EEDF EGFE|
+"D"DFAB AFAB "G"defe dBAf|"D"efdB AFFG "A"AFEG "D"FDD:|
+|:e|"D"faab afdf "G"aafd edBd|"D"ABde fddd "A"edfd edBd|
+"D"ABde fddd "G"edfd edBd|"D"ABdB AFFG "A"AFEG "D"FDD:|`,
+			theSessionId: 2881,
+			theSessionSettingId: 47359
 		},
 		{
 			abc: `X:1
