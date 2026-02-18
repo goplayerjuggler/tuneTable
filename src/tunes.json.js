@@ -10,7 +10,6 @@ R: march(?) + hop jig
 S: John Doherty, fiddle
 N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 D: The Floating Bow (1996; recorded between 1968 and 1974)
-C:Traditional
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M: 2/2
@@ -1200,7 +1199,6 @@ B2.B {c}BAG FFF AFD|d^cd ((3gfe) d cAF G2:|`,
 			parts: "AABB",
 			abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
-C: Traditional
 R: jig
 M: 12/8
 L: 1/8
@@ -1923,6 +1921,11 @@ Add A3 AGE G3|Add ABA AGE EDD|`,
 			references: [
 				{
 					notes: "See the Frieze Britches for a set by McMahon & Hill"
+				},
+				{
+					url: "https://donegalfiddlemusic.bandcamp.com/track/track-9-caileach-an-airgead-bean-baint-duileasc-agus-fhluich-s-a-l-ine-double-jigs",
+					name: "Stephen Campbell, fiddle",
+					album: "The Fiddle Music Of Donegal - Volume Two (1997)"
 				}
 			]
 		},
@@ -3985,16 +3988,15 @@ K:Gmajor
 			theSessionId: 605
 		},
 		{
-			abc: [
-				`X:1
+			abc: `X:1
 T:Cotillon De Baie-Ste-Catherine
 O:Quebec
 R:reel
 L:1/16
+D: Traditional tunes of Québec (2001)
+S:Laurie Hart, fiddle
 M:4/4
-N:This transcription is based on Laurie Hart's album Danse ce soir ! Traditional
-N:tunes of Québec • 2001.
-N:https://music.youtube.com/watch?v=MIXYs91NGH8
+F:https://music.youtube.com/watch?v=MIXYs91NGH8
 N:This reel is “crooked”: the first part is in four beats per bar, second part is
 N:in five(!) beats per bar.
 N:There is some confusion regarding this reel. It became well known as a part of a
@@ -4004,10 +4006,10 @@ N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/23211#setting47315
 N:Setting entered in thesession by user “GoPlayer” on 2023-06-02
+N:(edited after importing)
 K:Gmajor
 |:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
- [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`
-			],
+ [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`,
 			badges: "crooked",
 			theSessionId: 23211,
 			theSessionSettingId: 47315
@@ -4130,7 +4132,7 @@ K:Dminor
 T:The Cameronian
 R: reel
 S:Rónán Galvin, fiddle
-D: The Fiddle Music of Donegal Volume 2
+D: The Fiddle Music of Donegal - Volume 2 (1997)
 F: https://donegalfiddlemusic.bandcamp.com/track/track-22-the-cameronian-reel
 N:0. This is a “crooked” tune
 N:1. No attempt is made here to capture the fine details (bowing, rhythm,
@@ -8829,13 +8831,13 @@ efe ded cec BeB|GAB dBA EFG A3|`,
 			theSessionId: 12
 		},
 		{
-			incipit: `X: 7
+			incipit: `X: 1
 T: The Frost Is All Over
 R: jig
 M: 12/8
 L: 1/8
 K: Dmaj
-ef edB AFD E2 D|DFA AFA`,
+def edB AFD E2 D|DFA AFA`,
 			theSessionId: 448
 		},
 		{
