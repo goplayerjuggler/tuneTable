@@ -615,8 +615,11 @@ function applyFilters() {
 			return matchesRhythm && matchesKey;
 		}
 
-		// Search in aka (alternate names)
-		if (tune.aka?.some((aka) => aka.toLowerCase().includes(searchTerm))) {
+		// Search in aka and titles (alternate names)
+		if (
+			tune.aka?.some((t) => t.toLowerCase().includes(searchTerm)) ||
+			tune.titles?.some((t) => t.toLowerCase().includes(searchTerm))
+		) {
 			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
 			const matchesKey = keyFilter === "" || tune.key === keyFilter;
 			return matchesRhythm && matchesKey;

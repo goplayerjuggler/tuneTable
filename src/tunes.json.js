@@ -12,6 +12,7 @@ N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 D: The Floating Bow (1996; recorded between 1968 and 1974)
 C:Traditional
 Z:abc-transcription Malcolm Schonfield
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M: 2/2
 L: 1/8
 K: D
@@ -2795,6 +2796,7 @@ T: Christmas Eve
 T: version as of 2025-12-05
 C:Tommy Coen
 Z:abc-transcription Malcolm Schonfield
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: reel
 M: 4/4
 L: 1/16
@@ -2810,6 +2812,7 @@ T: Christmas Eve
 T: version as of 2025-12-01
 C:Tommy Coen
 Z:abc-transcription Malcolm Schonfield% 2025-11-13, chords from 2025-10-23
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: reel
 M: 4/4
 L: 1/16
@@ -2824,6 +2827,7 @@ K: Gmaj
 T: Christmas Eve
 T: version with rolls; 2025-11-13
 Z:abc-transcription Malcolm Schonfield% 2025-11-13
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: reel
 M: 4/4
 L: 1/16
@@ -6755,6 +6759,7 @@ N: better way of capturing the “ideas” in this “non-standard” way of hea
 N: (2025-11-15)
 N: 5. See The Gold Ring, here, for the personnel list for the concert.
 Z:abc-transcription Malcolm Schonfield
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 L: 1/8
 K: Emin
 G/F/G/ | EF/E/ DB,|:SEE z/G/F/G/|A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|
@@ -9159,19 +9164,38 @@ M:3/4
 N:Imported into *tuneTable* on 2026-02-17,
 N:from https://thesession.org/tunes/4037#setting4037
 N:Setting entered in thesession by user “dafydd” on 2003-08-28
+N:(edited after importing)
 K:Ddorian
-|:D2 DE FA|f2 fe dc|A2 AG FA|E2 ED EF|
+|:D2 DE FA|f2 fe dc|A2 AG Ac|E2 ED EF|
  D2 DE Fd|^c2 cA GE|1 A2 dA GE:|2 D2 DA B^c||
  d2 de fd|ec A2 AG|F2 FEFA|EA FA EA|
- d2 de fd|e^c A2 B2|c2 cA cd|ed cA GE|
+ d2 de fd|ec A2 B2|c2 cA cd|ed cA GE|
  d2 de fd|ec A2 AG|F2 FE FA|EA FA EA|
  d2 de fa|gf ed ^cA|c2 cA cd|ed cA GE||`,
 			theSessionId: 4037,
-			badges: "crooked"
+			badges: "crooked",
+			parts: "AABB"
+		},
+		{
+			incipit: `
+X:1
+T: Na Farraigí Dearga
+T: The Seas They Ran Red with Blood 
+T: Descriptive piece
+R:Hornpipe
+D: Decade(2019)
+S:Fidil
+F:https://raelachrecords.bandcamp.com/track/na-farraigi-dearga-the-seas-they-ran-red-with-blood-descriptive-piece
+M:4/2
+N: Mostly swung throughout – so in general “♪♪=♩♪”
+N: It's a lovely tune; remarkable.
+N: Waiting to hear from Raelach Records before publishing my full transcription.
+L:1/8
+K:Dm
+A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D`,
+			parts: "AABBCC"
 		}
-
 		/*
-		,{incipit:``,theSessionId:}
 		,{incipit:``,theSessionId:
 			references: [
 				{
