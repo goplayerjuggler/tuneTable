@@ -832,7 +832,7 @@ export default class TuneSelectionsModal extends Modal {
 			this._setLists.push(this._current);
 		}
 		this._renderSavedList();
-		this._callbacks.saveSetListsToStorage?.(this._setLists);
+		this._callbacks.saveTunesToStorage?.(this._setLists);
 		const btn = this.element.querySelector(".ts-save-btn");
 		const orig = btn.textContent;
 		btn.textContent = "✓ Saved";

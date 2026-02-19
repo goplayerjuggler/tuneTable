@@ -2165,6 +2165,11 @@ tr.tune-selected td {
 }
 
 /* ── Print media: hide chrome, show only paper ───────────────── */
+.footer-local-warning {
+  color: var(--error-text);
+  font-style: italic;
+}
+
 @media print {
   /* Hide everything except the cloned print root (appended directly to <body>,
      outside all overflow:hidden modal wrappers). */
@@ -2213,4 +2218,38 @@ tr.tune-selected td {
   #pp-print-root .pp-set-divider {
     break-after: avoid;
   }
+}
+
+/* ── Page init spinner ───────────────────────────────────────────────────────── */
+#page-spinner:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 60vh;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+#page-spinner::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: pp-spin 0.7s linear infinite;
+}
+@keyframes pp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Footer local-storage warning ───────────────────────────────────────────── */
+.footer-local-warning {
+  margin-left: 6px;
+  color: var(--warning, #b45309);
+  font-weight: 600;
+  font-size: 0.9em;
 }

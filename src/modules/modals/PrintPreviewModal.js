@@ -373,7 +373,7 @@ export default class PrintPreviewModal extends Modal {
 		// the page threshold).
 
 		// AbcJs rendering happens after layout
-		const paperEl = this.element.querySelector("#pp-paper");
+
 		if (this._opts.showIncipit) this._renderIncipits();
 	}
 

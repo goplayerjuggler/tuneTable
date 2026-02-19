@@ -25,9 +25,12 @@ let currentSort = getEmptySort();
 let editModal, getAbcModal, addTunesModal, loadJsonModal, tuneSelectionsModal;
 
 // Local Storage Functions
-function saveTunesToStorage() {
+function saveTunesToStorage(setLists) {
 	try {
 		localStorage.setItem(storageKey, JSON.stringify(window.tunesData));
+		localStorage.setItem(storageKey + "_saveDate", new Date().toISOString());
+		if (setLists)
+			localStorage.setItem(storageKey + "_setLists", JSON.stringify(setLists));
 		console.log("Saved to local storage");
 	} catch (e) {
 		console.error("Failed to save to local storage:", e);
@@ -36,11 +39,15 @@ function saveTunesToStorage() {
 
 function loadTunesFromStorage() {
 	try {
-		const stored = localStorage.getItem(storageKey);
+		const stored = localStorage.getItem(storageKey),
+			setListsString = localStorage.getItem(storageKey + "_setLists");
+
 		if (stored) {
 			const parsed = JSON.parse(stored);
 			if (Array.isArray(parsed)) {
-				return parsed;
+				const saveDate = localStorage.getItem(storageKey + "_saveDate") || null;
+				const setLists = setListsString ? JSON.parse(setListsString) : null;
+				return { tunes: parsed, saveDate, setLists };
 			}
 		}
 	} catch (e) {
@@ -297,27 +304,58 @@ function initialiseData() {
 
 	window.tunesData = [];
 	window.filteredData = [];
+	const params = new URLSearchParams(new URL(window.location).search.slice(1));
 	const storedData = loadTunesFromStorage();
 
 	//! todo - revise - no need to sort when loading from local storage(?)
 	if (storedData) {
-		console.log("Loading from local storage");
-		window.tunesData = storedData;
+		// console.log("Loading from local storage");
+		window.tunesData = storedData.tunes;
+		if (storedData.setLists)
+			tuneSelectionsModal.loadSetLists(storedData.setLists);
+		// Update footer to show local storage date and warning
+		const saveDateEl = document.getElementById("spLastUpdated");
+		if (saveDateEl && storedData.saveDate) {
+			const formatted = new Date(storedData.saveDate).toLocaleDateString(
+				"en-GB",
+				{
+					day: "numeric",
+					month: "long",
+					year: "numeric"
+				}
+			);
+			saveDateEl.innerHTML =
+				`${formatted} <span class="footer-local-warning">` +
+				`&#9888;&#xFE0E; using locally stored data &mdash; not the server data</span>`;
+		}
 	} else {
-		console.log("Loading from tunesDataRaw and processing");
+		// console.log("Loading from tunesDataRaw and processing");
+
+		document.getElementById("spLastUpdated").innerHTML =
+			tunesDataRaw.lastUpdate;
 		window.tunesData = tunesDataRaw.tunes
 			.filter((t) => t !== undefined)
-			.map(processTuneData); //aaa
+			.map(processTuneData);
+
 		sortWithDefaultSort();
 		// Load hardcoded set lists from tunesDataRaw if any are defined
+		let setLists;
+
+		if (params.has("g")) {
+			let g = params.get("g");
+			//only keep lists with matching group data
+			setLists = tunesDataRaw.setLists.filter((list) =>
+				list.groups?.toLowerCase().includes(g.toLowerCase())
+			);
+		} else setLists = tunesDataRaw.setLists.filter((l) => !l.groups);
 		if (Array.isArray(tunesDataRaw.setLists)) {
-			tuneSelectionsModal.loadSetLists(tunesDataRaw.setLists);
+			tuneSelectionsModal.loadSetLists(setLists);
 		}
 	}
 	let filtered = false;
 
 	populateFilters();
-	let params = new URLSearchParams(new URL(window.location).search.slice(1));
+
 	if (params.has("g")) {
 		let g = params.get("g");
 		if (g) {
@@ -734,8 +772,14 @@ function sortData(column) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-	// debugger;
-	initialiseData();
+	try {
+		initialiseData();
+	} finally {
+		// #page-spinner is visible by default in HTML (no hidden attr);
+		// #page-main is hidden by default. Swap them once data is ready.
+		document.getElementById("page-spinner").setAttribute("hidden", "");
+		document.getElementById("page-main").removeAttribute("hidden");
+	}
 
 	// document
 	// 	.getElementById("searchInput")
@@ -817,8 +861,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			tuneSelectionsBtn.disabled = !tuneSelectionsModal.isEnabled();
 		});
 	}
-
-	document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
 
 	// theSessionImport.setupTheSessionImportModal();
 	document

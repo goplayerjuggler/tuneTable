@@ -1,11 +1,12 @@
 export default {
-	lastUpdate: "2026-02-17",
+	lastUpdate: "2026-02-19",
 	setLists: [
 		{
 			id: "1771406869982-ukwxx",
 			name: "Steam up sets",
 			dateCreated: "2026-02-18T09:27:49.982Z",
 			dateModified: "2026-02-18T10:23:46.003Z",
+			groups: "su",
 			sets: [
 				{
 					name: "Slides (3-3-3)",
@@ -18,15 +19,6 @@ export default {
 						},
 						{
 							theSessionId: 1398
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "SNCF jigs",
-					tunes: [
-						{
-							ttId: "sncf-jigs"
 						}
 					],
 					collapsed: true
@@ -63,6 +55,76 @@ export default {
 						}
 					],
 					collapsed: true
+				}
+			]
+		},
+		{
+			id: "1771465912087-9s86i",
+			name: "ALORA sets",
+			groups: "ALORA",
+			dateCreated: "2026-02-19T01:51:52.087Z",
+			dateModified: "2026-02-19T02:16:58.158Z",
+			sets: [
+				{
+					name: "Maud Millar set",
+					tunes: [
+						{
+							theSessionId: 1177
+						},
+						{
+							theSessionId: 116
+						},
+						{
+							theSessionId: 118
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Christmas Eve set",
+					tunes: [
+						{
+							theSessionId: 440
+						},
+						{
+							theSessionId: 1555
+						},
+						{
+							theSessionId: 1177
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Barndances",
+					tunes: [
+						{
+							norbeckId: 12,
+							norbeckR: "barndance"
+						},
+						{
+							norbeckId: 14,
+							norbeckR: "barndance"
+						},
+						{
+							theSessionId: 3835
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Polkas d'après Jason O'Rourke",
+					tunes: [
+						{
+							theSessionId: 3835
+						},
+						{
+							theSessionId: 18688
+						},
+						{
+							theSessionId: 7386
+						}
+					]
 				}
 			]
 		}
@@ -223,6 +285,7 @@ K:Dmajor
 		{
 			groups: "ALORA",
 			parts: "AABB",
+			norbeckId: 14,
 			abc: `
 %251029
 X: 2
@@ -247,9 +310,11 @@ e2-ee .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [1 A2 Ac:| [2 A2 AB||
 		{
 			groups: "ALORA",
 			parts: "AABB",
+			norbeckId: 12,
 			abc: `X: 1
 T: Joe Bane's
-O:Ireland
+C:John MacDonald
+O:Scotland
 S: Jack Talty, concertina; Cormac Begley, concertina
 D: Na Fir Bolg
 F:https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
