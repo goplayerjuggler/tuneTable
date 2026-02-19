@@ -13,6 +13,7 @@ import LoadJsonModal from "./modules/modals/LoadJsonModal.js";
 
 import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
 import TuneSelectionsModal from "./modules/modals/TuneSelectionsModal.js";
+import TheSessionSetsImportModal from "./modules/modals/TheSessionSetsImportModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
@@ -22,7 +23,12 @@ const getEmptySort = () => {
 	return { column: null, direction: "asc" };
 };
 let currentSort = getEmptySort();
-let editModal, getAbcModal, addTunesModal, loadJsonModal, tuneSelectionsModal;
+let editModal,
+	getAbcModal,
+	addTunesModal,
+	loadJsonModal,
+	tuneSelectionsModal,
+	tsSetImportModal;
 
 // Local Storage Functions
 function saveTunesToStorage(setLists) {
@@ -301,6 +307,13 @@ function initialiseData() {
 	addTunesModal = new AddTunesModal(callbacks);
 	loadJsonModal = new LoadJsonModal(callbacks);
 	tuneSelectionsModal = new TuneSelectionsModal(callbacks);
+	tsSetImportModal = new TheSessionSetsImportModal({
+		onImport: (setLists) => {
+			const existing = tuneSelectionsModal.getSetLists();
+			tuneSelectionsModal.loadSetLists([...existing, ...setLists]);
+			callbacks.saveTunesToStorage?.();
+		}
+	});
 
 	window.tunesData = [];
 	window.filteredData = [];
@@ -866,4 +879,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	document
 		.getElementById("thesession-import-btn")
 		.addEventListener("click", openSessionImport);
+	document
+		.getElementById("thesession-sets-import-btn")
+		?.addEventListener("click", (e) => {
+			e.preventDefault();
+			dropdown.classList.remove("active");
+			tsSetImportModal.open();
+		});
 });
