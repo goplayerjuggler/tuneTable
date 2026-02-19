@@ -205,18 +205,37 @@ h1 {
   border: 1px solid var(--border);
 }
 
-.dropdown-content a {
+.dropdown-content a,
+.dropdown-content button {
   color: var(--text-primary);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  width: 100%;
+  text-align: left;
   transition: background-color 0.2s ease;
   font-size: 14px;
+  /* reset button chrome */
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+  box-shadow: none;
+  outline: none;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover,
+.dropdown-content button:hover {
   background: var(--bg-table-stripe);
   color: var(--accent);
+}
+
+.dropdown-content button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  color: var(--text-primary);
 }
 
 .dropdown.active .dropdown-content {
@@ -1192,7 +1211,7 @@ tr.tune-selected td {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .ts-name-input {
@@ -1213,10 +1232,12 @@ tr.tune-selected td {
   box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.1);
 }
 
-.ts-header-btns {
+/* Action buttons row (New, Save, Duplicate, Copy data, Delete) */
+.ts-action-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
-  flex-shrink: 0;
+  margin-bottom: 10px;
 }
 
 .ts-saved-row {
@@ -1286,19 +1307,48 @@ tr.tune-selected td {
     box-shadow 0.15s;
 }
 
+.ts-set-block--selected > .ts-set-header {
+  background: var(--accent);
+}
+
+.ts-set-header.ts-drop-target {
+  outline: 2px dashed rgba(255, 255, 255, 0.7);
+  outline-offset: -3px;
+}
+
 .ts-set-block.ts-drop-target {
   border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
 }
 
+/* Drop indicator when reordering whole sets */
+.ts-set-block.ts-drop-target--set {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+}
+
+/* Set header - acts as accordion toggle */
 .ts-set-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 8px;
   padding: 6px 10px;
   background: var(--primary);
   color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Chevron indicator, rotates when collapsed */
+.ts-set-chevron::before {
+  content: "▾";
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.ts-set-block--collapsed .ts-set-chevron::before {
+  transform: rotate(-90deg);
 }
 
 .ts-set-name-input {
@@ -1310,6 +1360,7 @@ tr.tune-selected td {
   font-size: 0.9rem;
   font-weight: 600;
   padding: 2px 4px;
+  cursor: text; /* override header's grab cursor */
 }
 
 .ts-set-name-input:focus {
@@ -1321,7 +1372,22 @@ tr.tune-selected td {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Danger button inside the dark set header needs adjusted colours */
+/* Tune count shown beside name when the set is collapsed */
+.ts-set-tune-count {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+  flex: 1;
+  padding-left: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.ts-set-block--collapsed .ts-set-tune-count {
+  opacity: 1;
+}
+
+/* Danger button inside the dark set header */
 .ts-set-header .btn-danger {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1329,6 +1395,20 @@ tr.tune-selected td {
 .ts-set-header .btn-danger:hover {
   background: rgba(255, 255, 255, 0.15);
   color: white;
+}
+
+/* Grab cursor on header signals the set block is draggable (multiSet only) */
+.ts-set-block.ts-draggable > .ts-set-header {
+  cursor: grab;
+}
+
+.ts-set-block.ts-draggable > .ts-set-header:active {
+  cursor: grabbing;
+}
+
+/* ── Collapsible set body ── */
+.ts-set-body {
+  overflow: hidden;
 }
 
 /* ── Tune entries within a set block ── */
@@ -1377,7 +1457,7 @@ tr.tune-selected td {
   gap: 4px;
 }
 
-/* Override the global .tune-name link style inside the builder */
+/* Override the global .tune-name link style inside the builder and available pane */
 .ts-set-tune .ts-tune-name,
 .ts-tune-card .ts-tune-name {
   font-size: 0.95rem;
@@ -1421,8 +1501,8 @@ tr.tune-selected td {
   border-color: var(--border-focus);
 }
 
+/* Reuses .badge styles; reset margin for standalone use in left pane */
 .ts-tune-rhythm {
-  /* Reuses .badge styles; reset margin for standalone use in left pane */
   align-self: flex-start;
   margin: 0;
 }
@@ -1458,5 +1538,679 @@ tr.tune-selected td {
 
   .ts-pane--builder {
     padding-left: 0;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   PRINT PREVIEW MODAL
+══════════════════════════════════════════════════════════════════ */
+
+.modal-large.print-preview-modal .modal__container {
+  max-width: 1200px;
+}
+
+/* Two-pane layout: options | preview */
+.pp-body {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 230px 1fr;
+  grid-template-areas:
+    "opts preview"
+    "footer footer";
+  overflow: hidden;
+  height: 100%;
+}
+
+.pp-options {
+  grid-area: opts;
+  background: var(--bg-container);
+  border-right: 1px solid var(--border);
+  padding: 16px 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Options sections ── */
+.pp-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pp-section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.pp-opt-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.12s;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+.pp-opt-row:hover {
+  background: var(--bg-hover, #eef0f3);
+}
+.pp-opt-row input[type="checkbox"] {
+  margin-top: 2px;
+  width: 13px;
+  height: 13px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.pp-opt-row span {
+  line-height: 1.3;
+}
+.pp-opt-row small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+/* Layout toggle buttons */
+.pp-layout-btns {
+  display: flex;
+  gap: 6px;
+}
+.pp-layout-btn {
+  flex: 1;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  padding: 7px 4px 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-container);
+  transition:
+    border-color 0.15s,
+    color 0.15s,
+    background 0.15s;
+}
+.pp-layout-btn:hover {
+  border-color: var(--accent-light);
+  color: var(--accent);
+}
+.pp-layout-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--info-bg);
+}
+.pp-layout-icon {
+  font-size: 17px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* Incipit size slider */
+.pp-range {
+  width: 100%;
+  accent-color: var(--accent);
+  margin: 4px 0;
+}
+.pp-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+}
+
+/* ── Preview panel ── */
+.pp-preview-wrap {
+  grid-area: preview;
+  background: #d4d4d4;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pp-preview-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #666;
+  padding: 8px 16px 4px;
+  flex-shrink: 0;
+}
+
+.pp-preview-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 24px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* A4 paper simulation */
+.pp-paper {
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  padding: 32px 38px;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.18);
+  border-radius: 2px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 11px;
+  color: #111;
+  line-height: 1.5;
+  align-self: flex-start;
+}
+
+/* ── Paper content ── */
+.pp-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  break-after: avoid;
+}
+
+.pp-meta {
+  font-size: 10px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 16px;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.pp-set-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 6px;
+  break-after: avoid;
+}
+.pp-set-divider--first {
+  margin-top: 12px;
+}
+.pp-rule {
+  flex: 1;
+  height: 1px;
+  background: #111;
+}
+.pp-set-label {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pp-set-gap {
+  margin-top: 14px;
+}
+
+.pp-rhythm-summary {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 10px;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 8px;
+  margin-top: -3px;
+}
+
+/* ── Tune entry ── */
+.pp-tune {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 0 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid #e0e0e0;
+  break-inside: avoid;
+}
+.pp-tune:last-child {
+  border-bottom: none;
+}
+
+.pp-tune-num {
+  color: #888;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 9.5px;
+  padding-top: 2px;
+  text-align: right;
+}
+
+.pp-tune-content {
+}
+
+.pp-tune-title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.pp-tune-name {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+.pp-tune-badges {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.pp-badge {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 8.5px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  color: #555;
+  letter-spacing: 0.02em;
+}
+
+.pp-incipit {
+  margin: 3px 0 2px;
+  /* zoom is set inline by _applyIncipitZoom(); layout reflows correctly
+     because zoom (unlike transform:scale) participates in flow. */
+}
+.pp-incipit svg {
+  display: block;
+}
+
+.pp-contour {
+  font-size: 13px;
+  color: #666;
+  margin: 1px 0;
+}
+.pp-contour svg {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.pp-tune-notes {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 10px;
+  color: #374151;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* ── Footer ── */
+.pp-footer {
+  grid-area: footer;
+  display: flex;
+  gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  align-items: center;
+}
+
+/* ── Print media ── */
+
+/* ════════════════════════════════════════════════════════════════
+   PRINT PREVIEW MODAL  (#print-preview-modal)
+════════════════════════════════════════════════════════════════ */
+
+/* Override the large modal container to nearly fill the viewport */
+#print-preview-modal .modal__container {
+  max-width: 1200px;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Body: options panel (fixed width) + scrollable preview */
+.pp-body {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+/* ── Options panel (left) ──────────────────────────────────── */
+.pp-options {
+  background: var(--bg-container);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pp-section {
+  padding: 10px 0 6px;
+}
+
+.pp-section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.pp-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2px 0;
+}
+
+.pp-opt-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 4px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.pp-opt-row:hover {
+  background: var(--bg-hover, #f0f2f5);
+}
+.pp-opt-row input[type="checkbox"] {
+  margin-top: 2px;
+  accent-color: var(--accent);
+  flex-shrink: 0;
+}
+.pp-opt-label {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+.pp-opt-label small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 1px;
+}
+
+/* Layout selector buttons */
+.pp-layout-sel {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.pp-layout-btn {
+  flex: 1;
+  padding: 5px 0;
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-container);
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pp-layout-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.pp-layout-btn.active {
+  border-color: var(--accent);
+  background: var(--info-bg, #ebf4ff);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Notation size slider */
+.pp-scale-wrap {
+  padding: 6px 5px 2px;
+}
+.pp-scale-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+.pp-scale-wrap input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.pp-scale-hints {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* ── Preview area (right) ────────────────────────────────────── */
+.pp-preview-wrap {
+  display: flex;
+  flex-direction: column;
+  background: #d1d5db;
+  overflow: hidden;
+}
+.pp-preview-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6b7280;
+  padding: 10px 16px 6px;
+  flex-shrink: 0;
+}
+.pp-preview-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 20px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+/* A4-ish paper card */
+.pp-paper {
+  background: #fff;
+  width: 100%;
+  max-width: 680px;
+  padding: 32px 36px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  position: relative;
+}
+
+/* ── Paper content styles ────────────────────────────────────── */
+.pp-title-block {
+  margin-bottom: 20px;
+}
+.pp-sl-title {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #111;
+}
+.pp-sl-date {
+  font-size: 11px;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 3px;
+  font-family: sans-serif;
+}
+
+/* Set dividers */
+.pp-set-divider {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 16px 0 5px;
+}
+.pp-rule {
+  flex: 1;
+  height: 1px;
+  background: #1a1a1a;
+}
+.pp-rule--full {
+  flex: 1;
+}
+.pp-set-label {
+  font-family: sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #1a1a1a;
+}
+.pp-set-rhythm {
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #6b7280;
+  font-style: italic;
+  margin: -2px 0 7px;
+}
+
+/* Tune entries */
+.pp-tune {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 0 9px;
+  padding: 7px 0;
+  border-bottom: 1px solid #e5e7eb;
+  break-inside: avoid;
+}
+.pp-tune:last-child {
+  border-bottom: none;
+}
+
+.pp-tune-num {
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #9ca3af;
+  text-align: right;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.pp-tune-content {
+}
+
+.pp-tune-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.pp-tune-name {
+  font-size: 13px;
+  font-weight: 700;
+}
+.pp-tune-badges {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.pp-badge {
+  font-family: sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  color: #6b7280;
+  letter-spacing: 0.02em;
+}
+
+.pp-incipit {
+  margin: 4px 0 2px;
+}
+.pp-incipit svg {
+  display: block;
+}
+
+.pp-contour {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 2px 0;
+}
+.pp-contour svg {
+  height: 18px;
+  width: auto;
+}
+
+.pp-tune-notes {
+  font-family: sans-serif;
+  font-size: 10.5px;
+  color: #374151;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* .pp-page-num removed — page numbers handled by @page counter */
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.pp-footer {
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  padding: 12px 20px;
+  flex-shrink: 0;
+}
+.pp-footer .pp-print-btn {
+  margin-left: auto;
+}
+
+/* ── Print media: hide chrome, show only paper ───────────────── */
+@media print {
+  /* Hide everything except the cloned print root (appended directly to <body>,
+     outside all overflow:hidden modal wrappers). */
+  body > *:not(#pp-print-root) {
+    display: none !important;
+  }
+
+  @page {
+    margin: 15mm 18mm;
+    /* Browser-native page numbers in the footer margin */
+    @bottom-center {
+      content: counter(page);
+      font-family: sans-serif;
+      font-size: 9pt;
+      color: #999;
+    }
+  }
+
+  #pp-print-root {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  #pp-print-root .pp-paper {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 11pt !important;
+  }
+
+  /* Hide the on-screen page-num element if it ever appears in the clone */
+  #pp-print-root .pp-page-num {
+    display: none !important;
+  }
+
+  #pp-print-root .pp-tune {
+    break-inside: avoid;
+  }
+  #pp-print-root .pp-set-divider {
+    break-after: avoid;
   }
 }

@@ -1,6 +1,7 @@
 "use strict";
 import AbcJs from "abcjs";
 import Modal from "./Modal.js";
+import PrintPreviewModal from "./PrintPreviewModal.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
 /**
@@ -88,7 +89,8 @@ export default class TuneSelectionsModal extends Modal {
 		this._setLists = []; // saved set lists
 		this._current = null; // set list currently being edited
 		this._sortOrder = "date"; // "date" | "name"
-		this._dragItem = null; // { type: "available"|"tune", ... }
+		this._dragItem = null; // { type: "available"|"tune"|"set", ... }
+		this._selectedSetIdx = 0; // index of the set that receives keyboard → adds from left pane
 	}
 
 	// ─── Public API ─────────────────────────────────────────────────────────────
@@ -220,12 +222,16 @@ export default class TuneSelectionsModal extends Modal {
 			</div>
 			<div class="modal__footer">
 				<button class="btn ts-close-btn">Close</button>
+				<button class="btn btn-primary ts-preview-btn" title="Print preview">🖨️ Preview &amp; print</button>
 			</div>`;
 
 		// Static event listeners (wired once; dynamic content re-rendered by _renderContents)
 		this.element
 			.querySelector(".ts-close-btn")
 			.addEventListener("click", () => this.close());
+		this.element
+			.querySelector(".ts-preview-btn")
+			.addEventListener("click", () => this._openPreview());
 		this.element
 			.querySelector(".ts-new-btn")
 			.addEventListener("click", () => this._newSetList());
@@ -379,6 +385,8 @@ export default class TuneSelectionsModal extends Modal {
 		const block = document.createElement("div");
 		block.className = "ts-set-block";
 		if (set.collapsed) block.classList.add("ts-set-block--collapsed");
+		if (setIdx === this._selectedSetIdx)
+			block.classList.add("ts-set-block--selected");
 		block.dataset.setIdx = setIdx;
 
 		// ── Header ──
@@ -418,6 +426,10 @@ export default class TuneSelectionsModal extends Modal {
 			removeBtn.addEventListener("click", (e) => {
 				e.stopPropagation(); // don't toggle accordion
 				this._current.sets.splice(setIdx, 1);
+				this._selectedSetIdx = Math.min(
+					this._selectedSetIdx,
+					this._current.sets.length - 1
+				);
 				this._renderBuilder();
 				this._markDirty();
 			});
@@ -425,6 +437,17 @@ export default class TuneSelectionsModal extends Modal {
 		}
 
 		header.addEventListener("click", () => {
+			if (this._selectedSetIdx !== setIdx) {
+				// Select this set without re-rendering — just swap the CSS class directly
+				// on the existing DOM to avoid a re-render firing mid-click which would
+				// immediately match _selectedSetIdx === setIdx and toggle collapse.
+				const prev = this.element.querySelector(".ts-set-block--selected");
+				prev?.classList.remove("ts-set-block--selected");
+				block.classList.add("ts-set-block--selected");
+				this._selectedSetIdx = setIdx;
+				return;
+			}
+			// Already selected — toggle collapse
 			set.collapsed = !set.collapsed;
 			block.classList.toggle("ts-set-block--collapsed", set.collapsed);
 			body.style.display = set.collapsed ? "none" : "";
@@ -469,11 +492,13 @@ export default class TuneSelectionsModal extends Modal {
 				e.stopPropagation(); // don't trigger tune-drop handlers on the body
 				const [moved] = this._current.sets.splice(this._dragItem.setIdx, 1);
 				this._current.sets.splice(setIdx, 0, moved);
+				this._selectedSetIdx = setIdx;
 				this._renderBuilder();
 				this._markDirty();
 			});
 
-			// Keyboard reordering: ↑/↓ on the header moves the whole set
+			// Keyboard reordering: ↑/↓ on the focused header moves the whole set;
+			// _selectedSetIdx is updated and focus restored to the moved set's header
 			header.tabIndex = 0;
 			header.addEventListener("keydown", (e) => {
 				if (e.key === "ArrowUp" && setIdx > 0) {
@@ -482,8 +507,10 @@ export default class TuneSelectionsModal extends Modal {
 						this._current.sets[setIdx],
 						this._current.sets[setIdx - 1]
 					];
+					this._selectedSetIdx = setIdx - 1;
 					this._renderBuilder();
 					this._markDirty();
+					this._focusSetHeader(this._selectedSetIdx);
 				} else if (
 					e.key === "ArrowDown" &&
 					setIdx < this._current.sets.length - 1
@@ -493,8 +520,10 @@ export default class TuneSelectionsModal extends Modal {
 						this._current.sets[setIdx],
 						this._current.sets[setIdx + 1]
 					];
+					this._selectedSetIdx = setIdx + 1;
 					this._renderBuilder();
 					this._markDirty();
+					this._focusSetHeader(this._selectedSetIdx);
 				}
 			});
 		}
@@ -519,7 +548,8 @@ export default class TuneSelectionsModal extends Modal {
 
 		if (set.collapsed) body.style.display = "none";
 		block.appendChild(body);
-		this._attachDropZone(body, setIdx); // drop zone on body, not block, to avoid header interference
+		this._attachDropZone(body, setIdx);
+		this._attachHeaderDropZone(header, setIdx); // also accept available-tune drops on the header (needed for empty sets)
 
 		return block;
 	}
@@ -664,6 +694,40 @@ export default class TuneSelectionsModal extends Modal {
 
 	// ─── Drag & drop ────────────────────────────────────────────────────────────
 
+	/** Restore keyboard focus to the set header at the given index after a re-render. */
+	_focusSetHeader(idx) {
+		requestAnimationFrame(() => {
+			const headers = this.element.querySelectorAll(
+				".ts-set-header[tabindex='0']"
+			);
+			headers[idx]?.focus();
+		});
+	}
+
+	/** Attach a drop zone to the set header, accepting only available-tune drags. */
+	_attachHeaderDropZone(header, setIdx) {
+		header.addEventListener("dragover", (e) => {
+			if (this._dragItem?.type !== "available") return;
+			e.preventDefault();
+			e.dataTransfer.dropEffect = "copy";
+			header.classList.add("ts-drop-target");
+		});
+
+		header.addEventListener("dragleave", (e) => {
+			if (!header.contains(e.relatedTarget)) {
+				header.classList.remove("ts-drop-target");
+			}
+		});
+
+		header.addEventListener("drop", (e) => {
+			header.classList.remove("ts-drop-target");
+			if (this._dragItem?.type !== "available") return;
+			e.preventDefault();
+			e.stopPropagation(); // don't bubble to block's set-reorder drop handler
+			this._addTuneToSet(this._dragItem.tune, setIdx);
+		});
+	}
+
 	_attachDropZone(setBlock, setIdx) {
 		setBlock.addEventListener("dragover", (e) => {
 			e.preventDefault();
@@ -697,9 +761,13 @@ export default class TuneSelectionsModal extends Modal {
 
 	// ─── Actions ────────────────────────────────────────────────────────────────
 
-	/** Add a tune to the last set in the current set list. */
+	/** Add a tune to the currently selected set (highlighted in the builder). */
 	_addTuneToCurrentSet(tune) {
-		this._addTuneToSetObject(tune, this._current.sets.at(-1));
+		const setIdx = Math.min(
+			this._selectedSetIdx,
+			this._current.sets.length - 1
+		);
+		this._addTuneToSetObject(tune, this._current.sets[setIdx]);
 		this._renderBuilder();
 	}
 
@@ -764,6 +832,7 @@ export default class TuneSelectionsModal extends Modal {
 			this._setLists.push(this._current);
 		}
 		this._renderSavedList();
+		this._callbacks.saveSetListsToStorage?.(this._setLists);
 		const btn = this.element.querySelector(".ts-save-btn");
 		const orig = btn.textContent;
 		btn.textContent = "✓ Saved";
@@ -825,13 +894,25 @@ export default class TuneSelectionsModal extends Modal {
 			this._setLists[0] ?? createSetList(this._uniqueSetListName());
 		this._renderContents();
 	}
+
 	/**
-	 * Seed the modal with set lists loaded from source data.
-	 * Intended for initial load from tunesDataRaw; does not overwrite
-	 * set lists already in memory.
+	 * Seed the modal with set lists (e.g. from localStorage or hardcoded source data).
+	 * Replaces any currently held set lists; doesn't affect the current in-progress edit.
 	 * @param {object[]} setLists
 	 */
 	loadSetLists(setLists) {
 		this._setLists = setLists;
+		if (this.element) this._renderSavedList();
+	}
+
+	/** Return the current in-memory set lists array, for persistence. */
+	getSetLists() {
+		return this._setLists;
+	}
+
+	/** Open the print preview modal for the current set list. */
+	_openPreview() {
+		if (!this._current) return;
+		new PrintPreviewModal(this._current).open();
 	}
 }
