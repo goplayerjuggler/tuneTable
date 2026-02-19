@@ -2253,3 +2253,19 @@ tr.tune-selected td {
   font-weight: 600;
   font-size: 0.9em;
 }
+
+/* Save button dirty indicator — dot appears when there are unsaved changes */
+.ts-save-btn.ts-btn-dirty {
+  position: relative;
+}
+.ts-save-btn.ts-btn-dirty::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--warning, #d97706);
+  box-shadow: 0 0 0 1.5px var(--bg-container, #fff);
+}

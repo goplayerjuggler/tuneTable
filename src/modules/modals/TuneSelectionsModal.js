@@ -88,6 +88,7 @@ export default class TuneSelectionsModal extends Modal {
 		// In-memory state (persisted to localStorage in a later iteration)
 		this._setLists = []; // saved set lists
 		this._current = null; // set list currently being edited
+		this._isDirty = false;
 		this._sortOrder = "date"; // "date" | "name"
 		this._dragItem = null; // { type: "available"|"tune"|"set", ... }
 		this._selectedSetIdx = 0; // index of the set that receives keyboard → adds from left pane
@@ -129,6 +130,7 @@ export default class TuneSelectionsModal extends Modal {
 		}
 
 		this._renderContents();
+		this._recomputeDirty(); // set dirty correctly for the newly loaded set list
 		super.open();
 	}
 
@@ -139,7 +141,13 @@ export default class TuneSelectionsModal extends Modal {
 	 */
 	close() {
 		if (!this.element) return;
+		if (
+			this._isDirty &&
+			!confirm("You have unsaved changes. Close anyway and lose them?")
+		)
+			return;
 
+		this._clearDirty();
 		this.element.classList.remove("modal-active");
 		this.clearAutoHideTimer();
 
@@ -353,8 +361,16 @@ export default class TuneSelectionsModal extends Modal {
 			item.textContent =
 				sl.name + (sl.id === this._current?.id ? " (editing)" : "");
 			item.addEventListener("click", () => {
+				if (
+					this._isDirty &&
+					!confirm(
+						"You have unsaved changes. Discard them and switch set list?"
+					)
+				)
+					return;
 				this._current = sl;
 				this._renderContents();
+				this._recomputeDirty();
 			});
 			container.appendChild(item);
 		});
@@ -795,9 +811,66 @@ export default class TuneSelectionsModal extends Modal {
 		this._markDirty();
 	}
 
+	/**
+	 * Stamp dateModified and recompute dirty state by comparing current content
+	 * against the persisted version in _setLists (if any).
+	 * An unsaved list (not yet in _setLists) is dirty as soon as it has any tunes.
+	 */
 	_markDirty() {
-		// Placeholder for future "unsaved changes" indicator
 		this._current.dateModified = new Date().toISOString();
+		this._recomputeDirty();
+	}
+
+	/** Force-recompute dirty state without touching dateModified. */
+	_recomputeDirty() {
+		this._isDirty = this._computeIsDirty();
+		this._updateDirtyIndicator();
+	}
+
+	_computeIsDirty() {
+		if (!this._current) return false;
+		const saved = this._setLists.find((sl) => sl.id === this._current.id);
+		if (!saved) {
+			// // Never been saved — dirty if it has any tunes at all
+			// return this._current.sets.some((s) => s.tunes.length > 0);
+			return true; // closing removes selected tunes - could be irritating if they want to change one of the tunes
+		}
+		// Compare content fields only (not timestamps)
+		return !this._contentEqual(this._current, saved);
+	}
+
+	/**
+	 * Deep-compare the user-visible content of two set lists,
+	 * ignoring id, dateCreated, dateModified.
+	 */
+	_contentEqual(a, b) {
+		if (a.name !== b.name) return false;
+		if (a.sets.length !== b.sets.length) return false;
+		for (let i = 0; i < a.sets.length; i++) {
+			const sa = a.sets[i],
+				sb = b.sets[i];
+			if (sa.name !== sb.name) return false;
+			if (sa.comments !== sb.comments) return false;
+			if (sa.tunes.length !== sb.tunes.length) return false;
+			for (let j = 0; j < sa.tunes.length; j++) {
+				// Compare serialised tune entries (ttId/theSessionId/notes)
+				if (JSON.stringify(sa.tunes[j]) !== JSON.stringify(sb.tunes[j]))
+					return false;
+			}
+		}
+		return true;
+	}
+
+	_clearDirty() {
+		this._isDirty = false;
+		this._updateDirtyIndicator();
+	}
+
+	/** Toggles a visual cue on the Save button when there are unsaved changes. */
+	_updateDirtyIndicator() {
+		const btn = this.element?.querySelector(".ts-save-btn");
+		if (!btn) return;
+		btn.classList.toggle("ts-btn-dirty", this._isDirty);
 	}
 
 	/**
@@ -817,8 +890,16 @@ export default class TuneSelectionsModal extends Modal {
 
 	/** Create a new empty set list and make it current. */
 	_newSetList() {
+		if (
+			this._isDirty &&
+			!confirm(
+				"You have unsaved changes. Discard them and create a new set list?"
+			)
+		)
+			return;
 		this._current = createSetList(this._uniqueSetListName());
 		this._renderContents();
+		this._recomputeDirty();
 	}
 
 	_save() {
@@ -833,6 +914,7 @@ export default class TuneSelectionsModal extends Modal {
 		}
 		this._renderSavedList();
 		this._callbacks.saveTunesToStorage?.(this._setLists);
+		this._recomputeDirty(); // will be false — content now matches saved version
 		const btn = this.element.querySelector(".ts-save-btn");
 		const orig = btn.textContent;
 		btn.textContent = "✓ Saved";
