@@ -12,6 +12,7 @@ import AddTunesModal from "./modules/modals/AddTunesModal.js";
 import LoadJsonModal from "./modules/modals/LoadJsonModal.js";
 
 import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
+import TuneSelectionsModal from "./modules/modals/TuneSelectionsModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
@@ -21,12 +22,15 @@ const getEmptySort = () => {
 	return { column: null, direction: "asc" };
 };
 let currentSort = getEmptySort();
-let editModal, getAbcModal, addTunesModal, loadJsonModal;
+let editModal, getAbcModal, addTunesModal, loadJsonModal, tuneSelectionsModal;
 
 // Local Storage Functions
-function saveTunesToStorage() {
+function saveTunesToStorage(setLists) {
 	try {
 		localStorage.setItem(storageKey, JSON.stringify(window.tunesData));
+		localStorage.setItem(storageKey + "_saveDate", new Date().toISOString());
+		if (setLists)
+			localStorage.setItem(storageKey + "_setLists", JSON.stringify(setLists));
 		console.log("Saved to local storage");
 	} catch (e) {
 		console.error("Failed to save to local storage:", e);
@@ -35,11 +39,15 @@ function saveTunesToStorage() {
 
 function loadTunesFromStorage() {
 	try {
-		const stored = localStorage.getItem(storageKey);
+		const stored = localStorage.getItem(storageKey),
+			setListsString = localStorage.getItem(storageKey + "_setLists");
+
 		if (stored) {
 			const parsed = JSON.parse(stored);
 			if (Array.isArray(parsed)) {
-				return parsed;
+				const saveDate = localStorage.getItem(storageKey + "_saveDate") || null;
+				const setLists = setListsString ? JSON.parse(setListsString) : null;
+				return { tunes: parsed, saveDate, setLists };
 			}
 		}
 	} catch (e) {
@@ -155,6 +163,11 @@ function addNewTune() {
 function deleteTune(tuneIndex) {
 	const tune = window.filteredData[tuneIndex];
 
+	if (tuneSelectionsModal?.isTuneInSetLists(tune)) {
+		alert(`"${tune.name}" is in one or more set lists and can't be deleted.`);
+		return;
+	}
+
 	if (!confirm(`Delete tune "${tune.name}"? This cannot be undone.`)) {
 		return;
 	}
@@ -257,6 +270,7 @@ function initialiseData() {
 	window.populateFilters = populateFilters;
 	window.saveTunesToStorage = saveTunesToStorage;
 	window.sortWithDefaultSort = sortWithDefaultSort;
+	window.openTuneSelections = () => tuneSelectionsModal?.open();
 
 	//window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal;
 	// window.closeTheSessionImportModal =
@@ -286,26 +300,62 @@ function initialiseData() {
 	getAbcModal = () => new AbcModal(callbacks);
 	addTunesModal = new AddTunesModal(callbacks);
 	loadJsonModal = new LoadJsonModal(callbacks);
+	tuneSelectionsModal = new TuneSelectionsModal(callbacks);
 
 	window.tunesData = [];
 	window.filteredData = [];
+	const params = new URLSearchParams(new URL(window.location).search.slice(1));
 	const storedData = loadTunesFromStorage();
 
 	//! todo - revise - no need to sort when loading from local storage(?)
 	if (storedData) {
-		console.log("Loading from local storage");
-		window.tunesData = storedData;
+		// console.log("Loading from local storage");
+		window.tunesData = storedData.tunes;
+		if (storedData.setLists)
+			tuneSelectionsModal.loadSetLists(storedData.setLists);
+		// Update footer to show local storage date and warning
+		const saveDateEl = document.getElementById("spLastUpdated");
+		if (saveDateEl && storedData.saveDate) {
+			const formatted = new Date(storedData.saveDate).toLocaleDateString(
+				"en-GB",
+				{
+					day: "numeric",
+					month: "long",
+					year: "numeric"
+				}
+			);
+			saveDateEl.innerHTML =
+				`${formatted} <span class="footer-local-warning">` +
+				`&#9888;&#xFE0E; using locally stored data &mdash; not the server data</span>`;
+		}
 	} else {
-		console.log("Loading from tunesDataRaw and processing");
+		// console.log("Loading from tunesDataRaw and processing");
+
+		document.getElementById("spLastUpdated").innerHTML =
+			tunesDataRaw.lastUpdate;
 		window.tunesData = tunesDataRaw.tunes
 			.filter((t) => t !== undefined)
-			.map(processTuneData); //aaa
+			.map(processTuneData);
+
 		sortWithDefaultSort();
+		// Load hardcoded set lists from tunesDataRaw if any are defined
+		let setLists;
+
+		if (params.has("g")) {
+			let g = params.get("g");
+			//only keep lists with matching group data
+			setLists = tunesDataRaw.setLists.filter((list) =>
+				list.groups?.toLowerCase().includes(g.toLowerCase())
+			);
+		} else setLists = tunesDataRaw.setLists.filter((l) => !l.groups);
+		if (Array.isArray(tunesDataRaw.setLists)) {
+			tuneSelectionsModal.loadSetLists(setLists);
+		}
 	}
 	let filtered = false;
 
 	populateFilters();
-	let params = new URLSearchParams(new URL(window.location).search.slice(1));
+
 	if (params.has("g")) {
 		let g = params.get("g");
 		if (g) {
@@ -437,14 +487,14 @@ function renderTable() {
 						);
 
 					notesHtml = `
-				    <div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
-				      ${truncatedNotes}
-				      <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
-				    </div>
-				    <div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
-				      ${formattedNotes}
-				      <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
-				    </div>
+					<div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
+					  ${truncatedNotes}
+					  <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
+					</div>
+					<div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
+					  ${formattedNotes}
+					  <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
+					</div>
 				  `;
 				} else {
 					notesHtml = `<div class="notes">${formattedNotes}</div>`;
@@ -462,11 +512,11 @@ function renderTable() {
 							? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
 							: "";
 			referencesHtml += `
-                        <div class="reference-item">
-                            ${refHeader}
-                            ${notesHtml}
-                        </div>
-                    `;
+						<div class="reference-item">
+							${refHeader}
+							${notesHtml}
+						</div>
+					`;
 		});
 
 		const metadata = getTuneMetadata(tune)
@@ -484,19 +534,19 @@ function renderTable() {
 
 		const incipitId = `incipit${index}`;
 		const title = `<div class="tune-header">
-      ${
-				hasAbc
-					? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
-        ${tune.name}
-      </a>${
-				Array.isArray(tune.abc) && tune.abc.length > 1
-					? ` - ${tune.abc.length} settings`
-					: ""
-			}`
-					: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
-        ${tune.name}
-      </div>`
-			}`;
+	  ${
+			hasAbc
+				? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
+		${tune.name}
+	  </a>${
+			Array.isArray(tune.abc) && tune.abc.length > 1
+				? ` - ${tune.abc.length} settings`
+				: ""
+		}`
+				: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
+		${tune.name}
+	  </div>`
+		}`;
 
 		const scores = [...tune.scores];
 		if (tune.theSessionId && !hasTheSessionLink) {
@@ -523,14 +573,14 @@ function renderTable() {
 		}
 
 		row.innerHTML = `
-    <td>
-        <div class="tune-header">
-            <div class="tune-title">${title}</div>
+	<td>
+		<div class="tune-header">
+			<div class="tune-title">${title}</div>
 			<div class="notes">${metadata}</div>
 			</div>
 			<div>
 			
-        <div class="tune-header tune-header--actions">
+		<div class="tune-header tune-header--actions">
 		${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
 			<div class="tune-actions">
 			<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">
@@ -547,10 +597,10 @@ function renderTable() {
 			</button>
 			</div>
 		</div>
-        <div id="${incipitId}" class="tune-incipit"></div>
+		<div id="${incipitId}" class="tune-incipit"></div>
 		</div>
-    </div>
-    </td>
+	</div>
+	</td>
 	<td class="notes">${referencesHtml}${
 		scores && scores.length > 0
 			? `${scores
@@ -722,8 +772,14 @@ function sortData(column) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-	// debugger;
-	initialiseData();
+	try {
+		initialiseData();
+	} finally {
+		// #page-spinner is visible by default in HTML (no hidden attr);
+		// #page-main is hidden by default. Swap them once data is ready.
+		document.getElementById("page-spinner").setAttribute("hidden", "");
+		document.getElementById("page-main").removeAttribute("hidden");
+	}
 
 	// document
 	// 	.getElementById("searchInput")
@@ -792,7 +848,19 @@ document.addEventListener("DOMContentLoaded", function () {
 		emptyTunes();
 	});
 
-	document.getElementById("spLastUpdated").innerHTML = tunesDataRaw.lastUpdate;
+	// Tune selections menu item - enabled when there are saved set lists or ≥2 tunes selected
+	const tuneSelectionsBtn = document.getElementById("tuneSelectionsBtn");
+	if (tuneSelectionsBtn) {
+		tuneSelectionsBtn.addEventListener("click", (e) => {
+			e.preventDefault();
+			dropdown.classList.remove("active");
+			tuneSelectionsModal.open();
+		});
+		// Keep enabled state in sync when the dropdown opens
+		editMenuBtn.addEventListener("click", () => {
+			tuneSelectionsBtn.disabled = !tuneSelectionsModal.isEnabled();
+		});
+	}
 
 	// theSessionImport.setupTheSessionImportModal();
 	document
