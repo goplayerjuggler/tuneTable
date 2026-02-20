@@ -1057,11 +1057,6 @@ B|:AGE G2E G2E G2E|A2B c2d e2d efg|
  |:a3 efg a3 bge|g3 gfe dBA GB/c/d|
    efg ded BAG Bcd|edc BAG [1 B2A A2e:| [|2] B2A A2B||`,
 			parts: "AABB",
-			references: [
-				{
-					notes: "SU #1 in Elisabeth Kelly set"
-				}
-			],
 			theSessionId: 770,
 			theSessionSettingId: 29548,
 			norbeckId: 312
@@ -1084,9 +1079,12 @@ K:Adorian
     c2B c2d ecA ABc|BAG GEG A3 A2:|`,
 			references: [
 				{
-					artists: "The Kelly Family",
 					url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
-					notes: "SU #2 in Elisabeth Kelly set"
+
+					artists:
+						"The Kelly Family: John Kelly Jnr, fiddle; James Kelly, fiddle; Johnny Kelly, fiddle; Leah Kelly, fiddle; Aoife Kelly, concertina; Cathy Potter, harp; Charlie Le Brun, flute",
+					album:
+						"A Family Tradition: Traditional Irish Music from The Kelly Family "
 				}
 			],
 			theSessionId: 1043
@@ -3226,7 +3224,8 @@ R: reel
 M: 4/4
 L: 1/16
 K: Gdor
-FGcG dGcG EFcF dFcF|FGcG`
+FGcG dGcG EFcF dFcF|FGcG`,
+			theSessionId: 541
 		},
 		{
 			incipit: `X:1
@@ -5233,6 +5232,7 @@ K:Amajor
 			theSessionId: 2410
 		},
 		{
+			aka: "Aoibhneas Éilis Ní Cheallaigh",
 			groups: "ALORA,SU",
 			abc: `X:1
 T:Elizabeth Kelly's Delight
@@ -5247,7 +5247,9 @@ K:Adorian
  |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
 			references: [
 				{
-					notes: "SU #3 in Elisabeth Kelly set"
+					url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
+					artists: "The Kelly Family",
+					notes: "1:43 onwards"
 				}
 			],
 			theSessionId: 953
@@ -7568,6 +7570,7 @@ fed cAG A2d cAG|F2D`,
 			theSessionId: 9
 		},
 		{
+			groups: "su",
 			incipit: `X: 1
 T:The Milky Way
 R: reel
@@ -9313,6 +9316,7 @@ K:Ddorian
 			parts: "AABB"
 		},
 		{
+			groups: "su",
 			incipit: `
 X:1
 T: Na Farraigí Dearga
@@ -9330,8 +9334,20 @@ L:1/8
 K:Dm
 A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D`,
 			parts: "AABBCC"
+		},
+		{
+			groups: "su",
+			incipit: `X: 4
+T: The Devil In The Kitchen
+R: strathspey
+M: 4/4
+L: 1/8
+K: Amix
+f<a|:e>A A/A/A e>Ag>d|e>A A/A/A g2 f<a|`,
+			theSessionId: 1746
 		}
 		/*
+		,{incipit:``,theSessionId:}
 		,{incipit:``,theSessionId:
 			references: [
 				{
