@@ -105,15 +105,12 @@ export default {
 						{
 							norbeckId: 14,
 							norbeckR: "barndance"
-						},
-						{
-							theSessionId: 3835
 						}
 					],
 					collapsed: true
 				},
 				{
-					name: "Polkas d'après Jason O'Rourke",
+					name: "Polkas d’après Jason O’Rourke",
 					tunes: [
 						{
 							theSessionId: 3835
