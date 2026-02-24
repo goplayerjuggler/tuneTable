@@ -1,15 +1,15 @@
 export default {
-	lastUpdate: "2026-02-20",
+	lastUpdate: "2026-02-24",
 	setLists: [
 		{
 			id: "1771406869982-ukwxx",
 			name: "Steam up sets",
 			dateCreated: "2026-02-18T09:27:49.982Z",
-			dateModified: "2026-02-18T10:23:46.003Z",
+			dateModified: "2026-02-23T19:49:48.052Z",
 			groups: "su",
 			sets: [
 				{
-					name: "Slides (3-3-3)",
+					name: "This Is My Love Slide set (3-3-3)",
 					tunes: [
 						{
 							theSessionId: 6
@@ -55,6 +55,33 @@ export default {
 						}
 					],
 					collapsed: true
+				},
+				{
+					name: "2nd polka set",
+					tunes: [
+						{
+							theSessionId: 11600
+						},
+						{
+							theSessionId: 647
+						},
+						{
+							theSessionId: 11676
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Beauties Of Autumn",
+					tunes: [
+						{
+							theSessionId: 4553
+						},
+						{
+							theSessionId: 5675
+						}
+					],
+					collapsed: true
 				}
 			]
 		},
@@ -63,19 +90,19 @@ export default {
 			name: "ALORA sets",
 			groups: "ALORA",
 			dateCreated: "2026-02-19T01:51:52.087Z",
-			dateModified: "2026-02-19T02:16:58.158Z",
+			dateModified: "2026-02-24T00:52:35.766Z",
 			sets: [
 				{
-					name: "Maud Millar set",
+					name: "Polkas d’après Jason O’Rourke",
 					tunes: [
 						{
-							theSessionId: 1177
+							theSessionId: 3835
 						},
 						{
-							theSessionId: 116
+							theSessionId: 18688
 						},
 						{
-							theSessionId: 118
+							theSessionId: 7386
 						}
 					],
 					collapsed: true
@@ -96,6 +123,21 @@ export default {
 					collapsed: true
 				},
 				{
+					name: "Maud Millar set",
+					tunes: [
+						{
+							theSessionId: 1177
+						},
+						{
+							theSessionId: 116
+						},
+						{
+							theSessionId: 118
+						}
+					],
+					collapsed: true
+				},
+				{
 					name: "Barndances",
 					tunes: [
 						{
@@ -110,18 +152,19 @@ export default {
 					collapsed: true
 				},
 				{
-					name: "Polkas d’après Jason O’Rourke",
+					name: "Polkas - « Denis Murphy’s »",
 					tunes: [
 						{
-							theSessionId: 3835
+							theSessionId: 357
 						},
 						{
-							theSessionId: 18688
+							theSessionId: 786
 						},
 						{
-							theSessionId: 7386
+							theSessionId: 441
 						}
-					]
+					],
+					collapsed: true
 				}
 			]
 		}
@@ -629,15 +672,16 @@ K:Gmajor
 T:Cronin's
 R:hornpipe
 L:1/8
-M:4/4
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/478#setting478
 N:Setting entered in thesession by user “lars” on 2002-01-01
+N:*abc-tools: convert to M:4/2*
 K:Gmajor
-|:BA|GABd dBde|gage dega|bage dBGA|BAAG AcBA|
- GABd dBde|gage dega|bage dBAc|AGGF G2:|
- |:(3efg|afd^c d2ga|beed e2ga|bg (3agf gedB|BAAG AcBA|
- GABd dBde|gage dega|bage dBAB|G2 GF G2:|`,
+|:BA|GABd dBde gage dega|bage dBGA BAAG AcBA|
+GABd dBde gage dega|bage dBAc AGGF G2:|
+|:(3efg|afd^c d2ga beed e2ga|bg (3agf gedB BAAG AcBA|
+GABd dBde gage dega|bage dBAB G2 GF G2:|`,
 			theSessionId: 478
 		},
 		{
@@ -1381,6 +1425,7 @@ P:Ⅱ
 		},
 		{
 			groups: "su",
+			parts: "AABB",
 			abc: `X:1
 T:Drummond Castle
 R:jig
@@ -1521,6 +1566,7 @@ Album: A Man Apart (2004)`
 		},
 		{
 			groups: "su",
+			parts: "AABB",
 			abc: [
 				`X:1
 T:Strop The Razor
@@ -1537,11 +1583,6 @@ K:Gmajor
   dcB cAA dcB cAF|D2E F2G ADE FGA:|
 |:B3 cBc d(3Bcd dBd|g3 gfd gba gdc|
   B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`
-			],
-			references: [
-				{
-					notes: "SU: 2nd in the Fahey’s Fiddle set"
-				}
 			],
 			theSessionId: 693,
 			theSessionSettingId: 23367
@@ -1670,16 +1711,19 @@ efg fed ecA d^cd | cGE _BFD Cec =Bcd | efg ~f3 ~e3 ~d3 | cGE _BFD CDC C2E !D.C.!
 T:Con Cassidy's
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1570#setting1570
 N:Setting entered in thesession by user “gian marco” on 2003-04-04
+N:*abc-tools: convert to M:12/8*
 K:Gmajor
-|:BAB cBc|dgg d2g|fed cAF|Ggg d2c|
- BAB cBc|dgg d2g|fed cAF|1 ~G3 G2A:|2 ~G3 G2d||
- |:gGG fGG|efg d2c|BA^G Aag|fe^d efg|
- azf gfe|fed fga|gfe def|1 gGG G2d:|2 gGG G2A||`,
-			theSessionId: 1570
+|:BAB cBc dgg d2g|fed cAF Ggg d2c|
+BAB cBc dgg d2g|fed cAF[1 ~G3 G2A:|2 ~G3 G2d||
+|:gGG fGG efg d2c|BA^G Aag fe^d efg|
+azf gfe fed fga|gfe def[1 gGG G2d:|2 gGG G2A||`,
+			theSessionId: 1570,
+			parts: "AABB",
+			norbeckId: 323
 		},
 		{
 			abc: [
@@ -1738,6 +1782,7 @@ FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`
 		},
 		{
 			groups: "su",
+			parts: "AABB",
 			abc: `X:1
 T:The Thornton
 C:Donald Cameron
@@ -4047,17 +4092,30 @@ AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
 T:Porthole Of The Kelp
 C:Bobby Casey
 R:reel
-L:1/8
+L:1/16
 M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/263#setting263
 N:Setting entered in thesession by user “Zina Lee” on 2001-08-30
+N:(edited after importing)
+N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Ddorian
-|:DE||F2DE F2DE|FEFG ECCE|F2DE FGAG|FDEC A,D DE|
- F2DE FGAB|cAGF EDCE|DEFG AddB|cAGE EDD2:|
- d2 Ad dcAG|F2DF ECC2|d3(d d)cAG|ABcA d3e|
- fded cAAG|EGcG EDCE|DEFG AddB|cAGE EDD2:|`,
-			theSessionId: 263
+|:DE|F2DE F2DE FEFG ECCE|F2DE FGAG FDEC A,D DE|
+F2DE FGAB cAGF EDCE|DEFG AddB cAGE EDD2:|
+d2 Ad dcAG F2DF ECC2|d3(d d)cAG ABcA d3e|
+fded cAAG EGcG EDCE|DEFG AddB cAGE EDD2:|`,
+			theSessionId: 263,
+			norbeckId: 398,
+			references: [
+				{
+					notes: `Porthole of the Kelp, Farewell to Ireland`,
+					artists: "Johnny Kelly, fiddle; Cathy Potter, harp",
+					url: "https://thekellyfamily.bandcamp.com/track/porthole-of-the-kelp-farewell-to-ireland-reels",
+					album:
+						"A Family Tradition: Traditional Irish Music from The Kelly Family  (2023)"
+				}
+			],
+			parts: "AABB"
 		},
 		{
 			abc: `X:1
@@ -4538,9 +4596,10 @@ B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
 		},
 		{
 			groups: "su",
+			parts: "AB",
 			abc: `X:1
 T:Come West Along The Road
-R:reel (single)
+R:reel
 L:1/16
 M:4/4
 N:Imported from https://thesession.org/tunes/474#setting31703
@@ -4757,11 +4816,12 @@ Cherry Tree AKA Beauty Spot`,
 		},
 		{
 			groups: "ALORA,su",
+			parts: "AB",
 			abc: `
 X: 2
 T: Maud Millar
 T: version of 2025-10-15%2024-08-21 %2024-06-27 %2025-04-11%2025-10-15
-R: reel (single)
+R: reel
 Q:1/4=110
 M: 4/4
 L: 1/16
@@ -5289,12 +5349,13 @@ K:Adorian
 			groups: "ALORA,su",
 			origin: "Ireland",
 			rhythm: "slip jig",
-			abc: `
+			abc: `%240620, 21, 27, 240718, 260209, 260223
 X: 1
 T: Kid On The Mountain
 N: 1. I attempt here to write the notes more or less as played by Michael Coleman on the It Was Mighty! album.
 N: 2. With added chords - version of 2024-07-18
-N: 3. Using 16/8 rather than the standard 9/8 on purpose (personal preference).
+N: 3. Using 18/16 rather than the standard 9/8 on purpose due to personal preference – but
+N: I have hesitated about using 18/6!
 N: 4. The E part is slightly different from today’s standard version;
 N: and the F part isn’t well known at all.
 D: It Was Mighty! the Early Days of Irish Music in London
@@ -5302,9 +5363,9 @@ S: Michael Coleman
 F: https://open.spotify.com/track/6ywXKcy4P31JiC9vqW2ru9
 R: slip jig
 Q: 3/8 = 70
-M: 18/8
-L: 1/8
-Z:abc-transcription Malcolm Schonfield%240620, 21, 27, 240718, 260209
+M: 18/16
+L: 1/16
+Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: E minor
 |:[P:A]"Em"E3 FEF G2F E3 BcA "Bm7"BGD|"Em"E3 FEF "G"G2A BAG "D"FAG FED:|
@@ -6021,7 +6082,7 @@ de|:f3e d2|d2 de d2|B4 A2|F4 A2|BA Bc d2|e4 de|f2 f2 e2|
 		{
 			groups: "su",
 			name: "Brogan’s Ferry",
-			rhythm: "Reel (single)",
+			rhythm: "reel",
 			references: [
 				{
 					artists: "Tommy Peoples, fiddle",
@@ -6040,8 +6101,9 @@ FAAF D4 FAAF GFED|F2EF DEFD EFGA BEEG|
 		},
 		{
 			groups: "su",
+			parts: "AB",
 			name: "The Roving Bachelor",
-			rhythm: "Reel (single)",
+			rhythm: "Reel",
 			references: [
 				{
 					artists: "Tommy Peoples, fiddle",
@@ -6135,8 +6197,7 @@ DFA d2e dcA ~G3 | AGE ~=c3`,
 				{
 					artists: "Jason O’Rourke, B♭/F concertina; Stevie Dunne, guitars",
 					url: "https://jasonorourke.bandcamp.com/track/fahys-fiddle-tell-her-i-am",
-					notes: `album: The Northern Concertina
-SU: 1st & 3rd in the Fahey’s Fiddle set `
+					notes: `album: The Northern Concertina`
 				}
 			],
 			theSessionId: 124
@@ -6222,8 +6283,8 @@ f/g/f/e/ d>B AD FA | GE e>d`,
 				{
 					artists: "Planxty",
 					url: "https://youtu.be/q5Blc3k16rE",
-					notes: `The (ALORA) Denis Murphy’s set is actually a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night
-        `
+					album: "Cold Blow And The Rainy Night (1974)",
+					notes: `Comes first in a widely recorded and played set of polkas. It goes back to an influential 1974 album. Credits here: https://www.discogs.com/master/137613-Planxty-Cold-Blow-And-The-Rainy-Night`
 				}
 			],
 			theSessionId: 357,
@@ -6239,11 +6300,6 @@ M: 4/4
 L: 1/16
 K: D
 d2d2 BcdB A2F2 A2F2 | `,
-			references: [
-				{
-					notes: "#3 in the (ALORA) Denis Murphy’s set"
-				}
-			],
 			theSessionId: 441,
 			theSessionSettingId: 28845
 		},
@@ -6257,11 +6313,6 @@ K: Dmaj
 Ad Bd/B/ AD FA|GE BE`,
 			origin: "Ireland",
 			rhythm: "polka",
-			references: [
-				{
-					notes: "#2 in the (ALORA) Denis Murphy’s set"
-				}
-			],
 			theSessionId: 786
 		},
 		{
@@ -6282,7 +6333,8 @@ GA|BE~E2 GABG AdBA GEED|~G3A `,
 					url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-palmers-gate-the-honeymoon-support-from-america-no-1"
 				}
 			],
-			theSessionId: 1020
+			theSessionId: 1020,
+			norbeckId: 977
 		},
 		{
 			name: "The Wise Maid",
@@ -6294,18 +6346,15 @@ K: Dmaj
 DE|F2FG FEDE FAAB AFED|d2eg`,
 			origin: "Ireland",
 			rhythm: "reel",
-			references: [
-				{
-					notes: "#3 in the (ALORA) Maud Millar set"
-				}
-			],
 			theSessionId: 118,
 			theSessionSettingId: 55404
 		},
 		{
+			aka: "Sailing Into Walpole's Marsh",
 			name: "Jerry McMahon’s",
 			groups: "SU",
-			rhythm: "reel (single)",
+			parts: "AB",
+			rhythm: "reel",
 			incipit: `X: 1
 M: 4/4
 L: 1/16
@@ -6316,8 +6365,8 @@ EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
 					artists: "Dave Sheridan, fiddle",
 					url: "https://brianhughesdavesheridan.bandcamp.com/track/reels-fiddle-solo-the-quiet-house-jerry-mcmahons-the-lass-among-the-etnochs",
 					notes: `From 2:10 onwards. Dunno who the backing guitar & perc are by.
-          I think he’s playing this in G (dorian), not A.
-          This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`
+I think he’s playing this in G (dorian), not A.
+This tune is also known as Sailing Into Walpole’s Marsh, but apparently that may be a mistake.`
 				}
 			],
 			theSessionId: 4263,
@@ -6333,7 +6382,7 @@ L: 1/16
 K: Dmaj
 dB|A2FA A2dB A2FA BEE2|A2FA defe`,
 			origin: "Ireland",
-			rhythm: "reel (single)",
+			rhythm: "reel",
 			references: [
 				{
 					notes: "Compare with The Bucks Of Oranmore"
@@ -6381,7 +6430,7 @@ L: 1/16
 K: D
 dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
 			origin: "Ireland",
-			rhythm: "reel (single)",
+			rhythm: "reel",
 			references: [
 				{
 					notes: "Compare with Lucy Campbell"
@@ -6403,7 +6452,8 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
         Christmas Eve / Reel of Mullinavat / Bucks of Oranmore`
 				}
 			],
-			theSessionId: 2
+			theSessionId: 2,
+			norbeckId: 148
 		},
 		{
 			name: "The Dogs Among The Bushes",
@@ -6415,7 +6465,8 @@ L: 1/16
 K: G
 BGG2 DGG2 BGG2 cedc | `,
 			origin: "Ireland",
-			rhythm: "reel (single)",
+			rhythm: "reel",
+			parts: "AB",
 			references: [
 				{
 					artists: "Éimhear Flannery, whistle; Paul De Grae, guitar",
@@ -6441,6 +6492,7 @@ G - - - | D - - - | G - - (D) | G - D - ||
 		},
 		{
 			name: "The Drunken Tinker",
+			aka: "The Yellow Tinker",
 			groups: "ALORA",
 			incipit: `X: 1
 M: 4/4
@@ -6448,14 +6500,16 @@ L: 1/16
 K: Amix
 EAAG EGDG EA~A2 fAeA| `,
 			origin: "Ireland",
-			rhythm: "reel (single)",
+			rhythm: "reel",
 			references: [
 				{
 					url: "https://comhaltas.ie/comhaltaslive/comhaltaslive_628_9tribute_concert_to_the_late_ashling_murphy/",
 					notes: "from 4:32 onwards"
 				}
 			],
-			theSessionId: 1555
+			parts: "AB",
+			theSessionId: 1555,
+			norbeckId: 394
 		},
 		{
 			name: "The Killavil Fancy",
@@ -6467,7 +6521,8 @@ L: 1/16
 K: G
 DGBG A2BA GEE2 cEGE | `,
 			origin: "Ireland",
-			rhythm: "reel (single)",
+			rhythm: "reel",
+			parts: "AB",
 			references: [
 				{
 					artists: "Éimhear Flannery, whistle; Paul De Grae, guitar",
@@ -6491,15 +6546,15 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
 M: 4/4
 L: 1/16
 K: Dmaj
-A2AB AFED B2BA BcdB |`,
+A2AB AFED B2BA BcdB | A2AB`,
 			origin: "Ireland",
-			rhythm: "reel (single)",
+			rhythm: "reel",
+			parts: "AB",
 			references: [
 				{
 					artists: "Tony DeMarco, fiddle; Felix Dolan, piano",
 					url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=3",
-					notes: `Wind that shakes the barley; Reel of Bogie 
-          #2 in the (ALORA) Maud Millar set`
+					notes: `Wind that shakes the barley; Reel of Bogie`
 				}
 			],
 			theSessionId: 116,
@@ -6607,15 +6662,16 @@ A2FA DAFG ABde fded|cGG/G/G EGG/G/G`,
 T:Joan Martin's
 R:polka
 L:1/8
-M:2/4
+M:4/4
 N:Imported into *tuneTable* on 2025-11-02,
 N:from https://thesession.org/tunes/11600#setting21930
 N:Setting entered in thesession by user “ceolachan” on 2013-07-18
+N:*abc-tools: convert to M:4/4*
 K:Gmajor
-|:D|GB BG|FA- AD|GA Bc|de/d/ cA|
- GB- BG|FA AB|c/B/A FA|G2 G:|
- |:B/c/|dg ga|bg gf/e/|dg- gb|ab/a/ g/f/e|
- dg- ga|bg ge|dB c/B/A|G2- G:|`
+|:D|GB BG FA- AD|GA Bc de/d/ cA|
+GB- BG FA AB|c/B/A FA G2 G:|
+|:B/c/|dg ga bg gf/e/|dg- gb ab/a/ g/f/e|
+dg- ga bg ge|dB c/B/A G2- G:|`
 			],
 			references: [
 				{
@@ -6662,6 +6718,8 @@ EB B>A BG E/F/G|FA`,
 		},
 		{
 			name: "The Gold Ring",
+			norbeckId: 104,
+			parts: "AABBCCDDEEFFGG",
 			groups: "su",
 			rhythm: "jig",
 			incipit: `X: 1
@@ -6883,11 +6941,12 @@ A2eA (3cBA eA A2eA BAGB|A2eA (3Bcd ef`,
 		{
 			groups: "su",
 			theSessionId: 553,
+			norbeckId: 63,
 			incipit: `X: 1
-T:The Drunken Sailor's
+T:The Drunken Sailor
 R: hornpipe
-M: 4/4
-L: 1/16
+M: 4/2
+L: 1/8
 K: Gdor
 D2|G2GF GABc dcBA GFDE|F2`,
 			references: [
@@ -6895,7 +6954,8 @@ D2|G2GF GABc dcBA GFDE|F2`,
 					artists: "Frank Kelly, fiddle",
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=56"
 				}
-			]
+			],
+			parts: "AABBCCDDEE"
 		},
 		{
 			abc: `
@@ -6986,6 +7046,7 @@ K:Eminor
 		},
 		{
 			groups: "su",
+			parts: "AABB",
 			incipit: `X:1
 T:This Is My Love, Do You Like Her?
 S:Denis Doody
@@ -6996,16 +7057,13 @@ L:1/8
 M:12/8
 K:Adorian
 B|A2A AGE c2B c2d|ege edB ~g3 g2`,
-			references: [
-				{
-					notes: "SU: 1st in the This Is My Love slide set"
-				}
-			],
+
 			theSessionId: 6,
 			theSessionSettingId: 31114
 		},
 		{
 			groups: "su",
+			parts: "AABB",
 			abc: `X:1
 T:Paddy Cronin's
 S:from Jack Talty & Cormac Begley
@@ -7024,12 +7082,7 @@ EFG F2D E2F G2A|B2E GFE B2E GFE|
 D2F FED E2F G2A|1B2E GFE F2E D3:|2B2E GFE F2E D2d||
 |:ded c2d e2d cBA|B2E GFE B2E GFE|
 ded c2d e2d cBA|1B2E GFE F2E D2d:|2B2E GFE F2E D3|]`,
-			theSessionId: 8362,
-			references: [
-				{
-					notes: "SU: 2nd in the This Is My Love slide set"
-				}
-			]
+			theSessionId: 8362
 		},
 		{
 			groups: "su",
@@ -7059,11 +7112,7 @@ L: 1/8
 K: Gmaj
 d2B BAG ~A3 ABA|G2E c2`,
 			theSessionId: 1398,
-			references: [
-				{
-					notes: "SU: 3rd in the This Is My Love slide set"
-				}
-			]
+			parts: "AABB"
 		},
 		{
 			groups: "su",
@@ -7092,7 +7141,7 @@ N: This is a different tune from Joe Cooley’s Morning Dew
 M: 4/4
 L: 1/16
 K: Edor
-E3B- BAFD EDEB BAFD|E3B- BAFA`,
+E3B- BAFD EDEB AGFD|E3B- BAFA`,
 			theSessionId: 69,
 			references: [
 				{
@@ -7105,6 +7154,7 @@ E3B- BAFD EDEB BAFD|E3B- BAFA`,
 		},
 		{
 			aka: "Mountain Dew, The Morning Dew",
+			parts: "AB",
 			incipit: `X: 1
 T: Joe Cooley's Morning Dew
 R: reel
@@ -7113,10 +7163,10 @@ L: 1/16
 K: Edor
 ~B2EB GBEB ~B2EB ADFA|~B2EB `,
 			theSessionId: 9828,
+			norbeckId: 989,
 			references: [
 				{
-					notes:
-						"SU: after the Rookery. AKA Mountain Dew; Morning Dew is a different reel!"
+					notes: "Morning Dew is a different reel!"
 				},
 				{
 					artists:
@@ -7130,6 +7180,7 @@ K: Edor
 		},
 		{
 			groups: "su",
+			parts: "AB",
 			incipit: `X: 1
 T:The Edenderry
 R: reel
@@ -7177,6 +7228,7 @@ K: Dmaj
 		},
 		{
 			groups: "su",
+			parts: "AABBCCDDEE",
 			incipit: `X: 1
 T: Helvic Head
 R: jig
@@ -7191,7 +7243,8 @@ G3 AGE A3 AGE|G3 AGE`,
 					notes: "(1993) Helvic Head; Wallop the spot (variation)"
 				}
 			],
-			theSessionId: 3110
+			theSessionId: 3110,
+			norbeckId: 302
 		},
 		{
 			aka: ["Joe Burke’s", "Cronin’s Favourite"],
@@ -7543,6 +7596,7 @@ ABA A2 G F2 G|ABA AGF G3`,
 		},
 		{
 			groups: "su",
+			parts: "AABBCCDDEE",
 			incipit: `X: 1
 T: Doctor O'Neill
 R: jig
@@ -7757,7 +7811,9 @@ M: 12/8
 L: 1/8
 K: Emin
 BAF ~E3 FED ~E3|BAF EAG FED`,
-			theSessionId: 797
+			theSessionId: 797,
+			norbeckId: 331,
+			parts: "AABB"
 		},
 		{
 			parts: "AABBCC",
@@ -7900,13 +7956,13 @@ B2dB cAFA G2BG DGBG |`,
 		},
 		{
 			groups: "su",
-			incipit: `X: 9
+			incipit: `X: 1
 T:The Dunmore Lasses
 R: reel
 M: 4/4
-L: 1/8
+L: 1/16
 K: Emin
-|:E3F G3A Beed Beed|E2EF G2BG `,
+E3F G3A Beed Beed|E2EF G2BG `,
 			theSessionId: 462,
 			references: [
 				{
@@ -8119,6 +8175,8 @@ L:1/8
 M:12/8
 K:Am
 EBc ~G3 FBc ~G3 | ~e3 dcB AGF EFD |`,
+			parts: "ABCDEF",
+			badges: "flexible structure",
 			abc: `
 X:4
 T:SNCF jigs
@@ -9131,16 +9189,18 @@ A|:FA (3AAA BAFA dfed BddA|FA (3AAA BAFA `,
 			theSessionId: 182
 		},
 		{
+			AKA: "Sgt. Early's Dream",
 			groups: "su",
 			parts: "AABB",
 			incipit: `X:1
 T:Sergeant Early's Dream
 R:reel
-L:1/8
-M:4/2
+L:1/16
+M:4/4
 K:Ddorian
-|:dc|ADDE FAcA GECD ~E3F|DA,DE FEFG`,
-			theSessionId: 1651
+dc|ADDE FAcA GECD ~E3F|DA,DE FEFG`,
+			theSessionId: 1651,
+			norbeckId: 455
 		},
 		{
 			incipit: `X:1
@@ -9310,20 +9370,16 @@ K:Adorian
 			theSessionId: 1145
 		},
 		{
-			abc: `X:1
+			incipit: `X:1
 T:The Butterfly
 C:Tommy Potts
 R:slip jig
 L:1/8
 M:9/8
-N:Imported into *tuneTable* on 2026-02-17,
-N:from https://thesession.org/tunes/10#setting10
-N:Setting entered in thesession by user “Jeremy” on 2001-05-18
 K:Eminor
-|:B2E G2E F3|B2E G2E FED|B2E G2E F3|B2d d2B AFD:|
- |:B2d e2f g3|B2d g2e dBA|B2d e2f g2a|b2a g2e dBA:|
- |:B3 B2A G2A|B3 BAB dBA|B3 B2A G2A|B2d g2e dBA:|`,
-			theSessionId: 10
+B2E G2E F3|B2E G2E FED|`,
+			theSessionId: 10,
+			parts: "AABB"
 		},
 		{
 			abc: `X:1
@@ -9352,16 +9408,17 @@ K:Ddorian
 			incipit: `
 X:1
 T: Na Farraigí Dearga
-T: The Seas They Ran Red with Blood 
-T: Descriptive piece
+T: The Seas They Ran Red with Blood
 R:Hornpipe
-D: Decade(2019)
+D: Decade (2019)
 S:Fidil
 F:https://raelachrecords.bandcamp.com/track/na-farraigi-dearga-the-seas-they-ran-red-with-blood-descriptive-piece
 M:4/2
-N: Mostly swung throughout – so in general “♪♪=♩♪”
-N: It's a lovely tune; remarkable.
-N: Waiting to hear from Raelach Records before publishing my full transcription.
+N: 1. Mostly swung throughout – so in general “♪♪=♩♪”
+N: 2. It's a lovely tune; remarkable.
+N: 3. I put this as a hornpipe as that seems to me to be the best fit; on the
+N: album it's called a descriptive piece.
+N: 4. Waiting to hear from Raelach Records before publishing my full transcription.
 L:1/8
 K:Dm
 A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D`,
@@ -9371,15 +9428,137 @@ A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D`,
 			groups: "su",
 			incipit: `X: 4
 T: The Devil In The Kitchen
-R: strathspey
-M: 4/4
+R: fling(?)
+N: On thesession.org it's given as a strathspey
+M: 4/2
 L: 1/8
 K: Amix
-f<a|:e>A A/A/A e>Ag>d|e>A A/A/A g2 f<a|`,
-			theSessionId: 1746
+e>A A/A/A e>fg>f e>A A/A/A A2 g>f| e>A`,
+			theSessionId: 1746,
+			parts: "AABB"
+		},
+		{
+			incipit: `X: 3
+T: Tatter Jack Walsh
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+~f3 ded cAB ~c2 A|dcA ~G3 A`,
+			theSessionId: 1638,
+			theSessionSettingId: 46486,
+			parts: "AABB"
+		},
+		{
+			incipit: `X: 7
+T: The Pipe On The Hob
+R: jig
+M: 12/8
+L: 1/8
+K: Dmix
+d^cd A2G F2D DED|EDE cBc`,
+			theSessionId: 1049,
+			parts: "AABB"
+		},
+		{
+			incipit: `X: 1
+T: The Wheels Of The World
+R: reel
+M: 4/4
+L: 1/16
+K: Dmix
+AD (3DDD FAGF EC (3CCC EFGB A2AG FAde|=fedc`,
+			theSessionId: 1010,
+			parts: "AABB"
+		},
+		{
+			incipit: `
+X: 1
+T: Paddy Kelly's
+T: The Daisy Field
+C:Paddy Kelly
+N:Played very nicely on Jason O’Rourke’s album, The Bunch Of Keys.
+R: reel
+M: 4/4
+L: 1/16
+K: Gmaj
+dG~G2 dGBd c=F~F2 cFAc|dGGe D3c BdcA GABc|`,
+			parts: "AABB",
+			norbeckId: 884,
+			theSessionId: 2125
+		},
+		{
+			abc: `X:1
+T: The Ebb Tide
+C:James Hill
+R: hornpipe
+M:4/2
+L: 1/8
+N:*abc-tools: convert to M:4/2*
+K: Gmaj
+|:dc|B/c/B AB GABc d2 GF G2 bg|fdcB cedB c/B/A BG =F2 Bc|
+B/c/B AB G2 A/B/c dgfa ~g3a|f/e/d cB cedc[1 B/c/B GF G2 Bc:|2 B/c/B GF G2 ga||
+bgdB gdBG DGBd gabg|aAcA =fAcA D=FcF dFcF|
+B/c/B AB GABc dgfa ~g3a|f/e/d cB cedc[1 B/c/B AF G2 ga:|2 B/c/B AF GAdc||`,
+			theSessionId: 2126,
+			norbeckId: 132,
+			references: [
+				{
+					url: "https://thekellyfamily.bandcamp.com/track/the-ebb-tide-john-kelly-s-hornpipe-hornpipes",
+					artists: "Aoife Kelly, concertina;  Cathy Potter, herp",
+					notes: `The Ebb Tide / John Kelly’s Hornpipe`
+				}
+			],
+			parts: "AABB"
+		},
+		{
+			abc: `X:1
+T:D​ú​laman Na Binne B​ú​idhe
+T:as played by Néillidh Boyle
+N:
+N: 1. Played fast, with a swing on the semiquavers, so “𝅘𝅥𝅯𝅘𝅥𝅯=♪𝅘𝅥𝅯”.
+N: 2. N. Boyle seems to be playing on a violin tuned roughly 
+N: a semitone sharp. This transcription attempts to show how
+N: it would sound on a fiddle with standard tuning.
+N: 3. I use “semiquavers + 4/4” rather than “quavers + 4/4”, 
+N: which is the way most people would write it these days. Personal preference.
+N: 4. Same name, almost: the strathspey Dulaman Na Binne Bui.
+D:A Feeling In The Blood by Néillidh Boyle
+F:https://donegalfiddlemusic.bandcamp.com/track/d-laman-na-binne-b-idhe-highland
+S:Néillidh Boyle
+Z:abc-transcription Malcolm Schonfield% 2024-09-30
+Z:abc-copyright CC BY-NC 2.0 (https://creativecommons.org/licenses/by-nc/2.0/fr/deed.en)
+M:4/4
+R:Highland
+L:1/16
+K:G
+GAB"^(*)"G cGBG GABc dB"^(*)"g2 | "^(**)"GABG cGBG AGAB c2BA :|
+|: BcdB gBdg Bgdf g2G2 | Bgdf ggdB AGAB c2BA :|
+yy"^(*) variation "GAB"<["">]"d cGBG GABc dB"<["g">]"G yy||yy "^(**) variation"GGBG dBGB yy`,
+			parts: "AABB"
+		},
+		{
+			abc: `
+%231110 adapted from score #3 by bagpie; %260224 revised from version on thesession
+X: 7
+T: Aires De Pontevedra
+O:Galicia
+R: reel
+M: 4/4
+L: 1/16
+K: Dmaj
+|:EF|GFGE FDEF GFGE FDEF|AFGE FDEF GFGE FDFA|
+=c4 cBce dcBA GFGA|G4 GDGA d=cBA GFGA|
+F2FD FDFA d=cBA GFGA|E4 FAFD FAFD EGEC| [M:3/4] E2A2 D4 D2:|
+M:4/4
+|:A2|d2A2 F2GA BAGF E3F|GAGF E2FG AGFE D2A2|
+d2A2 F2GA BAGF E3F | [M:5/4] GFGA BAFD AGEC D4 D2:|`,
+			theSessionId: 4587,
+			parts: "AABB",
+			badges: "crooked"
 		}
 		/*
-		,{incipit:``,theSessionId:}
+		, parts: "AABB"
 		,{incipit:``,theSessionId:
 			references: [
 				{
