@@ -2783,30 +2783,6 @@ K: Ador
 		},
 		{
 			abc: `X:1
-T:The Frozen Mouse
-C:Jason O’Rourke
-R:polka
-L:1/8
-M:2/4
-N:Belfast concertinist Jason O’Rourke wrote this polka. He recorded it in his
-N:second solo album "The Northern Concertina" (2015), in the middle of a set of 3
-N:polkas (the two other are traditional). First part in G, second part in Dmix,
-N:nice !
-N:---
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/18688#setting36502
-N:Setting entered in thesession by user “fiddlebzh” on 2019-11-07
-K:Gmajor
-|:B>c de|dB Bd|cA AB/d/|ed BA|
- B>c de|de/d/ Bd|cA DF|AG G2:|
-[K:D mix]F>G AB|cA AG|Ad cA|AG FD|
- F>G AB|1 cA AG|Ad cA|G2 G2:|
- [2 cA c/d/e|dc AF|G2 G2||`,
-			theSessionId: 18688,
-			theSessionSettingId: 36502
-		},
-		{
-			abc: `X:1
 T:Forde's
 R:polka
 L:1/8
@@ -8050,7 +8026,7 @@ F2AF BFAF F2AF EFDE|FA~A2 BAFB ABde ~f3e||
 			incipit: `X: 1
 T: John Brosnan's
 R: polka
-M: 4/2
+M: 4/4
 L: 1/8
 K: Dmaj
 D>E DB AF FB|AF DE FEEF/E/|`,
@@ -8072,7 +8048,7 @@ The guitar could be Tim Edey and not S Dunne, going from the meagre info availab
 T:The Frozen Mouse
 C:Jason O’Rourke
 R: polka
-M: 4/2
+M: 4/4
 L: 1/8
 K: Gmaj
 B>c de dB Bd|cA AB/d/ ed BA|`,
@@ -8100,7 +8076,7 @@ Album:  The Northern Concertina (2015)
 			incipit: `X: 5
 T: Neilí's
 R: polka
-M: 4/2
+M: 4/4
 L: 1/8
 K: Amix
 ed cA ed c2|AA/c/ ef ge d2|`,
