@@ -1,174 +1,5 @@
 export default {
 	lastUpdate: "2026-03-06",
-	setLists: [
-		{
-			id: "1771406869982-ukwxx",
-			name: "Steam up sets",
-			dateCreated: "2026-02-18T09:27:49.982Z",
-			dateModified: "2026-02-23T19:49:48.052Z",
-			groups: "su",
-			sets: [
-				{
-					name: "This Is My Love Slide set (3-3-3)",
-					tunes: [
-						{
-							theSessionId: 6
-						},
-						{
-							theSessionId: 8362
-						},
-						{
-							theSessionId: 1398
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Rookery set (4-3-4) ",
-					tunes: [
-						{
-							theSessionId: 2958
-						},
-						{
-							theSessionId: 9828
-						},
-						{
-							theSessionId: 9639
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Fahey's Fiddle",
-					tunes: [
-						{
-							theSessionId: 124,
-							notes: "In C; x2"
-						},
-						{
-							theSessionId: 693,
-							notes: "x2"
-						},
-						{
-							theSessionId: 124,
-							notes: "in D; x2"
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "2nd polka set",
-					tunes: [
-						{
-							theSessionId: 11600
-						},
-						{
-							theSessionId: 647
-						},
-						{
-							theSessionId: 11676
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Beauties Of Autumn",
-					tunes: [
-						{
-							theSessionId: 4553
-						},
-						{
-							theSessionId: 5675
-						}
-					],
-					collapsed: true
-				}
-			]
-		},
-		{
-			id: "1771465912087-9s86i",
-			name: "ALORA sets",
-			groups: "ALORA",
-			dateCreated: "2026-02-19T01:51:52.087Z",
-			dateModified: "2026-02-24T00:52:35.766Z",
-			sets: [
-				{
-					name: "Polkas d’après Jason O’Rourke",
-					tunes: [
-						{
-							theSessionId: 3835
-						},
-						{
-							theSessionId: 18688
-						},
-						{
-							theSessionId: 7386
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Christmas Eve set",
-					tunes: [
-						{
-							theSessionId: 440
-						},
-						{
-							theSessionId: 1555
-						},
-						{
-							theSessionId: 1177
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Maud Millar set",
-					tunes: [
-						{
-							theSessionId: 1177
-						},
-						{
-							theSessionId: 116
-						},
-						{
-							theSessionId: 118
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Barndances",
-					tunes: [
-						{
-							norbeckId: 12,
-							norbeckR: "barndance"
-						},
-						{
-							norbeckId: 14,
-							norbeckR: "barndance"
-						}
-					],
-					collapsed: true
-				},
-				{
-					name: "Polkas - « Denis Murphy’s »",
-					tunes: [
-						{
-							theSessionId: 357
-						},
-						{
-							theSessionId: 786
-						},
-						{
-							theSessionId: 441
-						}
-					],
-					collapsed: true
-				}
-			]
-		}
-	],
 	tunes: [
 		{
 			abc: `
@@ -868,10 +699,16 @@ T:O'Mahony's
 R:hornpipe
 L:1/8
 M:4/2
+F:https://music.youtube.com/watch?v=yE_iY3Z4FBs
+S:Jason O’Rourke, concertina
+D:The Bunch Of Keys
+R: hornpipe
+M: 4/2
+N:On the album, this is the first in a set with the title: “Gan Ainm/The New Century”
+N:*abc-tools: convert to M:4/2*
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2488#setting2488
 N:Setting entered in thesession by user “dafydd” on 2003-08-28
-N:*abc-tools: convert to M:4/2*
 K:Dmajor
 |:dB|AFEF (3DDD DE FDFA d2 de|fedB AFDE FEED E2 dB|
 AFEF (3DDD DE FDFA d2 de|fedB AFEF D2 DE D2:|
@@ -5053,28 +4890,34 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
 			theSessionSettingId: 5373
 		},
 		{
-			aka: "The Connacht",
-			abc: `X:1
-T:Devils Of Dublin
-R:reel
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/538#setting538
-N:Setting entered in thesession by user “Will Harmon” on 2002-02-09
-K:Dmajor
-|:d2dA BAGB|AFBF A~F3|Ad(3ddd Adfd|(3efe df e~B3|
- d2dA BAGB|AFBF A~F3|ABde fdce|1 dBAG FDFA:|2 dBAG FDD2||
- |:agfe~f3e|dcBA BAFB|Ad(3ddd Adfd|(3efe df e~B3|
- a2ag ~f3e|dcBA BAFB|ABde fdce|1 dBAG FDD2:|2 dBAG FDFA||`,
+			parts: "AABB",
+			aka: ["The Connacht", "The Devil's in Dublin"],
+			incipit: `X: 1
+T: Devils Of Dublin
+R: reel
+N: A close relative of the Merry Blacksmith.
+M: 4/4
+L: 1/16
+K: Dmaj
+dcBA BAFB AFBF A~F3|Ad (3ddd Adfd`,
+			theSessionId: 538,
+			norbeckId: 868,
 			references: [
 				{
-					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
+					url: "https://www.itma.ie/playlists/josephine-keegan/?track=3",
+					artists:
+						"Josephine Keegan, fiddle; Dan Healy, flute; Tom Moran, banjo; Seán Óg McKenna, banjo; Kathleen Smith, fiddle; Antóin Mac Gahbann, fiddle; Phil Callery, fiddle; Ita Garvey, fiddle; Seán Keane, fiddle; Mick O'Connor, flute; Unidentified, flute; Unidentified, fiddle",
+					notes: `The boys of the lough; The devil's in Dublin; The duke of Leinster (2011)
+From 1:46 onwards. An “impromptu session of music in the old style led by Josephine [Keegan] herself”.`
+				},
+				{
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=17",
-					notes: "The Connacht; Cooley's; The Bucks of Oranmore"
+					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
+					notes: `The Connacht; Cooley’s; The Bucks of Oranmore
+(A warning for ITMA links: you have to click on the tune in the playlist once the page is displayed rather than simply clicking on play.)
+I’m very fond of this reel. There’s a lot of scope for variation in it I think.`
 				}
-			],
-			theSessionId: 538
+			]
 		},
 		{
 			abc: `X:1
@@ -6722,7 +6565,7 @@ EB B>A BG E/F/G|FA`,
 M: 12/8
 L: 1/8
 K: Gmaj
-BAG A2d cAF G2A|`,
+BAG A2d cAF G2A|BAG AdB`,
 			theSessionId: 37,
 			references: [
 				{
@@ -8817,36 +8660,6 @@ d2dA BAFA ABdA BAFA|ABde`,
 			parts: "AABB"
 		},
 		{
-			parts: "AABB",
-			aka: ["The Connacht", "The Devil's in Dublin"],
-			incipit: `X: 1
-T: Devils Of Dublin
-R: reel
-N: A close relative of the Merry Blacksmith.
-M: 4/4
-L: 1/16
-K: Dmaj
-dcBA BAFB AFBF A~F3|Ad (3ddd Adfd`,
-			theSessionId: 538,
-			norbeckId: 868,
-			references: [
-				{
-					url: "https://www.itma.ie/playlists/josephine-keegan/?track=3",
-					artists:
-						"Josephine Keegan, fiddle; Dan Healy, flute; Tom Moran, banjo; Seán Óg McKenna, banjo; Kathleen Smith, fiddle; Antóin Mac Gahbann, fiddle; Phil Callery, fiddle; Ita Garvey, fiddle; Seán Keane, fiddle; Mick O'Connor, flute; Unidentified, flute; Unidentified, fiddle",
-					notes: `The boys of the lough; The devil's in Dublin; The duke of Leinster (2011)
-From 1:46 onwards. An “impromptu session of music in the old style led by Josephine [Keegan] herself”.`
-				},
-				{
-					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=17",
-					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
-					notes: `The Connacht; Cooley’s; The Bucks of Oranmore
-(A warning for ITMA links: you have to click on the tune in the playlist once the page is displayed rather than simply clicking on play.)
-I’m very fond of this reel. There’s a lot of scope for variation in it I think.`
-				}
-			]
-		},
-		{
 			abc: `X:1
 T:Pull The Knife And Stick It Again
 R:jig
@@ -8888,21 +8701,6 @@ L: 1/8
 Q:1/2=90
 K: Amin
 d/ |c<AA>G A>ce>d c<AB>d c<AG2 |`
-		},
-		{
-			incipit: `X: 1
-T: O'Mahony's
-F:https://music.youtube.com/watch?v=yE_iY3Z4FBs
-S:Jason O’Rourke, concertina
-D:The Bunch Of Keys
-R: hornpipe
-M: 4/2
-N:On the album, this is the first in a set with the title: “Gan Ainm/The New Century”
-L: 1/8
-K: Gmaj
-ge|dBAB ~G3A (3BAG Bd ~g3a|bgaf gede`,
-			theSessionId: 2488,
-			parts: "AABB"
 		},
 		{
 			aka: "Allistrum’s",
@@ -9593,7 +9391,7 @@ d2A2 F2GA BAGF E3F | [M:5/4] GFGA BAFD AGEC D4 D2:|`,
 		},
 		{
 			abc: `X:1%240423
-T:_
+T:Mazurka
 O:France
 R:Mazurka
 N:(2026-02-24) I have the info about this somewhere - will fill 
@@ -9617,5 +9415,174 @@ K:D
 				},
 				],}
 		 */
+	],
+	setLists: [
+		{
+			id: "1771406869982-ukwxx",
+			name: "Steam up sets",
+			dateCreated: "2026-02-18T09:27:49.982Z",
+			dateModified: "2026-02-23T19:49:48.052Z",
+			groups: "su",
+			sets: [
+				{
+					name: "This Is My Love Slide set (3-3-3)",
+					tunes: [
+						{
+							theSessionId: 6
+						},
+						{
+							theSessionId: 8362
+						},
+						{
+							theSessionId: 1398
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Rookery set (4-3-4) ",
+					tunes: [
+						{
+							theSessionId: 2958
+						},
+						{
+							theSessionId: 9828
+						},
+						{
+							theSessionId: 9639
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Fahey's Fiddle",
+					tunes: [
+						{
+							theSessionId: 124,
+							notes: "In C; x2"
+						},
+						{
+							theSessionId: 693,
+							notes: "x2"
+						},
+						{
+							theSessionId: 124,
+							notes: "in D; x2"
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "2nd polka set",
+					tunes: [
+						{
+							theSessionId: 11600
+						},
+						{
+							theSessionId: 647
+						},
+						{
+							theSessionId: 11676
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Beauties Of Autumn",
+					tunes: [
+						{
+							theSessionId: 4553
+						},
+						{
+							theSessionId: 5675
+						}
+					],
+					collapsed: true
+				}
+			]
+		},
+		{
+			id: "1771465912087-9s86i",
+			name: "ALORA sets",
+			groups: "ALORA",
+			dateCreated: "2026-02-19T01:51:52.087Z",
+			dateModified: "2026-02-24T00:52:35.766Z",
+			sets: [
+				{
+					name: "Polkas d’après Jason O’Rourke",
+					tunes: [
+						{
+							theSessionId: 3835
+						},
+						{
+							theSessionId: 18688
+						},
+						{
+							theSessionId: 7386
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Christmas Eve set",
+					tunes: [
+						{
+							theSessionId: 440
+						},
+						{
+							theSessionId: 1555
+						},
+						{
+							theSessionId: 1177
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Maud Millar set",
+					tunes: [
+						{
+							theSessionId: 1177
+						},
+						{
+							theSessionId: 116
+						},
+						{
+							theSessionId: 118
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Barndances",
+					tunes: [
+						{
+							norbeckId: 12,
+							norbeckR: "barndance"
+						},
+						{
+							norbeckId: 14,
+							norbeckR: "barndance"
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Polkas - « Denis Murphy’s »",
+					tunes: [
+						{
+							theSessionId: 357
+						},
+						{
+							theSessionId: 786
+						},
+						{
+							theSessionId: 441
+						}
+					],
+					collapsed: true
+				}
+			]
+		}
 	]
 };
