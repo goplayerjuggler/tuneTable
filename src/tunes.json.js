@@ -1,5 +1,5 @@
 export default {
-	lastUpdate: "2026-02-24",
+	lastUpdate: "2026-03-06",
 	setLists: [
 		{
 			id: "1771406869982-ukwxx",
@@ -195,7 +195,7 @@ FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
 						"See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
 				}
 			],
-			badges: "crooked",
+			tags: "crooked",
 			norbeckId: 20,
 			norbeckR: "slip+jig",
 			parts: "AABB"
@@ -1222,7 +1222,7 @@ K:D
  |:fgf edc dAA BAD|FED EDC DEF CDE|
  Ddd Aee Aff Agg|fed edc d2d d3:|`,
 			theSessionId: 417,
-			badges: "crooked"
+			tags: "crooked"
 		},
 		{
 			abc: `X:1
@@ -1824,7 +1824,7 @@ K:Fmajor
  f2f fef g3 g2f|ege cde [1 fcA F3:|2 fcA FcB !D.C.! |]`,
 			theSessionId: 23388,
 			theSessionSettingId: 47849,
-			badges: "crooked"
+			tags: "crooked"
 		},
 		{
 			abc: `X:1
@@ -1907,27 +1907,29 @@ K:Dmajor
 			theSessionId: 4236
 		},
 		{
-			abc: `X:1
-T:Seanamhac Tube Station
-C:John Carty
-R:jig
-L:1/8
+			abc: `X: 9
+T: Seanamhac Tube Station
+C: John Carty
+R: jig
+N: 1. I believe the C part is omitted the first few times, and perhaps
+N: replaces the B part? I need to check.
+N: (Copied from a setting by “NfldWhistler” & then tweaked; 2026-03-06)
 M:12/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/280#setting280
-N:Setting entered in thesession by user “scottythefiddler” on 2001-09-09
-N:(edited after importing)
-K:Gdor
-|:GFD D2F GAc d3|dcA cAF GFD C3|
-  GFD D2F GAc d3|dcA cAF G3 G3:|
-   d3 dcA c3 cAc|dcA cAF GFD C3|
-   d3 dcA c3 cAc|dcA cAF G3 G3|
-   d3 dcA c3 cAc|dcA cAF GFD C3|
- GFD D2F GAc d3|dcA cAF G3 G3||`,
+L: 1/8
+N:*abc-tools: convert to M:12/8*
+K: Gdor
+|:GFD DCD GA/=B/c ~d3|dcA cAF GFD CDF|
+GFD DCD GA/=B/c d2f|dcA cAF[1 G2A B2A:|2 ~G3 G2c||
+|:~d3 dcA ~c3 cAc|dcA cAF GFD CDF|
+[1 ded dcA cdc gec|dcA cAF ~G3 G2c:|
+[2 GFD GFD GFD dcA|dcA dcA ~G3 G2c||
+|:~d3 ~g3 f2g a2f|g2d c2d cAG F3|
+[1 ~d3 ~g3 f2g a2g|fdc AGF G3 G2c:|
+[2 GFD GFD GFD dcA|dcA dcA G2A B2A||`,
 			theSessionId: 280,
+			theSessionSettingId: 37122,
 			norbeckId: 423,
-			parts: "AABB",
-			badges: "optional C part"
+			parts: "AABBCC"
 		},
 		{
 			abc: `X:1
@@ -2614,7 +2616,8 @@ live; 2012`
 					url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
 					notes: "EP"
 				}
-			]
+			],
+			tags: "crooked"
 		},
 		{
 			abc: `
@@ -3189,7 +3192,7 @@ DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
 [M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
 			],
-			badges: "crooked"
+			tags: "crooked"
 		},
 		{
 			abc: `X:1
@@ -3250,7 +3253,7 @@ EAAG ABcA EAFA GEDG|EAAG ABcd egdB [1 BAAG:| [2 BAA2 ||
 |:ABcd eAA2 gedc BAGB|ABcd eaaf gedB BAA2 :|
 |: [M:7/8] e/f/gdBA2 e/f/gdB GABd|[M:4/4]eBdA a3f gedB [1BAA2 :| [2 BAAG !D.C.! |]`,
 			theSessionId: 40,
-			badges: "crooked"
+			tags: "crooked"
 		},
 		{
 			abc: `X:1
@@ -4061,7 +4064,7 @@ R:reel
 L:1/16
 M:4/4
 K:Gmajor
-BG~G2 BGcG|BG~G2 Bdgd|BG~G2 BdcB`,
+BG~G2 BGcG BG~G2 Bdgd|BG~G2 BdcB`,
 			theSessionId: 195,
 			norbeckId: 1,
 			references: [
@@ -4168,7 +4171,7 @@ A3e edef e2c2 B2A2 |1 dFAd fedc B2A2 {B}A2G2:|2 [M:3/4]d2AA BAFA d2ed||
 [M:4/4][K:A]|:cecA EAce d2B2 B4 | GBBB ddBd ffed c2ed |
 cecA EAce d2B2 B4 | [1 GBBB ddBd fece  a2ed:|2 [M:5/4]GBBB ddBd fece  a4 A2SG2||
 `,
-			badges: "crooked",
+			tags: "crooked",
 			theSessionId: 17379,
 			theSessionSettingId: 33333
 		},
@@ -4230,7 +4233,7 @@ N:(edited after importing)
 K:Gmajor
 |:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
  [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`,
-			badges: "crooked",
+			tags: "crooked",
 			theSessionId: 23211,
 			theSessionSettingId: 47315
 		},
@@ -4346,7 +4349,7 @@ K:Dminor
 			theSessionId: 2805
 		},
 		{
-			badges: "crooked",
+			tags: "crooked",
 			abc: [
 				`X: 1
 T:The Cameronian
@@ -5591,7 +5594,7 @@ K:Edorian
 		},
 		{
 			groups: "ALORA,SU",
-			badges: "crooked",
+			tags: "crooked",
 			abc: `
 %The Spanish Lady
 %abc-2.1
@@ -5747,19 +5750,21 @@ B,|~A,>A E>C D<G, D>B,|~A,>A E>C F<D E>C|D>E C>ED/C/B,/A,/ G,>B,|~A,>A E>D C<A, 
  |:^g|~a>e c>A B<=G ~ =G>^g|~a>e c>A e<Ac>A|d>B c>A d/c/B/A/ =G>g|f/g/a/f/ e>a c<A ~A:|`,
 			theSessionId: 7681
 		},
+
 		{
 			abc: `X:1
 T:Lucy's Fling
-R:strathspey
+R:reel
 L:1/8
-M:4/4
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/3007#setting3007
 N:Setting entered in thesession by user “dafydd” on 2003-08-28
+N:(edited after importing)
 K:Amajor
-|:AFEF AB c2|(3dcB cA BAFA|AFEF ABcd|efec (3BcB A2:|
- feae f2 af|eccA BAFA|feae f2 af|eccA (3BcB A2|
- feae f2 af|eccA BAFA|AFEF ABcd|efec (3BcB A2|`,
+|:AFEF AB c2 (3dcB cA BAFA|AFEF ABcd efec (3BcB A2:|
+feae f2 af eccA BAFA|feae f2 af eccA (3BcB A2|
+feae f2 af eccA BAFA|AFEF ABcd efec (3BcB A2|`,
 			theSessionId: 3007
 		},
 		{
@@ -6030,7 +6035,7 @@ B2 Be BA|GF EF GA|B2Be BG|A3c BA|EF GA BG|AE Ac BA|G2GA =FG|E6|
  B2 Be BA|GF EF GA|B2Be BG|A3c BA|GA Bc dB|AE Ac BA|G2GA =FG|E6|
  g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 e2 ef|g3 f ga|f6|
  g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 G2 EF|G2 GA =FG|E6||`,
-			badges: ["klezmer"],
+			tags: ["klezmer"],
 			theSessionId: 3809,
 			references: [
 				{
@@ -6776,7 +6781,7 @@ M:12/8
  [1 DGA Bdc  =BGE FED | FCA, DCA,  G,A,G, G,GF :|
  [2 dcA B2 G  AFD DCD | C2 F A,CA, G,A,G, G,3||`
 			],
-			badges: "crooked",
+			tags: "crooked",
 			groups: "su",
 			references: [
 				{
@@ -7273,8 +7278,7 @@ eag e2d eaa bag|efg edB BAG A2:|`,
 				{
 					artists: "Charlie Mulvihill, concertina",
 					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=11",
-					notes:
-						"Followed by the jig Hetty O’Hady. Neither jig is identified on the ITMA page."
+					notes: "Followed by the jig Hetty O’Hady."
 				}
 			],
 			theSessionId: 1137
@@ -8170,15 +8174,53 @@ EFGA BAGB AFF2 dFAF|EFGA`,
 		},
 		{
 			groups: "su,alora",
-			incipit: `X:4
+			incipit: `X:1
 L:1/8
 M:12/8
 K:Am
-EBc ~G3 FBc ~G3 | ~e3 dcB AGF EFD |`,
+EBc ~G3 FBc ~G3 | ~e3 dcB AGF E2D |`,
 			parts: "ABCDEF",
-			badges: "flexible structure",
-			abc: `
-X:4
+			tags: "flexible structure",
+			abc: [
+				`X:1
+T:SNCF jigs
+R:jig
+C:Malcolm Schonfield
+N: 1. Several choices are left up to the performer(s):
+N: a) Each part can be played either once or twice.
+N: b) The order parts are played in is to some extent open, as 
+N: explained as follows.
+N: c) Parts A, B, and C “go together”; and can be played ABC, or ABAC, or ABACA
+N: (or AABBCC or AABBAACC, etc); possibly there are other options too.
+N: d) Part F’ is a variant of F; play F or F’ but probably not one
+N: followed by the other, i.e. F followed by F’.
+N: e) Parts D, E, and F “go together”, in the given order, ie DEF’.
+N: f) The first time round you may just play DE and then return to part A.
+N: 2. I sketched out some chords for backing instruments. Just an outline.
+N:  All the “(G)” chords are optional, and can be G or Em,
+N: or even “open” E (no G or G#) ad lib.
+N: 3. This is a revised version; an earlier (flawed) version follows (because, why not?).
+L:1/8
+M:12/8
+K:Am
+%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax, 260212 comments, 260217, 260326
+P:A
+"Am"EBc ~G3 "F"FBc ~G3 | "Am"~e3  dcB "Dm"AGF EFD | "Am"EBc ~G3 "F"FBc ~G3 | "Am"~e3 dcB AGF ~E3 ||
+P:B
+"Dm"FED ~B3 "Am"BcG A3 | "Dm"FED "G"BcG "Am"AEA cBA | "Dm"FED ~B3 "Am"BcG A3 | "Dm"FED "G"BcG "Am"A3 z3 ||
+P:C
+ c BAG | "F"FEF AB(G "Am"E)DE AB(G | "Dm"F)A(e d)B(d c)A(c B)A(G | "F"F)EF AB(G "Am"E)DE AB(G | "Dm"F)A(e "G"d)B(G "Am"A3) || 
+P:D
+z2(E | "Dm".F2)(A .G2)(B "Am".d2)c- cA(E | "Dm"F2)(A "(G)".G2)B "Am"EGF ~E3 | "Dm".F2(A .G2)B "Am"d2c- cde | "F"dcB "(G)"A2G  "Am"A3 ||
+P:E
+e2f | "Am"e3-edc "G"dBG F2E | "Am"c3-cBc "G"dBd g2f | "Am"e3-edc "G"dBG F2E | "F"c3 ABc "(G)"BGE "Am"A3 || 
+P:F
+ ABc | "F"F2d B3 "Am"BcG A3 | "F"FAd B3 "Am"Bdg e3 | "F"F2d B3 "Am"BcG A3 | "F"FAd "(G)"BcG "Am"A3 ||
+P:F’
+ ABc | .F2d-d2 B- BcB ABc | .F2d- d2B- Bcd ecA | .F2d-d2 B- BcB ABc | F2d BGE A3 ||`,
+
+				`
+X:1
 T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
@@ -8241,6 +8283,7 @@ BcG \\ % or { BGE }
 P:G
 |: ABc | .F2d -d2 B- BcB ABc | .F2d- d2B- Bcd ecA | % or { Bdg e3 | }
       .F2d -d2 B- BcB ABc | F2d BGE A3 :|`
+			]
 		},
 		{
 			incipit: `
@@ -8401,7 +8444,7 @@ GAB|c2e2de|c2e2de|f4e2|degGAB|c2e2de|c2e2de|f2e2d2|1 c3:|2 c6||
 |:ABcdcA|d2c2B2|ABc2d2|ABcdcA|d2edcB|1 cdefg2:|2 c3 !D.C.!|]
 `,
 			parts: "AABB",
-			badges: "pas carrée"
+			tags: "pas carrée"
 		},
 		{
 			abc: `X:1
@@ -8419,10 +8462,10 @@ P:B
 |:c/A/BA/G/|^FDA-|A/G/^F/G/A|BA/B/c-|c/A/BA/G/|^FDG|^F/G/A/B/A/F/|GAB:|
 `,
 			parts: "AABB",
-			badges: "pas carrée"
+			tags: "pas carrée"
 		},
 		{
-			badges: "pas carrée",
+			tags: "pas carrée",
 			parts: "AABB",
 			abc: `X: 1
 R:Bourrée à 3 temps
@@ -8434,7 +8477,7 @@ G, |: C2D | C/D/.E(F | .E)D2 | C2D | C/D/.E.F | D2G, :|
 G, |: A,2G, | A,2G, | A,/B,/CD | CB,G, | A,2G, | A,2G, | A,/B,/CD | CE.G,:|`
 		},
 		{
-			badges: "pas carrée",
+			tags: "pas carrée",
 			parts: "AABB",
 			abc: `X:2
 T:La Giate de Coualhon
@@ -9400,7 +9443,7 @@ K:Ddorian
  d2 de fd|ec A2 AG|F2 FE FA|EA FA EA|
  d2 de fa|gf ed ^cA|c2 cA cd|ed cA GE||`,
 			theSessionId: 4037,
-			badges: "crooked",
+			tags: "crooked",
 			parts: "AABB"
 		},
 		{
@@ -9556,7 +9599,7 @@ d2A2 F2GA BAGF E3F | [M:5/4] GFGA BAFD AGEC D4 D2:|`,
 			theSessionId: 4587,
 			theSessionSettingId: 48618,
 			parts: "AABB",
-			badges: "crooked"
+			tags: "crooked"
 		},
 		{
 			abc: `X:1%240423
@@ -9571,7 +9614,7 @@ K:D
 |: fg | [M:4/4] a2a2af de | f2 f2 ef ag | e2 e2 de ge | [M:3/4] f2 de fg |
 [M:4/4]a2a2af de | f2 f2 ef ag | e2 e2 Ad fe | [M:3/4] d2- [1 de :| [2 d2 
 |: Ad | f2 e2 Bc | B2 A2 Ac | e2 eg fe | f2 d2 Ad | f2 e2 Bc | B2 A2 Ac | e2- eg fe | d2- [1 d2 :| [2 de !D.C.! |]`,
-			badges: "crooked"
+			tags: "crooked"
 		}
 		/*
 		, parts: "AABB"
