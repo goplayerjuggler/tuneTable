@@ -23,10 +23,10 @@ export default (env, argv) => {
 			filename: "bundle.js",
 			path: path.resolve(__dirname, "dist"),
 			clean: true,
-			publicPath: "",
+			publicPath: ""
 		},
 		externals: {
-			abcjs: "ABCJS",
+			abcjs: "ABCJS"
 		},
 		module: {
 			rules: [
@@ -34,14 +34,14 @@ export default (env, argv) => {
 					test: /\.css$/i,
 					use: [
 						isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
-						"css-loader",
-					],
+						"css-loader"
+					]
 				},
 				{
 					test: /\.json$/,
-					type: "json",
-				},
-			],
+					type: "json"
+				}
+			]
 		},
 		plugins: [
 			new HtmlWebpackPlugin({
@@ -51,15 +51,15 @@ export default (env, argv) => {
 					? false
 					: {
 							collapseWhitespace: true,
-							removeComments: true,
-						},
+							removeComments: true
+						}
 			}),
 			// Extract CSS to temporary file in production (will be inlined)
 			...(!isDevelopment
 				? [
 						new MiniCssExtractPlugin({
-							filename: "styles.css",
-						}),
+							filename: "styles.css"
+						})
 					]
 				: []),
 			// Inline both CSS and JS in production
@@ -69,9 +69,9 @@ export default (env, argv) => {
 						new HtmlInlineCssWebpackPlugin(),
 						new HtmlInlineScriptPlugin({
 							htmlMatchPattern: [/index.html$/],
-							scriptMatchPattern: [/bundle.*.js$/],
-						}),
-					]),
+							scriptMatchPattern: [/bundle.*.js$/]
+						})
+					])
 		],
 		devServer: {
 			static: "./dist",
@@ -81,15 +81,15 @@ export default (env, argv) => {
 			watchFiles: {
 				paths: ["src/**/*"],
 				options: {
-					ignored: ["**/node_modules/**", "**/dist/**"],
-				},
-			},
+					ignored: ["**/node_modules/**", "**/dist/**"]
+				}
+			}
 		},
 		optimization: {
 			minimizer: [
 				`...`, // Extend existing minimizers (like terser for JS)
-				new CssMinimizerPlugin(),
-			],
-		},
+				new CssMinimizerPlugin()
+			]
+		}
 	};
 };
