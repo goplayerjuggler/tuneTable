@@ -8189,11 +8189,6 @@ EFGA BAGB AFF2 dFAF|EFGA`,
 		},
 		{
 			groups: "su,alora",
-			incipit: `X:1
-L:1/8
-M:12/8
-K:Am
-EBc ~G3 FBc ~G3 | ~e3 dcB AGF E2D |`,
 			parts: "ABCDEF",
 			tags: "flexible structure",
 			abc: [
@@ -8211,28 +8206,32 @@ N: d) Part F’ is a variant of F; play F or F’ but probably not one
 N: followed by the other, i.e. F followed by F’.
 N: e) Parts D, E, and F “go together”, in the given order, ie DEF’.
 N: f) The first time round you may just play DE and then return to part A.
-N: 2. I sketched out some chords for backing instruments. Just an outline.
-N:  All the “(G)” chords are optional, and can be G or Em,
-N: or even “open” E (no G or G#) ad lib.
-N: 3. This is a revised version; an earlier (flawed) version follows (because, why not?).
+N: 2. I sketched out some chords for backing instruments; 
+N: just some ideas; can be tweaked.
+N: 3. All the “A*” chords are optional; also they can be A (major) or F#m,
+N: or even “open” F# (no A or A#) ad lib. 
+N: 4. This is a revised version; an earlier (flawed) version follows as 
+N: it has some more info.
+N: 5. On the fiddle these days I tend to play it in Am but on the whistle I 
+N: think it works better in Bm.
 L:1/8
 M:12/8
-K:Am
-%160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax, 260212 comments, 260217, 260326
+K:Bm
+%260306
 P:A
-"Am"EBc ~G3 "F"FBc ~G3 | "Am"~e3  dcB "Dm"AGF EFD | "Am"EBc ~G3 "F"FBc ~G3 | "Am"~e3 dcB AGF ~E3 ||
+"Bm"Fcd ~A3 "G"Gcd ~A3 | "Bm"~f3  edc "Em"BAG FGE | "Bm"Fcd ~A3 "G"Gcd ~A3 | "Bm"~f3 edc BAG ~F3 ||
 P:B
-"Dm"FED ~B3 "Am"BcG A3 | "Dm"FED "G"BcG "Am"AEA cBA | "Dm"FED ~B3 "Am"BcG A3 | "Dm"FED "G"BcG "Am"A3 z3 ||
+"Em"GFE ~c3 "Bm"cdA B3 | "Em"GFE "A*"cdA "Bm"BFB dcB | "Em"GFE ~c3 "Bm"cdA B3 | "Em"GFE "A*"cdA "Bm"B3 z3 ||
 P:C
- c BAG | "F"FEF AB(G "Am"E)DE AB(G | "Dm"F)A(e d)B(d c)A(c B)A(G | "F"F)EF AB(G "Am"E)DE AB(G | "Dm"F)A(e "G"d)B(G "Am"A3) || 
+ d cBA | "G"GFG Bc(A "Bm"F)EF Bc(A | "Em"G)B(f e)c(e d)B(d c)B(A | "G"G)FG Bc(A "Bm"F)EF Bc(A | "Em"G)B(f "A*"e)c(A "Bm"B2) || 
 P:D
-z2(E | "Dm".F2)(A .G2)(B "Am".d2)c- cA(E | "Dm"F2)(A "(G)".G2)B "Am"EGF ~E3 | "Dm".F2(A .G2)B "Am"d2c- cde | "F"dcB "(G)"A2G  "Am"A3 ||
+z2(F | "Em".G2)(B .A2)(c "Bm".e2)d- dB(F | "Em"G2)(B "A*".A2)c "Bm"FAG ~F3 | "Em".G2(B .A2)c "Bm"e2d- def | "G"edc "A*"B2A  "Bm"B3 ||
 P:E
-e2f | "Am"e3-edc "G"dBG F2E | "Am"c3-cBc "G"dBd g2f | "Am"e3-edc "G"dBG F2E | "F"c3 ABc "(G)"BGE "Am"A3 || 
+f2g | "Bm"f3-fed "A*"ecA G2F | "Bm"d3-dcd "A*"ece a2g | "Bm"f3-fed "A*"ecA G2F | "G"d3 Bcd "A*"cAF "Bm"B3 || 
 P:F
- ABc | "F"F2d B3 "Am"BcG A3 | "F"FAd B3 "Am"Bdg e3 | "F"F2d B3 "Am"BcG A3 | "F"FAd "(G)"BcG "Am"A3 ||
+ Bcd | "G"G2e c3 "Bm"cdA B3 | "G"GBe c3 "Bm"cea f3 | "G"G2e c3 "Bm"cdA B3 | "G"GBe "A*"cdA "Bm"B3 ||
 P:F’
- ABc | .F2d-d2 B- BcB ABc | .F2d- d2B- Bcd ecA | .F2d-d2 B- BcB ABc | F2d BGE A3 ||`,
+ Bcd | .G2e-e2 c- cdc Bcd | .G2e- e2c- cde fdB | .G2e-e2 c- cdc Bcd | G2e cAF B3 ||`,
 
 				`
 X:1
