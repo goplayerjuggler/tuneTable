@@ -6,7 +6,7 @@ export default {
 			id: "1771406869982-ukwxx",
 			name: "Steam up sets",
 			dateCreated: "2026-02-18T09:27:49.982Z",
-			dateModified: "2026-02-23T19:49:48.052Z",
+			dateModified: "2026-03-07T03:17:46.666Z",
 			groups: "su",
 			sets: [
 				{
@@ -80,6 +80,19 @@ export default {
 						},
 						{
 							theSessionId: 5675
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Spanish Lady",
+					tunes: [
+						{
+							ttId: 261
+						},
+						{
+							theSessionId: 70,
+							notes: "x2"
 						}
 					],
 					collapsed: true

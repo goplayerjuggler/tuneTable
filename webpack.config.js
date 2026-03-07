@@ -16,19 +16,10 @@ const __dirname = path.dirname(__filename);
 
 // Custom plugin to concatenate tune files before build
 class ConcatenateTunesPlugin {
-	constructor() {
-		this.hasRun = false;
-	}
 	apply(compiler) {
 		compiler.hooks.beforeCompile.tapAsync(
 			"ConcatenateTunesPlugin",
 			(params, callback) => {
-				// Only run once per webpack session
-				if (this.hasRun) {
-					callback();
-					return;
-				}
-
 				try {
 					const tunesDir = path.resolve(__dirname, "src", "tunes");
 					const templateFile = path.resolve(
@@ -56,8 +47,8 @@ class ConcatenateTunesPlugin {
 						const filepath = path.join(tunesDir, filename);
 						const content = fs.readFileSync(filepath, "utf8");
 
-						// Extract everything after the first comment line
-						const lines = content.split("\n");
+						// Extract everything between the first and last lines
+						const lines = content.trimEnd().split("\n");
 
 						return `{${lines.slice(1, -1).join("\n")}}`;
 					});
@@ -70,17 +61,24 @@ class ConcatenateTunesPlugin {
 					const template = fs.readFileSync(templateFile, "utf8");
 
 					// Replace the placeholder with the array
-					const output = template.replace(
+					const newContent = template.replace(
 						"//CopyTunesHere",
 						`tunes: ${arrayLiteral},`
 					);
 
-					// Write the output file
-					fs.writeFileSync(outputFile, output, "utf8");
+					// Only write if content changed (prevents infinite loop + unnecessary rebuilds)
+					let shouldWrite = true;
+					if (fs.existsSync(outputFile)) {
+						const existingContent = fs.readFileSync(outputFile, "utf8");
+						shouldWrite = existingContent !== newContent;
+					}
 
-					console.log(`Generated ${outputFile} with ${tuneFiles.length} tunes`);
-
-					this.hasRun = true;
+					if (shouldWrite) {
+						console.log(
+							`Regenerating tunes.json.js with ${tuneFiles.length} tunes`
+						);
+						fs.writeFileSync(outputFile, newContent, "utf8");
+					}
 					callback();
 				} catch (error) {
 					console.error("Error concatenating tunes:", error);
@@ -88,19 +86,22 @@ class ConcatenateTunesPlugin {
 				}
 			}
 		);
-		// Reset flag when webpack starts watching (for dev server)
-		compiler.hooks.watchRun.tap("ConcatenateTunesPlugin", () => {
-			const tunesDir = path.resolve(__dirname, "src", "tunes");
-			const changedFiles = compiler.modifiedFiles || new Set();
-			const tuneChanged = Array.from(changedFiles).some(
-				(file) => file.includes(tunesDir) && file.endsWith(".data.js")
-			);
 
-			if (tuneChanged) {
-				console.log("Tune file changed, regenerating...");
-				this.hasRun = false;
+		// Tell webpack to watch the tune files
+		compiler.hooks.thisCompilation.tap(
+			"ConcatenateTunesPlugin",
+			(compilation) => {
+				const tunesDir = path.resolve(__dirname, "src", "tunes");
+				const tuneFiles = fs
+					.readdirSync(tunesDir)
+					.filter((f) => f.endsWith(".data.js"))
+					.map((f) => path.join(tunesDir, f));
+
+				tuneFiles.forEach((file) => {
+					compilation.fileDependencies.add(file);
+				});
 			}
-		});
+		);
 	}
 }
 
@@ -180,7 +181,7 @@ export default (env, argv) => {
 			}
 		},
 		watchOptions: {
-			ignored: ["**/node_modules/**", "**/src/tunes.compiled.js"]
+			ignored: ["**/node_modules/**"]
 		},
 		optimization: {
 			minimizer: [
