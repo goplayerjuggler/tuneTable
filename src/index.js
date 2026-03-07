@@ -1,6 +1,6 @@
 "use strict";
 import "./styles.css";
-import tunesDataRaw from "./tunes.json.js";
+import tunesDataRaw from "./tunes.compiled.js";
 import { normaliseKey, sort as contourSort } from "@goplayerjuggler/abc-tools";
 
 import { processTuneData } from "./processTuneData.js";

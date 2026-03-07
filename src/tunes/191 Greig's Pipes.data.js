@@ -1,0 +1,18 @@
+export default {
+			abc: `X:1
+T:Greig's Pipes
+R:reel
+L:1/8
+M:4/4
+N:Imported into *tuneTable* on 2025-10-25,
+N:from https://thesession.org/tunes/605#setting605
+N:Setting entered in thesession by user “Josh Kane” on 2002-03-20
+K:Gmajor
+~B2BA BAGA|B2GB AGEG|~B2BA BAGB|cABG AGEG|
+ ~B2BA BAGA|B2GB AGEG|Bd~d2 eBdB|AcBG AGEG||
+ DG~G2 DGBG|DGBG AGEG|DGGF GABc|d2BG ABGE|
+ AG~G2 AGBG|DGBG AGEG|DGGF GABc|dBAc BG~G2||
+ d2 (3Bcd edge|dGBG AGEG|d2 (3Bcd eg~g2|agbg ageg|
+ d2 (3Bcd edge|dGBG AGEG|d2 (3Bcd eg~g2|agab aged||`,
+			theSessionId: 605
+		};
