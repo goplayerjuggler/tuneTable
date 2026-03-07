@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dinkey's
 C:Francie Dearg O'Byrne
 R:reel
@@ -13,5 +13,5 @@ K:Amixo
  cdBc ABcd|egfg edBd|gfgd efed|c2B2 A2:|
  |:eg|aAAA aAbA|aAAA agef|gBBB gBaB|gBBB gfeg|
  aAAA aAbA|aAAA agef|gfgd efed|cdBc A2:|`,
-			theSessionId: 24
-		};
+	theSessionId: 24
+};

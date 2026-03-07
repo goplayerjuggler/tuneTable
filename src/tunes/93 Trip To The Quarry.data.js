@@ -1,6 +1,6 @@
 export default {
-			aka: "A Curious Denis Murphy Jig",
-			incipit: `X:1
+	aka: "A Curious Denis Murphy Jig",
+	incipit: `X:1
 T:Trip To The Quarry
 C:Thady Murphy
 S:Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle
@@ -12,7 +12,7 @@ M:12/8
 N:A Curious Denis Murphy Jig / The Belles of Liscarroll
 K:Amix
 |:B|Bcd efg aba age|~d3 dcd efg ecA|`,
-			theSessionId: 11868,
-			norbeckId: 491,
-			parts: "AABB"
-		};
+	theSessionId: 11868,
+	norbeckId: 491,
+	parts: "AABB"
+};

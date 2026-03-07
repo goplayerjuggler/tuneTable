@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Moving Cloud
 R: reel
 O:Ireland; Donegal.
@@ -25,11 +25,11 @@ K: Fmaj
 c2ac ccac acca ccac|d2bd bdbd bdbb dbbd|
 c2 (3ccc ccac cccd ccac|ccac bbag[1 fdcA cFA=B:|2 fdcA c[C2F2]F||
 `,
-			incipit: `X:1
+	incipit: `X:1
 M:4/2
 L: 1/16
 K: Fmaj
 CFAF DFAF CFAF DFAF|G2=BG dGBG`,
-			theSessionId: 1091,
-			theSessionSettingId: 32456
-		};
+	theSessionId: 1091,
+	theSessionSettingId: 32456
+};

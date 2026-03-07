@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Poppy Leaf
 R:hornpipe
 L:1/8
@@ -13,5 +13,5 @@ K:Gmajor
 G,B,DG B,DGB DGBd GBdg|edcB cDEF G2 B2 G2:|
 |:Bc|dBGB dBgd bagf edcB|cAFA cAfd agfe dcBA|
 (3BcB GB (3cdc Ac (3ded Bd e2 dc|BgdB dcAF G2 B2 G2:|`,
-			theSessionId: 1058
-		};
+	theSessionId: 1058
+};

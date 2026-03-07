@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Castle
 C:Sean Ryan
 R:jig
@@ -14,5 +14,5 @@ K:Adorian
 cBA BAG AGE DB,G,|A,2 E EDE DB,G, A,2 B:|
 |:cBA ~a3 bag edB|GBd ~g3 GBd cBA|
 cBc dcd ede gab|age dBG EFG A2 B:|`,
-			theSessionId: 273
-		};
+	theSessionId: 273
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Devanny's Goat
 C:Tommy Whelan
 R:reel
@@ -14,6 +14,6 @@ K:Dmajor
 "D"DFAB AFAB "G"defe dBAf|"D"efdB AFFG "A"AFEG "D"FDD:|
 |:e|"D"faab afdf "G"aafd edBd|"D"ABde fddd "A"edfd edBd|
 "D"ABde fddd "G"edfd edBd|"D"ABdB AFFG "A"AFEG "D"FDD:|`,
-			theSessionId: 2881,
-			theSessionSettingId: 47359
-		};
+	theSessionId: 2881,
+	theSessionSettingId: 47359
+};

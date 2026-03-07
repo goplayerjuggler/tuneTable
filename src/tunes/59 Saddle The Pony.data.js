@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Saddle The Pony
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ K:Gmajor
 GBA G2B def gfg|efe dBA BGG G2:|
 |:d|efe edB def gfg|efe edB dBA ABd|
 efe edB def gfg|efe dBA BGG G2:|`,
-			theSessionId: 307
-		};
+	theSessionId: 307
+};

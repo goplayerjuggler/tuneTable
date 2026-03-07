@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dr. Gilbert's
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ gf|:eBBA A~B3|dBAc BAGF|EDB,D G2 FG|EDB,E DB,A,G,|
  B,E (3EEE EDB,D|GE (3EEE EFGA|(3Bcd ed Bdgb|afdf efgf:|
  |:e~B3 g~B3|defg afdf|(3ggg bg fgaf|egfd e~B3|
  afdf edB^c|dBAF FEDF|EAcA Bdgb|afdf efgf:|`,
-			theSessionId: 129
-		};
+	theSessionId: 129
+};

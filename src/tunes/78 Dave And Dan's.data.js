@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dave And Dan's
 C:Tommy Peoples
 R:jig
@@ -22,6 +22,6 @@ K:Cmajor
 |:E3 FGA|G3 G,CD|E3 cGE|DCC CA,G,|E3 FGA|G3 EGB|c2c B/c/dB|ced c3:|
  |:g3 ege|c3 ceg|a3 faf|Acf afd|g3 ege|c3 agf|gfe fed|ced c3:|
  |:ecf g2g|f/g/af gec|f/g/af e/f/ge|dcA G2E|F3 Acf|a3 gfe|fed edc|B/c/dB c3:|`,
-			theSessionId: 21254,
-			theSessionSettingId: 42412
-		};
+	theSessionId: 21254,
+	theSessionSettingId: 42412
+};

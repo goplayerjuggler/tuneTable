@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			abc: [
-				`X:1
+	groups: "su",
+	abc: [
+		`X:1
 T:Joan Martin's
 R:polka
 L:1/8
@@ -15,12 +15,12 @@ K:Gmajor
 GB- BG FA AB|c/B/A FA G2 G:|
 |:B/c/|dg ga bg gf/e/|dg- gb ab/a/ g/f/e|
 dg- ga bg ge|dB c/B/A G2- G:|`
-			],
-			references: [
-				{
-					notes: "Nb 1 / 2nd polka set"
-				}
-			],
-			theSessionId: 11600,
-			theSessionSettingId: 21930
-		};
+	],
+	references: [
+		{
+			notes: "Nb 1 / 2nd polka set"
+		}
+	],
+	theSessionId: 11600,
+	theSessionSettingId: 21930
+};

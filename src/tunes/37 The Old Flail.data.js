@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Old Flail
 C:Vincent Broderick
 R:jig
@@ -14,7 +14,7 @@ K:Gmajor
 DEG GAB Bdg gab|age ege dBG A3:|
 ~a3 aga ega ega|deg ged ged BAG|
 DEG GAB Bdg gab|age ege dBG A3:|`,
-			parts: "AABB",
-			theSessionId: 839,
-			norbeckId: 320
-		};
+	parts: "AABB",
+	theSessionId: 839,
+	norbeckId: 320
+};

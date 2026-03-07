@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Belltable
 C:Maurice Lennon; Kieran Hanrahan
 R:waltz
@@ -17,5 +17,5 @@ K:Dmajor
  g3 a g2|g2 f2 g2|a3 b a2|a2 f2 g2|
  a3 b a2|a4 g2|f3 g f2|f2 e2 d2|
  B4 g2|f a3 c2|e d3 c2|1 d3 A df:|2 d6||`,
-			theSessionId: 5067
-		};
+	theSessionId: 5067
+};

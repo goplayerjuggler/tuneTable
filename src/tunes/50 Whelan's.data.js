@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Whelan's
 R:jig
 L:1/8
@@ -13,6 +13,6 @@ K:Edorian
 ~E3 BAF FEB AFA|B/c/dB BAF dAF FED:|
 |:BAB ~e3 fed e2d|BAB g2e fdB AFA|
 ~B3 ede fed e2 f|gbg faf edB AFA:|`,
-			theSessionId: 1447,
-			parts: "AABB"
-		};
+	theSessionId: 1447,
+	parts: "AABB"
+};

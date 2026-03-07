@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Drunken Landlady
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ K:Edorian
  BE~E2 BAFA|BE~E2 BAFA|A2Bc dfec|dBAF E4:|
  |:Beed e2de|f2df efdB|ABAF D2FD|FA~A2 BAFA|
  Beed e2de|f2df efdB|A2Bc dfec|dBAF E4:|`,
-			theSessionId: 363
-		};
+	theSessionId: 363
+};

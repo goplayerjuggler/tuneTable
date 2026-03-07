@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Stage
 C:James Hill
 R:hornpipe
@@ -13,6 +13,6 @@ K:Gmajor
  G,B,DG cBcd|edef ga (3gfe|d<b c<a B<g A<f|1 ecAF G3A:|2 ecAF G2 (3def||
  |:ga (3gfe dgbd|ceac Bdg2|dBG2 (3gfg ag|fgef defd|
  ga (3gfe dgbd|ceac Bdg2|(3gag (3fgf egfg|1 ecAF G2 (3def:|2 ecAF G4||`,
-			theSessionId: 1249,
-			contourShift: 0
-		};
+	theSessionId: 1249,
+	contourShift: 0
+};

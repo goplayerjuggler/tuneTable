@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Mullingar Races
 R:reel
 L:1/16
@@ -13,5 +13,5 @@ A,2|D2(FD) EA,A,E DEFA Bcde|(3(fga) ec dcdA (3BcdAF EGFE|
 DEFD EA,A,E DEFG Bcde|(3(fga) ec dBAG FGEF D2||
 (3(ABc)|d2(fd) adfb afdf edBc|d2(fd) adfd Beed egfe|
 d2(fd) adfb afdf edBc|dgfe dBAG FGEF D2||`,
-			theSessionId: 225
-		};
+	theSessionId: 225
+};

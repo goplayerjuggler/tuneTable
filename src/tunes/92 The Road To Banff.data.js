@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Road To Banff
 C:Malcolm Reavell
 R:jig
@@ -14,6 +14,6 @@ K:Dmajor
 Add dcd BAG A3|AdA eAf gec d2:|
 |:g|a2a fdA g2g ecB|AdA eAf g2g efg|
 a2a fdA g2g ecB|AdA eAf gecd2:|`,
-			parts: "AABB",
-			theSessionId: 4435
-		};
+	parts: "AABB",
+	theSessionId: 4435
+};

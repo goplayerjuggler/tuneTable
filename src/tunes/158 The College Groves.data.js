@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The College Groves
 R:reel
 L:1/8
@@ -16,5 +16,5 @@ D2 (3FED ADFD|E2=cE dEcE|(3DDD FA dfed|cAGE {F}EDCE|
  fa{b}ag fddf|efgf e=cc2|dfeg (3fga gb|afge fdd2||
  f2df f2df|~e2=ce ~e2ce|f2df f2ed|cAGE {F}EDD2|
  f2df f2df|~e2=ce ~e2ce|dfeg (3fga gb|afge fdd2||`,
-			theSessionId: 1272
-		};
+	theSessionId: 1272
+};

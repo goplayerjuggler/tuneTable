@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Cliffs Of Moher
 R:jig
 L:1/8
@@ -15,5 +15,5 @@ e2e dBA e2e dBA|GAB dBA GAB dBd|
 e2e dBA e2e dBA|GAB dBA EFG A3|
 efe dBA efe dBA|GAB dBA GAB dBd|
 efe ded cec BeB|GAB dBA EFG A3|`,
-			theSessionId: 12
-		};
+	theSessionId: 12
+};

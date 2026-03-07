@@ -1,8 +1,8 @@
 export default {
-			groups: "ALORA,su",
-			origin: "Ireland",
-			rhythm: "slip jig",
-			abc: `%240620, 21, 27, 240718, 260209, 260223
+	groups: "ALORA,su",
+	origin: "Ireland",
+	rhythm: "slip jig",
+	abc: `%240620, 21, 27, 240718, 260209, 260223
 X: 1
 T: Kid On The Mountain
 N: 1. I attempt here to write the notes more or less as played by Michael Coleman on the It Was Mighty! album.
@@ -27,26 +27,26 @@ K: E minor
 |:[P:D]"Em"eBB e2f gfg eBB efg "Bm7"afd|"Em"eBB e2f g2a bag "D"fag fed:|
 |:[P:E]"Em"edB "D"dBA "G"G2A Bee "Bm7"dBA BGE|"G"edB "D"dBA "G"G2A BAG "D"FAG FED:|
 |:[P:F]"Em"B,EE ABG "Bm7"E2D "Em"B,EE EFG "Bm7"AFD | "Em"B,EE ABG E2B BAG "D"FAG FED :|`,
-			incipit: `
+	incipit: `
 X: 1
 M: 18/8
 L: 1/8
 K: E minor
 E3 FEF G2F E3 BcA BGD|E3 FEF G2A`,
-			parts: "AABBCCDDEEFF",
-			references: [
-				{
-					artists: "Michael Gorman",
-					url: "https://music.youtube.com/watch?v=Ftm1147osmo"
-				},
-				{
-					artists: "Andy McGann",
-					url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
-					notes:
-						"1. Another six-part version; the sixth part is different to the M. Gorman one. 2. Played like a “normal” slip jig; I would write this one down in 9/8, not in 18/8"
-				}
-			],
-			theSessionId: 52,
-			norbeckId: 31,
-			itiId: 1023
-		};
+	parts: "AABBCCDDEEFF",
+	references: [
+		{
+			artists: "Michael Gorman",
+			url: "https://music.youtube.com/watch?v=Ftm1147osmo"
+		},
+		{
+			artists: "Andy McGann",
+			url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
+			notes:
+				"1. Another six-part version; the sixth part is different to the M. Gorman one. 2. Played like a “normal” slip jig; I would write this one down in 9/8, not in 18/8"
+		}
+	],
+	theSessionId: 52,
+	norbeckId: 31,
+	itiId: 1023
+};

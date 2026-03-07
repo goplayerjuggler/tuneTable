@@ -1,5 +1,5 @@
 export default {
-			incipit: `
+	incipit: `
 X: 1
 T: Paddy Kelly's
 T: The Daisy Field
@@ -10,7 +10,7 @@ M: 4/4
 L: 1/16
 K: Gmaj
 dG~G2 dGBd c=F~F2 cFAc|dGGe D3c BdcA GABc|`,
-			parts: "AABB",
-			norbeckId: 884,
-			theSessionId: 2125
-		};
+	parts: "AABB",
+	norbeckId: 884,
+	theSessionId: 2125
+};

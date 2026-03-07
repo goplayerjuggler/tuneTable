@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Sweeney's Buttermilk
 C:Brendan McGlinchey
 R:reel
@@ -15,5 +15,5 @@ K:Bminor
   f3a  fecf ecc2 BAFE|FBB2 ABce afec B2BA:|
 |:FBdc BFF2 EAcB AE E2|FBdB cefb afec d3c|
   Bcde fBB2 afec ABce|f2bf afea afec B2BA:|`,
-			theSessionId: 556
-		};
+	theSessionId: 556
+};

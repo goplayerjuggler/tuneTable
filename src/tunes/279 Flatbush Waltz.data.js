@@ -1,6 +1,6 @@
 export default {
-			groups: "alora",
-			abc: `
+	groups: "alora",
+	abc: `
 X:1
 T:Flatbush Waltz
 C:Andy Statman
@@ -18,14 +18,14 @@ B2 Be BA|GF EF GA|B2Be BG|A3c BA|EF GA BG|AE Ac BA|G2GA =FG|E6|
  B2 Be BA|GF EF GA|B2Be BG|A3c BA|GA Bc dB|AE Ac BA|G2GA =FG|E6|
  g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 e2 ef|g3 f ga|f6|
  g4 fe|f2 B2 B2|e2 d2c2|B6|c4 BA|B2 G2 EF|G2 GA =FG|E6||`,
-			tags: ["klezmer"],
-			theSessionId: 3809,
-			references: [
-				{
-					url: "https://youtu.be/muwdHjcAhNA",
-					artists:
-						"Andy Statman, mandolin; others (see [discogs](https://www.discogs.com/release/33879498-Andy-Statman-Flatbush-Waltz))",
-					notes: "Eponymous album (1980)"
-				}
-			]
-		};
+	tags: ["klezmer"],
+	theSessionId: 3809,
+	references: [
+		{
+			url: "https://youtu.be/muwdHjcAhNA",
+			artists:
+				"Andy Statman, mandolin; others (see [discogs](https://www.discogs.com/release/33879498-Andy-Statman-Flatbush-Waltz))",
+			notes: "Eponymous album (1980)"
+		}
+	]
+};

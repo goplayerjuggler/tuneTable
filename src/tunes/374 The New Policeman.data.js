@@ -1,6 +1,6 @@
 export default {
-			parts: "AABBCC",
-			abc: `
+	parts: "AABBCC",
+	abc: `
 X: 1
 T:The New Policeman
 S: Oisin McAuley
@@ -18,4 +18,4 @@ B=c | dBG B,DG Bd/d/d d^cd | e^cA A,^CE Ace gfe | dBG B,DG Bd/d/d dcB | Ace a2g 
 [P:B]ef | gea fdg ece dBG | GBd gfe dBG GBd | gea fdg ece dcB | Ace ^ga=g fd^c d
 ef | gea fdf ece dBG | GBd fg/f/g dBG GBd | g3 fed e/f/ge dcB | Ace ^ga=g fd^c d
 [P:C]|: ^c=c | Bc^c dbf agd fe_e | dbf agd g/f/ed bge | dbf aed ~B3 gdB | Ace a2g fd^c d :|`
-		};
+};

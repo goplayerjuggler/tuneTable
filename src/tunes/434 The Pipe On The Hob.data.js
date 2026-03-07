@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Pipe On The Hob
 R:jig
 L:1/8
@@ -15,5 +15,5 @@ g2g gea age dBA|ABA g2e aba gef|
 g3 gea age deg|age dBe ABA A3:|
 c2c d2d edc AGE|c3 d2d edc A2B|
 cBc dcd ede gab|age dBe ABA A3:|`,
-			theSessionId: 81
-		};
+	theSessionId: 81
+};

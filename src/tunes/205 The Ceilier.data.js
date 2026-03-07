@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Ceilier
 C:Ed Reavy
 R:reel
@@ -13,5 +13,5 @@ Bc|:dGBd c=FAc|BGBd gfdc|Bcde =fdeg|fdBd c=FAc|
  BGGF GABc|dGBd c2 Bc|dgfa gbag|1 fdcA GABc:|2 fdcA G2 Bc||
  dggf g2 gf|dgBg dcBc|de=fe f2 fe|d=fcf dcBc|
  dggf gfga|bgaf gfde|=f2 fe fdeg|1 fdcA GABc:|2 fdcA G4||`,
-			theSessionId: 4525
-		};
+	theSessionId: 4525
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Bird In The Bush
 R:reel
 L:1/16
@@ -13,5 +13,5 @@ K:Gmajor
 d2eB dB~B2 dBAB ~G2GE|DEGA B2eB dBAd BG~G2:|
 |:Bdef g2fg afdf gfed|Bdef g~g2b agab g~g2a|
 bg~g2 agef ~g2fe dBGE|DEGA B2eB dBAd BG~G2:|`,
-			theSessionId: 629
-		};
+	theSessionId: 629
+};

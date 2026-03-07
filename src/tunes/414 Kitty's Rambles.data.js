@@ -1,11 +1,11 @@
 export default {
-			incipit: `X: 1
+	incipit: `X: 1
 M: 12/8
 L: 1/8
 K: D mixo
 FED c2A d^cd efg | fed cAG FAF GFE |`,
-			parts: "AABBCC",
-			abc: `X: 1
+	parts: "AABBCC",
+	abc: `X: 1
 T: Kitty's Rambles
 S: Leo Rowsome, uilleann pipes
 F:https://www.itma.ie/playlists/leo-rowsome/?track=1
@@ -33,5 +33,5 @@ df/g/a df/g/a df/g/a afd | ceg ceg ceg gfe |
 ~D3 cBA d^cd efg | afd ^cAF GFE AFD | 
 ~D3 cBA d^cd efg | fed ^cAG ABc dAF| 
 "^The rest is omitted"y `,
-			norbeckId: 300
-		};
+	norbeckId: 300
+};

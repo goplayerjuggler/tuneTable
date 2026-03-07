@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Trotting To Larne
 C:John T. Blair
 R:slip jig
@@ -13,5 +13,5 @@ K:Amajor
  E2 c E2 c cBA|F2 d F2 d dcB|G2 B E2 e fed|1 cec BAG AGF:|2 cec BAG Aag||
  |:~f3 edc ~e3|efe edc eag|~f3 fed e2 c|dcB BcA GFE|
  EAc A2 E A2 =G|FAd A2 F ABA|GBe d2 B fed|1 cec BAG Aag:|2 cec BAG A3||`,
-			theSessionId: 3511
-		};
+	theSessionId: 3511
+};

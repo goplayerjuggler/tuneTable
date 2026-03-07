@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Kitty Hayes'
 R:hornpipe
 L:1/8
@@ -23,7 +23,7 @@ K:Eminor
  BEED E2DE|GABG AAGA|B2BA GEDE|G2GF G2GA:|
  |:BABd e2eg|fedf edBA|BA (3Bcd e2eg|fe (3def e2ed|
  edBA d2ed|BAGA BAGE|B2BA GEDE|G2GF G2GA:|`,
-			parts: "AABB",
-			theSessionId: 21525,
-			theSessionSettingId: 43012
-		};
+	parts: "AABB",
+	theSessionId: 21525,
+	theSessionSettingId: 43012
+};

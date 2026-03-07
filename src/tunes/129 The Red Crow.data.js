@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Red Crow
 C:Mairéad Ní Mhaonaigh
 R:reel
@@ -17,5 +17,5 @@ A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
 (3AAA eA ceAc eAcb ageg|age^c d=fed (3cBA BG A2AG|
 A2eA ceAc eAce dcBA|(3GGG dc BdGB dGBd edcB|
 (3AAA aA gAfA (3AAA cA BAGB|(3cBA BG AGED ECDB, CA,B,G,||`,
-			theSessionId: 184
-		};
+	theSessionId: 184
+};

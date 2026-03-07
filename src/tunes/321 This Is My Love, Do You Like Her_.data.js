@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			incipit: `X:1
+	groups: "su",
+	parts: "AABB",
+	incipit: `X:1
 T:This Is My Love, Do You Like Her?
 S:Denis Doody
 D:Kerry Music [1978 LP]
@@ -12,6 +12,6 @@ M:12/8
 K:Adorian
 B|A2A AGE c2B c2d|ege edB ~g3 g2`,
 
-			theSessionId: 6,
-			theSessionSettingId: 31114
-		};
+	theSessionId: 6,
+	theSessionSettingId: 31114
+};

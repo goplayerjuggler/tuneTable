@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Pointe Au Pic
 R:reel
 L:1/8
@@ -16,5 +16,5 @@ geg|:decd BcAB|GG G3 geg|decd BcAc|BB B3 geg|
  {DEF}G3 {G}A BGBd|gg g3 GBd|gg g3 GBd|g^fga g=fed|
  A3 {A}B cBcd|eaae aAaa|eaae aAaa|eaae a2 b2|
  c'4 c'2 ef|g^fga gecd|egec dedB|1 c6 B2:|2 c2 z2 [c4E4]||`,
-			theSessionId: 6183
-		};
+	theSessionId: 6183
+};

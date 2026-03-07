@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Kringelleken
 Z:Malcolm Schonfield%230427,250325,251025
 N:On the recording, it’s played “ABABA2BC”
@@ -18,4 +18,4 @@ P:ABABA2BC
 a>g bf af/e/ | f>a f2 df | eg fe de |[1 cd d3f :| [2 c<d d3"<("">)"A !D.C.! |]
 [P:C (la dernière fois)]|: d2 ce d2 | eg fe d2 | eg fa/f/ [1 dd | ed BG A2 :| [2 de | cd !fermata!d4 |]
 `
-		};
+};

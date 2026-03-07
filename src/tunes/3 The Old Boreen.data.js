@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Old Boreen
 C:Vincent Broderick
 R:barndance
@@ -20,6 +20,6 @@ D|:G3A B3A|GAGE D3E|GABd edgd|eege edBA|
  G3A B3A|GAGE D3E|GABd edBG|1 ~A2G2 G2BA:|2 ~A2G2 GABc||
  d3e dBGB|d^cde dBGB|A3B AGEG|AGAB AGED|
  d3e dBGB|d^cde dBGD|GABd edBG|1 ~A2G2 GABc:|2 ~A2G2 G3D||`,
-			theSessionId: 16299,
-			theSessionSettingId: 30857
-		};
+	theSessionId: 16299,
+	theSessionSettingId: 30857
+};

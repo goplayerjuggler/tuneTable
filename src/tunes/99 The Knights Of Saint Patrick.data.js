@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Knights Of Saint Patrick
 R:jig
 L:1/8
@@ -14,5 +14,5 @@ K:Dmajor
  "D"aga fdf|aba afg|afd "Em"bge|"A"edc "D"d2f|
  "D"aga fdf|aba agf|"A"g3 gec|Ace gfe|
  "D"d3 "Em"ede|"F#m"fef "G"gfg|"D"afd "Em"bge|"D"dAF D2 "(A)"A||`,
-			theSessionId: 1822
-		};
+	theSessionId: 1822
+};

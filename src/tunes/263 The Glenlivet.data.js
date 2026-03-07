@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Glenlivet
 C:James Scott Skinner
 R:strathspey
@@ -13,5 +13,5 @@ A,>CE>C D>FA>F|E>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]|
  A,>CE>C D>FA>F|E>A .d/.c/.B/.A/ B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]||
  {g}a>A c<f e>Ac>A|E>Ac>A B<B, B,>g|{g}a>A c<f e>Ac>A|E>A B<e c<A A>g|
  {g}a>A c<f e<c {g}a>A|e>Ac>A B<B, B,>C|A,>CE>C D>FA>F|E>A B<e c<A [A,2A2]||`,
-			theSessionId: 11206
-		};
+	theSessionId: 11206
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Sonny's Delight
 C:Nora Hurley
 R:reel
@@ -18,6 +18,6 @@ C2DB,C2DF|GFGAB4-|BcBA F2BA|FDB,C DCCB,|
  C2DB,C2DF|GFGAB4-|BcBA F2BA|FDCDB,4||
  |:Gccc B3c|dcBG cAGF|GccB c2Bc|dcBG c3e|
  dGBG cAGA|BcBA FDB,C|DFFF GABG|FDCD B,4:|`,
-			theSessionId: 20851,
-			theSessionSettingId: 41404
-		};
+	theSessionId: 20851,
+	theSessionSettingId: 41404
+};

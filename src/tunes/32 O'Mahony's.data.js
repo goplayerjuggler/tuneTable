@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:O'Mahony's
 R:hornpipe
 L:1/8
@@ -19,6 +19,6 @@ K:Dmajor
 AFEF (3DDD DE FDFA d2 de|fedB AFEF D2 DE D2:|
 |:dB|ABde f2 ef gfed e2 de|f2 fe dBAF FEED E2 dB|
 AFEF (3DDD DE FDFA d2 de|fedB AFEF D2 DE D2:|`,
-			parts: "AABB",
-			theSessionId: 2488
-		};
+	parts: "AABB",
+	theSessionId: 2488
+};

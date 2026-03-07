@@ -1,6 +1,6 @@
 export default {
-			groups: "alora",
-			abc: `X:1
+	groups: "alora",
+	abc: `X:1
 T:Daly's Mill
 C:John Walsh
 R:polka
@@ -14,5 +14,5 @@ K:Amajor
  Ac ef|ec c/d/c/B/|AF FE|A3:|
  |:d/e/|fe cB|AF FE|A>A Ac|e2 ed/e/|
  fe cB|AF FE|A>A AF|A3:|`,
-			theSessionId: 8918
-		};
+	theSessionId: 8918
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Road To Monalea
 C:Colm O'Donnell
 R:reel
@@ -14,5 +14,5 @@ K:Ddorian
 dcAc d3e dcAG EGD2|EGAG cded cAGE EDD2:|
 |:dcAc d2cd eaag egd2|gede c3d egag ged2|
 dcAc d2cd eaag egd2|cG~G2 cded cAGE D4:|`,
-			theSessionId: 2878
-		};
+	theSessionId: 2878
+};

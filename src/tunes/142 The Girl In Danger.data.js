@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Girl In Danger
 R:reel
 L:1/16
@@ -12,5 +12,5 @@ K:Adorian
 [M:5/4]EAAB cABd cABA G2GF GAGD | [M:4/4]EAAB cABd cABG [1 EAAG :| [K:A mixo] [2 ABcd ||
  |: eeec d2cd efec d2cd|[1 eeec dfed cABG A2cd:| [2 eage dged [K:Ador] cABd cABG||
  `,
-			theSessionId: 2120
-		};
+	theSessionId: 2120
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Miss Grant Of Grant
 C:Daniel Dow
 R:reel
@@ -15,6 +15,6 @@ K:Fmajor
 B|:AFFCF2Ac|dfcf AGGB|AFFC DEFd|cAfc AFFB:|
  Acfc Afcf|dfcf AGGB|Acfc Afcf|egce fFFB|
  Acfc Afcf|dfcA GABd|cAFB AFAc|defg aff||`,
-			theSessionId: 18630,
-			theSessionSettingId: 36343
-		};
+	theSessionId: 18630,
+	theSessionSettingId: 36343
+};

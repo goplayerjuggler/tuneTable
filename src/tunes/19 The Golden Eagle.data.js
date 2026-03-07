@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Golden Eagle
 R:hornpipe
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  GB,DG BdGB|dGBd gbag|fed^c =cAFD|(3GGG GF G2:|
  |:(3bbb|bB^df bagf|e^def gfg^g|aA^ce agfe|e=dd^c d2ab|
  c'afd ^cdef|gfga bgag|fed^c =cAFD|(3GGG GF G2:|`,
-			theSessionId: 974
-		};
+	theSessionId: 974
+};

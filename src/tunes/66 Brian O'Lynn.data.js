@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Brian O'Lynn
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ B|:cAd cAG EDE GAB|cBc BAG EAA ~A2B|
 cAd cAG EDE GAB|cde =fed[1 cAA A2B:|2 cAA A2f||
 gea ged cAB cde|eaa age ed^c def|
 geg fed cAB cde|=fed cAG[1 EAA A2f:|2 EAA A2||`,
-			theSessionId: 830
-		};
+	theSessionId: 830
+};

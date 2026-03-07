@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Whistler At The Wake
 C:Vincent Broderick
 R:jig
@@ -13,5 +13,5 @@ K:Dmajor
  F2A AFA|Bdd efg|fed ~B3|AFD D2:|
  |:e|fed BdB|AFE EDF|AFB AFB|AFB AFA|
  fed BdB|AFE E2e|fed BdB|AFD D2:|`,
-			theSessionId: 4236
-		};
+	theSessionId: 4236
+};

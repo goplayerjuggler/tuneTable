@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:D​ú​laman Na Binne B​ú​idhe
 T:as played by Néillidh Boyle
 N:
@@ -22,5 +22,5 @@ K:G
 GAB"^(*)"G cGBG GABc dB"^(*)"g2 | "^(**)"GABG cGBG AGAB c2BA :|
 |: BcdB gBdg Bgdf g2G2 | Bgdf ggdB AGAB c2BA :|
 yy"^(*) variation "GAB"<["">]"d cGBG GABc dB"<["g">]"G yy||yy "^(**) variation"GGBG dBGB yy`,
-			parts: "AABB"
-		};
+	parts: "AABB"
+};

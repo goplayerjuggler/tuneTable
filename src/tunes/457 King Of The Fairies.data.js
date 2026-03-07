@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:King Of The Fairies
 R:hornpipe
 L:1/8
@@ -15,5 +15,5 @@ EDEF GFGA BAGB d3c|B2E2 GFE_E =E6:|
 e2B2 Bdef gagf efed|Bdeg fedf e6 ef|
 g3e f3d edBc d3e|dBAF GABc dBAF GFED|
 B,2E2 EFGA B2e2 edef|e2B2 BAGF E6:|`,
-			theSessionId: 475
-		};
+	theSessionId: 475
+};

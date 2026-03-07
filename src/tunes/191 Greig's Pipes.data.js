@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Greig's Pipes
 R:reel
 L:1/8
@@ -14,5 +14,5 @@ K:Gmajor
  AG~G2 AGBG|DGBG AGEG|DGGF GABc|dBAc BG~G2||
  d2 (3Bcd edge|dGBG AGEG|d2 (3Bcd eg~g2|agbg ageg|
  d2 (3Bcd edge|dGBG AGEG|d2 (3Bcd eg~g2|agab aged||`,
-			theSessionId: 605
-		};
+	theSessionId: 605
+};

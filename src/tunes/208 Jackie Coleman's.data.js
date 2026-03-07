@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Jackie Coleman's
 C:Jackie Coleman
 R:reel
@@ -13,5 +13,5 @@ K:Dmajor
  AFFF EFDE|F2 AF BFAF|E2 BE dEBE|ABde fd d2:|
  |:fddc dfag|fddc dfaf|eA A2 eAfA|eA A2 efge|
  fddc dfag|fddc dfaf|g2 gf gbag|faeg fd d2:|`,
-			theSessionId: 50
-		};
+	theSessionId: 50
+};

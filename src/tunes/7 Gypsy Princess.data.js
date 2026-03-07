@@ -1,8 +1,8 @@
 export default {
-			groups: "ALORA",
-			parts: "AABB",
-			norbeckId: 14,
-			abc: `
+	groups: "ALORA",
+	parts: "AABB",
+	norbeckId: 14,
+	abc: `
 %251029
 X: 2
 T: Gypsy Princess
@@ -22,4 +22,4 @@ K: A
 |:"A"e2-ee .e2 e2 BccB ABce|"D"f2-ff .f2 f2 "A"BccB ABcd|
 e2-ee .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [1 A2 Ac:| [2 A2 AB||
 `
-		};
+};

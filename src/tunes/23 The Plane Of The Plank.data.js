@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Plane Of The Plank
 C:Liz Carroll
 R:hornpipe
@@ -13,5 +13,5 @@ K:Gmajor
  BGBd g2fg|eceg f2ga|bgdB cGEG|(3FED BA G2:|
  |:(3ABc|d2d^c dAFA|BAGF G2AB|c2cd edcB|Adfg a2fa|
  g2dg e2ce|d2Bd cece|dcAG FDBA|G2 (3FGA G2:|`,
-			theSessionId: 9800
-		};
+	theSessionId: 9800
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Cotillon De Baie-Ste-Catherine
 O:Quebec
 R:reel
@@ -21,7 +21,7 @@ N:(edited after importing)
 K:Gmajor
 |:B2BB EBGB dedB cdcB|1,3 AGFG A2FA dedc BAGA:|2 AGFG A2FA d2F2 G2z2:|
  [4 [M: 5/4] AGFG A2FA d2F2 G2Bc dcBc|:d2g2 d2g2 d2g2 D2AB cBAB|1,2 c2a2 c2a2 a2a2 D2Bc dcBc:|3 [M: 4/4] c2a2 g2f2 g2g2 g2!D.C.!z2||`,
-			tags: "crooked",
-			theSessionId: 23211,
-			theSessionSettingId: 47315
-		};
+	tags: "crooked",
+	theSessionId: 23211,
+	theSessionSettingId: 47315
+};

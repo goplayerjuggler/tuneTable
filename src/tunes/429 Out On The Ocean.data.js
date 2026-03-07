@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Out On The Ocean
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ K:Gmajor
 D2B BAG BdB A2B|GED G2A BGE G:|
 Bd|e2e edB ege edB|d2B def gfe dBA|
 G2A B2d ege d2B|AGE G2A BGE G:|`,
-			theSessionId: 108
-		};
+	theSessionId: 108
+};

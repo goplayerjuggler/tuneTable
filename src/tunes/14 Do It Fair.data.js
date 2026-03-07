@@ -1,6 +1,6 @@
 export default {
-			groups: "ALORA",
-			abc: `
+	groups: "ALORA",
+	abc: `
 % 2024-08-22, 2024-08-25, 2024-11-08, 2025-09-29, 251029
 X: 1
 T: Do It Fair
@@ -27,6 +27,6 @@ P:Ⅱ
 "D"~f2fd "Bm"fa | "Em"be2d (c/B/A) | "D"f2fd "A"fa |"D"Ad2A (F/E/D)|
 "D"~f2fd "Bm"fa | "G"be2d (c/B/A) | "D"(f/g/f) "(A)"(e/f/e) "Bm"d2 |"D"Ad2A (F/E/D)!D.C.!|]
 `,
-			theSessionId: 268,
-			theSessionSettingId: 52517
-		};
+	theSessionId: 268,
+	theSessionSettingId: 52517
+};

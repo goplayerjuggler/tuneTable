@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Rights Of Man
 R:hornpipe
 L:1/8
@@ -13,5 +13,5 @@ K:Eminor
 BcAB GAFG EFGA B2ef|gfed Bgfg e2 E2 E2:|
 |:ga|babg efga babg egfe|d^cde fefg afdf a2gf|
 edef gfga bgaf gfef|gfed Bgfg e2 E2 E2:|`,
-			theSessionId: 83
-		};
+	theSessionId: 83
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Arthur Darley's
 C:Arthur Darley
 R:jig
@@ -17,6 +17,6 @@ K:D
  A=ff fef A=ff f2g|=fed ed^c d2d d2e:|
  |:fgf edc dAA BAD|FED EDC DEF CDE|
  Ddd Aee Aff Agg|fed edc d2d d3:|`,
-			theSessionId: 417,
-			tags: "crooked"
-		};
+	theSessionId: 417,
+	tags: "crooked"
+};

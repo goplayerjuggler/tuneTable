@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Bunch Of Keys
 R:reel
 L:1/16
@@ -13,13 +13,13 @@ K:Gdorian
 DGGF G2Ac BGGA Bcde|~f3d cAFA[1 ABAF DGGF:|2 BGAF DGGA||
 |:dgg^f fgdg (3ggg dg agfd|cffe efcf (3fff ag fAcf|
 dgg^f fgdg (3ggg dg agfd|c~f3 cAFA[1 BGAF DGGA:|2 BGAF DGGF||`,
-			references: [
-				{
-					artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
-					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=9",
-					notes: `(78 rpm) The mountain top; Lord Wellington’s [The bunch of keys]
+	references: [
+		{
+			artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
+			url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=9",
+			notes: `(78 rpm) The mountain top; Lord Wellington’s [The bunch of keys]
 Gardiner, John Joe, 1893-1979`
-				}
-			],
-			theSessionId: 344
-		};
+		}
+	],
+	theSessionId: 344
+};

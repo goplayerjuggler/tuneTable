@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Captain Bing
 R:polka
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  g>f gd|BGGA/B/|c/B/A dF|G2 G>d:|
  BG dG|BG GA/B/|c/B/A eA|cAA>c|
  BG dG|BG GA/B/|c/B/A dF|G2GA:|`,
-			theSessionId: 8624
-		};
+	theSessionId: 8624
+};

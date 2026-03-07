@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Waiting For A Call
 C:Tommy Peoples
 R:reel
@@ -15,5 +15,5 @@ K:Edorian
  g2 (3(fga) gedB|(3(EFG) BG AFDF|EFGB {c}d2 (B/c/d)|1 DFAF GEE:|2 DFAF GEE z||
  |:B2 ef gbef|dfaf dfbf|g3 a (3(bag) gf|gefd Beeg|
  bg (3(efg) fedA|(3(Bcd) fe dBAF|EFGB {c}d2 (B/c/d)|DFAF GEE z:|`,
-			theSessionId: 3435
-		};
+	theSessionId: 3435
+};

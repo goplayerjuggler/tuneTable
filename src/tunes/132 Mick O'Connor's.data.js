@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Mick O'Connor's
 C:Mick O'Connor
 R:reel
@@ -14,5 +14,5 @@ K:Dmajor
 A,B,DE FDED B,EED EDB,E|A,B,DE FABc dBAG FDDD:|
 |:d2fd adfd edBd edBA|defa defa e2de fddc|
 d2fd adfd edBd edBA|faab afdf[1 gefd e4:|2 e2de fdd2||`,
-			theSessionId: 4198
-		};
+	theSessionId: 4198
+};

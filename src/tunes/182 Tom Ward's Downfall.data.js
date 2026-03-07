@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Tom Ward's Downfall
 R:reel
 L:1/8
@@ -16,5 +16,5 @@ K:Gmajor
  dgg2 bgag|eaab adga|bg~g2 agef|(3gfe dc BGGA||
  dgg2 abag|~e2ab adga|bg~g2 agef|(3gfe dc BGGA|
  dgg2 bgag|eaab adga|bg~g2 agef|(3gfe dc (3Bcd gd:|`,
-			theSessionId: 565
-		};
+	theSessionId: 565
+};

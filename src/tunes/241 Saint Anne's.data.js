@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Saint Anne's
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  fedf edcB|A2FA DAFA|BGed cABc|eddc d2 de:|
  |:f2fg fedc|Bggf g2gf|edcB ABce|baa^g abag|
  f2fg fedc|Bggf g2gf|edcB ABcd|eddc d2 de:|`,
-			theSessionId: 103
-		};
+	theSessionId: 103
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Branohm
 C:Máire Breatnach
 R:reel
@@ -15,5 +15,5 @@ a3 g|eA ~A2 cdec|degd BAGB|AEEE ABcd|egfa geag|
  eA ~A2 cdec|degd BAGB|AEEE cdec|d2gd BAAd|
  |:edef g2af|gedc Bcdg|eaag a3 a|aged ^cdef|geaf fgef|
  gedc BAGB|AEEE cdec|d2gd BAag:|`,
-			theSessionId: 504
-		};
+	theSessionId: 504
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Castle Kelly
 R:reel
 L:1/16
@@ -12,7 +12,7 @@ K:Aminor
 |:A2cA ABcA GcEG G2EG|A2cA ABcd ecdB cAA2:|
   agec dfed cAGE G2eg|agec d2cd eaag a2ba|
   gedc dfed cAGE|G2EG|A2cA ABcd ecdB cAA2|`,
-			theSessionId: 21,
-			parts: "AABB",
-			norbeckId: 118
-		};
+	theSessionId: 21,
+	parts: "AABB",
+	norbeckId: 118
+};

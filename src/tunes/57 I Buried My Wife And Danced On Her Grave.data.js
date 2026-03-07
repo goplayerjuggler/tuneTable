@@ -1,8 +1,8 @@
 export default {
-			groups: "ALORA",
-			norbeckId: 88,
-			parts: "AABB",
-			abc: `X: 1
+	groups: "ALORA",
+	norbeckId: 88,
+	parts: "AABB",
+	abc: `X: 1
 T: I Buried My Wife And Danced On Her Grave
 R: jig
 M: 12/8
@@ -22,4 +22,4 @@ P:Ⅱ
 |:"D"d2 e fed faf gfe| d2 e fed      "Asus4"dcA dcA|
 "D"d2 e fed   faf gfe|"G"dcA "A"BAG [1 "D"AFD DFA:|2 "D"AFD D3!D.C.!|]
 `
-		};
+};

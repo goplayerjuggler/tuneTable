@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Friendly Visit
 R:hornpipe
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  (3GFG DG BGBd|(3cBc AB cdef|gdBG FAdc|B2 G2 G2:|
  |:(3GBd|g2 dB GBdg|e2 cA FGAg|f2 ed cdeg|(3fgf (3efe dcBA|
  (3GFG DG BGBd|(3cBc AB cdef|gdBG FAdc|B2 G2 G2:|`,
-			theSessionId: 32
-		};
+	theSessionId: 32
+};

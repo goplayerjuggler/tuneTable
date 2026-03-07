@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			abc: [
-				`%abc-2.1
+	groups: "su",
+	abc: [
+		`%abc-2.1
 X: 1
 T:Toonagh Mazurka
 C:Eamonn Coyne
@@ -31,20 +31,20 @@ Dd fd ad | ba Bg g/g/g | fd AG FA || [P:Ⅱ]dA FE DD |
 P:Variations / embellishments
 "_(V1)"dA B/B/A ||"_(V2)"D/D/D || "_(V3)"Bd |]
 `
-			],
-			references: [
-				{
-					artists: "Éamonn Coyne, banjo; Kris Drever, guitar",
-					url: "https://www.youtube.com/watch?v=xGEHMm_zOgc",
-					notes: `mazurka / highland / guns of the magnificent seven (reel)
+	],
+	references: [
+		{
+			artists: "Éamonn Coyne, banjo; Kris Drever, guitar",
+			url: "https://www.youtube.com/watch?v=xGEHMm_zOgc",
+			notes: `mazurka / highland / guns of the magnificent seven (reel)
 live; 2012`
-				},
-				{
-					artists:
-						"Éamonn Coyne, banjo; Kris Drever, guitar; Megan Henderson, fiddle",
-					url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
-					notes: "EP"
-				}
-			],
-			tags: "crooked"
-		};
+		},
+		{
+			artists:
+				"Éamonn Coyne, banjo; Kris Drever, guitar; Megan Henderson, fiddle",
+			url: "https://www.youtube.com/watch?v=czy3XDPzOLU",
+			notes: "EP"
+		}
+	],
+	tags: "crooked"
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Wonder
 C:James Hill
 R:hornpipe
@@ -13,5 +13,5 @@ K:Gmajor
  GdBG FcAF|(3GFG BG D2GF|Eedc BAGF|A2G2 G2:|
  |:AG|FAd^c dBAG|FAd^c dfed|^cdef (3gfe ^ce|d^cde d2 =c2|
  BcBA ^GBe2|ABA=G FAd2|egfe (3ded (3cBA|GgdB G2:|`,
-			theSessionId: 337
-		};
+	theSessionId: 337
+};

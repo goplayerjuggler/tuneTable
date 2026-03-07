@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Maids Of Castlebar
 R:reel
 L:1/8
@@ -14,5 +14,5 @@ ABc||dD (3DDD EDB,E|DEFA BAFA|d2cd (3Bcd AF|DEFD EDB,D|
  FD (3DDD EDB,E|DEFA BAFA|dfec dBAG|FDEF D4|
  |:{^g}a2^ga fd (3ddd|fdad fddf|(3gfe be geef|(3gfe be geeg|
  ~f3a ~g3e|fdec dcBA|Bcde (3f^ga ec|dBAG FDD2:|`,
-			theSessionId: 1949
-		};
+	theSessionId: 1949
+};

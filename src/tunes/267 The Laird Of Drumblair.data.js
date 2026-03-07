@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Laird Of Drumblair
 C:James Scott Skinner
 R:strathspey
@@ -14,5 +14,5 @@ K:Amajor
  [2 (3GFE (3dcB A2 (3efg|:a2e>a c>aA>a|(3cBA e>A a>ec>e|b2f>b d>bB>f|
  (3dcB f>B b>fd>f|a2e>a c>aA>a|(3cBA e>A a>ec>e|(3def (3efg (3aed (3cBA|
  [1 (3GFE (3dcB A2 (3efg:|2 (3GFE (3dcB A2||`,
-			theSessionId: 170
-		};
+	theSessionId: 170
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dornoch Links
 C:John MacDonald
 R:march
@@ -13,5 +13,5 @@ K:Amajor
  eAAB c3 B|ABce a3 f|e3 f ecAc|B2 A2 A2:|
  |:ce|a3 a afea|f3 e faaf|e3 f ecAB|c2 B2 B2 ce|
  a3 a afea|fece faaf|e3 f ecAc|B2 A2 A2:|`,
-			theSessionId: 1649
-		};
+	theSessionId: 1649
+};

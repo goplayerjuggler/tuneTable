@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Wishing Well
 C:Tommy Peoples
 R:jig
@@ -16,6 +16,6 @@ DFA d2e fdB BAF|BAF dBA fac d2:|
 Adf ~a3 baf afd|b2a afd Ace d2:|
 |:e|fdd ceA d2g fdB|c2B ceA ~a3 bag|
 ~f2d ecA d2g fdA|FAD GBD Aec d2:|`,
-			theSessionId: 1642,
-			parts: "AABBCC"
-		};
+	theSessionId: 1642,
+	parts: "AABBCC"
+};

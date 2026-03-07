@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Molloy's Favourite
 C:Paddy Killoran
 R:reel
@@ -16,7 +16,7 @@ d2Ad fdAF GFEF GABc|d2Ad fdAF GAAG FDDd|
 dcde fdAF GFEF GABc|d2Ad fdAF GAAG FDD2|
 fggf gbag fggf gfeg|fggf gbag (3fga ea fddc|
 dfaf gbag fgaf gfeg|feec dcBA ^GABc dgfe||`,
-			theSessionId: 1941,
-			parts: "AABB",
-			norbeckId: 565
-		};
+	theSessionId: 1941,
+	parts: "AABB",
+	norbeckId: 565
+};

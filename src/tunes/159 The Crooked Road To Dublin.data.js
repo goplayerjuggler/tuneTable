@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Crooked Road To Dublin
 R:reel
 L:1/16
@@ -12,6 +12,6 @@ K:Gmajor
 |:G3G FGAF G2FG AdcA|G2AG FGAg[1 fdcA dBcA:|2 fdcA d2Bc||
 dg~g2 fgaf dg~g2 agfe|dg~g2 fgag fdcA d2Bc|
 dg~g2 fgaf dg~g2 a2ga|bgaf gbag fdcA d2cA||`,
-			theSessionId: 227,
-			theSessionSettingId: 12914
-		};
+	theSessionId: 227,
+	theSessionSettingId: 12914
+};

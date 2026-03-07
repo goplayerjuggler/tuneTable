@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			abc: `X:1
+	groups: "su",
+	abc: `X:1
 T:Wellington's Advance
 R:jig
 L:1/8
@@ -18,7 +18,7 @@ aea a.ea aed cBA|BAG ~g3 dBG GBd|
 e2a a^ga e2g gfg|e(3.g.f.e dcB cAG A2e|
 aea a.ea aed cBA|BAB ~g3 dBG GBd|
 e2a a^ga e2g gfg|e(3.g.f.e dcB c.A.A A2G|`,
-			parts: "AABB",
-			theSessionId: 2191,
-			norbeckId: 480
-		};
+	parts: "AABB",
+	theSessionId: 2191,
+	norbeckId: 480
+};

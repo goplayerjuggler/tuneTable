@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Australian Waters
 R:jig
 L:1/8
@@ -18,5 +18,5 @@ ABc|:dAG FED|=c3 ed^c|dAF GFE|FED gfe|
  ~g2 e ~f3|ecA ABc|dAF AFD|EDC DFA|
  ~d3 efg|fed cBA|dc/c/d efg|fdc def|
  gbb faa|ecA ABc|dAF AFD|EDC DFA|`,
-			theSessionId: 2607
-		};
+	theSessionId: 2607
+};

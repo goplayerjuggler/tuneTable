@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Galway
 R:hornpipe
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  D2 FA dAFD|CDEF G2FG|AdcB AGFE|D2 CE D2:|
  |:de|f2 fg fedc|BABc B2 Bd|e2 ef edcB|A2 ce a2 AB|
  d2 df edAF|GFGA BdcB|AdcB AGFE|D2 CE D2:|`,
-			theSessionId: 38
-		};
+	theSessionId: 38
+};

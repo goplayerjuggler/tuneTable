@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Leitrim Lilter
 C:Charlie Lennon
 R:reel
@@ -15,5 +15,5 @@ K:Dmajor
  FAdf a2bf|afdf eB~B2|GBge fgef|dBAG FDDE|
  FAdf a2bf|afdf eB~B2|ABde f2af|g2fg efge|
  af~f2 dB~B2|ABdf eB~B2|GBge fgef|dBAG FDD||`,
-			theSessionId: 3943
-		};
+	theSessionId: 3943
+};

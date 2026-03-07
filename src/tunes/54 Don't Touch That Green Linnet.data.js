@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Don't Touch That Green Linnet
 C:Tommy Peoples
 R:jig
@@ -17,6 +17,6 @@ D3 FEF AFA d2a|baf gfe fdB A3:|
 afd dfa bge efg|afd d2e[1 fdc d3:|2 fdc dAG||
 F3 dAF G2B gdB|c2e a2a ba^g a2f|
 afd dAF G2B gdB|c2e age fdc d3||`,
-			parts: "AABBCC",
-			theSessionId: 2309
-		};
+	parts: "AABBCC",
+	theSessionId: 2309
+};

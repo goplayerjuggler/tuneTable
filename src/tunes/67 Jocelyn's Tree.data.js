@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Jocelyn's Tree
 C:Tommy Peoples
 R:jig
@@ -15,5 +15,5 @@ DE|:FDB BAG|FAd faf|fgb ege|Bcc AGE|
  B2e bge|A2f afd|FAd gec|AGE DED:|
  |:ABA eff|aba afd|BGE G,A,A,|CEA gec|
  dcd eff|aba afd|Bge cAF|GFE DED:|`,
-			theSessionId: 2132
-		};
+	theSessionId: 2132
+};

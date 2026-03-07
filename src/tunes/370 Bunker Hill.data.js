@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Bunker Hill
 T:from ITMA | Selections from the McConnell Family Collection | October 2024
 R:reel
@@ -32,10 +32,10 @@ GBcB c2z2 GBc2 cBAG | Add^c d2z2 dedB cBAG | EGAB c2z2 cAdB c2Bc | dB (3cBA Bg~g
 P:Ⅲ
 ed~d2 aded aded a2z2 | ge~e2 e2ed (3Bcd ef g2ag | fAeA d2z2 (3cBA dB c2Bc | dB (3cBA BGG2 ABcA d2z2 |
 ed~d2 aded aded a2z2 | g~eed e2ed (3Bcd ef g2ag | fAeA d2z2 (3cBA dB c2Bc | dB (3cBA Bgg2 ABcA .d2cA |]`,
-			incipit: `X:1
+	incipit: `X:1
 M:4/4
 K:D mixo
 L:1/16
 cA|GEE2 D3G E/F/GAB c2Bc|A3G EFGE ABcA d2`,
-			theSessionId: 207
-		};
+	theSessionId: 207
+};

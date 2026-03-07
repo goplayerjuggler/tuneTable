@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Johnny When You Die
 R:reel
 L:1/8
@@ -12,6 +12,6 @@ e2 dB eBdB|A2 GA Bd d2|e2 dB eBdB|A2 GA BGBd|
  e2 dB eBdB|A2 GA BAAB|GB B2 GBdB|A2 GA BG G2||
  g2 fg egde|g2 fg eaaf|g2 fg egdB|A2 AG BGBd|
  g2 fg egde|gbag eaaf|gbag egdB|A2 GA BG G2||`,
-			theSessionId: 15252,
-			theSessionSettingId: 5373
-		};
+	theSessionId: 15252,
+	theSessionSettingId: 5373
+};

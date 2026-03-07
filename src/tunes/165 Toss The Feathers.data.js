@@ -1,5 +1,5 @@
 export default {
-			abc: `X: 1 %230502, 260210
+	abc: `X: 1 %230502, 260210
 T: Toss The Feathers
 R: reel
 M: 4/4
@@ -19,7 +19,7 @@ efge   ~a2ge  dfed   ^ceAB  | c3B   ABcA  dfed  cAGc  |
 Ad~d2  Ad~d2  Ad~d2  edcd   | efge  a3g   e2ag  ed^cd |
 efge   ~a2ge  dfed   ^ceAB  | c3B   ABcA  dfed  ^cAGE !D.C.! |]
 `,
-			theSessionId: 138,
-			parts: "AABB",
-			norbeckId: 110
-		};
+	theSessionId: 138,
+	parts: "AABB",
+	norbeckId: 110
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Concertina
 R:reel
 L:1/16
@@ -13,5 +13,5 @@ K:Dmajor
 A2FA BAFA A2FA BAFA|FABc d2dA BAFE D4:|
 |:Addd Addd AddA BAFA|B2BA B2BA B2BA BAFA|
 Addd Addd AddA BAFA|FABc d2dA BAFE D4:|`,
-			theSessionId: 18
-		};
+	theSessionId: 18
+};

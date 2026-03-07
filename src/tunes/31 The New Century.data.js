@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The New Century
 R:hornpipe
 L:1/8
@@ -14,9 +14,7 @@ K:Gmixo
 dgdB (3GBG AB cfcA (3FAF GA|(3BAG gG ^fGe^F|1 AGG^F GA:|2 AGG^F G2-|:GA||
 Bcde fdce dDE^F GFGA|Bcde =fd (3e^fg afd^c d2 (3def|
 gdBG ecA^F GFGc AGEG|(3^FED AB cedF AGGF G2:|`,
-			parts: "AABB",
-			theSessionId: 2001,
-			references: [
-				{ notes: `See O'Mahony's for a recording by Jason O’Rourke` }
-			]
-		};
+	parts: "AABB",
+	theSessionId: 2001,
+	references: [{ notes: `See O'Mahony's for a recording by Jason O’Rourke` }]
+};

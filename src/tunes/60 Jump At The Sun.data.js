@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Jump At The Sun
 C:John Kirkpatrick
 R:jig
@@ -14,6 +14,6 @@ K:Dminor
 DFA ^G2 A DFA G2 A|dAA BAG FGE D3:|
 d2 e fed e2 f gfe|d2 e fed A^GA B2 A|
 d2 e fed e2 f gfe|dAA BAG FGE D3:|`,
-			parts: "AABB",
-			theSessionId: 736
-		};
+	parts: "AABB",
+	theSessionId: 736
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Denis Doody's
 R:polka
 F:https://youtu.be/X8pqy2uCVno?t=1469
@@ -20,6 +20,6 @@ K:Eminor
    GE ED B,E E>F|GA B>A GF E2:|
 |: Be e/f/e/d/ Be e/f/e/d/|Be e f2 g ef|
    gb/g/ fg/f/ eB BA|BB E>F GA B/d/B/A/:|`,
-			theSessionId: 1338,
-			theSessionSettingId: 42834
-		};
+	theSessionId: 1338,
+	theSessionSettingId: 42834
+};

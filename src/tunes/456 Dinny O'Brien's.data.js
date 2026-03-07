@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dinny O'Brien's
 C:Paddy O'Brien
 R:reel
@@ -14,5 +14,5 @@ g|:fd (3ddd d^cAB =c2dB cAGE|D2 (3FED ADFD EGAB cdeg|
 fdd^c d=cAB =c2dB cAGE|D2 ~E3G AB cAGE {G} EDDg:|
 fdd^c defg ad (3ddd dcAB|c2 ~c3d e=f gc (3ccc gceg|
 fd (3ddd d^cAB =cBdB cAGE|D2 ~E3G AB cAGE {G} EDDg:|`,
-			theSessionId: 1667
-		};
+	theSessionId: 1667
+};

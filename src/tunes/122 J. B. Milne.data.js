@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:J. B. Milne
 C:Angus Fitchet
 R:polka
@@ -17,5 +17,5 @@ B>c|:d/e/d/c/ BG|DG B2|B/d/c/B/ AG|c2 A>B|
  cA dA|cB/c/ d/c/B/A/|B2 B>c|dB eB|
  dB eB|gf/g/ a/g/f/g/|e2 e>f|g/a/g/f/ e/g/f/e/|
  e/d/B/G/ D/G/B/d/|d^c =cf/a/|1 g2 B>c:|2 g2 z2||`,
-			theSessionId: 3479
-		};
+	theSessionId: 3479
+};

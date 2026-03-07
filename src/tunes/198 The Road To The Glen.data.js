@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Road To The Glen
 C:Ed Reavy
 R:reel
@@ -13,5 +13,5 @@ K:Dminor
  d3 e f2 ag|fedc AFDE|1 F3 G AGFG|Addc d2 (3CDE:|2 F3 G AFDE|FDEC D2 de||
  f2 ag fedf|ecgc acgc|f2 ag fede|fdec Adde|
  f3 g (3agf (3gfe|fedc AFDE|F3 G AGFG|1 Addc d2 de:|2 Addc d2 (3CDE||`,
-			theSessionId: 2805
-		};
+	theSessionId: 2805
+};

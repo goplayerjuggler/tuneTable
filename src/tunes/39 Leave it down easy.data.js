@@ -1,6 +1,6 @@
 export default {
-			aka: ["The Lilting Banshee", "The Miller Of Glanmire"],
-			abc: `X: 1
+	aka: ["The Lilting Banshee", "The Miller Of Glanmire"],
+	abc: `X: 1
 T: Leave it down easy
 T: As played by Danny Smith
 S: Danny Smith, whistle
@@ -32,7 +32,7 @@ EAA EAA   BAB "here"E2A|
 P:note for (**): the first time round maybe it was a C#, like this (but I’m not sure):
 d^cAy
 `,
-			theSessionId: 60,
-			parts: "AABB",
-			norbeckId: 186
-		};
+	theSessionId: 60,
+	parts: "AABB",
+	norbeckId: 186
+};

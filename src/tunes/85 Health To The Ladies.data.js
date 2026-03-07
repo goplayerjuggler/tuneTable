@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Health To The Ladies
 R:jig
 L:1/8
@@ -12,5 +12,5 @@ K:Amajor
  ecA BAF|AFE EFA|Bdc BAB|cAA A2:|
  A|cee dff|cee ecA|cee dff|ecA B2A|
  cee dff|cee ecA|Bdc BAB|cAA A2:|`,
-			theSessionId: 327
-		};
+	theSessionId: 327
+};

@@ -1,7 +1,7 @@
 export default {
-			parts: "AABB",
-			abc: [
-				`X:1
+	parts: "AABB",
+	abc: [
+		`X:1
 T:Unknown
 C: Mick O’Connor (?)
 R:jig
@@ -14,7 +14,7 @@ K:Dmajor
 D2A, DFA def edB | B/B/AB dBA FDD EFE | D2A, DFA def edB | BAB dBA FED [1 DDA, :| [2 D2A ||:
 dcd e^de f=dA BdA | B/c/dB AFD E/E/EE EDB, | D2A, DFA def edB | BAB dBA FED [1 D2A :| [2 D2A, !D.C.! |]
 `,
-				`
+		`
 X: 1
 T: Unknown
 R: jig
@@ -34,5 +34,5 @@ DDA, DFA def  edB | B/B/AB dBA F/F/DD EFE | DDA, DDA [Dd]ef edB | BAB dBA FED DD
 DDA, DFA [Dd]ef edB | B/B/AB dBA FED  EFE | DDA, DDA def edB | BAB dBA FED D2A ||
 dcd e^de f=dA  BdA | B/c/dB AFD DEE  FDA, |
 `
-			]
-		};
+	]
+};

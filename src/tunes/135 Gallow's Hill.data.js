@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Gallow's Hill
 C:Kevin O'Connor
 R:reel
@@ -17,5 +17,5 @@ effe f2Bf fece gaec|A2Aa geea ~f3a edcd|
 ~B3f fece ~f3g afec|A2af geea f2ec ABBA|
 ~f4 fece ~f3g afec|A2af geea ~f3a edcd|
 ~B3f fece ~f3g afec|A2af geea f2ec ABBA||`,
-			theSessionId: 7898
-		};
+	theSessionId: 7898
+};

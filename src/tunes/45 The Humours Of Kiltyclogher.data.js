@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			abc: `X:1
+	groups: "su",
+	parts: "AABB",
+	abc: `X:1
 T:The Humours Of Kiltyclogher
 R:jig
 L:1/8
@@ -14,15 +14,15 @@ K:Adorian
     AGE G2E c2E DEG|A3 BGE A3 A2:|
 |:B|c2B c2d ecA ABc|BAG GAB dBG GAB|
     c2B c2d ecA ABc|BAG GEG A3 A2:|`,
-			references: [
-				{
-					url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
+	references: [
+		{
+			url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
 
-					artists:
-						"The Kelly Family: John Kelly Jnr, fiddle; James Kelly, fiddle; Johnny Kelly, fiddle; Leah Kelly, fiddle; Aoife Kelly, concertina; Cathy Potter, harp; Charlie Le Brun, flute",
-					album:
-						"A Family Tradition: Traditional Irish Music from The Kelly Family "
-				}
-			],
-			theSessionId: 1043
-		};
+			artists:
+				"The Kelly Family: John Kelly Jnr, fiddle; James Kelly, fiddle; Johnny Kelly, fiddle; Leah Kelly, fiddle; Aoife Kelly, concertina; Cathy Potter, harp; Charlie Le Brun, flute",
+			album:
+				"A Family Tradition: Traditional Irish Music from The Kelly Family "
+		}
+	],
+	theSessionId: 1043
+};

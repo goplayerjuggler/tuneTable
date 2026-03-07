@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Hats Off To Dodd
 C:Pádraig Rynne
 R:slip jig
@@ -13,5 +13,5 @@ D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G GFD G2F|
  D2G GFD G2F|D2G GFD Bcd|c2A AGF CDF|D2G B2A G2F|
  G3 GFG Bcd|c3 cBc d2g|f2d dcB Bcd|cAF AGF G2F|
  G3 GFG Bcd|c3 cBc d2g|f2d dcB Bcd|cAF AGF G3||`,
-			theSessionId: 11427
-		};
+	theSessionId: 11427
+};

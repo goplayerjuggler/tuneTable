@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Mug Of Brown Ale
 R:jig
 L:1/8
@@ -15,5 +15,5 @@ efg ~a3 aba age|dBd ~g3 gba ged|
 efg ~g3 aba age|dBd gdB ABA ABd|
 efg ~a3 aba age|dBd ~g3 gba ged|
 efg a2b ^c'ac' age|dBd gdB ABA A2||`,
-			theSessionId: 888
-		};
+	theSessionId: 888
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Connaughtman's Rambles
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ K:Dmajor
 FAA dAA BAA def|gfe dfe[1 dBB BAG:|2 dBB B3||
 |:fbb faf fed ede|fbb faf fed e3|
 fbb faf fed def|gfe dfe[1 dBB B3:|2 dBB BAG||`,
-			theSessionId: 19
-		};
+	theSessionId: 19
+};

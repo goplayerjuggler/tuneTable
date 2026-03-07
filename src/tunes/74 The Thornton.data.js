@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			abc: `X:1
+	groups: "su",
+	parts: "AABB",
+	abc: `X:1
 T:The Thornton
 C:Donald Cameron
 R:jig
@@ -16,5 +16,5 @@ K:Amixo
 c2A ABA d2e fec|d2f c2e B2g gdB:|
 |:c2e efe ef^g a3|c2e efe B2g gdB|
 c2e efe ef^g a2e|d2f c2e B2g gdB:|`,
-			theSessionId: 2481
-		};
+	theSessionId: 2481
+};

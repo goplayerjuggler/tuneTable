@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Walsh's
 R:polka
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  a2 af/a/|ba fa|g2 Bc|ed d:|
  |:e|f>e fe|dc BA|g>f ga|ba f/g/a|
  f>e fe|dc BA|g2 Bc|ed d:|`,
-			theSessionId: 2105
-		};
+	theSessionId: 2105
+};

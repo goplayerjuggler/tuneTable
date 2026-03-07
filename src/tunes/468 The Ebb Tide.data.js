@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T: The Ebb Tide
 C:James Hill
 R: hornpipe
@@ -11,14 +11,14 @@ K: Gmaj
 B/c/B AB G2 A/B/c dgfa ~g3a|f/e/d cB cedc[1 B/c/B GF G2 Bc:|2 B/c/B GF G2 ga||
 bgdB gdBG DGBd gabg|aAcA =fAcA D=FcF dFcF|
 B/c/B AB GABc dgfa ~g3a|f/e/d cB cedc[1 B/c/B AF G2 ga:|2 B/c/B AF GAdc||`,
-			theSessionId: 2126,
-			norbeckId: 132,
-			references: [
-				{
-					url: "https://thekellyfamily.bandcamp.com/track/the-ebb-tide-john-kelly-s-hornpipe-hornpipes",
-					artists: "Aoife Kelly, concertina;  Cathy Potter, herp",
-					notes: `The Ebb Tide / John Kelly’s Hornpipe`
-				}
-			],
-			parts: "AABB"
-		};
+	theSessionId: 2126,
+	norbeckId: 132,
+	references: [
+		{
+			url: "https://thekellyfamily.bandcamp.com/track/the-ebb-tide-john-kelly-s-hornpipe-hornpipes",
+			artists: "Aoife Kelly, concertina;  Cathy Potter, herp",
+			notes: `The Ebb Tide / John Kelly’s Hornpipe`
+		}
+	],
+	parts: "AABB"
+};

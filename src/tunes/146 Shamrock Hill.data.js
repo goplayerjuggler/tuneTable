@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Shamrock Hill
 C:Sean Ryan
 R:reel
@@ -13,5 +13,5 @@ K:Gmajor
  DGBG dGBG|~c3 d efga|bg ~g2 aged|1 cAFA ~G3 E:|2 cAFA G2 ga||
  |:bg ~g2 agef|gedB AGEG|DB, ~B,2 DEGA|Bdgb ageg|
  bg ~g2 agef|gedB AGEG|DB, ~B,2 DEGA|1 BdAF G2 ga:|2 BdAF ~G3 E||`,
-			theSessionId: 2584
-		};
+	theSessionId: 2584
+};

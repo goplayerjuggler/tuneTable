@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Carmel Mahoney Mulhaire
 C:Martin Mulhaire
 R:reel
@@ -17,5 +17,5 @@ K:Dmajor
  adfa bdgb|affe fgaf|gefd ecdB|1 cABc defg:|2 AFGE D2 DE||
  |:FA A2 FADF|ADFA bagf|g2 fg efde|cdBc ABAG|
  FA A2 FADF|ADFA bagf|gefd ecdB|1 AFGE D2 DE:|2 AFGE D4||`,
-			theSessionId: 2716
-		};
+	theSessionId: 2716
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Pearl O'Shaughnessy's
 R:barndance
 L:1/8
@@ -16,5 +16,5 @@ K:Dmajor
  dB ed B2 g2|fe ge c2 eg|(3fgf ed ^cd ef|g2 b2 g2 Bc:|
  d2 b2 b2 c'b|a2 e2 e2 ag|(3fgf ed (3fgf ed|(3BcB AG B2 Bc|
  d2 b2 b2 c'b|a2 e2 e2 ag|(3fgf ed ^cd ef|g2 b2 g2 Bc|g2 b2 g4||`,
-			theSessionId: 4321
-		};
+	theSessionId: 4321
+};

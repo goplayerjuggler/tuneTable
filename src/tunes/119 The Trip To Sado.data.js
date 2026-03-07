@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Trip To Sado
 C:Dónal Lunny
 R:polka
@@ -12,5 +12,5 @@ K:Eminor
 |:G2 EG|DE GD|E/G/A GE|DG DE|AG/E/ GA|G/E/D GD/E/|GA/G/ EG|DE E2:|
  BA/G/ AE|DE GE|GA/G/ ED/E/|GE AG|BA/G/ AE|DG EG|GE GE|DE E2|
  BA/G/ AE|DG EG|GE GD|GE GG/E/|D/G/E D/E/G|EA GE|A/G/E GE|DE E2||`,
-			theSessionId: 8904
-		};
+	theSessionId: 8904
+};

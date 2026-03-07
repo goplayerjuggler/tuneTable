@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Maple Leaf
 C:Darach De Brun
 R:reel
@@ -13,5 +13,5 @@ K:Edorian
  E (3EEE F GE (3EEE|B2AB AGED|Beed BA (3AAA|B2AB AGED:|
  |:Beed efg2|Beed edBA|Beed efge|a2eg fedA|
  Beed efg2|Beed edB2|a2eg fedA|B2AB AGED:|`,
-			theSessionId: 1050
-		};
+	theSessionId: 1050
+};

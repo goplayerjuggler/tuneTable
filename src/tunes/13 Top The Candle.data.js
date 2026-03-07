@@ -1,7 +1,7 @@
 export default {
-			groups: "ALORA",
-			abc: [
-				`X: 1
+	groups: "ALORA",
+	abc: [
+		`X: 1
 T: Top The Candle
 S: Frank & Pat Reilly, fiddles
 N:1. A hop jig played in the good old way by two County
@@ -26,7 +26,7 @@ P:Ⅱ
 "D"~f2 ed cA|"Em"Be2d cA|"G"{A}B2 AG FD|"D"A,D2F EA|
 "D"~f2 ed cA|"Em"Be2d cA|"Em/G"{A}B2 AG FE|"A"DF EG FE!D.C.!|]
 `,
-				`X: 1
+		`X: 1
 T: Top The Candle
 N: 0. This is an older version I posted (in a comment) to thesession on 2024-11-27.
 N: 1. A hop jig played in the good old way by two County
@@ -61,7 +61,7 @@ P:B
 "^(3)"~f2 ed cA|Be2d cA|{A}B2 AG FD|A,D2F EA|
 "^(3)"~f2 ed cA|Be2d cA|{A}B2 AG FE|DF EG FE!D.C.!|]
 "^(1)" (D/"<("">)"E/D) || "^(2)"A,(D LD)Fyy || "^(3)" (f/"<("">)"g/f)`
-			],
-			theSessionId: 10116,
-			theSessionSettingId: 52515
-		};
+	],
+	theSessionId: 10116,
+	theSessionSettingId: 52515
+};

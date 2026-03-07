@@ -1,6 +1,6 @@
 export default {
-			groups: "alora",
-			abc: `X:1
+	groups: "alora",
+	abc: `X:1
 T:I Looked East And I Looked West
 R:polka
 L:1/8
@@ -13,5 +13,5 @@ K:Gmajor
  GB B/c/B/A/|FA AB|cA FA|G2:|
  |:Bd|g2 fe|fA A>B|cd ef|g2 fe|
  dg fe|fA AB|cd/c/ BA|G2:|`,
-			theSessionId: 6015
-		};
+	theSessionId: 6015
+};

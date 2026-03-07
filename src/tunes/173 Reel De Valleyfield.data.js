@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Reel De Valleyfield
 O:Quebec
 R:reel
@@ -16,6 +16,6 @@ K:Dmajor
 DFAF DFAF EGAG EGAG|DFAF DFAd[1 fedc d2AF:|2 feBc d2fd||
 |:Adfd Adfa gfed e2B2|ABcd edeg fdec d2fd|
 Adfd Adfa gfed e2B2|ABcd efeg fedc d2fd:|`,
-			theSessionId: 17457,
-			theSessionSettingId: 33504
-		};
+	theSessionId: 17457,
+	theSessionSettingId: 33504
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Stirling Castle
 R:strathspey
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  D2 F>A D>A F<A|A,2 C>E A,>E C<E|D2 F>A D>A F<A|(3Bcd (3efg f<d d:|
  A|d2 f>d g>e f>d|g2 e>d c>B (3ABc|d2 f>d g>e f>d|(3Bcd (3efg f<d d>A|
  d/d/d f>d g>e f>d|B2 c>d (3efd (3cBA|(3fga (3gfe (3dcB (3AGF|(3GAB (3ABc d2 d:|`,
-			theSessionId: 1762
-		};
+	theSessionId: 1762
+};

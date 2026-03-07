@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Cuil Aodha
 R:jig
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  ~G3 GFG|~A3 fga|gfd cAd|1 GAG G2g:|2 GAG G2d||
  |:d2g gfg|ade fga|gfd cAd|cAG FGA|
  G2g gfg|ade fga|gfd cAd|1 GAG G2d:|2 GAG G2g||`,
-			theSessionId: 825
-		};
+	theSessionId: 825
+};

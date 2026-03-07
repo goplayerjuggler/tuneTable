@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Dance Of The Honeybees
 C:Charlie Lennon
 R:hornpipe
@@ -13,5 +13,5 @@ AG|:(3FGF EF DFAF|GAFG E2 EF|GFGA (3Bcd ed|cded cAGE|
  FGEF DFAF|(3GAG (3FGF E2 EF|GFGA (3Bcd ed|1 cAGE D2 DE:|2 cAGE D2 (3ABc||
  |:d2 ad fded|(3Bcd AF DFAd|Beed Bded|cdef gece|
  d2 ad fded|(3Bcd AF DEFA|Bdef gfed|1 cAGE D2 (3ABc:|2 cAGE D2 DE||`,
-			theSessionId: 130
-		};
+	theSessionId: 130
+};

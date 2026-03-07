@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dowd's Favourite
 R:reel
 L:1/16
@@ -14,5 +14,5 @@ A|B2dB fBdB B2dB cAFA|B2dB fBdB cAFA BGGA|
 B2dB fBdB B2dB cAFA|BAGF Ggge fdcA BGG||
 z|gdd2 g2ag fcc2 fcAc|gdd2 g2ag fdcA BGG2|
 gdd2 g2ag fcc2 fcAF|GABc dgge fdcA BGG||`,
-			theSessionId: 229
-		};
+	theSessionId: 229
+};

@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			theSessionId: 879,
-			abc: `
+	groups: "su",
+	theSessionId: 879,
+	abc: `
 X: 1
 T: O'Farrell’s Welcome To Limerick
 T: (as played by Tommy Peoples)
@@ -26,20 +26,20 @@ d3 ege c2A d3 faf ged|f3 ged c2A BAG FAF GED|
 [P:E] d3 ege d2A d3 f2d g2d|f2d ged c2A BAG FAF GED|
 !coda!d3 ege d2A d3 faf ged|f3 ged c2A BAG FAF GE!D.C.!D||
 !coda!d3 ege d2A d3 faf g3|afd ged c2A BAG FAF GED | !fermata!D6 |]`,
-			incipit: `
+	incipit: `
 X: 1
 M: 18/16
 L: 1/16
 K: D mixo
 FGA AFA Bc2 BAG FAF GED|`,
-			parts: "AABBCCDDEE",
-			references: [
-				{
-					url: "https://jasonorourke.bandcamp.com/track/the-peacock-following-the-hen-ofarrells-welcome-to-limerick-my-mind-will-never-be-easy",
-					artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
-					notes: `(2015) The Peacock Following the Hen/O'Farrell's Welcome to Limerick/My Mind will never be Easy
+	parts: "AABBCCDDEE",
+	references: [
+		{
+			url: "https://jasonorourke.bandcamp.com/track/the-peacock-following-the-hen-ofarrells-welcome-to-limerick-my-mind-will-never-be-easy",
+			artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
+			notes: `(2015) The Peacock Following the Hen/O'Farrell's Welcome to Limerick/My Mind will never be Easy
 From ):45 onwards
 Is the  guitarist S Dunne? See my remark under John Brosnan's polka.`
-				}
-			]
-		};
+		}
+	]
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Humours Of Loughrea
 C:Tommy Whelan
 R:reel
@@ -13,5 +13,5 @@ G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG EDB,D|
  G2 GA BA A2|bgag egdB|G2 GA BAGE|ABAG ED D2||
  g2 eg fdBd|ge e2 gaba|ge e2 edBd|egfg edef|
  g2 fg edBd|ge e2 gaba|g2 ge a2 af|dgbg egdB||`,
-			theSessionId: 1767
-		};
+	theSessionId: 1767
+};

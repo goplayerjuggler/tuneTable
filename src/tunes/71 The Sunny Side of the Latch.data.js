@@ -1,6 +1,6 @@
 export default {
-			abc: [
-				`X:1
+	abc: [
+		`X:1
 T:The Sunny Side of the Latch
 R:jig
 Z: Malcolm Schonfield % 231212,3,4
@@ -22,7 +22,7 @@ EDE CDC EFG A2{^c}d | cBc ABc GEC ~D3 | EDE CDC EFG AdB | cGE _BFD CDC C2e ||
 efg fed ecA dBG | cGE _BFD CGc =Bcd | efg fed ecA d^cd | cGE _BFD CDC C2e |
 efg fed ecA d^cd | cGE _BFD Cec =Bcd | efg ~f3 ~e3 ~d3 | cGE _BFD CDC C2E !D.C.! |]
 "^second time, at the end"efg f(3edf e(3Gce d(3GBd | c(3GEG _B(3FDF C(3EGc =Bcd | efg ~f3 efg fed | cGE _BFD CDC C3 |]`
-			],
-			theSessionId: 23818,
-			theSessionSettingId: 49004
-		};
+	],
+	theSessionId: 23818,
+	theSessionSettingId: 49004
+};

@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			incipit: `X: 1
+	groups: "su",
+	incipit: `X: 1
 T:The Rookery
 C:Vincent Broderick
 R: reel
@@ -8,11 +8,11 @@ M: 4/4
 L: 1/16
 K: Gmaj
 BGAG EGDG EGDG EGDE|G2Bd egdg`,
-			theSessionId: 2958,
-			norbeckId: 992,
-			references: [
-				{
-					notes: "SU: followed by (JC’s) Morning Dew"
-				}
-			]
-		};
+	theSessionId: 2958,
+	norbeckId: 992,
+	references: [
+		{
+			notes: "SU: followed by (JC’s) Morning Dew"
+		}
+	]
+};

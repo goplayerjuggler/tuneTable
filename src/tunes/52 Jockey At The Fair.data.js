@@ -1,5 +1,5 @@
 export default {
-			abc: `%251029
+	abc: `%251029
 X: 3
 T: Jockey At The Fair
 R: Set dance
@@ -24,14 +24,14 @@ G2 B def|g2 e d2 f/g/|afd AB^c|d3 d2:|
 e2 f gfg|ede B2 g|edc BcA|G/A/BG E2 F|
 G2 G GBd|e2 f gfe|dBG A2 B|E2 F G2 A|BgB TB2 A|G3 G2:|
 `,
-			references: [
-				{
-					artists: "Pat Barton, button accordion",
-					url: "https://www.youtube.com/watch?v=TZPPskWXqIw",
-					notes:
-						"“Jockey To The Fair - Irish traditional jig/ set dance on button accordion”"
-				}
-			],
-			theSessionId: 2257,
-			theSessionSettingId: 22264
-		};
+	references: [
+		{
+			artists: "Pat Barton, button accordion",
+			url: "https://www.youtube.com/watch?v=TZPPskWXqIw",
+			notes:
+				"“Jockey To The Fair - Irish traditional jig/ set dance on button accordion”"
+		}
+	],
+	theSessionId: 2257,
+	theSessionSettingId: 22264
+};

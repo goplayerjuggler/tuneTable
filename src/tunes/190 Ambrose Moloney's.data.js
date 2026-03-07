@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Ambrose Moloney's
 C:Tommy Whelan
 R:reel
@@ -13,5 +13,5 @@ K:Gmajor
  BdBG ABGE|DGBG AGAc|BG G2 A2 Bd|gedc BG G2:|
  dgbg ageg|gedB GABd|eaag ageg|dgbg ageg|
  dgbg ageg|gedB GABd|eaag egfa|gedc BG G2:|`,
-			theSessionId: 2896
-		};
+	theSessionId: 2896
+};

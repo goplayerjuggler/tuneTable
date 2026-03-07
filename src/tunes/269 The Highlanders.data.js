@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Highlanders
 R:strathspey
 L:1/8
@@ -23,6 +23,6 @@ A2 e2 (3fed {f}e>d|(3cBA e>^g a>e (3cBA|G2 (c<d) (3edB (c<d)|(3BAG B>d g<d B<G|
  A2 e>d c<e A>d|(3cBA c>e a>e c>A|(3agf (3gfe (3fed (3ed=c|(3BAG B>d g<d B<G|
  a2 c/B/c a2 {cB}c<a|A2 c>e a>e c>A|a2 f>a g2 d>=c|(3BAG B>d g<d B<G|
  a2 c/B/c a2 {cB}c<a|A2 c>e a>e c>A|(3agf (3gfe (3fed (3ed=c|(3BAG B>d (3gfe (3dcB|`,
-			theSessionId: 16343,
-			theSessionSettingId: 30955
-		};
+	theSessionId: 16343,
+	theSessionSettingId: 30955
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Foxhunters
 R:reel
 L:1/8
@@ -13,5 +13,5 @@ K:Gmajor
  |:gedB GABd|gdBd eaaf|gedB GABG|ABcd eA~A2:|
  |:dggf ~g2ge|dggd egdB|dggf ~g2gd|egdB AGAB:|
  |:G2BG dGBG|GABG AGAB|~G2BG dGBd|egdB AGAB:|`,
-			theSessionId: 511
-		};
+	theSessionId: 511
+};

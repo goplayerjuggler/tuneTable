@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Harvest Home
 R:hornpipe
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  DAFA DAFA|defe dcBA|eAfA gfec|d2 f2 d2:|
  |:cd|eAAA fAAA|gAfA eAAA|eAfA gAfA|(3efe (3dcB (3ABA (3GFE|
  DAFA DAFA|defe dcBA|eAfA gfec|d2 f2 d2:|`,
-			theSessionId: 49
-		};
+	theSessionId: 49
+};

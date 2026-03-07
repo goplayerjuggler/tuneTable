@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Hudie Gallagher's March
 R:jig
 L:1/8
@@ -12,5 +12,5 @@ K:Amixo
  cBA ecA|fed cBA|c2e dBG|1 ABA Aed:|2 ABA Afg||
  |:agf gfe|fed cBA|def gfg|~B3 Bfg|
  agf gfe|fed cBA|c2e dBG|1 ABA Afg:|2 ABA Aed||`,
-			theSessionId: 810
-		};
+	theSessionId: 810
+};

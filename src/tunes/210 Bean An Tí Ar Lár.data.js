@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Bean An Tí Ar Lár
 R:reel
 L:1/8
@@ -11,5 +11,5 @@ K:Dmajor
 B|:AGFE D2FD|GEFE Ddcd|AGFE DEFD|1 EG=cA BGEB:|2 EG=cA BGEd||
  cdec A3d|cdec ABcB|cdec ABAG|EG=cA BGEd|
  cdec A3d|cdec ABcd|cdeg fdec|ABcA BdcB||`,
-			theSessionId: 1370
-		};
+	theSessionId: 1370
+};

@@ -1,6 +1,6 @@
 export default {
-			groups: "alora",
-			abc: `X:1
+	groups: "alora",
+	abc: `X:1
 T:The Lounge Bar
 C:Annlaug Børsheim
 O:Norway
@@ -18,7 +18,7 @@ A,|:"Bm"B,DF "D"E2 D "D"DFA d2 c|"G"BGB "D"AFD "A"EGF EDA,|
 "Bm"F3 FED "G"B,3 B,A,B,|"A"D2 (E E)FE [1 "D"D3 DFA:|2 "D"(D3 D2) c||
 |:"Bm"dBd c2 B- "G"Bdf e2 c|"G"dcB "D"AdB "D"AFD "A"E2 c|
 "Bm"dBd c2 B- "G"Bdf e2 c|"G"dcB "D"AFD[1 "A"E2 D- "D"DFA:|2 "A"E2 D- "D"D3||`,
-			parts: "AABBCC",
-			theSessionId: 8853,
-			theSessionSettingId: 53996
-		};
+	parts: "AABBCC",
+	theSessionId: 8853,
+	theSessionSettingId: 53996
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X: 9
+	abc: `X: 9
 T: Seanamhac Tube Station
 C: John Carty
 R: jig
@@ -18,8 +18,8 @@ GFD DCD GA/=B/c d2f|dcA cAF[1 G2A B2A:|2 ~G3 G2c||
 |:~d3 ~g3 f2g a2f|g2d c2d cAG F3|
 [1 ~d3 ~g3 f2g a2g|fdc AGF G3 G2c:|
 [2 GFD GFD GFD dcA|dcA dcA G2A B2A||`,
-			theSessionId: 280,
-			theSessionSettingId: 37122,
-			norbeckId: 423,
-			parts: "AABBCC"
-		};
+	theSessionId: 280,
+	theSessionSettingId: 37122,
+	norbeckId: 423,
+	parts: "AABBCC"
+};

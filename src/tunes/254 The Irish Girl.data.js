@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Irish Girl
 R:slip jig
 L:1/8
@@ -14,6 +14,6 @@ N:Setting entered in thesession by user “Daniel Parker” on 2019-01-09
 K:Amixo
 |:c2A AEA ABA|cBc Ace ded|c2A AEA ABA|BGB gfe ded:|
  |:cde efd e3|cae efd ged|cae efd efg|1 agf gfe dBG:|2 agf gfe ded||`,
-			theSessionId: 17637,
-			theSessionSettingId: 34009
-		};
+	theSessionId: 17637,
+	theSessionSettingId: 34009
+};

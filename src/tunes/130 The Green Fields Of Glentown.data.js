@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Green Fields Of Glentown
 C:Tommy Peoples
 R:reel
@@ -16,5 +16,5 @@ eB~B2 eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|
 bg~g2 afge dB~B2 GEDB,|A,E~E2 E2DE GEDB, B,A,~A,2:|
 |:A2EA cAEA aged bage|dG~G2 DGBd gded Bdgd|
 e2Be eBdB AE~E2 DG,B,G,|A,E~E2 E2DE GEDB, B,A,~A,2:|`,
-			theSessionId: 671
-		};
+	theSessionId: 671
+};

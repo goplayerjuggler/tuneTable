@@ -1,6 +1,6 @@
 export default {
-			abc: [
-				`
+	abc: [
+		`
 X: 1
 T: Tommy Potts' Rampling Pitchfork
 T: As played by Jimmy Power
@@ -27,7 +27,7 @@ d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:|
 [2 [P:D] D2e |: (fef) ecA BAB AFD | (GFG) A2g fed cAG |
 ^FDD ADD CDD A,DD | (GFG) ABG AFD [1 D2e :| [2 D2!D.S.! |]
 `,
-				`
+		`
 X: 2
 T:The Rambling Pitchfork
 T: Tommy Potts' Rambling Pitchfork
@@ -50,6 +50,6 @@ FDD ADD CDD A,DF | G2A BAG [1 AFD DCD :| [2 AFC D2d ||
 d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
 [P:C] fed ecA dAc AFD | G2A Bde fed cAG |
 FDD ADD CDD A,3 | G2A BAG AFC D2 !D.C.! |]`
-			],
-			theSessionId: 2329
-		};
+	],
+	theSessionId: 2329
+};

@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			abc: `X:1
+	groups: "su",
+	parts: "AABB",
+	abc: `X:1
 T:Drummond Castle
 R:jig
 L:1/8
@@ -15,5 +15,5 @@ K:Aminor
 (ABA) ~a3 a(ge) g3|ege deg|1 edB A3:|2 edB A2 B||
 |:~c3 cec ~d3 ded|~c3 edc Bdg dBG|
 ~c3 edc deg a2 (a|{b}a)ge deg[1 edB A2 B:|2 edB A3||`,
-			theSessionId: 2540
-		};
+	theSessionId: 2540
+};

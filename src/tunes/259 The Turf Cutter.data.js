@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			abc: `X:1
+	groups: "su",
+	abc: `X:1
 T:The Turf Cutter
 C:Paddy O’Brien (Offaly)
 R:slip jig
@@ -16,7 +16,7 @@ K:Adorian
 |:edB ABA Agf|edB def gfg|edB ABA ABA|G2B dB/c/d dgf:|
  |:efg aba a2g|efg aba ged|1 efg aba a2g|ede age dBG:|
  [2 ede aga b2a|gfg age dBG||`,
-			theSessionId: 14242,
-			theSessionSettingId: 25937,
-			norbeckId: 81
-		};
+	theSessionId: 14242,
+	theSessionSettingId: 25937,
+	norbeckId: 81
+};

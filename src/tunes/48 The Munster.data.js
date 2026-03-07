@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Munster
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ D|:~G3 AGA ~B3 gdB|GAB cBA BGE EDE|
 ~G3 AGA ~B3 gdB|cBA (3Bcd B[1 AGG G2D:|2 AGG G2f||
 |:gfg efg eag edB|gfg efg afd d2f|
 gfe agf gfe fdB|cBA (3Bcd B[1 AGG G2f:|2 AGG G3||`,
-			theSessionId: 372
-		};
+	theSessionId: 372
+};

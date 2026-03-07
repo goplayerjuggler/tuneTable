@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Black Rogue
 R:jig
 L:1/8
@@ -13,13 +13,13 @@ K:Amixo
 cAA BGG cAA AFD|G2 A (B/c/d)B[1 AFD D2 B:|2 AFD D3||
 |:~f3 ~g3 afd cBA|~f3 gfg afd dfg|
 agf gfe fed e/f/ed|cBA BAG AFD D3:|`,
-			theSessionId: 1076,
-			references: [
-				{
-					url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
-					artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
-					notes: `The Black Rogue; Morrison’s
+	theSessionId: 1076,
+	references: [
+		{
+			url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
+			artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
+			notes: `The Black Rogue; Morrison’s
 Album: A Man Apart (2004)`
-				}
-			]
-		};
+		}
+	]
+};

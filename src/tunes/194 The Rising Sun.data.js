@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Rising Sun
 C:Martin Mulhaire
 R:reel
@@ -13,5 +13,5 @@ AAG|:F2AF DFAF|G2BG DGBG|A2cA EABc|dzde edAG|
  F2AF DFAF|GBBA ~B3z|cdef gecA|1 eddc dAAG:|2 eddc defg||
  |:a2fd Adfd|Adfd edcd|~e3f ~g3a|be (3eee bege|
  azfd Adfd|Adfd edcB|A2FA BcdB|1 AFEF defg:|2 AFEF DAAG||`,
-			theSessionId: 1024
-		};
+	theSessionId: 1024
+};

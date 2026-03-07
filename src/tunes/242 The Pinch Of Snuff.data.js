@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Pinch Of Snuff
 R:reel
 L:1/8
@@ -11,5 +11,5 @@ K:Dmixo
 |:fage d2dB|AD (3FED EFGB|A3B cGcd|ed (3B^cd efge:|
  f2df afdf|f2df efge|f2df afdf|eA (3B^cd efge|
  f2df afdf|f2df efge|fa~a2 afdf|eA (3B^cd efge||`,
-			theSessionId: 2610
-		};
+	theSessionId: 2610
+};

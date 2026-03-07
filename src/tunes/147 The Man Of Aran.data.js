@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Man Of Aran
 C:Darach De Brun
 R:reel
@@ -13,5 +13,5 @@ K:Bminor
  FBfe dB B2|ce e2 ce e2|f3e dB B2|cedc dB B2:|
  |:df f2 df f2|ce e2 ce e2|df f2 df f2|c2ec dB B2|
  dfaf dfaf|cege cege|dfeg fB B2|f3e fedc:|`,
-			theSessionId: 973
-		};
+	theSessionId: 973
+};

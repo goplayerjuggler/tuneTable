@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dunphy's
 R:hornpipe
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  GABA g~g2z|fefd e^cAG|FAdB cADF|AGGF G2:|
  |:B^c|d2Bd gdBd|gbaf gdBd|g2fg ed^cd|(3efe d^c d2ef|
  g2dc B2Gd|ecAG FAD2|GBdB cADF|AGGF G2:|`,
-			theSessionId: 1980
-		};
+	theSessionId: 1980
+};

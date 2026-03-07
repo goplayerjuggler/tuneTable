@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Down The Hill
 R:set dance
 L:1/8
@@ -15,5 +15,5 @@ K:Gdorian
  dgg g2a|b/a/g/a/b/g/ a/g/f/g/a/f/|gfd cAd|~G3 G2:|
  |:=B/d/|gd=B G>Bd/B/|G>=Bd/B/ c_BA|fcA F>Ac/A/|F/G/AB cBA|
  B/A/G/A/B/G/ c/B/A/B/c/A/|dg^f gab|gfd cAd|~G3 G2:|`,
-			theSessionId: 7352
-		};
+	theSessionId: 7352
+};

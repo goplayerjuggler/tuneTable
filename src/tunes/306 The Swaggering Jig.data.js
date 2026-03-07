@@ -1,6 +1,6 @@
 export default {
-			abc: [
-				`X:1
+	abc: [
+		`X:1
 T:The Swaggering Jig
 R:slip jig
 L:1/8
@@ -15,6 +15,6 @@ K:Gmajor
 |:B2G AGE DEG|BAG DEG A3|BGG AGE DEG|cBA BGE D3:|
  Bdd dge dBG|Bdd dBG A3|Bdd dge dBG|cBA BGE D3|
  Bdd dge dBG|Bdd dBG A3|gfe fdB cBA|cBA BGE D3||`
-			],
-			theSessionId: 661
-		};
+	],
+	theSessionId: 661
+};

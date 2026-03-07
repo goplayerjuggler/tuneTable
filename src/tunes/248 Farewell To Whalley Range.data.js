@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Farewell To Whalley Range
 C:Michael McGoldrick
 R:slip jig
@@ -12,5 +12,5 @@ K:Amajor
 |:F2c BA~F- F2E|F2c BAc fec|B3 BAB c2A|1 ~B3 BAB cBA:|2 ~B3 BAB cef||
  a3 fec fec|B3 BAB cef|a3 baf afe|fec Bce fec|
  a2f fec fec|B3 BAB cef|a3 baf afe|fec fec BAB||`,
-			theSessionId: 2410
-		};
+	theSessionId: 2410
+};

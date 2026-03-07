@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			abc: `X:1
+	groups: "su",
+	abc: `X:1
 T:La Polverita Fiera
 C:L. E. McCullough
 R:mazurka
@@ -21,6 +21,6 @@ AB|:cF Ac BA|GC EG BA|FG FE (3CB,A,|B,2 -B,B, A,B,|
  DF AF GA|Bc BA GF|Gc BG EC|F2-FA BA|
  GC AB AF|GC AB AF|GA GF EF|G2- GF FE|
  DF AF GA|Bc BA GF|Gc BG EC|F2-FG AB:|`,
-			theSessionId: 15563,
-			theSessionSettingId: 29178
-		};
+	theSessionId: 15563,
+	theSessionSettingId: 29178
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Pay The Reckoning
 R:jig
 L:1/8
@@ -13,6 +13,6 @@ K:Gmajor
 G2e dBG ~B3 deg|age dBG ~A3 BGE:|
 ~g3 faf e/f/ge def|gfg efg aga bge|
 gbg f/g/af ege deg|age dBG ~A3 BGE:|`,
-			parts: "AABB",
-			theSessionId: 1805
-		};
+	parts: "AABB",
+	theSessionId: 1805
+};

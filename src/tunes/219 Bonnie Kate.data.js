@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Bonnie Kate
 C:Daniel Dow
 R:reel
@@ -13,5 +13,5 @@ K:Dmajor
  A2dA BdAF|DFAF EGFE|DFAF GBed|cABc d2:|
  |:fg|(3aba fd Adfa|(3gag ec Acef|~g3f gbag|fgef d2 ef|
  (3aba fd Adfa|(3gag ec Acef|~g3f gbag|fgef d2:|`,
-			theSessionId: 754
-		};
+	theSessionId: 754
+};

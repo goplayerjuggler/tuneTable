@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			abc: `X:1
+	groups: "su",
+	abc: `X:1
 T:Kafoozalum
 R:Fling
 L:1/8
@@ -17,6 +17,6 @@ N:Transposed up a fourth & edited
 K:Dmajor
 e2|:fdAd f2fa gece g2ge| fdAd f2fe[1 defd e2de:|[2 defd e2df||
   |:aaag fgaf efgf efge| aaag fgaf[1 defd e2df:|[2 defd e2de||`,
-			theSessionId: 8204,
-			theSessionSettingId: 52726
-		};
+	theSessionId: 8204,
+	theSessionSettingId: 52726
+};

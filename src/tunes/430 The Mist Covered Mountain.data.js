@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Mist Covered Mountain
 C:Junior Crehan
 R:jig
@@ -16,5 +16,5 @@ a|age a2b age edB|AGE G2A BAB GED|
 age a2b age edB|AGE G2A BAG A3|
 age a2b age edB|AGE G2A BAB GED|
 EDE G2A BAG ABd|efg dBG BAG A2||`,
-			theSessionId: 256
-		};
+	theSessionId: 256
+};

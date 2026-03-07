@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Lynch's
 R:barndance
 L:1/8
@@ -14,5 +14,5 @@ K:Dmajor
  f2 f2 f2 e>d|c>Bc>d e2- e>f|g2 g2 A2 B>c|(3efe d2 d2- d>e|
  f2 f2 f2 e>d|c>Bc>d e2- e>f|g2 g2 g2 (3ABc|d>ef>g a2- a>g|
  f2 f2 f2 e>d|c>Bc>d e2 e>f|g2 g2 A2 B>c|(3efe d2 d2- d3/2||`,
-			theSessionId: 3536
-		};
+	theSessionId: 3536
+};

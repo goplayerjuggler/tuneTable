@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Mayor Harrison's Fedora
 C:Edward Cronin
 R:reel
@@ -15,5 +15,5 @@ EF|:GBEG (3BBB AF|GFGA BdAG|FADF ADFA|(3ddd cd BAGF|
  Beed e2 ef|g2 fg edBc|dedB AGFA|1 GEFD ~E3 A:|2 GEFD ~E3 F||
  |:G2 GF GABc|dBAG FDDA|Be (3eee edef|gefd e2 (3ABc|
  dcdB AGFA|GEFD EFGA|dedB AGFA|GEFD E2 (3DEF:|`,
-			theSessionId: 367
-		};
+	theSessionId: 367
+};

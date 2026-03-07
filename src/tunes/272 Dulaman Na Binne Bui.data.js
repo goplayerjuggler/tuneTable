@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Dulaman Na Binne Bui
 R:strathspey
 L:1/8
@@ -11,5 +11,5 @@ K:Dmajor
 A2 B>c d2 A>F|G2 E<D E2 G2|A<AB>c d2 F>G|A2 G<E D2 D2-|HD8||
  K: DMix
  A>GE>D C>DE<G|A>GE>D G2 G2|A>GE>D C>DE>G|A>AG>E D2 D2-|HD8||`,
-			theSessionId: 10313
-		};
+	theSessionId: 10313
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Sporting Paddy
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ EAAB GABG|EAAB G2ED|EAA2 GABd|edge dBAG|
  EAAB GABG|EAAB G2ED|EAA2 GABd|edge d2ef||
  geee gede|geee a2ba|gee2 ged2|efge d2ef|
  geee gede|geee a2ga|bgab gabg|efge dBAG||`,
-			theSessionId: 430
-		};
+	theSessionId: 430
+};

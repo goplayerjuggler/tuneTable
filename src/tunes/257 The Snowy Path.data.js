@@ -1,7 +1,7 @@
 export default {
-			groups: "alora",
-			abc: [
-				`X:1
+	groups: "alora",
+	abc: [
+		`X:1
 T:The Snowy Path
 C:Mark Kelly
 R:slip jig
@@ -16,13 +16,13 @@ K:Dmajor
  "D"F2A B2F A2F|"G"G2B d2e dBG|"Bm"F2A B2F A2F|"A"E2D E2F GAB||
  "F#m"c3 c2e d2c|"G"B2G B2c d2e|"Bm"f3 f2e d2B|"A"A2G F2G A2B|
  "F#m"c3 c2e d2c|"G"B2A B2c d2e|"D"d2A B2F A2F|"A"E2D E2F GFE||`
-			],
-			references: [
-				{
-					artists: "Altan, 1991",
-					url: "https://music.youtube.com/watch?v=BP_nsOCubf0",
-					notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm"
-				}
-			],
-			theSessionId: 104
-		};
+	],
+	references: [
+		{
+			artists: "Altan, 1991",
+			url: "https://music.youtube.com/watch?v=BP_nsOCubf0",
+			notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm"
+		}
+	],
+	theSessionId: 104
+};

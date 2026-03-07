@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Colliers'
 R:reel
 L:1/8
@@ -12,11 +12,11 @@ K:Dmixo
  ~F2DF ~A3B|cAdB cABG|Add^c ~A3G|EFGE FD:|
  |:de|fded fde^c|Add^c Adde|fdde fde^c|~A3B cBcd|
  eaag efge|(3Bcd ed ^cAGG|Add^c~A3G|EFGE FD:|`,
-			references: [
-				{
-					artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
-					url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=16"
-				}
-			],
-			theSessionId: 2154
-		};
+	references: [
+		{
+			artists: "Denis Ryan, fiddle; Cathal McConnell, flute",
+			url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=16"
+		}
+	],
+	theSessionId: 2154
+};

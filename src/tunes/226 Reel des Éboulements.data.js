@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Reel des Éboulements
 R:reel
 L:1/16
@@ -16,6 +16,6 @@ cAEA cAeA Bcde f2ed|cAEA cAeA fdge a2ed|
 cAEA cAeA Bcde f2fg|agfe fedc[1 dfec A2ed:|2 dfec A2AF||
 EAAB cABA GABc dBEB|GBEB GBEB GBEB A2cA|
 eAAB c2BA GABc defg|agfe fedc[1 dfec A2AF:|2 defg a2||`,
-			parts: "AABBCC",
-			theSessionId: 2911
-		};
+	parts: "AABBCC",
+	theSessionId: 2911
+};

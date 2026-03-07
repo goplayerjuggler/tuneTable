@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Miss McLeod's
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  G2 BG AGBG|B2 BA B2 d2|e2 ef edef|gfed BcBA:|
  |:G2 gf edeg|B2 BA BcBA|G2 gf edeg|a2 ag aeef|
  g2 gf edeg|BcBA B2 d2|edef edef|gfed BcBA:|`,
-			theSessionId: 75
-		};
+	theSessionId: 75
+};

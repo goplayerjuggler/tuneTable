@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Mermaid Of Mullaghmore
 R:reel
 L:1/8
@@ -11,5 +11,5 @@ K:Dmajor
 |:FDDF ABAF|GAAF GFED|FGAF D2 (3efg|1 fdec dBBG:|2 fdec defg||
  a2fa dafa|g2e=c Gceg|a2fa dafa|g2ag fdd2|
  a2fa dafa|g2e=c Gceg|fage fdec|dBBG FDD2||`,
-			theSessionId: 2854
-		};
+	theSessionId: 2854
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Fasten The Leg In Her
 R:jig
 L:1/8
@@ -12,5 +12,5 @@ c|:B3BAB|GBd gdB|A3AGA|Bee dBA|
  BcB BAB|GBd g3|efg eag|1 fdd d2c:|2 fdd def||
  |:g3fgf|efe dBA|G3AGA|Bee def|
  gag fgf|efe d3|efg eag|1 fdd def:|2 fdd dcA||`,
-			theSessionId: 2838
-		};
+	theSessionId: 2838
+};

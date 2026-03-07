@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Whinny Hills Of Leitrim
 R:slip jig
 L:1/8
@@ -11,5 +11,5 @@ K:Gmajor
 |:AAA dcA d2c|AGA dcA GFG|AAA dcA d2e|fag ege dBG:|
  GBB GBd ~g3|GBB GBG FED|GBB GBd gag|fgf efe dBA|
  GBB GBd ~g3|GBB GBG FED|GBB GBd gag|fgf efe dBG||`,
-			theSessionId: 8976
-		};
+	theSessionId: 8976
+};

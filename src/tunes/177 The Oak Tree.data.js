@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Oak Tree
 R:reel
 L:1/8
@@ -14,5 +14,5 @@ K:Dmajor
  fB (3BBB fa^ge|fece (3f^ga ec|ABce ~a3e|1 faec dfeg:|2 faec ~B3c||
  |:d2fd Adfd|c2ec Acec|d2fd Adfg|gfed cABc|
  d2fd Adfd|c2ec Acec|dfaf gfed|1 B2ec dcBc:|2 B2ec dBAG||[F8A8]||`,
-			theSessionId: 212
-		};
+	theSessionId: 212
+};

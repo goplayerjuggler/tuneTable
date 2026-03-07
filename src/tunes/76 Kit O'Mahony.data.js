@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Kit O'Mahony
 R:jig
 L:1/8
@@ -16,5 +16,5 @@ K:Gmajor
  GBd cAc|BGG G2g|fed cAF|1 DGG G2:|2 DGG G||
  (3Bcd|~g3 dBG|fed cAF|GBd deg|~f3 def|
  ~g3 afd|bag afd|fed cAF|1 DGG G:|2 DGG G2||`,
-			theSessionId: 4234
-		};
+	theSessionId: 4234
+};

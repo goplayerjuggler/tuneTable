@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Roly Gentle
 C:Kathryn Tickell
 R:waltz
@@ -16,7 +16,7 @@ K:Ddorian
  d2 de fd|ec A2 B2|c2 cA cd|ed cA GE|
  d2 de fd|ec A2 AG|F2 FE FA|EA FA EA|
  d2 de fa|gf ed ^cA|c2 cA cd|ed cA GE||`,
-			theSessionId: 4037,
-			tags: "crooked",
-			parts: "AABB"
-		};
+	theSessionId: 4037,
+	tags: "crooked",
+	parts: "AABB"
+};

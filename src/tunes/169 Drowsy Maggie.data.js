@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Drowsy Maggie
 R:reel
 L:1/8
@@ -11,5 +11,5 @@ K:Edorian
 |:E2BE dEBE|E2BE AFDF|E2BE dEBE|BABc dAFD:|
  d2fd c2ec|defg afge|d2fd c2ec|BABc dAFA|
  d2fd c2ec|defg afge|afge fdec|BABc dAFD|`,
-			theSessionId: 27
-		};
+	theSessionId: 27
+};

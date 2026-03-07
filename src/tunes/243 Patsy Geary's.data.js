@@ -1,6 +1,6 @@
 export default {
-			groups: "ALORA",
-			abc: `
+	groups: "ALORA",
+	abc: `
 X: 1
 T: Patsy Geary's
 R: slide
@@ -17,7 +17,7 @@ P:Ⅱ
 |:"D"f2 e f2 e f2 e fga|"D"ABA BAF ABA ABd|
 "A"efe efe efe "(D)"dfa| "G"baf "A"afe "D"~d3 d2 [1 e:| [2 A||
 `,
-			theSessionId: 325,
-			norbeckId: 6,
-			parts: "AB"
-		};
+	theSessionId: 325,
+	norbeckId: 6,
+	parts: "AB"
+};

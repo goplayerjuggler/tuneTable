@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Chapel Bell
 C:Frank McCollum
 R:jig
@@ -14,5 +14,5 @@ K:Edorian
  |:Bee efe|def f2e|edB BAF|d2f edB|Bee efe|
  [1def f2e|edB BAF|AFE EFA:|
  [2def b2a|fed BAF|AFE EFA||`,
-			theSessionId: 5405
-		};
+	theSessionId: 5405
+};

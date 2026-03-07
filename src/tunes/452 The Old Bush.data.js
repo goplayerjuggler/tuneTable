@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Old Bush
 R:reel
 L:1/16
@@ -13,5 +13,5 @@ K:Dmixolydian
 A2AG cAA2 d^cde ~f3g|af (3gfe fde^c dfed =cA:|
 |:Ag|eg~g2 edcd efge c3d|eg~g2 a2ge dfed cAAg|
 eg~g2 ag~g2 efge defg|af (3gfe fde^c dfed =cA:|`,
-			theSessionId: 1499
-		};
+	theSessionId: 1499
+};

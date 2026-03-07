@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Éigse An Spidéil
 C:Caitlín Nic Gabhann
 R:barndance
@@ -13,6 +13,6 @@ K:Gmajor
  G2 (3GGG G2G2|GABc dBGg|efge Bege|(3efg ab gedB:|
  |:c4 B4|(3ABc BA GEDB|c4 B2 (3GBd|eage dcBd|
  c4 B4|(3ABc BA GEDG|EFGE B,EGE|1 FGAF GBdB:|2 FGAB cBAd||`,
-			theSessionId: 20543,
-			theSessionSettingId: 40673
-		};
+	theSessionId: 20543,
+	theSessionSettingId: 40673
+};

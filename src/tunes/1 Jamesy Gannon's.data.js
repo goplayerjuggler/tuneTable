@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Jamesy Gannon's
 R:barndance
 L:1/8
@@ -14,6 +14,6 @@ K:Gmajor
 D2GA B2B2 (3ABA GA B<ddg|e<dge dBGB[1 AGEF G2FE:|2 AGEF G2Gg||
 gfga bage d^cde dBGg|gfga baga agab a2ef|
 gfga bage dcde d2ef|g2(3fgf (3efe dB c2(3BcB A2(3GFE||`,
-			theSessionId: 3515,
-			parts: "AABB"
-		};
+	theSessionId: 3515,
+	parts: "AABB"
+};

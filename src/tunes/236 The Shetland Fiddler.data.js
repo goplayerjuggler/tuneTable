@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Shetland Fiddler
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  d2fd Adfe|defg afdf|(3fga fd (3fga fd|Bgec d2:|
  |:cd|eAfA gAaA|eaaf gfed|AeBe cede|efed cABc|
  dAeA fAgA|eaaf gfed|(3fga fd (3fga fd|Bgec d2:|`,
-			theSessionId: 97
-		};
+	theSessionId: 97
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Gráinne's
 C:Tommy Peoples
 R:jig
@@ -15,5 +15,5 @@ K:Gmajor
  Bc/d/B Ggf|ecA E3|DBc BDF|AGF G2:|
  |:D|GBd ~g3|edB cBA|Bc/d/B a2g|fdc d2f|
  gdB Ggf|ecA ~E3|DGc BDF|AGF G2:|`,
-			theSessionId: 488
-		};
+	theSessionId: 488
+};

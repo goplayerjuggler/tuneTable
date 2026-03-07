@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:An Feochán
 C:Tommy Peoples
 R:slow air
@@ -14,5 +14,5 @@ K:Eminor
  ee- ed/B/|b/^a/b- b2|ee- ed/B/|d2- de/f/|e2 {f/e/} dB|
  g>B f>B|e>f ed|B/^c/d- d>e|E/F/G- Ge|B(4c/B/A/G/ F>B|
  EE- E2|B|EF G>B|E>^cd2|`,
-			theSessionId: 5182
-		};
+	theSessionId: 5182
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Twelve Pins
 C:Charlie Lennon
 R:reel
@@ -15,5 +15,5 @@ K:Gmajor
  ~f2ef defg|(3agf ga fdAB|c2cB cBAB|~c2dc AGG2|
  fd~d2 ad~d2|fded cAAB|cedB cdeg|abga fdde|
  ~f3g ~a3g|~f2ed cAAB|cBcB cBAB|~c2dc AGGB||`,
-			theSessionId: 1333
-		};
+	theSessionId: 1333
+};

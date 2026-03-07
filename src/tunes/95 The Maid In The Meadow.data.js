@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Maid In The Meadow
 C:Walker Jackson
 R:jig
@@ -13,5 +13,5 @@ K:Dmixo
  c3 BdB|ABA AGE|DEG AGA|1 AGF GAB:|2 AGF G2 D||
  |:GBd gfg|ede gdB|GBd gdB|AGA AGE|
  GBd gfg|ede gdB|GAB AGA|AGF G3:|`,
-			theSessionId: 942
-		};
+	theSessionId: 942
+};

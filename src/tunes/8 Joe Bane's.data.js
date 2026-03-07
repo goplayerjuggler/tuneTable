@@ -1,8 +1,8 @@
 export default {
-			groups: "ALORA",
-			parts: "AABB",
-			norbeckId: 12,
-			abc: `X: 1
+	groups: "ALORA",
+	parts: "AABB",
+	norbeckId: 12,
+	abc: `X: 1
 T: Joe Bane's
 C:John MacDonald
 O:Scotland
@@ -20,4 +20,4 @@ K: G
 "Emin"dG GA B2 AG "C"B2d2 g3e|"G"d2de "D"dB Ad "G"B2 .G2 G2:|
 |: Bd|"G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2 de dB GA "D"B2 A2 A2 Bd|
 "G"g2 ga ge dg "C"e2 ed e2 ge|"G"d2de "D"dB Ad "G"B2 .G2 G2:|`
-		};
+};

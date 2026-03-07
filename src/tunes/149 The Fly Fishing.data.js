@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Fly Fishing
 C:Jackie Daly
 R:reel
@@ -13,5 +13,5 @@ A2-|:AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EAAc B2 cB|
  AGEC D2 CD|EA,A,B, CD EC|DECE D2 CD|EA-AG A2 AB:|
  |:c2 ec Acec|=Gcec F2 FE|DEFA dAFA|GBef edcB|
  c2 ec Acec|=Gcec F2 FE|DEFA dAFA|GBAG A2 AB:|`,
-			theSessionId: 313
-		};
+	theSessionId: 313
+};

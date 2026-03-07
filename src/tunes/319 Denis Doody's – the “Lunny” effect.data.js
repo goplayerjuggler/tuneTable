@@ -1,5 +1,5 @@
 export default {
-			abc: `
+	abc: `
 X: 1
 T: Denis Doody's – the “Lunny” effect
 T: The way I hear it, played by Dónal Lunny's band
@@ -52,11 +52,11 @@ EF/E/ DB,|E E>F G|AB/c/ B/A/G|1 Fd FG :|2 Fd AB||
 e e/f/e/d/ B|e e/f/e/d/ B/^c/|de f2|ge f2|
 gf ge|BB AB|zE>FG|1 A B/c/B/A/ B :|2 AB/c/ B/A/ G ||
 `,
-			theSessionId: 1338,
-			incipit: `
+	theSessionId: 1338,
+	incipit: `
 X: 1
 M: 2/4
 L:1/8
 K: Emin
 EE z/G/F/G/ | A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|`
-		};
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Frailach
 R:frailach
 L:1/8
@@ -14,5 +14,5 @@ K:Aminor
  a6 g2|b6 a2|aeae "Dm"a2{ba}gf|"Am"e4 e2|
  "C"cdef efef|efef "Dm"e2d2|"Dm"dAAd dAAd|dAAd "C"d2{ed}c2|
  "E7"cddc cBB_B|"Am"A4 Adc2|"E7"cddc cBB_B|1 "Am"A2A2 c2:|2 "Am"A2z2 a2||`,
-			theSessionId: 445
-		};
+	theSessionId: 445
+};

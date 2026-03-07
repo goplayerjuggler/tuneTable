@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Forde's
 R:polka
 L:1/8
@@ -13,13 +13,13 @@ K:Dmajor
 AD FA dc AB|=c>B cE[1 ED D2:|2 ED D>e||
 fd ed cA Ad/e/|fd ef ag ef/g/|
 fd ed cA AB|=c>B cE[1 ED D>e:|2 ED D2||`,
-			references: [
-				{
-					url: "https://music.youtube.com/watch?v=HKx_-xusj_s",
-					artists: "Jason O’Rourke, concertina",
-					album: "The Bunch Of Keys",
-					notes: `The first tune on a track entitled “Two Polkas”. Well worth a listen!`
-				}
-			],
-			theSessionId: 8541
-		};
+	references: [
+		{
+			url: "https://music.youtube.com/watch?v=HKx_-xusj_s",
+			artists: "Jason O’Rourke, concertina",
+			album: "The Bunch Of Keys",
+			notes: `The first tune on a track entitled “Two Polkas”. Well worth a listen!`
+		}
+	],
+	theSessionId: 8541
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Reel St. Jean
 C:Theodore Duguay
 R:reel
@@ -13,5 +13,5 @@ K:Bminor
  dB~B2 FB~B2|dfBd f2cB|~A3c e2fe|1 dAcA B2fe:|2 dAcA B2Bc||
  d2dc defg|a2ab afed|d'2 b2 afed|edef edBA|
  d2dc defg|a2ab afed|d'2 b2 afed|1 edef d2Bc:|2 edef d2fe||`,
-			theSessionId: 2870
-		};
+	theSessionId: 2870
+};

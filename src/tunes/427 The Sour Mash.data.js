@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			incipit: `%abc-2.1
+	groups: "su",
+	parts: "AABB",
+	incipit: `%abc-2.1
 X: 1
 T: The Sour Mash
 C: Angus Mackenzie; Gabe McVarish
@@ -21,4 +21,4 @@ L: 1/8
 Q:1/2=90
 K: Amin
 d/ |c<AA>G A>ce>d c<AB>d c<AG2 |`
-		};
+};

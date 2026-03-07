@@ -1,7 +1,7 @@
 export default {
-			name: "Paddy on the Turnpike – crooked settings",
-			abc: [
-				`X:1
+	name: "Paddy on the Turnpike – crooked settings",
+	abc: [
+		`X:1
 T:Paddy on the Turnpike 
 T:as played by Fidel Martin
 S:Fidel Martin, fiddle
@@ -31,7 +31,7 @@ P:Substitution
 "*"AccA dAcA||"**"Acde fe(f/e/f)||
 P:Coda
 [M:5/4]!coda!d(cAc) fgfd cABG (A/B/G/A/)GE .F2z2|]`,
-				`X:5
+		`X:5
 T:Paddy on the Turnpike
 T: as played by Manco Sneed
 S:Manco Sneed, fiddle
@@ -48,6 +48,6 @@ GF|:!segno!D2GA G2GF DFGA BAGG|DFFG F2DF CFDF- GFDC|
 DFGA G3A Bcd2 ^f2d2 | [M:2/4] !slide! BAGB AG^FA|1[M:1/4]G2GF:|2 [M:2/4] G2G4 
 |: g2-|[M:4/4]gage dg2a g2g2 Bcde | fed2 edce d4(3DE^F GA|
 [M:3/4]Bcd(e fe)d(f e)d-d(A|[M:2/4] B)AGB AG^FA|1G2 G4:|2 [M:1/4]G2GF!D.S.!|]`
-			],
-			tags: "crooked"
-		};
+	],
+	tags: "crooked"
+};

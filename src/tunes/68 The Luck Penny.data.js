@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Luck Penny
 R:jig
 L:1/8
@@ -14,5 +14,5 @@ K:Gmajor
  bag agf|g2g fd^c|def gdB|1 cAF G2B:|2 cA F GBc||
  |:dBG GFG|DGB dBG|cA=F FEF|C=FA cBA|
  dBG GBd|g2g fd^c|def gdB|1 cAF GBc:|2 cAF G2A||`,
-			theSessionId: 1334
-		};
+	theSessionId: 1334
+};

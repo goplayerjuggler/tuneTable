@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Blarney Pilgrim
 R:jig
 L:1/8
@@ -15,5 +15,5 @@ ded dBG AGA BGE|ded dBG AGA GAB|
 g2e dBG AGA BGE|B2G AGE GED D3:|
 A2D B2D A2D ABc|BAG AGE GEA GED|
 ADD BDD ADD ABc|BAG AGE GED D3:|`,
-			theSessionId: 5
-		};
+	theSessionId: 5
+};

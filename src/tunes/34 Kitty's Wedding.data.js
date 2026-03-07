@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Kitty's Wedding
 C:George Saunders
 R:hornpipe
@@ -14,5 +14,5 @@ K:Dmajor
 d2Bd A2FA BAFA D2 ED|B,DA,D DFBF AFEF D2:|
 |:fg|afed bafd Adfd edBd|DFAd FAde fdgf e2fg|
 afed bafd Adfd edBd|DFAd FAdf eABc d2:|`,
-			theSessionId: 869
-		};
+	theSessionId: 869
+};

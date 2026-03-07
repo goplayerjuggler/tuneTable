@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			incipit: `
+	groups: "su",
+	incipit: `
 X:1
 T: Na Farraigí Dearga
 T: The Seas They Ran Red with Blood
@@ -17,5 +17,5 @@ N: 4. Waiting to hear from Raelach Records before publishing my full transcripti
 L:1/8
 K:Dm
 A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D`,
-			parts: "AABBCC"
-		};
+	parts: "AABBCC"
+};

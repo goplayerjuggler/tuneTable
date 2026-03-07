@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Maudabawn Chapel
 C:Ed Reavy
 R:reel
@@ -15,8 +15,8 @@ K:Gmajor
 gbag efge dged B^cde|g2fa gedB AcBA GEED:|
 |:E2BE dEBE Ed^cB AFDF|~E3F GFGB AF (3FFF DFAF|
 EBBA B3B BAGA B^cde|f2af gfe^c dBAF GEED:|`,
-			contourShift: 1,
-			theSessionId: 302,
-			norbeckId: 62,
-			parts: "AABB"
-		};
+	contourShift: 1,
+	theSessionId: 302,
+	norbeckId: 62,
+	parts: "AABB"
+};

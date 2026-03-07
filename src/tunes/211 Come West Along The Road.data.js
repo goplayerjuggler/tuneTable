@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AB",
-			abc: `X:1
+	groups: "su",
+	parts: "AB",
+	abc: `X:1
 T:Come West Along The Road
 R:reel
 L:1/16
@@ -14,15 +14,15 @@ K:Gmajor
  d2BG dGBG G2(3Bcd efge|d2BG dGBG ABcd edBd||
  g2bg egdg egdg edBd   |g2bg egdg ABcd edBd|
  g2bg egdg egdg edBd   |gabg efge dega bage||`,
-			references: [
-				{
-					notes: `Éigse an Spidéil / Come West Along the Road
+	references: [
+		{
+			notes: `Éigse an Spidéil / Come West Along the Road
 Album: The High Seas (2018)`,
-					url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
-					artists:
-						"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
-				}
-			],
-			theSessionId: 474,
-			theSessionSettingId: 22920
-		};
+			url: "https://caitlinciaran.bandcamp.com/track/igse-an-spid-il-come-west-along-the-road",
+			artists:
+				"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki"
+		}
+	],
+	theSessionId: 474,
+	theSessionSettingId: 22920
+};

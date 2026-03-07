@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			abc: `X:1
+	groups: "su",
+	parts: "AABB",
+	abc: `X:1
 T:Lad O'Beirne’s
 C:Lad O’Beirne 
 R:reel
@@ -18,5 +18,5 @@ a2gf afgf dgfd cFAd|c2Bd cdfa gfga g2fg|
 af~f2 afgf dgfd cFAd|c2Bd cdfa gfga f3g|
 a2gf afgf dgfd cFAd|c2Bd cdfa gfga bagf|
 ~a3g ~f3c dcfd cAFD|CF~F2 DFBd cbag f3e||`,
-			theSessionId: 2316
-		};
+	theSessionId: 2316
+};

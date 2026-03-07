@@ -1,9 +1,9 @@
 export default {
-			groups: "su,alora",
-			parts: "ABCDEF",
-			tags: "flexible structure",
-			abc: [
-				`X:1
+	groups: "su,alora",
+	parts: "ABCDEF",
+	tags: "flexible structure",
+	abc: [
+		`X:1
 T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
@@ -44,7 +44,7 @@ P:F
 P:F’
  Bcd | .G2e-e2 c- cdc Bcd | .G2e- e2c- cde fdB | .G2e-e2 c- cdc Bcd | G2e cAF B3 ||`,
 
-				`
+		`
 X:1
 T:SNCF jigs
 R:jig
@@ -108,5 +108,5 @@ BcG \\ % or { BGE }
 P:G
 |: ABc | .F2d -d2 B- BcB ABc | .F2d- d2B- Bcd ecA | % or { Bdg e3 | }
       .F2d -d2 B- BcB ABc | F2d BGE A3 :|`
-			]
-		};
+	]
+};

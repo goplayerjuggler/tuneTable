@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Maid On The Green
 R:jig
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  ~g3 eGd|BeB dBA|BGG dBA|AGF GA/B/d:|
  |:~g3 afd|~g3 a2a|bag agf|gef g2a|
  bag agf|~g3 e2d|Bee dBA|AGF GA/B/d:|`,
-			theSessionId: 1831
-		};
+	theSessionId: 1831
+};

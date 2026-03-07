@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Hand Me Down The Tackle
 R:reel
 L:1/8
@@ -13,5 +13,5 @@ K:Dmajor
  d2 fd Adfd|~d2 fd edBc|d2 fd Adfd|BdAG FDDA|
  [1 d2 fd Adfd|cdef ~g2 fg|afge fede|BdAG FDD2:|
  [2 ~a3b agfa|~g2 ef gbag|faeg fdAF|GFEF GABc||`,
-			theSessionId: 800
-		};
+	theSessionId: 800
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Bedford Cross
 R:slide
 L:1/8
@@ -13,7 +13,7 @@ K:Amix
  [1 edB d2B A3 ABd:|2 edB d2B A3 A2||
  a|a2e ede f2e d2f|edB d2B A2B d2a|a2e ede f2e d2f|
  [1 edB d2B A3 A2:|2 edB d2B A3 ABd||`,
-			theSessionId: 7444,
-			norbeckId: 85,
-			parts: "AABB"
-		};
+	theSessionId: 7444,
+	norbeckId: 85,
+	parts: "AABB"
+};

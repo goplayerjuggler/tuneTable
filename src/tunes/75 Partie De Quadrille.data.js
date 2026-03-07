@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Partie De Quadrille
 O:Quebec
 R:jig
@@ -19,7 +19,7 @@ K:Fmajor
  B2A Bdc B2A Bdc|[M:9/8]B2A GBd g2f|1 ege cde fcB:|2 [M:12/8]ege cde fcA F3||
  |:a2a aga b3 b2a|g2g gfg ac'a cde|
  f2f fef g3 g2f|ege cde [1 fcA F3:|2 fcA FcB !D.C.! |]`,
-			theSessionId: 23388,
-			theSessionSettingId: 47849,
-			tags: "crooked"
-		};
+	theSessionId: 23388,
+	theSessionSettingId: 47849,
+	tags: "crooked"
+};

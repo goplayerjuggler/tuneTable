@@ -1,7 +1,7 @@
 export default {
-			tags: "crooked",
-			abc: [
-				`X: 1
+	tags: "crooked",
+	abc: [
+		`X: 1
 T:The Cameronian
 R: reel
 S:Rónán Galvin, fiddle
@@ -30,7 +30,7 @@ FGAg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 [M:5/2]defg fada egcf gbag fdcB!D.S.!|]
 `,
-				`X: 1
+		`X: 1
 T:The Cameronian
 R: reel
 S: Consuelo Nerea Breschi, fiddle; Eoghan O’Shaughnessy, fiddle
@@ -56,5 +56,5 @@ P:Ⅱ
 F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 [M:3/2]dgeg ^fdcA G2gf | [M:4/2] egce ^fdaf gbag fgfd!D.C.!|]
 `
-			]
-		};
+	]
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Street Player
 C:Ed Reavy
 R:reel
@@ -13,5 +13,5 @@ K:Dmajor
  FD D2 FAGA|BG G2 Bcdg|fgaf gecd|1 eddc dBAF:|2 eddc d2 Ad||
  |:fddc dfaf|gfed cdeg|f2 fa gfed|cAAG A2 EG|
  FDA,D FA A2|BG G2 Bcdg|fgaf gecd|1 eddc d2 Ad:|2 eddc d4||`,
-			theSessionId: 2739
-		};
+	theSessionId: 2739
+};

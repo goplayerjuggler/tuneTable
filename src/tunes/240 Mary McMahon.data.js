@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Mary McMahon
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ K:Dmajor
  fdec d2AG|FGAB =cAGc|Ad~d2 fdec|Addc d2e:|
  |:~f3g a2ga|bgag fdde|~f3g afga|bgaf g2ag|~f3g a2ga|
  bgag fdda|1 bgaf gbag|fdef g2ag:|2 bgaf gfed|(3Bcd ef gaag||`,
-			theSessionId: 1934
-		};
+	theSessionId: 1934
+};

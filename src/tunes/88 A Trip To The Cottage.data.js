@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:A Trip To The Cottage
 R:jig
 L:1/8
@@ -12,5 +12,5 @@ K:Gmajor
  dgd BAB|cBc AFD|DGG FGA|1 BGF GBc:|2 BGF GBd||
  gfe d^cd|edc Bcd|ecA dBG|FAG FED|
  gfe d^cd|edc Bcd|efg eag|1 fd^c def:|2 fd^c dB=c||`,
-			theSessionId: 833
-		};
+	theSessionId: 833
+};

@@ -1,5 +1,5 @@
 export default {
-			incipit: `X: 1
+	incipit: `X: 1
 T: Lord Gordon's
 F:http://www.juneberry78s.com/sounds/ami07.mp3
 S:Andy McGann, fiddle; ?, piano
@@ -10,8 +10,8 @@ M: 4/4
 L: 1/16
 K: Dmaj
 ADFD A,DFB|ADFD FAdc|BE~E2`,
-			parts: "AABBCCDDEE",
-			theSessionId: 1774,
-			norbeckId: 203,
-			itiId: 1151
-		};
+	parts: "AABBCCDDEE",
+	theSessionId: 1774,
+	norbeckId: 203,
+	itiId: 1151
+};

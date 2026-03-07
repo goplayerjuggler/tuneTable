@@ -1,6 +1,6 @@
 export default {
-			aka: "Paddy Fahey’s",
-			abc: `X:1
+	aka: "Paddy Fahey’s",
+	abc: `X:1
 T:Paddy Fahey’s No. 2
 C:Paddy Fahey
 R:jig
@@ -15,6 +15,6 @@ K:Cmajor
 c3 dcB cGE CEG|F3 DGF ECC C3:|
 |:c3 g^fg eaf gec|A2 f fef Adf afd|
 c3 g^fg eaf g2 a|gec fdB cGE C3:|`,
-			theSessionId: 2667,
-			parts: "AABB"
-		};
+	theSessionId: 2667,
+	parts: "AABB"
+};

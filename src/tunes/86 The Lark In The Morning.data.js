@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Lark In The Morning
 R:jig
 L:1/8
@@ -16,5 +16,5 @@ K:Dmajor
  dff fef|fef def|g2e f2d|edB BdB:|
  |:Add fdd|edd fdd|Add fdd|edB BdB|
  Add fdd|edB def|g2e f2d|edB BdB:|`,
-			theSessionId: 62
-		};
+	theSessionId: 62
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Balmoral Highlanders
 C:Angus MacKay
 R:march
@@ -13,5 +13,5 @@ K:Amixo
  A>e c<e A>e c<e|e>Af>A e2d>c|B<dG>B g>fe>d|c2A2 A<A:|
  |:e2|c<ea2 c<ea2|c<ea>f e2d>c|BBg2 BBg2|BBg2 a>gf>d|
  c<ea2 g>ea2|g>ef>d e2d>c|B<dG>B g>fe>d|c2A2 A<A:|`,
-			theSessionId: 8121
-		};
+	theSessionId: 8121
+};

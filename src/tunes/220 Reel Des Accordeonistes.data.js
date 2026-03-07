@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Reel Des Accordeonistes
 C:Marcel Messervier
 R:reel
@@ -15,5 +15,5 @@ K:Dmajor
  "G"(3BcB GB d2cB|"D"(3ABA FA d2cd|"A"efed cBAG|FABc "D"d2:|
  |:d2|"G"dBGd BGdA|"D"FdAF d2cd|"A"e2d2 (3cdc (3BcB|"D"ABAG Fddd|
  "G"dBGd BGdA|"D"FdAF d2cd|"A"efed cBAG|FABc "D"d2:|`,
-			theSessionId: 5933
-		};
+	theSessionId: 5933
+};

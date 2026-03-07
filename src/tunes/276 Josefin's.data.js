@@ -1,7 +1,7 @@
 export default {
-			groups: "alora",
-			name: "Johsefins Dopvals",
-			abc: `X:1
+	groups: "alora",
+	name: "Johsefins Dopvals",
+	abc: `X:1
 T:Josefin's
 C:Roger Tallroth
 O:Sweden
@@ -26,14 +26,14 @@ M:3/4
  |:B2 G2 F2|E2 B,2 D2|C2 A4|F4 B,2|E2 C2 B,2|A,2 G2 F2|G2 E4|F2 G2 A2|B2 D2 B,2|
  E2 D4|C2 G4|F2 A2 cB|A2 G2 F2|E2 D2 C2|D2 E2 G2|F2 G2 A2|G3 F E2|D2 B,4|
  CE GA Bc|ec AF GE|D2 GA B2|A2 c4-|1 c2 D2 E2|F2 G2 A2:|2 c2 B2 c2|[D6G,6B6]||`,
-			references: [
-				{
-					artists:
-						"Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
-					url: "https://youtu.be/_ZrfjHeFEr0",
-					notes: "@ Gamla Teatern, Östersund 2010"
-				}
-			],
-			theSessionId: 1016,
-			theSessionSettingId: 36756
-		};
+	references: [
+		{
+			artists:
+				"Väsen - Olov Johansson, nyckelharpa; Mikael Marin, viola; Roger Tallroth, guitar",
+			url: "https://youtu.be/_ZrfjHeFEr0",
+			notes: "@ Gamla Teatern, Östersund 2010"
+		}
+	],
+	theSessionId: 1016,
+	theSessionSettingId: 36756
+};

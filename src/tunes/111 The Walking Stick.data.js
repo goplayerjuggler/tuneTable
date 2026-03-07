@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			abc: `X:1
+	groups: "su",
+	abc: `X:1
 T:The Walking Stick
 C:Tommy Peoples
 F:https://youtu.be/1UhBWPM4uA8?t=62
@@ -18,5 +18,5 @@ K:Dmajor
  d2 f2 ag|bg B2(3ggg|fe Ac ec|d2d2:||:AF|
  D2 (3FGA df|a2 ge Ad|g2 fd Ad|(3fff dA FE|
  D2 (3FGA df|a2 ge Ad|fg fd AG|FA d2:|`,
-			theSessionId: 1302
-		};
+	theSessionId: 1302
+};

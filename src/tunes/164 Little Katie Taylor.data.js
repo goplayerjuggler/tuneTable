@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Little Katie Taylor
 C:Paddy Taylor
 R:reel
@@ -13,5 +13,5 @@ K:Dmajor
  D2 FD GEFE|(3DDD FA dfef|geaf edcd|1 ed (3ddc dBAF:|2 edce d3 g||
  |:fdfa (3ggg ag|fdfa (3ggg ag|fd=cA BG (3GGG|ABcA dcAg|
  fdfa (3ggg ag|fdfa (3ggg ag|fd=cA BG (3GGG|1 ABcA [d3DA3] g:|2 ABcA dBAF||`,
-			theSessionId: 2172
-		};
+	theSessionId: 2172
+};

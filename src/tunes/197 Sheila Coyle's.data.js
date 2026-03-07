@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Sheila Coyle's
 R:reel
 L:1/8
@@ -16,5 +16,5 @@ K:Dmajor
  FA(3AAA FADF|ADFA BAGF|GABd AF(3FFF|E(3EEEG FDD2:|
  |:dffe fgfe|dBAB ADFA|ceec e2ec|B2dA BAFA|
  dffe fgfe|dBAB AFDF|GABd AF(3FFF|E(3EEEG FDD2:|`,
-			theSessionId: 1040
-		};
+	theSessionId: 1040
+};

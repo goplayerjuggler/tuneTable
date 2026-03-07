@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Aherne's Egg
 C:Finbarr Dwyer
 R:jig
@@ -13,5 +13,5 @@ K:Emixo
  Bec d2B|cAB GEF|=GDB, BA^G|1 AFB EGA:|2 AFB EGB||
  ege d2B|cAE AFD|B,EG ABA|FBG ABc|
  BGB e2c|dAF DFA|GBG AFB|1 EFE EGB:|2 EFE EGA||`,
-			theSessionId: 4440
-		};
+	theSessionId: 4440
+};

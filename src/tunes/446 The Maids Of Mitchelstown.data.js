@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Maids Of Mitchelstown
 R:reel
 L:1/8
@@ -11,5 +11,5 @@ N:(edited after importing))
 K:Dminor
 |:D2AG EEG2 A2GA cAGE|D2AG EEG2 A2GE EDDC:|
 |:EGA=B c2AG Adde f2ed|cAGE F3G [1 AcGE EDD2:|2 Ac=Bd cAGE||`,
-			theSessionId: 120
-		};
+	theSessionId: 120
+};

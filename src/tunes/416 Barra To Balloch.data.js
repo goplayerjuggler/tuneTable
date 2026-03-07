@@ -1,6 +1,6 @@
 export default {
-			groups: "su",
-			incipit: `X: 2
+	groups: "su",
+	incipit: `X: 2
 T: Barra To Balloch
 C:Angus MacKenzie
 S:Dàimh
@@ -14,6 +14,6 @@ M: 12/8
 L: 1/8
 K: Baeol
 BAB d2 B efe edB|BAB`,
-			parts: "AABB",
-			theSessionId: 13601
-		};
+	parts: "AABB",
+	theSessionId: 13601
+};

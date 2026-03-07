@@ -1,6 +1,6 @@
 export default {
-			groups: "alora",
-			incipit: `
+	groups: "alora",
+	incipit: `
 X: 6
 T: Allistrum's March
 R: jig
@@ -11,6 +11,6 @@ M: 12/8
 L: 1/8
 K: Dmix
 B2G AGF G2g fdc|B2G AGF Ggf d2c|`,
-			theSessionId: 6188,
-			parts: "AABB"
-		};
+	theSessionId: 6188,
+	parts: "AABB"
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Donegal Lass
 C:Brian Finnegan
 R:jig
@@ -15,6 +15,6 @@ K:Amix
 Ace aed cdB A2a|aed cdB ABG A3:|
 GBd G3 FAd F3|e2e ecA e2e ecA|
 GBd G3 FAd F2a|aed cdB ABG A3:|`,
-			parts: "AABB",
-			theSessionId: 1497
-		};
+	parts: "AABB",
+	theSessionId: 1497
+};

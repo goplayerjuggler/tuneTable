@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 R:Polska
 O:Sweden
 H:2026-02-13, question sur groupe whatsApp/trad scandinave essaie d'identifier une polska ; ceci 
@@ -24,4 +24,4 @@ K:Ddor
 (3 A,2 D2F2 E<C | D>E F<G A2 | (3 A,2 D2F2 E<C | (3D2_B,2D2 A,2|
 (3 A,2 D2F2 E<C | D>E F<G A2 |(3 d2 A2 G2 E>C|  D2 D4 |]
 `
-		};
+};

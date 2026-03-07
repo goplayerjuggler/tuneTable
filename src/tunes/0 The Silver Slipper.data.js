@@ -1,5 +1,5 @@
 export default {
-			abc: `
+	abc: `
 %230717
 X: 1
 T:The Silver Slipper
@@ -17,14 +17,14 @@ M: 3/4
 |:FA dc d2|FA dA (3Bcd|FA dc ~d2|BG EF GE|
 FA dc d2|FA dA (3Bcd|ec dA FA|1 BG EF GE:|2 [M: 1/2]BG E!D.C.!G ||
 `,
-			references: [
-				{
-					notes:
-						"See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
-				}
-			],
-			tags: "crooked",
-			norbeckId: 20,
-			norbeckR: "slip+jig",
-			parts: "AABB"
-		};
+	references: [
+		{
+			notes:
+				"See [more comments & links I put on the session](https://thesession.org/tunes/8479#comment970217)"
+		}
+	],
+	tags: "crooked",
+	norbeckId: 20,
+	norbeckR: "slip+jig",
+	parts: "AABB"
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Swinging On The Gate
 R:reel
 L:1/16
@@ -13,5 +13,5 @@ K:Gmajor
 gedB G2AB cABG AGEG|cABG AGEG DGGF GABd:|
 |:~g3a bgaf gfed cBAG|EAAB cBAG (3EFG AB cdef|
 ~g3a bgaf gfed cBAB|cABG AGEG DGGF GABd:|`,
-			theSessionId: 236
-		};
+	theSessionId: 236
+};

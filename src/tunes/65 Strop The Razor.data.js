@@ -1,8 +1,8 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			abc: [
-				`X:1
+	groups: "su",
+	parts: "AABB",
+	abc: [
+		`X:1
 T:Strop The Razor
 R:jig
 L:1/8
@@ -17,7 +17,7 @@ K:Gmajor
   dcB cAA dcB cAF|D2E F2G ADE FGA:|
 |:B3 cBc d(3Bcd dBd|g3 gfd gba gdc|
   B3 cBc dB/c/d d2e|=f3 fde fdg ^fdc:|`
-			],
-			theSessionId: 693,
-			theSessionSettingId: 23367
-		};
+	],
+	theSessionId: 693,
+	theSessionSettingId: 23367
+};

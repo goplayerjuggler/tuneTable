@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Ormond Sound
 C:Paddy O’Brien (Offaly)
 R:reel
@@ -13,5 +13,5 @@ K:Adorian
  eA (3AAA BedB|AGEF G3 A|EA (3AAA GABd|1 gedB A2 (3EFG:|2 gedB A3 e||
  |:efge agfg|e ~a3 edBd|(3efg fa ~g3 e|dgge dBGB|
  cBcA d^cdB|efge a2 ga|bg (3ggg agab|1 gedB A3 e:|2 gedB A2 (3EFG||`,
-			theSessionId: 426
-		};
+	theSessionId: 426
+};

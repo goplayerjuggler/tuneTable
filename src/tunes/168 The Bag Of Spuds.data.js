@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Bag Of Spuds
 R:reel
 L:1/8
@@ -16,5 +16,5 @@ K:Adorian
  A2eA cAeA|ABcd e2dB|ABcd eg~g2|dBGA BAA2:|
  |:a2ea a2ea|agbg agef|gedc BGBd|gfga bgeg|
  a2ea ageg|agbg agef|gedc BGBd|1 gedB BAA2:|2 gfge dBGB||`,
-			theSessionId: 579
-		};
+	theSessionId: 579
+};

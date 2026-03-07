@@ -1,7 +1,7 @@
 export default {
-			groups: "su",
-			parts: "AABB",
-			abc: `X:1
+	groups: "su",
+	parts: "AABB",
+	abc: `X:1
 T:Paddy Cronin's
 S:from Jack Talty & Cormac Begley
 D:“Na Fir Bolg”, Raelagh Records RRCD002, 2011
@@ -19,5 +19,5 @@ EFG F2D E2F G2A|B2E GFE B2E GFE|
 D2F FED E2F G2A|1B2E GFE F2E D3:|2B2E GFE F2E D2d||
 |:ded c2d e2d cBA|B2E GFE B2E GFE|
 ded c2d e2d cBA|1B2E GFE F2E D2d:|2B2E GFE F2E D3|]`,
-			theSessionId: 8362
-		};
+	theSessionId: 8362
+};

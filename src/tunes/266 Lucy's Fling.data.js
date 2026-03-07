@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Lucy's Fling
 R:reel
 L:1/8
@@ -12,5 +12,5 @@ K:Amajor
 |:AFEF AB c2 (3dcB cA BAFA|AFEF ABcd efec (3BcB A2:|
 feae f2 af eccA BAFA|feae f2 af eccA (3BcB A2|
 feae f2 af eccA BAFA|AFEF ABcd efec (3BcB A2|`,
-			theSessionId: 3007
-		};
+	theSessionId: 3007
+};

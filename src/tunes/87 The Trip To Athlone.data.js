@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Trip To Athlone
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ K:Dmajor
 ABA D2d {e}dcA AGF|GFG Ade [1 fdc d2d:|2 fdc d2e||
 |:fed edc Adc Ade|fed efg AB=c def|
 ~g3 age {a}ed=c AGF|~G3 Ade[1 fdc d2e:|2 fdc d2d||`,
-			theSessionId: 1301
-		};
+	theSessionId: 1301
+};

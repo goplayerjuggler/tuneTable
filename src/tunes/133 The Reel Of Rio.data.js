@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Reel Of Rio
 C:Sean Ryan
 R:reel
@@ -14,10 +14,10 @@ K:Gmajor
 DEGA BABd egg2 agef|gede gedB AcBA G2:|
 |:Bc|dgg2 bgg2 bgag edBd|eBB2 GABd e2dB AGEG|
 DEGA BABd egg2 agef|gede gedB AcBA G2:|`,
-			theSessionId: 575,
-			references: [
-				{
-					notes: "see also: Christmas Eve"
-				}
-			]
-		};
+	theSessionId: 575,
+	references: [
+		{
+			notes: "see also: Christmas Eve"
+		}
+	]
+};

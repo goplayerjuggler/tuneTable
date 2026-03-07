@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Ard Baithen
 C:Tommy Peoples
 R:jig
@@ -15,5 +15,5 @@ K:Dmajor
  ABA f~g2|g~a2 d=cA|B~=c2 E=cE|DFA d2 z:|
  |:DED DED|dAd cAF|[E3/2A,3/2][E/A,/][EA,] GEC|A,CE GEC|
  (3.D.D.DD DED|dAd cAF|[E3/2A,3/2][E/A,/][EA,] GEC|A,EC D2 z:|`,
-			theSessionId: 6807
-		};
+	theSessionId: 6807
+};

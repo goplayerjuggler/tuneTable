@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Cuckoo
 R:hornpipe
 L:1/8
@@ -13,13 +13,13 @@ K:Gmajor
  bg ~g2 dgBg|bg ~g2 dgBg|
  [1 c'a~a2 eaca|c'a~a2 eaca:|
  [2 ((3aba) ((3gag) ((3fgf) ((3efe)|((3ded) ((3cdc) B2||`,
-			references: [
-				{
-					artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
-					url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=8",
-					notes: `(78 rpm) The cuckoo, hornpipe; The sweeps [Jim Coleman’s], hornpipe
+	references: [
+		{
+			artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
+			url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=8",
+			notes: `(78 rpm) The cuckoo, hornpipe; The sweeps [Jim Coleman’s], hornpipe
 Gardiner, John Joe, 1893-1979`
-				}
-			],
-			theSessionId: 573
-		};
+		}
+	],
+	theSessionId: 573
+};

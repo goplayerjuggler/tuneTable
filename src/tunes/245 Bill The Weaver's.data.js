@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Bill The Weaver's
 R:slide
 L:1/8
@@ -13,5 +13,5 @@ g3|:fed B2d A2d F2B|A2F DEF E3 E2g|
  |:fef a2a baf a2f|fef a2f g3 f2e|
  [1fef a2a baf a2f|d2f a2f d3 d2g:|
  [2fga efg fed B2d|ABA GFE D3||`,
-			theSessionId: 1527
-		};
+	theSessionId: 1527
+};

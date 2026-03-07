@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:La Grande Traversée
 C:Marcel Messervier
 O:Quebec
@@ -15,7 +15,7 @@ A3e edef e2c2 B2A2 |1 dFAd fedc B2A2 {B}A2G2:|2 [M:3/4]d2AA BAFA d2ed||
 [M:4/4][K:A]|:cecA EAce d2B2 B4 | GBBB ddBd ffed c2ed |
 cecA EAce d2B2 B4 | [1 GBBB ddBd fece  a2ed:|2 [M:5/4]GBBB ddBd fece  a4 A2SG2||
 `,
-			tags: "crooked",
-			theSessionId: 17379,
-			theSessionSettingId: 33333
-		};
+	tags: "crooked",
+	theSessionId: 17379,
+	theSessionSettingId: 33333
+};

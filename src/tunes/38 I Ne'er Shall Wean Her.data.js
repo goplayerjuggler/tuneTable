@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:I Ne'er Shall Wean Her
 R:jig
 L:1/8
@@ -13,5 +13,5 @@ K:C
  cde g2a ged c2d|eaa e2d cAA A2:|
  |:d|egg ged egg g2d|eaa aga baa a2g|
  cde g2a ged c2d|eaa e2d cAA A2:|`,
-			theSessionId: 803
-		};
+	theSessionId: 803
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Blackhaired Lass
 R:reel
 L:1/8
@@ -11,5 +11,5 @@ K:Adorian
 AB|:cBAB cdec|d2 gd BGGB|cBAB cdec|dfec A2 AB:|
  cdef g2 ge|f2 fd gfed|cdef ~g3e|fdec A2 AB|
  cdef gfeg|~f3d g2 fg|(3agf ge fdec|dfec A2 AB||`,
-			theSessionId: 237
-		};
+	theSessionId: 237
+};

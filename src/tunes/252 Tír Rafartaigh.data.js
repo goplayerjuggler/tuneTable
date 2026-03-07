@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Tír Rafartaigh
 C:Michael Rooney
 R:slip jig
@@ -13,5 +13,5 @@ D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF AFE|
  D2F FED EFA|d2f fed efa|g2f ede fdA|B2B BAF EFG|
  AB/c/d def ede|f2a abf afd|g2f ede fdA|B2B BAF EFG|
  AB/c/d def ede|f2a abf afd|g2f ede fdA|B2B BAF AFE|`,
-			theSessionId: 2143
-		};
+	theSessionId: 2143
+};

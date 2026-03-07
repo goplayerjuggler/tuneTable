@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Banks
 R:hornpipe
 L:1/8
@@ -15,6 +15,6 @@ K:Ebmajor
  DBfB DBfB|EBgB EBgB|=ABcd ecAc|B=ABc B_AGF|
  EGBG eBFE|DFBF dFED|CEGE cBAG|FGFE DCB,A,|
  G,EBE G,EBE|A,EcE A,EcE|DEFG AFDF|E2 G2 E2:|`,
-			theSessionId: 922,
-			parts: "AABB"
-		};
+	theSessionId: 922,
+	parts: "AABB"
+};

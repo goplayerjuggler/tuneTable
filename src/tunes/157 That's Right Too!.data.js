@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:That's Right Too!
 C:Liz Carroll
 R:reel
@@ -13,5 +13,5 @@ K:Dmajor
  D2 FA FEED|d2 ef edfd|BD D2 Bd d2|AFEF D4:|
  |:afef d2 dB|A2 FD EDDb|afef d2 da|efae f2 fe|
  d2 ef edBA|BcdD FE E2|BD D2 Bd d2|AFEF D4:|`,
-			theSessionId: 1703
-		};
+	theSessionId: 1703
+};

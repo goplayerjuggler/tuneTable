@@ -1,5 +1,5 @@
 export default {
-			abc: `
+	abc: `
 X: 3
 T: Spórt
 C:Peadar Ó Riada
@@ -18,6 +18,6 @@ fef gfg faf d2e|fdF AFA GEA D2 A:|
 |:AGG AEE AGE EDD|AGG c2 e dcA AGE|
 AGG AEE AGE EDD|cdc A2G EAA D3:|
 `,
-			theSessionId: 870,
-			norbeckId: 469
-		};
+	theSessionId: 870,
+	norbeckId: 469
+};

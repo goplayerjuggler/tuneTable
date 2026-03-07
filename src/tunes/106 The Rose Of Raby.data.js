@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:The Rose Of Raby
 C:Dave Shepherd
 R:mazurka
@@ -15,5 +15,5 @@ GA|:B2 BG Bd|A4 AB|(3cBA Bcde|dc BA GA|
  dc Bd cB|cB Ac BA|B2 GA Bc|A2 AF GA|
  B2 BG Bd|A4 FA|c2 cd (3edc|d2 dB GA|
  B2 GB dc|A2 FA cB|G2 G2 (3AGF|1 G4 GA:|2 G6||`,
-			theSessionId: 7885
-		};
+	theSessionId: 7885
+};

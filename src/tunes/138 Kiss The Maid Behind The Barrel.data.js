@@ -1,5 +1,5 @@
 export default {
-			abc: `X:1
+	abc: `X:1
 T:Kiss The Maid Behind The Barrel
 R:reel
 L:1/16
@@ -16,5 +16,5 @@ G2dG BGdG ~G2dB cAFA| G2dG BGBc defd cAFA|
 G2dG BGdG ~G2dB cAFA| ~B3G ADFA defd cAFA||
 B3G ~A2AG BABd gedc|B2GB ADFA defd cAFA|
 B3G ~A2AG BABd gedc|BG~G2 ADFA defd cAFA||`,
-			theSessionId: 676
-		};
+	theSessionId: 676
+};

@@ -1,5 +1,5 @@
 export default {
-			abc: `
+	abc: `
 X: 1
 T: John Doherty's Mazurka
 S: John Doherty, fiddle
@@ -43,4 +43,4 @@ cd BA eA | cd BA eA | !coda!GA Bc (3dBG |[1 A2 A2 ed :|[2 A2 A2 E2 !D.S.! |]
 P:E (coda)
 !coda! GA Bc (3dBG | !fermata!A4|]
 `
-		};
+};
