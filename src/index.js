@@ -1,6 +1,6 @@
 "use strict";
 import "./styles.css";
-import tunesDataRaw from "./tunes.json.js";
+import tunesDataRaw from "./tunes.compiled.js";
 import { normaliseKey, sort as contourSort } from "@goplayerjuggler/abc-tools";
 
 import { processTuneData } from "./processTuneData.js";
@@ -227,12 +227,12 @@ function collapseNotes(tuneIndex, refIndex) {
 }
 
 // Extract all metadata values from a tune for display and filtering.
-// Returns an array of metadata strings including rhythm, parts, key, composer(s), origin, and badges.
+// Returns an array of metadata strings including rhythm, parts, key, composer(s), origin, and tags.
 function getTuneMetadata(tune) {
-	const badges = tune.badges
-		? Array.isArray(tune.badges)
-			? tune.badges
-			: [tune.badges]
+	const tags = tune.tags
+		? Array.isArray(tune.tags)
+			? tune.tags
+			: [tune.tags]
 		: [];
 	const origin = tune.origin
 		? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
@@ -246,13 +246,12 @@ function getTuneMetadata(tune) {
 		tune.key,
 		...composer,
 		...origin,
-		...badges
+		...tags
 	].filter((m) => m);
 }
 
 function sortWithDefaultSort() {
 	contourSort(window.tunesData);
-	window.tunesData.forEach((t) => delete t.baseRhythm); //todo: could handle baseRhythm in processTuneData instead
 }
 
 function openSessionImport() {
@@ -688,7 +687,7 @@ function applyFilters() {
 			return matchesRhythm && matchesKey;
 		}
 
-		// Search in metadata (rhythm, parts, key, composer, origin, badges)
+		// Search in metadata (rhythm, parts, key, composer, origin, tags)
 		const metadata = getTuneMetadata(tune);
 		if (metadata.some((m) => m.toLowerCase().includes(searchTerm))) {
 			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;

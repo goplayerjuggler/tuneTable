@@ -73,7 +73,7 @@ A tip of the hat to:
 This project uses dual licensing:
 
 - **Code (JavaScript, HTML, CSS)**: [MIT License](LICENSE-CODE)
-- **Tune list data (.json.js files)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
+- **Tune list data (.data.js files)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
 
 ### What this means:
 
