@@ -14,11 +14,12 @@ Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4
 K:C mixo
 P:Ⅰ
 |: GF | DEFD "^v1"(3EDC FD (3EDC FD E2DC | (3GAG AF (3GAG AF (3GAB AF GD (3DCD |
-B3G AGFD C2cA GF (3EDC  |  ECFD E2DE C2c2 =BGFD | C2DE FGFD CDCD CDCD | C4-C2 :|
+B3G AGFD C2cA GF (3EDC  |  ECFD E2DE C2c2 =BGFD | C2DE FGFD CDCD CDCD | [M:2/2] C4-C2 :|
 P:Ⅱ
-|: z2 | GFGA BcBA GFGA Bc (3BGF | G2c2 (3dc=B c2 G2c2 C2(3BGF |
+|: z2 |[M:4/2] GFGA BcBA GFGA Bc (3BGF | G2c2 (3dc=B c2 G2c2 C2(3BGF |
 D2B2 D2BA GFGA B3d | (3edc (3dc=B (3cBG (3AGF DEFD E2DE |
 C2c2 =BGFD C2DE FGFD | CDCD CDCD C4-C2 :|
 P:variations
-(3"^v1"EDC (3FED (3EDC FD`
+(3"^v1"EDC (3FED (3EDC FD`, tags:"crooked" 
+	, parts:"AABB" 
 };
