@@ -60,7 +60,7 @@ F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 	],
 	references: [
 		{
-			notes: `I tagged this “Ambiguous tonic” as it’s not completely clear what to take as the tonic. The tonic can either be heard as the second note of the tune, or else one step up from that note. At the moment I’m going with the latter option. This is non-trivial question that changes where the sorting algorithm I’m using puts this tune.`
+			notes: `I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic. The tonic can either be heard as the second note of the tune, or else one step up from that note. At the moment I’m going with the latter option. This is non-trivial question that changes where the sorting algorithm I’m using puts this tune.`
 		}
 	]
 };
