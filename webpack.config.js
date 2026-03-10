@@ -17,6 +17,9 @@ const __dirname = path.dirname(__filename);
 // Custom plugin to concatenate tune files before build
 class ConcatenateTunesPlugin {
 	apply(compiler) {
+		// Persists across recompilations within one webpack session
+		let lastInputHash = null;
+
 		compiler.hooks.beforeCompile.tapAsync(
 			"ConcatenateTunesPlugin",
 			(params, callback) => {
@@ -33,52 +36,45 @@ class ConcatenateTunesPlugin {
 						"tunes.compiled.js"
 					);
 
-					console.log("Concatenating tune files...");
-
-					// Read all .js files from tunes directory (excluding index.js if it exists)
 					const tuneFiles = fs
 						.readdirSync(tunesDir)
 						.filter((f) => f.endsWith(".js") && f !== "index.js");
 
-					console.log(`Found ${tuneFiles.length} tune files`);
+					// Hash based on filenames + mtimes — cheap and sufficient
+					const inputHash = tuneFiles
+						.map((f) => {
+							const stat = fs.statSync(path.join(tunesDir, f));
+							return `${f}:${stat.mtimeMs}`;
+						})
+						.join("|");
 
-					// Read and extract object literals from each file
+					if (inputHash === lastInputHash) {
+						// Inputs unchanged — skip silently (handles duplicate startups
+						// and any spurious recompilations)
+						return callback();
+					}
+
+					console.log(`Concatenating ${tuneFiles.length} tune files...`);
+
 					const tuneObjects = tuneFiles.map((filename) => {
 						const filepath = path.join(tunesDir, filename);
 						const content = fs.readFileSync(filepath, "utf8");
-
-						// Extract everything between the first and last lines
 						const lines = content.trimEnd().split("\n");
-
 						return `{${lines.slice(1, -1).join("\n")}}`;
 					});
 
-					// Create the array literal with proper indentation
 					const arrayLiteral =
 						"[\n        " + tuneObjects.join(",\n        ") + "\n    ]";
 
-					// Read the template file
 					const template = fs.readFileSync(templateFile, "utf8");
-
-					// Replace the placeholder with the array
 					const newContent = template.replace(
 						"//CopyTunesHere",
 						`tunes: ${arrayLiteral},`
 					);
 
-					// Only write if content changed (prevents infinite loop + unnecessary rebuilds)
-					let shouldWrite = true;
-					if (fs.existsSync(outputFile)) {
-						const existingContent = fs.readFileSync(outputFile, "utf8");
-						shouldWrite = existingContent !== newContent;
-					}
-
-					if (shouldWrite) {
-						console.log(
-							`Regenerating tunes.json.js with ${tuneFiles.length} tunes`
-						);
-						fs.writeFileSync(outputFile, newContent, "utf8");
-					}
+					fs.writeFileSync(outputFile, newContent, "utf8");
+					lastInputHash = inputHash;
+					// Only update hash after a successful write
 					callback();
 				} catch (error) {
 					console.error("Error concatenating tunes:", error);
@@ -87,7 +83,6 @@ class ConcatenateTunesPlugin {
 			}
 		);
 
-		// Tell webpack to watch the tune files
 		compiler.hooks.thisCompilation.tap(
 			"ConcatenateTunesPlugin",
 			(compilation) => {
@@ -104,7 +99,6 @@ class ConcatenateTunesPlugin {
 		);
 	}
 }
-
 export default (env, argv) => {
 	const isDevelopment = argv.mode === "development";
 	return {
@@ -176,12 +170,16 @@ export default (env, argv) => {
 			watchFiles: {
 				paths: ["src/**/*"],
 				options: {
-					ignored: ["**/node_modules/**", "**/dist/**"]
+					ignored: [
+						"**/node_modules/**",
+						"**/dist/**",
+						"**/src/tunes.compiled.js"
+					]
 				}
 			}
 		},
 		watchOptions: {
-			ignored: ["**/node_modules/**"]
+			ignored: ["**/node_modules/**", "**/src/tunes.compiled.js"]
 		},
 		optimization: {
 			minimizer: [
