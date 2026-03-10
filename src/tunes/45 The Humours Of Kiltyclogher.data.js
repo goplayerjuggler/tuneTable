@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	tags: "ambiguous tonic",
 	parts: "AABB",
 	abc: `X:1
 T:The Humours Of Kiltyclogher
@@ -22,6 +23,9 @@ K:Adorian
 				"The Kelly Family: John Kelly Jnr, fiddle; James Kelly, fiddle; Johnny Kelly, fiddle; Leah Kelly, fiddle; Aoife Kelly, concertina; Cathy Potter, harp; Charlie Le Brun, flute",
 			album:
 				"A Family Tradition: Traditional Irish Music from The Kelly Family "
+		},
+		{
+			notes: `I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic. Using the key signature and dots given here, it can be taken as A dorian, or else D mixolydian. At the moment I’m going with the first option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.`
 		}
 	],
 	theSessionId: 1043

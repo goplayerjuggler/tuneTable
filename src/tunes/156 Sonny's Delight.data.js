@@ -27,8 +27,7 @@ dGBG cBGA BcBG FDB,C|DFFF GABG FDCD B,4:|`,
 	references: [
 		{
 			notes: `1. I entirely agree with the comments entered by “benhockenberry” – it’s a lovely reel, with some remarkable long lonesome notes.
-2. I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic. The tonic can either be heard as the first note of the tune, or else one step down from that note. At the moment I’m going with the latter option. This is non-trivial question that changes where the sorting algorithm I’m using puts this tune.
-The score I adapted from the session had this as C minor, but I feel it’s better to have it as B♭ major. `
+2. I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic.  Using the key signature and dots given here, it can be taken as C dorian, or else B♭ major. At the moment I’m going with the latter option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.`
 		}
 	]
 };

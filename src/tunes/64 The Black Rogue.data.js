@@ -1,4 +1,6 @@
 export default {
+	tags: "ambiguous tonic",
+	parts: "AABB",
 	abc: `X:1
 T:The Black Rogue
 R:jig
@@ -14,12 +16,16 @@ cAA BGG cAA AFD|G2 A (B/c/d)B[1 AFD D2 B:|2 AFD D3||
 |:~f3 ~g3 afd cBA|~f3 gfg afd dfg|
 agf gfe fed e/f/ed|cBA BAG AFD D3:|`,
 	theSessionId: 1076,
+	norbeckId: 149,
 	references: [
 		{
 			url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
 			artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
 			notes: `The Black Rogue; Morrison’s
 Album: A Man Apart (2004)`
+		},
+		{
+			notes: `I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic. Using the key signature and dots given here, it can be taken as A mixolydian, or else D major. At the moment I’m going with the first option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.`
 		}
 	]
 };
