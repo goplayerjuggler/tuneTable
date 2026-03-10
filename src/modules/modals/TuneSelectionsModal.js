@@ -913,7 +913,7 @@ export default class TuneSelectionsModal extends Modal {
 			this._setLists.push(this._current);
 		}
 		this._renderSavedList();
-		this._callbacks.saveTunesToStorage?.(this._setLists);
+		this._callbacks.saveSetListsToStorage(this._setLists);
 		this._recomputeDirty(); // will be false — content now matches saved version
 		const btn = this.element.querySelector(".ts-save-btn");
 		const orig = btn.textContent;
