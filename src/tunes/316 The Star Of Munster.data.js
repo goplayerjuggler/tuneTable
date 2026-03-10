@@ -1,5 +1,6 @@
 export default {
 	groups: "alora",
+	parts: "AABB",
 	abc: `X: 1
 T:The Star Of Munster
 T: (as played by Patsy Hanly – more or less!)
@@ -33,11 +34,18 @@ eaab ageg a2ba agef|~g3b a2ab- bc'ba [1 gedg :| [2 gedB !D.S.!||`,
 			artists: "Seán Ryan, fiddle",
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2025/?track=2",
 			notes:
-				"(1960s) A setting in a major or mixo mode. (Sort of; ish). Interesting! H. Norbeck wrote a [score for it](https://www.norbeck.nu/abc/display.asp?rhythm=reel&ref=853)."
+				"(1960s) A setting in a major or mixo mode. (Sort of; ish). Interesting! H. Norbeck wrote a [score for it](https://www.norbeck.nu/abc/display.asp?rhythm=reel&ref=853)!"
 		},
 		{
 			artists: "Joe Ryan, fiddle; John Kelly, fiddle ",
 			url: "https://youtu.be/NOs3GW161Co?t=163"
+		},
+		{
+			artists: "Doireann Glackin, fiddle",
+			url: "https://thehousekeepers.bandcamp.com/track/sonnys-delight-the-star-of-munster-reels",
+			notes:
+				"In a set: Sonny’s Delight / The Star Of Munster. She plays a very nice, unusual Tommy Potts-style setting.",
+			album: "The Housekeepers"
 		}
 	]
 };
