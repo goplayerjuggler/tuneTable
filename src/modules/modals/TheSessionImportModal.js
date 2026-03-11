@@ -242,16 +242,11 @@ export default class TheSessionImportModal extends Modal {
 				await TheSessionImportModal.delay(200);
 			}
 
+			let message = "";
 			// Show results
 			if (importedTunes.length > 0) {
-				let message = `Successfully imported ${importedTunes.length} tunes.`;
-				if (skippedTunes.length > 0) {
-					message += ` Skipped ${skippedTunes.length} tunes already in list.`;
-				}
-				this.showStatus(message, "success");
+				message = `Successfully imported ${importedTunes.length} tunes: ${importedTunes.join(", ")}`;
 			}
-			// Show results
-			let message = `Successfully imported ${importedTunes.length} tunes.`;
 			if (skippedTunes.length > 0) {
 				message += ` Skipped ${skippedTunes.length} tunes already in list.`;
 			}
