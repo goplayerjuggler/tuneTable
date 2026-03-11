@@ -1,7 +1,7 @@
 export default {
 	abc: `X:1
 T:Lucy's Fling
-R:reel
+R:fling
 L:1/8
 M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
