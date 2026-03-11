@@ -265,7 +265,10 @@ function sortWithDefaultSort() {
 }
 
 function openSessionImport() {
-	const modal = new TheSessionImportModal(window.tunesData);
+	const modal = new TheSessionImportModal(
+		window.tunesData,
+		copyTuneDataToClipboard
+	);
 	modal.open();
 }
 
