@@ -95,6 +95,9 @@ npm run dev
 npm run build
 # working with abc-tools
 npm link ..\abctools
+## check the link
 npm ls --global
-npm uninstall -g  @goplayerjuggler/abc-tools
+## remove and recreate the link
+npm uninstall -g  @goplayerjuggler/abc-tools 
+  ### seems to be needed each time the abc-tools’ version is bumped
 ```
