@@ -83,6 +83,11 @@ DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/
 				"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Natalie Haas, cello",
 			notes: `(2021; Galway) A version that’s quite close to the Fidil one; it also has some very pretty things going on on the cello.
 More info in youtube - follow the link.`
+		},
+		{
+			notes:
+				"Several other S. Peoples compositions (three slip jigs, two reels, one barndance, one waltz, and one other mazurka) with scores, and recordings made by the composer.",
+			url: "https://www.itma.ie/saothar/siobhan-peoples/"
 		}
 	],
 	theSessionId: 23320,
