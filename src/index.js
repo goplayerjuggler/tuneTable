@@ -385,8 +385,15 @@ function initialiseData() {
 		} else setLists = tunesDataRaw.setLists.filter((l) => !l.groups);
 		if (setLists && setLists.length > 0) {
 			tuneSelectionsModal.loadSetLists(setLists);
+			window._setLists = setLists;
 		}
 	}
+	window._setLists.forEach((sl) => {
+		sl.sets.forEach((s) => {
+			if (!s.tunes) s.tunes = [];
+		});
+	});
+
 	let filtered = false;
 
 	populateFilters();
