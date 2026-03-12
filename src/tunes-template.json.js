@@ -6,7 +6,7 @@ export default {
 			id: "1771406869982-ukwxx",
 			name: "Steam up sets",
 			dateCreated: "2026-02-18T09:27:49.982Z",
-			dateModified: "2026-03-12T00:38:27.659Z",
+			dateModified: "2026-03-12T01:15:00.031Z",
 			groups: "su",
 			sets: [
 				{
@@ -132,6 +132,12 @@ export default {
 					tunes: [
 						{
 							theSessionId: 257
+						},
+						{
+							theSessionId: 2120
+						},
+						{
+							theSessionId: 174
 						}
 					],
 					collapsed: true
@@ -231,7 +237,19 @@ export default {
 					name: "Fin de concert"
 				},
 				{
-					name: "Encore"
+					name: "Encore",
+					tunes: [
+						{
+							theSessionId: 148
+						},
+						{
+							theSessionId: 48
+						},
+						{
+							theSessionId: 46
+						}
+					],
+					collapsed: true
 				},
 				{
 					name: "Rookery set (4-3-4) ",

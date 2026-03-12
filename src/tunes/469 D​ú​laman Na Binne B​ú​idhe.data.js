@@ -1,6 +1,7 @@
 export default {
+	parts: "AB",
 	abc: `X:1
-T:D​ú​laman Na Binne B​ú​idhe
+T:Dúlaman Na Binne Búidhe
 T:as played by Néillidh Boyle
 N:
 N: 1. Played fast, with a swing on the semiquavers, so “𝅘𝅥𝅯𝅘𝅥𝅯=♪𝅘𝅥𝅯”.
@@ -21,6 +22,5 @@ L:1/16
 K:G
 GAB"^(*)"G cGBG GABc dB"^(*)"g2 | "^(**)"GABG cGBG AGAB c2BA :|
 |: BcdB gBdg Bgdf g2G2 | Bgdf ggdB AGAB c2BA :|
-yy"^(*) variation "GAB"<["">]"d cGBG GABc dB"<["g">]"G yy||yy "^(**) variation"GGBG dBGB yy`,
-	parts: "AABB"
+yy"^(*) variation "GAB"<["">]"d cGBG GABc dB"<["g">]"G yy||yy "^(**) variation"GGBG dBGB yy`
 };
