@@ -1,14 +1,69 @@
 export default {
-	lastUpdate: "2026-03-11",
+	lastUpdate: "2026-03-12",
 	//CopyTunesHere
 	setLists: [
 		{
 			id: "1771406869982-ukwxx",
 			name: "Steam up sets",
 			dateCreated: "2026-02-18T09:27:49.982Z",
-			dateModified: "2026-03-07T03:17:46.666Z",
+			dateModified: "2026-03-12T00:38:27.659Z",
 			groups: "su",
 			sets: [
+				{
+					name: "Karen's mazurka (3-4)",
+					tunes: [
+						{
+							ttId: 478
+						},
+						{
+							theSessionId: 759
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Elie's polkas (3-3-3)",
+					tunes: [
+						{
+							theSessionId: 7531
+						},
+						{
+							theSessionId: 786
+						},
+						{
+							theSessionId: 9174
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Boil the breakfast (3-3)",
+					tunes: [
+						{
+							theSessionId: 3
+						},
+						{
+							theSessionId: 605
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Funeray",
+					collapsed: true
+				},
+				{
+					name: "Flings (4-2)",
+					tunes: [
+						{
+							theSessionId: 8204
+						},
+						{
+							theSessionId: 1746
+						}
+					],
+					collapsed: true
+				},
 				{
 					name: "This Is My Love Slide set (3-3-3)",
 					tunes: [
@@ -25,16 +80,86 @@ export default {
 					collapsed: true
 				},
 				{
-					name: "Rookery set (4-3-4) ",
+					name: "Dann's A Luideagan Odhar"
+				},
+				{
+					name: "Elie's jigs (3-3-3)",
 					tunes: [
 						{
-							theSessionId: 2958
+							theSessionId: 1570
 						},
 						{
-							theSessionId: 9828
+							theSessionId: 183
 						},
 						{
-							theSessionId: 9639
+							theSessionId: 2191
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Beauties Of Autumn",
+					tunes: [
+						{
+							theSessionId: 4553
+						},
+						{
+							theSessionId: 5675
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Paddy's song"
+				},
+				{
+					name: "Fishstreet & Drummond Castle (3-3)",
+					tunes: [
+						{
+							theSessionId: 4930
+						},
+						{
+							theSessionId: 2540
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Cad é Sin"
+				},
+				{
+					name: "Mother's delight",
+					tunes: [
+						{
+							theSessionId: 257
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "2nd polka set",
+					tunes: [
+						{
+							theSessionId: 11600
+						},
+						{
+							theSessionId: 647
+						},
+						{
+							theSessionId: 11676
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Maloney Puts His Name Above The Door",
+					tunes: [
+						{
+							ttId: 472
+						},
+						{
+							theSessionId: 70,
+							notes: "x2"
 						}
 					],
 					collapsed: true
@@ -58,41 +183,67 @@ export default {
 					collapsed: true
 				},
 				{
-					name: "2nd polka set",
+					name: "Palmer's Gete",
 					tunes: [
 						{
-							theSessionId: 11600
+							theSessionId: 1057
 						},
 						{
-							theSessionId: 647
-						},
-						{
-							theSessionId: 11676
+							theSessionId: 1020
 						}
 					],
 					collapsed: true
 				},
 				{
-					name: "Beauties Of Autumn",
+					name: "When I was in my prime"
+				},
+				{
+					name: "Tiny the Trooper - Slip jigs (3-3)",
 					tunes: [
 						{
-							theSessionId: 4553
+							theSessionId: 14242
 						},
 						{
-							theSessionId: 5675
+							ttId: 348
 						}
 					],
 					collapsed: true
 				},
 				{
-					name: "Maloney Puts His Name Above The Door",
+					name: "Paddy Caney's toast (3-3-3)",
 					tunes: [
 						{
-							ttId: 472
+							theSessionId: 541
 						},
 						{
-							theSessionId: 70,
-							notes: "x2"
+							theSessionId: 263
+						},
+						{
+							theSessionId: 2241
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Belle Of Belfast"
+				},
+				{
+					name: "Fin de concert"
+				},
+				{
+					name: "Encore"
+				},
+				{
+					name: "Rookery set (4-3-4) ",
+					tunes: [
+						{
+							theSessionId: 2958
+						},
+						{
+							theSessionId: 9828
+						},
+						{
+							theSessionId: 9639
 						}
 					],
 					collapsed: true

@@ -1,7 +1,6 @@
 export default {
 	parts: "AABB",
-	abc: [
-		`X:1
+	abc: `X:1
 T:
 C:Jimmy Ward
 R:jig
@@ -15,8 +14,7 @@ K:Amixolydian
 |:A3 ABc BAF AFE|AAA BAF AFE E2F|
 AAA ABc BAF ABc|dcB cAF[1 EFE EFE:|2 EFE E2E||
 dcB cBA BcB BAF|dcB cAF EFE EFA|
-dcB cBA BBA Bcd|edB BAF[1 AFE E2c:|2 AFE EFG||`
-	],
+dcB cBA BBA Bcd|edB BAF[1 AFE E2c:|2 AFE EFG||`,
 	theSessionId: 793,
 	theSessionSettingId: 13942
 };

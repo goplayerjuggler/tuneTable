@@ -15,5 +15,11 @@ DFF2 DGG2 DFF2 E2FE|DFF2 ABde fdAG FDDA:|
 |:fgaf g2ag fgaf gfeg|fgaf g2ag fdAG FDDA|
 fgaf g2ag fgaf gfeg|fdAF G2ag fdAG FDDA:|`,
 	theSessionId: 1432,
-	theSessionSettingId: 29077
+	theSessionSettingId: 29077,
+	references: [
+		{
+			notes:
+				"The B part somewhat reminds me of the B part of Molloy’s Favourite."
+		}
+	]
 };

@@ -1,6 +1,7 @@
 export default {
+	groups: "su, alora",
+	parts: "AB|ABB",
 	name: "The £42 Cheque",
-	groups: "ALORA",
 	incipit: `X: 1
 M: 4/4
 L: 1/8

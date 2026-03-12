@@ -9,10 +9,5 @@ L: 1/16
 K: Gmaj
 BGAG EGDG EGDG EGDE|G2Bd egdg`,
 	theSessionId: 2958,
-	norbeckId: 992,
-	references: [
-		{
-			notes: "SU: followed by (JC’s) Morning Dew"
-		}
-	]
+	norbeckId: 992
 };

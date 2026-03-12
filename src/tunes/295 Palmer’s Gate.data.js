@@ -3,12 +3,14 @@ export default {
 	rhythm: "reel",
 	parts: "AABB",
 	groups: "SU",
-	incipit: `X: 1
-M: 4/4
+	incipit: `X:1
+T:Palmer's Gate
 C:Joe Liddy
-L: 1/16
-K: Emin
-GA|BE~E2 GABG AdBA GEED|~G3A `,
+R:reel
+L:1/16
+M:4/4
+K:Eminor
+GA|BE (3EEE Gz BG AcBA GEDE|~G3A BAGA `,
 	references: [
 		{
 			artists:

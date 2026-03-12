@@ -1,7 +1,7 @@
 export default {
-	group: "su",
-	parts: "ABCDEFG",
-	aka: "Fisher street",
+	groups: "su",
+	parts: "AABB",
+	aka: ["Fisher street", "Fishstreet jig"],
 	incipit: `X: 2
 T: Paddy Fahey's No. 4
 C:Paddy Fahey

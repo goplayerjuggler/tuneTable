@@ -1,4 +1,6 @@
 export default {
+	groups: "su",
+	tags: "crooked",
 	abc: `X:1
 T:The Girl In Danger
 R:reel

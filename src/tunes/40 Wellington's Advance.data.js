@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	aka: "Wellington's Return",
 	abc: `X:1
 T:Wellington's Advance
 R:jig

@@ -11,5 +11,6 @@ R:slip jig
 L:1/8
 M:9/8
 K:Edorian
-E2G FDB, E3| efe dBd efe| cAA`
+E2G FDB, E3| efe dBd efe| cAA`,
+	ttId: 348
 };
