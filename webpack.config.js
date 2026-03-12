@@ -17,6 +17,13 @@ const __dirname = path.dirname(__filename);
 // Custom plugin to concatenate tune files before build
 class ConcatenateTunesPlugin {
 	apply(compiler) {
+		const tunesDir = path.resolve(__dirname, "src", "tunes");
+		const templateFile = path.resolve(
+			__dirname,
+			"src",
+			"tunes-template.json.js"
+		);
+		const outputFile = path.resolve(__dirname, "src", "tunes.compiled.js");
 		// Persists across recompilations within one webpack session
 		let lastInputHash = null;
 
@@ -24,21 +31,9 @@ class ConcatenateTunesPlugin {
 			"ConcatenateTunesPlugin",
 			(params, callback) => {
 				try {
-					const tunesDir = path.resolve(__dirname, "src", "tunes");
-					const templateFile = path.resolve(
-						__dirname,
-						"src",
-						"tunes-template.json.js"
-					);
-					const outputFile = path.resolve(
-						__dirname,
-						"src",
-						"tunes.compiled.js"
-					);
-
 					const tuneFiles = fs
 						.readdirSync(tunesDir)
-						.filter((f) => f.endsWith(".js") && f !== "index.js");
+						.filter((f) => f.endsWith(".data.js"));
 
 					// Hash based on filenames + mtimes — cheap and sufficient
 					const inputHash = tuneFiles
@@ -86,15 +81,19 @@ class ConcatenateTunesPlugin {
 		compiler.hooks.thisCompilation.tap(
 			"ConcatenateTunesPlugin",
 			(compilation) => {
-				const tunesDir = path.resolve(__dirname, "src", "tunes");
-				const tuneFiles = fs
-					.readdirSync(tunesDir)
-					.filter((f) => f.endsWith(".data.js"))
-					.map((f) => path.join(tunesDir, f));
+				// Watch the directory itself — triggers on add/delete
+				compilation.contextDependencies.add(tunesDir);
 
-				tuneFiles.forEach((file) => {
-					compilation.fileDependencies.add(file);
-				});
+				// Watch the template file
+				compilation.fileDependencies.add(templateFile);
+
+				// Watch individual tune files for edits
+				// (contextDependencies covers add/delete but not content changes)
+				fs.readdirSync(tunesDir)
+					.filter((f) => f.endsWith(".data.js"))
+					.forEach((f) =>
+						compilation.fileDependencies.add(path.join(tunesDir, f))
+					);
 			}
 		);
 	}

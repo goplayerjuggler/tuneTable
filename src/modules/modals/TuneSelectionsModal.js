@@ -552,7 +552,7 @@ export default class TuneSelectionsModal extends Modal {
 
 		let tunePos = this._current.sets
 			.slice(0, setIdx)
-			.reduce((n, s) => n + s.tunes?.length, 0);
+			.reduce((n, s) => n + (s.tunes?.length ?? 0), 0);
 
 		set.tunes?.forEach((entry, tuneIdx) => {
 			tunePos++;
