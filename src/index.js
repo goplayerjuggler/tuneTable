@@ -36,7 +36,7 @@ function saveTunesToStorage() {
 		const payload = {
 			tunes: window.tunesData,
 			setLists: window._setLists ?? [],
-			savedate: new Date().toISOString()
+			saveDate: new Date().toISOString()
 		};
 		localStorage.setItem(storageKey, JSON.stringify(payload));
 		console.log("Saved to local storage");
@@ -59,12 +59,14 @@ function loadTunesFromStorage() {
 	try {
 		const stored = localStorage.getItem(storageKey);
 
-		if (Array.isArray(stored))
-			// old version - ignore
-			return;
+		if (stored) {
+			const parsed = JSON.parse(stored);
+			if (Array.isArray(parsed)) {
+				// old version - ignore
+				return;
+			}
 
-		if (stored && stored.tunes) {
-			return stored;
+			return parsed;
 		}
 	} catch (e) {
 		console.error("Failed to load from local storage:", e);
