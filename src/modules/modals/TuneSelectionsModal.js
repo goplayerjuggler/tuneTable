@@ -429,7 +429,7 @@ export default class TuneSelectionsModal extends Modal {
 		// Tune count badge, visible when collapsed
 		const tuneCount = document.createElement("span");
 		tuneCount.className = "ts-set-tune-count";
-		tuneCount.textContent = set.tunes.length
+		tuneCount.textContent = set.tunes?.length
 			? `${set.tunes.length} tune${set.tunes.length !== 1 ? "s" : ""}`
 			: "";
 		header.appendChild(tuneCount);
@@ -552,9 +552,9 @@ export default class TuneSelectionsModal extends Modal {
 
 		let tunePos = this._current.sets
 			.slice(0, setIdx)
-			.reduce((n, s) => n + s.tunes.length, 0);
+			.reduce((n, s) => n + s.tunes?.length, 0);
 
-		set.tunes.forEach((entry, tuneIdx) => {
+		set.tunes?.forEach((entry, tuneIdx) => {
 			tunePos++;
 			const tune = findTuneByEntry(entry, window.tunesData);
 			body.appendChild(
@@ -656,6 +656,7 @@ export default class TuneSelectionsModal extends Modal {
 		el.tabIndex = 0;
 		el.addEventListener("keydown", (e) => {
 			const set = this._current.sets[setIdx];
+			if (!set.tunes) return;
 			if (e.key === "ArrowUp" && tuneIdx > 0) {
 				[set.tunes[tuneIdx - 1], set.tunes[tuneIdx]] = [
 					set.tunes[tuneIdx],
@@ -663,7 +664,7 @@ export default class TuneSelectionsModal extends Modal {
 				];
 				this._renderBuilder();
 				this._markDirty();
-			} else if (e.key === "ArrowDown" && tuneIdx < set.tunes.length - 1) {
+			} else if (e.key === "ArrowDown" && tuneIdx < set.tunes?.length - 1) {
 				[set.tunes[tuneIdx + 1], set.tunes[tuneIdx]] = [
 					set.tunes[tuneIdx],
 					set.tunes[tuneIdx + 1]
@@ -795,6 +796,7 @@ export default class TuneSelectionsModal extends Modal {
 	_addTuneToSetObject(tune, setObj) {
 		const idObj = resolveTuneId(tune, (msg) => alert(msg));
 		if (!idObj) return;
+		if (!setObj.tunes) setObj.tunes = [];
 		setObj.tunes.push({ ...idObj, notes: "" });
 		this._markDirty();
 	}
@@ -851,8 +853,8 @@ export default class TuneSelectionsModal extends Modal {
 				sb = b.sets[i];
 			if (sa.name !== sb.name) return false;
 			if (sa.comments !== sb.comments) return false;
-			if (sa.tunes.length !== sb.tunes.length) return false;
-			for (let j = 0; j < sa.tunes.length; j++) {
+			if (sa.tunes?.length !== sb.tunes?.length) return false;
+			for (let j = 0; j < sa.tunes?.length; j++) {
 				// Compare serialised tune entries (ttId/theSessionId/notes)
 				if (JSON.stringify(sa.tunes[j]) !== JSON.stringify(sb.tunes[j]))
 					return false;
