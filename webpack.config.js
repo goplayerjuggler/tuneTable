@@ -36,12 +36,14 @@ class ConcatenateTunesPlugin {
 						.filter((f) => f.endsWith(".data.js"));
 
 					// Hash based on filenames + mtimes — cheap and sufficient
-					const inputHash = tuneFiles
-						.map((f) => {
-							const stat = fs.statSync(path.join(tunesDir, f));
-							return `${f}:${stat.mtimeMs}`;
-						})
-						.join("|");
+					const templateStat = fs.statSync(templateFile);
+					const inputHash =
+						tuneFiles
+							.map((f) => {
+								const stat = fs.statSync(path.join(tunesDir, f));
+								return `${f}:${stat.mtimeMs}`;
+							})
+							.join("|") + `|template:${templateStat.mtimeMs}`;
 
 					if (inputHash === lastInputHash) {
 						// Inputs unchanged — skip silently (handles duplicate startups
