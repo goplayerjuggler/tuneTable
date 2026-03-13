@@ -4,7 +4,7 @@ T:Le curé de la chapelle
 M:3/8
 L:1/8
 R:Bourrée à 3 temps
-O:France; Massif central
+O:France; Auvergne.
 Z:Malcolm Schonfield%2013-03-21
 K:G dor
 P:A

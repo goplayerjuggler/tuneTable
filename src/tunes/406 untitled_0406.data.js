@@ -3,7 +3,7 @@ export default {
 	parts: "AABB",
 	abc: `X: 1
 R:Bourrée à 3 temps
-O:France; Massif central
+O:France; Massif central.
 M:3/8
 L:1/8
 K:C
