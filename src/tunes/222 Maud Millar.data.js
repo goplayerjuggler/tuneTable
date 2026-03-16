@@ -22,6 +22,13 @@ P:Variations/embellishments
 "_v1"Be||"_v2"dG||"_v3"(3ege||"_v4"eBdB ABGA||"_v5"ABGA||"_v6"A/B/AGA||"_v7"(3GGG||"_v8"BeeB||||"_v9"efge||"_v10"eage||"_v11"e2(3gfe||`,
 	references: [
 		{
+			url: "https://frankiegavin.bandcamp.com/track/maud-millar",
+			artists: "Frankie Gavin, fiddle; Brian McGrath, piano",
+			album: "Fierce Traditional (2001)",
+			notes: `Maud Millar / Mary O’Neill’s Fancy
+Interesting setting and backing chords.`
+		},
+		{
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2024/?track=8",
 			artists: "Seán Maguire, fiddle",
 			notes: "The skylark; Maud Miller"
