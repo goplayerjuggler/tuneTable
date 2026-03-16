@@ -16,12 +16,16 @@ const __dirname = path.dirname(__filename);
 
 // Custom plugin to concatenate tune files before build
 class ConcatenateTunesPlugin {
+	constructor({ isDevelopment = false } = {}) {
+		this.isDevelopment = isDevelopment;
+	}
+
 	apply(compiler) {
 		const tunesDir = path.resolve(__dirname, "src", "tunes");
 		const templateFile = path.resolve(
 			__dirname,
 			"src",
-			"tunes-template.json.js"
+			"tunes-template.data.js"
 		);
 		const outputFile = path.resolve(__dirname, "src", "tunes.compiled.js");
 		// Persists across recompilations within one webpack session
@@ -34,6 +38,40 @@ class ConcatenateTunesPlugin {
 					const tuneFiles = fs
 						.readdirSync(tunesDir)
 						.filter((f) => f.endsWith(".data.js"));
+
+					// In dev mode, keep lastUpdate in the template in sync with the
+					// most-recently modified tune file.  We do this before hashing so
+					// the hash already reflects the (possibly updated) template mtime,
+					// avoiding a redundant extra recompile.
+					if (this.isDevelopment && tuneFiles.length > 0) {
+						const maxMtimeMs = tuneFiles.reduce((max, f) => {
+							const stat = fs.statSync(path.join(tunesDir, f));
+							return Math.max(max, stat.mtimeMs);
+						}, 0);
+
+						// Format as YYYY-MM-DD in local time
+						const d = new Date(maxMtimeMs);
+						const lastUpdateDate = [
+							d.getFullYear(),
+							String(d.getMonth() + 1).padStart(2, "0"),
+							String(d.getDate()).padStart(2, "0")
+						].join("-");
+
+						const templateContent = fs.readFileSync(templateFile, "utf8");
+						const updatedContent = templateContent.replace(
+							/lastUpdate:\s*"[^"]*"/,
+							`lastUpdate: "${lastUpdateDate}"`
+						);
+
+						// Only write when the date actually changed — prevents an
+						// infinite watch-loop caused by self-triggered file updates
+						if (updatedContent !== templateContent) {
+							fs.writeFileSync(templateFile, updatedContent, "utf8");
+							console.log(
+								`Updated lastUpdate to ${lastUpdateDate} in template`
+							);
+						}
+					}
 
 					// Hash based on filenames + mtimes — cheap and sufficient
 					const templateStat = fs.statSync(templateFile);
@@ -132,7 +170,7 @@ export default (env, argv) => {
 		},
 		plugins: [
 			// Run before everything else
-			new ConcatenateTunesPlugin(),
+			new ConcatenateTunesPlugin({ isDevelopment }),
 
 			new HtmlWebpackPlugin({
 				template: "./src/index.html",
