@@ -1,6 +1,7 @@
 export default {
 	incipit: `X: 2
 T: The Diplodocus
+C:Liz Carroll
 R: jig
 M: 12/8
 L: 1/8
