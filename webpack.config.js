@@ -6,6 +6,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 import fs from "fs";
+import { buildTuneLists } from "./build/build-tune-lists.mjs";
 
 const HtmlInlineCssWebpackPlugin =
 	HtmlInlineCssWebpackPluginModule.default || HtmlInlineCssWebpackPluginModule;
@@ -14,26 +15,24 @@ const HtmlInlineCssWebpackPlugin =
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Custom plugin to concatenate tune files before build
+const ROOT = path.resolve(__dirname, "..");
+
+// Custom plugin to concatenate tune files and build tune-list JSON files before build
 class ConcatenateTunesPlugin {
 	constructor({ isDevelopment = false } = {}) {
 		this.isDevelopment = isDevelopment;
 	}
 
 	apply(compiler) {
-		const tunesDir = path.resolve(__dirname, "src", "tunes");
-		const templateFile = path.resolve(
-			__dirname,
-			"src",
-			"tunes-template.data.js"
-		);
-		const outputFile = path.resolve(__dirname, "src", "tunes.compiled.js");
+		const tunesDir = path.resolve(ROOT, "src", "tunes");
+		const templateFile = path.resolve(ROOT, "src", "tunes-template.data.js");
+		const outputFile = path.resolve(ROOT, "src", "tunes.compiled.js");
 		// Persists across recompilations within one webpack session
 		let lastInputHash = null;
 
 		compiler.hooks.beforeCompile.tapAsync(
 			"ConcatenateTunesPlugin",
-			(params, callback) => {
+			async (params, callback) => {
 				try {
 					const tuneFiles = fs
 						.readdirSync(tunesDir)
@@ -108,11 +107,19 @@ class ConcatenateTunesPlugin {
 					);
 
 					fs.writeFileSync(outputFile, newContent, "utf8");
+
+					// Build tune-list JSON files — runs only when tune files or the
+					// template change (same input-hash guard as concatenation above)
+					await buildTuneLists({
+						isDevelopment: this.isDevelopment,
+						outputDir: path.join(compiler.outputPath, "tune-lists")
+					});
+
+					// Only update hash after both steps succeed
 					lastInputHash = inputHash;
-					// Only update hash after a successful write
 					callback();
 				} catch (error) {
-					console.error("Error concatenating tunes:", error);
+					console.error("Error in pre-build step:", error);
 					callback(error);
 				}
 			}
@@ -138,16 +145,21 @@ class ConcatenateTunesPlugin {
 		);
 	}
 }
+
 export default (env, argv) => {
 	const isDevelopment = argv.mode === "development";
 	return {
 		mode: argv.mode || "production",
 		devtool: isDevelopment ? "eval-source-map" : false,
-		entry: "./src/index.js",
+		entry: path.resolve(ROOT, "src/index.js"),
 		output: {
 			filename: "bundle.js",
-			path: path.resolve(__dirname, "dist"),
-			clean: true,
+			path: path.resolve(ROOT, "dist"),
+			clean: {
+				// Preserve tune-list JSON files written by ConcatenateTunesPlugin
+				// in beforeCompile, which runs before webpack's emit/clean phase
+				keep: (asset) => asset.startsWith("tune-lists/")
+			},
 			publicPath: ""
 		},
 		externals: {
@@ -173,7 +185,7 @@ export default (env, argv) => {
 			new ConcatenateTunesPlugin({ isDevelopment }),
 
 			new HtmlWebpackPlugin({
-				template: "./src/index.html",
+				template: path.resolve(ROOT, "src/index.html"),
 				inject: "body",
 				minify: isDevelopment
 					? false
@@ -202,12 +214,12 @@ export default (env, argv) => {
 					])
 		],
 		devServer: {
-			static: "./dist",
+			static: path.resolve(ROOT, "dist"),
 			port: 8080,
 			hot: true,
 			// Don't watch dist folder
 			watchFiles: {
-				paths: ["src/**/*"],
+				paths: [path.resolve(ROOT, "src/**/*")],
 				options: {
 					ignored: [
 						"**/node_modules/**",
