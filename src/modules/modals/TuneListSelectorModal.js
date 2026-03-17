@@ -165,7 +165,7 @@ export default class TuneListSelectorModal extends Modal {
 			<div class="tls-item tls-server-item${isActive ? " tls-item--active" : ""}"
 					data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}"
 					title="Last updated: ${list.lastUpdate ?? "unknown"}">
-				<span class="tls-item-name">${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
+				<span class="tls-item-name">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
 				<span class="tls-item-meta">${list.count ?? "?"} tunes</span>
 			</div>
 		`;

@@ -48,7 +48,7 @@ function saveTunesToStorage() {
 			slotManager.saveSlot(
 				currentListState.sourceId,
 				currentListState.displayName,
-				window.tunesData,
+				prepareTunesForExport(window.tunesData), // strip derived properties,
 				window._setLists ?? []
 			);
 		} catch (e) {
@@ -98,10 +98,9 @@ async function onListSelected({
 	lastUpdate
 }) {
 	// Server/external tunes are raw; local tunes are already processed.
-	window.tunesData =
-		source !== "local"
-			? tunes.filter(Boolean).map(processTuneData)
-			: (tunes ?? []);
+	window.tunesData = window.tunesData = (tunes ?? [])
+		.filter(Boolean)
+		.map(processTuneData);
 
 	window._setLists = setLists ?? [];
 	tuneSelectionsModal.loadSetLists(window._setLists);
@@ -221,7 +220,7 @@ function updateFooter() {
 		` (${currentListState.source}; ${counts})` +
 		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
-		`<button id="footer-list-link">manage tune lists</button>`;
+		`&bull; <button id="footer-list-link">tune lists</button>`;
 	document
 		.getElementById("footer-list-link")
 		?.addEventListener("click", (e) => {
@@ -992,6 +991,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 		dropdown.classList.remove("active");
 		emptyTunes();
 	});
+
+	document.getElementById("manageSlotsBtn")?.addEventListener("click", (e) => {
+		e.preventDefault();
+		dropdown.classList.remove("active");
+		openTuneListSelector();
+	});
+
 	document
 		.getElementById("tuneListSelectorBtn")
 		?.addEventListener("click", (e) => {
