@@ -103,11 +103,11 @@ export default class TheSessionImportModal extends Modal {
 		  <input type="text" id="thesession-user" placeholder="e.g. 1 - ID of Jeremy" />
 		</div>
 		<div class="form-group">
-		  <label for="thesession-tune-id">Tune ID (optional):</label>
-		  <input type="text" id="thesession-tune-id" placeholder="e.g. 23320 (ID of The First Draft, a mazurka by S. Peoples)" />
+		  <label for="thesession-tune-id">Tune ID(s) (optional):</label>
+		  <input type="text" id="thesession-tune-id" placeholder="e.g. 23320 or 23320 456 789 (space- or comma-separated)" />
 		</div>
 		<div class="form-group">
-		  <label for="thesession-setting-id">Setting ID (optional, requires tune ID):</label>
+		  <label for="thesession-setting-id">Setting ID (optional, single tune ID only):</label>
 		  <input type="text" id="thesession-setting-id" placeholder="e.g. 12345" />
 		</div>
 		<div class="form-group">
@@ -558,8 +558,12 @@ ${setting.abc
 				}
 			}
 
-			tuneIds = tuneIdStr
-				? [tuneIdStr]
+			const parsedTuneIds = tuneIdStr
+				? tuneIdStr.split(/[\s,]+/).filter(Boolean)
+				: null;
+
+			tuneIds = parsedTuneIds
+				? [...new Set(parsedTuneIds)]
 				: [
 						...new Set(
 							await this.getMemberTunebook(
@@ -579,8 +583,9 @@ ${setting.abc
 			const importedNames = [];
 			const skippedNames = [];
 			const { skipLevel } = theSessionImportSettings;
-			// settingId from the UI is only meaningful when a tuneId is also specified
-			const uiSettingId = tuneIdStr && settingIdStr ? +settingIdStr : null;
+			// settingId from the UI is only meaningful when exactly one tune ID is specified
+			const uiSettingId =
+				parsedTuneIds?.length === 1 && settingIdStr ? +settingIdStr : null;
 
 			for (let i = 0; i < tuneIds.length; i++) {
 				const tuneId = +tuneIds[i];
