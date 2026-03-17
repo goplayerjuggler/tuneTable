@@ -88,25 +88,7 @@ class ConcatenateTunesPlugin {
 						return callback();
 					}
 
-					console.log(`Concatenating ${tuneFiles.length} tune files...`);
-
-					const tuneObjects = tuneFiles.map((filename) => {
-						const filepath = path.join(tunesDir, filename);
-						const content = fs.readFileSync(filepath, "utf8");
-						const lines = content.trimEnd().split("\n");
-						return `{${lines.slice(1, -1).join("\n")}}`;
-					});
-
-					const arrayLiteral =
-						"[\n        " + tuneObjects.join(",\n        ") + "\n    ]";
-
-					const template = fs.readFileSync(templateFile, "utf8");
-					const newContent = template.replace(
-						"//CopyTunesHere",
-						`tunes: ${arrayLiteral},`
-					);
-
-					fs.writeFileSync(outputFile, newContent, "utf8");
+					console.log(`tune lists from ${tuneFiles.length} tune files...`);
 
 					// Build tune-list JSON files — runs only when tune files or the
 					// template change (same input-hash guard as concatenation above)
