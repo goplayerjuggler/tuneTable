@@ -220,10 +220,29 @@ h1 {
   border: none;
   border-radius: 0;
   cursor: pointer;
-  font-family: inherit;
   line-height: inherit;
   box-shadow: none;
   outline: none;
+}
+
+#footer-list-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  /* reset button chrome */
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  line-height: inherit;
+  font-weight: 600;
+
+  /* padding: 12px 16px;
+  box-shadow: none;
+  outline: none; */
 }
 
 .dropdown-content a:hover,
@@ -2327,4 +2346,166 @@ tr.tune-selected td {
   gap: 8px;
   padding-top: 4px;
   border-top: 1px solid var(--border);
+}
+/* ── Tune List Selector Modal ─────────────────────────────────────────────── */
+
+.tls-modal-body {
+  padding: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.tls-section {
+  padding: 16px 20px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tls-section:last-of-type {
+  border-bottom: none;
+}
+
+.tls-section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-light);
+  margin: 0 0 8px;
+}
+
+.tls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tls-empty {
+  color: var(--primary-light);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+/* ── List items ─────────────────────────────────────────────────────────────── */
+
+.tls-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.tls-item:hover {
+  background: var(--bg-table-stripe);
+}
+
+.tls-item--active {
+  background: var(--info-bg);
+}
+
+.tls-item--active:hover {
+  background: var(--info-border);
+}
+
+.tls-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tls-item-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tls-item-meta {
+  font-size: 0.8rem;
+  color: var(--primary-light);
+}
+
+/* ── Badges ──────────────────────────────────────────────────────────────────── */
+
+.tls-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: 10px;
+  margin-left: 6px;
+  vertical-align: middle;
+  background: var(--info-bg);
+  color: var(--info-text);
+  border: 1px solid var(--info-border);
+}
+
+.tls-badge--recommended {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border-color: var(--success-border);
+}
+
+/* ── Slot action buttons (shown on hover) ────────────────────────────────────── */
+
+.tls-item-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.tls-item:hover .tls-item-actions {
+  opacity: 1;
+}
+
+.tls-item-actions .btn {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  line-height: 1.4;
+}
+
+/* ── Action buttons (create / import / export…) ─────────────────────────────── */
+
+.tls-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 20px;
+}
+
+.tls-action-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 6px 4px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  transition: background 0.15s;
+  width: 100%;
+}
+
+.tls-action-btn:hover {
+  background: var(--bg-table-stripe);
+  color: var(--accent);
+}
+
+/* ── Storage info footer ─────────────────────────────────────────────────────── */
+
+.tls-storage-info {
+  padding: 10px 20px;
+  font-size: 0.78rem;
+  color: var(--primary-light);
+  border-top: 1px solid var(--border);
+  background: var(--bg-body);
 }

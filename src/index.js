@@ -1,6 +1,5 @@
 "use strict";
 import "./styles.css";
-import tunesDataRaw from "./tunes.compiled.js";
 import { normaliseKey, sort as contourSort } from "@goplayerjuggler/abc-tools";
 
 import { processTuneData } from "./processTuneData.js";
@@ -10,6 +9,8 @@ import AbcModal from "./modules/modals/AbcModal.js";
 import EditModal from "./modules/modals/EditModal.js";
 import AddTunesModal from "./modules/modals/AddTunesModal.js";
 import LoadJsonModal from "./modules/modals/LoadJsonModal.js";
+import TuneListSelectorModal from "./modules/modals/TuneListSelectorModal.js";
+import TuneListSlotManager from "./modules/TuneListSlotManager.js";
 
 import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
 import TuneSelectionsModal from "./modules/modals/TuneSelectionsModal.js";
@@ -17,7 +18,9 @@ import TheSessionSetsImportModal from "./modules/modals/TheSessionSetsImportModa
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
+// Legacy key kept for one-time cleanup only
 const storageKey = "tunesData";
+const CURRENT_LIST_KEY = "currentTuneList";
 
 const getEmptySort = () => {
 	return { column: null, direction: "asc" };
@@ -27,22 +30,34 @@ let editModal,
 	getAbcModal,
 	addTunesModal,
 	loadJsonModal,
+	tuneListSelectorModal,
 	tuneSelectionsModal,
 	tsSetImportModal;
 
-// Local Storage Functions
+let slotManager;
+let currentListState = null;
+let isDirty = false;
+let pendingUrlParams = null;
+let _manifestCache = null;
+
+// -- Storage ------------------------------------------------------------------
+
 function saveTunesToStorage() {
-	try {
-		const payload = {
-			tunes: window.tunesData,
-			setLists: window._setLists ?? [],
-			saveDate: new Date().toISOString()
-		};
-		localStorage.setItem(storageKey, JSON.stringify(payload));
-		console.log("Saved to local storage");
-	} catch (e) {
-		console.error("Failed to save to local storage:", e);
+	if (currentListState?.source === "local") {
+		try {
+			slotManager.saveSlot(
+				currentListState.sourceId,
+				currentListState.displayName,
+				window.tunesData,
+				window._setLists ?? []
+			);
+		} catch (e) {
+			console.error("Failed to save slot:", e);
+		}
+	} else {
+		isDirty = true;
 	}
+	updateFooter();
 }
 
 /** Save set lists to local storage without re-saving tunes. Called by TuneSelectionsModal. */
@@ -51,46 +66,189 @@ function saveSetListsToStorage(setLists) {
 	saveTunesToStorage();
 }
 
-/**
- * Load persisted data from local storage.
- * @returns {{ tunes: object[]|null, setLists: object[] }}
- */
-function loadTunesFromStorage() {
+async function fetchManifest() {
+	if (_manifestCache) return _manifestCache;
 	try {
-		const stored = localStorage.getItem(storageKey);
+		const res = await fetch("./tune-lists/manifest.json");
+		if (!res.ok) return null;
+		_manifestCache = await res.json();
+		return _manifestCache;
+	} catch {
+		return null;
+	}
+}
 
-		if (stored) {
-			const parsed = JSON.parse(stored);
-			if (Array.isArray(parsed)) {
-				// old version - ignore
-				return;
-			}
+function readCurrentListState() {
+	try {
+		const stored = localStorage.getItem(CURRENT_LIST_KEY);
+		return stored ? JSON.parse(stored) : null;
+	} catch {
+		return null;
+	}
+}
 
-			return parsed;
+// -- List loading -------------------------------------------------------------
+
+async function onListSelected({
+	source,
+	sourceId,
+	displayName,
+	tunes,
+	setLists,
+	lastUpdate
+}) {
+	// Server/external tunes are raw; local tunes are already processed.
+	window.tunesData =
+		source !== "local"
+			? tunes.filter(Boolean).map(processTuneData)
+			: (tunes ?? []);
+
+	window._setLists = setLists ?? [];
+	tuneSelectionsModal.loadSetLists(window._setLists);
+
+	currentListState = {
+		source,
+		sourceId,
+		displayName,
+		//loadedAt: new Date().toISOString(),
+		lastUpdate
+	};
+	localStorage.setItem(CURRENT_LIST_KEY, JSON.stringify(currentListState));
+
+	if (source === "local") slotManager.touchSlot(sourceId);
+
+	isDirty = false;
+
+	sortWithDefaultSort();
+	populateFilters();
+
+	if (pendingUrlParams) {
+		applyUrlFilters(pendingUrlParams);
+		pendingUrlParams = null;
+	} else {
+		applyFilters();
+	}
+
+	updateFooter();
+}
+
+async function loadServerListById(listId, listFile, displayName, lastUpdate) {
+	const res = await fetch(`./tune-lists/${listFile}`);
+	if (!res.ok) throw new Error(`HTTP ${res.status}`);
+	const { tunes, setLists } = await res.json();
+	await onListSelected({
+		source: "server",
+		sourceId: listId,
+		displayName,
+		tunes,
+		setLists,
+		lastUpdate
+	});
+}
+
+async function resumeCurrentList(listState, manifest) {
+	if (listState.source === "local") {
+		const slot = slotManager.getSlot(listState.sourceId);
+		if (!slot) throw new Error("Slot not found");
+		await onListSelected({
+			source: "local",
+			sourceId: listState.sourceId,
+			displayName: slot.name,
+			tunes: slot.tunes ?? [],
+			setLists: slot.setLists ?? []
+		});
+	} else if (listState.source === "server") {
+		const listInfo = manifest?.lists.find((l) => l.id === listState.sourceId);
+		if (!listInfo) throw new Error("Server list not found in manifest");
+		await loadServerListById(
+			listState.sourceId,
+			listInfo.file,
+			listInfo.name,
+			listInfo.lastUpdate
+		);
+	} else {
+		throw new Error(`Unsupported source: ${listState.source}`);
+	}
+}
+
+function applyUrlFilters(params) {
+	let filtered = false;
+	if (params.has("q")) {
+		const q = params.get("q");
+		if (q) {
+			document.getElementById("searchInput").value = q;
+			applyFilters();
+			filtered = true;
 		}
-	} catch (e) {
-		console.error("Failed to load from local storage:", e);
 	}
-	return null;
+	if (params.has("n")) {
+		const n = params.get("n");
+		if (n) {
+			filterByName(n);
+			populateFilters();
+			filtered = true;
+		}
+	}
+	if (!filtered) applyFilters();
 }
 
-function clearStorage() {
-	if (confirm("This will reset all tunes to the original data. Continue?")) {
-		localStorage.removeItem(storageKey);
-		location.reload();
-	}
+// -- Footer -------------------------------------------------------------------
+
+const relativeTime = (iso) => {
+	if (!iso) return "unknown";
+	const diff = Date.now() - new Date(iso).getTime();
+	const mins = Math.floor(diff / 60000);
+	// if (mins < 1) return "just now";
+	// if (mins < 60) return `${mins}m ago`;
+	const hrs = Math.floor(mins / 60);
+	// if (hrs < 24) return `${hrs}h ago`;
+	return `${Math.floor(hrs / 24)}d ago`;
+};
+
+function updateFooter() {
+	const el = document.getElementById("spLastUpdated");
+	if (!el || !currentListState) return;
+
+	const tuneCount = window.tunesData?.length ?? 0;
+	const setCount = window._setLists?.length ?? 0;
+	const counts = `${tuneCount} tune${tuneCount !== 1 ? "s" : ""}${setCount > 0 ? `, ${setCount} set${setCount !== 1 ? "s" : ""}` : ""}`;
+	const dirty = isDirty
+		? ' <span class="footer-local-warning">&bull; Unsaved changes</span>'
+		: "";
+
+	el.innerHTML =
+		`tune list: ${currentListState.displayName}` +
+		` (${currentListState.source}; ${counts})` +
+		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
+		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
+		`<button id="footer-list-link">manage tune lists</button>`;
+	document
+		.getElementById("footer-list-link")
+		?.addEventListener("click", (e) => {
+			e.preventDefault();
+			openTuneListSelector();
+		});
 }
+
+function openTuneListSelector() {
+	if (isDirty) {
+		if (
+			!confirm(
+				`You have unsaved changes to "${currentListState?.displayName}". Switch list anyway?`
+			)
+		)
+			return;
+	}
+	tuneListSelectorModal.openWithContext(_manifestCache, currentListState);
+}
+
+// -- Tune operations ----------------------------------------------------------
 
 function emptyTunes() {
-	if (
-		!localStorage.getItem(storageKey) ||
-		confirm("You may lose some data. This cannot be undone. Continue?")
-	) {
-		localStorage.removeItem(storageKey);
-	}
+	if (!confirm("You may lose some data. This cannot be undone. Continue?"))
+		return;
 	window.tunesData = [];
 	window.filteredData = [];
-
 	renderTable();
 	saveTunesToStorage();
 }
@@ -274,12 +432,12 @@ function openSessionImport() {
 	modal.open();
 }
 
-function initialiseData() {
+// -- Initialisation -----------------------------------------------------------
+
+async function initialiseData() {
 	// Expose global functions
 	window.addNewTune = addNewTune;
-	// window.applyDefaultSort = applyDefaultSort;
 	window.applyFilters = applyFilters;
-	window.clearStorage = clearStorage;
 	window.collapseNotes = collapseNotes;
 	window.copyTunesToClipboard = copyTunesToClipboard;
 	window.copySingleTune = copySingleTune;
@@ -293,11 +451,6 @@ function initialiseData() {
 	window.openTuneSelections = () => tuneSelectionsModal?.open();
 	window.saveSetListsToStorage = saveSetListsToStorage;
 
-	//window.showTheSessionImportModal = theSessionImport.showTheSessionImportModal;
-	// window.closeTheSessionImportModal =
-	//   theSessionImport.closeTheSessionImportModal;
-	// window.importFromTheSession = theSessionImport.importFromTheSession;
-
 	eventBus.on("tuneImported", (tuneData) => {
 		window.tunesData.push(tuneData);
 		saveTunesToStorage();
@@ -308,8 +461,7 @@ function initialiseData() {
 		applyFilters();
 	});
 
-	// Initialise modals with callbacks
-	let callbacks = {
+	const callbacks = {
 		saveTunesToStorage,
 		populateFilters,
 		applyFilters,
@@ -317,10 +469,15 @@ function initialiseData() {
 		sortWithDefaultSort
 	};
 
+	slotManager = new TuneListSlotManager();
 	editModal = new EditModal(callbacks);
 	getAbcModal = () => new AbcModal(callbacks);
 	addTunesModal = new AddTunesModal(callbacks);
 	loadJsonModal = new LoadJsonModal(callbacks);
+	tuneListSelectorModal = new TuneListSelectorModal({
+		slotManager,
+		onSelect: onListSelected
+	});
 	tuneSelectionsModal = new TuneSelectionsModal({
 		saveSetListsToStorage,
 		applyFilters
@@ -336,102 +493,49 @@ function initialiseData() {
 	window.tunesData = [];
 	window.filteredData = [];
 	window._setLists = [];
-	const params = new URLSearchParams(new URL(window.location).search.slice(1));
 
-	// cleanup storage from a previous version - can remove, say around June 2026 (?)
+	// Cleanup from previous storage format
 	localStorage.removeItem(storageKey + "_saveDate");
 	localStorage.removeItem(storageKey + "_setLists");
 
-	const storedData = loadTunesFromStorage();
-	if (storedData) {
-		// console.log("Loading from local storage");
-		window.tunesData = storedData.tunes;
-		if (storedData.setLists) {
-			tuneSelectionsModal.loadSetLists(storedData.setLists);
-			window._setLists = storedData.setLists;
-		}
-		// Update footer to show local storage date and warning
-		const saveDateEl = document.getElementById("spLastUpdated");
-		if (saveDateEl && storedData.saveDate) {
-			const formatted = new Date(storedData.saveDate).toLocaleDateString(
-				"en-GB",
-				{
-					day: "numeric",
-					month: "long",
-					year: "numeric"
-				}
-			);
-			saveDateEl.innerHTML =
-				`${formatted} <span class="footer-local-warning">` +
-				`&#9888;&#xFE0E; using locally stored data &mdash; not the server data</span>`;
-		}
-	} else {
-		// console.log("Loading from tunesDataRaw and processing");
+	// -- Async: resolve which list to load ------------------------------------
 
-		document.getElementById("spLastUpdated").innerHTML =
-			tunesDataRaw.lastUpdate;
-		window.tunesData = tunesDataRaw.tunes
-			.filter((t) => t !== undefined)
-			.map(processTuneData);
+	const manifest = await fetchManifest();
+	const params = new URLSearchParams(window.location.search);
 
-		sortWithDefaultSort();
-		// Load hardcoded set lists from tunesDataRaw if any are defined
-		let setLists;
+	// Store q/n params for post-load application via onListSelected
+	if (params.has("q") || params.has("n")) pendingUrlParams = params;
 
-		if (params.has("g")) {
-			let g = params.get("g");
-			//only keep lists with matching group data
-			setLists = tunesDataRaw.setLists.filter((list) =>
-				list.groups?.toLowerCase().includes(g.toLowerCase())
-			);
-		} else setLists = tunesDataRaw.setLists.filter((l) => !l.groups);
-		if (setLists && setLists.length > 0) {
-			tuneSelectionsModal.loadSetLists(setLists);
-			window._setLists = setLists;
+	// ?g= auto-selects a matching server list
+	const gParam = params.get("g");
+	if (gParam && manifest) {
+		const match = manifest.lists.find(
+			(l) => l.group?.toLowerCase() === gParam.toLowerCase()
+		);
+		if (match) {
+			try {
+				await loadServerListById(match.id, match.file, match.name);
+				return;
+			} catch (e) {
+				console.warn("Failed to auto-load ?g= list:", e);
+			}
 		}
 	}
-	window._setLists.forEach((sl) => {
-		sl.sets.forEach((s) => {
-			if (!s.tunes) s.tunes = [];
-		});
-	});
 
-	let filtered = false;
-
-	populateFilters();
-
-	if (params.has("g")) {
-		let g = params.get("g");
-		if (g) {
-			window.tunesData = window.tunesData.filter((tune) =>
-				tune.groups?.toLowerCase().includes(g.toLowerCase())
-			);
+	// Resume last used list
+	const saved = readCurrentListState();
+	if (saved) {
+		try {
+			await resumeCurrentList(saved, manifest);
+			return;
+		} catch (e) {
+			console.warn("Failed to resume last list:", e);
+			localStorage.removeItem(CURRENT_LIST_KEY);
 		}
 	}
-	if (params.has("q")) {
-		let q = params.get("q");
-		if (q) {
-			document.getElementById("searchInput").value = q;
-			applyFilters();
-			filtered = true;
-		}
-	}
-	if (params.has("n")) {
-		let n = params.get("n");
-		if (n) {
-			filterByName(n);
-			filtered = true;
-		}
-		populateFilters();
 
-		// renderTable();
-	}
-	if (!filtered) {
-		applyFilters();
-	}
-	if (window.filteredData.length === 1 && window.filteredData[0].abc) {
-		openAbcModal(window.filteredData[0]);
-	}
+	// Signal to caller: open the selector
+	return { needsSelector: true, manifest };
 }
 
 function populateFilters() {
@@ -531,14 +635,14 @@ function renderTable() {
 						);
 
 					notesHtml = `
-				    <div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
-				      ${truncatedNotes}
-				      <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
-				    </div>
-				    <div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
-				      ${formattedNotes}
-				      <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
-				    </div>
+					<div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
+					  ${truncatedNotes}
+					  <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
+					</div>
+					<div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
+					  ${formattedNotes}
+					  <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
+					</div>
 				  `;
 				} else {
 					notesHtml = `<div class="notes">${formattedNotes}</div>`;
@@ -556,11 +660,11 @@ function renderTable() {
 							? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
 							: "";
 			referencesHtml += `
-                        <div class="reference-item">
-                            ${refHeader}
-                            ${notesHtml}
-                        </div>
-                    `;
+						<div class="reference-item">
+							${refHeader}
+							${notesHtml}
+						</div>
+					`;
 		});
 
 		const metadata = getTuneMetadata(tune)
@@ -578,19 +682,19 @@ function renderTable() {
 
 		const incipitId = `incipit${index}`;
 		const title = `<div class="tune-header">
-      ${
-				hasAbc
-					? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
-        ${tune.name}
-      </a>${
-				Array.isArray(tune.abc) && tune.abc.length > 1
-					? ` - ${tune.abc.length} settings`
-					: ""
-			}`
-					: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
-        ${tune.name}
-      </div>`
-			}`;
+	  ${
+			hasAbc
+				? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
+		${tune.name}
+	  </a>${
+			Array.isArray(tune.abc) && tune.abc.length > 1
+				? ` - ${tune.abc.length} settings`
+				: ""
+		}`
+				: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
+		${tune.name}
+	  </div>`
+		}`;
 
 		const scores = [...tune.scores];
 		if (tune.theSessionId && !hasTheSessionLink) {
@@ -617,14 +721,14 @@ function renderTable() {
 		}
 
 		row.innerHTML = `
-    <td>
-        <div class="tune-header">
-            <div class="tune-title">${title}</div>
+	<td>
+		<div class="tune-header">
+			<div class="tune-title">${title}</div>
 			<div class="notes">${metadata}</div>
 			</div>
 			<div>
 			
-        <div class="tune-header tune-header--actions">
+		<div class="tune-header tune-header--actions">
 		${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
 			<div class="tune-actions">
 			<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">
@@ -641,10 +745,12 @@ function renderTable() {
 			</button>
 			</div>
 		</div>
-        <div id="${incipitId}" class="tune-incipit"></div>
+			</div>
 		</div>
-    </div>
-    </td>
+		<div id="${incipitId}" class="tune-incipit"></div>
+		</div>
+	</div>
+	</td>
 	<td class="notes">${referencesHtml}${
 		scores && scores.length > 0
 			? `${scores
@@ -815,19 +921,19 @@ function sortData(column) {
 	renderTable();
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+// -- DOMContentLoaded ---------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", async function () {
+	let initResult;
 	try {
-		initialiseData();
+		initResult = await initialiseData();
+	} catch (e) {
+		console.error("Initialisation error:", e);
 	} finally {
-		// #page-spinner is visible by default in HTML (no hidden attr);
-		// #page-main is hidden by default. Swap them once data is ready.
 		document.getElementById("page-spinner").setAttribute("hidden", "");
 		document.getElementById("page-main").removeAttribute("hidden");
 	}
 
-	// document
-	// 	.getElementById("searchInput")
-	// 	.addEventListener("input", applyFilters);
 	document.getElementById("searchForm").addEventListener("submit", (e) => {
 		e.preventDefault();
 		applyFilters();
@@ -881,18 +987,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		dropdown.classList.remove("active");
 		copyTunesToClipboard();
 	});
-	document.getElementById("clearStorageBtn")?.addEventListener("click", (e) => {
-		e.preventDefault();
-		dropdown.classList.remove("active");
-		clearStorage();
-	});
 	document.getElementById("emptyTunesBtn")?.addEventListener("click", (e) => {
 		e.preventDefault();
 		dropdown.classList.remove("active");
 		emptyTunes();
 	});
+	document
+		.getElementById("tuneListSelectorBtn")
+		?.addEventListener("click", (e) => {
+			e.preventDefault();
+			dropdown.classList.remove("active");
+			openTuneListSelector();
+		});
 
-	// Tune selections menu item - enabled when there are saved set lists or ≥2 tunes selected
+	// Tune selections menu item - enabled when there are saved set lists or >=2 tunes selected
 	const tuneSelectionsBtn = document.getElementById("tuneSelectionsBtn");
 	if (tuneSelectionsBtn) {
 		tuneSelectionsBtn.addEventListener("click", (e) => {
@@ -917,4 +1025,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			dropdown.classList.remove("active");
 			tsSetImportModal.open();
 		});
+
+	// Warn before leaving with unsaved changes on a server/external list
+	window.addEventListener("beforeunload", (e) => {
+		if (isDirty) {
+			e.preventDefault();
+			e.returnValue = "";
+		}
+	});
+
+	// Show selector if no list was auto-loaded at startup
+	if (initResult?.needsSelector) {
+		tuneListSelectorModal.openWithContext(initResult.manifest, null);
+	}
 });

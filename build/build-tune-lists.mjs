@@ -357,7 +357,7 @@ export async function buildTuneLists({
         file: filename,
         lastUpdate: listLastUpdate(tunes, setLists),
         count: tunes.length,
-        description: description`,
+        description: description,
         category: "groups",
         group
       });

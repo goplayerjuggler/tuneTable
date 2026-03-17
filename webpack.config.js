@@ -15,8 +15,6 @@ const HtmlInlineCssWebpackPlugin =
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const ROOT = path.resolve(__dirname, "..");
-
 // Custom plugin to concatenate tune files and build tune-list JSON files before build
 class ConcatenateTunesPlugin {
 	constructor({ isDevelopment = false } = {}) {
@@ -24,9 +22,12 @@ class ConcatenateTunesPlugin {
 	}
 
 	apply(compiler) {
-		const tunesDir = path.resolve(ROOT, "src", "tunes");
-		const templateFile = path.resolve(ROOT, "src", "tunes-template.data.js");
-		const outputFile = path.resolve(ROOT, "src", "tunes.compiled.js");
+		const tunesDir = path.resolve(__dirname, "src", "tunes");
+		const templateFile = path.resolve(
+			__dirname,
+			"src",
+			"tunes-template.data.js"
+		);
 		// Persists across recompilations within one webpack session
 		let lastInputHash = null;
 
@@ -133,10 +134,10 @@ export default (env, argv) => {
 	return {
 		mode: argv.mode || "production",
 		devtool: isDevelopment ? "eval-source-map" : false,
-		entry: path.resolve(ROOT, "src/index.js"),
+		entry: path.resolve(__dirname, "src/index.js"),
 		output: {
 			filename: "bundle.js",
-			path: path.resolve(ROOT, "dist"),
+			path: path.resolve(__dirname, "dist"),
 			clean: {
 				// Preserve tune-list JSON files written by ConcatenateTunesPlugin
 				// in beforeCompile, which runs before webpack's emit/clean phase
@@ -167,7 +168,7 @@ export default (env, argv) => {
 			new ConcatenateTunesPlugin({ isDevelopment }),
 
 			new HtmlWebpackPlugin({
-				template: path.resolve(ROOT, "src/index.html"),
+				template: path.resolve(__dirname, "src/index.html"),
 				inject: "body",
 				minify: isDevelopment
 					? false
@@ -196,12 +197,12 @@ export default (env, argv) => {
 					])
 		],
 		devServer: {
-			static: path.resolve(ROOT, "dist"),
+			static: path.resolve(__dirname, "dist"),
 			port: 8080,
 			hot: true,
 			// Don't watch dist folder
 			watchFiles: {
-				paths: [path.resolve(ROOT, "src/**/*")],
+				paths: [path.resolve(__dirname, "src/**/*")],
 				options: {
 					ignored: [
 						"**/node_modules/**",
