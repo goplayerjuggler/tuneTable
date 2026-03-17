@@ -309,11 +309,11 @@ export async function buildTuneLists({
   await writeList("default.json", defaultTunes, defaultSetLists);
   generatedLists.push({
     id: "default",
-    name: "Main tune list",
+    name: "goplayer’s tune list",
     file: "default.json",
     lastUpdate: listLastUpdate(defaultTunes, defaultSetLists),
     count: defaultTunes.length,
-    description: "main tune list",
+    description: "my repertoire plus some tunes I’m interested in",
     default: true
   });
   console.log(
