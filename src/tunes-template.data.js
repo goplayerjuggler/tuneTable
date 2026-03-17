@@ -1,6 +1,4 @@
 export default {
-	lastUpdate: "2026-03-16",
-	//CopyTunesHere
 	setLists: [
 		{
 			id: "1771406869982-ukwxx",
