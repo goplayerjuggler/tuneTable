@@ -10,17 +10,14 @@ N:Imported into *tuneTable* on 2025-11-02,
 N:from https://thesession.org/tunes/11600#setting21930
 N:Setting entered in thesession by user “ceolachan” on 2013-07-18
 N:*abc-tools: convert to M:4/4*
-K:Gmajor
-|:D|GB BG FA- AD|GA Bc de/d/ cA|
-GB- BG FA AB|c/B/A FA G2 G:|
-|:B/c/|dg ga bg gf/e/|dg- gb ab/a/ g/f/e|
-dg- ga bg ge|dB c/B/A G2- G:|`
-	],
-	references: [
-		{
-			notes: "Nb 1 / 2nd polka set"
-		}
+N:(edited after importing)
+K:Dmajor
+|:A,|DF FD CE- EA,|DE FG AB/A/ GE|
+DF- FD CE EF|G/F/E CE D2 D:|
+|:F/G/|Ad de fd dc/B/|Ad- df ef/e/ d/c/B|
+Ad- de fd dB|AF G/F/E D2- D:|`
 	],
 	theSessionId: 11600,
-	theSessionSettingId: 21930
+	theSessionSettingId: 21930,
+	parts: "AABB"
 };

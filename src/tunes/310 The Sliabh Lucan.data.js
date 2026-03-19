@@ -6,11 +6,7 @@ export default {
 M: 4/4
 L: 1/8
 K: Emin
-EB B>A BG E/F/G|FA`,
-	references: [
-		{
-			notes: "Nb 3 / 2nd polka set"
-		}
-	],
+EB B>A BG E/F/G|FA A>B AG F/E/D|`,
+	parts: "AABB",
 	theSessionId: 11676
 };

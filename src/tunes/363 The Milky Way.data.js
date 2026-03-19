@@ -6,6 +6,7 @@ R: reel
 M: 4/4
 L: 1/16
 K: Dmaj
-D2 (3FED ADFA d2fd efd2|D2`,
-	theSessionId: 2241
+D2F/E/D ADFA d2fd efd2|D2F/E/D ADFA`,
+	theSessionId: 2241,
+	parts: "AABB"
 };

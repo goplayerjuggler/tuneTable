@@ -3,20 +3,14 @@ export default {
 	parts: "ABC",
 	abc: `X:1
 T:Greig's Pipes
+Z:Malcolm Schonfield%260318
 R:reel
 L:1/16
 M:4/4
-N:Here's quite a simplified setting.
-N:---
-N:Imported into *tuneTable* on 2026-03-11,
-N:from https://thesession.org/tunes/605#setting41651
-N:Setting entered in thesession by user “Jeremy” on 2021-07-24
-N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Gmajor
-B3A BAGA B2GB AGEG|B2BA BAGB cABG AGEG|
-B3A BAGA B2GB AGEG|Bdd2 eBdB AcBG AGEG|
-|:DGG2 DGBG DGBG AGEG|DGGF GABc dBAc BGG2:|
-|:d2Bd efge d2BG AGEG|d2Bd efge agbg age2:|`,
-	theSessionId: 605,
-	theSessionSettingId: 41651
+B3B- BAGA B2GB AGEG|B2B- BAGB A/B/cBG AGED|
+B3B- BAGA B2GB AGEG|B/c/ded BcdB AcBG AGEG||
+|:D~G3 AGBG DGBG AGEG|:D~G3 GABc dBAc [1BGGE:| [2BGGB||
+|:d2B/c/d eg2e d2BG AGEG|d2B/c/d  e~g3 agbg [1ageg:| [2aged:|`,
+	theSessionId: 605
 };

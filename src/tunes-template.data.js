@@ -147,7 +147,8 @@ export default {
 							theSessionId: 11600
 						},
 						{
-							theSessionId: 647
+							theSessionId: 647,
+							notes: "2ème fois : B en version brettonne"
 						},
 						{
 							theSessionId: 11676
@@ -187,13 +188,13 @@ export default {
 					collapsed: true
 				},
 				{
-					name: "Palmer's Gete",
+					name: "Palmer's Gate",
 					tunes: [
 						{
-							theSessionId: 1057
+							theSessionId: 1020
 						},
 						{
-							theSessionId: 1020
+							theSessionId: 1057
 						}
 					],
 					collapsed: true
@@ -205,10 +206,10 @@ export default {
 					name: "Tiny the Trooper - Slip jigs (3-3)",
 					tunes: [
 						{
-							theSessionId: 14242
+							ttId: 348
 						},
 						{
-							ttId: 348
+							theSessionId: 14242
 						}
 					],
 					collapsed: true
