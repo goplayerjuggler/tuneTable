@@ -55,7 +55,22 @@ function saveTunesToStorage() {
 			console.error("Failed to save slot:", e);
 		}
 	} else {
-		isDirty = true;
+		const id = slotManager.generateSlotId();
+		const name = `${currentListState?.displayName ?? "Tune list"} (local copy)`;
+		slotManager.saveSlot(
+			id,
+			name,
+			prepareTunesForExport(window.tunesData),
+			window._setLists ?? []
+		);
+		currentListState = {
+			source: "local",
+			sourceId: id,
+			displayName: name,
+			loadedAt: new Date().toISOString()
+		};
+		localStorage.setItem(CURRENT_LIST_KEY, JSON.stringify(currentListState));
+		isDirty = false;
 	}
 	updateFooter();
 }
