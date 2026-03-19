@@ -12,12 +12,14 @@ import { getTunes, getTitles } from "@goplayerjuggler/abc-tools";
  * **Features**:
  * - Parse single or multiple ABC tunes
  * - Automatic tune splitting by X: headers
+ * - Load from .abc/.txt files or paste directly
  * - Status feedback for import operations
  * - Integration with main tune database
  *
  * **Key Methods**:
  * - `open()`: Open modal and reset state
  * - `addTunes()`: Process and import ABC notation
+ * - `loadFiles()`: Read selected files into the textarea
  * - `clear()`: Clear input and status
  * - `showStatus(message, type)`: Display success/error messages
  */
@@ -28,17 +30,24 @@ export default class AddTunesModal extends Modal {
 			size: "large",
 			title: "Import tunes via ABC",
 			content: `
-        <div class="modal-body">
-          <div style="margin-bottom: 20px">
-            <p style="color: #666; margin-bottom: 10px">
-              Paste ABC notation below. Multiple tunes can be separated by blank
-              lines or X: headers.
-            </p>
-            <textarea
-              id="abcInput"
-              class="form-control abc-textarea"
-              rows="12"
-              placeholder="Paste ABC notation here…
+		<div class="modal-body">
+		  <div style="margin-bottom: 20px">
+			<p style="color: #666; margin-bottom: 10px">
+			  Paste ABC notation below, or load one or more .abc / .txt files.
+			  Multiple tunes can be separated by blank lines; each tune starts with an X: header.
+			</p>
+			<div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px">
+			  <label class="btn btn-secondary" style="cursor: pointer; margin: 0">
+				Choose files…
+				<input type="file" id="abcFileInput" accept=".abc,.txt" multiple style="display: none">
+			  </label>
+			  <span id="abcFileNames" style="color: #666; font-size: 0.9em"></span>
+			</div>
+			<textarea
+			  id="abcInput"
+			  class="form-control abc-textarea"
+			  rows="12"
+			  placeholder="Paste ABC notation here…
 
 Example:
 
@@ -50,16 +59,16 @@ M:12/8
 K:A major
 d|cAA BGB cAA A2d | cAA BGB AFD D2
 …"
-            ></textarea>
-          </div>
-          <div id="addTunesStatus" style="display: none; padding: 10px; border-radius: 4px; margin-top: 10px"></div>
-        </div>
+			></textarea>
+		  </div>
+		  <div id="addTunesStatus" style="display: none; padding: 10px; border-radius: 4px; margin-top: 10px"></div>
+		</div>
 
-        <div class="modal-footer">
-          <button id="clearAbcBtn" class="btn btn-secondary">Clear</button>
-          <button id="addAbcBtn" class="btn btn-primary">Add Tunes</button>
-        </div>
-      `,
+		<div class="modal-footer">
+		  <button id="clearAbcBtn" class="btn btn-secondary">Clear</button>
+		  <button id="addAbcBtn" class="btn btn-primary">Add Tunes</button>
+		</div>
+	  `
 		});
 
 		this.callbacks = callbacks;
@@ -68,9 +77,11 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 	onOpen() {
 		this.elements = {
 			input: document.getElementById("abcInput"),
+			fileInput: document.getElementById("abcFileInput"),
+			fileNames: document.getElementById("abcFileNames"),
 			clearBtn: document.getElementById("clearAbcBtn"),
 			addBtn: document.getElementById("addAbcBtn"),
-			status: document.getElementById("addTunesStatus"),
+			status: document.getElementById("addTunesStatus")
 		};
 
 		this.setupControls();
@@ -84,10 +95,23 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 	setupControls() {
 		this.elements.clearBtn?.addEventListener("click", () => this.clear());
 		this.elements.addBtn?.addEventListener("click", () => this.addTunes());
+		this.elements.fileInput?.addEventListener("change", () => this.loadFiles());
+	}
+
+	async loadFiles() {
+		const files = Array.from(this.elements.fileInput.files);
+		if (!files.length) return;
+
+		this.elements.fileNames.textContent = files.map((f) => f.name).join(", ");
+
+		const contents = await Promise.all(files.map((f) => f.text()));
+		this.elements.input.value = contents.join("\n\n");
 	}
 
 	clear() {
 		this.elements.input.value = "";
+		this.elements.fileInput.value = "";
+		this.elements.fileNames.textContent = "";
 		this.elements.status.style.display = "none";
 	}
 
@@ -166,7 +190,7 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 				}`;
 				this.showStatus(
 					successes + (failedCount === 0 ? "" : `; ${fails}`),
-					"success",
+					"success"
 				);
 
 				this.elements.input.value = "";

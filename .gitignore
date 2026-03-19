@@ -11,3 +11,5 @@ mytunebook*.js
 # Dependency directories
 node_modules/
 dist/
+# compiled
+src/tunes.compiled.js

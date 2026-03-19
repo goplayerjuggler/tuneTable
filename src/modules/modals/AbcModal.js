@@ -1,14 +1,14 @@
 import {
 	canDoubleBarLength,
 	canHalveBarLength,
-	convertStandardReel,
-	convertToStandardJig,
-	convertToStandardHornpipe,
-	convertToStandardReel,
-	convertStandardJig,
 	convertStandardHornpipe,
+	convertStandardJig,
 	convertStandardPolka,
-	convertToStandardPolka
+	convertStandardReel,
+	convertToStandardHornpipe,
+	convertToStandardJig,
+	convertToStandardPolka,
+	convertToStandardReel
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";

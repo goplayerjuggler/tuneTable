@@ -2,12 +2,79 @@ import Modal from "./Modal.js";
 import { processTuneData } from "../../processTuneData.js";
 import { addLineBreaks } from "../../utils.js";
 import { eventBus } from "../events/EventBus.js";
+import {
+	canDoubleBarLength,
+	convertStandardHornpipe,
+	convertStandardJig,
+	convertStandardPolka,
+	convertStandardReel
+} from "@goplayerjuggler/abc-tools";
+
+/**
+ * Import behaviour settings.
+ *
+ * skipLevel:
+ *   'ifTuneExists'    — skip if a tune with the same theSessionId already exists.
+ *   'ifSettingExists' — skip only if the chosen setting's URL is already present in
+ *                       an ABC string. When the tune exists but not the setting, the
+ *                       new ABC is appended to tune.abc instead.
+ *
+ * doubleBarLengthWherePossible:
+ *   When true, each imported ABC is passed through canDoubleBarLength(); if eligible,
+ *   the appropriate convert* function is applied.
+ *
+ * importAllSettingsForSpecifiedUser:
+ *   When true and a userId is entered in the UI, all settings entered by that user
+ *   for each tune are imported (abc becomes an array). When false, the normal
+ *   single-setting selection applies even for an explicit userId.
+ *
+ * settingChoiceCriteria:
+ *   Ranked filter applied when no single setting is identified by UI inputs.
+ *   Each criterion narrows the candidate list; a criterion is skipped when it
+ *   would leave no candidates.
+ *
+ *   Supported criterion values:
+ *   - { preferredUserIds: [[id, name], ...] } — narrows to the first user (in priority
+ *     order) that has any matching settings; remaining criteria continue from there.
+ *   - 'withChords' / 'withoutChords'
+ *   - 'preferShorter' / 'preferLonger' / 'newestFirst' / 'oldestFirst'
+ */
+const theSessionImportSettings = {
+	skipLevel: "ifSettingExists",
+	doubleBarLengthWherePossible: true,
+	importAllSettingsForSpecifiedUser: true,
+	settingChoiceCriteria: [
+		{
+			preferredUserIds: [
+				[40345, "GoPlayerJuggler"],
+				[13094, "birlibirdie"],
+				[1, "Jeremy"],
+				[11705, "ceolachan"],
+				[6451, "jackb"],
+				[116353, "John E Roche"],
+				[4763, "Dr. Dow"],
+				[3150, "slainte"],
+				[8648, "erik-fiddler"],
+				[60897, "Fernando Durbán Galnares"],
+				[119445, "piperDave"]
+			]
+		},
+		"withChords",
+		"preferShorter"
+	]
+};
 
 /**
  * Modal for importing tunes from TheSession.org
  */
 export default class TheSessionImportModal extends Modal {
-	constructor(tunesData) {
+	/**
+	 * @param {object[]} tunesData - Reference to the app's live tunes array.
+	 * @param {object}   [options]
+	 * @param {function} [options.copyToClipboard] - copyTuneDataToClipboard(tunes, btn);
+	 *   displayed as a button after a successful import.
+	 */
+	constructor(tunesData, copyToClipboard) {
 		super({
 			id: "thesession-import-modal",
 			title: "Import tunebook or tune from thesession.org",
@@ -18,104 +85,91 @@ export default class TheSessionImportModal extends Modal {
 
 		this.isLoading = false;
 		this.tunesData = tunesData;
+		this.copyToClipboard = copyToClipboard;
+		/** Tunes imported in the most recent run, for clipboard export. */
+		this.lastImportedTunes = [];
 	}
 
 	/**
-	 * Builds the modal's HTML content
+	 * Builds the modal's HTML content.
 	 * @returns {string} HTML string
 	 */
 	static buildContent() {
 		return `
-      <div class="import-form">
-                
-        <div class="form-group">
-          <label for="thesession-user">User ID (optional):</label>
-          <input type="text" id="thesession-user" placeholder="e.g. 1 - ID of Jeremy" />
-        </div>
-        <div class="form-group">
-          <label for="thesession-tune-id">Tune ID (optional):</label>
-          <input type="text" id="thesession-tune-id" placeholder="e.g. 23320 (ID of The First Draft, a mazurka by S. Peoples)" />
-        </div>
-        <div class="form-group">
-          <label for="import-limit">Maximum number of tunes:</label>
-          <input type="number" id="import-limit" min="1" max="100" value="100" />
-        </div>
+	  <div class="import-form">
 
-        
-        <div class="form-actions">
-          <button 
-            id="import-btn" 
-            class="btn btn--primary"
-            type="button">
-            Import
-          </button>
-        </div>
-        
-        <div id="import-status" class="import-status" role="status" aria-live="polite"></div>
-      </div>
-    `;
+		<div class="form-group">
+		  <label for="thesession-user">User ID (optional):</label>
+		  <input type="text" id="thesession-user" placeholder="e.g. 1 - ID of Jeremy" />
+		</div>
+		<div class="form-group">
+		  <label for="thesession-tune-id">Tune ID(s) (optional):</label>
+		  <input type="text" id="thesession-tune-id" placeholder="e.g. 23320 or 23320 456 789 (space- or comma-separated)" />
+		</div>
+		<div class="form-group">
+		  <label for="thesession-setting-id">Setting ID (optional, single tune ID only):</label>
+		  <input type="text" id="thesession-setting-id" placeholder="e.g. 12345" />
+		</div>
+		<div class="form-group">
+		  <label for="import-limit">Maximum number of tunes:</label>
+		  <input type="number" id="import-limit" min="1" max="100" value="100" />
+		</div>
+
+		<div class="form-actions">
+		  <button id="import-btn" class="btn btn--primary" type="button">
+			Import
+		  </button>
+		  <button id="copy-btn" class="btn btn--secondary" type="button" style="display:none">
+			Copy imported tunes to clipboard
+		  </button>
+		</div>
+
+		<div id="import-status" class="import-status" role="status" aria-live="polite"></div>
+	  </div>
+	`;
 	}
 
 	/**
-	 * Set up event listeners - extends base class
+	 * Set up event listeners — extends base class.
 	 */
 	setupEventListeners() {
-		// Call parent to set up close handlers and ESC key
 		super.setupEventListeners();
 
 		const importBtn = this.element.querySelector("#import-btn");
+		const copyBtn = this.element.querySelector("#copy-btn");
 		const userInput = this.element.querySelector("#thesession-user");
-		const limitEl = this.element.querySelector("#import-limit");
-		//todo: add user ID - one fewer API call
 		const tuneIdInput = this.element.querySelector("#thesession-tune-id");
+		const settingIdInput = this.element.querySelector("#thesession-setting-id");
+		const limitEl = this.element.querySelector("#import-limit");
 		const statusDiv = this.element.querySelector("#import-status");
 
-		// Import button click
 		importBtn.addEventListener("click", () => this.handleImport());
 
+		copyBtn.addEventListener("click", () => {
+			this.copyToClipboard(this.lastImportedTunes, copyBtn);
+		});
+
 		const enterKeyImport = (e) => {
-			if (e.key === "Enter" && !this.isLoading) {
-				this.handleImport();
-			}
+			if (e.key === "Enter" && !this.isLoading) this.handleImport();
 		};
-		// Enter key to import
-		tuneIdInput.addEventListener("keypress", enterKeyImport);
 		userInput.addEventListener("keypress", enterKeyImport);
+		tuneIdInput.addEventListener("keypress", enterKeyImport);
+		settingIdInput.addEventListener("keypress", enterKeyImport);
 		limitEl.addEventListener("keypress", enterKeyImport);
 
 		const clearStatus = () => {
 			statusDiv.textContent = "";
 			statusDiv.className = "import-status";
 		};
-		// Clear status on input change
 		userInput.addEventListener("input", clearStatus);
 		tuneIdInput.addEventListener("input", clearStatus);
+		settingIdInput.addEventListener("input", clearStatus);
 	}
 
-	// /**
-	//  * Extracts tune ID from various input formats
-	//  * @param {string} input - URL or tune ID
-	//  * @returns {string|null} Tune ID or null if invalid
-	//  */
-	// extractTuneId(input) {
-	//   // Direct numeric ID
-	//   if (/^\d+$/.test(input)) {
-	//     return input;
-	//   }
-
-	//   // URL format: https://thesession.org/tunes/12345
-	//   const urlMatch = input.match(/thesession\.org\/tunes\/(\d+)/);
-	//   if (urlMatch) {
-	//     return urlMatch[1];
-	//   }
-
-	//   return null;
-	// }
-
 	/**
-	 * Shows status message
-	 * @param {string} message - Status message
-	 * @param {string} type - Status type: 'success', 'error', 'loading'
+	 * Shows a status message.
+	 * @param {string} message
+	 * @param {'info'|'success'|'error'} [type='info']
 	 */
 	showStatus(message, type = "info") {
 		const statusDiv = this.element.querySelector("#import-status");
@@ -124,219 +178,226 @@ export default class TheSessionImportModal extends Modal {
 	}
 
 	/**
-	 * Sets loading state
-	 * @param {boolean} loading - Loading state
+	 * Sets loading state (cursor and flag).
+	 * @param {boolean} loading
 	 */
 	setLoading(loading) {
 		this.isLoading = loading;
 		const overlay = this.element.querySelector(".modal__overlay");
-		if (loading) {
-			overlay.style.cursor = "wait";
-		} else {
-			overlay.style.cursor = "pointer";
-		}
+		overlay.style.cursor = loading ? "wait" : "pointer";
 	}
 
 	static delay(ms) {
 		return new Promise((resolve) => setTimeout(resolve, ms));
 	}
 
+	// --- Setting-selection helpers --------------------------------------------
+
 	/**
-	 * Main import function
+	 * Returns true if a setting (identified by its URL in the ABC notes) is
+	 * already present in tunesData.
+	 * @param {number} tuneId
+	 * @param {number} settingId
 	 */
-	async handleImport() {
-		const importBtn = this.element.querySelector("#import-btn");
-
-		this.setLoading(true);
-		importBtn.disabled = true;
-		const tuneId = this.element
-			.querySelector("#thesession-tune-id")
-			.value?.trim();
-		//todo - possible improvement: allow the tune URL as an alternative
-
-		const user = this.element.querySelector("#thesession-user").value?.trim();
-		const limit = parseInt(document.getElementById("import-limit").value) || 10;
-
-		if (!user && !tuneId) {
-			this.showStatus("Please enter a username and/or a tune ID", "error");
-			return;
-		}
-
-		// Disable the import button during processing
-		// const importBtn = event.target;
-		// importBtn.disabled = true;
-		// importBtn.textContent = "Importing…";
-		this.setLoading(true);
-
-		try {
-			let memberId, tuneIds;
-			if (user) {
-				if (user.match(/^\d+$/)) {
-					memberId = +user; //unary plus operator (+) can be used to convert a string to a number.
-				} else {
-					this.showStatus("Fetching member information…", "info");
-
-					// Step 1: Get member ID from username
-					memberId = await this.getMemberIdByUsername(user);
-					if (!memberId) {
-						throw new Error(`Member '${user}' not found`);
-					}
-
-					this.showStatus(`Found member ${user}.`, "info");
-				}
-			}
-			// Step 2: Get tunebook for this member
-			tuneIds = tuneId
-				? [tuneId]
-				: await this.getMemberTunebook(memberId, this.tunesData.length + limit);
-
-			if (tuneIds.length === 0) {
-				throw new Error("No tunes found");
-			}
-
-			this.showStatus(
-				`Found ${tuneIds.length} tunes. Fetching ABC settings…`,
-				"info"
-			);
-
-			// Step 3: Fetch ABC for each tune
-			const importedTunes = [];
-			const skippedTunes = [];
-
-			for (let i = 0; i < tuneIds.length; i++) {
-				const tuneId = +tuneIds[i];
-				this.showStatus(
-					`Processing tune ${i + 1} of ${tuneIds.length}…`,
-					"info"
-				);
-
-				const tuneData = await this.getTuneWithAbc(tuneId, memberId);
-
-				// Check if tune already exists in tunesData
-				const existingTune = this.tunesData.find(
-					(t) => t.theSessionId === tuneId
-				);
-
-				if (existingTune) {
-					skippedTunes.push(tuneData.name);
-					continue;
-				}
-				try {
-					const processedTune = processTuneData(tuneData);
-					eventBus.emit("tuneImported", processedTune);
-					// this.tunesData.push(processedTune);
-					importedTunes.push(processedTune.name);
-
-					if (importedTunes.length >= limit) {
-						break;
-					}
-				} catch {
-					this.showStatus(
-						`failed to import tune: ${tuneData.name} - continuing`,
-						"error"
-					);
-					continue;
-				}
-
-				// Add small delay to avoid overwhelming the API
-				await TheSessionImportModal.delay(200);
-			}
-
-			// Show results
-			if (importedTunes.length > 0) {
-				let message = `Successfully imported ${importedTunes.length} tunes.`;
-				if (skippedTunes.length > 0) {
-					message += ` Skipped ${skippedTunes.length} tunes already in list.`;
-				}
-				this.showStatus(message, "success");
-			}
-			// Show results
-			let message = `Successfully imported ${importedTunes.length} tunes.`;
-			if (skippedTunes.length > 0) {
-				message += ` Skipped ${skippedTunes.length} tunes already in list.`;
-			}
-			this.showStatus(message, "success");
-
-			//   // Re-enable button
-			//   importBtn.disabled = false;
-			//   importBtn.textContent = "Import tunes";
-			// } catch (error) {
-			//   console.error("Import error:", error);
-			//   this.showStatus(`Error: ${error.message}`, "error");
-			//   importBtn.disabled = false;
-			//   importBtn.textContent = "Import tunes";
-			// }
-		} catch (error) {
-			console.error("Import error:", error);
-			this.showStatus(error.message || "import error", "error");
-		} finally {
-			this.setLoading(false);
-			importBtn.disabled = false;
-		}
+	isSettingPresent(tuneId, settingId) {
+		const regex = new RegExp(
+			`https://thesession\\.org/tunes/${tuneId}#setting${settingId}`
+		);
+		return this.tunesData.some((t) => {
+			if (t.theSessionId !== tuneId) return false;
+			const abcs = Array.isArray(t.abc) ? t.abc : t.abc ? [t.abc] : [];
+			return abcs.some((abc) => regex.test(abc));
+		});
 	}
 
 	/**
-	 * Get member ID by username using the search API
+	 * Selects the single best setting from the list returned by the API, using a
+	 * ranked-filter strategy:
+	 *
+	 * 1. Explicit UI settingId — if found, use it directly.
+	 * 2. Explicit UI userId — narrow to that member's settings, then continue.
+	 * 3. settingChoiceCriteria — applied as a ranked filter: each criterion narrows
+	 *    the candidate list; a criterion is skipped when it would leave no candidates.
+	 *    { preferredUserIds } narrows to the first matching user's settings, then
+	 *    continues filtering. String criteria further narrow or select a single setting.
+	 * 4. Fall back to the first remaining candidate.
+	 *
+	 * Always returns a single setting object (or null).
+	 *
+	 * @param {object[]} settings
+	 * @param {number|null} uiUserId
+	 * @param {number|null} uiSettingId
+	 * @param {Array} criteria
+	 * @returns {object|null}
+	 */
+	selectBestSetting(
+		settings,
+		uiUserId = null,
+		uiSettingId = null,
+		criteria = []
+	) {
+		if (!settings?.length) return null;
+
+		// 1. Explicit setting ID from the UI
+		if (uiSettingId) {
+			const byId = settings.find((s) => s.id === uiSettingId);
+			if (byId) return byId;
+		}
+
+		let candidates = [...settings];
+
+		// 2. Explicit user ID from the UI — narrow, then continue filtering
+		if (uiUserId) {
+			const byUser = candidates.filter((s) => s.member?.id === uiUserId);
+			if (byUser.length) candidates = byUser;
+		}
+
+		// 3. Apply settingChoiceCriteria as a ranked filter
+		for (const criterion of criteria) {
+			if (candidates.length <= 1) break;
+
+			if (typeof criterion === "object" && criterion.preferredUserIds) {
+				// Narrow to the first preferred user that has any settings, then continue
+				for (const [userId] of criterion.preferredUserIds) {
+					const matches = candidates.filter((s) => s.member?.id === userId);
+					if (matches.length) {
+						candidates = matches;
+						break;
+					}
+				}
+				continue;
+			}
+
+			const narrowed = TheSessionImportModal.applySimpleCriterion(
+				candidates,
+				criterion
+			);
+			if (narrowed.length) candidates = narrowed;
+		}
+
+		// 4. Fallback to first remaining candidate
+		return candidates[0];
+	}
+
+	/**
+	 * Applies a simple string criterion to a candidate list.
+	 * Returns a filtered/sorted subset, or an empty array if unrecognised or
+	 * if the criterion produces no results (caller then keeps current candidates).
+	 * @param {object[]} candidates
+	 * @param {string} criterion
+	 * @returns {object[]}
+	 */
+	static applySimpleCriterion(candidates, criterion) {
+		switch (criterion) {
+			case "withChords": {
+				const matched = candidates.filter((s) => /"[^"]*"/.test(s.abc));
+				return matched.length ? matched : [];
+			}
+			case "withoutChords": {
+				const matched = candidates.filter((s) => !/"[^"]*"/.test(s.abc));
+				return matched.length ? matched : [];
+			}
+			case "preferShorter": {
+				const shortest = candidates.reduce((a, b) =>
+					a.abc.length <= b.abc.length ? a : b
+				);
+				return [shortest];
+			}
+			case "preferLonger": {
+				const longest = candidates.reduce((a, b) =>
+					a.abc.length >= b.abc.length ? a : b
+				);
+				return [longest];
+			}
+			case "newestFirst": {
+				return [candidates.reduce((a, b) => (a.date >= b.date ? a : b))];
+			}
+			case "oldestFirst": {
+				return [candidates.reduce((a, b) => (a.date <= b.date ? a : b))];
+			}
+			default:
+				return [];
+		}
+	}
+
+	// --- ABC generation -------------------------------------------------------
+
+	/**
+	 * Doubles the bar length of an ABC string when the settings allow it and the
+	 * ABC is eligible (as determined by canDoubleBarLength()).
+	 * @param {string} abc
+	 * @param {string} rhythm
+	 * @returns {string}
+	 */
+	static maybeDoubleBarLength(abc, rhythm) {
+		if (
+			!theSessionImportSettings.doubleBarLengthWherePossible ||
+			!canDoubleBarLength(abc)
+		)
+			return abc;
+		switch (rhythm) {
+			case "reel":
+				return convertStandardReel(abc);
+			case "jig":
+				return convertStandardJig(abc);
+			case "polka":
+				return convertStandardPolka(abc);
+			case "hornpipe":
+				return convertStandardHornpipe(abc);
+			default:
+				return abc;
+		}
+	}
+
+	// --- API calls ------------------------------------------------------------
+
+	/**
+	 * Get member ID by username using the search API.
+	 * @param {string} username
+	 * @returns {Promise<number|null>}
 	 */
 	async getMemberIdByUsername(username) {
-		const searchUrl = `https://thesession.org/members/search?q=${encodeURIComponent(
-			username
-		)}&format=json`;
-
-		const response = await fetch(searchUrl);
+		const url = `https://thesession.org/members/search?q=${encodeURIComponent(username)}&format=json`;
+		const response = await fetch(url);
 		if (!response.ok) {
 			throw new Error(`Failed to search for member: ${response.status}`);
 		}
-
 		const data = await response.json();
-
-		// Find exact match (case-insensitive)
 		const member = data.members?.find(
 			(m) => m.name.toLowerCase() === username.toLowerCase()
 		);
-
-		return member?.id || null;
+		return member?.id ?? null;
 	}
 
 	/**
-	 * Get tunebook for a member
+	 * Pages through a member's tunebook and returns up to `limit` tune IDs.
+	 * @param {number} memberId
+	 * @param {number} [limit=500]
+	 * @returns {Promise<number[]>}
 	 */
 	async getMemberTunebook(memberId, limit = 500) {
 		const tuneIds = [];
 		let page = 1;
-		const perPage = Math.min([20, limit]);
+		const perPage = Math.min(100, limit);
 
 		while (tuneIds.length < limit) {
-			const url = `https://thesession.org/members/${memberId}/tunebook?format=json&page=${page}&orderby=newest&perpage=${perPage}`;
-
 			this.showStatus(
-				`loading tunebook items ${page * perPage + 1} to ${
-					(page + 1) * perPage
-				}`,
+				`Loading tunebook items ${(page - 1) * perPage + 1} to ${page * perPage}...`,
 				"info"
 			);
+			const url = `https://thesession.org/members/${memberId}/tunebook?format=json&page=${page}&orderby=newest&perpage=${perPage}`;
 			const response = await fetch(url);
 			if (!response.ok) {
 				throw new Error(`Failed to fetch tunebook: ${response.status}`);
 			}
-
 			const data = await response.json();
-
-			if (!data.tunes || data.tunes.length === 0) {
-				break;
-			}
+			if (!data.tunes?.length) break;
 
 			for (const item of data.tunes) {
-				if (item.id && tuneIds.length < limit) {
-					tuneIds.push(item.id);
-				}
+				if (item.id && tuneIds.length < limit) tuneIds.push(item.id);
 			}
 
-			// Check if there are more pages
-			if (data.tunes.length < perPage) {
-				break;
-			}
-
+			if (data.tunes.length < perPage) break;
 			page++;
 		}
 
@@ -344,35 +405,37 @@ export default class TheSessionImportModal extends Modal {
 	}
 
 	/**
-	 * Get tune details and ABC notation
+	 * Fetches tune details and builds a tuneTable-format tune object.
+	 * Always selects a single best setting; abc is a single string.
+	 *
+	 * @param {number}      tuneId
+	 * @param {number|null} preferredMemberId
+	 * @param {number|null} uiSettingId - Explicit setting ID from the UI, if any.
 	 */
-	async getTuneWithAbc(tuneId, preferredMemberId = null) {
-		// Get tune details
+	async getTuneWithAbc(tuneId, preferredMemberId = null, uiSettingId = null) {
 		const tuneUrl = `https://thesession.org/tunes/${tuneId}?format=json`;
 		const tuneResponse = await fetch(tuneUrl);
-
 		if (!tuneResponse.ok) {
 			throw new Error(`Failed to fetch tune ${tuneId}: ${tuneResponse.status}`);
 		}
 
 		const tuneData = await tuneResponse.json();
-
-		const settingsData = tuneData.settings;
-
-		// Select the best setting(s)
-
-		let [selectedSetting, isFromPreferredMember] = this.selectBestSetting(
-			settingsData,
+		const allUserSettings =
+			theSessionImportSettings.importAllSettingsForSpecifiedUser &&
 			preferredMemberId
-		);
-		if (!selectedSetting) {
-			throw new Error(`No settings found for tune ${tuneId}`);
-		}
-		let selectedSettings;
-		if (isFromPreferredMember) {
-			selectedSettings = selectedSetting;
-			selectedSetting = selectedSettings[0];
-		}
+				? tuneData.settings.filter((s) => s.member?.id === preferredMemberId)
+				: null;
+
+		const setting = allUserSettings?.length
+			? allUserSettings[0]
+			: this.selectBestSetting(
+					tuneData.settings,
+					preferredMemberId,
+					uiSettingId,
+					theSessionImportSettings.settingChoiceCriteria
+				);
+		if (!setting) throw new Error(`No settings found for tune ${tuneId}`);
+
 		let lHeader = "1/8",
 			mHeader;
 		switch (tuneData.type) {
@@ -398,7 +461,6 @@ export default class TheSessionImportModal extends Modal {
 			case "mazurka":
 			case "waltz":
 				mHeader = "3/4";
-				// lHeader="1/4"
 				break;
 			case "three-two":
 				mHeader = "3/2";
@@ -407,9 +469,9 @@ export default class TheSessionImportModal extends Modal {
 
 		const cHeader = tuneData.composer ? "\nC:" + tuneData.composer : "";
 
-		const getAbc = (setting) => {
+		const buildAbc = (setting) => {
 			const comments = tuneData.comments.find((c) => c.date === setting.date);
-			let nHeaders = comments
+			const nHeaders = comments
 				? "\n" +
 					comments.content
 						.replace(/ {4}/gm, "\n")
@@ -418,7 +480,7 @@ export default class TheSessionImportModal extends Modal {
 						.join("\n") +
 					"\nN:---"
 				: "";
-			return `X:1
+			const raw = `X:1
 T:${tuneData.name + cHeader}
 R:${tuneData.type}
 L:${lHeader}
@@ -426,70 +488,180 @@ M:${mHeader + nHeaders}
 N:Imported into *tuneTable* on ${new Date().toISOString().split("T")[0]},
 N:from https://thesession.org/tunes/${tuneId}#setting${setting.id}${
 				setting.member?.name
-					? `
-N:Setting entered in thesession by user “${setting.member.name}”`
+					? `\nN:Setting entered in thesession by user “${setting.member.name}”`
 					: ""
-			} on ${
-				setting.date.substr(0, 10) //just get the date, not the time
-			}
+			} on ${setting.date.slice(0, 10)}
 K:${setting.key}
-${
-	setting.abc
-		.replace(/!(\w+)!/gm, "__$1__")
-		.replace(/!/gm, "\n")
-		.replace(/__(\w+)__/gm, "!$1!")
-	/*
-  bit of work to escape out abc ornaments like !tenuto!, then replace `!` with line return
-  , then restore the abc ornaments!
-Because thesession encodes line returns with `!`. 
-  */
-}`;
+${setting.abc
+	.replace(/!(\w+)!/gm, "__$1__")
+	.replace(/!/gm, "\n")
+	.replace(/__(\w+)__/gm, "!$1!")}`;
+			/*
+			 * The ABC ornament escaping above protects tokens like !tenuto! from being
+			 * split when '!' (TheSession's line-break encoding) is replaced with '\n'.
+			 */
+			return TheSessionImportModal.maybeDoubleBarLength(raw, tuneData.type);
 		};
 
-		// Build the tune object in tuneTable format
-		const tune = {
+		return {
 			name: tuneData.name,
 			nameIsFromAbc: true,
-			abc: selectedSettings
-				? selectedSettings.map(getAbc)
-				: getAbc(selectedSetting),
-			theSessionId: tuneId
-
-			// scores: [
-			// 	{
-			// 		url: `https://thesession.org/tunes/${tuneId}#setting${selectedSetting.id}`,
-			// 		name: "thesession.org"
-			// 	}
-			// ]
+			abc:
+				allUserSettings?.length > 1
+					? allUserSettings.map(buildAbc)
+					: buildAbc(setting),
+			theSessionId: tuneId,
+			theSessionSettingId: setting.id
 		};
-		if (isFromPreferredMember) {
-			tune.theSessionSettingId = selectedSetting.id;
-		}
-
-		return tune;
 	}
 
+	// --- Main import handler --------------------------------------------------
+
 	/**
-	 * Select the best ABC setting from available settings
-	 * Prefers settings by the specified member, then takes the first
+	 * Orchestrates the full import flow:
+	 * resolve user -> collect tune IDs -> fetch ABC -> skip/append/import -> report.
 	 */
-	selectBestSetting(settings, preferredMemberId = null) {
-		if (!settings || settings.length === 0) {
-			return null;
+	async handleImport() {
+		const tuneIdStr = this.element
+			.querySelector("#thesession-tune-id")
+			.value?.trim();
+		const settingIdStr = this.element
+			.querySelector("#thesession-setting-id")
+			.value?.trim();
+		const user = this.element.querySelector("#thesession-user").value?.trim();
+		const limit =
+			parseInt(this.element.querySelector("#import-limit").value) || 10;
+
+		if (!user && !tuneIdStr) {
+			this.showStatus("Please enter a username and/or a tune ID.", "error");
+			return;
 		}
 
-		// First try to find a setting by the preferred member
-		if (preferredMemberId) {
-			const memberSettings = settings.filter(
-				(s) => s.member && s.member.id === preferredMemberId
-			);
-			if (memberSettings.length > 0) {
-				return [memberSettings, true];
+		const importBtn = this.element.querySelector("#import-btn");
+		const copyBtn = this.element.querySelector("#copy-btn");
+		this.setLoading(true);
+		importBtn.disabled = true;
+		copyBtn.style.display = "none";
+		this.lastImportedTunes = [];
+
+		try {
+			let memberId, tuneIds;
+
+			if (user) {
+				if (/^\d+$/.test(user)) {
+					memberId = +user;
+				} else {
+					this.showStatus("Fetching member information...", "info");
+					memberId = await this.getMemberIdByUsername(user);
+					if (!memberId) throw new Error(`Member '${user}' not found`);
+					this.showStatus(`Found member ${user}.`, "info");
+				}
 			}
+
+			const parsedTuneIds = tuneIdStr
+				? tuneIdStr.split(/[\s,]+/).filter(Boolean)
+				: null;
+
+			tuneIds = parsedTuneIds
+				? [...new Set(parsedTuneIds)]
+				: [
+						...new Set(
+							await this.getMemberTunebook(
+								memberId,
+								this.tunesData.length + limit
+							)
+						)
+					];
+
+			if (!tuneIds.length) throw new Error("No tunes found");
+
+			this.showStatus(
+				`Found ${tuneIds.length} tunes. Fetching ABC settings...`,
+				"info"
+			);
+
+			const importedNames = [];
+			const skippedNames = [];
+			const { skipLevel } = theSessionImportSettings;
+			// settingId from the UI is only meaningful when exactly one tune ID is specified
+			const uiSettingId =
+				parsedTuneIds?.length === 1 && settingIdStr ? +settingIdStr : null;
+
+			for (let i = 0; i < tuneIds.length; i++) {
+				const tuneId = +tuneIds[i];
+				this.showStatus(
+					`Processing tune ${i + 1} of ${tuneIds.length}...`,
+					"info"
+				);
+
+				const tuneData = await this.getTuneWithAbc(
+					tuneId,
+					memberId ?? null,
+					uiSettingId
+				);
+				const existingTune = this.tunesData.find(
+					(t) => t.theSessionId === tuneId
+				);
+
+				if (skipLevel === "ifTuneExists" && existingTune) {
+					skippedNames.push(tuneData.name);
+					continue;
+				}
+
+				if (skipLevel === "ifSettingExists") {
+					if (this.isSettingPresent(tuneId, tuneData.theSessionSettingId)) {
+						skippedNames.push(tuneData.name);
+						continue;
+					}
+
+					if (existingTune) {
+						// Tune exists but not this setting — append the new ABC
+						if (!Array.isArray(existingTune.abc)) {
+							existingTune.abc = existingTune.abc ? [existingTune.abc] : [];
+						}
+						existingTune.abc.push(tuneData.abc);
+						importedNames.push(tuneData.name);
+						this.lastImportedTunes.push(existingTune);
+						if (importedNames.length >= limit) break;
+						await TheSessionImportModal.delay(200);
+						continue;
+					}
+				}
+
+				try {
+					const processedTune = processTuneData(tuneData);
+					eventBus.emit("tuneImported", processedTune);
+					importedNames.push(processedTune.name);
+					this.lastImportedTunes.push(processedTune);
+					if (importedNames.length >= limit) break;
+				} catch {
+					this.showStatus(
+						`Failed to import: ${tuneData.name} - continuing`,
+						"error"
+					);
+					continue;
+				}
+
+				await TheSessionImportModal.delay(200);
+			}
+
+			let message = importedNames.length
+				? `Successfully imported ${importedNames.length} tune${importedNames.length > 1 ? "s" : ""}: ${importedNames.join(", ")}.`
+				: "No new tunes to import.";
+			if (skippedNames.length) {
+				message += ` Skipped ${skippedNames.length} already in list.`;
+			}
+			this.showStatus(message, "success");
+
+			if (this.lastImportedTunes.length && this.copyToClipboard) {
+				copyBtn.style.display = "";
+			}
+		} catch (error) {
+			console.error("Import error:", error);
+			this.showStatus(error.message || "Import error", "error");
+		} finally {
+			this.setLoading(false);
+			importBtn.disabled = false;
 		}
-
-		// Otherwise, take the first setting
-
-		return [settings[0], false];
 	}
 }

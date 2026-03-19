@@ -29,20 +29,20 @@ async function formatJavascript(javascript) {
 // Get current directory in ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const makeBackup = true;
 // other constants
-const TUNES_FILE = path.join(__dirname, "..", "src", "tunes.json.js");
+const TUNES_FILE = path.join(__dirname, "..", "src", "tunes.compiled.js");
 const date = new Date();
 const formattedDate = `${date.getFullYear().toString().slice(-2)}_${String(date.getMonth() + 1).padStart(2, "0")}_${String(date.getDate()).padStart(2, "0")}`;
 const BACKUP_FILE = path.join(
   __dirname,
   "..",
   "src",
-  `tunes_${formattedDate}.json.js.backup`
+  `tunes_${formattedDate}.compiled.js.backup`
 );
 
 const maxNbToProcess = 3;
-const title = "Castle Kelly",
+const makeBackup = false;
+const title = "Sonny's Delight",
   doJig = false,
   doReel = true;
 /**
@@ -65,7 +65,7 @@ function getFirstAbc(abc) {
  */
 async function process() {
   try {
-    console.log("Reading tunes.json.js...");
+    console.log("Reading tunes.compiled.js...");
 
     // Read the file
     const fileContent = fs.readFileSync(TUNES_FILE, "utf8");
@@ -77,7 +77,7 @@ async function process() {
     }
 
     // Import the data
-    const tunesModule = await import("../src/tunes.json.js");
+    const tunesModule = await import("../src/tunes.compiled.js");
     const tunesData = tunesModule.default;
 
     let processedCount = 0;
@@ -175,7 +175,7 @@ async function process() {
     }
 
     // Now update the file
-    console.log("\nUpdating tunes.json.js...");
+    console.log("\nUpdating tunes.compiled.js...");
 
     const formatted = await formatJavascript(
       `export default ${javascriptify(tunesData)}`,
@@ -185,7 +185,7 @@ async function process() {
     );
     // Write the updated file
     fs.writeFileSync(TUNES_FILE, formatted, "utf8");
-    console.log("tunes.json.js updated successfully!");
+    console.log("tunes.compiled.js updated successfully!");
   } catch (error) {
     console.error("Error:", error);
     process.exit(1);
