@@ -215,14 +215,17 @@ h1 {
   text-align: left;
   transition: background-color 0.2s ease;
   font-size: 14px;
-  /* reset button chrome */
   background: none;
   border: none;
   border-radius: 0;
   cursor: pointer;
   line-height: inherit;
   box-shadow: none;
-  outline: none;
+}
+
+.dropdown-content button:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: -2px;
 }
 
 #footer-list-link {
