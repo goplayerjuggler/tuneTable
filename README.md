@@ -5,15 +5,15 @@ Tune data is based on [ABC format](https://abcnotation.com/wiki/abc:standard:v2.
 
 In my opinion the most notable/original feature is how the tool sorts tunes. It’s based on something I call the _contour_ of a tune: the melodic shape relative to the tonic, abstracted away from key and mode.
 
-The tool is “standalone”: it sends no messages back to any server while it is being used.  
+The tool is “standalone”: it can load data but it never sends any data in the other directions.
 
 This project is in the alpha stage of development. 
 
 ## Live demo
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
 
-## Who is this for
-Primarily, I built this for myself as a way of organising repertoire I’m interested in, and to help me share it with other musicians. I believe it will also help other musicians organise and share repertoire.
+## Who this is for
+I built this for myself as a way of organising repertoire I’m interested in, and to help me with music groups I’m involved in. I also wanted to experiment with things like contour sorting. I believe it will also help other musicians organise and share repertoire.
 
 ## Features
 * sort tunes based on the tune’s _contour_ w.r.t. to the tonic:
@@ -34,19 +34,19 @@ Primarily, I built this for myself as a way of organising repertoire I’m inter
 * bar length switcher: toggle between standard bar lengths, and bars that are twice as long, which I often prefer. For the moment this feature is limited to reels, jigs, polkas, and hornpipes. For reels, it also converts quavers to semiquavers.
 * persistence: all changes to the tune list are automaticaly saved to your browser’s local storage so you can close the browser, or reboot, and still see your most recent list the next time you load the page with that device. Changes to set lists are not automaticallty saved, but can be by clicking on a Save button.
 * any and all changes made to tunes and tune lists work on a local version; no data is sent elsewhere; and there is a menu command to revert back to the initial data (the default tune list).
+* tune list management: users can switch between lists of tunes hosted online, and their own local lists of tunes.
 
 ### Query parameters `n` (name), `q` (query) and `g` (group)
 * You can open a specific tune directly by specifying part of its name, eg: 
 [goplayerjuggler.github.io/tuneTable/?n=cameronian](https://goplayerjuggler.github.io/tuneTable/?n=cameronian) 
 * query everything that matches a full-text search with `q` in the URL:
 [goplayerjuggler.github.io/tuneTable/?q=crooked](https://goplayerjuggler.github.io/tuneTable/?q=crooked)
-* the `g` parameter limits the list to a sublist: those tunes whose `groups` field matches. This is meant to be used for sharing only some of the list with a target audience. Example: 
+* the `g` parameter selects a “server list” that was prepared based on the `tune.groups` property. Example: 
 [goplayerjuggler.github.io/tuneTable/?g=alora](https://goplayerjuggler.github.io/tuneTable/?g=alora) 
-Unlike the other query parameters, with this option the other tunes that do not match are no longer accessible.
+
 
 ## Upcoming features / wishlist
 Here are some features I would like to have:
-* local storage tune lists management
 * user preferences for display, import, and PDF output.
 * provide several incipits for a single tune - indexing by B, C parts etc.
 * other UI improvements like an advanced search feature; optimising browser resources by only rendering graphical elements as needed; …
