@@ -102,7 +102,7 @@ export default class EditModal extends Modal {
       
       <button id="saveEditBtn" class="btn btn-primary">Save Changes</button>
     </div>
-    `,
+    `
 		});
 
 		this.callbacks = callbacks;
@@ -119,7 +119,7 @@ export default class EditModal extends Modal {
 			referencesEditor: document.getElementById("referencesEditor"),
 			scoresEditor: document.getElementById("scoresEditor"),
 			addReferenceBtn: document.getElementById("addReferenceBtn"),
-			addScoreBtn: document.getElementById("addScoreBtn"),
+			addScoreBtn: document.getElementById("addScoreBtn")
 		};
 
 		this.setupControls();
@@ -145,7 +145,7 @@ export default class EditModal extends Modal {
 
 		// Populate references and scores
 		this.renderReferences(
-			this.tune.references?.filter((r) => !r.fromAbc) || [],
+			this.tune.references?.filter((r) => !r.fromAbc) || []
 		);
 		this.renderScores(this.tune.scores || []);
 	}
@@ -153,7 +153,7 @@ export default class EditModal extends Modal {
 	setupControls() {
 		this.elements.saveBtn?.addEventListener("click", () => this.save());
 		this.elements.addReferenceBtn?.addEventListener("click", () =>
-			this.addReference(),
+			this.addReference()
 		);
 		this.elements.addScoreBtn?.addEventListener("click", () => this.addScore());
 	}
@@ -192,26 +192,26 @@ export default class EditModal extends Modal {
 			<div class="form-group">
 			  <label>Artists/Source:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-					ref.artists || "",
+					ref.artists || ""
 				)}" 
 					 data-ref-index="${index}" data-field="artists">
 			</div>
 			<div class="form-group">
 			  <label>URL:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-					ref.url || "",
+					ref.url || ""
 				)}" 
 					 data-ref-index="${index}" data-field="url" placeholder="https://...">
 			</div>
 			<div class="form-group">
 			  <label>Notes:</label>
 			  <textarea class="form-control" rows="3" data-ref-index="${index}" data-field="notes">${this.escapeHtml(
-					ref.notes || "",
+					ref.notes || ""
 				)}</textarea>
 			</div>
 		  </div>
 		</div>
-	  `,
+	  `
 			)
 			.join("");
 	}
@@ -237,20 +237,20 @@ export default class EditModal extends Modal {
 			<div class="form-group">
 			  <label>Name:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-					score.name || "",
+					score.name || ""
 				)}" 
 					 data-score-index="${index}" data-field="name">
 			</div>
 			<div class="form-group">
 			  <label>URL:</label>
 			  <input type="text" class="form-control" value="${this.escapeHtml(
-					score.url || "",
+					score.url || ""
 				)}" 
 					 data-score-index="${index}" data-field="url" placeholder="https://...">
 			</div>
 		  </div>
 		</div>
-	  `,
+	  `
 			)
 			.join("");
 	}
@@ -262,7 +262,7 @@ export default class EditModal extends Modal {
 		tune.references.push({
 			artists: "",
 			url: "",
-			notes: "",
+			notes: ""
 		});
 
 		this.renderReferences(tune.references.filter((r) => !r.fromAbc));
@@ -282,7 +282,7 @@ export default class EditModal extends Modal {
 
 		tune.scores.push({
 			name: "",
-			url: "",
+			url: ""
 		});
 
 		this.renderScores(tune.scores);
@@ -314,19 +314,19 @@ export default class EditModal extends Modal {
 
 		// Process references
 		const referenceInputs = document.querySelectorAll(
-			"#referencesEditor .editor-item",
+			"#referencesEditor .editor-item"
 		);
 		const userRefs = Array.from(referenceInputs).map((item, index) => {
 			const artists =
 				item.querySelector(
-					`input[data-ref-index="${index}"][data-field="artists"]`,
+					`input[data-ref-index="${index}"][data-field="artists"]`
 				)?.value || "";
 			const url =
 				item.querySelector(`input[data-ref-index="${index}"][data-field="url"]`)
 					?.value || "";
 			const notes =
 				item.querySelector(
-					`textarea[data-ref-index="${index}"][data-field="notes"]`,
+					`textarea[data-ref-index="${index}"][data-field="notes"]`
 				)?.value || "";
 			return { artists, url, notes };
 		});
@@ -336,11 +336,11 @@ export default class EditModal extends Modal {
 		tune.scores = Array.from(scoreInputs).map((item, index) => {
 			const name =
 				item.querySelector(
-					`input[data-score-index="${index}"][data-field="name"]`,
+					`input[data-score-index="${index}"][data-field="name"]`
 				)?.value || "";
 			const url =
 				item.querySelector(
-					`input[data-score-index="${index}"][data-field="url"]`,
+					`input[data-score-index="${index}"][data-field="url"]`
 				)?.value || "";
 			return { name, url };
 		});
@@ -354,7 +354,9 @@ export default class EditModal extends Modal {
 		delete reprocessed.rhythm;
 		delete reprocessed.rhythmIsFromAbc;
 		delete reprocessed.references;
+		delete reprocessed.contour;
 
+		delete reprocessed.incipitSvg;
 		reprocessed = processTuneData(reprocessed);
 
 		// Apply manual overrides
@@ -367,21 +369,21 @@ export default class EditModal extends Modal {
 			tune,
 			"name",
 			editedName,
-			"nameIsFromAbc",
+			"nameIsFromAbc"
 		);
 		this.applyFieldOverride(
 			reprocessed,
 			tune,
 			"rhythm",
 			editedRhythm,
-			"rhythmIsFromAbc",
+			"rhythmIsFromAbc"
 		);
 		this.applyFieldOverride(
 			reprocessed,
 			tune,
 			"key",
 			editedKey,
-			"keyIsFromAbc",
+			"keyIsFromAbc"
 		);
 
 		Object.assign(tune, reprocessed);

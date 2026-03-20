@@ -1,6 +1,10 @@
 "use strict";
 import "./styles.css";
-import { normaliseKey, sort as contourSort } from "@goplayerjuggler/abc-tools";
+import {
+	normaliseKey,
+	sort as contourSort,
+	contourToSvg
+} from "@goplayerjuggler/abc-tools";
 
 import { processTuneData } from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
@@ -39,6 +43,211 @@ let currentListState = null;
 let isDirty = false;
 let pendingUrlParams = null;
 let _manifestCache = null;
+
+/*
+Lazy SVG system
+
+SVGs are rendered only when their row is near the viewport (rootMargin 1000px)
+and destroyed when the row leaves the buffer. Both SVG types (incipit & contour)
+are cached on the tune object so repeat visits re-inject from the cache without
+re-rendering.
+
+Incipit rendering is routed through a single persistent sandbox div so abcjs
+never touches the live DOM directly; its output is cloned (listener-free) and
+cached as an outerHTML string. Contour SVGs are generated on demand via
+contourToSvg() once processTuneData is updated to set tune.contour.svg = null
+instead of pre-generating; until then, the already-generated string is used as-is.
+
+Cache invalidation ( wherever abc/contour data is mutated):
+	EditModal
+  - tune.abc changed      → set tune.incipitSvg = null and tune.contour.svg = null
+  - tune.incipit changed  → set tune.incipitSvg = null and tune.contour.svg = null
+	AbcModal
+  - tune.abc changed      → set tune.incipitSvg = null but preserve tune.contour & tune.contour.svg
+	This is because the two operations supported by AbcModal (transposition and bar length changes) should
+	have no impact on the contour (octave shifts aside, which we want to avoid anyway...)
+*/
+const INCIPIT_OPTIONS = {
+	scale: 0.8,
+	staffwidth: 330,
+	paddingtop: 1,
+	paddingbottom: 1,
+	paddingright: 1,
+	paddingleft: 1
+};
+
+// Render queue state
+let rowObserver = null;
+const renderQueue = new Set(); // indices into window.filteredData pending SVG inject
+let idleCallbackHandle = null;
+let precalcGeneration = 0;
+
+// Single persistent hidden div for all abcjs renders.
+// visibility:hidden keeps it in layout flow (abcjs needs real dimensions) but off-screen.
+function getAbcjsSandbox() {
+	let el = document.getElementById("abcjs-sandbox");
+	if (!el) {
+		el = document.createElement("div");
+		el.id = "abcjs-sandbox";
+		el.style.cssText =
+			"visibility:hidden;position:absolute;pointer-events:none;top:0;left:0;";
+		document.body.appendChild(el);
+	}
+	return el;
+}
+
+// Render incipit into sandbox, clone the SVG (no event listeners on clone),
+// cache outerHTML on the tune, then clear the sandbox without innerHTML leaks.
+function renderAndCacheIncipit(tune) {
+	AbcJs.renderAbc("abcjs-sandbox", tune.incipit, INCIPIT_OPTIONS);
+	const svgEl = getAbcjsSandbox().querySelector("svg");
+	if (svgEl) tune.incipitSvg = svgEl.cloneNode(true).outerHTML;
+	getAbcjsSandbox().replaceChildren();
+}
+
+// Generate and cache contour SVG on demand.
+// No-op if already cached or no contour data present.
+function ensureContourSvg(tune) {
+	if (tune.contour && tune.contour.svg === null) {
+		tune.contour.svg = contourToSvg(tune.contour);
+	}
+}
+
+// Inject cached (or freshly generated) SVGs into a row's placeholder divs.
+function injectSvgs(row, tune) {
+	const contourEl = row.querySelector(".tune-contour");
+	if (contourEl) {
+		ensureContourSvg(tune);
+		if (tune.contour?.svg) {
+			contourEl.innerHTML = tune.contour.svg;
+			contourEl.classList.remove("svg-pending");
+			contourEl.removeAttribute("title");
+		}
+	}
+
+	const incipitEl = row.querySelector(".tune-incipit");
+	if (incipitEl && tune.incipit) {
+		if (!tune.incipitSvg) renderAndCacheIncipit(tune);
+		if (tune.incipitSvg) {
+			incipitEl.innerHTML = tune.incipitSvg;
+			incipitEl.classList.remove("svg-pending");
+			incipitEl.removeAttribute("title");
+		}
+	}
+}
+
+// Remove SVG DOM nodes from a row. Text content is in separate elements and untouched.
+// data-pending marks elements that have data to render; restore svg-pending so the
+// placeholder reappears if the row is scrolled back into view.
+function destroySvgs(row) {
+	const contourEl = row.querySelector(".tune-contour");
+	if (contourEl) {
+		contourEl.replaceChildren();
+		if (contourEl.hasAttribute("data-pending"))
+			contourEl.classList.add("svg-pending");
+	}
+	const incipitEl = row.querySelector(".tune-incipit");
+	if (incipitEl) {
+		incipitEl.replaceChildren();
+		if (incipitEl.hasAttribute("data-pending"))
+			incipitEl.classList.add("svg-pending");
+	}
+}
+
+// Process one render-queue item per idle slot so abcjs never blocks the main thread.
+function scheduleRenderQueue() {
+	if (idleCallbackHandle !== null) return;
+	const run = () => {
+		idleCallbackHandle = null;
+		const { value: index, done } = renderQueue.values().next();
+		if (done) return;
+		renderQueue.delete(index);
+
+		const tune = window.filteredData?.[index];
+		const row = document.getElementById("tunesTableBody")?.children[index];
+		if (tune && row) injectSvgs(row, tune);
+
+		if (renderQueue.size > 0) scheduleRenderQueue();
+	};
+	if (typeof requestIdleCallback !== "undefined") {
+		idleCallbackHandle = requestIdleCallback(run);
+	} else {
+		// Safari fallback
+		idleCallbackHandle = setTimeout(run, 0);
+	}
+}
+
+function cancelRenderQueue() {
+	if (idleCallbackHandle !== null) {
+		if (typeof cancelIdleCallback !== "undefined")
+			cancelIdleCallback(idleCallbackHandle);
+		else clearTimeout(idleCallbackHandle);
+		idleCallbackHandle = null;
+	}
+	renderQueue.clear();
+}
+
+// Single shared IntersectionObserver for all rows. rootMargin provides a generous
+// pre-render buffer so SVGs are ready well before rows enter the viewport.
+function getRowObserver() {
+	if (!rowObserver) {
+		rowObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					const index = parseInt(entry.target.dataset.tuneIndex, 10);
+					if (entry.isIntersecting) {
+						renderQueue.add(index);
+						scheduleRenderQueue();
+					} else {
+						renderQueue.delete(index); // cancel if not yet rendered
+						destroySvgs(entry.target); // always free DOM nodes on exit
+					}
+				});
+			},
+			{ rootMargin: "1000px" }
+		);
+	}
+	return rowObserver;
+}
+
+// Disconnect observer and flush all pending work before a table rebuild.
+function resetObserver() {
+	rowObserver?.disconnect();
+	cancelRenderQueue();
+}
+
+// Background precalculation: after table render, generate all SVG caches at
+// idle priority so that most rows are ready before the user scrolls to them.
+// A generation counter ensures stale callbacks from prior renderTable() calls abort early.
+function schedulePrecalculation() {
+	const gen = ++precalcGeneration;
+	const tunes = window.filteredData.slice(); // snapshot; filteredData may change
+	let i = 0;
+
+	const step = (deadline) => {
+		if (gen !== precalcGeneration) return; // renderTable() was called again; abort
+		while (i < tunes.length) {
+			const tune = tunes[i++];
+			ensureContourSvg(tune);
+			if (tune.incipit && !tune.incipitSvg) renderAndCacheIncipit(tune);
+			// Yield back to browser if idle time is running out
+			if (deadline.timeRemaining() < 5 && i < tunes.length) break;
+		}
+		if (i < tunes.length && gen === precalcGeneration) {
+			if (typeof requestIdleCallback !== "undefined") {
+				requestIdleCallback(step);
+			} else {
+				setTimeout(() => step({ timeRemaining: () => Infinity }), 0);
+			}
+		}
+	};
+
+	if (typeof requestIdleCallback !== "undefined") {
+		requestIdleCallback(step);
+	} else {
+		setTimeout(() => step({ timeRemaining: () => Infinity }), 0);
+	}
+}
 
 // -- Storage ------------------------------------------------------------------
 
@@ -592,6 +801,10 @@ function openAbcModal(tune) {
 function renderTable() {
 	const tbody = document.getElementById("tunesTableBody");
 
+	// Disconnect the previous observer and flush all pending SVG work before
+	// rebuilding the DOM. Old row elements are about to be discarded.
+	resetObserver();
+
 	if (window.filteredData.length === 0) {
 		tbody.innerHTML =
 			'<tr><td colspan="2" class="no-results">No tunes found matching your criteria.</td></tr>';
@@ -599,9 +812,11 @@ function renderTable() {
 	}
 
 	tbody.innerHTML = "";
+	const observer = getRowObserver();
 
 	window.filteredData.forEach((tune, index) => {
 		const row = document.createElement("tr");
+		row.dataset.tuneIndex = index; // used by the IntersectionObserver callback
 		if (tune.selected) row.classList.add("tune-selected");
 
 		let referencesHtml = "",
@@ -694,7 +909,6 @@ function renderTable() {
 		const hasAbc = !!tune.abc;
 		const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
 
-		const incipitId = `incipit${index}`;
 		const title = `<div class="tune-header">
 	  ${
 			hasAbc
@@ -734,6 +948,8 @@ function renderTable() {
 			});
 		}
 
+		// .tune-contour and .tune-incipit are always present as empty placeholders;
+		// their SVG content is injected lazily by the IntersectionObserver / render queue.
 		row.innerHTML = `
 	<td>
 		<div class="tune-header">
@@ -743,7 +959,7 @@ function renderTable() {
 			<div>
 			
 		<div class="tune-header tune-header--actions">
-		${tune.contour?.svg ? `<div class="tune-contour">${tune.contour.svg}</div>` : ""}
+		${tune.contour ? '<div class="tune-contour svg-pending" data-pending title="preparing the contour…"></div>' : '<div class="tune-contour"></div>'}
 			<div class="tune-actions">
 			<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">
 				${tune.selected ? "☑" : "☐"}
@@ -761,7 +977,7 @@ function renderTable() {
 		</div>
 			</div>
 		</div>
-		<div id="${incipitId}" class="tune-incipit"></div>
+		<div class="tune-incipit${tune.incipit ? ' svg-pending" data-pending title="preparing the incipit…' : ""}"></div>
 		</div>
 	</div>
 	</td>
@@ -794,19 +1010,14 @@ function renderTable() {
 		});
 
 		tbody.appendChild(row);
-		if (tune.incipit) {
-			AbcJs.renderAbc(incipitId, tune.incipit, {
-				scale: 0.8,
-				staffwidth: 330,
-				paddingtop: 1,
-				paddingbottom: 1,
-				paddingright: 1,
-				paddingleft: 1
-			});
-		}
+		observer.observe(row);
 	});
+
 	document.getElementById("spCount").innerText =
 		`${window.filteredData.length}/${window.tunesData.length}`;
+
+	// Kick off background precalculation so caches are warm before the user scrolls.
+	schedulePrecalculation();
 }
 
 function applyFilters() {

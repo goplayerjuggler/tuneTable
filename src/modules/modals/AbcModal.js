@@ -378,7 +378,7 @@ export default class AbcModal extends Modal {
 	}
 
 	changeBarLength(direction) {
-		const r = getHeaderValue(this.currentTuneAbc, "R");
+		const r = this.tune.rhythm;
 		let newAbc = "";
 		if (direction === 1)
 			switch (r) {
@@ -483,6 +483,8 @@ export default class AbcModal extends Modal {
 		delete reprocessed.rhythmIsFromAbc;
 		delete reprocessed.references;
 		delete reprocessed.incipit;
+
+		// do not delete the contour however! see note for Lazy SVG system
 
 		reprocessed = processTuneData(reprocessed);
 

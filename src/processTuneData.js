@@ -108,14 +108,10 @@ function processTuneData(tune) {
 				if (shortAbc) {
 					processed.contour = getContour(shortAbc, {
 						contourShift: processed.contourShift,
-						withSvg: true,
 						withSwingTransform
 					});
+					if (processed.contour) processed.contour.svg = null;
 				}
-				// tune.contour = getContourFromFullAbc(tune.abc || tune.incipit, {
-				// 	withSwingTransform,
-				// });
-				// );
 			}
 			processed.rhythm = processed.rhythm?.toLowerCase();
 		} else if (tune.incipit && !processed.key) {
@@ -131,17 +127,6 @@ function processTuneData(tune) {
 			...processed.references
 		];
 		delete processed.processedFromAbc;
-		// if (tune.theSessionId) {
-		// 	const setting = tune.theSessionSettingId
-		// 		? `#setting${tune.theSessionSettingId}`
-		// 		: "";
-		// 	processed.scores.push({
-		// 		url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
-		// 		name: "thesession"
-		// 	});
-		// 	delete tune.theSessionId;
-		// 	delete tune.theSessionSettingId;
-		// }
 	} catch (error) {
 		console.log(
 			`error processing tune: ${processed.title ?? processed.abc ?? processed.incipit}. Error: ${error}`

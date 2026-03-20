@@ -459,6 +459,22 @@ th.sort-desc::after {
   width: 100%;
 }
 
+.tune-contour.svg-pending {
+  width: 164px;
+  height: 87px;
+  background-color: var(--primary-light);
+  opacity: 0.25;
+  border-radius: 3px;
+}
+
+.tune-incipit.svg-pending {
+  width: 332px;
+  height: 65px;
+  background-color: var(--primary-light);
+  opacity: 0.25;
+  border-radius: 3px;
+}
+
 /* ============================================
    UTILITY CLASSES
    ============================================ */
