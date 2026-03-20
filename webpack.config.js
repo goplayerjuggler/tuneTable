@@ -114,6 +114,16 @@ export default (env, argv) => {
 		externals: {
 			abcjs: "ABCJS"
 		},
+		resolve: {
+			alias: env?.localAbcTools
+				? {
+						"@goplayerjuggler/abc-tools": path.resolve(
+							__dirname,
+							"../abcTools/"
+						)
+					}
+				: {}
+		},
 		module: {
 			rules: [
 				{

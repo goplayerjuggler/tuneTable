@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --mode development",
+    "dev:local": "webpack serve --mode development --env localAbcTools",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -31,7 +32,7 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "^1.0.22",
+    "@goplayerjuggler/abc-tools": "1.0.22",
     "abcjs": "6.6.0"
   },
   "devDependencies": {
