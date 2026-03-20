@@ -44,19 +44,44 @@ let isDirty = false;
 let pendingUrlParams = null;
 let _manifestCache = null;
 
-/*
-Lazy SVG system
+/* Lazy SVG system ----------------------------------------------------------
 
-SVGs are rendered only when their row is near the viewport (rootMargin 1000px)
-and destroyed when the row leaves the buffer. Both SVG types (incipit & contour)
-are cached on the tune object so repeat visits re-inject from the cache without
-re-rendering.
+SVGs are rendered only when their row is near the viewport and destroyed when
+it leaves — keeping memory constant regardless of scroll position.
 
-Incipit rendering is routed through a single persistent sandbox div so abcjs
-never touches the live DOM directly; its output is cloned (listener-free) and
-cached as an outerHTML string. Contour SVGs are generated on demand via
-contourToSvg() once processTuneData is updated to set tune.contour.svg = null
-instead of pre-generating; until then, the already-generated string is used as-is.
+Two IntersectionObservers per render pass:
+  rowObserver      (rootMargin "1000px") — adds rows to the buffer queue as
+                   they approach the viewport; removes and destroys on exit.
+  viewportObserver (rootMargin "0px")    — upgrades visible rows to the urgent
+                   queue and downgrades them back to buffer when they scroll out.
+
+Two render queues, both drained one item per idle slot:
+  urgentQueue — scheduled with requestIdleCallback { timeout: 200 } so visible
+                rows get SVGs promptly even under load (important for
+                page-up/page-down jumps).
+  bufferQueue — scheduled with plain requestIdleCallback; runs only when
+                urgentQueue is empty.
+
+requestIdleCallback (rIC) is a browser API that defers work until the browser
+has spare time between frames, avoiding jank. The optional timeout parameter
+sets a deadline: if the browser hasn't found idle time by then, the callback
+fires anyway. Safari doesn't support rIC, so a setTimeout(fn, 0) fallback is
+used throughout.
+
+Both SVG types are generated on demand and cached on the tune object:
+  tune.incipitSvg  — outerHTML string from abcjs, via a single persistent
+                     hidden sandbox div (#abcjs-sandbox). cloneNode(true) ensures
+                     no event listener references escape into the live DOM.
+  tune.contour.svg — SVG string from contourToSvg(). processTuneData sets this
+                     to null to defer generation until first render.
+
+After each renderTable() call, a background rIC chain pre-generates both SVG
+types for all visible tunes so rows are cache-warm before the user reaches them.
+A generation counter aborts stale precalc chains when renderTable() is called again.
+
+Cache invalidation (in EditModal / wherever abc/contour data is mutated):
+  - tune.incipit changed  → set tune.incipitSvg = null
+  - tune.contour changed  → set tune.contour.svg = null
 
 Cache invalidation ( wherever abc/contour data is mutated):
 	EditModal
@@ -76,10 +101,15 @@ const INCIPIT_OPTIONS = {
 	paddingleft: 1
 };
 
-// Render queue state
-let rowObserver = null;
-const renderQueue = new Set(); // indices into window.filteredData pending SVG inject
-let idleCallbackHandle = null;
+// Two-tier render queue: urgent = currently in viewport, buffer = in pre-render margin only.
+// Urgent items are scheduled with a timeout so they fire even when the browser is busy;
+// buffer items run purely at idle priority.
+const urgentQueue = new Set();
+const bufferQueue = new Set();
+let urgentHandle = null;
+let bufferHandle = null;
+let viewportObserver = null; // rootMargin "0px"  — upgrades rows to urgent
+let rowObserver = null; // rootMargin "1000px" — adds rows to buffer queue
 let precalcGeneration = 0;
 
 // Single persistent hidden div for all abcjs renders.
@@ -153,69 +183,110 @@ function destroySvgs(row) {
 			incipitEl.classList.add("svg-pending");
 	}
 }
+function drainOne(queue) {
+	const { value: index, done } = queue.values().next();
+	if (done) return;
+	queue.delete(index);
+	const tune = window.filteredData?.[index];
+	const row = document.getElementById("tunesTableBody")?.children[index];
+	if (tune && row) injectSvgs(row, tune);
+}
 
-// Process one render-queue item per idle slot so abcjs never blocks the main thread.
-function scheduleRenderQueue() {
-	if (idleCallbackHandle !== null) return;
-	const run = () => {
-		idleCallbackHandle = null;
-		const { value: index, done } = renderQueue.values().next();
-		if (done) return;
-		renderQueue.delete(index);
-
-		const tune = window.filteredData?.[index];
-		const row = document.getElementById("tunesTableBody")?.children[index];
-		if (tune && row) injectSvgs(row, tune);
-
-		if (renderQueue.size > 0) scheduleRenderQueue();
-	};
-	if (typeof requestIdleCallback !== "undefined") {
-		idleCallbackHandle = requestIdleCallback(run);
-	} else {
-		// Safari fallback
-		idleCallbackHandle = setTimeout(run, 0);
+function scheduleQueues() {
+	if (urgentQueue.size > 0 && urgentHandle === null) {
+		const run = () => {
+			urgentHandle = null;
+			drainOne(urgentQueue);
+			if (urgentQueue.size > 0) scheduleQueues();
+			else if (bufferQueue.size > 0) scheduleQueues();
+		};
+		urgentHandle =
+			typeof requestIdleCallback !== "undefined"
+				? requestIdleCallback(run, { timeout: 200 }) // fire promptly for visible rows
+				: setTimeout(run, 0);
+	} else if (
+		bufferQueue.size > 0 &&
+		bufferHandle === null &&
+		urgentQueue.size === 0
+	) {
+		const run = () => {
+			bufferHandle = null;
+			drainOne(bufferQueue);
+			if (bufferQueue.size > 0) scheduleQueues();
+		};
+		bufferHandle =
+			typeof requestIdleCallback !== "undefined"
+				? requestIdleCallback(run) // pure idle for off-screen buffer rows
+				: setTimeout(run, 0);
 	}
 }
 
 function cancelRenderQueue() {
-	if (idleCallbackHandle !== null) {
-		if (typeof cancelIdleCallback !== "undefined")
-			cancelIdleCallback(idleCallbackHandle);
-		else clearTimeout(idleCallbackHandle);
-		idleCallbackHandle = null;
+	if (urgentHandle !== null) {
+		typeof cancelIdleCallback !== "undefined"
+			? cancelIdleCallback(urgentHandle)
+			: clearTimeout(urgentHandle);
+		urgentHandle = null;
 	}
-	renderQueue.clear();
+	if (bufferHandle !== null) {
+		typeof cancelIdleCallback !== "undefined"
+			? cancelIdleCallback(bufferHandle)
+			: clearTimeout(bufferHandle);
+		bufferHandle = null;
+	}
+	urgentQueue.clear();
+	bufferQueue.clear();
 }
-
-// Single shared IntersectionObserver for all rows. rootMargin provides a generous
-// pre-render buffer so SVGs are ready well before rows enter the viewport.
 function getRowObserver() {
 	if (!rowObserver) {
+		// Buffer observer: pre-render rows approaching the viewport.
 		rowObserver = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					const index = parseInt(entry.target.dataset.tuneIndex, 10);
 					if (entry.isIntersecting) {
-						renderQueue.add(index);
-						scheduleRenderQueue();
+						bufferQueue.add(index);
+						scheduleQueues();
 					} else {
-						renderQueue.delete(index); // cancel if not yet rendered
-						destroySvgs(entry.target); // always free DOM nodes on exit
+						// Left buffer entirely: cancel and free DOM.
+						bufferQueue.delete(index);
+						urgentQueue.delete(index);
+						destroySvgs(entry.target);
 					}
 				});
 			},
 			{ rootMargin: "1000px" }
 		);
 	}
+	if (!viewportObserver) {
+		// Viewport observer: upgrade/downgrade between urgent and buffer queues.
+		viewportObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					const index = parseInt(entry.target.dataset.tuneIndex, 10);
+					if (entry.isIntersecting) {
+						// Promote to urgent — process ahead of buffer rows.
+						bufferQueue.delete(index);
+						urgentQueue.add(index);
+						scheduleQueues();
+					} else {
+						// Back to buffer priority if still in the outer margin.
+						urgentQueue.delete(index);
+						if (bufferQueue.has(index)) scheduleQueues(); // resume if stalled
+					}
+				});
+			},
+			{ rootMargin: "0px" }
+		);
+	}
 	return rowObserver;
 }
 
-// Disconnect observer and flush all pending work before a table rebuild.
 function resetObserver() {
 	rowObserver?.disconnect();
+	viewportObserver?.disconnect();
 	cancelRenderQueue();
 }
-
 // Background precalculation: after table render, generate all SVG caches at
 // idle priority so that most rows are ready before the user scrolls to them.
 // A generation counter ensures stale callbacks from prior renderTable() calls abort early.
@@ -1008,9 +1079,9 @@ function renderTable() {
 		copyButtonEl.addEventListener("click", () => {
 			copySingleTune(index);
 		});
-
 		tbody.appendChild(row);
-		observer.observe(row);
+		observer.observe(row); // buffer margin
+		viewportObserver.observe(row); // viewport — for priority upgrade
 	});
 
 	document.getElementById("spCount").innerText =
