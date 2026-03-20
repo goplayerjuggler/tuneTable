@@ -8,5 +8,5 @@ L: 1/8
 K: Dmaj
 ~f3 efg fdA ~G3|FAd`,
 	theSessionId: 628,
-	contourShift: 1
+	contourShift: 0
 };
