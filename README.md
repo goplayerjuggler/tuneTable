@@ -3,9 +3,9 @@ A web page for managing tune libraries. It displays tunes using standard music n
 
 Tune data is based on [ABC format](https://abcnotation.com/wiki/abc:standard:v2.1) that’s wrapped in Javascript objects. 
 
-In my opinion the most notable/original feature is how the tool sorts tunes. It’s based on something I call the _contour_ of a tune: the melodic shape relative to the tonic, abstracted away from key and mode.
+In my opinion the most notable/original feature is how the tool sorts tunes. It’s based on something I call the _contour_ of a tune: the melodic shape relative to the tonic, abstracted away from key and mode. It’s a sort of [graphical score](https://en.wikipedia.org/wiki/Graphic_notation_(music)) that’s derived automatically from an incipit (a short score giving the first few notes of the tune).
 
-The tool is “standalone”: it can load data but it never sends any data in the other directions.
+The tool is “standalone”: it can load data but it never sends any data back in the other directions.
 
 This project is in the alpha stage of development. 
 
@@ -13,14 +13,14 @@ This project is in the alpha stage of development.
 Live demo here: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/).
 
 ## Who this is for
-I built this for myself as a way of organising repertoire I’m interested in, and to help me with music groups I’m involved in. I also wanted to experiment with things like contour sorting. I believe it will also help other musicians organise and share repertoire.
+I built this for myself as a way of exploring and organising repertoire I’m interested in, and to help me with music groups I’m involved in. I also wanted to experiment with things like contour sorting. I believe it will also help other musicians explore, organise and share repertoire.
 
 ## Features
 * sort tunes based on the tune’s _contour_ w.r.t. to the tonic:
   * key and mode agnostic; also to some extent octave agnostic – more details [here](https://github.com/goplayerjuggler/abc-tools/blob/main/docs/contour_sort.md).
   * contours are displayed next to the tune’s title
-  * can toggle between “contour” sorting and simple sorting by the tune name
-* incipits (incipit: a short score giving the first few notes) are shown next to tune titles. They are extracted by the tool from a full score; optionally they can instead  be given explicitly as part of the tune data.
+  * switch between “contour” sorting and simple sorting by the tune name, by successive clicks on the first column header of the main table.
+* incipits  are shown next to tune titles. They are extracted by the tool from a full score; optionally they can instead  be given explicitly as part of the tune data.
 * a popup score viewer with transpose buttons, for tunes with one or more settings in ABC. Long scores are paginated.
 * search/filtering by full text / key / rhythm
 * tunes may have additional information such as comments/notes; tags; and external links to recordings, scores and other databases like thesession.org.
@@ -35,6 +35,7 @@ I built this for myself as a way of organising repertoire I’m interested in, a
 * persistence: all changes to the tune list are automaticaly saved to your browser’s local storage so you can close the browser, or reboot, and still see your most recent list the next time you load the page with that device. Changes to set lists are not automaticallty saved, but can be by clicking on a Save button.
 * any and all changes made to tunes and tune lists work on a local version; no data is sent elsewhere; and there is a menu command to revert back to the initial data (the default tune list).
 * tune list management: users can switch between lists of tunes hosted online, and their own local lists of tunes.
+* lazy loading of SVGs for incipits and contours in order avoid excessive memory usage when viewing a list with thousands of tunes.
 
 ### Query parameters `n` (name), `q` (query) and `g` (group)
 * You can open a specific tune directly by specifying part of its name, eg: 
@@ -64,15 +65,12 @@ A good proportion of the tune settings was loaded from [thesession.org](https://
 
 ## Thanks
 Thanks to: 
-
-* Michael Eskin and his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which no doubt is part of the inspiration behind this. Michael has already kindly given me a few tips on several details; and I used some of his code when building the incipit generator.
-
-* Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”.
-
+* Paul Rosen and Gregory Dyke for their fantastic library [abcjs](https://github.com/paulrosen/abcjs). These days it’s behind most of the online resources related to ABC.
+* Michael Eskin for his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which no doubt is part of the inspiration behind this. Michael has already kindly given me a few tips on several details; and started with some of his code when building the incipit generator.
+* Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project. ([github](https://github.com/anton-bregolas/NS-Session-Setlist)).
 * Jeremy from [thesession.org](https://thesession.org) for providing such an great resource and helping me with a question about it.
-
 * Gilles Raymond for requesting the set list & print feature.
-* Anthropic: this tool was built with significant assistance from Claude.ai.
+* Anthropic: roughly 95% of the code here was written by Claude.ai / Sonnet 4.6 extended.
 * Github for hosting this repo.
 
 ## Licenses
@@ -93,12 +91,10 @@ This project uses dual licensing:
 
 
 ## Dev notes
-### Dependencies
-Tune rendering and transposing is done by [abcjs](https://github.com/paulrosen/abcjs), a library written by Paul Rosen and Gregory Dyke.
+### abc-tools - a related repo
+Apart from rendering scores and transposition (handled by `abcjs`), all other functionality related to ABC is from my [“abc-tools” repo](https://github.com/goplayerjuggler/abc-tools).
 
-Most of the other functionality related to ABC is in my [“abc-tools” repo](https://github.com/goplayerjuggler/abc-tools).
-
-### npm
+### npm scripts
 ``` PowerShell
 # setup
 npm install
@@ -106,12 +102,10 @@ npm install
 npm run dev
 # build
 npm run build
-# working with abc-tools
-npm link ..\abctools
-## check the link
-npm ls --global
-## remove and recreate the link
-npm uninstall -g  @goplayerjuggler/abc-tools # seems to be needed each time the abc-tools’ version is bumped
+
+# working with abc-tools: just install it as a sibling - same parent folder 
+npm run dev:local # this way abc-tools is from local version, not from npm package
+
 ```
 
 ### Using other tunes
