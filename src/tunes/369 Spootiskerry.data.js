@@ -7,7 +7,6 @@ M: 4/4
 L: 1/16
 K: Gmaj
 DE|G2DE GDEG DEGA B2AB|G2`,
-	contourShift: -1,
 	theSessionId: 857,
 	parts: "AABB"
 };
