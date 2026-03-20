@@ -9,6 +9,8 @@ N: 1. [discogs](https://www.discogs.com/release/11152134-Duo-Rivaud-Lacouchie-Or
 N: 2. La « (*) » sur la mesure nº 4 renvoie à des variations à la fin.
 N: 3. Dans l’album, suivie de la Mazurka de Saint-Bonnet 
 D:Ordich! (2016 ?)
+Z:abc-transcription Malcolm Schonfield
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R:Mazurka
 M:3/4
 L:1/8
@@ -18,14 +20,7 @@ Ad | f2 e2 Bc | B2 A2 Ac | e2 e2 de | f2 d2 Ad | f2 e2 Bc | B2 A2 Ac | e2 eg fe 
 "^(*)"f2de fg ||"^(*)"fe de fg ||`,
 		`X:1
 T:Mazurka de Louis Jarraud
-O:France; Limousin.
-S: Duo Rivaud Lacouchie (Alexandra Lacouchie, violon; Anne Rivaud, accordéon diatonique)
-H: Info copiée depuis l’album : « Jouée au violon par Louis Jarraud, né en 1910, de La Croisille-sur-Briance (87), recueillie en 1982 par F. Etay »
-N: 0. version avec des accords élementaires.
-N: 1. [discogs](https://www.discogs.com/release/11152134-Duo-Rivaud-Lacouchie-Ordich)
-N: 2. La « (*) » sur la mesure nº 4 renvoie à des variations à la fin.
-N: 3. Dans l’album, suivie de la Mazurka de Saint-Bonnet
-D:Ordich! (2016 ?)
+N:Version basée sur la précédente, avec des accords élementaires rajoutées.
 R:Mazurka
 M:3/4
 L:1/8
