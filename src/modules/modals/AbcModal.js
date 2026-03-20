@@ -12,7 +12,6 @@ import {
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
-import { getHeaderValue } from "@goplayerjuggler/abc-tools/src/parse/header-parser.js";
 import { processTuneData } from "../../processTuneData.js";
 
 /**
