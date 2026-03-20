@@ -29,17 +29,22 @@ export default class TuneListSlotManager {
 		const now = new Date().toISOString();
 		const idx = data.slots.findIndex((s) => s.id === id);
 		if (idx >= 0) {
-			Object.assign(data.slots[idx], { name, tunes, setLists, modified: now });
+			Object.assign(data.slots[idx], {
+				name,
+				tunes,
+				setLists,
+				lastUpdate: now
+			});
 			data.slots[idx].metadata.lastOpened = now;
 		} else {
 			data.slots.push({
 				id,
 				name,
 				created: now,
-				modified: now,
+				lastUpdate: now,
 				tunes,
 				setLists,
-				metadata: { lastOpened: now },
+				metadata: { lastOpened: now }
 			});
 		}
 		data.lastActiveSlot = id;
@@ -73,8 +78,8 @@ export default class TuneListSlotManager {
 			id: this.generateSlotId(),
 			name: `${original.name} (copy)`,
 			created: now,
-			modified: now,
-			metadata: { lastOpened: now },
+			lastUpdate: now,
+			metadata: { lastOpened: now }
 		};
 		data.slots.push(copy);
 		this._save(data);
@@ -86,7 +91,7 @@ export default class TuneListSlotManager {
 		const slot = data.slots.find((s) => s.id === id);
 		if (!slot) return false;
 		slot.name = newName.trim();
-		slot.modified = new Date().toISOString();
+		slot.lastUpdate = new Date().toISOString();
 		this._save(data);
 		return true;
 	}
@@ -121,15 +126,15 @@ export default class TuneListSlotManager {
 			exportVersion: "1.0",
 			exportDate: new Date().toISOString(),
 			application: "tuneTable",
-			slots,
+			slots
 		};
 		const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-			type: "application/json",
+			type: "application/json"
 		});
 		const url = URL.createObjectURL(blob);
 		Object.assign(document.createElement("a"), {
 			href: url,
-			download: `tuneTable-backup-${new Date().toISOString().split("T")[0]}.json`,
+			download: `tuneTable-backup-${new Date().toISOString().split("T")[0]}.json`
 		}).click();
 		URL.revokeObjectURL(url);
 	}

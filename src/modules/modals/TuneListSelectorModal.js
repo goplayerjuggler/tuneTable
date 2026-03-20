@@ -144,7 +144,7 @@ export default class TuneListSelectorModal extends Modal {
 	_slotItemHTML(slot, isActive) {
 		const tuneCount = slot.tunes?.length ?? 0;
 		const setCount = slot.setLists?.length ?? 0;
-		const meta = `${tuneCount} tune${tuneCount !== 1 ? "s" : ""}${setCount > 0 ? `, ${setCount} set${setCount !== 1 ? "s" : ""}` : ""} &bull; Modified ${relativeTime(slot.modified)}`;
+		const meta = `${tuneCount} tune${tuneCount !== 1 ? "s" : ""}${setCount > 0 ? `, ${setCount} set${setCount !== 1 ? "s" : ""}` : ""} &bull; Modified ${relativeTime(slot.lastUpdate)}`;
 		return `
 			<div class="tls-item tls-slot${isActive ? " tls-item--active" : ""}" data-slot-id="${slot.id}">
 				<div class="tls-item-info">
@@ -164,7 +164,7 @@ export default class TuneListSelectorModal extends Modal {
 		return `
 			<div class="tls-item tls-server-item${isActive ? " tls-item--active" : ""}"
 					data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}"
-					title="${list.description} &bull; Last updated: ${list.lastUpdate ?? list.modified ?? "unknown"}">
+					title="${list.description} &bull; Last updated: ${list.lastUpdate ?? "unknown"}">
 				<span class="tls-item-name">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
 				<span class="tls-item-meta">${list.count ?? "?"} tunes</span>
 			</div>
@@ -232,6 +232,7 @@ export default class TuneListSelectorModal extends Modal {
 			source: "local",
 			sourceId: slotId,
 			displayName: slot.name,
+			lastUpdate: slot.lastUpdate,
 			tunes: slot.tunes ?? [],
 			setLists: slot.setLists ?? []
 		});
