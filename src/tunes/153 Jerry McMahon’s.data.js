@@ -1,4 +1,5 @@
 export default {
+	//source control: was a duplicate - entry ID 297
 	aka: "Sailing Into Walpole's Marsh",
 	name: "Jerry McMahon’s",
 	groups: "SU",
@@ -8,7 +9,7 @@ export default {
 M: 4/4
 L: 1/16
 K: Ador
-EAAG ABcG E2DE GEDG|EAAG A2(3Bcd `,
+A2AG ABcG E2DE GEDG|EAAG A2(3Bcd `,
 	references: [
 		{
 			artists: "Dave Sheridan, fiddle",

@@ -1,4 +1,5 @@
 export default {
+	groups: "su",
 	abc: `X:1
 T:Gallagher's Frolics
 R:jig

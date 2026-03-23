@@ -17,6 +17,10 @@ eag e2d eaa bag|efg edB BAG A2:|`,
 	parts: "AABB",
 	references: [
 		{
+			notes:
+				"Starts just like the Mist Covered Mountain, but is actually a different tune."
+		},
+		{
 			artists: "Tulla Céilí band",
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-december-2024/?track=3",
 			notes:
