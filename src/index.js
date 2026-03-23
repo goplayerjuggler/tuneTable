@@ -561,6 +561,7 @@ function prepareTunesForExport(tunes) {
 		);
 		tune.references = tune.references?.filter((r) => !r.fromAbc);
 		delete tune.selected;
+		delete tune.incipitSvg;
 		if (tune.abc) {
 			//delete data that's derived from the abc in 99% of cases
 			delete tune.incipit;
