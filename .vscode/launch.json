@@ -13,6 +13,14 @@
       //"${workspaceFolder}\\dev\\format.mjs"
       // "${workspaceFolder}\\test\\manipulation.js"
     },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "build tune lists",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\build\\build-tune-lists.mjs"
+    },
     // {
     //   "type": "node",
     //   "request": "launch",

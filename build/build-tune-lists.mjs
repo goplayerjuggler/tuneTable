@@ -7,18 +7,17 @@ import abcTools from "@goplayerjuggler/abc-tools";
 
 const { getMetadata } = abcTools;
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirName = path.dirname(fileURLToPath(import.meta.url));
 
-const SOURCE_DIR = path.resolve(__dirname, "../src/tunes");
-const TEMPLATE_FILE = path.resolve(__dirname, "../src/tunes-template.data.js");
-const DEFAULT_OUT_DIR = path.resolve(__dirname, "../dist/tune-lists");
-const DATES_FILE = path.resolve(__dirname, "tune-dates.json");
+const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
+const TEMPLATE_FILE = path.resolve(__dirName, "../src/tunes-template.data.js");
+const DEFAULT_OUT_DIR = path.resolve(__dirName, "../dist/tune-lists");
+const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
 /**
- * JSON filenames (without path) that are built in dev mode only and excluded
+ * JSON fileNames (without path) that are built in dev mode only and excluded
  * from the production / GitHub Pages output.
  * @type {string[]}
  */
@@ -50,7 +49,7 @@ const ORIGIN_EXTRACTS = [
  * @param {Record<string, string>} tuneDates2
  * @returns {string}
  */
-function serializeTuneDates(tuneDates1, tuneDates2) {
+function serialiseTuneDates(tuneDates1, tuneDates2) {
   const CHUNK = 10;
   const rows = [];
   for (let i = 0; i < tuneDates1.length; i += CHUNK) {
@@ -78,19 +77,19 @@ function toDateString(ms) {
 /**
  * Load the committed tune-dates cache, update any entries whose filesystem
  * mtime is newer than the stored date, write back if changed, and return a
- * Map from filename → YYYY-MM-DD date string.
+ * Map from fileName → YYYY-MM-DD date string.
  *
  * Tune files named `[integer] [name].data.js` are stored in the compact
  * `tuneDates1` array (indexed by the leading integer); all others go into
- * the `tuneDates2` dictionary keyed by full filename.
+ * the `tuneDates2` dictionary keyed by full fileName.
  *
  * The cache is committed to source control so that CI/CD environments
  * (where a fresh checkout sets all mtimes to "now") use accurate dates.
  *
- * @param {string[]} tuneFiles - Absolute paths to all tune files.
+ * @param {string[]} tuneFileNames - Absolute paths to all tune files.
  * @returns {Promise<Map<string, string>>}
  */
-async function loadAndUpdateTuneDates(tuneFiles) {
+async function loadAndUpdateTuneDates(tuneFileNames) {
   let tuneDates1 = [];
   let tuneDates2 = {};
   try {
@@ -100,37 +99,52 @@ async function loadAndUpdateTuneDates(tuneFiles) {
     // Cache doesn't exist yet — will be created below
   }
 
-  const stats = await Promise.all(tuneFiles.map((f) => fs.stat(f)));
+  const fileNameDates = new Map();
+  await Promise.all(
+    tuneFileNames.map(async (fileName) => {
+      const stat = await fs.stat(path.join(SOURCE_DIR, fileName));
+      fileNameDates.set(fileName, stat.mtime);
+    })
+  );
   let dirty = false;
   const dateMap = new Map();
 
-  tuneFiles.forEach((file, i) => {
-    const filename = path.basename(file);
-    const fsDate = toDateString(stats[i].mtimeMs);
-    const numbered = filename.match(/^(\d+)\s/);
+  //numbered
+  tuneFileNames
+    .filter((fileName) => /^(\d+)\s/.test(fileName))
+    .map((fileName) => [parseInt(fileName.match(/^(\d+)\s/)[1], 10), fileName])
+    .sort((a, b) => a[0] - b[0])
+    .forEach((item) => {
+      const [i, fileName] = item;
+      const fsDate = toDateString(fileNameDates.get(fileName));
 
-    if (numbered) {
-      const idx = parseInt(numbered[1], 10);
-      while (tuneDates1.length <= idx) {
+      while (tuneDates1.length < i) {
         tuneDates1.push(null);
         dirty = true;
       }
-      if (!tuneDates1[idx] || fsDate > tuneDates1[idx]) {
-        tuneDates1[idx] = fsDate;
+      if (!tuneDates1[i] || fsDate > tuneDates1[i]) {
+        tuneDates1[i] = fsDate;
         dirty = true;
       }
-      dateMap.set(filename, tuneDates1[idx]);
-    } else {
-      if (!tuneDates2[filename] || fsDate > tuneDates2[filename]) {
-        tuneDates2[filename] = fsDate;
-        dirty = true;
+      dateMap.set(fileName, tuneDates1[i]);
+    });
+  //not numbered
+  tuneFileNames
+    .filter((fileName) => !/^(\d+)\s/.test(fileName))
+    .forEach((file) => {
+      const fileName = path.basename(file);
+      const fsDate = toDateString(fileNameDates.get(file));
+      {
+        if (!tuneDates2[fileName] || fsDate > tuneDates2[fileName]) {
+          tuneDates2[fileName] = fsDate;
+          dirty = true;
+        }
+        dateMap.set(fileName, tuneDates2[fileName]);
       }
-      dateMap.set(filename, tuneDates2[filename]);
-    }
-  });
+    });
 
   if (dirty) {
-    await fs.writeFile(DATES_FILE, serializeTuneDates(tuneDates1, tuneDates2));
+    await fs.writeFile(DATES_FILE, serialiseTuneDates(tuneDates1, tuneDates2));
     console.log("✓ tune-dates.json updated");
   }
 
@@ -143,7 +157,7 @@ async function loadAndUpdateTuneDates(tuneFiles) {
  * Evaluate a tune `.data.js` file without going through the Node module cache.
  * Each file exports a single object literal; we convert `export default` to a
  * `return` statement and run it with `new Function`. Leading line comments
- * (e.g. the filename comment) are harmless and left in place.
+ * (e.g. the fileName comment) are harmless and left in place.
  *
  * @param {string} content - Raw file content.
  * @returns {object}
@@ -227,7 +241,7 @@ const listLastUpdate = (tunes, setLists) =>
  * `build/tune-dates.json`, committed to source control for CI accuracy) and
  * the `dateModified` fields of its set lists.
  *
- * In production mode (`isDevelopment: false`) any filename listed in
+ * In production mode (`isDevelopment: false`) any fileName listed in
  * {@link JSON_TO_NOT_PUBLISH} is silently skipped so it never reaches
  * GitHub Pages.
  *
@@ -247,7 +261,7 @@ export async function buildTuneLists({
 
   console.log(`Found ${tuneFiles.length} tune files`);
 
-  const dateMap = await loadAndUpdateTuneDates(tuneFiles);
+  const dateMap = await loadAndUpdateTuneDates(tuneFileNames);
 
   const allTunes = [];
   for (const file of tuneFiles) {
@@ -281,14 +295,14 @@ export async function buildTuneLists({
    * Write a list JSON file, unless it is excluded from publication.
    * @returns {Promise<boolean>} `true` if the file was written.
    */
-  const writeList = async (filename, tunes, setLists = []) => {
-    if (!isDevelopment && JSON_TO_NOT_PUBLISH.includes(filename)) return false;
+  const writeList = async (fileName, tunes, setLists = []) => {
+    if (!isDevelopment && JSON_TO_NOT_PUBLISH.includes(fileName)) return false;
     const data = {
       tunes: tunes.map(sanitizeTune),
       setLists: setLists.map(sanitizeSetList)
     };
     await fs.writeFile(
-      path.join(outputDir, filename),
+      path.join(outputDir, fileName),
       JSON.stringify(data, null, 2)
     );
     return true;
@@ -335,10 +349,10 @@ export async function buildTuneLists({
   for (const [group, tunes] of [...groupMap.entries()].sort((a, b) =>
     a[0].localeCompare(b[0])
   )) {
-    const filename = `group-${group}.json`;
+    const fileName = `group-${group}.json`;
     let description = "";
     const setLists = setListsFor(group);
-    if (await writeList(filename, tunes, setLists)) {
+    if (await writeList(fileName, tunes, setLists)) {
       switch (group) {
         case "su":
           description = "Steam Up! tunes";
@@ -354,7 +368,7 @@ export async function buildTuneLists({
       generatedLists.push({
         id: `group-${group}`,
         name: getGroupDisplayName(group),
-        file: filename,
+        file: fileName,
         lastUpdate: listLastUpdate(tunes, setLists),
         count: tunes.length,
         description: description,
@@ -362,7 +376,7 @@ export async function buildTuneLists({
         group
       });
       console.log(
-        `✓ ${filename} (${tunes.length} tunes, ${setLists.length} sets)`
+        `✓ ${fileName} (${tunes.length} tunes, ${setLists.length} sets)`
       );
     }
   }
@@ -371,18 +385,18 @@ export async function buildTuneLists({
   for (const { id, label, match } of ORIGIN_EXTRACTS) {
     const tunes = allTunes.filter((t) => t.origin && match(t.origin));
     if (tunes.length === 0) continue;
-    const filename = `origin-${id}.json`;
-    if (await writeList(filename, tunes)) {
+    const fileName = `origin-${id}.json`;
+    if (await writeList(fileName, tunes)) {
       generatedLists.push({
         id: `origin-${id}`,
         name: label,
-        file: filename,
+        file: fileName,
         lastUpdate: listLastUpdate(tunes, []),
         count: tunes.length,
         description: `Tunes originating from ${label}`,
         category: "origins"
       });
-      console.log(`✓ ${filename} (${tunes.length} tunes)`);
+      console.log(`✓ ${fileName} (${tunes.length} tunes)`);
     }
   }
 
@@ -390,18 +404,18 @@ export async function buildTuneLists({
   for (const { id, label, match } of COMPOSER_EXTRACTS) {
     const tunes = allTunes.filter((t) => t.composer && match(t.composer));
     if (tunes.length === 0) continue;
-    const filename = `composer-${id}.json`;
-    if (await writeList(filename, tunes)) {
+    const fileName = `composer-${id}.json`;
+    if (await writeList(fileName, tunes)) {
       generatedLists.push({
         id: `composer-${id}`,
         name: label,
-        file: filename,
+        file: fileName,
         lastUpdate: listLastUpdate(tunes, []),
         count: tunes.length,
         description: `Tunes by ${label}`,
         category: "composers"
       });
-      console.log(`✓ ${filename} (${tunes.length} tunes)`);
+      console.log(`✓ ${fileName} (${tunes.length} tunes)`);
     }
   }
 
