@@ -1,9 +1,10 @@
 export default {
 	groups: "su",
+	aka: "Sangshyttevalsen",
 	parts: "AABB",
 	abc: `X:1
-T:Sangshyttevalsen
-C:Eva Saether, Mats Edén
+T:Sångshyttevalsen
+C:Eva Saether; Mats Edén
 O:Sweden
 R:waltz
 L:1/8
