@@ -1,8 +1,9 @@
 export default {
 	groups: "su",
+	excludeFromDefault: true,
 	parts: "AABB",
 	incipit: `X:1
-T:The Cup Of Tea
+T:Back To The Heater
 C:Elie Durcik
 R:reel
 L:1/16
