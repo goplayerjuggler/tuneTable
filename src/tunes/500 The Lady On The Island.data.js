@@ -1,24 +1,20 @@
 export default {
 	groups: "su",
-	parts: "AABB",
+	parts: "AB",
 	abc: `X:1
-T:The Humours Of Tullycrine
-R:hornpipe
-L:1/8
-M:4/2
-N:Such a beautiful tune
-N:---
+T:The Lady On The Island
+R:reel
+L:1/16
+M:4/4
 N:Imported into *tuneTable* on 2026-03-23,
-N:from https://thesession.org/tunes/980#setting30049
-N:Setting entered in thesession by user “JACKB” on 2017-03-15
-N:*abc-tools: convert to M:4/2*
-K:Adorian
-ed|:cAAB c3d eaag (3efe dB|cAAc dBGA Bdde dBAG|
-EAAB c3d eaag (3efe dB|cAAc dBGB[1 A2A^G A2:|2 A2 A^G ABcd||
-|:eaa2 aged eaa2 aged|egg2 ge d2 (3efg fa gedB|
-A^GAB c3d eaag (3efe dB|cAAc dBGB A2A^G ABcd|
-eaag aged eaag aged|eggf ged2 (3efg fa gedB|
-A^GAB cBcd eaag (3efe dB|cAAc dBGB A2 A^G A2 ed:|`,
-	theSessionId: 980,
-	theSessionSettingId: 30049
+N:from https://thesession.org/tunes/938#setting36179
+N:Setting entered in thesession by user “Jeremy” on 2019-10-05
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Dmajor
+BAFB AFEF D2FA BAdB|BAFB A2AB defd efdB|
+BAFB AFEF D2FA BAdB|BAFB A2AB defd e2(3ABc||
+d2fd efge afdf edBA|d2fd efge afdf e2(3ABc|
+d2fd efge afdf edBA|defg a2ab afdf e2dB||`,
+	theSessionId: 938,
+	theSessionSettingId: 36179
 };

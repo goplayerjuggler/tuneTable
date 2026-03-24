@@ -642,8 +642,13 @@ export default {
 					collapsed: true
 				},
 				{
+					name: "Golden Castle",
+					tunes: [{ theSessionId: 2170 }, { theSessionId: 980 }],
+					collapsed: true
+				},
+				{
 					name: "Lady on the island",
-					tunes: [{ theSessionId: 980 }, { theSessionId: 812 }],
+					tunes: [{ theSessionId: 938 }, { theSessionId: 812 }],
 					collapsed: true
 				},
 				{
