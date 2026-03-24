@@ -36,6 +36,8 @@ const COMPOSER_EXTRACTS = [
 /** Origin-based list definitions. */
 const ORIGIN_EXTRACTS = [
   { id: "france", label: "France", match: (o) => /^france/i.test(o) },
+  { id: "england", label: "England", match: (o) => /england/i.test(o) },
+  { id: "nordic", label: "Nordic", match: (o) => /^sweden|norway/i.test(o) },
   { id: "québec", label: "Québec", match: (o) => /qu[eé]bec/i.test(o) }
 ];
 

@@ -449,7 +449,8 @@ async function resumeCurrentList(listState, manifest) {
 			sourceId: listState.sourceId,
 			displayName: slot.name,
 			tunes: slot.tunes ?? [],
-			setLists: slot.setLists ?? []
+			setLists: slot.setLists ?? [],
+			lastUpdate: slot.modified
 		});
 	} else if (listState.source === "server") {
 		const listInfo = manifest?.lists.find((l) => l.id === listState.sourceId);
@@ -809,10 +810,35 @@ async function initialiseData() {
 		);
 		if (match) {
 			try {
-				await loadServerListById(match.id, match.file, match.name);
+				await loadServerListById(
+					match.id,
+					match.file,
+					match.name,
+					match.lastUpdate
+				);
 				return;
 			} catch (e) {
 				console.warn("Failed to auto-load ?g= list:", e);
+			}
+		}
+	}
+	// ?l= auto-selects a matching server list
+	const lParam = params.get("l");
+	if (lParam && manifest) {
+		const match = manifest.lists.find(
+			(l) => l.id.toLowerCase() === lParam.toLowerCase()
+		);
+		if (match) {
+			try {
+				await loadServerListById(
+					match.id,
+					match.file,
+					match.name,
+					match.lastUpdate
+				);
+				return;
+			} catch (e) {
+				console.warn("Failed to auto-load ?l= list:", e);
 			}
 		}
 	}

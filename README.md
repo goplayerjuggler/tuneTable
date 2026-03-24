@@ -37,13 +37,17 @@ I built this for myself as a way of exploring and organising repertoire I’m in
 * tune list management: users can switch between lists of tunes hosted online, and their own local lists of tunes.
 * lazy loading of SVGs for incipits and contours in order avoid excessive memory usage when viewing a list with thousands of tunes.
 
-### Query parameters `n` (name), `q` (query) and `g` (group)
+### Query parameters `n` (name), `q` (query), `l` (list) and `g` (group)
 * You can open a specific tune directly by specifying part of its name, eg: 
 [goplayerjuggler.github.io/tuneTable/?n=cameronian](https://goplayerjuggler.github.io/tuneTable/?n=cameronian) 
 * query everything that matches a full-text search with `q` in the URL:
 [goplayerjuggler.github.io/tuneTable/?q=crooked](https://goplayerjuggler.github.io/tuneTable/?q=crooked)
 * the `g` parameter selects a “server list” that was prepared based on the `tune.groups` property. Example: 
 [goplayerjuggler.github.io/tuneTable/?g=alora](https://goplayerjuggler.github.io/tuneTable/?g=alora) 
+* the `l` parameter selects any “server list”. Example: 
+[goplayerjuggler.github.io/tuneTable/?l=default](https://goplayerjuggler.github.io/tuneTable/?l=default)
+* Parameters can be combined. Example: 
+[load Darby the driver from the default list](https://goplayerjuggler.github.io/tuneTable/?l=default&n=darby+the+driver) 
 
 
 ## Upcoming features / wishlist
