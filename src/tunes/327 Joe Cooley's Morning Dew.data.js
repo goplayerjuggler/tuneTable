@@ -21,5 +21,11 @@ K: Edor
 			url: "https://irishmusic.bandcamp.com/track/the-lass-of-carracastle-the-morning-dew-lad-obeirnes-geese-in-the-bog"
 		}
 	],
+	crossReferences: [
+		{
+			theSessionId: 2958, //the rookery, Catilín Nic Gabhann
+			index: 0
+		}
+	],
 	groups: "su"
 };
