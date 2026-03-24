@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	parts: "AABB",
 	incipit: `X: 1
 T:The Rookery
 C:Vincent Broderick

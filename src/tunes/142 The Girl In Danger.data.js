@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	parts: "AB",
 	tags: "crooked",
 	abc: `X:1
 T:The Girl In Danger
@@ -14,5 +15,10 @@ K:Adorian
 [M:5/4]EAAB cABd cABA G2GF GAGD | [M:4/4]EAAB cABd cABG [1 EAAG :| [K:A mixo] [2 ABcd ||
  |: eeec d2cd efec d2cd|[1 eeec dfed cABG A2cd:| [2 eage dged [K:Ador] cABd cABG||
  `,
+	incipit: `X:1
+L:1/16
+M:4/4
+K:Adorian
+[M:5/4]EAAB cABd cABA G2GF GAGD | [M:4/4]EAAB`,
 	theSessionId: 2120
 };

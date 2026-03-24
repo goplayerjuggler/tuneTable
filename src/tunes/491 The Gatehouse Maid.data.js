@@ -1,8 +1,8 @@
 export default {
 	aka: ["Butter An Peas", "Nine Pint Coggie"],
 	groups: "su",
-	parts: "AABB",
-	incipit: `X: 3
+	parts: "AB",
+	incipit: `X: 1
 T: The Gatehouse Maid
 R: reel
 M: 4/4

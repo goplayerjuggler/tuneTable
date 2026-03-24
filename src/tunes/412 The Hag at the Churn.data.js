@@ -1,4 +1,5 @@
 export default {
+	groups: "su",
 	incipit: `
 X:1
 T:The Hag at the Churn

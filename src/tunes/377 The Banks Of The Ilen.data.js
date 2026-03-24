@@ -1,4 +1,6 @@
 export default {
+	groups: "su",
+	parts: "AABB",
 	incipit: `X: 2
 T:The Banks Of The Ilen
 R: reel

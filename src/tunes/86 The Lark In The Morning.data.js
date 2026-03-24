@@ -1,5 +1,6 @@
 export default {
-	groups: "su",
+	groups: "su,alora",
+	parts: "AABBCCDD",
 	abc: `X:1
 T:The Lark In The Morning
 R:jig

@@ -270,6 +270,8 @@ export default {
 		{
 			id: "1774259105643-cvi6r",
 			name: "Liste pour Recloses 2026",
+
+			groups: "su",
 			dateCreated: "2026-03-23T09:45:05.643Z",
 			dateModified: "2026-03-23T09:45:26.165Z",
 			sets: [
@@ -502,7 +504,7 @@ export default {
 					name: "Fin de concert"
 				},
 				{
-					name: "Encore",
+					name: "Encore - slip jigs",
 					tunes: [
 						{
 							theSessionId: 148
@@ -515,7 +517,16 @@ export default {
 						}
 					],
 					collapsed: true
-				},
+				}
+			]
+		},
+		{
+			id: "1774305486386-bytpm",
+			groups: "su",
+			name: "Steam Up! dance tunes",
+			dateCreated: "2026-03-23T22:38:06.387Z",
+			dateModified: "2026-03-23T23:04:39.485Z",
+			sets: [
 				{
 					name: "Rookery set (4-3-4) ",
 					tunes: [
@@ -531,7 +542,6 @@ export default {
 					],
 					collapsed: true
 				},
-
 				{
 					name: "Nine Pint Coggie",
 					tunes: [
@@ -545,6 +555,114 @@ export default {
 							theSessionId: 1270
 						}
 					],
+					collapsed: true
+				},
+				{
+					name: "Sporting Paddy",
+					tunes: [
+						{
+							theSessionId: 430
+						},
+						{
+							theSessionId: 479
+						},
+						{
+							theSessionId: 474
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Rakish Paddy",
+					tunes: [
+						{
+							theSessionId: 20
+						},
+						{
+							theSessionId: 86
+						},
+						{
+							theSessionId: 179
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Flogging",
+					tunes: [
+						{
+							theSessionId: 195
+						},
+						{ theSessionId: 27 },
+						{ ttId: 496 }
+					],
+					collapsed: true
+				},
+				{
+					name: "Mist-covered",
+					tunes: [
+						{
+							theSessionId: 256
+						},
+						{
+							theSessionId: 12
+						},
+						{
+							theSessionId: 829
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Out on the Ocean",
+					tunes: [
+						{
+							theSessionId: 108
+						},
+						{
+							theSessionId: 160
+						},
+						{
+							theSessionId: 62
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Up, down and Around",
+					collapsed: true
+				},
+				{
+					name: "M's single reels",
+					tunes: [
+						{ theSessionId: 747 },
+						{ theSessionId: 900 },
+						{ theSessionId: 2677 }
+					],
+					collapsed: true
+				},
+				{
+					name: "Lady on the island",
+					tunes: [{ theSessionId: 980 }, { theSessionId: 812 }],
+					collapsed: true
+				},
+				{
+					name: "Thornton",
+					tunes: [
+						{ theSessionId: 2481 },
+						{ theSessionId: 1756 },
+						{ theSessionId: 121 }
+					],
+					collapsed: true
+				},
+				{
+					name: "Aggies",
+					tunes: [{ theSessionId: 1878 }, { ttId: 504 }],
+					collapsed: true
+				},
+				{
+					name: "Up Down And Around",
+					tunes: [{ theSessionId: 187 }, { theSessionId: 11289 }],
 					collapsed: true
 				}
 			]
