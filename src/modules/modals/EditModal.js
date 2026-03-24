@@ -1,5 +1,5 @@
 import Modal from "./Modal.js";
-import { processTuneData } from "../../processTuneData.js";
+import { reprocessTune } from "../../processTuneData.js";
 
 /**
  * Edit Tune Modal
@@ -346,18 +346,7 @@ export default class EditModal extends Modal {
 		});
 
 		// Reprocess tune data
-		let reprocessed = Object.assign({}, tune);
-		delete reprocessed.name;
-		delete reprocessed.nameIsFromAbc;
-		delete reprocessed.key;
-		delete reprocessed.keyIsFromAbc;
-		delete reprocessed.rhythm;
-		delete reprocessed.rhythmIsFromAbc;
-		delete reprocessed.references;
-		delete reprocessed.contour;
-
-		delete reprocessed.incipitSvg;
-		reprocessed = processTuneData(reprocessed);
+		let reprocessed = reprocessTune(tune);
 
 		// Apply manual overrides
 		const editedName = this.elements.name.value.trim();
@@ -386,15 +375,13 @@ export default class EditModal extends Modal {
 			"keyIsFromAbc"
 		);
 
-		Object.assign(tune, reprocessed);
-
 		// Merge references (user refs + ABC refs)
-		const abcRefs = tune.references.filter((r) => r.fromAbc);
-		tune.references = [...userRefs, ...abcRefs];
+
+		reprocessed.references = userRefs;
 
 		// Update main data array
 		if (originalTuneDataIndex !== -1) {
-			window.tunesData[originalTuneDataIndex] = tune;
+			window.tunesData[originalTuneDataIndex] = reprocessed;
 		}
 
 		this.callbacks.saveTunesToStorage();

@@ -54,17 +54,16 @@ function updateFromMetadata(
 			notes: `${metaData.recording ? `recording/album: ${metaData.recording}\n` : ""}${
 				(metaData.comments ? metaData.comments.join("\n") + "\n" : "") +
 				(metaData.hComments ? metaData.hComments : "")
-			}`,
-			fromAbc: true
+			}`
 		};
 		//if (abcRef.notes) abcRef.notes += " (notes extracted from ABC)";
 
-		processed.processedFromAbc.push(abcRef);
+		processed.referencesFromAbc.push(abcRef);
 	}
 }
 
 function processTuneData(tune) {
-	const processed = { processedFromAbc: [], ...tune };
+	const processed = { referencesFromAbc: [], ...tune };
 	try {
 		if (!processed.scores) processed.scores = [];
 		if (typeof tune.aka === "string") processed.aka = [tune.aka];
@@ -122,11 +121,6 @@ function processTuneData(tune) {
 		if (!processed.rhythm) processed.rhythm = "";
 		else processed.rhythm = processed.rhythm.toLowerCase();
 		if (!processed.references) processed.references = [];
-		processed.references = [
-			...processed.processedFromAbc,
-			...processed.references
-		];
-		delete processed.processedFromAbc;
 	} catch (error) {
 		console.log(
 			`error processing tune: ${processed.title ?? processed.abc ?? processed.incipit}. Error: ${error}`
@@ -135,4 +129,26 @@ function processTuneData(tune) {
 	return processed;
 }
 
-export { processTuneData, applySwingTransform };
+function reprocessTune(tune, options = {}) {
+	const { removeContour = true } = options;
+
+	// Reprocess tune data
+	let reprocessed = Object.assign({}, tune);
+	delete reprocessed.name;
+	delete reprocessed.nameIsFromAbc;
+	delete reprocessed.key;
+	delete reprocessed.keyIsFromAbc;
+	delete reprocessed.rhythm;
+	delete reprocessed.rhythmIsFromAbc;
+	delete reprocessed.incipit;
+	delete reprocessed.incipitSvg;
+	delete reprocessed.referencesFromAbc;
+
+	if (removeContour) {
+		delete reprocessed.contour;
+	}
+
+	return processTuneData(reprocessed);
+}
+
+export { processTuneData, applySwingTransform, reprocessTune };

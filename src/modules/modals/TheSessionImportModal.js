@@ -40,6 +40,7 @@ import {
  *   - 'preferShorter' / 'preferLonger' / 'newestFirst' / 'oldestFirst'
  */
 const theSessionImportSettings = {
+	withComments: true,
 	skipLevel: "ifSettingExists",
 	doubleBarLengthWherePossible: true,
 	importAllSettingsForSpecifiedUser: true,
@@ -47,16 +48,17 @@ const theSessionImportSettings = {
 		{
 			preferredUserIds: [
 				[40345, "GoPlayerJuggler"],
-				[13094, "birlibirdie"],
-				[1, "Jeremy"],
 				[11705, "ceolachan"],
+				[4763, "Dr. Dow"],
+				[13094, "birlibirdie"],
+				[11834, "Nigel Gatherer"],
+				[1, "Jeremy"],
 				[6451, "jackb"],
 				[116353, "John E Roche"],
-				[4763, "Dr. Dow"],
 				[3150, "slainte"],
-				[8648, "erik-fiddler"],
 				[60897, "Fernando Durbán Galnares"],
-				[119445, "piperDave"]
+				[119445, "piperDave"],
+				[8648, "erik-fiddler"]
 			]
 		},
 		"withChords",
@@ -470,7 +472,12 @@ export default class TheSessionImportModal extends Modal {
 		const cHeader = tuneData.composer ? "\nC:" + tuneData.composer : "";
 
 		const buildAbc = (setting) => {
-			const comments = tuneData.comments.find((c) => c.date === setting.date);
+			const comments = tuneData.comments.find(
+				(c) =>
+					theSessionImportSettings.withComments &&
+					c.date === setting.date &&
+					c.member?.id === setting.member?.id
+			);
 			const nHeaders = comments
 				? "\n" +
 					comments.content

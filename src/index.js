@@ -559,9 +559,9 @@ function prepareTunesForExport(tunes) {
 				}
 			}
 		);
-		tune.references = tune.references?.filter((r) => !r.fromAbc);
 		delete tune.selected;
 		delete tune.incipitSvg;
+		delete tune.referencesFromAbc;
 		if (tune.abc) {
 			//delete data that's derived from the abc in 99% of cases
 			delete tune.incipit;
@@ -893,49 +893,51 @@ function renderTable() {
 
 		let referencesHtml = "",
 			hasTheSessionLink = false;
-		tune.references?.forEach((ref, refIndex) => {
-			let notesHtml = "";
-			if (ref.notes) {
-				const formattedNotes = ref.notes
-					.replace(/\n/g, "<br />")
-					.replace(
-						/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
-						'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
-					)
-					.replace(
-						/(?<!")https?:\/\/[^\s<>"']+/g, //only match URLs not preceded by `"` so as to avoid handling the ones we did previously for markdown syntax
-						(url) => {
-							try {
-								const { hostname, pathname, search } = new URL(url);
-								if (
-									!hasTheSessionLink &&
-									hostname === "thesession.org" &&
-									pathname &&
-									pathname.match(/\/tunes\/\d+/)
-								)
-									hasTheSessionLink = true;
-								const display = hostname + pathname + search;
-								return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
-							} catch {
-								// In case URL parsing fails, leave the original
-								return url;
-							}
-						}
-					)
-					.replace(/```([^`]+)```/g, "<pre>$1</pre>");
-
-				const lines = ref.notes.split("\n");
-				if (lines.length > 12) {
-					const truncatedLines = lines.slice(0, 5);
-					const truncatedNotes = truncatedLines
-						.join("\n")
+		(tune.references ?? [])
+			.concat(tune.referencesFromAbc ?? [])
+			.forEach((ref, refIndex) => {
+				let notesHtml = "";
+				if (ref.notes) {
+					const formattedNotes = ref.notes
 						.replace(/\n/g, "<br />")
 						.replace(
 							/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
 							'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
-						);
+						)
+						.replace(
+							/(?<!")https?:\/\/[^\s<>"']+/g, //only match URLs not preceded by `"` so as to avoid handling the ones we did previously for markdown syntax
+							(url) => {
+								try {
+									const { hostname, pathname, search } = new URL(url);
+									if (
+										!hasTheSessionLink &&
+										hostname === "thesession.org" &&
+										pathname &&
+										pathname.match(/\/tunes\/\d+/)
+									)
+										hasTheSessionLink = true;
+									const display = hostname + pathname + search;
+									return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
+								} catch {
+									// In case URL parsing fails, leave the original
+									return url;
+								}
+							}
+						)
+						.replace(/```([^`]+)```/g, "<pre>$1</pre>");
 
-					notesHtml = `
+					const lines = ref.notes.split("\n");
+					if (lines.length > 12) {
+						const truncatedLines = lines.slice(0, 5);
+						const truncatedNotes = truncatedLines
+							.join("\n")
+							.replace(/\n/g, "<br />")
+							.replace(
+								/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
+								'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+							);
+
+						notesHtml = `
 					<div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
 					  ${truncatedNotes}
 					  <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
@@ -945,28 +947,28 @@ function renderTable() {
 					  <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
 					</div>
 				  `;
-				} else {
-					notesHtml = `<div class="notes">${formattedNotes}</div>`;
+					} else {
+						notesHtml = `<div class="notes">${formattedNotes}</div>`;
+					}
 				}
-			}
-			const domain = ref.url
-				? ref.url.match(/^(?:https?:\/\/)?(?:www\.)?([^/]+)/)[1]
-				: "";
-			const refHeader =
-				ref.artists && ref.url
-					? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank">${domain}</a></div>`
-					: ref.artists
-						? `<div class="artists">${ref.artists}</div>`
-						: ref.url
-							? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
-							: "";
-			referencesHtml += `
+				const domain = ref.url
+					? ref.url.match(/^(?:https?:\/\/)?(?:www\.)?([^/]+)/)[1]
+					: "";
+				const refHeader =
+					ref.artists && ref.url
+						? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank">${domain}</a></div>`
+						: ref.artists
+							? `<div class="artists">${ref.artists}</div>`
+							: ref.url
+								? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
+								: "";
+				referencesHtml += `
 						<div class="reference-item">
 							${refHeader}
 							${notesHtml}
 						</div>
 					`;
-		});
+			});
 
 		const metadata = getTuneMetadata(tune)
 			.map((m) => `<span class="badge">${m}</span>`)
@@ -1132,11 +1134,13 @@ function applyFilters() {
 
 		// Search in references (artists and notes)
 		if (
-			tune.references?.some(
-				(ref) =>
-					ref.artists?.toLowerCase().includes(searchTerm) ||
-					ref.notes?.toLowerCase().includes(searchTerm)
-			)
+			(tune.references ?? [])
+				.concat(tune.referencesFromAbc ?? [])
+				.some(
+					(ref) =>
+						ref.artists?.toLowerCase().includes(searchTerm) ||
+						ref.notes?.toLowerCase().includes(searchTerm)
+				)
 		) {
 			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
 			const matchesKey = keyFilter === "" || tune.key === keyFilter;

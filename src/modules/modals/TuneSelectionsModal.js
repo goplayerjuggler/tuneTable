@@ -184,7 +184,7 @@ export default class TuneSelectionsModal extends Modal {
 		if (!idObj) return false;
 		const [key, val] = Object.entries(idObj)[0];
 		return this._setLists.some((sl) =>
-			sl.sets.some((s) => s.tunes.some((e) => e[key] === val))
+			sl.sets.some((s) => s.tunes?.some((e) => e[key] === val))
 		);
 	}
 

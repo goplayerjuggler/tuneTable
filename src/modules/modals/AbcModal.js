@@ -12,7 +12,7 @@ import {
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
-import { processTuneData } from "../../processTuneData.js";
+import { reprocessTune } from "../../processTuneData.js";
 
 /**
  *
@@ -472,25 +472,41 @@ export default class AbcModal extends Modal {
 
 		tune.abc = abcToSave.length === 1 ? abcToSave[0] : abcToSave;
 
-		// Reprocess tune data
-		let reprocessed = Object.assign({}, tune);
-		delete reprocessed.name;
-		delete reprocessed.nameIsFromAbc;
-		delete reprocessed.key;
-		delete reprocessed.keyIsFromAbc;
-		delete reprocessed.rhythm;
-		delete reprocessed.rhythmIsFromAbc;
-		delete reprocessed.references;
-		delete reprocessed.incipit;
+		// // Reprocess tune data
+		// let reprocessed = Object.assign({}, tune);
+		// delete reprocessed.name;
+		// delete reprocessed.nameIsFromAbc;
+		// delete reprocessed.key;
+		// delete reprocessed.keyIsFromAbc;
+		// delete reprocessed.rhythm;
+		// delete reprocessed.rhythmIsFromAbc;
+		// delete reprocessed.incipit;
+		// delete reprocessed.incipitSvg;
+		// delete reprocessed.referencesFromAbc;
 
-		// do not delete the contour however! see note for Lazy SVG system
+		// // do not delete the contour however! see note for Lazy SVG system
 
-		reprocessed = processTuneData(reprocessed);
+		// reprocessed = processTuneData(reprocessed);
 
-		Object.assign(tune, reprocessed);
+		// // Copy all properties from reprocessed to tune
+		// for (const key in reprocessed) {
+		// 	if (Object.hasOwn(reprocessed, key)) {
+		// 		tune[key] = reprocessed[key];
+		// 	}
+		// }
 
+		// // Delete all properties in tune that are not in reprocessed
+		// for (const key in tune) {
+		// 	if (Object.hasOwn(tune, key) && !Object.hasOwn(reprocessed, key)) {
+		// 		delete tune[key];
+		// 	}
+		// }
 		if (originalTuneDataIndex !== -1) {
-			window.tunesData[originalTuneDataIndex] = tune;
+			window.tunesData[originalTuneDataIndex] = reprocessTune(
+				tune,
+				// do not delete the contour - see note for Lazy SVG system in index.js
+				{ removeContour: false }
+			);
 		}
 
 		this.callbacks.saveTunesToStorage();

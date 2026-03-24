@@ -9,6 +9,7 @@ import Modal from "./Modal.js";
  * @returns {string}
  */
 function rhythmSummary(tunes) {
+	if (!tunes) return "";
 	const seen = new Set();
 	const parts = [];
 	for (const t of tunes) {
@@ -252,7 +253,7 @@ export default class PrintPreviewModal extends Modal {
 		// ── Sets to include ──────────────────────────────────────────────────────
 		const secSets = section("Sets to include");
 		this._setList.sets.forEach((set, i) => {
-			const resolvedTunes = set.tunes.map(findTune);
+			const resolvedTunes = set.tunes?.map(findTune);
 			const summary = rhythmSummary(resolvedTunes);
 			const wrap = document.createElement("label");
 			wrap.className = "pp-opt-row";
@@ -320,10 +321,10 @@ export default class PrintPreviewModal extends Modal {
 		let globalPos = 0;
 		this._setList.sets.forEach((set, setIdx) => {
 			if (!this._includedSets[setIdx]) {
-				globalPos += set.tunes.length; // keep numbering consistent
+				globalPos += set.tunes?.length ?? 0; // keep numbering consistent
 				return;
 			}
-			const resolvedTunes = set.tunes.map(findTune);
+			const resolvedTunes = set.tunes?.map(findTune);
 
 			// Set divider
 			if (this._opts.showSetNames || this._opts.showRhythm) {
@@ -359,7 +360,7 @@ export default class PrintPreviewModal extends Modal {
 			}
 
 			// Tune entries
-			set.tunes.forEach((entry, tuneIdx) => {
+			set.tunes?.forEach((entry, tuneIdx) => {
 				globalPos++;
 				paper.appendChild(
 					this._buildTuneEntry(resolvedTunes[tuneIdx], entry, globalPos)
@@ -513,18 +514,18 @@ export default class PrintPreviewModal extends Modal {
 
 		this._setList.sets.forEach((set, setIdx) => {
 			if (!this._includedSets[setIdx]) {
-				globalPos += set.tunes.length;
+				globalPos += set.tunes?.length ?? 0;
 				return;
 			}
 			if (this._opts.showSetNames) {
 				lines.push(`── ${set.name || `Set ${setIdx + 1}`} ──`);
 			}
-			const resolvedTunes = set.tunes.map(findTune);
+			const resolvedTunes = set.tunes?.map(findTune);
 			if (this._opts.showRhythm) {
 				const summary = rhythmSummary(resolvedTunes);
 				if (summary) lines.push(`(${summary})`);
 			}
-			set.tunes.forEach((entry, tuneIdx) => {
+			set.tunes?.forEach((entry, tuneIdx) => {
 				globalPos++;
 				const tune = resolvedTunes[tuneIdx];
 				const prefix = this._opts.showNumbers ? `${globalPos}. ` : "• ";
