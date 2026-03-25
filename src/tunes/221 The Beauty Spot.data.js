@@ -10,6 +10,11 @@ K: Dmix
 A2GB A2dB cBcG EFGB|A2GB A`,
 	references: [
 		{
+			url: "https://fintanvallely.bandcamp.com/track/the-beauty-spot-paddy-taylors-the-humours-of-loughrea",
+			artists: "Fintan Vallely, flute; CB Heinemann, bouzouki",
+			album: "Traditional Irish Flute Music"
+		},
+		{
 			notes: `(1974) The star of Munster; The cherry tree (at 1:07)
 Cherry Tree AKA Beauty Spot`,
 			artists: "Paddy Ryan, fiddle",
