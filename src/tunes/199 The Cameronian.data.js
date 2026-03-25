@@ -51,7 +51,7 @@ I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2025-09-01
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 K: G mixo
-[P:Ⅰ]cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG |
+[P:Ⅰ]cFF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG |
 cF/F/F cFdF cBcd cBAc | BGG/G/G DGBG DGdG eGdG  ||
 P:Ⅱ
 F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
