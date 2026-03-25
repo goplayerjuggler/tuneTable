@@ -3,6 +3,8 @@ import AbcJs from "abcjs";
 import Modal from "./Modal.js";
 import PrintPreviewModal from "./PrintPreviewModal.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
+import { getIncipit } from "@goplayerjuggler/abc-tools";
+import { getIncipitWithSelector } from "../../processTuneData.js";
 
 /**
  * Resolve a stable ID object for a tune, for storage in a set list.
@@ -587,20 +589,18 @@ export default class TuneSelectionsModal extends Modal {
 		info.className = "ts-tune-info";
 
 		if (tune) {
-			const nameEl = document.createElement("div");
-			nameEl.className = "ts-tune-name";
-			nameEl.textContent = tune.name;
-			info.appendChild(nameEl);
-
-			if (tune.incipit) {
+			const incipitAbc = getIncipitWithSelector(tune, {
+				theSessionSettingId: entry.theSessionSettingId,
+				x: entry.x
+			});
+			if (incipitAbc) {
 				const incipitId = `ts-builder-incipit-s${setIdx}-t${tuneIdx}`;
 				const incipitEl = document.createElement("div");
 				incipitEl.id = incipitId;
 				incipitEl.className = "ts-tune-incipit";
 				info.appendChild(incipitEl);
-				// Render after this tick so the element is in the DOM
 				requestAnimationFrame(() => {
-					AbcJs.renderAbc(incipitId, tune.incipit, {
+					AbcJs.renderAbc(incipitId, incipitAbc, {
 						scale: 0.7,
 						staffwidth: 220,
 						paddingtop: 1,
@@ -627,6 +627,10 @@ export default class TuneSelectionsModal extends Modal {
 			this._markDirty();
 		});
 		info.appendChild(notes);
+
+		const name = document.createElement("span");
+		name.innerText = tune.name;
+		info.appendChild(name);
 
 		el.appendChild(info);
 

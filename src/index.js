@@ -18,7 +18,6 @@ import TuneListSlotManager from "./modules/TuneListSlotManager.js";
 
 import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
 import TuneSelectionsModal from "./modules/modals/TuneSelectionsModal.js";
-import TheSessionSetsImportModal from "./modules/modals/TheSessionSetsImportModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
@@ -35,8 +34,7 @@ let editModal,
 	addTunesModal,
 	loadJsonModal,
 	tuneListSelectorModal,
-	tuneSelectionsModal,
-	tsSetImportModal;
+	tuneSelectionsModal;
 
 let slotManager;
 let currentListState = null;
@@ -544,6 +542,8 @@ function emptyTunes() {
 		return;
 	window.tunesData = [];
 	window.filteredData = [];
+	window._setLists = [];
+	tuneSelectionsModal.loadSetLists(window._setLists);
 	renderTable();
 	saveTunesToStorage();
 }
@@ -720,12 +720,21 @@ function sortWithDefaultSort() {
 	contourSort(window.tunesData);
 }
 
-function openSessionImport() {
+function openTheSessionImport(e, dropdown, howToOpen) {
+	e.preventDefault();
+	dropdown.classList.remove("active");
 	const modal = new TheSessionImportModal(
 		window.tunesData,
-		copyTuneDataToClipboard
+		copyTuneDataToClipboard,
+		(setLists) => {
+			const existing = tuneSelectionsModal.getSetLists();
+			window._setLists = [...existing, ...setLists];
+			tuneSelectionsModal.loadSetLists(window._setLists);
+			saveTunesToStorage();
+		}
 	);
-	modal.open();
+	if (howToOpen === 0) modal.open();
+	if (howToOpen === 1) modal.openInSetsMode();
 }
 
 // -- Initialisation -----------------------------------------------------------
@@ -777,13 +786,6 @@ async function initialiseData() {
 	tuneSelectionsModal = new TuneSelectionsModal({
 		saveSetListsToStorage,
 		applyFilters
-	});
-	tsSetImportModal = new TheSessionSetsImportModal({
-		onImport: (setLists) => {
-			const existing = tuneSelectionsModal.getSetLists();
-			tuneSelectionsModal.loadSetLists([...existing, ...setLists]);
-			callbacks.saveTunesToStorage?.();
-		}
 	});
 
 	window.tunesData = [];
@@ -1351,14 +1353,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 	// theSessionImport.setupTheSessionImportModal();
 	document
 		.getElementById("thesession-import-btn")
-		.addEventListener("click", openSessionImport);
+		.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 0));
+
 	document
 		.getElementById("thesession-sets-import-btn")
-		?.addEventListener("click", (e) => {
-			e.preventDefault();
-			dropdown.classList.remove("active");
-			tsSetImportModal.open();
-		});
+		?.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 1));
 
 	// Warn before leaving with unsaved changes on a server/external list
 	window.addEventListener("beforeunload", (e) => {

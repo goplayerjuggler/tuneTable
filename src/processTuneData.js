@@ -151,4 +151,33 @@ function reprocessTune(tune, options = {}) {
 	return processTuneData(reprocessed);
 }
 
-export { processTuneData, applySwingTransform, reprocessTune };
+function getIncipitWithSelector(tune, selector = {}) {
+	const { theSessionSettingId, x } = selector;
+
+	if (
+		(x || theSessionSettingId) &&
+		Array.isArray(tune.abc) &&
+		tune.abc.length > 1
+	) {
+		const regExForXHeader = x
+			? new RegExp(String.raw`(?:^|\n)X:\s?${x}\n`)
+			: null;
+		const settingUrl = x
+			? null
+			: `https://thesession.org/tunes/${tune.theSessionId}#setting${theSessionSettingId}`;
+		const matchingAbc = tune.abc.find((abc) =>
+			x ? regExForXHeader.test(abc) : abc.includes(settingUrl)
+		);
+		if (matchingAbc) {
+			return getIncipit({ abc: matchingAbc });
+		}
+	}
+	return tune?.incipit;
+}
+
+export {
+	processTuneData,
+	applySwingTransform,
+	reprocessTune,
+	getIncipitWithSelector
+};

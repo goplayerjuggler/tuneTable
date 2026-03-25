@@ -1097,7 +1097,8 @@ tr.tune-selected td {
   display: none;
 }
 
-.import-status--loading {
+.import-status--loading,
+.import-status--info {
   background: var(--info-bg);
   color: var(--info-text);
   border: 1px solid var(--info-border);
@@ -1113,6 +1114,43 @@ tr.tune-selected td {
   background: var(--error-bg);
   color: var(--error-text);
   border: 1px solid var(--error-border);
+}
+
+/* ── TheSessionImportModal tabs (tsim-*) ──────────────────────────────────── */
+.tsim-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.tsim-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px; /* overlap the container border-bottom */
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.tsim-tab:hover {
+  color: var(--accent);
+}
+
+.tsim-tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.tsim-panel--hidden {
+  display: none;
 }
 
 /* ============================================
@@ -2292,80 +2330,6 @@ tr.tune-selected td {
   font-size: 0.9em;
 }
 
-/* ── TheSessionSetsImportModal (tssi-*) ──────────────────────────────────────── */
-.tssi-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 4px 0;
-}
-
-.tssi-row {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.tssi-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.tssi-hint {
-  font-size: 11.5px;
-  font-weight: 400;
-  color: var(--text-secondary);
-}
-
-.tssi-input {
-  width: 100%;
-  padding: 7px 10px;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  font-size: 13px;
-  background: var(--bg-input, #fff);
-  color: var(--text-primary);
-  box-sizing: border-box;
-}
-.tssi-input:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
-}
-.tssi-input--small {
-  width: 80px;
-}
-
-/* Status / summary box */
-.tssi-status {
-  padding: 10px 12px;
-  border-radius: 5px;
-  font-size: 13px;
-  line-height: 1.5;
-}
-.tssi-status--ok {
-  background: var(--bg-success, #f0fdf4);
-  color: var(--text-success, #166534);
-  border: 1px solid var(--border-success, #bbf7d0);
-}
-.tssi-status--error {
-  background: var(--bg-error, #fef2f2);
-  color: var(--text-error, #991b1b);
-  border: 1px solid var(--border-error, #fecaca);
-}
-.tssi-skipped {
-  color: var(--warning, #b45309);
-}
-
-/* Footer */
-.tssi-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  padding-top: 4px;
-  border-top: 1px solid var(--border);
-}
 /* ── Tune List Selector Modal ─────────────────────────────────────────────── */
 
 .tls-modal-body {

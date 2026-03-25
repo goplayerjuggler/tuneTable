@@ -2,16 +2,21 @@ import Modal from "./Modal.js";
 import { processTuneData } from "../../processTuneData.js";
 import { addLineBreaks } from "../../utils.js";
 import { eventBus } from "../events/EventBus.js";
-import {
-	canDoubleBarLength,
-	convertStandardHornpipe,
-	convertStandardJig,
-	convertStandardPolka,
-	convertStandardReel
-} from "@goplayerjuggler/abc-tools";
+import { maybeConvertStandardTune } from "@goplayerjuggler/abc-tools";
+/** Conservative defaults suitable for the public demo. */
+const defaultTheSessionImportConfig = {
+	skipLevel: "ifTuneExists",
+	doubleBarLengthWherePossible: false,
+	importAllSettingsForSpecifiedUser: false,
+	settingChoiceCriteria: ["newestFirst"]
+};
 
 /**
- * Import behaviour settings.
+ * Merge default settings with any overrides stored in localStorage.
+ * Called once per import run (not per-tune) to avoid repeated parsing.
+ * @returns {object} Import behaviour config
+ *
+ * Import behaviour config.
  *
  * skipLevel:
  *   'ifTuneExists'    — skip if a tune with the same theSessionId already exists.
@@ -39,32 +44,17 @@ import {
  *   - 'withChords' / 'withoutChords'
  *   - 'preferShorter' / 'preferLonger' / 'newestFirst' / 'oldestFirst'
  */
-const theSessionImportSettings = {
-	withComments: true,
-	skipLevel: "ifSettingExists",
-	doubleBarLengthWherePossible: true,
-	importAllSettingsForSpecifiedUser: true,
-	settingChoiceCriteria: [
-		{
-			preferredUserIds: [
-				[40345, "GoPlayerJuggler"],
-				[11705, "ceolachan"],
-				[4763, "Dr. Dow"],
-				[13094, "birlibirdie"],
-				[11834, "Nigel Gatherer"],
-				[1, "Jeremy"],
-				[6451, "jackb"],
-				[116353, "John E Roche"],
-				[3150, "slainte"],
-				[60897, "Fernando Durbán Galnares"],
-				[119445, "piperDave"],
-				[8648, "erik-fiddler"]
-			]
-		},
-		"withChords",
-		"preferShorter"
-	]
-};
+function getImportConfig() {
+	try {
+		const stored = localStorage.getItem("theSessionImportConfig");
+		if (stored) {
+			return JSON.parse(stored);
+		}
+	} catch {
+		// Ignore malformed JSON
+	}
+	return defaultTheSessionImportConfig;
+}
 
 /**
  * Modal for importing tunes from TheSession.org
@@ -72,24 +62,26 @@ const theSessionImportSettings = {
 export default class TheSessionImportModal extends Modal {
 	/**
 	 * @param {object[]} tunesData - Reference to the app's live tunes array.
-	 * @param {object}   [options]
-	 * @param {function} [options.copyToClipboard] - copyTuneDataToClipboard(tunes, btn);
-	 *   displayed as a button after a successful import.
+	 * @param {function} copyToClipboard - copyTuneDataToClipboard(tunes, btn)
+	 *   displayed as a button after a successful import.*
+	 * @param {function} onImportSets        - onImportSets(setLists): called after a successful sets import
 	 */
-	constructor(tunesData, copyToClipboard) {
+	constructor(tunesData, copyToClipboard, onImportSets) {
 		super({
 			id: "thesession-import-modal",
-			title: "Import tunebook or tune from thesession.org",
+			title: "Import tunebook, tunes, or tune sets from thesession.org",
 			content: TheSessionImportModal.buildContent(),
 			size: "medium",
 			onClose: () => eventBus.emit("refreshTable")
 		});
+		this.onImportSets = onImportSets;
 
 		this.isLoading = false;
 		this.tunesData = tunesData;
 		this.copyToClipboard = copyToClipboard;
 		/** Tunes imported in the most recent run, for clipboard export. */
 		this.lastImportedTunes = [];
+		this.activeTab = 0;
 	}
 
 	/**
@@ -98,8 +90,13 @@ export default class TheSessionImportModal extends Modal {
 	 */
 	static buildContent() {
 		return `
-	  <div class="import-form">
-
+		
+    <div class="tsim-tabs">
+      <button class="tsim-tab tsim-tab--active" data-tab="tunes">Import tunes</button>
+      <button class="tsim-tab" data-tab="sets">Import sets</button>
+    </div>
+    <div class="tsim-panel" data-panel="tunes">
+      <div class="import-form">
 		<div class="form-group">
 		  <label for="thesession-user">User ID (optional):</label>
 		  <input type="text" id="thesession-user" placeholder="e.g. 1 - ID of Jeremy" />
@@ -117,7 +114,25 @@ export default class TheSessionImportModal extends Modal {
 		  <input type="number" id="import-limit" min="1" max="100" value="100" />
 		</div>
 
-		<div class="form-actions">
+		
+	  </div>
+    </div>
+	<div class="tsim-panel tsim-panel--hidden" data-panel="sets">
+      <div class="form-group">
+        <label for="ts-sets-member">Member ID (optional if Set IDs are provided):</label>
+        <input type="number" id="ts-sets-member" min="1" placeholder="e.g. 1" />
+      </div>
+      <div class="form-group">
+        <label for="ts-sets-ids">Set IDs (optional, comma-separated):</label>
+        <input type="text" id="ts-sets-ids" placeholder="e.g. 132118, 132039" />
+      </div>
+      <div class="form-group">
+        <label for="ts-sets-max">Max sets (when using Member ID):</label>
+        <input type="number" id="ts-sets-max" min="1" max="10" value="3" />
+      </div>
+      
+    </div>
+	<div class="form-actions">
 		  <button id="import-btn" class="btn btn--primary" type="button">
 			Import
 		  </button>
@@ -125,9 +140,7 @@ export default class TheSessionImportModal extends Modal {
 			Copy imported tunes to clipboard
 		  </button>
 		</div>
-
 		<div id="import-status" class="import-status" role="status" aria-live="polite"></div>
-	  </div>
 	`;
 	}
 
@@ -145,27 +158,68 @@ export default class TheSessionImportModal extends Modal {
 		const limitEl = this.element.querySelector("#import-limit");
 		const statusDiv = this.element.querySelector("#import-status");
 
-		importBtn.addEventListener("click", () => this.handleImport());
+		const setsMemberInput = this.element.querySelector("#ts-sets-member");
+		const setsIdsInput = this.element.querySelector("#ts-sets-ids");
+		const setslimitEl = this.element.querySelector("#ts-sets-max");
+
+		const runImport = () => {
+			if (!this.isLoading) {
+				if (this.activeTab === 0) this.handleImport();
+				if (this.activeTab === 1) this.handleSetsImport();
+			}
+		};
+
+		importBtn.addEventListener("click", () => runImport());
 
 		copyBtn.addEventListener("click", () => {
 			this.copyToClipboard(this.lastImportedTunes, copyBtn);
 		});
 
-		const enterKeyImport = (e) => {
-			if (e.key === "Enter" && !this.isLoading) this.handleImport();
-		};
-		userInput.addEventListener("keypress", enterKeyImport);
-		tuneIdInput.addEventListener("keypress", enterKeyImport);
-		settingIdInput.addEventListener("keypress", enterKeyImport);
-		limitEl.addEventListener("keypress", enterKeyImport);
-
 		const clearStatus = () => {
 			statusDiv.textContent = "";
 			statusDiv.className = "import-status";
 		};
-		userInput.addEventListener("input", clearStatus);
-		tuneIdInput.addEventListener("input", clearStatus);
-		settingIdInput.addEventListener("input", clearStatus);
+		const enterKeyImport = (e) => {
+			if (e.key === "Enter") {
+				runImport();
+			}
+		};
+		[
+			userInput,
+			tuneIdInput,
+			settingIdInput,
+			limitEl,
+			setsIdsInput,
+			setsMemberInput,
+			setslimitEl
+		].forEach((el) => {
+			el.addEventListener("keypress", enterKeyImport);
+			el.addEventListener("input", clearStatus);
+		});
+
+		this.element.querySelectorAll(".tsim-tab").forEach((tab) => {
+			tab.addEventListener("click", () => {
+				this.activeTab = (this.activeTab + 1) % 2;
+				this.element
+					.querySelectorAll(".tsim-tab")
+					.forEach((t) => t.classList.toggle("tsim-tab--active", t === tab));
+				const panelId = tab.dataset.tab;
+				this.element
+					.querySelectorAll(".tsim-panel")
+					.forEach((p) =>
+						p.classList.toggle(
+							"tsim-panel--hidden",
+							p.dataset.panel !== panelId
+						)
+					);
+			});
+		});
+	}
+
+	openInSetsMode() {
+		this.open();
+		const setsTab = this.element?.querySelector('[data-tab="sets"]');
+		setsTab?.click();
 	}
 
 	/**
@@ -324,33 +378,6 @@ export default class TheSessionImportModal extends Modal {
 
 	// --- ABC generation -------------------------------------------------------
 
-	/**
-	 * Doubles the bar length of an ABC string when the settings allow it and the
-	 * ABC is eligible (as determined by canDoubleBarLength()).
-	 * @param {string} abc
-	 * @param {string} rhythm
-	 * @returns {string}
-	 */
-	static maybeDoubleBarLength(abc, rhythm) {
-		if (
-			!theSessionImportSettings.doubleBarLengthWherePossible ||
-			!canDoubleBarLength(abc)
-		)
-			return abc;
-		switch (rhythm) {
-			case "reel":
-				return convertStandardReel(abc);
-			case "jig":
-				return convertStandardJig(abc);
-			case "polka":
-				return convertStandardPolka(abc);
-			case "hornpipe":
-				return convertStandardHornpipe(abc);
-			default:
-				return abc;
-		}
-	}
-
 	// --- API calls ------------------------------------------------------------
 
 	/**
@@ -415,6 +442,7 @@ export default class TheSessionImportModal extends Modal {
 	 * @param {number|null} uiSettingId - Explicit setting ID from the UI, if any.
 	 */
 	async getTuneWithAbc(tuneId, preferredMemberId = null, uiSettingId = null) {
+		const config = getImportConfig();
 		const tuneUrl = `https://thesession.org/tunes/${tuneId}?format=json`;
 		const tuneResponse = await fetch(tuneUrl);
 		if (!tuneResponse.ok) {
@@ -423,8 +451,7 @@ export default class TheSessionImportModal extends Modal {
 
 		const tuneData = await tuneResponse.json();
 		const allUserSettings =
-			theSessionImportSettings.importAllSettingsForSpecifiedUser &&
-			preferredMemberId
+			config.importAllSettingsForSpecifiedUser && preferredMemberId
 				? tuneData.settings.filter((s) => s.member?.id === preferredMemberId)
 				: null;
 
@@ -434,7 +461,7 @@ export default class TheSessionImportModal extends Modal {
 					tuneData.settings,
 					preferredMemberId,
 					uiSettingId,
-					theSessionImportSettings.settingChoiceCriteria
+					config.settingChoiceCriteria
 				);
 		if (!setting) throw new Error(`No settings found for tune ${tuneId}`);
 
@@ -474,7 +501,7 @@ export default class TheSessionImportModal extends Modal {
 		const buildAbc = (setting) => {
 			const comments = tuneData.comments.find(
 				(c) =>
-					theSessionImportSettings.withComments &&
+					config.withComments &&
 					c.date === setting.date &&
 					c.member?.id === setting.member?.id
 			);
@@ -507,7 +534,10 @@ ${setting.abc
 			 * The ABC ornament escaping above protects tokens like !tenuto! from being
 			 * split when '!' (TheSession's line-break encoding) is replaced with '\n'.
 			 */
-			return TheSessionImportModal.maybeDoubleBarLength(raw, tuneData.type);
+
+			if (config.doubleBarLengthWherePossible)
+				return maybeConvertStandardTune(raw, tuneData.type);
+			else return raw;
 		};
 
 		return {
@@ -589,7 +619,8 @@ ${setting.abc
 
 			const importedNames = [];
 			const skippedNames = [];
-			const { skipLevel } = theSessionImportSettings;
+			const { skipLevel } = getImportConfig();
+
 			// settingId from the UI is only meaningful when exactly one tune ID is specified
 			const uiSettingId =
 				parsedTuneIds?.length === 1 && settingIdStr ? +settingIdStr : null;
@@ -669,6 +700,291 @@ ${setting.abc
 		} finally {
 			this.setLoading(false);
 			importBtn.disabled = false;
+		}
+	}
+
+	// --- handling of sets
+
+	/**
+	 * Fetch all pages of a member's sets, up to maxSets results.
+	 * thesession.org paginates at 10 items per page.
+	 */
+	async fetchMemberSets(memberId, maxSets) {
+		const sets = [];
+		let page = 1;
+		while (sets.length < maxSets) {
+			const data = await this.fetchApi(
+				`https://thesession.org/members/${memberId}/sets?page=${page}`
+			);
+			const items = data.sets ?? [];
+			if (!items.length) break;
+			const filteredItems = items.filter(
+				(tsItem) =>
+					!window._setLists?.some((sl) =>
+						sl.sets.some((set) => set.theSessionSetId === tsItem.id)
+					)
+			);
+
+			sets.push(...filteredItems);
+			const total = data.total ?? 0;
+			if (sets.length >= total) break;
+			if (items.length < 10) break; // last page
+			page++;
+		}
+		return sets.slice(0, maxSets);
+	}
+
+	/**
+	 * Fetch a single set by ID.
+	 */
+	async fetchSet(setId) {
+		return this.fetchApi(`https://thesession.org/sets/${setId}`);
+	}
+
+	/**
+	 * Parse a comma-separated string of set IDs into an array of trimmed numeric strings.
+	 * Returns an empty array for blank input.
+	 */
+	parseSetIds(str) {
+		return str
+			.split(",")
+			.map((s) => s.trim())
+			.filter((s) => /^\d+$/.test(s));
+	}
+
+	/** Generate a simple unique ID (timestamp + random suffix). */
+	generateId() {
+		return `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
+	}
+
+	/**
+	 * Convert a thesession.org set object into our set-list shape.
+	 * Matches tunes against window.tunesData by theSessionId.
+	 * Returns { setList, skipped } where skipped is an array of tune names not found locally.
+	 */
+	convertSetToBeDeleted(tsSet) {
+		// The API returns tunes under different keys depending on the endpoint
+		const tunes = tsSet.settings;
+		const entries = [];
+		const skipped = [];
+
+		for (const tsTune of tunes) {
+			// tsTune.id is the setting ID; parse the tune ID from the URL
+			const tuneIdMatch = tsTune.url?.match(/\/tunes\/(\d+)/);
+			const tuneId = tuneIdMatch ? parseInt(tuneIdMatch[1], 10) : null;
+			const settingId = tsTune.id;
+
+			if (!tuneId) {
+				skipped.push(tsTune.name ?? String(settingId));
+				continue;
+			}
+
+			entries.push({ theSessionId: tuneId, theSessionSettingId: settingId });
+		}
+
+		const setList = {
+			id: this.generateId(),
+			name: `thesession - ${tsSet.member?.name} - ${tsSet.date}`,
+			dateCreated: new Date().toISOString(),
+			dateModified: new Date().toISOString(),
+			sets: [
+				{
+					name: tsSet.name ?? `Imported set ${tsSet.id}`,
+					comments: "",
+					tunes: entries,
+					collapsed: false,
+					theSessionSetId: tsSet.id
+				}
+			]
+		};
+
+		return { setList, skipped };
+	}
+
+	/**
+	 * Fetch JSON from thesession.org, appending ?format=json.
+	 * Throws on HTTP error.
+	 */
+	async fetchApi(url) {
+		const sep = url.includes("?") ? "&" : "?";
+		const res = await fetch(`${url}${sep}format=json`);
+		if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${url}`);
+		return res.json();
+	}
+
+	// ─── Import logic ─────────────────────────────────────────────────────────────
+	async handleSetsImport() {
+		const setsMemberInput = this.element.querySelector("#ts-sets-member");
+		const setsIdsInput = this.element.querySelector("#ts-sets-ids");
+		const setslimitEl = this.element.querySelector("#ts-sets-max");
+		const importBtn = this.element.querySelector("#import-btn");
+
+		const config = getImportConfig();
+		const memberId = setsMemberInput.value.trim();
+		const setIdsRaw = setsIdsInput.value.trim();
+		const maxSets = Math.min(5, Math.max(1, parseInt(setslimitEl.value) || 3));
+
+		// Validation — one of member ID or set IDs required
+		if (!memberId && !setIdsRaw) {
+			this.showStatus(
+				"Please provide a Member ID or at least one Set ID.",
+				true
+			);
+			return;
+		}
+
+		importBtn.disabled = true;
+		importBtn.textContent = "Importing…";
+		this.showStatus("Fetching from thesession.org…");
+
+		try {
+			// ── Fetch raw set data ─────────────────────────────────────────────
+			let rawSets = [];
+
+			if (setIdsRaw) {
+				// Explicit set IDs take priority over member ID
+				const ids = this.parseSetIds(setIdsRaw);
+				if (!ids.length) {
+					this.showStatus(
+						"No valid set IDs found. Use comma-separated numbers.",
+						true
+					);
+					importBtn.disabled = false;
+					importBtn.textContent = "Import";
+					return;
+				}
+				rawSets = await Promise.all(ids.map(this.fetchSet));
+			} else {
+				rawSets = await this.fetchMemberSets(memberId, maxSets);
+			}
+
+			if (!rawSets.length) {
+				this.showStatus("No sets found for the given ID(s).", true);
+				importBtn.disabled = false;
+				importBtn.textContent = "Import";
+				return;
+			}
+
+			// ── Convert to set-list format ─────────────────────────────────────
+			let totalTunes = 0;
+			let tsMemberName = "";
+			let firstTuneNameOfSetList = "";
+			const importedSetLists = [];
+			const newlyImported = [];
+			const allSkipped = [];
+
+			const sets = [];
+
+			for (const tsSet of rawSets) {
+				if (!tsMemberName) tsMemberName = tsSet.member?.name;
+				const tunes = [];
+				const tsTunes = tsSet.settings ?? [];
+				let firstTuneName = tsTunes.length > 0 ? tsTunes[0].name : "";
+				if (!firstTuneNameOfSetList) firstTuneNameOfSetList = firstTuneName;
+
+				for (const tsTune of tsTunes) {
+					const tuneIdMatch = tsTune.url?.match(/\/tunes\/(\d+)/);
+					const tuneId = tuneIdMatch ? parseInt(tuneIdMatch[1], 10) : null;
+					const settingId = tsTune.id;
+
+					if (!tuneId) {
+						allSkipped.push(tsTune.name ?? String(settingId));
+						continue;
+					}
+
+					++totalTunes;
+
+					const existingTune = this.tunesData.find(
+						(t) => t.theSessionId === tuneId
+					);
+
+					if (!existingTune) {
+						// Tune absent — fetch and import it in full
+						try {
+							const tuneData = await this.getTuneWithAbc(
+								tuneId,
+								null,
+								settingId,
+								config
+							);
+							const processed = processTuneData(tuneData);
+							eventBus.emit("tuneImported", processed);
+							newlyImported.push(processed.name);
+						} catch {
+							allSkipped.push(tsTune.name ?? `tune ${tuneId}`);
+						}
+					} else if (!this.isSettingPresent(tuneId, settingId)) {
+						// Tune present but setting absent — fetch and append the ABC
+						try {
+							const fetched = await this.getTuneWithAbc(
+								tuneId,
+								null,
+								settingId,
+								config
+							);
+							if (!Array.isArray(existingTune.abc)) {
+								existingTune.abc = existingTune.abc ? [existingTune.abc] : [];
+							}
+							existingTune.abc.push(fetched.abc);
+						} catch {
+							// Non-fatal: entry still added referencing the setting
+						}
+					}
+
+					tunes.push({
+						theSessionId: tuneId,
+						theSessionSettingId: settingId
+					});
+				}
+
+				if (tunes.length > 0) {
+					sets.push({
+						name: firstTuneName,
+						comments: "",
+						tunes,
+						collapsed: false,
+						theSessionSetId: tsSet.id
+					});
+				}
+			}
+
+			const listDescriptor =
+				sets.length === 0
+					? ""
+					: `“${firstTuneNameOfSetList}” set${`${sets.length === 1 ? "" : ` + ${sets.length - 1} other set${sets.length > 2 ? "s" : ""}`}`}`;
+
+			importedSetLists.push({
+				id: this.generateId(),
+				name: `thesession / ${tsMemberName} / ${listDescriptor}`,
+				dateCreated: new Date().toISOString(),
+				dateModified: new Date().toISOString(),
+				sets
+			});
+
+			// ── Hand off imported set lists to caller ──────────────────────────
+			this.onImportSets(importedSetLists);
+
+			// ── Show summary ───────────────────────────────────────────────────
+			const s = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+			let summary =
+				`✓ ${s(importedSetLists.length, "set")} imported ` +
+				`(${s(totalTunes, "tune")} total).`;
+			if (allSkipped.length) {
+				summary +=
+					`<br><span class="tssi-skipped">Tunes not found locally and skipped: ` +
+					`${allSkipped.map((n) => `<em>${n}</em>`).join(", ")}.</span>`;
+			}
+			this.showStatus(summary, false);
+			importBtn.disabled = false;
+			importBtn.textContent = "Import more";
+		} catch (err) {
+			console.error("[TheSessionSetsImport]", err);
+			this.showStatus(
+				`Import failed: ${err.message}.<br>Check the IDs and try again.`,
+				true
+			);
+			importBtn.disabled = false;
+			importBtn.textContent = "Import";
 		}
 	}
 }

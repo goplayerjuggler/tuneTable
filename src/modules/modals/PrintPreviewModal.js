@@ -1,6 +1,7 @@
 "use strict";
 import AbcJs from "abcjs";
 import Modal from "./Modal.js";
+import { getIncipitWithSelector } from "../../processTuneData.js";
 
 /**
  * Derive a short rhythm-summary string for a set, e.g. "jig + reel".
@@ -417,11 +418,17 @@ export default class PrintPreviewModal extends Modal {
 		content.appendChild(titleRow);
 
 		// Incipit (rendered by _renderIncipits after DOM insertion)
-		if (this._opts.showIncipit && tune?.incipit) {
+		const incipitAbc = getIncipitWithSelector(tune, {
+			theSessionSettingId: entry.theSessionSettingId,
+			x: entry.x
+		});
+
+		if (this._opts.showIncipit && incipitAbc) {
 			const incipitEl = document.createElement("div");
 			incipitEl.id = `pp-incipit-${position}`;
 			incipitEl.className = "pp-incipit";
-			incipitEl.dataset.abc = tune.incipit;
+
+			incipitEl.dataset.abc = incipitAbc;
 			content.appendChild(incipitEl);
 		}
 
