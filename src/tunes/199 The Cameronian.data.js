@@ -31,7 +31,7 @@ FGAg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 defg fdcA FGAg fdcA|Gdga bgfg dfga bgaf|
 [M:5/2]defg fada egcf gbag fdcB!D.S.!|]
 `,
-		`X: 1
+		`X: 2
 T:The Cameronian
 R: reel
 S: Consuelo Nerea Breschi, fiddle; Eoghan O’Shaughnessy, fiddle
@@ -62,5 +62,6 @@ F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 		{
 			notes: `I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic.  Using the key signature and dots given here, it can be taken as F lydian, or else G Mixolydian. At the moment I’m going with the latter option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.`
 		}
-	]
+	],
+	theSessionId: 17551
 };
