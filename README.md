@@ -102,14 +102,18 @@ Apart from rendering scores and transposition (handled by `abcjs`), all other fu
 ``` PowerShell
 # setup
 npm install
+
 # run local version
 npm run dev
-# build
-npm run build
+
+# build tune lists
+node .\build\build-tune-lists.mjs 
+
+# build website
+npm run build # this includes the tune lists
 
 # working with abc-tools: just install it as a sibling - same parent folder 
 npm run dev:local # this way abc-tools is from local version, not from npm package
-
 ```
 
 ### Using other tunes
