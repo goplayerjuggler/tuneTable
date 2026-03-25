@@ -32,7 +32,7 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "1.0.24",
+    "@goplayerjuggler/abc-tools": "1.0.25",
     "abcjs": "6.6.0"
   },
   "devDependencies": {
