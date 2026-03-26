@@ -601,6 +601,7 @@ export default class TuneSelectionsModal extends Modal {
 
 	/** Build a tune entry row inside a set block. */
 	_buildSetTuneEntry(tune, entry, setIdx, tuneIdx, position) {
+		if (!tune) return;
 		const el = document.createElement("div");
 		el.className = "ts-set-tune";
 		el.draggable = true;
@@ -759,10 +760,6 @@ export default class TuneSelectionsModal extends Modal {
 		});
 		info.appendChild(notes);
 
-		const name = document.createElement("span");
-		name.innerText = tune.name;
-		info.appendChild(name);
-
 		el.appendChild(info);
 
 		const removeBtn = document.createElement("button");
@@ -770,7 +767,7 @@ export default class TuneSelectionsModal extends Modal {
 		removeBtn.title = "Remove from set";
 		removeBtn.textContent = "×";
 		removeBtn.addEventListener("click", () => {
-			this._current.sets[setIdx].tunes.splice(tuneIdx, 1);
+			this._current.sets[setIdx].tunes?.splice(tuneIdx, 1);
 			this._renderBuilder();
 			this._markDirty();
 		});
