@@ -25,7 +25,7 @@ R:Mazurka
 M:3/4
 L:1/8
 K:D
-fg | "D"[M:4/4] .a2a2af de | "D".f2 f2 ef ag | "A"e2 e2 de ge | "D"[M:3/4] "^(*)"f2 d2 fg | "D"[M:4/4]a2a2af de | f2 f2 ef ag | "A"e2 e2 Ad fe | "D"[M:3/4] d4
+fg | [M:4/4] "D".a2a2af de | "D".f2 f2 ef ag | "A"e2 e2 de ge | [M:3/4] "D""^(*)"f2 d2 fg | [M:4/4]"D"a2a2af de | f2 f2 ef ag | "A"e2 e2 Ad fe | [M:3/4] "D" d4
 Ad | "D"f2 e2 Bc | "A"B2 A2 Ac | "A"e2 e2 de | "D"f2 d2 Ad | "D"f2 e2 Bc | "A"B2 A2 Ac | "A"e2 eg fe | "D"d2 de !D.C.! |]
 "^(*)"f2de fg ||"^(*)"fe de fg ||`
 	],
