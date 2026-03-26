@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	aka: "Bobby Casey's",
 	parts: "AABB",
 	abc: `X:1
 T:The Humours Of Tullycrine
@@ -20,5 +21,12 @@ A^GAB c3d eaag (3efe dB|cAAc dBGB A2A^G ABcd|
 eaag aged eaag aged|eggf ged2 (3efg fa gedB|
 A^GAB cBcd eaag (3efe dB|cAAc dBGB A2 A^G A2 ed:|`,
 	theSessionId: 980,
-	theSessionSettingId: 30049
+	theSessionSettingId: 30049,
+
+	crossReferences: [
+		{
+			theSessionId: 2170, //golden castle / Kevin Burke
+			index: 0
+		}
+	]
 };
