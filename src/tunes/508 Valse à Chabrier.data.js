@@ -7,9 +7,8 @@ S:Clémence Cognet, violon; Noëllie Nioulou, violoncelle
 A:Les poufs à cordes / La Trotteuse (2013)
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-N:1. Cette valse magnifique nous a été transmise par 
-N:Antonin Chabrier, violonneux de l’Artense. Des enregistrements de lui ont été
-N:publiés en 1975 et 1980.
+N:1. De toute évidence, cette valse magnifique nous vient d’[Antonin Chabrier](http://www.violoneux.fr/wiki/Antonin_Chabrier),
+N:violonneux de l’Artense.
 N:2. Les accords que j’ai rajoutés ne sont qu’une esquisse harmonique. 
 N:Au lieu de C7 on pourrait très bien mettre autre chose, 
 N:genre des accords ouverts; ou rien !
