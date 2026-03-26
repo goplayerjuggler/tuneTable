@@ -2,16 +2,14 @@ export default {
 	groups: "su",
 	parts: "AABB",
 	aka: ["The Golden Castle", "Caisleán na nÓr"],
-	incipit: [
-		`X:1
+	incipit: `X:1
 T:Caisleán An Óir
 C:Junior Crehan
 R:hornpipe
 L:1/8
 M:4/2
 K:Ddorian
-A,DDC DEFG AGAB c2de|dcAG EAGE`
-	],
+A,DDC DEFG AGAB c2de|dcAG EAGE`,
 	theSessionId: 2170,
 	references: [
 		{
