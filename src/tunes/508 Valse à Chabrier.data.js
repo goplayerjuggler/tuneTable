@@ -4,7 +4,7 @@ T:Valse à Chabrier
 R:Waltz
 O:France;Auvergne;Artense
 S:Clémence Cognet, violon; Noëllie Nioulou, violoncelle
-A:Les poufs à cordes / La Trotteuse (2013)
+D:Les poufs à cordes / La Trotteuse (2013)
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 N:1. De toute évidence, cette valse magnifique nous vient d’[Antonin Chabrier](http://www.violoneux.fr/wiki/Antonin_Chabrier),
