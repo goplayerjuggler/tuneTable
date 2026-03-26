@@ -1,4 +1,5 @@
 export default {
+	ttId: 393,
 	groups: "su,alora",
 	parts: "ABCDEF",
 	tags: "flexible structure",
@@ -45,7 +46,7 @@ P:F’
  Bcd | .G2e-e2 c- cdc Bcd | .G2e- e2c- cde fdB | .G2e-e2 c- cdc Bcd | G2e cAF B3 ||`,
 
 		`
-X:1
+X:2
 T:SNCF jigs
 R:jig
 C:Malcolm Schonfield

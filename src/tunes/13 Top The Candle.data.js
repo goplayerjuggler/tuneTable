@@ -26,7 +26,7 @@ P:Ⅱ
 "D"~f2 ed cA|"Em"Be2d cA|"G"{A}B2 AG FD|"D"A,D2F EA|
 "D"~f2 ed cA|"Em"Be2d cA|"Em/G"{A}B2 AG FE|"A"DF EG FE!D.C.!|]
 `,
-		`X: 1
+		`X: 2
 T: Top The Candle
 N: 0. This is an older version I posted (in a comment) to thesession on 2024-11-27.
 N: 1. A hop jig played in the good old way by two County

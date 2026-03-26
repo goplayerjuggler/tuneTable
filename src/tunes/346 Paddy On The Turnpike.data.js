@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB",
 	incipit: `X: 1
 T: Paddy On The Turnpike
 R: reel

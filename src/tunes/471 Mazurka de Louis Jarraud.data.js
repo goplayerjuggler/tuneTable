@@ -18,7 +18,7 @@ K:D
 fg | [M:4/4] .a2a2af de | .f2 f2 ef ag | e2 e2 de ge | [M:3/4] "^(*)"f2 d2 fg | [M:4/4]a2a2af de | f2 f2 ef ag | e2 e2 Ad fe | [M:3/4] d4
 Ad | f2 e2 Bc | B2 A2 Ac | e2 e2 de | f2 d2 Ad | f2 e2 Bc | B2 A2 Ac | e2 eg fe | d2 de !D.C.! |]
 "^(*)"f2de fg ||"^(*)"fe de fg ||`,
-		`X:1
+		`X:2
 T:Mazurka de Louis Jarraud
 N:Version basée sur la précédente, avec des accords élementaires rajoutées.
 R:Mazurka

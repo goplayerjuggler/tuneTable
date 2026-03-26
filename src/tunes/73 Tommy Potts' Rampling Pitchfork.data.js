@@ -28,7 +28,7 @@ d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:|
 ^FDD ADD CDD A,DD | (GFG) ABG AFD [1 D2e :| [2 D2!D.S.! |]
 `,
 		`
-X: 2
+X: 3
 T:The Rambling Pitchfork
 T: Tommy Potts' Rambling Pitchfork
 %C: Tommy Potts

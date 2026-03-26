@@ -1,4 +1,6 @@
 export default {
+	ttId: 134,
+	parts: "AABB",
 	name: "Paddy on the Turnpike – crooked settings",
 	abc: [
 		`X:1

@@ -28,7 +28,7 @@ DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG |
  ba gb a^g|af de f=g|eB eg f/e/d|[e3c3] f ge|
  d<B G2 gf|ec Gg fe|dA FG A/B/c|B<G DG FG|
  EG ce d^c|dB GB DG|EG ce DF|G2 G2||`,
-		`X:1
+		`X:2
 T:The First Draft
 C:Siobhán Peoples
 R:mazurka
@@ -58,7 +58,7 @@ M:9/16
  b2a g2b a2^g|a2f d2g f2g|eB2 e2g fed|e3 a3 g2e|
  d2B (G3 G2)g|ec2 G2g f2e|d2A F2G ABc|B2G D2G F2G|
  E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
-		`X:1
+		`X:3
 T:The First Draft
 T:with chords added by M. Schonfield, 2025-01-26
 %T:(second score from https://www.itma.ie/scores/first-draft/)
