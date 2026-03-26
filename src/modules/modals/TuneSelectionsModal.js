@@ -2,9 +2,33 @@
 import AbcJs from "abcjs";
 import Modal from "./Modal.js";
 import PrintPreviewModal from "./PrintPreviewModal.js";
-import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 import { getIncipit } from "@goplayerjuggler/abc-tools";
-import { getIncipitWithSelector } from "../../processTuneData.js";
+import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
+
+/**
+ * Build a short human-readable label for one setting within tune.abc.
+ * For thesession settings, extracts setting ID, contributor name, date, and key
+ * from the embedded N: comment lines written by getTuneWithAbc().
+ * Falls back to the X: header value for non-thesession tunes.
+ * @param {string} abc
+ * @param {number} index - 0-based index, used only in the last-resort fallback
+ * @returns {string}
+ */
+function buildSettingLabel(abc, index) {
+	const settingMatch = abc.match(/tunes\/\d+#setting(\d+)/);
+	const userMatch = abc.match(/by user "([^"]+)" on ([\d-]+)/);
+	const keyMatch = abc.match(/^K:(.+)/m);
+	const settingId = settingMatch?.[1];
+	const user = userMatch?.[1] ?? "";
+	const date = userMatch?.[2] ?? "";
+	const key = keyMatch?.[1]?.trim() ?? "";
+
+	if (settingId) {
+		return [`#${settingId}`, user, date, key].filter(Boolean).join(" · ");
+	}
+	const xMatch = abc.match(/^X:(\d+)/m);
+	return `Setting ${xMatch?.[1] ?? index + 1}`;
+}
 
 /**
  * Resolve a stable ID object for a tune, for storage in a set list.
@@ -301,6 +325,9 @@ export default class TuneSelectionsModal extends Modal {
 		}
 
 		selected.forEach((tune) => {
+			// // Multi-setting tunes render their own incipit inside _buildTuneCard
+			// if (Array.isArray(tune.abc) && tune.abc.length > 1) return;
+
 			const card = this._buildTuneCard(tune);
 			card.draggable = true;
 			card.classList.add("ts-draggable");
@@ -587,20 +614,87 @@ export default class TuneSelectionsModal extends Modal {
 
 		const info = document.createElement("div");
 		info.className = "ts-tune-info";
-
 		if (tune) {
-			const incipitAbc = getIncipitWithSelector(tune, {
-				theSessionSettingId: entry.theSessionSettingId,
-				x: entry.x
-			});
-			if (incipitAbc) {
-				const incipitId = `ts-builder-incipit-s${setIdx}-t${tuneIdx}`;
+			// ── Name ──
+			const nameEl = document.createElement("div");
+			nameEl.className = "ts-tune-name";
+			nameEl.textContent = tune.name;
+			info.appendChild(nameEl);
+
+			// ── Determine active setting index ──
+			const abcs = Array.isArray(tune.abc)
+				? tune.abc
+				: tune.abc
+					? [tune.abc]
+					: [];
+			let settingIdx = 0; // default: first setting in the array
+
+			if (abcs.length > 1) {
+				if (entry.theSessionSettingId != null) {
+					const found = abcs.findIndex((a) =>
+						a.includes(`#setting${entry.theSessionSettingId}`)
+					);
+					if (found >= 0) settingIdx = found;
+				} else if (entry.x != null) {
+					const found = abcs.findIndex((a) =>
+						new RegExp(String.raw`(?:^|\n)X:\s?${entry.x}\n`).test(a)
+					);
+					if (found >= 0) settingIdx = found;
+				}
+			}
+
+			const incipitId = `ts-builder-incipit-s${setIdx}-t${tuneIdx}`;
+
+			if (abcs.length > 1) {
+				// ── Setting label ──
+				const labelEl = document.createElement("div");
+				labelEl.className = "ts-setting-label";
+				labelEl.textContent = buildSettingLabel(abcs[settingIdx], settingIdx);
+				info.appendChild(labelEl);
+
+				// ── Incipit + ▲/▼ navigation ──
+				const incipitWrap = document.createElement("div");
+				incipitWrap.className = "ts-setting-wrap";
+
 				const incipitEl = document.createElement("div");
 				incipitEl.id = incipitId;
 				incipitEl.className = "ts-tune-incipit";
-				info.appendChild(incipitEl);
-				requestAnimationFrame(() => {
-					AbcJs.renderAbc(incipitId, incipitAbc, {
+				incipitWrap.appendChild(incipitEl);
+
+				const btnPrev = document.createElement("button");
+				btnPrev.className = "btn-icon ts-setting-prev";
+				btnPrev.title = "Previous setting";
+				btnPrev.textContent = "▲";
+
+				const btnNext = document.createElement("button");
+				btnNext.className = "btn-icon ts-setting-next";
+				btnNext.title = "Next setting";
+				btnNext.textContent = "▼";
+
+				const navCol = document.createElement("div");
+				navCol.className = "ts-setting-nav";
+				navCol.appendChild(btnPrev);
+				navCol.appendChild(btnNext);
+				incipitWrap.appendChild(navCol);
+				info.appendChild(incipitWrap);
+
+				const stepSetting = (delta) => {
+					settingIdx = (settingIdx + delta + abcs.length) % abcs.length;
+					const abc = abcs[settingIdx];
+
+					// Update entry identity
+					const settingMatch = abc.match(/tunes\/\d+#setting(\d+)/);
+					if (settingMatch) {
+						entry.theSessionSettingId = parseInt(settingMatch[1], 10);
+						delete entry.x;
+					} else {
+						const xMatch = abc.match(/(?:^|\n)X:\s?(\d+)\n/m);
+						entry.x = xMatch ? parseInt(xMatch[1], 10) : undefined;
+						delete entry.theSessionSettingId;
+					}
+
+					labelEl.textContent = buildSettingLabel(abc, settingIdx);
+					AbcJs.renderAbc(incipitId, getIncipit({ abc }), {
 						scale: 0.7,
 						staffwidth: 220,
 						paddingtop: 1,
@@ -608,8 +702,45 @@ export default class TuneSelectionsModal extends Modal {
 						paddingright: 1,
 						paddingleft: 1
 					});
+					this._markDirty();
+				};
+
+				btnPrev.addEventListener("click", (e) => {
+					e.stopPropagation();
+					stepSetting(-1);
 				});
+				btnNext.addEventListener("click", (e) => {
+					e.stopPropagation();
+					stepSetting(+1);
+				});
+			} else if (tune.incipit) {
+				// ── Single setting: plain incipit, no navigation ──
+				const incipitEl = document.createElement("div");
+				incipitEl.id = incipitId;
+				incipitEl.className = "ts-tune-incipit";
+				info.appendChild(incipitEl);
 			}
+
+			// ── Render initial incipit (deferred so element is in DOM) ──
+			requestAnimationFrame(() => {
+				// Multi-setting: call getIncipit() on the chosen ABC string.
+				// Single-setting: use the pre-computed tune.incipit directly — avoids
+				//   a redundant getIncipit() call since processTuneData already produced it.
+				const source =
+					abcs.length > 1
+						? getIncipit({ abc: abcs[settingIdx] })
+						: tune.incipit;
+				if (source) {
+					AbcJs.renderAbc(incipitId, source, {
+						scale: 0.7,
+						staffwidth: 220,
+						paddingtop: 1,
+						paddingbottom: 1,
+						paddingright: 1,
+						paddingleft: 1
+					});
+				}
+			});
 		} else {
 			const unknownEl = document.createElement("div");
 			unknownEl.className = "ts-tune-name ts-tune-unknown";
@@ -691,7 +822,90 @@ export default class TuneSelectionsModal extends Modal {
 		name.textContent = tune.name;
 		card.appendChild(name);
 
-		if (tune.incipit) {
+		const abcs = Array.isArray(tune.abc)
+			? tune.abc
+			: tune.abc
+				? [tune.abc]
+				: [];
+
+		if (abcs.length > 1) {
+			// ── Setting label ──
+			const labelEl = document.createElement("div");
+			labelEl.className = "ts-setting-label";
+			let settingIdx = 0;
+			labelEl.textContent = buildSettingLabel(abcs[0], 0);
+			card.appendChild(labelEl);
+
+			// ── Incipit + ▲/▼ navigation ──
+			const uid =
+				tune.ttId ??
+				tune.theSessionId ??
+				tune.name.replace(/\s+/g, "-").slice(0, 20);
+			const incipitId = `ts-avail-incipit-${uid}`;
+
+			const incipitWrap = document.createElement("div");
+			incipitWrap.className = "ts-setting-wrap";
+
+			const incipitEl = document.createElement("div");
+			incipitEl.id = incipitId;
+			incipitEl.dataset.incipitId = incipitId;
+			incipitEl.className = "ts-tune-incipit";
+			incipitWrap.appendChild(incipitEl);
+
+			const btnPrev = document.createElement("button");
+			btnPrev.className = "btn-icon ts-setting-prev";
+			btnPrev.title = "Previous setting";
+			btnPrev.textContent = "▲";
+
+			const btnNext = document.createElement("button");
+			btnNext.className = "btn-icon ts-setting-next";
+			btnNext.title = "Next setting";
+			btnNext.textContent = "▼";
+
+			const navCol = document.createElement("div");
+			navCol.className = "ts-setting-nav";
+			navCol.appendChild(btnPrev);
+			navCol.appendChild(btnNext);
+			incipitWrap.appendChild(navCol);
+			card.appendChild(incipitWrap);
+
+			// LHS step handler: visual only — no entry to update, no markDirty
+			const stepSetting = (delta) => {
+				settingIdx = (settingIdx + delta + abcs.length) % abcs.length;
+				const abc = abcs[settingIdx];
+				labelEl.textContent = buildSettingLabel(abc, settingIdx);
+				AbcJs.renderAbc(incipitId, getIncipit({ abc }), {
+					scale: 0.7,
+					staffwidth: 200,
+					paddingtop: 1,
+					paddingbottom: 1,
+					paddingright: 1,
+					paddingleft: 1
+				});
+			};
+
+			btnPrev.addEventListener("click", (e) => {
+				e.stopPropagation();
+				stepSetting(-1);
+			});
+			btnNext.addEventListener("click", (e) => {
+				e.stopPropagation();
+				stepSetting(+1);
+			});
+
+			// Render initial incipit after insertion into DOM
+			requestAnimationFrame(() => {
+				AbcJs.renderAbc(incipitId, getIncipit({ abc: abcs[0] }), {
+					scale: 0.7,
+					staffwidth: 200,
+					paddingtop: 1,
+					paddingbottom: 1,
+					paddingright: 1,
+					paddingleft: 1
+				});
+			});
+		} else if (tune.incipit) {
+			// Single setting: use pre-computed incipit (rendered by _renderAvailable as before)
 			const uid =
 				tune.ttId ??
 				tune.theSessionId ??
