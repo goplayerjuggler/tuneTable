@@ -1355,9 +1355,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 		.getElementById("thesession-import-btn")
 		.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 0));
 
-	document
-		.getElementById("thesession-sets-import-btn")
-		?.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 1));
+	// document
+	// 	.getElementById("thesession-sets-import-btn")
+	// 	?.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 1));
 
 	// Warn before leaving with unsaved changes on a server/external list
 	window.addEventListener("beforeunload", (e) => {
