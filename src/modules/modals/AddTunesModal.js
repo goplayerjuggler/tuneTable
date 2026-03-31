@@ -94,7 +94,10 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 
 	setupControls() {
 		this.elements.clearBtn?.addEventListener("click", () => this.clear());
-		this.elements.addBtn?.addEventListener("click", () => this.addTunes());
+		this.elements.addBtn?.addEventListener(
+			"click",
+			async () => await this.addTunes()
+		);
 		this.elements.fileInput?.addEventListener("change", () => this.loadFiles());
 	}
 
@@ -137,7 +140,7 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 	/**
 	 * Process and import ABC notation into the tune database
 	 */
-	addTunes() {
+	async addTunes() {
 		const abcText = this.elements.input.value.trim();
 
 		if (!abcText) {
@@ -181,7 +184,7 @@ d|cAA BGB cAA A2d | cAA BGB AFD D2
 
 			if (addedCount > 0) {
 				this.callbacks.sortWithDefaultSort();
-				this.callbacks.saveTunesToStorage();
+				await this.callbacks.saveTunesToStorage();
 				this.callbacks.populateFilters();
 				this.callbacks.applyFilters();
 

@@ -200,7 +200,10 @@ export default class AbcModal extends Modal {
 		);
 		this.elements.prevBtn?.addEventListener("click", () => this.navigate(-1));
 		this.elements.nextBtn?.addEventListener("click", () => this.navigate(1));
-		this.elements.saveBtn?.addEventListener("click", () => this.save());
+		this.elements.saveBtn?.addEventListener(
+			"click",
+			async () => await this.save()
+		);
 
 		// Pagination controls
 		this.elements.prevPageBtn?.addEventListener("click", () => this.prevPage());
@@ -461,7 +464,7 @@ export default class AbcModal extends Modal {
 	 * the change through to storage and the UI.
 	 * Saves all settings in `currentAbcArray`, not just the one currently visible.
 	 */
-	save() {
+	async save() {
 		const tune = this.tune;
 		const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
 
@@ -509,7 +512,7 @@ export default class AbcModal extends Modal {
 			);
 		}
 
-		this.callbacks.saveTunesToStorage();
+		await this.callbacks.saveTunesToStorage();
 		this.callbacks.renderTable();
 		this.callbacks.populateFilters();
 		this.close();

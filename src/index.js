@@ -319,14 +319,13 @@ function schedulePrecalculation() {
 }
 
 // -- Storage ------------------------------------------------------------------
-
-function saveTunesToStorage() {
+async function saveTunesToStorage() {
 	if (currentListState?.source === "local") {
 		try {
-			slotManager.saveSlot(
+			await slotManager.saveSlot(
 				currentListState.sourceId,
 				currentListState.displayName,
-				prepareTunesForExport(window.tunesData), // strip derived properties,
+				prepareTunesForExport(window.tunesData), // strip derived properties
 				window._setLists ?? []
 			);
 		} catch (e) {
@@ -335,7 +334,7 @@ function saveTunesToStorage() {
 	} else {
 		const id = slotManager.generateSlotId();
 		const name = `${currentListState?.displayName ?? "Tune list"} (local copy)`;
-		slotManager.saveSlot(
+		await slotManager.saveSlot(
 			id,
 			name,
 			prepareTunesForExport(window.tunesData),
@@ -354,9 +353,9 @@ function saveTunesToStorage() {
 }
 
 /** Save set lists to local storage without re-saving tunes. Called by TuneSelectionsModal. */
-function saveSetListsToStorage(setLists) {
+async function saveSetListsToStorage(setLists) {
 	window._setLists = setLists;
-	saveTunesToStorage();
+	await saveTunesToStorage();
 }
 
 async function fetchManifest() {
@@ -407,7 +406,7 @@ async function onListSelected({
 	};
 	localStorage.setItem(CURRENT_LIST_KEY, JSON.stringify(currentListState));
 
-	if (source === "local") slotManager.touchSlot(sourceId);
+	if (source === "local") await slotManager.touchSlot(sourceId);
 
 	isDirty = false;
 
@@ -440,7 +439,7 @@ async function loadServerListById(listId, listFile, displayName, lastUpdate) {
 
 async function resumeCurrentList(listState, manifest) {
 	if (listState.source === "local") {
-		const slot = slotManager.getSlot(listState.sourceId);
+		const slot = await slotManager.getSlot(listState.sourceId);
 		if (!slot) throw new Error("Slot not found");
 		await onListSelected({
 			source: "local",
@@ -537,7 +536,7 @@ function openTuneListSelector() {
 
 // -- Tune operations ----------------------------------------------------------
 
-function emptyTunes() {
+async function emptyTunes() {
 	if (!confirm("You may lose some data. This cannot be undone. Continue?"))
 		return;
 	window.tunesData = [];
@@ -545,7 +544,7 @@ function emptyTunes() {
 	window._setLists = [];
 	tuneSelectionsModal.loadSetLists(window._setLists);
 	renderTable();
-	saveTunesToStorage();
+	await saveTunesToStorage();
 }
 
 function prepareTunesForExport(tunes) {
@@ -609,7 +608,7 @@ function copySingleTune(tuneIndex) {
 }
 
 // Add New Tune
-function addNewTune() {
+async function addNewTune() {
 	const newTune = {
 		name: "New Tune",
 		key: "",
@@ -623,7 +622,7 @@ function addNewTune() {
 	window.tunesData.push(newTune);
 	window.filteredData.push(newTune);
 
-	saveTunesToStorage();
+	await saveTunesToStorage();
 	renderTable();
 
 	// Open edit modal for the new tune
@@ -632,7 +631,7 @@ function addNewTune() {
 }
 
 // Delete Tune
-function deleteTune(tuneIndex) {
+async function deleteTune(tuneIndex) {
 	const tune = window.filteredData[tuneIndex];
 
 	if (tuneSelectionsModal?.isTuneInSetLists(tune)) {
@@ -650,7 +649,7 @@ function deleteTune(tuneIndex) {
 		window.tunesData.splice(originalTuneDataIndex, 1);
 	}
 
-	saveTunesToStorage();
+	await saveTunesToStorage();
 	populateFilters();
 	applyFilters();
 }
@@ -726,11 +725,11 @@ function openTheSessionImport(e, dropdown, howToOpen) {
 	const modal = new TheSessionImportModal(
 		window.tunesData,
 		copyTuneDataToClipboard,
-		(setLists) => {
+		async (setLists) => {
 			const existing = tuneSelectionsModal.getSetLists();
 			window._setLists = [...existing, ...setLists];
 			tuneSelectionsModal.loadSetLists(window._setLists);
-			saveTunesToStorage();
+			await saveTunesToStorage();
 		}
 	);
 	if (howToOpen === 0) modal.open();
@@ -756,9 +755,9 @@ async function initialiseData() {
 	window.openTuneSelections = () => tuneSelectionsModal?.open();
 	window.saveSetListsToStorage = saveSetListsToStorage;
 
-	eventBus.on("tuneImported", (tuneData) => {
+	eventBus.on("tuneImported", async (tuneData) => {
 		window.tunesData.push(tuneData);
-		saveTunesToStorage();
+		await saveTunesToStorage();
 	});
 	eventBus.on("refreshTable", () => {
 		sortWithDefaultSort();
@@ -775,6 +774,8 @@ async function initialiseData() {
 	};
 
 	slotManager = new TuneListSlotManager();
+	await slotManager.init();
+
 	editModal = new EditModal(callbacks);
 	getAbcModal = () => new AbcModal(callbacks);
 	addTunesModal = new AddTunesModal(callbacks);
@@ -1306,21 +1307,25 @@ document.addEventListener("DOMContentLoaded", async function () {
 	});
 
 	// Dropdown menu items
-	document.getElementById("addNewTuneBtn")?.addEventListener("click", (e) => {
-		e.preventDefault();
-		dropdown.classList.remove("active");
-		addNewTune();
-	});
+	document
+		.getElementById("addNewTuneBtn")
+		?.addEventListener("click", async (e) => {
+			e.preventDefault();
+			dropdown.classList.remove("active");
+			await addNewTune();
+		});
 	document.getElementById("copyTunesBtn")?.addEventListener("click", (e) => {
 		e.preventDefault();
 		dropdown.classList.remove("active");
 		copyTunesToClipboard();
 	});
-	document.getElementById("emptyTunesBtn")?.addEventListener("click", (e) => {
-		e.preventDefault();
-		dropdown.classList.remove("active");
-		emptyTunes();
-	});
+	document
+		.getElementById("emptyTunesBtn")
+		?.addEventListener("click", async (e) => {
+			e.preventDefault();
+			dropdown.classList.remove("active");
+			await emptyTunes();
+		});
 
 	document.getElementById("manageSlotsBtn")?.addEventListener("click", (e) => {
 		e.preventDefault();

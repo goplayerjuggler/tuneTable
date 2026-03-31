@@ -962,7 +962,7 @@ ${setting.abc
 			});
 
 			// ── Hand off imported set lists to caller ──────────────────────────
-			this.onImportSets(importedSetLists);
+			await this.onImportSets(importedSetLists);
 
 			// ── Show summary ───────────────────────────────────────────────────
 			const s = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;

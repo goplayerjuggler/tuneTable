@@ -151,7 +151,10 @@ export default class EditModal extends Modal {
 	}
 
 	setupControls() {
-		this.elements.saveBtn?.addEventListener("click", () => this.save());
+		this.elements.saveBtn?.addEventListener(
+			"click",
+			async () => await this.save()
+		);
 		this.elements.addReferenceBtn?.addEventListener("click", () =>
 			this.addReference()
 		);
@@ -294,7 +297,7 @@ export default class EditModal extends Modal {
 		this.renderScores(tune.scores);
 	}
 
-	save() {
+	async save() {
 		const tune = window.filteredData[this.currentEditTuneIndex];
 		const originalTuneDataIndex = window.tunesData.findIndex((t) => t === tune);
 
@@ -384,7 +387,7 @@ export default class EditModal extends Modal {
 			window.tunesData[originalTuneDataIndex] = reprocessed;
 		}
 
-		this.callbacks.saveTunesToStorage();
+		await this.callbacks.saveTunesToStorage();
 		this.callbacks.renderTable();
 		this.callbacks.populateFilters();
 		this.close();

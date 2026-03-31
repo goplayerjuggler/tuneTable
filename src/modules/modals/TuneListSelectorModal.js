@@ -52,15 +52,15 @@ export default class TuneListSelectorModal extends Modal {
 		this._render();
 	}
 
-	_render() {
+	async _render() {
 		const container = document.getElementById("tls-content");
 		if (!container) return;
-		container.innerHTML = this._buildHTML();
+		container.innerHTML = await this._buildHTML();
 		this._attachHandlers(container);
 	}
 
-	_buildHTML() {
-		const { slots } = this.slotManager.loadSlots();
+	async _buildHTML() {
+		const { slots } = await this.slotManager.loadSlots();
 		const activeId = this.currentListState?.sourceId;
 		const activeSource = this.currentListState?.source;
 		const lists = this.manifest?.lists ?? [];
@@ -112,7 +112,7 @@ export default class TuneListSelectorModal extends Modal {
 		// 		)
 		// 	: "";
 
-		const storageSize = this.slotManager.getStorageSize();
+		const storageSize = await this.slotManager.getStorageSize();
 
 		return (
 			localSection +
@@ -222,11 +222,14 @@ export default class TuneListSelectorModal extends Modal {
 			?.addEventListener("change", (e) => this._importJson(e.target.files[0]));
 		document
 			.getElementById("tls-export")
-			?.addEventListener("click", () => this.slotManager.exportAllSlots());
+			?.addEventListener(
+				"click",
+				async () => await this.slotManager.exportAllSlots()
+			);
 	}
 
 	async _loadLocal(slotId) {
-		const slot = this.slotManager.getSlot(slotId);
+		const slot = await this.slotManager.getSlot(slotId);
 		if (!slot) return;
 		await this.onSelect({
 			source: "local",
@@ -297,7 +300,7 @@ export default class TuneListSelectorModal extends Modal {
 				)
 					? "merge"
 					: "replace";
-				const { imported } = this.slotManager.importSlots(data, mode);
+				const { imported } = await this.slotManager.importSlots(data, mode);
 				alert(`Imported ${imported} list${imported !== 1 ? "s" : ""}.`);
 				this._render();
 			} else {
@@ -306,8 +309,8 @@ export default class TuneListSelectorModal extends Modal {
 					prompt("Name for this list:", file.name.replace(/\.json$/i, "")) ||
 					file.name;
 				const tunes = Array.isArray(data) ? data : (data.tunes ?? []);
-				const id = this.slotManager.generateSlotId();
-				this.slotManager.saveSlot(id, name.trim(), tunes, []);
+				const id = await this.slotManager.generateSlotId();
+				await this.slotManager.saveSlot(id, name.trim(), tunes, []);
 				await this.onSelect({
 					source: "local",
 					sourceId: id,
@@ -325,7 +328,7 @@ export default class TuneListSelectorModal extends Modal {
 	async _createNewList() {
 		const name = prompt("Name for the new list:");
 		if (!name?.trim()) return;
-		if (this.slotManager.slotNameExists(name)) {
+		if (await this.slotManager.slotNameExists(name)) {
 			alert("A list with that name already exists.");
 			return;
 		}
@@ -337,8 +340,8 @@ export default class TuneListSelectorModal extends Modal {
 		const tunes = copyTunes
 			? JSON.parse(JSON.stringify(window.tunesData ?? []))
 			: [];
-		const id = this.slotManager.generateSlotId();
-		this.slotManager.saveSlot(id, name.trim(), tunes, []);
+		const id = await this.slotManager.generateSlotId();
+		await this.slotManager.saveSlot(id, name.trim(), tunes, []);
 		await this.onSelect({
 			source: "local",
 			sourceId: id,
@@ -349,29 +352,29 @@ export default class TuneListSelectorModal extends Modal {
 		this.close();
 	}
 
-	_duplicateSlot(slotId) {
-		const copy = this.slotManager.duplicateSlot(slotId);
+	async _duplicateSlot(slotId) {
+		const copy = await this.slotManager.duplicateSlot(slotId);
 		if (copy) this._render();
 	}
 
-	_renameSlot(slotId) {
-		const slot = this.slotManager.getSlot(slotId);
+	async _renameSlot(slotId) {
+		const slot = await this.slotManager.getSlot(slotId);
 		if (!slot) return;
 		const name = prompt("New name:", slot.name);
 		if (!name?.trim() || name.trim() === slot.name) return;
 		if (
-			this.slotManager.slotNameExists(name) &&
+			(await this.slotManager.slotNameExists(name)) &&
 			name.trim().toLowerCase() !== slot.name.toLowerCase()
 		) {
 			alert("A list with that name already exists.");
 			return;
 		}
-		this.slotManager.renameSlot(slotId, name);
+		await this.slotManager.renameSlot(slotId, name);
 		this._render();
 	}
 
-	_deleteSlot(slotId) {
-		const slot = this.slotManager.getSlot(slotId);
+	async _deleteSlot(slotId) {
+		const slot = await this.slotManager.getSlot(slotId);
 		if (!slot) return;
 		const isActive =
 			this.currentListState?.source === "local" &&
@@ -381,7 +384,7 @@ export default class TuneListSelectorModal extends Modal {
 			return;
 		}
 		if (!confirm(`Delete "${slot.name}"? This cannot be undone.`)) return;
-		this.slotManager.deleteSlot(slotId);
+		await this.slotManager.deleteSlot(slotId);
 		this._render();
 	}
 

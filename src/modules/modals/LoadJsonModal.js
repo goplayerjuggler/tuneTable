@@ -53,7 +53,7 @@ Example:
           <button id="clearJsonBtn" class="btn btn-secondary">Clear</button>
           <button id="loadJsonDataBtn" class="btn btn-primary">Load data</button>
         </div>
-      `,
+      `
 		});
 
 		this.callbacks = callbacks;
@@ -64,7 +64,7 @@ Example:
 			input: document.getElementById("jsonInput"),
 			clearBtn: document.getElementById("clearJsonBtn"),
 			loadBtn: document.getElementById("loadJsonDataBtn"),
-			status: document.getElementById("loadJsonStatus"),
+			status: document.getElementById("loadJsonStatus")
 		};
 
 		this.setupControls();
@@ -108,7 +108,7 @@ Example:
 	 * Parse and import tune data from JSON or JavaScript literal format
 	 * Replaces entire tune database after user confirmation
 	 */
-	loadData() {
+	async loadData() {
 		const jsonText = this.elements.input.value.trim();
 
 		if (!jsonText) {
@@ -135,7 +135,7 @@ Example:
 					throw new Error(
 						`Failed to parse as JSON or JavaScript literal.\n` +
 							`JSON error: ${jsonError.message}\n` +
-							`JS error: ${jsError.message}`,
+							`JS error: ${jsError.message}`
 					);
 				}
 			}
@@ -150,7 +150,7 @@ Example:
 				.map(processTuneData);
 
 			this.callbacks.sortWithDefaultSort();
-			this.callbacks.saveTunesToStorage();
+			await this.callbacks.saveTunesToStorage();
 			this.callbacks.populateFilters();
 			this.callbacks.applyFilters();
 
@@ -158,7 +158,7 @@ Example:
 				`Successfully loaded ${window.tunesData.length} tune${
 					window.tunesData.length !== 1 ? "s" : ""
 				}!`,
-				"success",
+				"success"
 			);
 
 			this.elements.input.value = "";
