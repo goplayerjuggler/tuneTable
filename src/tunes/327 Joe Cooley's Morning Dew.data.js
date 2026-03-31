@@ -23,8 +23,8 @@ K: Edor
 	],
 	crossReferences: [
 		{
-			theSessionId: 2958, //the rookery, Catilín Nic Gabhann
-			index: 0
+			theSessionId: 2958,
+			index: 0 //the rookery, Catilín Nic Gabhann
 		}
 	],
 	groups: "su"

@@ -12,6 +12,10 @@ K: Dmaj
 	theSessionId: 1180,
 	crossReferences: [
 		{
+			theSessionId: 759, // Crowley's no.1
+			index: 0
+		},
+		{
 			theSessionId: 759,
 			index: 1
 		}

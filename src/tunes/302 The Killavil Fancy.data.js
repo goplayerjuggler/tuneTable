@@ -1,4 +1,5 @@
 export default {
+	aka: "Eilish Brogan",
 	name: "The Killavil Fancy",
 	theSessionId: 576,
 	groups: "ALORA",
@@ -23,6 +24,12 @@ G (D) C - | G (D) C - | G (D) C - | G (D) C - ||
 G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
 \`\`\`
 `
+		}
+	],
+	crossReferences: [
+		{
+			theSessionId: 64,
+			index: 0 //maid behind the bar, Paddy Keenan
 		}
 	]
 };

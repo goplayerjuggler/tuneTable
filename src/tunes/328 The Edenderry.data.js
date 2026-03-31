@@ -11,8 +11,8 @@ B2AG BGGA B2AG (3Bcd gd|B2AG`,
 	theSessionId: 9639,
 	crossReferences: [
 		{
-			theSessionId: 2958, //the rookery, Catilín Nic Gabhann
-			index: 0
+			theSessionId: 2958,
+			index: 0 //the rookery, Catilín Nic Gabhann
 		}
 	]
 };

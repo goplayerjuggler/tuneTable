@@ -6,5 +6,13 @@ L:1/16
 M:4/4
 K:Dmajor
 FAAB AFED FAAB ABde|fBBA Bcde`,
-	theSessionId: 64
+	parts: "AABB",
+	theSessionId: 64,
+	references: [
+		{
+			artist: "Paddy Keenan, uilleann pipes",
+			album: "Poirt an Phíobaire (1983)",
+			notes: "The Maid Behind the Bar / O'Rourke's / Eilish Brogan"
+		}
+	]
 };

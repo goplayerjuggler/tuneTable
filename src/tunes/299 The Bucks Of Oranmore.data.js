@@ -1,7 +1,7 @@
 export default {
 	name: "The Bucks Of Oranmore",
 	parts: "ABCDE",
-	groups: "ALORA",
+	groups: "ALORA,su",
 	incipit: `X: 1
 M: 4/4
 L: 1/16
@@ -19,8 +19,14 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
 			notes: "0:46 onwards"
 		},
 		{
-			artists: "Paddy Glackin & Paddy Keenan",
-			url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104"
+			artists: "Paddy Glackin, fiddle; Paddy Keenan, uilleann pipes",
+			url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK?t=104",
+			album: "Doublin' (1979)"
+		},
+		{
+			artists: "Tony MacMahon, accordion",
+			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2023/?track=6",
+			notes: "Bucks of Oranmore; Toss the feathers"
 		},
 		{
 			artists:
