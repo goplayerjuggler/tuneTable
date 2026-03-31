@@ -12,7 +12,8 @@ d2ce dGAc d2de c2AG|Addc defc A`,
 		{
 			url: "https://donegalfiddlemusic.bandcamp.com/track/sean-sa-cheo",
 			artists: "Néillidh Boyle, fiddle",
-			notes: "1930s. The first time through he omits the C part."
+			notes:
+				"1930s. The first time round he omits the C part. So it goes AB ABC ABC …. I’m pretty sure he also does this for the Moving Cloud; and maybe for some other tunes too."
 		},
 		{
 			url: "https://www.itma.ie/playlists/selections-from-the-caoimhin-mac-aoidh-collection-may-2025/?track=3",
