@@ -7,7 +7,8 @@ import { maybeConvertStandardTune } from "@goplayerjuggler/abc-tools";
 const defaultTheSessionImportConfig = {
 	skipLevel: "ifTuneExists",
 	doubleBarLengthWherePossible: false,
-	importAllSettingsForSpecifiedUser: false,
+	importAllSettingsForSpecifiedUser: true,
+	withComments: true,
 	settingChoiceCriteria: ["newestFirst"]
 };
 
@@ -32,6 +33,9 @@ const defaultTheSessionImportConfig = {
  *   When true and a userId is entered in the UI, all settings entered by that user
  *   for each tune are imported (abc becomes an array). When false, the normal
  *   single-setting selection applies even for an explicit userId.
+ *
+ *  withcomments:
+ *   when true, also imports all comments by the setting's creator that were made on the same day as the setting
  *
  * settingChoiceCriteria:
  *   Ranked filter applied when no single setting is identified by UI inputs.
