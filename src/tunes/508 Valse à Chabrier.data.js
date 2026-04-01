@@ -2,7 +2,7 @@ export default {
 	abc: `X:1
 T:Valse à Chabrier
 R:Waltz
-O:France;Auvergne;Artense
+O:France;Auvergne;Artense.
 S:Clémence Cognet, violon ; Noëllie Nioulou, violoncelle
 D:Les poufs à cordes / La Trotteuse (2013)
 Z:abc-transcription Malcolm Schonfield

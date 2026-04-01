@@ -10,7 +10,8 @@ FAAB AFED FAAB ABde|fBBA Bcde`,
 	theSessionId: 64,
 	references: [
 		{
-			artist: "Paddy Keenan, uilleann pipes",
+			artists: "Paddy Keenan, uilleann pipes",
+			url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK",
 			album: "Poirt an Phíobaire (1983)",
 			notes: "The Maid Behind the Bar / O'Rourke's / Eilish Brogan"
 		}
