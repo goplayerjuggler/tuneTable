@@ -971,7 +971,7 @@ ${setting.abc
 			// ── Show summary ───────────────────────────────────────────────────
 			const s = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
 			let summary =
-				`✓ ${s(importedSetLists.length, "set")} imported ` +
+				`✓ ${s(sets.length, "set")} imported ` +
 				`(${s(totalTunes, "tune")} total).`;
 			if (allSkipped.length) {
 				summary +=
