@@ -126,7 +126,7 @@ export default class TuneListSelectorModal extends Modal {
 				<input type="file" id="tls-file-input" accept=".json" style="display:none">
 			</div>
 			<div class="tls-storage-info">
-				Local storage: ${storageSize} MB / ~5 MB used &bull; ${slots.length} tune list${slots.length !== 1 ? "s" : ""} saved
+				Local storage: ${storageSize} MB / ~50 MB used &bull; ${slots.length} tune list${slots.length !== 1 ? "s" : ""} saved
 			</div>
 		`
 		);
@@ -144,7 +144,7 @@ export default class TuneListSelectorModal extends Modal {
 	_slotItemHTML(slot, isActive) {
 		const tuneCount = slot.tunes?.length ?? 0;
 		const setCount = slot.setLists?.length ?? 0;
-		const meta = `${tuneCount} tune${tuneCount !== 1 ? "s" : ""}${setCount > 0 ? `, ${setCount} set${setCount !== 1 ? "s" : ""}` : ""} &bull; Modified ${relativeTime(slot.lastUpdate)}`;
+		const meta = `${tuneCount} tune${tuneCount !== 1 ? "s" : ""}${setCount > 0 ? `, ${setCount} set list${setCount !== 1 ? "s" : ""}` : ""} &bull; Modified ${relativeTime(slot.lastUpdate)}`;
 		return `
 			<div class="tls-item tls-slot${isActive ? " tls-item--active" : ""}" data-slot-id="${slot.id}">
 				<div class="tls-item-info">
@@ -161,12 +161,16 @@ export default class TuneListSelectorModal extends Modal {
 	}
 
 	_serverItemHTML(list, isActive) {
+		const setLists =
+			list.setListCount > 0
+				? `; ${list.setListCount} set list${list.setListCount > 1 ? "s" : ""}`
+				: "";
 		return `
 			<div class="tls-item tls-server-item${isActive ? " tls-item--active" : ""}"
 					data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}"
 					title="${list.description} &bull; Last updated: ${list.lastUpdate ?? "unknown"}">
 				<span class="tls-item-name">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
-				<span class="tls-item-meta">${list.count ?? "?"} tunes</span>
+				<span class="tls-item-meta">${list.count ?? "?"} tunes${setLists}</span>
 			</div>
 		`;
 	}
@@ -332,22 +336,21 @@ export default class TuneListSelectorModal extends Modal {
 			alert("A list with that name already exists.");
 			return;
 		}
-		const copyTunes =
+		const copyData =
 			this.currentListState &&
 			confirm(
-				`Copy tunes from current list (${this.currentListState.displayName})?`
+				`Copy data from current list (${this.currentListState.displayName})?`
 			);
-		const tunes = copyTunes
-			? JSON.parse(JSON.stringify(window.tunesData ?? []))
-			: [];
+		const tunes = copyData ? (window.tunesData ?? []) : [],
+			setLists = copyData ? (window._setLists ?? []) : [];
 		const id = await this.slotManager.generateSlotId();
-		await this.slotManager.saveSlot(id, name.trim(), tunes, []);
+		await this.slotManager.saveSlot(id, name.trim(), tunes, setLists);
 		await this.onSelect({
 			source: "local",
 			sourceId: id,
 			displayName: name.trim(),
 			tunes,
-			setLists: []
+			setLists
 		});
 		this.close();
 	}
@@ -379,7 +382,7 @@ export default class TuneListSelectorModal extends Modal {
 		const isActive =
 			this.currentListState?.source === "local" &&
 			this.currentListState?.sourceId === slotId;
-		if (isActive && this.slotManager.loadSlots().slots.length === 1) {
+		if (isActive && (await this.slotManager.loadSlots()).slots.length === 1) {
 			alert("Can't delete the only active list.");
 			return;
 		}
