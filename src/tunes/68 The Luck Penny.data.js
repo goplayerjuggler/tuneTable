@@ -3,16 +3,17 @@ export default {
 T:The Luck Penny
 R:jig
 L:1/8
-M:6/8
+M:12/8
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1334#setting1334
 N:Setting entered in thesession by user “Bannerman” on 2003-01-15
+N:*abc-tools: convert to M:12/8*
 K:Gmajor
-|:BAG AFD|G2G FGA|BAG BdB|cAG Fdc|
- BAG AFD|GBd ~g3|def gdB|1 cAF G2A:|2 cAF G2B||
- |:d2g gfg|abg fga|bag agf|def g2a|
- bag agf|g2g fd^c|def gdB|1 cAF G2B:|2 cA F GBc||
- |:dBG GFG|DGB dBG|cA=F FEF|C=FA cBA|
- dBG GBd|g2g fd^c|def gdB|1 cAF GBc:|2 cAF G2A||`,
+|:BAG AFD G2G FGA|BAG BdB cAG Fdc|
+BAG AFD GBd ~g3|def gdB[1 cAF G2A:|2 cAF G2B||
+|:d2g gfg abg fga|bag agf def g2a|
+bag agf g2g fd^c|def gdB[1 cAF G2B:|2 cA F GBc||
+|:dBG GFG DGB dBG|cA=F FEF CFA cBA|
+dBG GBd g2g fd^c|def gdB[1 cAF GBc:|2 cAF G2A||`,
 	theSessionId: 1334
 };

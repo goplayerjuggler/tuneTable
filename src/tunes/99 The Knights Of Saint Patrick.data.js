@@ -1,18 +1,21 @@
 export default {
-	abc: `X:1
-T:The Knights Of Saint Patrick
+	aka: "The Knights Of Saint Patrick",
+	incipit: `X:1
+T:St. Patrick's
 R:jig
 L:1/8
-M:6/8
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/1822#setting1822
-N:Setting entered in thesession by user “KeepFiddlin'” on 2003-07-14
+M:12/8
 K:Dmajor
-|:"D"dcd faf|dcd AFD|"G"GBG FAF|"A"EFG ABc|
- "D"d3 faf|dcd AFD|"G"GBG "D"FAF|1 "A"EDE D2A:|2 "A"EDE D2f||
- "D"aga fdf|aba agf|"A"g3 gec|Ace gfe|
- "D"aga fdf|aba afg|afd "Em"bge|"A"edc "D"d2f|
- "D"aga fdf|aba agf|"A"g3 gec|Ace gfe|
- "D"d3 "Em"ede|"F#m"fef "G"gfg|"D"afd "Em"bge|"D"dAF D2 "(A)"A||`,
-	theSessionId: 1822
+dcd fef dfd AFD|"GBG FAF`,
+	theSessionId: 1822,
+	references: [
+		{
+			url: "https://music.youtube.com/watch?v=FJlLRyk1jbQ",
+			artists:
+				"Natalie McKenzie, fiddle; Howie MacDonald, piano; Dave MacIsaac, guitar",
+			album: "Traditional Music from Cape Breton Island (1993)",
+			notes: `Irish Lasses / St. Patrick's / Jerry's Beaver Hat / The Chorus Jig
+This track & this whole album made a great impression on me. Fantastic Cape Breton music!`
+		}
+	]
 };
