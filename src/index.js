@@ -578,6 +578,9 @@ function prepareTunesForExport(tunes) {
 		delete tune._isCrTarget;
 		delete tune._resolvedCrossRefs;
 		(tune.references ?? []).forEach((ref) => delete ref._crId);
+
+		if (tune.scores?.length === 0) delete tune.scores;
+		if (tune.references?.length === 0) delete tune.references;
 	});
 	return tunesCopy;
 }
