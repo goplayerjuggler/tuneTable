@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	aka: "Sean Frank's",
 	abc: `X:1
 T:Mother's Delight
 R:reel
@@ -15,5 +16,11 @@ efed B2Bc dedA FDDF|Beed B3c d2AF GEED:|
 |:GBeB GEED FAAG FDED|GBeB GEED FEDF E3F|
 GBeB GEED FAAG FDED|G2GF GFEG BGFG E3F:|`,
 	theSessionId: 257,
-	theSessionSettingId: 242
+	theSessionSettingId: 242,
+	crossReferences: [
+		{
+			theSessionId: 1335,
+			index: 0 //Frankie Gavin & Alec Finn, Bunch Of Green Rushes
+		}
+	]
 };

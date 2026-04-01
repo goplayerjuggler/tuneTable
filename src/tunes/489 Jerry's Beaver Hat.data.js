@@ -15,5 +15,6 @@ DFA d2 e fdB BAF|ABA dAF DED D2:|
 d|dfa afd gbg faf|dfa afd cee ecA|
 dfa afd gbg faf|BdB AFA DED D2:|`,
 	theSessionId: 319,
-	theSessionSettingId: 319
+	theSessionSettingId: 319,
+	crossReferences: [{ theSessionId: 1822, index: 0 }]
 };

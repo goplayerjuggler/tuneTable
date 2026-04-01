@@ -21,7 +21,12 @@ const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
  * from the production / GitHub Pages output.
  * @type {string[]}
  */
-export const JSON_TO_NOT_PUBLISH = [];
+export const FILES_TO_NOT_PUBLISH = [
+  "82 The Chapel Bell.data.js",
+  "84 Aherne's Egg.data.js",
+  "101 Sixpenny Money.data.js"
+  //excluding the above 3 as I'm not sure I'm really interested in them!
+];
 
 /** Composer-based list definitions. */
 const COMPOSER_EXTRACTS = [
@@ -30,7 +35,12 @@ const COMPOSER_EXTRACTS = [
     label: "Paddy Fahey",
     match: (c) => /paddy\s+fahey/i.test(c)
   },
-  { id: "ed-reavy", label: "Ed Reavy", match: (c) => /ed\s+reavy/i.test(c) }
+  { id: "ed-reavy", label: "Ed Reavy", match: (c) => /ed\s+reavy/i.test(c) },
+  {
+    id: "tommy-peoples",
+    label: "Tommy Peoples",
+    match: (c) => /tommy\s+peoples/i.test(c)
+  }
 ];
 
 /** Origin-based list definitions. */
@@ -249,7 +259,7 @@ const listLastUpdate = (tunes, setLists) =>
  * the `dateModified` fields of its set lists.
  *
  * In production mode (`isDevelopment: false`) any fileName listed in
- * {@link JSON_TO_NOT_PUBLISH} is silently skipped so it never reaches
+ * {@link FILES_TO_NOT_PUBLISH} is silently skipped so it never reaches
  * GitHub Pages.
  *
  * @param {{ isDevelopment?: boolean, outputDir?: string }} [options]
@@ -303,7 +313,7 @@ export async function buildTuneLists({
    * @returns {Promise<boolean>} `true` if the file was written.
    */
   const writeList = async (fileName, tunes, setLists = []) => {
-    if (!isDevelopment && JSON_TO_NOT_PUBLISH.includes(fileName)) return false;
+    if (!isDevelopment && FILES_TO_NOT_PUBLISH.includes(fileName)) return false;
     const data = {
       tunes: tunes.map(sanitizeTune),
       setLists: setLists.map(sanitizeSetList)

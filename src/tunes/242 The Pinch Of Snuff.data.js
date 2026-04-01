@@ -11,5 +11,11 @@ K:Dmixo
 |:fage d2dB|AD (3FED EFGB|A3B cGcd|ed (3B^cd efge:|
  f2df afdf|f2df efge|f2df afdf|eA (3B^cd efge|
  f2df afdf|f2df efge|fa~a2 afdf|eA (3B^cd efge||`,
-	theSessionId: 2610
+	theSessionId: 2610,
+	crossReferences: [
+		{
+			theSessionId: 1335,
+			index: 1 //D Munnelly, Bunch Of Green Rushes
+		}
+	]
 };

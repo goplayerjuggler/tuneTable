@@ -11,7 +11,7 @@ L:1/8
 M:12/8
 N:A Curious Denis Murphy Jig / The Belles of Liscarroll
 K:Amix
-|:B|Bcd efg aba age|~d3 dcd efg ecA|`,
+A|Bcd efg aba age|~d3 dcd`,
 	theSessionId: 11868,
 	norbeckId: 491,
 	parts: "AABB"
