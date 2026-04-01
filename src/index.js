@@ -42,6 +42,10 @@ let isDirty = false;
 let pendingUrlParams = null;
 let _manifestCache = null;
 
+// Lookup maps for cross-reference resolution; populated by calculateCrossRefs when a list is loaded.
+let _crBySessionId = new Map();
+let _crByTtId = new Map();
+
 /* Lazy SVG system ----------------------------------------------------------
 
 SVGs are rendered only when their row is near the viewport and destroyed when
@@ -53,7 +57,7 @@ Two IntersectionObservers per render pass:
   viewportObserver (rootMargin "0px")    — upgrades visible rows to the urgent
                    queue and downgrades them back to buffer when they scroll out.
 
-Two render queues, both drained one item per idle slot:
+Two render queues, both drained one idle slot at a time:
   urgentQueue — scheduled with requestIdleCallback { timeout: 200 } so visible
                 rows get SVGs promptly even under load (important for
                 page-up/page-down jumps).
@@ -394,6 +398,8 @@ async function onListSelected({
 		.filter(Boolean)
 		.map(processTuneData);
 
+	calculateCrossRefs(window.tunesData);
+
 	window._setLists = setLists ?? [];
 	tuneSelectionsModal.loadSetLists(window._setLists);
 
@@ -567,6 +573,11 @@ function prepareTunesForExport(tunes) {
 			delete tune.incipit;
 		}
 		delete tune.contour;
+		// Strip cross-reference runtime annotations
+		delete tune._crId;
+		delete tune._isCrTarget;
+		delete tune._resolvedCrossRefs;
+		(tune.references ?? []).forEach((ref) => delete ref._crId);
 	});
 	return tunesCopy;
 }
@@ -713,6 +724,101 @@ function getTuneMetadata(tune) {
 		...origin,
 		...tags
 	].filter((m) => m);
+}
+
+// -- Cross-references ---------------------------------------------------------
+
+// Extract just the musician names from an artists string "name, instrument; name2, instrument2; ..."
+function extractArtistNames(artists) {
+	if (!artists) return "";
+	return artists
+		.split(";")
+		.map((a) => a.trim().split(",")[0].trim())
+		.filter(Boolean)
+		.join(", ");
+}
+
+// Parse an identifier string like "ttId=123" or "theSessionId=42" into a plain object.
+function parseTuneIdStr(str) {
+	const params = new URLSearchParams(str);
+	const obj = {};
+	for (const [k, v] of params) obj[k] = isNaN(v) ? v : Number(v);
+	return obj;
+}
+
+// Resolve an ID object (with theSessionId or ttId) to a tune in the current data set.
+function resolveTuneById(idObj) {
+	if (idObj.theSessionId != null)
+		return _crBySessionId.get(idObj.theSessionId) ?? null;
+	if (idObj.ttId != null) return _crByTtId.get(idObj.ttId) ?? null;
+	return null;
+}
+
+// Replace [label](target) patterns in note text.
+// Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row;
+// all other patterns become external links, as before.
+function formatNoteLinks(text) {
+	return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => {
+		if (/^(?:ttId|theSessionId)=/.test(target)) {
+			const t = resolveTuneById(parseTuneIdStr(target));
+			if (t != null) return `<a href="#cr-t${t._crId}">${label}</a>`;
+		}
+		return `<a href="${target}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+	});
+}
+
+/**
+ * Annotate tunes with cross-reference data. Called once when a full data set is loaded.
+ * Sets on each tune:
+ *   _crId              — stable integer ID (tunesData index) for generating anchor targets
+ *   _isCrTarget        — true if this tune is the target of any cross-reference link
+ *   _resolvedCrossRefs — array of { tuneName, tuneId, refIndex, artistNames } for rendering
+ * Sets on each referenced reference object:
+ *   _crId              — string "tuneId-refIndex" for generating anchor IDs on reference items
+ */
+function calculateCrossRefs(tunes) {
+	_crBySessionId = new Map();
+	_crByTtId = new Map();
+
+	tunes.forEach((tune, idx) => {
+		tune._crId = idx;
+		tune._isCrTarget = false;
+		tune._resolvedCrossRefs = [];
+		if (tune.theSessionId) _crBySessionId.set(tune.theSessionId, tune);
+		if (tune.ttId) _crByTtId.set(tune.ttId, tune);
+	});
+
+	tunes.forEach((tune) => {
+		// Resolve explicit crossReferences entries
+		(tune.crossReferences ?? []).forEach((cr) => {
+			const target = resolveTuneById(cr);
+			if (!target) return;
+			const refIndex = cr.index ?? 0;
+			const ref = target.references?.[refIndex];
+			if (!ref) return;
+
+			target._isCrTarget = true;
+			ref._crId = `${target._crId}-${refIndex}`;
+
+			tune._resolvedCrossRefs.push({
+				tuneName: target.name,
+				tuneId: target._crId,
+				refIndex,
+				artistNames: extractArtistNames(ref.artists)
+			});
+		});
+
+		// Mark tunes referenced by [label](id) patterns in notes as anchor targets
+		(tune.references ?? []).forEach((ref) => {
+			if (!ref.notes) return;
+			const RE = /\[([^\]]+)\]\(((?:ttId|theSessionId)=[^)]+)\)/g;
+			let m;
+			while ((m = RE.exec(ref.notes)) !== null) {
+				const t = resolveTuneById(parseTuneIdStr(m[2]));
+				if (t) t._isCrTarget = true;
+			}
+		});
+	});
 }
 
 function sortWithDefaultSort() {
@@ -919,6 +1025,7 @@ function renderTable() {
 		const row = document.createElement("tr");
 		row.dataset.tuneIndex = index; // used by the IntersectionObserver callback
 		if (tune.selected) row.classList.add("tune-selected");
+		if (tune._isCrTarget) row.id = `cr-t${tune._crId}`;
 
 		let referencesHtml = "",
 			hasTheSessionLink = false;
@@ -927,12 +1034,9 @@ function renderTable() {
 			.forEach((ref, refIndex) => {
 				let notesHtml = "";
 				if (ref.notes) {
-					const formattedNotes = ref.notes
-						.replace(/\n/g, "<br />")
-						.replace(
-							/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
-							'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
-						)
+					const formattedNotes = formatNoteLinks(
+						ref.notes.replace(/\n/g, "<br />")
+					)
 						.replace(
 							/(?<!")https?:\/\/[^\s<>"']+/g, //only match URLs not preceded by `"` so as to avoid handling the ones we did previously for markdown syntax
 							(url) => {
@@ -957,14 +1061,9 @@ function renderTable() {
 
 					const lines = ref.notes.split("\n");
 					if (lines.length > 12) {
-						const truncatedLines = lines.slice(0, 5);
-						const truncatedNotes = truncatedLines
-							.join("\n")
-							.replace(/\n/g, "<br />")
-							.replace(
-								/\[([^\]]+)\]\(([^)]+)\)/g, // markdown [label](url) syntax
-								'<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
-							);
+						const truncatedNotes = formatNoteLinks(
+							lines.slice(0, 5).join("\n").replace(/\n/g, "<br />")
+						);
 
 						notesHtml = `
 					<div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
@@ -991,13 +1090,23 @@ function renderTable() {
 							: ref.url
 								? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
 								: "";
+				const refItemId = ref._crId ? ` id="cr-r${ref._crId}"` : "";
 				referencesHtml += `
-						<div class="reference-item">
+						<div class="reference-item"${refItemId}>
 							${refHeader}
 							${notesHtml}
 						</div>
 					`;
 			});
+
+		// Append cross-reference items (from explicit crossReferences and resolved inline links)
+		(tune._resolvedCrossRefs ?? []).forEach((cr) => {
+			const artistLink = cr.artistNames
+				? `<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
+				: "";
+			const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
+			referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}] <span class="badge">(CR)</span></div>`;
+		});
 
 		const metadata = getTuneMetadata(tune)
 			.map((m) => `<span class="badge">${m}</span>`)
@@ -1013,19 +1122,19 @@ function renderTable() {
 		const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
 
 		const title = `<div class="tune-header">
-	  ${
-			hasAbc
-				? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
+  ${
+		hasAbc
+			? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
 		${tune.name}
-	  </a>${
-			Array.isArray(tune.abc) && tune.abc.length > 1
-				? ` - ${tune.abc.length} settings`
-				: ""
-		}`
-				: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
+  </a>${
+		Array.isArray(tune.abc) && tune.abc.length > 1
+			? ` - ${tune.abc.length} settings`
+			: ""
+	}`
+			: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
 		${tune.name}
-	  </div>`
-		}`;
+  </div>`
+	}`;
 
 		const scores = [...tune.scores];
 		if (tune.theSessionId && !hasTheSessionLink) {
