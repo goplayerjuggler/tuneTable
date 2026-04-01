@@ -37,7 +37,12 @@ const COMPOSER_EXTRACTS = [
 const ORIGIN_EXTRACTS = [
   { id: "france", label: "France", match: (o) => /^france/i.test(o) },
   { id: "england", label: "England", match: (o) => /england/i.test(o) },
-  { id: "nordic", label: "Nordic", match: (o) => /^sweden|norway/i.test(o) },
+  {
+    id: "nordic",
+    label: "Nordic",
+    match: (o) => /^sweden|norway/i.test(o),
+    description: "Swedish/Norwegian tunes"
+  },
   { id: "québec", label: "Québec", match: (o) => /qu[eé]bec/i.test(o) }
 ];
 
@@ -329,6 +334,7 @@ export async function buildTuneLists({
     file: "default.json",
     lastUpdate: listLastUpdate(defaultTunes, defaultSetLists),
     count: defaultTunes.length,
+    setListCount: defaultSetLists.length,
     description: "my repertoire plus some tunes I’m interested in",
     default: true
   });
@@ -373,6 +379,7 @@ export async function buildTuneLists({
         file: fileName,
         lastUpdate: listLastUpdate(tunes, setLists),
         count: tunes.length,
+        setListCount: setLists.length,
         description: description,
         category: "groups",
         group
@@ -384,7 +391,7 @@ export async function buildTuneLists({
   }
 
   // Origin-based lists
-  for (const { id, label, match } of ORIGIN_EXTRACTS) {
+  for (const { id, label, match, description } of ORIGIN_EXTRACTS) {
     const tunes = allTunes.filter((t) => t.origin && match(t.origin));
     if (tunes.length === 0) continue;
     const fileName = `origin-${id}.json`;
@@ -395,7 +402,7 @@ export async function buildTuneLists({
         file: fileName,
         lastUpdate: listLastUpdate(tunes, []),
         count: tunes.length,
-        description: `Tunes originating from ${label}`,
+        description: description ?? `Tunes originating from ${label}`,
         category: "origins"
       });
       console.log(`✓ ${fileName} (${tunes.length} tunes)`);
