@@ -1105,7 +1105,7 @@ function renderTable() {
 				? `<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
 				: "";
 			const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
-			referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}] <span class="badge">(CR)</span></div>`;
+			referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}]</div>`;
 		});
 
 		const metadata = getTuneMetadata(tune)
