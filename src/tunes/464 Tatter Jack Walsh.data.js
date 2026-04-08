@@ -15,6 +15,5 @@ fef ded cAB c2 A|dcA GFG Ad^c d3:|
 afd fed cAB cde|dcA GFG Ad^c d3:|`,
 	theSessionId: 1638,
 	parts: "AABB",
-	theSessionSettingId: 46486,
-	contourShift: -1
+	theSessionSettingId: 46486
 };
