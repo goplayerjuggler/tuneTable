@@ -796,8 +796,12 @@ function calculateCrossRefs(tunes) {
 		(tune.crossReferences ?? []).forEach((cr) => {
 			const target = resolveTuneById(cr);
 			if (!target) return;
+
 			const refIndex = cr.index ?? 0;
-			const ref = target.references?.[refIndex];
+			const ref = //target.references?.[refIndex];
+				(target.referencesFromAbc ?? []).concat(target.references ?? [])?.[
+					refIndex
+				];
 			if (!ref) return;
 
 			target._isCrTarget = true;
@@ -1032,8 +1036,8 @@ function renderTable() {
 
 		let referencesHtml = "",
 			hasTheSessionLink = false;
-		(tune.references ?? [])
-			.concat(tune.referencesFromAbc ?? [])
+		(tune.referencesFromAbc ?? [])
+			.concat(tune.references ?? [])
 			.forEach((ref, refIndex) => {
 				let notesHtml = "";
 				if (ref.notes) {
