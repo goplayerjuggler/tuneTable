@@ -11,7 +11,7 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
 	rhythm: "reel",
 	references: [
 		{
-			notes: "Compare with The Bucks Of Oranmore"
+			notes: "Compare with [The Bucks Of Oranmore](theSessionId=2)"
 		},
 		{
 			artists: "Tony MacMahon, accordion; Noel Hill, concertina",

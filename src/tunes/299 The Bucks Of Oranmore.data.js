@@ -11,7 +11,7 @@ dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
 	rhythm: "reel",
 	references: [
 		{
-			notes: "Compare with Lucy Campbell"
+			notes: "Compare with [Lucy Campbell](theSessionId=1552)"
 		},
 		{
 			artists: "Stockton’s Wing",

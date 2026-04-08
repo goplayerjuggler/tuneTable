@@ -5,7 +5,7 @@ T:The Swaggering Jig
 R:slip jig
 L:1/8
 M:9/8
-N:1. It’s interesting to compare this with Na Ceannabháin Bhána,
+N:1. It’s interesting to compare this with [Na Ceannabháin Bhána](theSessionId=612),
 N:which has a similar contour.
 N:2. Imported into *tuneTable* on 2025-10-31,
 N:from https://thesession.org/tunes/661#setting661
