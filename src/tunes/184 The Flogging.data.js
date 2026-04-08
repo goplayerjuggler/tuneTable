@@ -13,7 +13,7 @@ BG~G2 BGcG BG~G2 Bdgd|BG~G2 BdcB`,
 	references: [
 		{
 			notes:
-				"For an amazing Tony MacMahon / Noel Hill setting/rendition, see my note for Lucy Campbell – starting around 06:27"
+				"For an amazing Tony MacMahon / Noel Hill setting/rendition, see my note for [Lucy Campbell](theSessionId=1552) – starting around 06:27"
 		}
 	]
 };

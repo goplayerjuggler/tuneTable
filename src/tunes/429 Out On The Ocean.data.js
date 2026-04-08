@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	parts: "AABB",
 	abc: `X:1
 T:Out On The Ocean
 R:jig
