@@ -71,9 +71,11 @@ function processTuneData(tune) {
 		if (tune.incipit && !processed.abc) {
 			const abcMeta = getMetadata(tune.incipit);
 			updateFromMetadata(abcMeta, processed, false);
-			processed.incipit = getFirstBars(tune.incipit, 4, true, false, {
-				all: true
-			});
+			processed.incipit =
+				//  getFirstBars(tune.incipit, 4, true, false, {
+				// 	all: true
+				// });
+				getIncipit(tune.incipit);
 		} else if (tune.abc) {
 			if (typeof tune.abc === "string") {
 				const firstX = tune.abc.indexOf("X:");
