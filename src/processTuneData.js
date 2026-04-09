@@ -4,7 +4,6 @@ import {
 	getIncipitForContourGeneration,
 	normaliseKey,
 	getKey,
-	getFirstBars,
 	getMetadata,
 	getTunes
 } from "@goplayerjuggler/abc-tools";

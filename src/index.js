@@ -2,8 +2,9 @@
 import "./styles.css";
 import {
 	normaliseKey,
-	sort as contourSort,
-	contourToSvg
+	sort as sortTunesArray,
+	contourToSvg,
+	sortConstants
 } from "@goplayerjuggler/abc-tools";
 
 import { processTuneData } from "./processTuneData.js";
@@ -24,11 +25,9 @@ import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 // Legacy key kept for one-time cleanup only
 const storageKey = "tunesData";
 const CURRENT_LIST_KEY = "currentTuneList";
+let currentSortType = sortConstants.PREDEFINED_SORT_NAMES[0];
+let currentSortIndex = 0;
 
-const getEmptySort = () => {
-	return { column: null, direction: "asc" };
-};
-let currentSort = getEmptySort();
 let editModal,
 	getAbcModal,
 	addTunesModal,
@@ -519,7 +518,7 @@ function updateFooter() {
 		` (${currentListState.source}; ${counts})` +
 		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
-		`&bull; <button id="footer-list-link">tune lists</button>`;
+		`&bull; <button id="footer-list-link">tune lists</button><br/>Tunes sorted by: “${currentSortType}”`;
 	document
 		.getElementById("footer-list-link")
 		?.addEventListener("click", (e) => {
@@ -829,7 +828,7 @@ function calculateCrossRefs(tunes) {
 }
 
 function sortWithDefaultSort() {
-	contourSort(window.tunesData);
+	sortTunesArray(window.tunesData, { predefinedSort: currentSortType });
 }
 
 function openTheSessionImport(e, dropdown, howToOpen) {
@@ -1319,52 +1318,59 @@ function filterByName(searchTerm) {
 	renderTable();
 }
 
-function sortData(column) {
-	if (currentSort.column === column) {
-		currentSort.direction =
-			currentSort.direction === "asc"
-				? "desc"
-				: currentSort.direction === "desc"
-					? "default"
-					: "asc";
+function sortData() {
+	if (currentSortIndex < sortConstants.PREDEFINED_SORT_NAMES.length - 1) {
+		currentSortIndex++;
 	} else {
-		currentSort.column = column;
-		currentSort.direction = "asc";
+		currentSortIndex = 0;
 	}
+	currentSortType = sortConstants.PREDEFINED_SORT_NAMES[currentSortIndex];
+	// if (currentSort.column === column) {
+	// 	currentSort.direction =
+	// 		currentSort.direction === "asc"
+	// 			? "desc"
+	// 			: currentSort.direction === "desc"
+	// 				? "default"
+	// 				: "asc";
+	// } else {
+	// 	currentSort.column = column;
+	// 	currentSort.direction = "asc";
+	// }
 
-	if (currentSort.direction === "default") {
-		contourSort(window.filteredData);
+	// if (currentSort.direction === "default") {
+	// 	contourSort(window.filteredData);
 
-		document.querySelectorAll("th").forEach((th) => {
-			th.classList.remove("sort-asc", "sort-desc");
-		});
-		applyFilters();
-		return;
-	}
+	// 	document.querySelectorAll("th").forEach((th) => {
+	// 		th.classList.remove("sort-asc", "sort-desc");
+	// 	});
+	// 	applyFilters();
+	// 	return;
+	// }
 
-	const collator = new Intl.Collator("en", { sensitivity: "base" }),
-		compare = (a, b) => {
-			if (typeof a === "string" && typeof b === "string") {
-				return (
-					(currentSort.direction === "asc" ? -1 : 1) * collator.compare(a, b)
-				);
-			}
-			if (a < b) return currentSort.direction === "asc" ? -1 : 1;
-			if (a > b) return currentSort.direction === "asc" ? 1 : -1;
-			return 0;
-		};
-	window.filteredData.sort((a, b) => compare(a[column], b[column]));
+	// const collator = new Intl.Collator("en", { sensitivity: "base" }),
+	// 	compare = (a, b) => {
+	// 		if (typeof a === "string" && typeof b === "string") {
+	// 			return (
+	// 				(currentSort.direction === "asc" ? -1 : 1) * collator.compare(a, b)
+	// 			);
+	// 		}
+	// 		if (a < b) return currentSort.direction === "asc" ? -1 : 1;
+	// 		if (a > b) return currentSort.direction === "asc" ? 1 : -1;
+	// 		return 0;
+	// 	};
+	// window.filteredData.sort((a, b) => compare(a[column], b[column]));
 
-	document.querySelectorAll("th").forEach((th) => {
-		th.classList.remove("sort-asc", "sort-desc");
-	});
+	// document.querySelectorAll("th").forEach((th) => {
+	// 	th.classList.remove("sort-asc", "sort-desc");
+	// });
 
-	const currentTh = document.querySelector(`th[data-column="${column}"]`);
-	currentTh?.classList?.add(
-		currentSort.direction === "asc" ? "sort-asc" : "sort-desc"
-	);
-
+	// const currentTh = document.querySelector(`th[data-column="${column}"]`);
+	// currentTh?.classList?.add(
+	// 	currentSort.direction === "asc" ? "sort-asc" : "sort-desc"
+	// );
+	sortTunesArray(window.filteredData, { predefinedSort: currentSortType });
 	renderTable();
+	updateFooter();
 }
 
 // -- DOMContentLoaded ---------------------------------------------------------
@@ -1391,7 +1397,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 	document.querySelectorAll("th.sortable").forEach((th) => {
 		th.addEventListener("click", function () {
-			sortData(this.dataset.column);
+			//sortData(this.dataset.column);
+			sortData();
 		});
 	});
 
