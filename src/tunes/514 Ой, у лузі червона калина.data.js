@@ -2,7 +2,7 @@ export default {
 	parts: "ABB",
 	groups: "alora",
 	tags: "crooked",
-	ttId: 513,
+	ttId: 514,
 	abc: `
 X:1
 T:Ой, у лузі червона калина
@@ -32,9 +32,9 @@ N:1. I added some chords - just a rough outline.
 N:2. More work is needed here to transcribe the backing vocal line.
 M:2/2
 L:1/8
-K:Gmin
-"Gm"G2G2 B3G | "D"ABAG ^F2D2|"Gm"G3A "Dm"B2A2 | "Gm"G4z4|
-"Gm"G2G2 "Gm(Cm)"c3G | "D"BAG^F "Gm"G2D2|[M:3/2]"Gm"G3A "Dm"B2A2 "F"(G2F)z||
-|:[M:2/2]"Bb"B2d2f3=e|[M:3/2]"Bb"fgfe dcde "D"dcBA |
-[M:2/2]"Gm"G2B2 d3c|"Gm"dedc BAGB |1 [M:5/4]"Cm"d2c2 "Dm/F"BA "Gm"G2 F2 :|2 [M:7/4]"Cm"d2c2 "Dm/F"BA "Gm"G4 z4 |]`
+K:Dmin
+"Dm"D2D2 F3D | "A"EFED ^C2A,2|"Dm"D3E "Am"F2E2 | "Dm"D4z4|
+"Dm"D2D2 "Dm(Gm)"G3D | "A"FED^C "Dm"D2A,2|[M:3/2]"Dm"D3E "Am"F2E2 "C"(D2C)z||
+|:[M:2/2]"F"F2A2c3=B|[M:3/2]"F"cdcB AGAB "A"AGFE |
+[M:2/2]"Dm"D2F2 A3G|"Dm"ABAG FEDF |1 [M:5/4]"Gm"A2G2 "Am/C"FE "Dm"D2 C2 :|2 [M:7/4]"Gm"A2G2 "Am/C"FE "Dm"D4 z4 |]`
 };
