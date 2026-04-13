@@ -209,8 +209,15 @@ function getFirstAbc({ abc, incipit } = {}) {
 }
 
 /** Returns a copy of a tune with build-time-only properties removed. */
-// eslint-disable-next-line no-unused-vars
-function sanitizeTune({ groups, excludeFromDefault, _fileDate, ...tune }) {
+function sanitizeTune({
+  // eslint-disable-next-line no-unused-vars
+  groups,
+  // eslint-disable-next-line no-unused-vars
+  excludeFromDefault,
+  // eslint-disable-next-line no-unused-vars
+  metadataFromAbc,
+  ...tune
+}) {
   return tune;
 }
 
@@ -245,7 +252,7 @@ const setListDate = (sl) => sl.dateModified?.split("T")[0];
  * constituent tune file dates and set list modification dates.
  */
 const listLastUpdate = (tunes, setLists) =>
-  maxDate(...tunes.map((t) => t._fileDate), ...setLists.map(setListDate));
+  maxDate(...tunes.map((t) => t.fileDate), ...setLists.map(setListDate));
 
 // ─── Main export ──────────────────────────────────────────────────────────────
 
@@ -294,9 +301,9 @@ export async function buildTuneLists({
       );
     }
     allTunes.push({
-      ...metadata,
+      metadataFromAbc: metadata,
       ...tune,
-      _fileDate: dateMap.get(path.basename(file))
+      fileDate: dateMap.get(path.basename(file))
     });
   }
 
@@ -402,7 +409,9 @@ export async function buildTuneLists({
 
   // Origin-based lists
   for (const { id, label, match, description } of ORIGIN_EXTRACTS) {
-    const tunes = allTunes.filter((t) => t.origin && match(t.origin));
+    const tunes = allTunes.filter(
+      (t) => t.metadataFromAbc?.origin && match(t.metadataFromAbc?.origin)
+    );
     if (tunes.length === 0) continue;
     const fileName = `origin-${id}.json`;
     if (await writeList(fileName, tunes)) {
@@ -421,7 +430,9 @@ export async function buildTuneLists({
 
   // Composer-based lists
   for (const { id, label, match } of COMPOSER_EXTRACTS) {
-    const tunes = allTunes.filter((t) => t.composer && match(t.composer));
+    const tunes = allTunes.filter(
+      (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
+    );
     if (tunes.length === 0) continue;
     const fileName = `composer-${id}.json`;
     if (await writeList(fileName, tunes)) {
