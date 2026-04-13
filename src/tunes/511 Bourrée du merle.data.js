@@ -4,7 +4,7 @@ export default {
 	abc: `
 X:1
 T:Bourrée du merle
-R:Bourrée
+R:Bourrée à trois temps
 O:France;Limousin;Corrèze.
 S:Clémence Cognet, violon ; Noëllie Nioulou, violoncelle
 D:Les poufs à cordes / La Trotteuse (2013)

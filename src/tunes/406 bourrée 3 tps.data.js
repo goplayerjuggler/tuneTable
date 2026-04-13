@@ -2,7 +2,8 @@ export default {
 	tags: "pas carrée",
 	parts: "AABB",
 	abc: `X: 1
-R:Bourrée à 3 temps
+T:Bourrée à trois temps
+R:Bourrée à trois temps
 O:France; Massif central.
 M:3/8
 L:1/8

@@ -7,6 +7,8 @@ M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2918#setting2918
 N:Setting entered in thesession by user “Erik-Fiddler” on 2004-04-28
+N:---
+N:This tune is based on [The Glenlivet](theSessionId=11206)
 K:Amajor
 |:A,>EC>E (3D/D/D/D F>D|E>Ac>A B<B, B,2| ~A,2 A,>E (3D/D/D/D F>D |1 E>BG>B c<A A2:|2 E>BG>B c<A ||
  (3Ace||a>e (3fga e>Ac>A|d2 (3cdc B<B, B,2| a>ef>a e>Ac>A| E>BG>B c<A (3Ace|

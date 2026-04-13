@@ -3,7 +3,7 @@ export default {
 	parts: "AABB",
 	abc: `X:2
 T:La Giate de Coualhon
-R:Bourrée à 3 temps
+R:Bourrée à trois temps
 O:France; Auvergne.
 Z:Malcolm Schonfield, 2023-04-02
 Q:3/8=90

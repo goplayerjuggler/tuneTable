@@ -2,7 +2,7 @@ export default {
 	abc: `X: 1
 T:La Vicoise
 O:France; Auvergne.
-R: Bourrée à 3 temps
+R: Bourrée à trois temps
 M:3/8
 L:1/16
 K:C
