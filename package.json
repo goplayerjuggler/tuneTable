@@ -9,8 +9,22 @@
     "dev:local": "webpack serve --mode development --env localAbcTools",
     "build": "webpack --mode production"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "abc-notation",
+    "folk-music",
+    "graphical-score",
+    "irish",
+    "french",
+    "scandinavian",
+    "québec",
+    "melody",
+    "modal",
+    "music",
+    "traditional-music",
+    "tune",
+    "library",
+    "the-session"
+  ],
   "description": "",
   "license": "SEE LICENSE IN LICENSE-CODE AND LICENSE-DATA",
   "licenses": [
@@ -32,7 +46,7 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "1.1.0",
+    "@goplayerjuggler/abc-tools": "1.1.1",
     "abcjs": "6.6.0"
   },
   "devDependencies": {

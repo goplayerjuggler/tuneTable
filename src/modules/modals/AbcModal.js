@@ -1,14 +1,8 @@
 import {
 	canDoubleBarLength,
 	canHalveBarLength,
-	convertStandardHornpipe,
-	convertStandardJig,
-	convertStandardPolka,
-	convertStandardReel,
-	convertToStandardHornpipe,
-	convertToStandardJig,
-	convertToStandardPolka,
-	convertToStandardReel
+	convertStandardTune,
+	convertToStandardTune
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
@@ -380,38 +374,9 @@ export default class AbcModal extends Modal {
 	}
 
 	changeBarLength(direction) {
-		const r = this.tune.rhythm;
 		let newAbc = "";
-		if (direction === 1)
-			switch (r) {
-				case "reel":
-					newAbc = convertStandardReel(this.currentTuneAbc);
-					break;
-				case "jig":
-					newAbc = convertStandardJig(this.currentTuneAbc);
-					break;
-				case "polka":
-					newAbc = convertStandardPolka(this.currentTuneAbc);
-					break;
-				case "hornpipe":
-					newAbc = convertStandardHornpipe(this.currentTuneAbc);
-					break;
-			}
-		else
-			switch (r) {
-				case "reel":
-					newAbc = convertToStandardReel(this.currentTuneAbc);
-					break;
-				case "jig":
-					newAbc = convertToStandardJig(this.currentTuneAbc);
-					break;
-				case "polka":
-					newAbc = convertToStandardPolka(this.currentTuneAbc);
-					break;
-				case "hornpipe":
-					newAbc = convertToStandardHornpipe(this.currentTuneAbc);
-					break;
-			}
+		if (direction === 1) newAbc = convertStandardTune(this.currentTuneAbc);
+		else newAbc = convertToStandardTune(this.currentTuneAbc);
 		if (newAbc) {
 			this.currentTuneAbc = newAbc;
 			this.currentPage = 0;
