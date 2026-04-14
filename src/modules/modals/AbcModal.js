@@ -290,17 +290,12 @@ export default class AbcModal extends Modal {
 							!line.startsWith("N:") &&
 							!line.startsWith("S:") &&
 							!line.startsWith("D:") &&
-							!line.startsWith("Z:")
+							!line.startsWith("Z:") &&
+							!line.startsWith("H:")
 					)
 					/*
-					extension, for handling `+:` line continuations:
-					
-					.filter((line, i, arr) =>
-    !["N:", "S:", "D:", "Z:"].some(f => line.startsWith(f)) &&
-    !(line.startsWith("+:") && i > 0 &&
-      ["N:", "S:", "D:", "Z:"].some(f => arr[i - 1].startsWith(f)))
-	  todo: move to abc-tools
-)
+					 `+:` line continuations aren't handled
+					  todo: move to abc-tools
 					*/
 					.join("\n"),
 				abcOptions
