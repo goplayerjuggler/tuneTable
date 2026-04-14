@@ -698,7 +698,8 @@ export default {
 					name: "Christmas Eve set",
 					tunes: [
 						{
-							theSessionId: 440
+							theSessionId: 440,
+							x: 2
 						},
 						{
 							theSessionId: 1555

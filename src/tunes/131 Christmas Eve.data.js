@@ -1,6 +1,6 @@
 export default {
 	abc: [
-		`X: 14
+		`X: 1
 T: Christmas Eve
 T: version as of 2025-12-05
 C:Tommy Coen
@@ -16,7 +16,7 @@ K: Gmaj
 "G/B"BGBd ~e3g "C"abge g2eg |"C"abge ~d3B "D"ABGE G2:| 
 |:dc|"G/B"B~G3 BGBd "C"e~g3 egdc|"G"B~G3 DGBG "Am"EAAG A2dc|
 "G/B"B~G3 BGBd "C"e~g3 g3a|"C"bgaf gedB "D"ABGF G2:|`,
-		`X: 14
+		`X: 2
 T: Christmas Eve
 T: version as of 2025-12-01
 C:Tommy Coen
@@ -32,7 +32,7 @@ K: Gmaj
 "G/B"BGBd ~e3g "C"abge g2eg |"D"abge ~d3B "D"ABGE G2:| 
 |:dc|"G/B"B~G3 D2Bd "C"e~g3 egdc|"G"B~G3 DGBG "Am"E~A3 F~A3|
 "G/B"B~G3 BGBd "C"e~g3 g3a|"D"bgaf gedB "G"ABGF G2:|`,
-		`X: 14
+		`X: 3
 T: Christmas Eve
 T: version with rolls; 2025-11-13
 Z:abc-transcription Malcolm Schonfield% 2025-11-13
@@ -47,7 +47,7 @@ K: Gmaj
 BG (3Bcd ~e3g abge g2eg | abge ~d3B ABGE G2:| 
 |:dc|B~G3 BGBd e~g3 egdc|B~G3 DGBG E~A3 A2dc|
 B~G3 BGBd e~g3 g3a|bgaf gedB ABGE G2:|`,
-		`X: 14
+		`X: 4
 T: Christmas Eve
 R: reel
 M: 4/4
