@@ -5,6 +5,8 @@ import PrintPreviewModal from "./PrintPreviewModal.js";
 import { getIncipit } from "@goplayerjuggler/abc-tools";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 
+import { findTuneByEntry } from "../setUtils.js";
+
 /**
  * Build a short human-readable label for one setting within tune.abc.
  * For thesession settings, extracts setting ID, contributor name, date, and key
@@ -52,27 +54,6 @@ function resolveTuneId(tune, onError) {
 		`"${tune.name}" has no external or internal ID and can't be added to a set list.`
 	);
 	return null;
-}
-
-/**
- * Look up a tune in the full tunesData array using the ID fields stored in a set-list entry.
- * @param {object} entry - set-list tune entry (theSessionId, norbeckId, itiId, fwId, or ttId)
- * @param {object[]} tunesData
- * @returns {object|undefined}
- */
-function findTuneByEntry(entry, tunesData) {
-	return tunesData.find((t) => {
-		if (entry.theSessionId) return t.theSessionId === entry.theSessionId;
-		if (entry.norbeckId)
-			return (
-				t.norbeckId === entry.norbeckId &&
-				(t.norbeckR === entry.norbeckR || t.rhythm === entry.norbeckR)
-			);
-		if (entry.itiId) return t.itiId === entry.itiId;
-		if (entry.fwId) return t.fwId === entry.fwId;
-		if (entry.ttId) return t.ttId === entry.ttId;
-		return false;
-	});
 }
 
 /** Generate a simple unique ID (timestamp + random suffix). */
