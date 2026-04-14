@@ -18,5 +18,6 @@ K:G
 "G" [DB]3[DB] [Dc]2[Dc]2 [DB]2[DB]2 |"D7"A2d2 d8|"G"G2AB "C"cdcA "G" BcBG|"D7"ABAF "G"G8 ||
 "Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"ABAF D8|
 "Em" [EB]3[EB] [Ec]2[Ec]2 [EB]2[EB]2|"D7"A2d2 d8|"G" G2AB "C" cdcA "G" BcBG|"D7"ABAF "G" G8|]
-`
+`,
+	fwId: 96
 };

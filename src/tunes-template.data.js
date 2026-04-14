@@ -677,7 +677,7 @@ export default {
 			name: "ALORA sets",
 			groups: "ALORA",
 			dateCreated: "2026-02-19T01:51:52.087Z",
-			dateModified: "2026-02-24T00:52:35.766Z",
+			dateModified: "2026-04-14T00:00:00.000",
 			sets: [
 				{
 					name: "Polkas d’après Jason O’Rourke",
@@ -750,6 +750,21 @@ export default {
 						},
 						{
 							theSessionId: 441
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Silver spire",
+					tunes: [
+						{
+							theSessionId: 240
+						},
+						{
+							theSessionId: 234
+						},
+						{
+							theSessionId: 471
 						}
 					],
 					collapsed: true

@@ -13,13 +13,12 @@ F:https://open.spotify.com/track/6ByfgYv6SKGJbf8EQk0z3s
 F:https://music.youtube.com/watch?v=XIVMg8-OI2A&t=134
 R: barndance
 N: Played in F, or maybe D minor, by Talty & Begley. This version
-N: transposes it up a third.
+N: transposes it up a tone.
 M: 4/2
 L: 1/8
-K: A
-|:"F#m"c2-!>!cc .c2c2 "D"BcBA F2 E"<("">)"F|"A"A2-!>!Ac e2 ce "D"f2ec "E"B2 AB|
-"F#m"c2-cc .c2c2 "D"BcBA F2 E"<("">)"F|"A"A2-Ac efec  "E"B2 .A2 [1 "A"A2-AB:| [2 "A"A2-Ac||
-|:"A"e2-ee .e2 e2 BccB ABce|"D"f2-ff .f2 f2 "A"BccB ABcd|
-e2-ee .e2 e2 BccB ABce     |"D"a2 af "E"ecBe  "A"c2 .A2 [1 A2 Ac:| [2 A2 AB||
-`
+K: G
+|:"Em"B2-!>!BB .B2B2 "C"ABAG E2 D"<("">)"E|"G"G2-!>!GB d2 Bd "C"e2dB "D"A2 GA|
+"Em"B2-BB .B2B2 "C"ABAG E2 D"<("">)"E|"G"G2-GB dedB  "D"A2 .G2 [1 "G"G2-GA:| [2 "G"G2-GB||
+|:"G"d2-dd .d2 d2 ABBA GABd|"C"e2-ee .e2 e2 "G"ABBA GABc|
+d2-dd .d2 d2 ABBA GABd     |"C"g2 ge "D"dBAd  "G"B2 .G2 [1 G2 GB:| [2 G2 GA||`
 };
