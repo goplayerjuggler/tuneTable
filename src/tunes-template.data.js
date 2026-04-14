@@ -768,6 +768,19 @@ export default {
 						}
 					],
 					collapsed: true
+				},
+				{
+					name: "French mazurkas",
+					tunes: [
+						{
+							ttId: 471,
+							x: 2
+						},
+						{
+							ttId: 516
+						}
+					],
+					collapsed: true
 				}
 			]
 		}
