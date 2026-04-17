@@ -4,7 +4,7 @@ export default {
 	abc: `
 X:1
 T:Bourrée du merle
-R:Bourrée à trois temps
+R:Bourrée à 3 temps
 O:France;Limousin;Corrèze.
 S:Clémence Cognet, violon ; Noëllie Nioulou, violoncelle
 D:Les poufs à cordes / La Trotteuse (2013)
@@ -21,7 +21,7 @@ N: With this pickup effect, there's a stress on bar nb 2 rather than on
 N: bar nb 1, which creates a sort of a tension and makes the tune
 N: particularly interesting/special.
 N:2. Many years ago I was taught this tune by the fiddler Basile Brémaud, 
-N: in a workshop. I find it a tough tune to play nicely.
+N: in a workshop. I found it a tough tune to play nicely.
 N:3. There’s another, different bourrée à trois temps that goes by the
 N: same name.
 N:4. I put this as AABB’ but it could also be written AABC, or AAB with 

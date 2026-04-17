@@ -12,5 +12,13 @@ K:Gmajor
 |:BcB BAB c3|BAG B/c/dB ABc|BAG B/c/dB c2e|1 dBG GAF G2A:|2 dBG GAF GB/^c/d||
  g3 ed=c Bcd|ecA ABG A2d|~g3 edc Bcd|gdB G/A/BA GB/^c/d|
  g3 ed=c Bcd|ecA ABG A2d|def gfe def|g/a/bg agf ged||`,
-	theSessionId: 1550
+	theSessionId: 1550,
+	references: [
+		{
+			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=6",
+			notes: "Redicans mother; Humours of Derrycrossane; Sir Philip McHugh",
+			artists:
+				"Paddy O'Brien, accordion; Eileen O'Brien, fiddle; Dan Larkin, fiddle; Jody Larkin, piano"
+		}
+	]
 };

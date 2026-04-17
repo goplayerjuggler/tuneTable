@@ -2,8 +2,7 @@ export default {
 	abc: `
 X: 1
 T: Tommy Potts' Rampling Pitchfork
-%T: As played by Jimmy Power
-%C: Tommy Potts
+C: Tommy Potts
 S: Jimmy Power, fiddle
 D: Irish Fiddle Player
 F: https://music.youtube.com/watch?v=JCoioqMwFU0
@@ -26,10 +25,9 @@ d2g fed ecA EFG |  F/F/GA ABG AFD [1 [A2D2]A:|
 [2 [P:D] D2e |: (fef) ecA BAB AFD | (GFG) A2g fed cAG |
 ^FDD ADD CDD A,DD | (GFG) ABG AFD [1 D2e :| [2 D2!D.S.! |]
 `,
-	theSessionId: 2329,
 	references: [
 		{
-			notes: `1. The session tune, referenced in thessession.org (ID 2329), is IMO a different tune, albeit with a close family relationship to this one. 
+			notes: `1. A [much more commonly-played setting](theSessionId=89) is IMO a different tune, albeit with a close family relationship to this one.
 2. I also give here [another Tommy Potts-inspired setting in three parts (Paddy O’Brien & Nathan Gourley)](ttId=512).`
 		}
 	],

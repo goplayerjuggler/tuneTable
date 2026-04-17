@@ -14,5 +14,12 @@ K:Aminor
   gedc dfed cAGE|G2EG|A2cA ABcd ecdB cAA2|`,
 	theSessionId: 21,
 	parts: "AABB",
-	norbeckId: 118
+	norbeckId: 118,
+	references: [
+		{
+			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=5",
+			artists:
+				"Brian Conway, fiddle; Rose Clancy, fiddle; Martin Wynne, fiddle; Joe Madden, accordion; Felix Dolan, piano; Kevin Killeen, piano accordion"
+		}
+	]
 };

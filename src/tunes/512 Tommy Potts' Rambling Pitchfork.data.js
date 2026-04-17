@@ -3,10 +3,9 @@ export default {
 	ttId: 512,
 	abc: `
 X: 1
-T:The Rambling Pitchfork
-%T: Tommy Potts' Rambling Pitchfork
-%C: Tommy Potts
-%T: As played by Paddy O'Brien and Nathan Gourley
+%T:The Rambling Pitchfork
+T: Tommy Potts' Rambling Pitchfork
+C: Tommy Potts
 S: Paddy O’Brien, accordion; Nathan Gourley, fiddle
 D: Bright And Early
 N: The Ballykeale / The Rambling Pitchfork 
@@ -34,6 +33,9 @@ FDD ADD CDD A,DF | G2A BAG AFC D2 !D.C.! |]`,
 	crossReferences: [
 		{
 			ttId: 513
+		},
+		{
+			ttId: 521
 		}
 	]
 };

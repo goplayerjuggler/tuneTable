@@ -15,5 +15,17 @@ K:Dmajor
 |:e|"D"faab afdf "G"aafd edBd|"D"ABde fddd "A"edfd edBd|
 "D"ABde fddd "G"edfd edBd|"D"ABdB AFFG "A"AFEG "D"FDD:|`,
 	theSessionId: 2881,
-	theSessionSettingId: 47359
+	theSessionSettingId: 47359,
+	references: [
+		{
+			notes:
+				"see [Lad O'Beirne’s](theSessionId=4551) for a setting in C by John Daly on fiddle."
+		},
+		{
+			url: "https://www.youtube.com/watch?v=fDGaQFttxHE",
+			artists: "Mike Rafferty, tin whistle; Mary Rafferty, tin whistle",
+			notes:
+				"Devanney's goat; Eddie Moloney's / recorded by Terry Rafferty, Eagle Tavern, New York, 21 July 1989"
+		}
+	]
 };
