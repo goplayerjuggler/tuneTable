@@ -724,7 +724,8 @@ function getTuneMetadata(tune) {
 		tune.key,
 		...composer,
 		...origin,
-		...tags
+		...tags,
+		tune.structure
 	].filter((m) => m);
 }
 
