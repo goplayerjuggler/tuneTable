@@ -22,15 +22,14 @@ O:France, Auvergne.
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R:Bourrée à 3 temps
-S:Mme Fauret
+S:Simone Fauret, chant
 F:https://lafeuilleamta.fr/wp-content/uploads/2013/02/01-Bourr%C3%A9e-%C3%A0-Chandezon.mp3
 N:1. Une version chantée, avec des pauses, ou respirations, comme on voit 
 N: souvent avec le chant. Pour moi ces pauses sont très intéressantes ; 
 N: elles donnent des infos précieuses sur le phrasé. La mélodie est aussi 
 N: légèrement différente de la version « standard ».
-N:2. Mme Fauret – nièce du violoneux « Le Pijat ».
-N:3. Enregistrement collecté par Jean-Claude Rieu à Issoire en 1994.
-N:4. Chanté 3 fois ; la première fois en « 7+3 ; 3+4+4 », et les 2 
+N:2. Enregistrement collecté par Jean-Claude Rieu à Issoire en 1994.
+N:3. Chanté 3 fois ; la première fois en « 7+3 ; 3+4+4 », et les 2 
 N:autres fois en « 8+3 ; 3+4+4 » (ajout de pause au mileu du A).
 M:3/8
 L:1/8
@@ -39,7 +38,6 @@ geg | g2e | dcd/e/ | dcd | dcd/e/ | dce | gd2 | geg | g2e | dc2 ||
 def | e2d | g3 | def | e2d | cgf | ed2 | def | e2d | c3 | z3 ||
 |: geg | g2e | dcd/e/ | dcd | dcd/e/ | dce | gd2 | z3 | geg | g2e | dc2 ||
 def | e2d | g3 | def | e2d | cgf | ed2 | def | e2d | c3 | z3 :|
-
 `,
 	references: [
 		{
@@ -72,7 +70,7 @@ La bourrée à Chandezon commence vers 1:55 ; c’est une adapatation personnell
 
 Voir l’entretien cité dans la référence précédente pour des éclaricissements très intéressants.
 
-J’aime beaucoup cet album. De la créativité et de la recherche dans un langage distinctif. Des idées musicales foisonnent, avec de temps en temps des sons et bruitages inattendus et plaisants.`
+J’aime beaucoup cet album. De la créativité et de la recherche, dans un langage distinctif. Des idées musicales foisonnent, avec de temps en temps des sons et bruitages inattendus et plaisants.`
 		}
 	]
 };
