@@ -18,7 +18,6 @@ K:C
 ded | c2d | .ed2 | c/d/ef | e2d | c3 | 
 ded | c/B/AG | "<("">)"B/c/d2 | ded |  c2 ||
  |: d | c/d/ef | e2d | c/B/cd | ed2 | c/d/ef | e2d |1  c2  :|2  c3 ||
-% segue: 535 | 5-3 .. (la bourrée à Chandezon)
 `,
 	structure: "6+5; 2.7"
 };
