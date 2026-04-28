@@ -9,7 +9,7 @@ S:Liam O'Flynn, uilleann pipes; Arty McGlynn, guitar; Rod McVey, keyboards
 N:Allistrum's march / Paddy whack
 M: 12/8
 L: 1/8
-K: Dmix
+K: G
 B2G AGF G2g fdc|B2G AGF Ggf d2c|`,
 	theSessionId: 6188,
 	parts: "AABB"
