@@ -138,7 +138,7 @@ export default class AbcModal extends Modal {
 		// Pagination state
 		this.currentPage = 0;
 		this.allSvgs = [];
-		this.LINES_PER_PAGE = 11;
+		this.LINES_PER_PAGE = 12;
 
 		// Ensure rendered view is shown
 		this.elements.rendered.style.display = "block";
