@@ -4,6 +4,8 @@ export default {
 	abc: `X:1
 T: Cucanandy
 R:hop jig
+Z:abc-transcription Malcolm Schonfield
+N:I adapted this from a score on thesession. The chords are just a sketch.
 M:9/8
 L:1/8
 K: G
