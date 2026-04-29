@@ -1,4 +1,6 @@
 export default {
+	parts: "AABB",
+	groups: "alora",
 	abc: [
 		`X:1
 T:The Boys Of Ballisodare

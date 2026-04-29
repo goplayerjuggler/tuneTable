@@ -677,7 +677,7 @@ export default {
 			name: "ALORA sets",
 			groups: "ALORA",
 			dateCreated: "2026-02-19T01:51:52.087Z",
-			dateModified: "2026-04-14T00:00:00.000",
+			dateModified: "2026-04-29T00:00:00.000",
 			sets: [
 				{
 					name: "Polkas d’après Jason O’Rourke",
@@ -778,6 +778,34 @@ export default {
 						},
 						{
 							ttId: 516
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Hop jigs - Top The Candle",
+					tunes: [
+						{
+							theSessionId: 10116,
+							x: 1
+						},
+						{
+							theSessionId: 268
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Hop jigs - Boys of Ballosodare",
+					tunes: [
+						{
+							theSessionId: 1340
+						},
+						{
+							theSessionId: 1492
+						},
+						{
+							theSessionId: 1374
 						}
 					],
 					collapsed: true
