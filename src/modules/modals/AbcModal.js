@@ -291,6 +291,7 @@ export default class AbcModal extends Modal {
 							!line.startsWith("S:") &&
 							!line.startsWith("D:") &&
 							!line.startsWith("Z:") &&
+							!line.startsWith("R:") &&
 							!line.startsWith("H:")
 					)
 					/*
