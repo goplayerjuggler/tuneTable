@@ -796,7 +796,31 @@ export default {
 					collapsed: true
 				},
 				{
-					name: "Hop jigs - Boys of Ballosodare",
+					name: "Boys Of Ballisodare set - 3 hop jigs",
+					tunes: [
+						{
+							theSessionId: 1340
+						},
+						{
+							theSessionId: 1492
+						},
+						{
+							theSessionId: 1374
+						}
+					],
+					collapsed: true
+				}
+			]
+		},
+		{
+			id: "1777487795486-cm14l",
+			groups: "default",
+			name: "Hop jigs: Ballisodare, JK's, Cucanandy",
+			dateCreated: "2026-04-29T18:36:35.486Z",
+			dateModified: "2026-04-29T18:38:05.792Z",
+			sets: [
+				{
+					name: "Boys Of Ballisodare set - 3 hop jigs",
 					tunes: [
 						{
 							theSessionId: 1340
