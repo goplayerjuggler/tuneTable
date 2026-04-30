@@ -52,16 +52,16 @@ it leaves — keeping memory constant regardless of scroll position.
 
 Two IntersectionObservers per render pass:
   rowObserver      (rootMargin "1000px") — adds rows to the buffer queue as
-                   they approach the viewport; removes and destroys on exit.
+				   they approach the viewport; removes and destroys on exit.
   viewportObserver (rootMargin "0px")    — upgrades visible rows to the urgent
-                   queue and downgrades them back to buffer when they scroll out.
+				   queue and downgrades them back to buffer when they scroll out.
 
 Two render queues, both drained one idle slot at a time:
   urgentQueue — scheduled with requestIdleCallback { timeout: 200 } so visible
-                rows get SVGs promptly even under load (important for
-                page-up/page-down jumps).
+				rows get SVGs promptly even under load (important for
+				page-up/page-down jumps).
   bufferQueue — scheduled with plain requestIdleCallback; runs only when
-                urgentQueue is empty.
+				urgentQueue is empty.
 
 requestIdleCallback (rIC) is a browser API that defers work until the browser
 has spare time between frames, avoiding jank. The optional timeout parameter
@@ -71,10 +71,10 @@ used throughout.
 
 Both SVG types are generated on demand and cached on the tune object:
   tune.incipitSvg  — outerHTML string from abcjs, via a single persistent
-                     hidden sandbox div (#abcjs-sandbox). cloneNode(true) ensures
-                     no event listener references escape into the live DOM.
+					 hidden sandbox div (#abcjs-sandbox). cloneNode(true) ensures
+					 no event listener references escape into the live DOM.
   tune.contour.svg — SVG string from contourToSvg(). processTuneData sets this
-                     to null to defer generation until first render.
+					 to null to defer generation until first render.
 
 After each renderTable() call, a background rIC chain pre-generates both SVG
 types for all visible tunes so rows are cache-warm before the user reaches them.
@@ -184,6 +184,7 @@ function destroySvgs(row) {
 			incipitEl.classList.add("svg-pending");
 	}
 }
+
 function drainOne(queue) {
 	const { value: index, done } = queue.values().next();
 	if (done) return;
@@ -238,6 +239,7 @@ function cancelRenderQueue() {
 	urgentQueue.clear();
 	bufferQueue.clear();
 }
+
 function getRowObserver() {
 	if (!rowObserver) {
 		// Buffer observer: pre-render rows approaching the viewport.
@@ -322,6 +324,7 @@ function schedulePrecalculation() {
 }
 
 // -- Storage ------------------------------------------------------------------
+
 async function saveTunesToStorage() {
 	if (currentListState?.source === "local") {
 		try {
@@ -705,7 +708,7 @@ function collapseNotes(tuneIndex, refIndex) {
 }
 
 // Extract all metadata values from a tune for display and filtering.
-// Returns an array of metadata strings including rhythm, parts, key, composer(s), origin, and tags.
+// Returns an array of metadata strings including rhythm, parts, key, composer(s), origin, tags, and structure.
 function getTuneMetadata(tune) {
 	const tags = tune.tags
 		? Array.isArray(tune.tags)
@@ -992,23 +995,17 @@ function populateFilters() {
 		)
 	].sort();
 
-	const rhythmFilter = document.getElementById("rhythmFilter");
-	const keyFilter = document.getElementById("keyFilter");
+	document.getElementById("rhythmFilter").innerHTML =
+		'<option value="">All rhythms</option>' +
+		rhythms.map((r) => `<option value="${r}">${r}</option>`).join("");
 
-	rhythmFilter.innerHTML = '<option value="">All rhythms</option>';
-	rhythms.forEach((rhythm) => {
-		rhythmFilter.innerHTML += `<option value="${rhythm}">${rhythm}</option>`;
-	});
-
-	keyFilter.innerHTML = '<option value="">All keys</option>';
-	keys.forEach((key) => {
-		keyFilter.innerHTML += `<option value="${key}">${key}</option>`;
-	});
+	document.getElementById("keyFilter").innerHTML =
+		'<option value="">All keys</option>' +
+		keys.map((k) => `<option value="${k}">${k}</option>`).join("");
 }
 
 function openAbcModal(tune) {
 	if (!tune.abc) return;
-
 	getAbcModal().openWithTune(tune);
 }
 
@@ -1034,6 +1031,7 @@ function renderTable() {
 		if (tune.selected) row.classList.add("tune-selected");
 		if (tune._isCrTarget) row.id = `cr-t${tune._crId}`;
 
+		// ── References column ─────────────────────────────────────────
 		let referencesHtml = "",
 			hasTheSessionLink = false;
 		(tune.referencesFromAbc ?? [])
@@ -1044,26 +1042,23 @@ function renderTable() {
 					const formattedNotes = formatNoteLinks(
 						ref.notes.replace(/\n/g, "<br />")
 					)
-						.replace(
-							/(?<!")https?:\/\/[^\s<>"']+/g, //only match URLs not preceded by `"` so as to avoid handling the ones we did previously for markdown syntax
-							(url) => {
-								try {
-									const { hostname, pathname, search } = new URL(url);
-									if (
-										!hasTheSessionLink &&
-										hostname === "thesession.org" &&
-										pathname &&
-										pathname.match(/\/tunes\/\d+/)
-									)
-										hasTheSessionLink = true;
-									const display = hostname + pathname + search;
-									return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
-								} catch {
-									// In case URL parsing fails, leave the original
-									return url;
-								}
+						.replace(/(?<!")https?:\/\/[^\s<>"']+/g, (url) => {
+							try {
+								const { hostname, pathname, search } = new URL(url);
+								if (
+									!hasTheSessionLink &&
+									hostname === "thesession.org" &&
+									pathname &&
+									pathname.match(/\/tunes\/\d+/)
+								)
+									hasTheSessionLink = true;
+								const display = hostname + pathname + search;
+								return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
+							} catch {
+								// In case URL parsing fails, leave the original
+								return url;
 							}
-						)
+						})
 						.replace(/```([^`]+)```/g, "<pre>$1</pre>");
 
 					const lines = ref.notes.split("\n");
@@ -1071,7 +1066,6 @@ function renderTable() {
 						const truncatedNotes = formatNoteLinks(
 							lines.slice(0, 5).join("\n").replace(/\n/g, "<br />")
 						);
-
 						notesHtml = `
 					<div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
 					  ${truncatedNotes}
@@ -1080,8 +1074,7 @@ function renderTable() {
 					<div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
 					  ${formattedNotes}
 					  <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
-					</div>
-				  `;
+					</div>`;
 					} else {
 						notesHtml = `<div class="notes">${formattedNotes}</div>`;
 					}
@@ -1091,22 +1084,21 @@ function renderTable() {
 					: "";
 				const refHeader =
 					ref.artists && ref.url
-						? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank">${domain}</a></div>`
+						? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a></div>`
 						: ref.artists
 							? `<div class="artists">${ref.artists}</div>`
 							: ref.url
-								? `<div class="url"><a href="${ref.url}" target="_blank">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
+								? `<div class="url"><a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
 								: "";
 				const refItemId = ref._crId ? ` id="cr-r${ref._crId}"` : "";
 				referencesHtml += `
-						<div class="reference-item"${refItemId}>
-							${refHeader}
-							${notesHtml}
-						</div>
-					`;
+					<div class="reference-item"${refItemId}>
+						${refHeader}
+						${notesHtml}
+					</div>`;
 			});
 
-		// Append cross-reference items (from explicit crossReferences and resolved inline links)
+		// Cross-reference items
 		(tune._resolvedCrossRefs ?? []).forEach((cr) => {
 			const artistLink = cr.artistNames
 				? `<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
@@ -1115,40 +1107,12 @@ function renderTable() {
 			referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}]</div>`;
 		});
 
-		const metadata = getTuneMetadata(tune)
-			.map((m) => `<span class="badge">${m}</span>`)
-			.join(" ");
-
-		const aka = tune.aka ? tune.aka.join(", ") : "",
-			tooltip =
-				aka || tune.titles
-					? ` title="${tune.titles ? tune.titles.join(", ") + (aka && tune.titles ? "; " : "") : ""}${aka ? `AKA: ${aka}` : ""}"`
-					: "";
-
-		const hasAbc = !!tune.abc;
-		const tuneNameClass = hasAbc ? "tune-name has-abc" : "tune-name";
-
-		const title = `<div class="tune-header">
-  ${
-		hasAbc
-			? `<a href="#" class="${tuneNameClass}" data-tune-index="${index}" onclick="return false;" ${tooltip}>
-		${tune.name}
-  </a>${
-		Array.isArray(tune.abc) && tune.abc.length > 1
-			? ` - ${tune.abc.length} settings`
-			: ""
-	}`
-			: `<div class="${tuneNameClass}" data-tune-index="${index}" ${tooltip}>
-		${tune.name}
-  </div>`
-	}`;
-
+		// ── Score links ───────────────────────────────────────────────
 		const scores = [...tune.scores];
 		if (tune.theSessionId && !hasTheSessionLink) {
 			const setting = tune.theSessionSettingId
 				? `#setting${tune.theSessionSettingId}`
 				: "";
-
 			scores.push({
 				url: `https://thesession.org/tunes/${tune.theSessionId}${setting}`,
 				name: "thesession"
@@ -1166,76 +1130,86 @@ function renderTable() {
 				name: "irishtune.info"
 			});
 		}
+		const scoresHtml =
+			scores.length > 0
+				? `<div class="tune-scores">${scores.map((s) => `<a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.name}</a>`).join(", ")}</div>`
+				: "";
+
+		// ── Tune name ─────────────────────────────────────────────────
+		const hasAbc = !!tune.abc;
+		const aka = tune.aka ? tune.aka.join(", ") : "",
+			tooltip =
+				aka || tune.titles
+					? ` title="${tune.titles ? tune.titles.join(", ") + (aka && tune.titles ? "; " : "") : ""}${aka ? `AKA: ${aka}` : ""}"`
+					: "";
+		const settingsLabel =
+			Array.isArray(tune.abc) && tune.abc.length > 1
+				? ` <span class="tune-settings-count">(${tune.abc.length} settings)</span>`
+				: "";
+
+		const nameHtml = hasAbc
+			? `<a href="#" class="tune-name has-abc" data-tune-index="${index}"${tooltip}>${tune.name}</a>${settingsLabel}`
+			: `<span class="tune-name" data-tune-index="${index}"${tooltip}>${tune.name}</span>`;
+
+		const metadata = getTuneMetadata(tune)
+			.map((m) => `<span class="badge">${m}</span>`)
+			.join(" ");
 
 		// .tune-contour and .tune-incipit are always present as empty placeholders;
-		// their SVG content is injected lazily by the IntersectionObserver / render queue.
-		row.innerHTML = `
-	<td>
-		<div class="tune-header">
-			<div class="tune-title">${title}</div>
-			<div class="notes">${metadata}</div>
-			</div>
-			<div>
-			
-		<div class="tune-header tune-header--actions">
-		${tune.contour ? '<div class="tune-contour svg-pending" data-pending title="preparing the contour…"></div>' : '<div class="tune-contour"></div>'}
-			<div class="tune-actions">
-			<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">
-				${tune.selected ? "☑" : "☐"}
-			</button>
-			<button class="btn-icon btn-edit" title="Edit tune">
-				✎
-			</button>
-			<button class="btn-icon btn-copy" data-tune-index="${index}" title="Copy tune data">
-				📋
-			</button>
-			<button class="btn-icon btn-danger" onclick="deleteTune(${index})" title="Delete tune">
-				🗑
-			</button>
-			</div>
-		</div>
-			</div>
-		</div>
-		<div class="tune-incipit${tune.incipit ? ' svg-pending" data-pending title="preparing the incipit…' : ""}"></div>
-		</div>
-	</div>
-	</td>
-	<td class="notes">${referencesHtml}${
-		scores && scores.length > 0
-			? `${scores
-					.map((s) => `<a href="${s.url}" target="_blank">${s.name}</a>`)
-					.join(", ")}`
-			: ""
-	}</td>`;
+		// SVG content is injected lazily by the IntersectionObserver / render queue.
+		const contourHtml = tune.contour
+			? '<div class="tune-contour svg-pending" data-pending title="preparing the contour…"></div>'
+			: '<div class="tune-contour"></div>';
 
-		const tuneNameEl = row.querySelector(".tune-name");
+		const incipitClass = tune.incipit
+			? 'tune-incipit svg-pending" data-pending title="preparing the incipit…'
+			: "tune-incipit";
+
+		// ── Row HTML ──────────────────────────────────────────────────
+		row.innerHTML = `
+			<td>
+				<div class="tune-name-row">${nameHtml}</div>
+				<div class="tune-meta">${metadata}</div>
+				<div class="tune-footer-row">
+					${contourHtml}
+					<div class="tune-actions">
+						<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">${tune.selected ? "☑" : "☐"}</button>
+						<button class="btn-icon btn-edit" title="Edit tune">✎</button>
+						<button class="btn-icon btn-copy" data-tune-index="${index}" title="Copy tune data">📋</button>
+						<button class="btn-icon btn-danger" title="Delete tune">🗑</button>
+					</div>
+				</div>
+				<div class="${incipitClass}"></div>
+			</td>
+			<td class="col-references">${referencesHtml}${scoresHtml}</td>`;
+
+		// ── Event listeners (no inline JS for action buttons) ─────────
 		if (hasAbc) {
-			tuneNameEl.addEventListener("click", () => {
+			row.querySelector(".tune-name").addEventListener("click", () => {
 				openAbcModal(window.filteredData[index], index);
 			});
 		}
 		row.querySelector(".btn-select").addEventListener("click", () => {
 			toggleTuneSelected(index, row);
 		});
-
-		const editButtonEl = row.querySelector(".btn-edit");
-		editButtonEl.addEventListener("click", () => {
+		row.querySelector(".btn-edit").addEventListener("click", () => {
 			editModal.openWithTune(window.filteredData[index], index);
 		});
-
-		const copyButtonEl = row.querySelector(".btn-copy");
-		copyButtonEl.addEventListener("click", () => {
+		row.querySelector(".btn-copy").addEventListener("click", () => {
 			copySingleTune(index);
 		});
+		row.querySelector(".btn-danger").addEventListener("click", () => {
+			deleteTune(index);
+		});
+
 		tbody.appendChild(row);
-		observer.observe(row); // buffer margin
-		viewportObserver.observe(row); // viewport — for priority upgrade
+		observer.observe(row);
+		viewportObserver.observe(row);
 	});
 
 	document.getElementById("spCount").innerText =
 		`${window.filteredData.length}/${window.tunesData.length}`;
 
-	// Kick off background precalculation so caches are warm before the user scrolls.
 	schedulePrecalculation();
 }
 
@@ -1244,38 +1218,28 @@ function applyFilters() {
 	const rhythmFilter = document.getElementById("rhythmFilter").value;
 	const keyFilter = document.getElementById("keyFilter").value;
 
+	// Extracted to avoid repeating the same two checks in every search branch
+	const matchesDropdowns = (tune) =>
+		(rhythmFilter === "" || tune.rhythm === rhythmFilter) &&
+		(keyFilter === "" || tune.key === keyFilter);
+
 	window.filteredData = window.tunesData.filter((tune) => {
-		if (searchTerm === "") {
-			// No search term, skip all search checks
-			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
-			const matchesKey = keyFilter === "" || tune.key === keyFilter;
-			return matchesRhythm && matchesKey;
-		}
+		if (!matchesDropdowns(tune)) return false;
+		if (searchTerm === "") return true;
 
 		// Search in tune name
-		if (tune.name?.toLowerCase().includes(searchTerm)) {
-			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
-			const matchesKey = keyFilter === "" || tune.key === keyFilter;
-			return matchesRhythm && matchesKey;
-		}
+		if (tune.name?.toLowerCase().includes(searchTerm)) return true;
 
 		// Search in aka and titles (alternate names)
 		if (
 			tune.aka?.some((t) => t.toLowerCase().includes(searchTerm)) ||
 			tune.titles?.some((t) => t.toLowerCase().includes(searchTerm))
-		) {
-			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
-			const matchesKey = keyFilter === "" || tune.key === keyFilter;
-			return matchesRhythm && matchesKey;
-		}
+		)
+			return true;
 
-		// Search in metadata (rhythm, parts, key, composer, origin, tags)
-		const metadata = getTuneMetadata(tune);
-		if (metadata.some((m) => m.toLowerCase().includes(searchTerm))) {
-			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
-			const matchesKey = keyFilter === "" || tune.key === keyFilter;
-			return matchesRhythm && matchesKey;
-		}
+		// Search in metadata (rhythm, parts, key, composer, origin, tags, structure)
+		if (getTuneMetadata(tune).some((m) => m.toLowerCase().includes(searchTerm)))
+			return true;
 
 		// Search in references (artists and notes)
 		if (
@@ -1286,23 +1250,15 @@ function applyFilters() {
 						ref.artists?.toLowerCase().includes(searchTerm) ||
 						ref.notes?.toLowerCase().includes(searchTerm)
 				)
-		) {
-			const matchesRhythm = rhythmFilter === "" || tune.rhythm === rhythmFilter;
-			const matchesKey = keyFilter === "" || tune.key === keyFilter;
-			return matchesRhythm && matchesKey;
-		}
+		)
+			return true;
 
 		// Search in ABC content
 		if (tune.abc) {
 			const abcContent = Array.isArray(tune.abc)
 				? tune.abc.join(" ")
 				: tune.abc;
-			if (abcContent.toLowerCase().includes(searchTerm)) {
-				const matchesRhythm =
-					rhythmFilter === "" || tune.rhythm === rhythmFilter;
-				const matchesKey = keyFilter === "" || tune.key === keyFilter;
-				return matchesRhythm && matchesKey;
-			}
+			if (abcContent.toLowerCase().includes(searchTerm)) return true;
 		}
 
 		return false;
@@ -1315,7 +1271,6 @@ function filterByName(searchTerm) {
 	window.filteredData = window.tunesData.filter((tune) =>
 		tune.name?.toLowerCase().includes(searchTerm.toLowerCase())
 	);
-
 	renderTable();
 }
 
@@ -1326,49 +1281,6 @@ function sortData() {
 		currentSortIndex = 0;
 	}
 	currentSortType = sortConstants.PREDEFINED_SORT_NAMES[currentSortIndex];
-	// if (currentSort.column === column) {
-	// 	currentSort.direction =
-	// 		currentSort.direction === "asc"
-	// 			? "desc"
-	// 			: currentSort.direction === "desc"
-	// 				? "default"
-	// 				: "asc";
-	// } else {
-	// 	currentSort.column = column;
-	// 	currentSort.direction = "asc";
-	// }
-
-	// if (currentSort.direction === "default") {
-	// 	contourSort(window.filteredData);
-
-	// 	document.querySelectorAll("th").forEach((th) => {
-	// 		th.classList.remove("sort-asc", "sort-desc");
-	// 	});
-	// 	applyFilters();
-	// 	return;
-	// }
-
-	// const collator = new Intl.Collator("en", { sensitivity: "base" }),
-	// 	compare = (a, b) => {
-	// 		if (typeof a === "string" && typeof b === "string") {
-	// 			return (
-	// 				(currentSort.direction === "asc" ? -1 : 1) * collator.compare(a, b)
-	// 			);
-	// 		}
-	// 		if (a < b) return currentSort.direction === "asc" ? -1 : 1;
-	// 		if (a > b) return currentSort.direction === "asc" ? 1 : -1;
-	// 		return 0;
-	// 	};
-	// window.filteredData.sort((a, b) => compare(a[column], b[column]));
-
-	// document.querySelectorAll("th").forEach((th) => {
-	// 	th.classList.remove("sort-asc", "sort-desc");
-	// });
-
-	// const currentTh = document.querySelector(`th[data-column="${column}"]`);
-	// currentTh?.classList?.add(
-	// 	currentSort.direction === "asc" ? "sort-asc" : "sort-desc"
-	// );
 	sortTunesArray(window.filteredData, { predefinedSort: currentSortType });
 	renderTable();
 	updateFooter();
@@ -1398,79 +1310,60 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 	document.querySelectorAll("th.sortable").forEach((th) => {
 		th.addEventListener("click", function () {
-			//sortData(this.dataset.column);
 			sortData();
 		});
 	});
 
-	// Modal button event listeners
-	document.getElementById("addTunesBtn").addEventListener("click", (e) => {
-		e.preventDefault();
-		addTunesModal.open();
-	});
-
-	document.getElementById("loadJsonBtn").addEventListener("click", (e) => {
-		e.preventDefault();
-		loadJsonModal.open();
-	});
-
-	// Dropdown menu toggle
+	// Dropdown menu
 	const editMenuBtn = document.getElementById("editMenuBtn");
 	const dropdown = editMenuBtn.parentElement;
 
+	// Toggle .active and aria-expanded in one place
+	const setDropdownOpen = (open) => {
+		dropdown.classList.toggle("active", open);
+		editMenuBtn.setAttribute("aria-expanded", String(open));
+	};
+
 	editMenuBtn.addEventListener("click", (e) => {
 		e.stopPropagation();
-		dropdown.classList.toggle("active");
+		setDropdownOpen(!dropdown.classList.contains("active"));
 	});
 
-	// Close dropdown when clicking outside
 	document.addEventListener("click", (e) => {
-		if (!dropdown.contains(e.target)) {
-			dropdown.classList.remove("active");
-		}
+		if (!dropdown.contains(e.target)) setDropdownOpen(false);
 	});
 
-	// Dropdown menu items
-	document
-		.getElementById("addNewTuneBtn")
-		?.addEventListener("click", async (e) => {
+	// Helper: close dropdown then invoke action
+	const dropdownAction = (id, fn) => {
+		document.getElementById(id)?.addEventListener("click", (e) => {
 			e.preventDefault();
-			dropdown.classList.remove("active");
-			await addNewTune();
+			setDropdownOpen(false);
+			fn(e);
 		});
-	document.getElementById("copyTunesBtn")?.addEventListener("click", (e) => {
-		e.preventDefault();
-		dropdown.classList.remove("active");
-		copyTunesToClipboard();
-	});
+	};
+
+	dropdownAction("addTunesBtn", () => addTunesModal.open());
+	dropdownAction("loadJsonBtn", () => loadJsonModal.open());
+	dropdownAction("addNewTuneBtn", () => addNewTune());
+	dropdownAction("copyTunesBtn", () => copyTunesToClipboard());
+	dropdownAction("emptyTunesBtn", () => emptyTunes());
+	dropdownAction("manageSlotsBtn", () => openTuneListSelector());
+	dropdownAction("tuneListSelectorBtn", () => openTuneListSelector());
+
+	// thesession import: openTheSessionImport needs the original event and dropdown ref
 	document
-		.getElementById("emptyTunesBtn")
-		?.addEventListener("click", async (e) => {
-			e.preventDefault();
-			dropdown.classList.remove("active");
-			await emptyTunes();
-		});
+		.getElementById("thesession-import-btn")
+		?.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 0));
 
-	document.getElementById("manageSlotsBtn")?.addEventListener("click", (e) => {
-		e.preventDefault();
-		dropdown.classList.remove("active");
-		openTuneListSelector();
-	});
+	// document
+	// 	.getElementById("thesession-sets-import-btn")
+	// 	?.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 1));
 
-	document
-		.getElementById("tuneListSelectorBtn")
-		?.addEventListener("click", (e) => {
-			e.preventDefault();
-			dropdown.classList.remove("active");
-			openTuneListSelector();
-		});
-
-	// Tune selections menu item - enabled when there are saved set lists or >=2 tunes selected
 	const tuneSelectionsBtn = document.getElementById("tuneSelectionsBtn");
 	if (tuneSelectionsBtn) {
 		tuneSelectionsBtn.addEventListener("click", (e) => {
 			e.preventDefault();
-			dropdown.classList.remove("active");
+			setDropdownOpen(false);
 			tuneSelectionsModal.open();
 		});
 		// Keep enabled state in sync when the dropdown opens
@@ -1479,16 +1372,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 		});
 	}
 
-	// theSessionImport.setupTheSessionImportModal();
-	document
-		.getElementById("thesession-import-btn")
-		.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 0));
-
-	// document
-	// 	.getElementById("thesession-sets-import-btn")
-	// 	?.addEventListener("click", (e) => openTheSessionImport(e, dropdown, 1));
-
-	// Warn before leaving with unsaved changes on a server/external list
 	window.addEventListener("beforeunload", (e) => {
 		if (isDirty) {
 			e.preventDefault();
@@ -1496,7 +1379,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 		}
 	});
 
-	// Show selector if no list was auto-loaded at startup
 	if (initResult?.needsSelector) {
 		tuneListSelectorModal.openWithContext(initResult.manifest, null);
 	}

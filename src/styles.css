@@ -108,7 +108,6 @@ h1 {
   align-items: center;
 }
 
-.search-box,
 .filter-select {
   padding: 12px 16px;
   border: 2px solid var(--border);
@@ -117,35 +116,39 @@ h1 {
   transition: all 0.2s ease;
   background: var(--bg-container);
   color: var(--text-primary);
+  min-width: 150px;
 }
 
-.search-box:focus,
 .filter-select:focus {
   outline: none;
   border-color: var(--border-focus);
   box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
 }
 
-.search-box {
-  flex: 1;
-  min-width: 300px;
-}
-
-.filter-select {
-  min-width: 150px;
-}
+/* Search container: grows to fill available space */
 .search-container {
   position: relative;
-  display: inline-block;
-  width: 300px; /* adjust as needed */
+  flex: 1;
+  min-width: 200px;
 }
 
 #searchInput {
   width: 100%;
-  padding: 10px 40px 10px 12px; /* extra padding-right for icon */
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px 40px 10px 12px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
   font-size: 14px;
+  background: var(--bg-container);
+  color: var(--text-primary);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
 }
 
 .search-icon {
@@ -177,6 +180,7 @@ h1 {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+  white-space: nowrap;
 }
 
 .add-tunes-btn:hover {
@@ -242,10 +246,6 @@ h1 {
   cursor: pointer;
   line-height: inherit;
   font-weight: 600;
-
-  /* padding: 12px 16px;
-  box-shadow: none;
-  outline: none; */
 }
 
 .dropdown-content a:hover,
@@ -277,7 +277,7 @@ h1 {
 }
 
 table {
-  /* width: 100%; */
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -291,6 +291,7 @@ td {
   padding: 5px;
   text-align: left;
   border-bottom: 1px solid var(--border);
+  vertical-align: top;
 }
 
 th {
@@ -324,11 +325,42 @@ th.sort-desc::after {
   opacity: 1;
 }
 
-/* Specific column widths for tunes table */
+/* Desktop: references column gets generous width */
+#tunesTable .col-references,
 #tunesTable td:nth-child(2),
 #tunesTable th:nth-child(2) {
   min-width: 500px;
   width: 60%;
+}
+
+tbody tr:hover > td {
+  background-color: var(--bg-table-stripe);
+}
+
+/* ============================================
+   TUNE CELL LAYOUT
+   ============================================ */
+
+/* Row 1: tune name (link or plain text) */
+.tune-name-row {
+  margin-bottom: 4px;
+}
+
+/* Row 2: metadata badges */
+.tune-meta {
+  margin-bottom: 2px;
+}
+
+/* Row 3: contour (left) + action buttons (right) */
+.tune-footer-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 36px;
+}
+
+.tune-footer-row .tune-actions {
+  margin-left: auto;
 }
 
 /* ============================================
@@ -351,6 +383,13 @@ th.sort-desc::after {
   color: var(--text-link-hover);
 }
 
+.tune-settings-count {
+  font-size: 0.85em;
+  font-weight: normal;
+  color: var(--text-tertiary);
+  margin-left: 4px;
+}
+
 /* Badge - transparent with border, inherits parent background */
 .badge {
   display: inline-block;
@@ -363,6 +402,40 @@ th.sort-desc::after {
   font-weight: 600;
   vertical-align: middle;
   margin: 3px 1px;
+}
+
+/* ============================================
+   CONTOUR & INCIPIT
+   ============================================ */
+.tune-contour {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.tune-contour svg {
+  width: 100%;
+}
+
+.tune-contour.svg-pending {
+  width: 164px;
+  height: 87px;
+  background-color: var(--primary-light);
+  opacity: 0.25;
+  border-radius: 3px;
+}
+
+/* Incipit: allow horizontal scroll rather than forcing a minimum width */
+.tune-incipit {
+  overflow-x: auto;
+}
+
+.tune-incipit.svg-pending {
+  width: 332px;
+  height: 65px;
+  background-color: var(--primary-light);
+  opacity: 0.25;
+  border-radius: 3px;
 }
 
 /* ============================================
@@ -381,6 +454,12 @@ th.sort-desc::after {
   border-left: 3px solid var(--accent);
 }
 
+.reference-item--cr {
+  border-left-color: var(--primary-light);
+  font-style: italic;
+  font-size: 13px;
+}
+
 .artists {
   font-weight: 600;
   color: var(--text-primary);
@@ -393,9 +472,7 @@ th.sort-desc::after {
 
 .url a {
   color: var(--text-link);
-  /* text-decoration: none; */
   font-size: 16px;
-  /* white-space: nowrap; */
   overflow-wrap: break-word;
 }
 
@@ -404,7 +481,7 @@ th.sort-desc::after {
   color: var(--text-link-hover);
 }
 
-/* Notes  */
+/* Notes */
 .notes {
   font-size: 13px;
   color: var(--text-secondary);
@@ -415,6 +492,39 @@ th.sort-desc::after {
   font-style: normal;
 }
 
+/* More / Less toggle */
+.more-btn {
+  background: none;
+  border: none;
+  color: var(--text-link);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.more-btn:hover {
+  color: var(--text-link-hover);
+}
+
+/* Score links */
+.tune-scores {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.tune-scores a {
+  color: var(--text-link);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tune-scores a:hover {
+  text-decoration: underline;
+  color: var(--text-link-hover);
+}
+
+/* Legacy .scores selector kept for any existing references */
 .scores a {
   color: var(--text-link);
   text-decoration: none;
@@ -427,62 +537,45 @@ th.sort-desc::after {
 }
 
 /* ============================================
-   TUNE
+   TUNE ACTIONS
+   Hidden by default; shown on row hover/focus or always on touch.
    ============================================ */
-.tune-header {
+.tune-actions {
   display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 0;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
 }
 
-.tune-header--actions {
-  justify-content: space-between;
-}
-.tune-incipit {
-  min-width: 332px;
-}
-
-.tune-title {
-  flex: 0 0 auto;
-  font-weight: bold;
-  width: 200px;
-}
-
-.tune-contour {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  /* margin-left: 200px; */
-}
-.tune-contour svg {
-  width: 100%;
-}
-
-.tune-contour.svg-pending {
-  width: 164px;
-  height: 87px;
-  background-color: var(--primary-light);
-  opacity: 0.25;
-  border-radius: 3px;
-}
-
-.tune-incipit.svg-pending {
-  width: 332px;
-  height: 65px;
-  background-color: var(--primary-light);
-  opacity: 0.25;
-  border-radius: 3px;
+/* Show on cell hover or when a button inside has focus */
+td:hover .tune-actions,
+.tune-actions:focus-within {
+  opacity: 1;
 }
 
 /* ============================================
-   UTILITY CLASSES
+   UTILITY
    ============================================ */
 .no-results {
   text-align: center;
   padding: 40px;
   color: var(--text-tertiary);
   font-style: italic;
+}
+
+/* Visually hidden but available to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @keyframes fadeIn {
@@ -495,9 +588,8 @@ th.sort-desc::after {
 }
 
 /* ============================================
-   MODAL
+   MODAL (base)
    ============================================ */
-
 .modal-content {
   background-color: var(--bg-container);
   margin: 2% auto;
@@ -555,11 +647,12 @@ th.sort-desc::after {
 .nav-btn:hover {
   background: var(--btn-primary-hover);
 }
+
 #abcContextRow {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-right: auto; /* pushes pagination buttons to the right */
+  margin-right: auto;
 }
 
 #abcContextSelect {
@@ -959,23 +1052,6 @@ tr.tune-selected td {
 }
 
 /* ============================================
-   TUNE ACTIONS
-   ============================================ */
-.tune-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  opacity: 0;
-  transition: opacity 0.2s;
-  width: 80px;
-  flex-shrink: 0;
-}
-
-.tune-actions:hover {
-  opacity: 1;
-}
-
-/* ============================================
    MODAL FOOTER
    ============================================ */
 .modal-footer {
@@ -1142,7 +1218,7 @@ tr.tune-selected td {
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
-  margin-bottom: -2px; /* overlap the container border-bottom */
+  margin-bottom: -2px;
   padding: 8px 18px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -1168,7 +1244,7 @@ tr.tune-selected td {
 }
 
 /* ============================================
-   RESPONSIVE
+   RESPONSIVE (≤ 768px) — existing modal fixes
    ============================================ */
 @media (max-width: 768px) {
   .modal-content-large {
@@ -1203,12 +1279,10 @@ tr.tune-selected td {
    TUNE SELECTIONS MODAL
    ============================================ */
 
-/* Widen the container for the two-pane layout */
 .modal-large.tune-selections-modal .modal__container {
   max-width: 1100px;
 }
 
-/* Two-pane layout inside modal__body */
 .tune-selections-body {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -1217,7 +1291,6 @@ tr.tune-selected td {
   min-height: 0;
 }
 
-/* ── Shared pane styles ── */
 .ts-pane {
   display: flex;
   flex-direction: column;
@@ -1256,7 +1329,6 @@ tr.tune-selected td {
   padding: 8px 0;
 }
 
-/* ── Available tunes list (left pane) ── */
 .ts-available-list {
   overflow-y: auto;
   flex: 1;
@@ -1289,7 +1361,6 @@ tr.tune-selected td {
   cursor: grabbing;
 }
 
-/* ── Right pane header ── */
 .ts-header {
   flex-shrink: 0;
   margin-bottom: 16px;
@@ -1322,7 +1393,6 @@ tr.tune-selected td {
   box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.1);
 }
 
-/* Action buttons row (New, Save, Duplicate, Copy data, Delete) */
 .ts-action-row {
   display: flex;
   flex-wrap: wrap;
@@ -1380,7 +1450,6 @@ tr.tune-selected td {
   font-weight: 600;
 }
 
-/* ── Set blocks (right pane builder) ── */
 .ts-builder {
   display: flex;
   flex-direction: column;
@@ -1411,13 +1480,11 @@ tr.tune-selected td {
   box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
 }
 
-/* Drop indicator when reordering whole sets */
 .ts-set-block.ts-drop-target--set {
   outline: 2px dashed var(--accent);
   outline-offset: 2px;
 }
 
-/* Set header - acts as accordion toggle */
 .ts-set-header {
   display: flex;
   align-items: center;
@@ -1429,7 +1496,6 @@ tr.tune-selected td {
   user-select: none;
 }
 
-/* Chevron indicator, rotates when collapsed */
 .ts-set-chevron::before {
   content: "▾";
   display: inline-block;
@@ -1450,7 +1516,7 @@ tr.tune-selected td {
   font-size: 0.9rem;
   font-weight: 600;
   padding: 2px 4px;
-  cursor: text; /* override header's grab cursor */
+  cursor: text;
 }
 
 .ts-set-name-input:focus {
@@ -1462,7 +1528,6 @@ tr.tune-selected td {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Tune count shown beside name when the set is collapsed */
 .ts-set-tune-count {
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.65);
@@ -1477,7 +1542,6 @@ tr.tune-selected td {
   opacity: 1;
 }
 
-/* Danger button inside the dark set header */
 .ts-set-header .btn-danger {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -1487,7 +1551,6 @@ tr.tune-selected td {
   color: white;
 }
 
-/* Grab cursor on header signals the set block is draggable (multiSet only) */
 .ts-set-block.ts-draggable > .ts-set-header {
   cursor: grab;
 }
@@ -1496,12 +1559,10 @@ tr.tune-selected td {
   cursor: grabbing;
 }
 
-/* ── Collapsible set body ── */
 .ts-set-body {
   overflow: hidden;
 }
 
-/* ── Tune entries within a set block ── */
 .ts-set-tune {
   display: flex;
   align-items: flex-start;
@@ -1547,7 +1608,6 @@ tr.tune-selected td {
   gap: 4px;
 }
 
-/* Override the global .tune-name link style inside the builder and available pane */
 .ts-set-tune .ts-tune-name,
 .ts-tune-card .ts-tune-name {
   font-size: 0.95rem;
@@ -1591,13 +1651,11 @@ tr.tune-selected td {
   border-color: var(--border-focus);
 }
 
-/* Reuses .badge styles; reset margin for standalone use in left pane */
 .ts-tune-rhythm {
   align-self: flex-start;
   margin: 0;
 }
 
-/* ── "Add set divider" button ── */
 .ts-add-set-btn {
   align-self: flex-start;
   background: transparent;
@@ -1612,7 +1670,6 @@ tr.tune-selected td {
   background: var(--info-bg);
 }
 
-/* ── Responsive: stack panes vertically on narrow screens ── */
 @media (max-width: 768px) {
   .tune-selections-body {
     grid-template-columns: 1fr;
@@ -1665,7 +1722,6 @@ tr.tune-selected td {
   max-width: 1200px;
 }
 
-/* Two-pane layout: options | preview */
 .pp-body {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -1688,7 +1744,6 @@ tr.tune-selected td {
   gap: 18px;
 }
 
-/* ── Options sections ── */
 .pp-section {
   display: flex;
   flex-direction: column;
@@ -1736,7 +1791,6 @@ tr.tune-selected td {
   margin-top: 1px;
 }
 
-/* Layout toggle buttons */
 .pp-layout-btns {
   display: flex;
   gap: 6px;
@@ -1772,7 +1826,6 @@ tr.tune-selected td {
   margin-bottom: 3px;
 }
 
-/* Incipit size slider */
 .pp-range {
   width: 100%;
   accent-color: var(--accent);
@@ -1785,7 +1838,6 @@ tr.tune-selected td {
   color: var(--text-secondary);
 }
 
-/* ── Preview panel ── */
 .pp-preview-wrap {
   grid-area: preview;
   background: #d4d4d4;
@@ -1812,7 +1864,6 @@ tr.tune-selected td {
   justify-content: center;
 }
 
-/* A4 paper simulation */
 .pp-paper {
   background: #fff;
   width: 100%;
@@ -1827,7 +1878,6 @@ tr.tune-selected td {
   align-self: flex-start;
 }
 
-/* ── Paper content ── */
 .pp-title {
   font-size: 17px;
   font-weight: 700;
@@ -1880,7 +1930,6 @@ tr.tune-selected td {
   margin-top: -3px;
 }
 
-/* ── Tune entry ── */
 .pp-tune {
   display: grid;
   grid-template-columns: 18px 1fr;
@@ -1899,9 +1948,6 @@ tr.tune-selected td {
   font-size: 9.5px;
   padding-top: 2px;
   text-align: right;
-}
-
-.pp-tune-content {
 }
 
 .pp-tune-title-row {
@@ -1933,8 +1979,6 @@ tr.tune-selected td {
 
 .pp-incipit {
   margin: 3px 0 2px;
-  /* zoom is set inline by _applyIncipitZoom(); layout reflows correctly
-     because zoom (unlike transform:scale) participates in flow. */
 }
 .pp-incipit svg {
   display: block;
@@ -1959,7 +2003,6 @@ tr.tune-selected td {
   margin-top: 2px;
 }
 
-/* ── Footer ── */
 .pp-footer {
   grid-area: footer;
   display: flex;
@@ -1969,13 +2012,7 @@ tr.tune-selected td {
   align-items: center;
 }
 
-/* ── Print media ── */
-
-/* ════════════════════════════════════════════════════════════════
-   PRINT PREVIEW MODAL  (#print-preview-modal)
-════════════════════════════════════════════════════════════════ */
-
-/* Override the large modal container to nearly fill the viewport */
+/* Override for full-viewport modal */
 #print-preview-modal .modal__container {
   max-width: 1200px;
   height: calc(100vh - 40px);
@@ -1983,7 +2020,6 @@ tr.tune-selected td {
   flex-direction: column;
 }
 
-/* Body: options panel (fixed width) + scrollable preview */
 .pp-body {
   display: grid;
   grid-template-columns: 230px 1fr;
@@ -1993,7 +2029,6 @@ tr.tune-selected td {
   padding: 0 !important;
 }
 
-/* ── Options panel (left) ──────────────────────────────────── */
 .pp-options {
   background: var(--bg-container);
   border-right: 1px solid var(--border);
@@ -2052,7 +2087,6 @@ tr.tune-selected td {
   margin-top: 1px;
 }
 
-/* Layout selector buttons */
 .pp-layout-sel {
   display: flex;
   gap: 6px;
@@ -2080,7 +2114,6 @@ tr.tune-selected td {
   font-weight: 600;
 }
 
-/* Notation size slider */
 .pp-scale-wrap {
   padding: 6px 5px 2px;
 }
@@ -2101,7 +2134,6 @@ tr.tune-selected td {
   margin-top: 2px;
 }
 
-/* ── Preview area (right) ────────────────────────────────────── */
 .pp-preview-wrap {
   display: flex;
   flex-direction: column;
@@ -2125,7 +2157,6 @@ tr.tune-selected td {
   justify-content: center;
 }
 
-/* A4-ish paper card */
 .pp-paper {
   background: #fff;
   width: 100%;
@@ -2140,7 +2171,6 @@ tr.tune-selected td {
   position: relative;
 }
 
-/* ── Paper content styles ────────────────────────────────────── */
 .pp-title-block {
   margin-bottom: 20px;
 }
@@ -2158,7 +2188,6 @@ tr.tune-selected td {
   font-family: sans-serif;
 }
 
-/* Set dividers */
 .pp-set-divider {
   display: flex;
   align-items: center;
@@ -2190,7 +2219,6 @@ tr.tune-selected td {
   margin: -2px 0 7px;
 }
 
-/* Tune entries */
 .pp-tune {
   display: grid;
   grid-template-columns: 18px 1fr;
@@ -2210,9 +2238,6 @@ tr.tune-selected td {
   text-align: right;
   padding-top: 2px;
   flex-shrink: 0;
-}
-
-.pp-tune-content {
 }
 
 .pp-tune-title-row {
@@ -2266,9 +2291,6 @@ tr.tune-selected td {
   margin-top: 2px;
 }
 
-/* .pp-page-num removed — page numbers handled by @page counter */
-
-/* ── Footer ──────────────────────────────────────────────────── */
 .pp-footer {
   border-top: 1px solid var(--border);
   display: flex;
@@ -2280,22 +2302,18 @@ tr.tune-selected td {
   margin-left: auto;
 }
 
-/* ── Print media: hide chrome, show only paper ───────────────── */
 .footer-local-warning {
   color: var(--error-text);
   font-style: italic;
 }
 
 @media print {
-  /* Hide everything except the cloned print root (appended directly to <body>,
-     outside all overflow:hidden modal wrappers). */
   body > *:not(#pp-print-root) {
     display: none !important;
   }
 
   @page {
     margin: 15mm 18mm;
-    /* Browser-native page numbers in the footer margin */
     @bottom-center {
       content: counter(page);
       font-family: sans-serif;
@@ -2323,7 +2341,6 @@ tr.tune-selected td {
     font-size: 11pt !important;
   }
 
-  /* Hide the on-screen page-num element if it ever appears in the clone */
   #pp-print-root .pp-page-num {
     display: none !important;
   }
@@ -2336,7 +2353,7 @@ tr.tune-selected td {
   }
 }
 
-/* ── Page init spinner ───────────────────────────────────────────────────────── */
+/* ── Page init spinner ── */
 #page-spinner:not([hidden]) {
   display: flex;
   flex-direction: column;
@@ -2362,7 +2379,7 @@ tr.tune-selected td {
   }
 }
 
-/* ── Footer local-storage warning ───────────────────────────────────────────── */
+/* ── Footer ── */
 .footer-local-warning {
   margin-left: 6px;
   color: var(--warning, #b45309);
@@ -2370,8 +2387,30 @@ tr.tune-selected td {
   font-size: 0.9em;
 }
 
-/* ── Tune List Selector Modal ─────────────────────────────────────────────── */
+#footer {
+  margin-top: 20px;
+  padding: 12px 4px;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  line-height: 1.6;
+}
 
+.footer-link {
+  color: var(--text-link);
+  text-decoration: none;
+  font-size: 0.75rem;
+  width: fit-content;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Tune List Selector Modal ── */
 .tls-modal-body {
   padding: 0;
   max-height: 70vh;
@@ -2408,8 +2447,6 @@ tr.tune-selected td {
   font-size: 0.9rem;
   margin: 4px 0;
 }
-
-/* ── List items ─────────────────────────────────────────────────────────────── */
 
 .tls-item {
   display: flex;
@@ -2455,8 +2492,6 @@ tr.tune-selected td {
   color: var(--primary-light);
 }
 
-/* ── Badges ──────────────────────────────────────────────────────────────────── */
-
 .tls-badge {
   display: inline-block;
   font-size: 0.7rem;
@@ -2476,8 +2511,6 @@ tr.tune-selected td {
   border-color: var(--success-border);
 }
 
-/* ── Slot action buttons (shown on hover) ────────────────────────────────────── */
-
 .tls-item-actions {
   display: flex;
   gap: 4px;
@@ -2495,8 +2528,6 @@ tr.tune-selected td {
   padding: 2px 8px;
   line-height: 1.4;
 }
-
-/* ── Action buttons (create / import / export…) ─────────────────────────────── */
 
 .tls-actions {
   display: flex;
@@ -2523,12 +2554,111 @@ tr.tune-selected td {
   color: var(--accent);
 }
 
-/* ── Storage info footer ─────────────────────────────────────────────────────── */
-
 .tls-storage-info {
   padding: 10px 20px;
   font-size: 0.78rem;
   color: var(--primary-light);
   border-top: 1px solid var(--border);
   background: var(--bg-body);
+}
+
+/* ============================================
+   TOUCH-DEVICE OVERRIDES
+   On hover-incapable devices the tune action buttons must always
+   be visible — there is no hover state to trigger them.
+   ============================================ */
+@media (hover: none) {
+  .tune-actions {
+    opacity: 1;
+  }
+
+  /* Minimum 44×44 px touch targets (WCAG 2.5.5) */
+  .btn-icon {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ============================================
+   MOBILE LAYOUT  (≤ 640px)
+   ============================================ */
+@media (max-width: 640px) {
+  /* ── Page chrome ── */
+  body {
+    padding: 8px;
+  }
+
+  .container {
+    padding: 16px 12px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 16px;
+  }
+
+  /* ── Controls: search fills first row; filters + menu share second ── */
+  .controls {
+    gap: 8px;
+  }
+
+  .search-container {
+    flex-basis: 100%;
+    min-width: 0;
+  }
+
+  .filter-select {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .add-tunes-btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* Prevent dropdown from overflowing the viewport edge */
+  .dropdown-content {
+    max-width: calc(100vw - 24px);
+  }
+
+  /* ── Table: hide references column on small screens ── */
+  #tunesTable .col-references,
+  #tunesTable td:nth-child(2) {
+    display: none;
+  }
+
+  /* ── Touch targets ── */
+  .btn-icon {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Action buttons always visible; no hover available */
+  .tune-actions {
+    opacity: 1;
+  }
+
+  /* Incipit placeholder: don't overflow narrow column */
+  .tune-incipit.svg-pending {
+    width: 100%;
+    max-width: 332px;
+  }
+
+  /* ── Modals: nearly full-screen ── */
+  .modal__container {
+    margin: 8px;
+    border-radius: 8px;
+    max-height: calc(100dvh - 16px);
+  }
+
+  .modal-small .modal__container,
+  .modal-medium .modal__container,
+  .modal-large .modal__container,
+  .modal-xlarge .modal__container {
+    max-width: calc(100vw - 16px);
+  }
 }
