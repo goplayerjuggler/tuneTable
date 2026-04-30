@@ -7,9 +7,9 @@ L: 1/8
 K: Gmaj
 GBA B2d edB AGE|GBA B2G`,
 	theSessionId: 15402,
-	references: [
+	crossReferences: [
 		{
-			notes: "see entry for Darby The Driver / Charlie Mulvihill"
+			theSessionId: 1137 // Darby The Driver / Charlie Mulvihill"
 		}
 	]
 };
