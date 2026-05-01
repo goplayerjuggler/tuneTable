@@ -818,16 +818,27 @@ function calculateCrossRefs(tunes) {
 			});
 		});
 
+		/*		if (tune.ttId === 523) {
+			console.log("debug");
+		}*/
+
 		// Mark tunes referenced by [label](id) patterns in notes as anchor targets
-		(tune.references ?? []).forEach((ref) => {
-			if (!ref.notes) return;
-			const RE = /\[([^\]]+)\]\(((?:ttId|theSessionId)=[^)]+)\)/g;
-			let m;
-			while ((m = RE.exec(ref.notes)) !== null) {
-				const t = resolveTuneById(parseTuneIdStr(m[2]));
-				if (t) t._isCrTarget = true;
-			}
-		});
+		(tune.references ?? [])
+			.concat(tune.referencesFromAbc ?? [])
+			.forEach((ref) => {
+				const note = ref.notes;
+				if (!note) return;
+
+				const RE = /\[([^\]]+)\]\(((?:ttId|theSessionId)=[^)]+)\)/g;
+				let m;
+				while ((m = RE.exec(note)) !== null) {
+					const t = resolveTuneById(parseTuneIdStr(m[2]));
+					if (t) {
+						t._isCrTarget = true;
+						return;
+					}
+				}
+			});
 	});
 }
 

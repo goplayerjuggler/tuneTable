@@ -303,7 +303,7 @@ export async function buildTuneLists({
     allTunes.push({
       metadataFromAbc: metadata,
       ...tune,
-      fileDate: dateMap.get(path.basename(file))
+      fileDate: tune.fileDate ?? dateMap.get(path.basename(file))
     });
   }
 

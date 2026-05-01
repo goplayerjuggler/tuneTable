@@ -1,4 +1,5 @@
 export default {
+	parts: "AABBCC",
 	abc: `X:1
 T:The Luck Penny
 R:jig

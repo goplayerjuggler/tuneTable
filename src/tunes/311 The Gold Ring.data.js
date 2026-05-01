@@ -22,7 +22,9 @@ Manus Lunny: Bouzouki
 Seá n Óg Potts: Uilleann pipes, Keyboards
 Damien Quinn: Bodhrán
 Steve White: Congas, Percussion
-Dónal Lunny: Bouzouki, Keyboards`
+Dónal Lunny: Bouzouki, Keyboards
+
+In this recording the last part is just played once, not twice. You could say the structure is AABBCCDDEEFFG`
 		},
 		{
 			artists: "Sult Ceol",
