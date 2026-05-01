@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB’",
 	groups: "su",
 	abc: `X:1
 T:The Mist Covered Mountain
