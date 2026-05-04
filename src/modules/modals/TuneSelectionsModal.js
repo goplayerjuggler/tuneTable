@@ -9,9 +9,6 @@ import { findTuneByEntry } from "../setUtils.js";
 
 /**
  * Build a short human-readable label for one setting within tune.abc.
- * For thesession settings, extracts setting ID, contributor name, date, and key
- * from the embedded N: comment lines written by getTuneWithAbc().
- * Falls back to the X: header value for non-thesession tunes.
  * @param {string} abc
  * @param {number} index - 0-based index, used only in the last-resort fallback
  * @returns {string}
@@ -35,9 +32,8 @@ function buildSettingLabel(abc, index) {
 /**
  * Resolve a stable ID object for a tune, for storage in a set list.
  * Returns null and calls onError if no ID is available.
- * Priority: theSessionId > norbeckId > itiId > fwId > ttId
  * @param {object} tune
- * @param {function} onError - called with an error message string
+ * @param {function} onError
  * @returns {object|null}
  */
 function resolveTuneId(tune, onError) {
@@ -56,16 +52,10 @@ function resolveTuneId(tune, onError) {
 	return null;
 }
 
-/** Generate a simple unique ID (timestamp + random suffix). */
 function generateId() {
 	return `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
-/**
- * Create a new empty set list object.
- * @param {string} name
- * @returns {object}
- */
 function createSetList(name) {
 	return {
 		id: generateId(),
@@ -78,11 +68,9 @@ function createSetList(name) {
 
 /**
  * Modal for creating and managing set lists (tune selections).
- * Extends Modal; overrides close() to hide rather than destroy, preserving
- * in-progress state between open/close cycles.
  */
 export default class TuneSelectionsModal extends Modal {
-	/** @param {{ saveTunesToStorage: function, renderTable: function }} callbacks */
+	/** @param {{ saveTunesToStorage: function, applyFilters: function }} callbacks */
 	constructor(callbacks) {
 		super({
 			id: "tune-selections-modal",
@@ -92,36 +80,26 @@ export default class TuneSelectionsModal extends Modal {
 
 		this._callbacks = callbacks;
 
-		// In-memory state (persisted to localStorage in a later iteration)
-		this._setLists = []; // saved set lists
-		this._current = null; // set list currently being edited
+		this._setLists = [];
+		this._current = null;
 		this._isDirty = false;
-		this._sortOrder = "date"; // "date" | "name"
-		this._dragItem = null; // { type: "available"|"tune"|"set", ... }
-		this._selectedSetIdx = 0; // index of the set that receives keyboard → adds from left pane
+		this._sortOrder = "date";
+		this._dragItem = null;
+		this._selectedSetIdx = 0;
 	}
 
 	// ─── Public API ─────────────────────────────────────────────────────────────
 
-	/**
-	 * Opens the modal, initialising current set list state based on context:
-	 * - No current set list and ≥2 tunes selected → new unsaved set list pre-populated from selection
-	 * - In-progress edit exists → restore it (left pane reflects current selection)
-	 * - No current and saved set lists exist → load most recently modified
-	 * - Otherwise → new empty set list
-	 */
 	open() {
 		if (!this._current) {
 			const selected = window.tunesData.filter((t) => t.selected);
 			if (selected.length >= 2) {
-				// No prior state and tunes are selected - pre-populate a new set list
 				this._current = createSetList(this._uniqueSetListName());
 				for (const tune of selected) {
 					const idObj = resolveTuneId(tune, (msg) => console.warn(msg));
 					if (idObj) this._current.sets[0].tunes.push({ ...idObj, notes: "" });
 				}
 			} else if (this._setLists.length) {
-				// No current, no selection - load most recently modified saved set list
 				this._current = this._setLists
 					.slice()
 					.sort((a, b) => b.dateModified.localeCompare(a.dateModified))[0];
@@ -130,22 +108,16 @@ export default class TuneSelectionsModal extends Modal {
 			}
 		}
 
-		// Build DOM on first open; afterwards just re-show the existing element
 		if (!this.element) {
 			this.render();
 			document.body.appendChild(this.element);
 		}
 
 		this._renderContents();
-		this._recomputeDirty(); // set dirty correctly for the newly loaded set list
+		this._recomputeDirty();
 		super.open();
 	}
 
-	/**
-	 * Hides the modal without destroying the DOM, preserving in-progress state.
-	 * Deselects all tunes in the main table on close.
-	 * Re-registers the ESC handler on next open() via the base class.
-	 */
 	close() {
 		if (!this.element) return;
 		if (
@@ -158,22 +130,17 @@ export default class TuneSelectionsModal extends Modal {
 		this.element.classList.remove("modal-active");
 		this.clearAutoHideTimer();
 
-		// Remove ESC listener - base class will re-add it on the next open()
 		if (this.escHandler) {
 			document.removeEventListener("keydown", this.escHandler);
 			this.escHandler = null;
 		}
 
-		// Deselect all tunes and re-render (applyFilters re-filters then calls renderTable)
 		window.tunesData.forEach((t) => {
 			t.selected = false;
 		});
 		this._callbacks.applyFilters?.();
-
-		// Do NOT remove element from DOM (state preservation)
 	}
 
-	/** Whether the menu item should be enabled. */
 	isEnabled() {
 		return (
 			this._setLists.length > 0 ||
@@ -181,11 +148,6 @@ export default class TuneSelectionsModal extends Modal {
 		);
 	}
 
-	/**
-	 * Returns true if the given tune is referenced in any saved set list.
-	 * Used to prevent deletion of tunes that are in a set list.
-	 * @param {object} tune
-	 */
 	isTuneInSetLists(tune) {
 		const idObj = resolveTuneId(tune, () => {});
 		if (!idObj) return false;
@@ -197,11 +159,6 @@ export default class TuneSelectionsModal extends Modal {
 
 	// ─── DOM construction ────────────────────────────────────────────────────────
 
-	/**
-	 * Builds the modal DOM via the base class, then populates modal__body
-	 * with the two-pane layout and wires up static event listeners.
-	 * @returns {HTMLElement}
-	 */
 	render() {
 		super.render();
 
@@ -240,7 +197,6 @@ export default class TuneSelectionsModal extends Modal {
 				<button class="btn btn-primary ts-preview-btn" title="Print preview">🖨️ Preview &amp; print</button>
 			</div>`;
 
-		// Static event listeners (wired once; dynamic content re-rendered by _renderContents)
 		this.element
 			.querySelector(".ts-close-btn")
 			.addEventListener("click", () => this.close());
@@ -262,14 +218,12 @@ export default class TuneSelectionsModal extends Modal {
 		this.element
 			.querySelector(".ts-delete-btn")
 			.addEventListener("click", () => this._delete());
-
 		this.element
 			.querySelector(".ts-sort-select")
 			.addEventListener("change", (e) => {
 				this._sortOrder = e.target.value;
 				this._renderSavedList();
 			});
-
 		this.element
 			.querySelector(".ts-name-input")
 			.addEventListener("input", (e) => {
@@ -284,7 +238,6 @@ export default class TuneSelectionsModal extends Modal {
 
 	// ─── Rendering ──────────────────────────────────────────────────────────────
 
-	/** Re-render all dynamic parts of the modal body. */
 	_renderContents() {
 		this._renderAvailable();
 		this._renderSavedList();
@@ -306,13 +259,12 @@ export default class TuneSelectionsModal extends Modal {
 		}
 
 		selected.forEach((tune) => {
-			// // Multi-setting tunes render their own incipit inside _buildTuneCard
-			// if (Array.isArray(tune.abc) && tune.abc.length > 1) return;
-
 			const card = this._buildTuneCard(tune);
+
+			// ── Mouse drag-and-drop (desktop) ──
 			card.draggable = true;
 			card.classList.add("ts-draggable");
-			card.title = "Drag to set list, or press → to add to the last set";
+			card.title = "Drag to a set, or tap + to add";
 			card.addEventListener("dragstart", (e) => {
 				this._dragItem = { type: "available", tune };
 				e.dataTransfer.effectAllowed = "copy";
@@ -322,6 +274,8 @@ export default class TuneSelectionsModal extends Modal {
 				card.classList.remove("dragging");
 				this._dragItem = null;
 			});
+
+			// ── Keyboard: → adds to currently selected set ──
 			card.addEventListener("keydown", (e) => {
 				if (e.key === "ArrowRight") this._addTuneToCurrentSet(tune);
 			});
@@ -329,7 +283,7 @@ export default class TuneSelectionsModal extends Modal {
 			pane.appendChild(card);
 		});
 
-		// Render incipits after inserting into DOM
+		// Render single-setting incipits after insertion into DOM
 		selected.forEach((tune) => {
 			if (tune.incipit) {
 				const id = `ts-avail-incipit-${tune.ttId ?? tune.theSessionId ?? tune.name.replace(/\s+/g, "-")}`;
@@ -403,8 +357,8 @@ export default class TuneSelectionsModal extends Modal {
 	}
 
 	/**
-	 * Build a set block: header (accordion toggle) + collapsible body with tune entries.
-	 * Clicking anywhere on the header except interactive controls collapses/expands the body.
+	 * Build a set block: header (accordion toggle + reorder buttons) +
+	 * collapsible body with tune entries.
 	 */
 	_buildSetBlock(set, setIdx) {
 		const multiSet = this._current.sets.length > 1;
@@ -432,11 +386,10 @@ export default class TuneSelectionsModal extends Modal {
 			set.name = e.target.value;
 			this._markDirty();
 		});
-		nameInput.addEventListener("click", (e) => e.stopPropagation()); // don't toggle on name edit
-		nameInput.addEventListener("mousedown", (e) => e.stopPropagation()); // don't initiate set-drag from the name field
+		nameInput.addEventListener("click", (e) => e.stopPropagation());
+		nameInput.addEventListener("mousedown", (e) => e.stopPropagation());
 		header.appendChild(nameInput);
 
-		// Tune count badge, visible when collapsed
 		const tuneCount = document.createElement("span");
 		tuneCount.className = "ts-set-tune-count";
 		tuneCount.textContent = set.tunes?.length
@@ -445,12 +398,60 @@ export default class TuneSelectionsModal extends Modal {
 		header.appendChild(tuneCount);
 
 		if (multiSet) {
+			// ── Visible reorder buttons (touch-friendly; keyboard ↑/↓ also works) ──
+			const reorderWrap = document.createElement("div");
+			reorderWrap.className = "ts-reorder-btns";
+			reorderWrap.setAttribute("aria-label", "Reorder set");
+
+			const upBtn = document.createElement("button");
+			upBtn.className = "btn-icon ts-reorder-btn";
+			upBtn.textContent = "▲";
+			upBtn.title = "Move set up";
+			upBtn.setAttribute("aria-label", "Move set up");
+			upBtn.addEventListener("click", (e) => {
+				e.stopPropagation();
+				if (setIdx > 0) {
+					[this._current.sets[setIdx - 1], this._current.sets[setIdx]] = [
+						this._current.sets[setIdx],
+						this._current.sets[setIdx - 1]
+					];
+					this._selectedSetIdx = setIdx - 1;
+					this._renderBuilder();
+					this._markDirty();
+					this._focusSetHeader(this._selectedSetIdx);
+				}
+			});
+
+			const downBtn = document.createElement("button");
+			downBtn.className = "btn-icon ts-reorder-btn";
+			downBtn.textContent = "▼";
+			downBtn.title = "Move set down";
+			downBtn.setAttribute("aria-label", "Move set down");
+			downBtn.addEventListener("click", (e) => {
+				e.stopPropagation();
+				if (setIdx < this._current.sets.length - 1) {
+					[this._current.sets[setIdx + 1], this._current.sets[setIdx]] = [
+						this._current.sets[setIdx],
+						this._current.sets[setIdx + 1]
+					];
+					this._selectedSetIdx = setIdx + 1;
+					this._renderBuilder();
+					this._markDirty();
+					this._focusSetHeader(this._selectedSetIdx);
+				}
+			});
+
+			reorderWrap.appendChild(upBtn);
+			reorderWrap.appendChild(downBtn);
+			header.appendChild(reorderWrap);
+
 			const removeBtn = document.createElement("button");
 			removeBtn.className = "btn-icon btn-danger ts-remove-set-btn";
 			removeBtn.title = "Remove this set";
+			removeBtn.setAttribute("aria-label", "Remove set");
 			removeBtn.textContent = "×";
 			removeBtn.addEventListener("click", (e) => {
-				e.stopPropagation(); // don't toggle accordion
+				e.stopPropagation();
 				this._current.sets.splice(setIdx, 1);
 				this._selectedSetIdx = Math.min(
 					this._selectedSetIdx,
@@ -464,29 +465,23 @@ export default class TuneSelectionsModal extends Modal {
 
 		header.addEventListener("click", () => {
 			if (this._selectedSetIdx !== setIdx) {
-				// Select this set without re-rendering — just swap the CSS class directly
-				// on the existing DOM to avoid a re-render firing mid-click which would
-				// immediately match _selectedSetIdx === setIdx and toggle collapse.
 				const prev = this.element.querySelector(".ts-set-block--selected");
 				prev?.classList.remove("ts-set-block--selected");
 				block.classList.add("ts-set-block--selected");
 				this._selectedSetIdx = setIdx;
 				return;
 			}
-			// Already selected — toggle collapse
 			set.collapsed = !set.collapsed;
 			block.classList.toggle("ts-set-block--collapsed", set.collapsed);
 			body.style.display = set.collapsed ? "none" : "";
 		});
 
-		// Set reordering — only meaningful when there are multiple sets
+		// Set reordering by drag (desktop) — also works alongside the ▲/▼ buttons
 		if (multiSet) {
 			block.draggable = true;
 			block.classList.add("ts-draggable");
 
 			block.addEventListener("dragstart", (e) => {
-				// Only treat as a set-drag if not originating from a tune entry inside the body
-				// (tune dragstart calls e.stopPropagation, so bubbling here means it's the header)
 				if (e.target.closest?.(".ts-set-body")) return;
 				this._dragItem = { type: "set", setIdx };
 				e.dataTransfer.effectAllowed = "move";
@@ -497,7 +492,6 @@ export default class TuneSelectionsModal extends Modal {
 				this._dragItem = null;
 			});
 
-			// Drop zone for set reordering — on the block itself (not the tune body)
 			block.addEventListener("dragover", (e) => {
 				if (this._dragItem?.type !== "set" || this._dragItem.setIdx === setIdx)
 					return;
@@ -506,16 +500,15 @@ export default class TuneSelectionsModal extends Modal {
 				block.classList.add("ts-drop-target--set");
 			});
 			block.addEventListener("dragleave", (e) => {
-				if (!block.contains(e.relatedTarget)) {
+				if (!block.contains(e.relatedTarget))
 					block.classList.remove("ts-drop-target--set");
-				}
 			});
 			block.addEventListener("drop", (e) => {
 				block.classList.remove("ts-drop-target--set");
 				if (this._dragItem?.type !== "set" || this._dragItem.setIdx === setIdx)
 					return;
 				e.preventDefault();
-				e.stopPropagation(); // don't trigger tune-drop handlers on the body
+				e.stopPropagation();
 				const [moved] = this._current.sets.splice(this._dragItem.setIdx, 1);
 				this._current.sets.splice(setIdx, 0, moved);
 				this._selectedSetIdx = setIdx;
@@ -523,8 +516,7 @@ export default class TuneSelectionsModal extends Modal {
 				this._markDirty();
 			});
 
-			// Keyboard reordering: ↑/↓ on the focused header moves the whole set;
-			// _selectedSetIdx is updated and focus restored to the moved set's header
+			// Keyboard ↑/↓ on focused header as a complement to the visible buttons
 			header.tabIndex = 0;
 			header.addEventListener("keydown", (e) => {
 				if (e.key === "ArrowUp" && setIdx > 0) {
@@ -575,7 +567,7 @@ export default class TuneSelectionsModal extends Modal {
 		if (set.collapsed) body.style.display = "none";
 		block.appendChild(body);
 		this._attachDropZone(body, setIdx);
-		this._attachHeaderDropZone(header, setIdx); // also accept available-tune drops on the header (needed for empty sets)
+		this._attachHeaderDropZone(header, setIdx);
 
 		return block;
 	}
@@ -597,19 +589,17 @@ export default class TuneSelectionsModal extends Modal {
 		const info = document.createElement("div");
 		info.className = "ts-tune-info";
 		if (tune) {
-			// ── Name ──
 			const nameEl = document.createElement("div");
 			nameEl.className = "ts-tune-name";
 			nameEl.textContent = tune.name;
 			info.appendChild(nameEl);
 
-			// ── Determine active setting index ──
 			const abcs = Array.isArray(tune.abc)
 				? tune.abc
 				: tune.abc
 					? [tune.abc]
 					: [];
-			let settingIdx = 0; // default: first setting in the array
+			let settingIdx = 0;
 
 			if (abcs.length > 1) {
 				if (entry.theSessionSettingId != null) {
@@ -628,13 +618,11 @@ export default class TuneSelectionsModal extends Modal {
 			const incipitId = `ts-builder-incipit-s${setIdx}-t${tuneIdx}`;
 
 			if (abcs.length > 1) {
-				// ── Setting label ──
 				const labelEl = document.createElement("div");
 				labelEl.className = "ts-setting-label";
 				labelEl.textContent = buildSettingLabel(abcs[settingIdx], settingIdx);
 				info.appendChild(labelEl);
 
-				// ── Incipit + ▲/▼ navigation ──
 				const incipitWrap = document.createElement("div");
 				incipitWrap.className = "ts-setting-wrap";
 
@@ -664,7 +652,6 @@ export default class TuneSelectionsModal extends Modal {
 					settingIdx = (settingIdx + delta + abcs.length) % abcs.length;
 					const abc = abcs[settingIdx];
 
-					// Update entry identity
 					const settingMatch = abc.match(/tunes\/\d+#setting(\d+)/);
 					if (settingMatch) {
 						entry.theSessionSettingId = parseInt(settingMatch[1], 10);
@@ -696,18 +683,13 @@ export default class TuneSelectionsModal extends Modal {
 					stepSetting(+1);
 				});
 			} else if (tune.incipit) {
-				// ── Single setting: plain incipit, no navigation ──
 				const incipitEl = document.createElement("div");
 				incipitEl.id = incipitId;
 				incipitEl.className = "ts-tune-incipit";
 				info.appendChild(incipitEl);
 			}
 
-			// ── Render initial incipit (deferred so element is in DOM) ──
 			requestAnimationFrame(() => {
-				// Multi-setting: call getIncipit() on the chosen ABC string.
-				// Single-setting: use the pre-computed tune.incipit directly — avoids
-				//   a redundant getIncipit() call since processTuneData already produced it.
 				const source =
 					abcs.length > 1
 						? getIncipit({ abc: abcs[settingIdx] })
@@ -743,9 +725,53 @@ export default class TuneSelectionsModal extends Modal {
 
 		el.appendChild(info);
 
+		// ── Reorder buttons (▲/▼) — visible on touch, hover-revealed on desktop ──
+		const reorderWrap = document.createElement("div");
+		reorderWrap.className = "ts-reorder-btns ts-tune-reorder";
+		reorderWrap.setAttribute("aria-label", "Reorder tune");
+
+		const upBtn = document.createElement("button");
+		upBtn.className = "btn-icon ts-reorder-btn";
+		upBtn.textContent = "▲";
+		upBtn.title = "Move up";
+		upBtn.setAttribute("aria-label", "Move tune up");
+		upBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			const set = this._current.sets[setIdx];
+			if (!set.tunes || tuneIdx === 0) return;
+			[set.tunes[tuneIdx - 1], set.tunes[tuneIdx]] = [
+				set.tunes[tuneIdx],
+				set.tunes[tuneIdx - 1]
+			];
+			this._renderBuilder();
+			this._markDirty();
+		});
+
+		const downBtn = document.createElement("button");
+		downBtn.className = "btn-icon ts-reorder-btn";
+		downBtn.textContent = "▼";
+		downBtn.title = "Move down";
+		downBtn.setAttribute("aria-label", "Move tune down");
+		downBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			const set = this._current.sets[setIdx];
+			if (!set.tunes || tuneIdx >= set.tunes.length - 1) return;
+			[set.tunes[tuneIdx + 1], set.tunes[tuneIdx]] = [
+				set.tunes[tuneIdx],
+				set.tunes[tuneIdx + 1]
+			];
+			this._renderBuilder();
+			this._markDirty();
+		});
+
+		reorderWrap.appendChild(upBtn);
+		reorderWrap.appendChild(downBtn);
+		el.appendChild(reorderWrap);
+
 		const removeBtn = document.createElement("button");
 		removeBtn.className = "btn-icon btn-danger ts-remove-tune-btn";
 		removeBtn.title = "Remove from set";
+		removeBtn.setAttribute("aria-label", "Remove tune from set");
 		removeBtn.textContent = "×";
 		removeBtn.addEventListener("click", () => {
 			this._current.sets[setIdx].tunes?.splice(tuneIdx, 1);
@@ -754,6 +780,7 @@ export default class TuneSelectionsModal extends Modal {
 		});
 		el.appendChild(removeBtn);
 
+		// Mouse drag-and-drop (desktop)
 		el.addEventListener("dragstart", (e) => {
 			this._dragItem = { type: "tune", setIdx, tuneIdx };
 			e.dataTransfer.effectAllowed = "move";
@@ -765,7 +792,7 @@ export default class TuneSelectionsModal extends Modal {
 			this._dragItem = null;
 		});
 
-		// Keyboard reordering with ↑/↓
+		// Keyboard ↑/↓ reordering (complements the visible buttons)
 		el.tabIndex = 0;
 		el.addEventListener("keydown", (e) => {
 			const set = this._current.sets[setIdx];
@@ -777,7 +804,7 @@ export default class TuneSelectionsModal extends Modal {
 				];
 				this._renderBuilder();
 				this._markDirty();
-			} else if (e.key === "ArrowDown" && tuneIdx < set.tunes?.length - 1) {
+			} else if (e.key === "ArrowDown" && tuneIdx < set.tunes.length - 1) {
 				[set.tunes[tuneIdx + 1], set.tunes[tuneIdx]] = [
 					set.tunes[tuneIdx],
 					set.tunes[tuneIdx + 1]
@@ -790,15 +817,33 @@ export default class TuneSelectionsModal extends Modal {
 		return el;
 	}
 
-	/** Build an available-tune card (left pane). */
+	/** Build an available-tune card (left pane), with a "+" add button. */
 	_buildTuneCard(tune) {
 		const card = document.createElement("div");
 		card.className = "ts-tune-card";
 
+		// Header row: name + add button
+		const nameRow = document.createElement("div");
+		nameRow.className = "ts-tune-card-header";
+
 		const name = document.createElement("div");
 		name.className = "ts-tune-name";
 		name.textContent = tune.name;
-		card.appendChild(name);
+		nameRow.appendChild(name);
+
+		// "+" button — always visible on touch; revealed on hover on desktop.
+		// Adds the tune to the currently selected set.
+		const addBtn = document.createElement("button");
+		addBtn.className = "btn-icon ts-add-tune-btn";
+		addBtn.textContent = "+";
+		addBtn.title = `Add "${tune.name}" to current set`;
+		addBtn.setAttribute("aria-label", `Add ${tune.name} to current set`);
+		addBtn.addEventListener("click", (e) => {
+			e.stopPropagation();
+			this._addTuneToCurrentSet(tune);
+		});
+		nameRow.appendChild(addBtn);
+		card.appendChild(nameRow);
 
 		const abcs = Array.isArray(tune.abc)
 			? tune.abc
@@ -807,14 +852,12 @@ export default class TuneSelectionsModal extends Modal {
 				: [];
 
 		if (abcs.length > 1) {
-			// ── Setting label ──
 			const labelEl = document.createElement("div");
 			labelEl.className = "ts-setting-label";
 			let settingIdx = 0;
 			labelEl.textContent = buildSettingLabel(abcs[0], 0);
 			card.appendChild(labelEl);
 
-			// ── Incipit + ▲/▼ navigation ──
 			const uid =
 				tune.ttId ??
 				tune.theSessionId ??
@@ -847,7 +890,6 @@ export default class TuneSelectionsModal extends Modal {
 			incipitWrap.appendChild(navCol);
 			card.appendChild(incipitWrap);
 
-			// LHS step handler: visual only — no entry to update, no markDirty
 			const stepSetting = (delta) => {
 				settingIdx = (settingIdx + delta + abcs.length) % abcs.length;
 				const abc = abcs[settingIdx];
@@ -871,7 +913,6 @@ export default class TuneSelectionsModal extends Modal {
 				stepSetting(+1);
 			});
 
-			// Render initial incipit after insertion into DOM
 			requestAnimationFrame(() => {
 				AbcJs.renderAbc(incipitId, getIncipit({ abc: abcs[0] }), {
 					scale: 0.7,
@@ -883,7 +924,6 @@ export default class TuneSelectionsModal extends Modal {
 				});
 			});
 		} else if (tune.incipit) {
-			// Single setting: use pre-computed incipit (rendered by _renderAvailable as before)
 			const uid =
 				tune.ttId ??
 				tune.theSessionId ??
@@ -907,7 +947,6 @@ export default class TuneSelectionsModal extends Modal {
 
 	// ─── Drag & drop ────────────────────────────────────────────────────────────
 
-	/** Restore keyboard focus to the set header at the given index after a re-render. */
 	_focusSetHeader(idx) {
 		requestAnimationFrame(() => {
 			const headers = this.element.querySelectorAll(
@@ -917,7 +956,6 @@ export default class TuneSelectionsModal extends Modal {
 		});
 	}
 
-	/** Attach a drop zone to the set header, accepting only available-tune drags. */
 	_attachHeaderDropZone(header, setIdx) {
 		header.addEventListener("dragover", (e) => {
 			if (this._dragItem?.type !== "available") return;
@@ -925,18 +963,15 @@ export default class TuneSelectionsModal extends Modal {
 			e.dataTransfer.dropEffect = "copy";
 			header.classList.add("ts-drop-target");
 		});
-
 		header.addEventListener("dragleave", (e) => {
-			if (!header.contains(e.relatedTarget)) {
+			if (!header.contains(e.relatedTarget))
 				header.classList.remove("ts-drop-target");
-			}
 		});
-
 		header.addEventListener("drop", (e) => {
 			header.classList.remove("ts-drop-target");
 			if (this._dragItem?.type !== "available") return;
 			e.preventDefault();
-			e.stopPropagation(); // don't bubble to block's set-reorder drop handler
+			e.stopPropagation();
 			this._addTuneToSet(this._dragItem.tune, setIdx);
 		});
 	}
@@ -948,13 +983,10 @@ export default class TuneSelectionsModal extends Modal {
 				this._dragItem?.type === "available" ? "copy" : "move";
 			setBlock.classList.add("ts-drop-target");
 		});
-
 		setBlock.addEventListener("dragleave", (e) => {
-			if (!setBlock.contains(e.relatedTarget)) {
+			if (!setBlock.contains(e.relatedTarget))
 				setBlock.classList.remove("ts-drop-target");
-			}
 		});
-
 		setBlock.addEventListener("drop", (e) => {
 			e.preventDefault();
 			setBlock.classList.remove("ts-drop-target");
@@ -974,7 +1006,6 @@ export default class TuneSelectionsModal extends Modal {
 
 	// ─── Actions ────────────────────────────────────────────────────────────────
 
-	/** Add a tune to the currently selected set (highlighted in the builder). */
 	_addTuneToCurrentSet(tune) {
 		const setIdx = Math.min(
 			this._selectedSetIdx,
@@ -1009,17 +1040,11 @@ export default class TuneSelectionsModal extends Modal {
 		this._markDirty();
 	}
 
-	/**
-	 * Stamp dateModified and recompute dirty state by comparing current content
-	 * against the persisted version in _setLists (if any).
-	 * An unsaved list (not yet in _setLists) is dirty as soon as it has any tunes.
-	 */
 	_markDirty() {
 		this._current.dateModified = new Date().toISOString();
 		this._recomputeDirty();
 	}
 
-	/** Force-recompute dirty state without touching dateModified. */
 	_recomputeDirty() {
 		this._isDirty = this._computeIsDirty();
 		this._updateDirtyIndicator();
@@ -1028,19 +1053,10 @@ export default class TuneSelectionsModal extends Modal {
 	_computeIsDirty() {
 		if (!this._current) return false;
 		const saved = this._setLists.find((sl) => sl.id === this._current.id);
-		if (!saved) {
-			// // Never been saved — dirty if it has any tunes at all
-			// return this._current.sets.some((s) => s.tunes.length > 0);
-			return true; // closing removes selected tunes - could be irritating if they want to change one of the tunes
-		}
-		// Compare content fields only (not timestamps)
+		if (!saved) return true;
 		return !this._contentEqual(this._current, saved);
 	}
 
-	/**
-	 * Deep-compare the user-visible content of two set lists,
-	 * ignoring id, dateCreated, dateModified.
-	 */
 	_contentEqual(a, b) {
 		if (a.name !== b.name) return false;
 		if (a.sets.length !== b.sets.length) return false;
@@ -1051,7 +1067,6 @@ export default class TuneSelectionsModal extends Modal {
 			if (sa.comments !== sb.comments) return false;
 			if (sa.tunes?.length !== sb.tunes?.length) return false;
 			for (let j = 0; j < sa.tunes?.length; j++) {
-				// Compare serialised tune entries (ttId/theSessionId/notes)
 				if (JSON.stringify(sa.tunes[j]) !== JSON.stringify(sb.tunes[j]))
 					return false;
 			}
@@ -1064,29 +1079,22 @@ export default class TuneSelectionsModal extends Modal {
 		this._updateDirtyIndicator();
 	}
 
-	/** Toggles a visual cue on the Save button when there are unsaved changes. */
 	_updateDirtyIndicator() {
 		const btn = this.element?.querySelector(".ts-save-btn");
 		if (!btn) return;
 		btn.classList.toggle("ts-btn-dirty", this._isDirty);
 	}
 
-	/**
-	 * Generate a set list name that doesn't conflict with any existing set list.
-	 * Uses "Tune selection N", incrementing N until the name is unique.
-	 * @returns {string}
-	 */
 	_uniqueSetListName() {
 		const existingNames = new Set(this._setLists.map((sl) => sl.name));
-		let n = 1;
-		let name;
+		let n = 1,
+			name;
 		do {
 			name = `Tune selection ${n++}`;
 		} while (existingNames.has(name));
 		return name;
 	}
 
-	/** Create a new empty set list and make it current. */
 	_newSetList() {
 		if (
 			this._isDirty &&
@@ -1112,7 +1120,7 @@ export default class TuneSelectionsModal extends Modal {
 		}
 		this._renderSavedList();
 		this._callbacks.saveSetListsToStorage(this._setLists);
-		this._recomputeDirty(); // will be false — content now matches saved version
+		this._recomputeDirty();
 		const btn = this.element.querySelector(".ts-save-btn");
 		const orig = btn.textContent;
 		btn.textContent = "✓ Saved";
@@ -1133,7 +1141,6 @@ export default class TuneSelectionsModal extends Modal {
 		this._renderContents();
 	}
 
-	/** Copy the current set list's data to clipboard as a JavaScript literal. */
 	_copyToClipboard() {
 		if (!this._current) return;
 		const btn = this.element.querySelector(".ts-copy-btn");
@@ -1158,7 +1165,6 @@ export default class TuneSelectionsModal extends Modal {
 		if (!this._current) return;
 		const idx = this._setLists.findIndex((sl) => sl.id === this._current.id);
 		if (idx < 0) {
-			// Unsaved - just replace with a fresh set list
 			this._current = createSetList(this._uniqueSetListName());
 			this._renderContents();
 			return;
@@ -1175,22 +1181,15 @@ export default class TuneSelectionsModal extends Modal {
 		this._renderContents();
 	}
 
-	/**
-	 * Seed the modal with set lists (e.g. from localStorage or hardcoded source data).
-	 * Replaces any currently held set lists; doesn't affect the current in-progress edit.
-	 * @param {object[]} setLists
-	 */
 	loadSetLists(setLists) {
 		this._setLists = setLists;
 		if (this.element) this._renderSavedList();
 	}
 
-	/** Return the current in-memory set lists array, for persistence. */
 	getSetLists() {
 		return this._setLists;
 	}
 
-	/** Open the print preview modal for the current set list. */
 	_openPreview() {
 		if (!this._current) return;
 		new PrintPreviewModal(this._current).open();

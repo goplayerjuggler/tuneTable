@@ -77,41 +77,47 @@ export default class AbcModal extends Modal {
         <div id="abcText" class="abc-text">
           <pre id="abcTextContent"></pre>
         </div>
-        <div class="modal-controls">
+        <div class="modal-controls abc-modal-controls">
           <div class="control-row">
-            <button id="saveAbcBtn" class="save-btn" style="display:none">
-              Save changes
+            <button id="saveAbcBtn" class="save-btn" style="display:none"
+              aria-label="Save changes">
+              💾 Save
             </button>
-            <button id="doubleBtn" class="transpose-btn">double bar length</button>
-            <button id="halveBtn" class="transpose-btn">halve bar length</button>
-            <button id="transposeDownBtn" class="transpose-btn">♭ (down)</button>
-            <button id="transposeUpBtn" class="transpose-btn">♯ (up)</button>
-            <button class="toggle-view-btn" id="toggleViewBtn">Show ABC text</button>
+            <button id="doubleBtn" class="transpose-btn"
+              aria-label="Double bar length">2×bar</button>
+            <button id="halveBtn" class="transpose-btn"
+              aria-label="Halve bar length">½bar</button>
+            <button id="transposeDownBtn" class="transpose-btn"
+              aria-label="Transpose down one semitone">♭</button>
+            <button id="transposeUpBtn" class="transpose-btn"
+              aria-label="Transpose up one semitone">♯</button>
+            <button class="toggle-view-btn" id="toggleViewBtn">ABC text</button>
           </div>
           <div class="control-row">
-            <button id="prevAbcBtn" class="nav-btn">↑ Previous setting</button>
-            <span id="abcCounter"></span>
-            <button id="nextAbcBtn" class="nav-btn">↓ Next setting</button>
+            <button id="prevAbcBtn" class="nav-btn" aria-label="Previous setting">↑ Prev</button>
+            <span id="abcCounter" aria-live="polite"></span>
+            <button id="nextAbcBtn" class="nav-btn" aria-label="Next setting">↓ Next</button>
           </div>
-		  <div class="control-row pagination-controls">
-  <div id="abcContextRow" style="display:none">
-    <label for="abcContextSelect">Mode</label>
-    <select id="abcContextSelect"></select>
-  </div>
-  <button id="prevPageBtn" class="nav-btn">← Prev page</button>
-  <span id="pageCounter"></span>
-  <button id="nextPageBtn" class="nav-btn">Next page →</button>
-</div>
+          <div class="control-row pagination-controls">
+            <div id="abcContextRow" style="display:none">
+              <label for="abcContextSelect">Mode</label>
+              <select id="abcContextSelect"></select>
+            </div>
+            <button id="prevPageBtn" class="nav-btn" aria-label="Previous page">← Prev</button>
+            <span id="pageCounter" aria-live="polite"></span>
+            <button id="nextPageBtn" class="nav-btn" aria-label="Next page">Next →</button>
+          </div>
         </div>
       `
 		});
 
 		this.callbacks = callbacks;
+		this._resizeHandler = null;
 	}
 
 	onOpen() {
 		// Resolve element references and set up listeners once — the modal HTML
-		// is created at construction time and persists for the lifetime of the instance
+		// is created at construction time and persists for the lifetime of the instance.
 		if (!this.elements) {
 			this.elements = {
 				rendered: document.getElementById("abcRendered"),
@@ -143,12 +149,42 @@ export default class AbcModal extends Modal {
 		// Ensure rendered view is shown
 		this.elements.rendered.style.display = "block";
 		this.elements.text.classList.remove("active");
-		this.elements.toggleBtn.textContent = "Show ABC text";
+		this.elements.toggleBtn.textContent = "ABC text";
 		this.elements.rendered.style.cursor = "pointer";
 
 		this.updateContextRow();
 		this.updateDisplayAfterTranspose();
 		this.updateControls();
+
+		// Re-render score when the window is resized (e.g. orientation change, zoom).
+		// Debounced at 250 ms to avoid thrashing abcjs on continuous resize events.
+		this._resizeHandler = this._debounce(() => {
+			if (!this.isOpen()) return;
+			if (this.isSetMode) this.renderSetAbc();
+			else this.updateDisplayAfterTranspose();
+		}, 250);
+		window.addEventListener("resize", this._resizeHandler);
+	}
+
+	// ── Helpers ───────────────────────────────────────────────────────────────
+
+	/** Returns the available pixel width for the rendered score. */
+	_getStaffWidth() {
+		const el = this.elements?.rendered;
+		if (el) {
+			const w = el.clientWidth;
+			if (w > 100) return Math.floor(w - 40); // 20 px padding each side
+		}
+		return 900; // fallback for initial render before layout
+	}
+
+	/** Simple debounce utility. */
+	_debounce(fn, ms) {
+		let t;
+		return (...args) => {
+			clearTimeout(t);
+			t = setTimeout(() => fn(...args), ms);
+		};
 	}
 
 	// ── Context (solo / set) ──────────────────────────────────────────────────
@@ -200,7 +236,7 @@ export default class AbcModal extends Modal {
 			this.currentViewMode = "rendered";
 			this.elements.rendered.style.display = "block";
 			this.elements.text.classList.remove("active");
-			this.elements.toggleBtn.textContent = "Show ABC text";
+			this.elements.toggleBtn.textContent = "ABC text";
 		}
 
 		this.updateContextRow();
@@ -213,7 +249,7 @@ export default class AbcModal extends Modal {
 		}
 	}
 
-	/** Rebuild the context-selector button row. Hidden when the tune has no sets. */
+	/** Rebuild the context-selector row. Hidden when the tune belongs to no sets. */
 	updateContextRow() {
 		const { contextRow, contextSelect } = this.elements;
 		if (!this.setContexts?.length) {
@@ -256,9 +292,10 @@ export default class AbcModal extends Modal {
 			"position:absolute;visibility:hidden;pointer-events:none";
 		document.body.appendChild(scratch);
 
+		const staffwidth = this._getStaffWidth();
 		const abcOptions = {
 			scale: 1.0,
-			staffwidth: 900,
+			staffwidth,
 			paddingtop: 10,
 			paddingbottom: 10,
 			paddingright: 20,
@@ -400,7 +437,7 @@ export default class AbcModal extends Modal {
 		this.elements.prevPageBtn?.addEventListener("click", () => this.prevPage());
 		this.elements.nextPageBtn?.addEventListener("click", () => this.nextPage());
 
-		// Click navigation on the rendered score
+		// Click navigation on the rendered score — left half = prev, right half = next
 		this.elements.rendered?.addEventListener("click", (e) => {
 			if (this.currentViewMode !== "rendered") return;
 			const rect = this.elements.rendered.getBoundingClientRect();
@@ -469,12 +506,12 @@ export default class AbcModal extends Modal {
 			this.currentViewMode = "text";
 			this.elements.rendered.style.display = "none";
 			this.elements.text.classList.add("active");
-			this.elements.toggleBtn.textContent = "Show rendered";
+			this.elements.toggleBtn.textContent = "Score";
 		} else {
 			this.currentViewMode = "rendered";
 			this.elements.rendered.style.display = "block";
 			this.elements.text.classList.remove("active");
-			this.elements.toggleBtn.textContent = "Show ABC text";
+			this.elements.toggleBtn.textContent = "ABC text";
 		}
 	}
 
@@ -543,7 +580,7 @@ export default class AbcModal extends Modal {
 			this.elements.prevPageBtn.style.display = "inline-block";
 			this.elements.nextPageBtn.style.display = "inline-block";
 			this.elements.pageCounter.style.display = "inline-block";
-			this.elements.pageCounter.textContent = `Page ${this.currentPage + 1} / ${totalPages}`;
+			this.elements.pageCounter.textContent = `${this.currentPage + 1} / ${totalPages}`;
 			this.elements.prevPageBtn.disabled = this.currentPage === 0;
 			this.elements.nextPageBtn.disabled = this.currentPage >= totalPages - 1;
 		} else {
@@ -577,10 +614,11 @@ export default class AbcModal extends Modal {
 
 		this.elements.textContent.textContent = this.currentTransposedAbc;
 
+		const staffwidth = this._getStaffWidth();
 		this.elements.rendered.innerHTML = "";
 		AbcJs.renderAbc("abcRendered", this.currentTransposedAbc, {
 			scale: 1.0,
-			staffwidth: 900,
+			staffwidth,
 			paddingtop: 10,
 			paddingbottom: 10,
 			paddingright: 20,
@@ -632,6 +670,11 @@ export default class AbcModal extends Modal {
 	onClose() {
 		document.removeEventListener("keydown", this.handleKeydown);
 		this.handleKeydown = null;
+
+		if (this._resizeHandler) {
+			window.removeEventListener("resize", this._resizeHandler);
+			this._resizeHandler = null;
+		}
 
 		this.currentTranspose = 0;
 		this.currentAbcIndex = 0;

@@ -1179,18 +1179,30 @@ function renderTable() {
 		// ── Row HTML ──────────────────────────────────────────────────
 		row.innerHTML = `
 			<td>
-				<div class="tune-name-row">${nameHtml}</div>
-				<div class="tune-meta">${metadata}</div>
-				<div class="tune-footer-row">
-					${contourHtml}
-					<div class="tune-actions">
-						<button class="btn-icon btn-select${tune.selected ? " btn-select--checked" : ""}" title="Select tune">${tune.selected ? "☑" : "☐"}</button>
-						<button class="btn-icon btn-edit" title="Edit tune">✎</button>
-						<button class="btn-icon btn-copy" data-tune-index="${index}" title="Copy tune data">📋</button>
-						<button class="btn-icon btn-danger" title="Delete tune">🗑</button>
+				<div class="tune-main-row">
+					<div class="tune-info">
+						<div class="tune-name-row">${nameHtml}</div>
+						<div class="tune-meta">${metadata}</div>
+					</div>
+					<div class="tune-right">
+						<div class="tune-actions">
+							<button class="btn-icon tune-menu-trigger" title="Actions" aria-haspopup="true"
+								aria-expanded="false">⋯</button>
+							<div class="tune-context-menu" hidden role="menu">
+								<button class="tune-menu-item btn-select${tune.selected ? " btn-select--checked" : ""}"
+									role="menuitem">${tune.selected ? "☑" : "☐"} Select</button>
+								<button class="tune-menu-item btn-edit" role="menuitem">✎ Edit</button>
+								<button class="tune-menu-item btn-copy" data-tune-index="${index}" role="menuitem">📋 Copy</button>
+								<button class="tune-menu-item btn-delete" role="menuitem">🗑 Delete</button>
+							</div>
+						</div>
+					   ${contourHtml}
 					</div>
 				</div>
 				<div class="${incipitClass}"></div>
+				<div class="tune-references-panel">
+					${referencesHtml}${scoresHtml}
+				</div>
 			</td>
 			<td class="col-references">${referencesHtml}${scoresHtml}</td>`;
 
@@ -1200,16 +1212,44 @@ function renderTable() {
 				openAbcModal(window.filteredData[index], index);
 			});
 		}
+
+		// ⋯ context menu
+		const trigger = row.querySelector(".tune-menu-trigger");
+		const menu = row.querySelector(".tune-context-menu");
+
+		trigger.addEventListener("click", (e) => {
+			e.stopPropagation();
+			const opening = menu.hidden;
+			// close any other open menus
+			document
+				.querySelectorAll(".tune-context-menu:not([hidden])")
+				.forEach((m) => {
+					m.hidden = true;
+					m.closest(".tune-actions")
+						?.querySelector(".tune-menu-trigger")
+						?.setAttribute("aria-expanded", "false");
+				});
+			if (opening) {
+				menu.hidden = false;
+				trigger.setAttribute("aria-expanded", "true");
+			}
+		});
+
 		row.querySelector(".btn-select").addEventListener("click", () => {
+			menu.hidden = true;
+			trigger.setAttribute("aria-expanded", "false");
 			toggleTuneSelected(index, row);
 		});
 		row.querySelector(".btn-edit").addEventListener("click", () => {
+			menu.hidden = true;
 			editModal.openWithTune(window.filteredData[index], index);
 		});
 		row.querySelector(".btn-copy").addEventListener("click", () => {
+			menu.hidden = true;
 			copySingleTune(index);
 		});
-		row.querySelector(".btn-danger").addEventListener("click", () => {
+		row.querySelector(".btn-delete").addEventListener("click", () => {
+			menu.hidden = true;
 			deleteTune(index);
 		});
 
@@ -1219,7 +1259,7 @@ function renderTable() {
 	});
 
 	document.getElementById("spCount").innerText =
-		`${window.filteredData.length}/${window.tunesData.length}`;
+		`${window.filteredData.length}/${window.tunesData.length} tunes`;
 
 	schedulePrecalculation();
 }
@@ -1340,8 +1380,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 		setDropdownOpen(!dropdown.classList.contains("active"));
 	});
 
+	// Close any open tune context menus when clicking outside
 	document.addEventListener("click", (e) => {
 		if (!dropdown.contains(e.target)) setDropdownOpen(false);
+		document
+			.querySelectorAll(".tune-context-menu:not([hidden])")
+			.forEach((m) => {
+				m.hidden = true;
+				m.closest(".tune-actions")
+					?.querySelector(".tune-menu-trigger")
+					?.setAttribute("aria-expanded", "false");
+			});
 	});
 
 	// Helper: close dropdown then invoke action
