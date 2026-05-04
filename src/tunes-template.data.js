@@ -815,9 +815,9 @@ export default {
 		{
 			id: "1777487795486-cm14l",
 			groups: "default",
-			name: "Hop jigs: Ballisodare, JK's, Cucanandy",
+			name: "Hop jigs sets",
 			dateCreated: "2026-04-29T18:36:35.486Z",
-			dateModified: "2026-04-29T18:38:05.792Z",
+			dateModified: "2026-05-04T09:49:22.581Z",
 			sets: [
 				{
 					name: "Boys Of Ballisodare set - 3 hop jigs",
@@ -830,6 +830,19 @@ export default {
 						},
 						{
 							theSessionId: 1374
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "Top the candle",
+					tunes: [
+						{
+							theSessionId: 10116,
+							x: 1
+						},
+						{
+							theSessionId: 268
 						}
 					],
 					collapsed: true
