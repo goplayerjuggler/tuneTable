@@ -7,5 +7,6 @@ L: 1/8
 K: Emin
 ~E3 EDB, GFG A3|B3 ABA`,
 	theSessionId: 217,
-	theSessionSettingId: 12898
+	theSessionSettingId: 12898,
+	parts: "AABB"
 };

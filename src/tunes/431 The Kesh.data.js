@@ -13,5 +13,6 @@ K:Gmajor
 GAG GAB ABA ABd|edd gdd BAF G3:|
 |:B2B d2d ege dBA|B2B dBG ABA AGA|
 BAB d^cd ege dBd|gfg aga bgg g3:|`,
-	theSessionId: 55
+	theSessionId: 55,
+	parts: "AABB"
 };

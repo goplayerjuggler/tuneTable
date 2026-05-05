@@ -2,7 +2,6 @@ export default {
 	aka: ["The Lilting Banshee", "The Miller Of Glanmire"],
 	abc: `X: 1
 T: Leave it down easy
-T: As played by Danny Smith
 S: Danny Smith, whistle
 F:https://www.itma.ie/playlists/first_itma_fieldrecordings_1992/?track=7
 R: jig

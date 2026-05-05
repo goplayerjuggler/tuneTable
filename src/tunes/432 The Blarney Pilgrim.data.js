@@ -15,5 +15,6 @@ ded dBG AGA BGE|ded dBG AGA GAB|
 g2e dBG AGA BGE|B2G AGE GED D3:|
 A2D B2D A2D ABc|BAG AGE GEA GED|
 ADD BDD ADD ABc|BAG AGE GED D3:|`,
-	theSessionId: 5
+	theSessionId: 5,
+	parts: "AABBCC"
 };

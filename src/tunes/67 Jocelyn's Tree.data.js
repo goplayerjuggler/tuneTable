@@ -16,5 +16,6 @@ FDB BAG FAd faa|bge cAF GFE DED:|
 B2e bge A2f afd|FAd gec AGE DED:|
 |:ABA eff aba afd|BGE G,A,A, CEA gec|
 dcd eff aba afd|Bge cAF GFE DED:|`,
-	theSessionId: 2132
+	theSessionId: 2132,
+	parts: "AABBCC"
 };

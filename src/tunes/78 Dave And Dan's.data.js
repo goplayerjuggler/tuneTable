@@ -24,5 +24,6 @@ K:Cmajor
 |:g3 ege c3 ceg|a3 faf Acf afd|g3 ege c3 agf|gfe fed ced c3:|
 |:ecf g2g f/g/af gec|f/g/af e/f/ge dcA G2E|F3 Acf a3 gfe|fed edc B/c/dB c3:|`,
 	theSessionId: 21254,
-	theSessionSettingId: 42412
+	theSessionSettingId: 42412,
+	parts: "AABBCC"
 };

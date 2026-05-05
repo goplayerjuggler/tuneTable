@@ -18,5 +18,6 @@ B2d gdB dgB dgB|c2e gec egc ege|
 d2f afd fad faf|d^cd ((3gfe) d cAF G2|
 |:A|B2.B {c}BAG FFF AFD|BBB {c}BAG BdB cBA|
 B2.B {c}BAG FFF AFD|d^cd ((3gfe) d cAF G2:|`,
-	theSessionId: 2156
+	theSessionId: 2156,
+	parts: "AABBCC"
 };

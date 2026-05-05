@@ -6,5 +6,6 @@ M: 12/8
 L: 1/8
 K: Dmixo
 DEF ~G3 AGE c2A|dcA d2e`,
-	theSessionId: 544
+	theSessionId: 544,
+	parts: "AABB"
 };

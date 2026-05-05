@@ -13,5 +13,6 @@ K:Gmajor
 GBA G2B def gfg|efe dBA BGG G2:|
 |:d|efe edB def gfg|efe edB dBA ABd|
 efe edB def gfg|efe dBA BGG G2:|`,
-	theSessionId: 307
+	theSessionId: 307,
+	parts: "AABB"
 };

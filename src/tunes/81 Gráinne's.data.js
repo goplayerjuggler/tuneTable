@@ -23,5 +23,6 @@ Bc|:dBF GDB, G,3 DB,D|EcB (A{B}A)G FED cBA|
 (B/c/d)B Ggf ecA ~E3|DGc BDF[1 AGF G2 A:|2 AGF G2 D||
 |:GBd ~g3 edB cBA|(B/c/d)B a2 g fd^c def|
 gdB Ggf ecA ~E3|DGc BDF[1 AGF G2 D:|2 AGF GBc||`,
-	theSessionId: 488
+	theSessionId: 488,
+	parts: "AABBCC"
 };
