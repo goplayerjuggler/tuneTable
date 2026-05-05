@@ -21,6 +21,7 @@ import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
 import TuneSelectionsModal from "./modules/modals/TuneSelectionsModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
+import IntroModal from "./modules/modals/IntroModal.js";
 
 // Legacy key kept for one-time cleanup only
 const storageKey = "tunesData";
@@ -1208,8 +1209,9 @@ function renderTable() {
 
 		// ── Event listeners (no inline JS for action buttons) ─────────
 		if (hasAbc) {
-			row.querySelector(".tune-name").addEventListener("click", () => {
+			row.querySelector(".tune-name").addEventListener("click", (e) => {
 				openAbcModal(window.filteredData[index], index);
+				e.preventDefault();
 			});
 		}
 
@@ -1439,7 +1441,44 @@ document.addEventListener("DOMContentLoaded", async function () {
 		}
 	});
 
-	if (initResult?.needsSelector) {
-		tuneListSelectorModal.openWithContext(initResult.manifest, null);
+	// ── Help / intro button ───────────────────────────────────────────────────
+	const helpBtns = document.getElementsByClassName("btn-help");
+	for (let index = 0; index < helpBtns.length; index++) {
+		const el = helpBtns[index];
+		el.addEventListener("click", () => {
+			new IntroModal().open();
+		});
+	}
+
+	// ── Post-load action ──────────────────────────────────────────────────────
+	// Shared logic that runs either immediately (returning user) or after the
+	// intro modal is dismissed (first-time user).
+	//
+	// Priority order:
+	//   1. No list loaded yet         → open the tune-list selector.
+	//   2. URL params narrowed to one → open the score viewer for that tune.
+	//   3. Otherwise                  → do nothing; table is already shown.
+	function runPostLoadAction() {
+		if (initResult?.needsSelector) {
+			tuneListSelectorModal.openWithContext(initResult.manifest, null);
+			return;
+		}
+		// Open score viewer automatically when a ?n= / ?q= param resolves to a
+		// single tune with ABC notation attached.
+		if (
+			window.location.search.length > 0 &&
+			window.filteredData?.length === 1 &&
+			window.filteredData[0].abc
+		) {
+			openAbcModal(window.filteredData[0]);
+		}
+	}
+
+	if (!IntroModal.hasBeenSeen()) {
+		// First visit: always show intro first, regardless of URL params.
+		// The post-load action fires only after the user dismisses it.
+		new IntroModal({ onDismiss: runPostLoadAction }).open();
+	} else {
+		runPostLoadAction();
 	}
 });

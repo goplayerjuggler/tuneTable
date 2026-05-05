@@ -136,6 +136,11 @@ export default (env, argv) => {
 				{
 					test: /\.json$/,
 					type: "json"
+				},
+				{
+					test: /\.html$/i,
+					type: "asset/source",
+					exclude: path.resolve(__dirname, "src/index.html")
 				}
 			]
 		},
