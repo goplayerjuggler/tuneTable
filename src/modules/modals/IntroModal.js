@@ -16,7 +16,7 @@ import htmlContent from "./IntroModal.html";
  * suffix if the content changes enough to warrant showing it again.
  */
 
-const INTRO_SEEN_KEY = "introSeen_v1";
+const INTRO_SEEN_KEY = "introSeen_v2";
 
 export default class IntroModal extends Modal {
 	/**
@@ -28,7 +28,7 @@ export default class IntroModal extends Modal {
 		super({
 			id: "introModal",
 			size: "large",
-			title: "Welcome to Tune Table",
+			title: "Welcome to Tune table",
 			content: IntroModal._buildContent(),
 			onClose: () => {
 				IntroModal.markSeen();

@@ -249,7 +249,8 @@ h1 {
   outline-offset: -2px;
 }
 
-#footer-list-link {
+#footer-list-link,
+#footer-about-link {
   color: var(--text-primary);
   text-decoration: none;
   width: 100%;

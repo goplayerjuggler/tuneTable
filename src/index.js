@@ -519,10 +519,17 @@ function updateFooter() {
 
 	el.innerHTML =
 		`tune list: ${currentListState.displayName}` +
-		` (${currentListState.source}; ${counts})` +
+		` (${currentListState.source}; ${counts})Tunes sorted by: “${currentSortType}` +
 		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
-		`&bull; <button id="footer-list-link">tune lists</button><br/>Tunes sorted by: “${currentSortType}”`;
+		`<button id="footer-list-link">tune lists</button>
+		<br/><button class="btn-help" id="footer-about-link" title="About “Tune table”" type="button"
+        aria-label="About “Tune table”">
+        about “Tune table”
+      </button>
+	  
+		
+	  `;
 	document
 		.getElementById("footer-list-link")
 		?.addEventListener("click", (e) => {
