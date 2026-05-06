@@ -1,8 +1,9 @@
 export default {
+	aka: "Christmas Eve",
 	abc: [
 		`X: 1
-T: Christmas Eve
-T: version as of 2025-12-05
+T: Tommy Coen's
+H: version as of 2025-12-05
 C:Tommy Coen
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -17,8 +18,8 @@ K: Gmaj
 |:dc|"G/B"B~G3 BGBd "C"e~g3 egdc|"G"B~G3 DGBG "Am"EAAG A2dc|
 "G/B"B~G3 BGBd "C"e~g3 g3a|"C"bgaf gedB "D"ABGF G2:|`,
 		`X: 2
-T: Christmas Eve
-T: version as of 2025-12-01
+T: Tommy Coen's
+H: version as of 2025-12-01
 C:Tommy Coen
 Z:abc-transcription Malcolm Schonfield% 2025-11-13, chords from 2025-10-23
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -33,8 +34,8 @@ K: Gmaj
 |:dc|"G/B"B~G3 D2Bd "C"e~g3 egdc|"G"B~G3 DGBG "Am"E~A3 F~A3|
 "G/B"B~G3 BGBd "C"e~g3 g3a|"D"bgaf gedB "G"ABGF G2:|`,
 		`X: 3
-T: Christmas Eve
-T: version with rolls; 2025-11-13
+T: Tommy Coen's
+H: version with rolls; 2025-11-13
 Z:abc-transcription Malcolm Schonfield% 2025-11-13
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: reel
@@ -48,7 +49,7 @@ BG (3Bcd ~e3g abge g2eg | abge ~d3B ABGE G2:|
 |:dc|B~G3 BGBd e~g3 egdc|B~G3 DGBG E~A3 A2dc|
 B~G3 BGBd e~g3 g3a|bgaf gedB ABGE G2:|`,
 		`X: 4
-T: Christmas Eve
+T: Tommy Coen's
 R: reel
 M: 4/4
 L: 1/16
@@ -64,6 +65,10 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 	groups: "ALORA",
 	origin: "Ireland",
 	references: [
+		{
+			notes:
+				"There's an [interesting story on thesession](https://thesession.org/tunes/440#comment747565) about how this tune came to be known as Christmas Eve. It seems to involve antisemitism. So I've decided to use the alternate name, Tommy Coen's here."
+		},
 		{
 			artists:
 				"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
@@ -95,5 +100,6 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`
 		}
 	],
 	theSessionId: 440,
-	theSessionSettingId: 48642
+	theSessionSettingId: 48642,
+	parts: "AABBCC"
 };
