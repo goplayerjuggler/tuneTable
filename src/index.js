@@ -523,7 +523,7 @@ function updateFooter() {
 		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
 		`<button id="footer-list-link">tune lists</button>
-		<br/><button class="btn-help" id="footer-about-link" title="About “Tune table”" type="button"
+		<br/><button id="footer-about-link" title="About “Tune table”" type="button"
         aria-label="About “Tune table”">
         about “Tune table”
       </button>
@@ -535,6 +535,12 @@ function updateFooter() {
 		?.addEventListener("click", (e) => {
 			e.preventDefault();
 			openTuneListSelector();
+		});
+	document
+		.getElementById("footer-about-link")
+		?.addEventListener("click", (e) => {
+			e.preventDefault();
+			new IntroModal().open();
 		});
 }
 
