@@ -67,7 +67,7 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 	references: [
 		{
 			notes:
-				"There's an [interesting story on thesession](https://thesession.org/tunes/440#comment747565) about how this tune came to be known as Christmas Eve. It seems to involve antisemitism. So I've decided to use the alternate name, Tommy Coen's here."
+				"There's an [interesting story on thesession](https://thesession.org/tunes/440#comment747565) about how this tune came to be known as Christmas Eve. It seems to involve antisemitism. Anyway, I've decided to use an alternate name here: Tommy Coen's."
 		},
 		{
 			artists:
