@@ -15,5 +15,10 @@ K:Gmajor
 D2B BAG BdB A2B|GED G2A BGE G:|
 Bd|e2e edB ege edB|d2B def gfe dBA|
 G2A B2d ege d2B|AGE G2A BGE G:|`,
+	incipit: `X:1
+L:1/8
+M:12/8
+K:Gmajor
+D2B BAG BdB A2B|GED G2A `,
 	theSessionId: 108
 };
