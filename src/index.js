@@ -1126,7 +1126,9 @@ function renderTable() {
 		// Cross-reference items
 		(tune._resolvedCrossRefs ?? []).forEach((cr) => {
 			const artistLink = cr.artistNames
-				? `<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
+				? //`<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
+					//260506 broken - todo - fix
+					cr.artistNames
 				: "";
 			const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
 			referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}]</div>`;
