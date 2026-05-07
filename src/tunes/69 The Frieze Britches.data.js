@@ -1,5 +1,6 @@
 export default {
 	aka: ["The Frieze Breeches", "Cúnla"],
+	parts: "AABBCCDDEE",
 	incipit: `X: 11
 T:The Frieze Britches
 R: jig

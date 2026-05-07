@@ -17,5 +17,6 @@ K:Baeol
   BAF E2F FDE FDE|FAB def [1 fed edB:|2 fed e3||
 |:fef b2B fef ~a3|fba fed fee ede|
   fef b2B fef ~a3|baf aba [1 fee ede:|2 fee edB||`,
-	theSessionId: 1902
+	theSessionId: 1902,
+	parts: "AABBCCDD"
 };

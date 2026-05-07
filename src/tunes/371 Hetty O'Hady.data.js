@@ -11,5 +11,6 @@ GBA B2d edB AGE|GBA B2G`,
 		{
 			theSessionId: 1137 // Darby The Driver / Charlie Mulvihill"
 		}
-	]
+	],
+	parts: "AABB"
 };

@@ -24,5 +24,6 @@ efg fed ecA d^cd | cGE _BFD Cec =Bcd | efg ~f3 ~e3 ~d3 | cGE _BFD CDC C2E !D.C.!
 "^second time, at the end"efg f(3edf e(3Gce d(3GBd | c(3GEG _B(3FDF C(3EGc =Bcd | efg ~f3 efg fed | cGE _BFD CDC C3 |]`
 	],
 	theSessionId: 23818,
-	theSessionSettingId: 49004
+	theSessionSettingId: 49004,
+	parts: "AABB"
 };

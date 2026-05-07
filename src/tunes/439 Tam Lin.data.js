@@ -7,5 +7,6 @@ L:1/16
 M:4/4
 K:Dminor
 A,2DA, FA,DA, B,2DB, FB,DB,|C2EC GCEC`,
-	theSessionId: 248
+	theSessionId: 248,
+	parts: "AABB"
 };

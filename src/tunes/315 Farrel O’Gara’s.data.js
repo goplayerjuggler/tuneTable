@@ -15,5 +15,6 @@ Mrs Kathleen Harrington née Gardiner (1897-1984)`
 		}
 	],
 	theSessionId: 234,
-	groups: "alora"
+	groups: "alora",
+	parts: "AABB"
 };
