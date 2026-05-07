@@ -4,7 +4,8 @@ export default {
 	parts: "AA’BB",
 	language: "fr",
 	structure: "7+3;3+4+3",
-	abc: `X: 1
+	abc: [
+		`X: 1
 T:La bourrée à Chandezon
 O:France, Auvergne, Cézallier.
 Z:abc-transcription Malcolm Schonfield
@@ -15,7 +16,8 @@ L:1/8
 K:C 
 geg | g2e | dcd/e/ | dcd/e/ | dcd/e/ | dcd/e/ | gd2 | geg | g2e | dc2 ||
 def | e2d | g3 | def | e2d | cgf | ed2 | def | e2d | c3 |]
-
+`,
+		`
 X: 2
 T:La bourrée à Chandezon
 O:France, Auvergne.
@@ -38,7 +40,8 @@ geg | g2e | dcd/e/ | dcd | dcd/e/ | dce | gd2 | geg | g2e | dc2 ||
 def | e2d | g3 | def | e2d | cgf | ed2 | def | e2d | c3 | z3 ||
 |: geg | g2e | dcd/e/ | dcd | dcd/e/ | dce | gd2 | z3 | geg | g2e | dc2 ||
 def | e2d | g3 | def | e2d | cgf | ed2 | def | e2d | c3 | z3 :|
-`,
+`
+	],
 	references: [
 		{
 			url: "https://youtu.be/ikNhwUkFA38",
@@ -72,6 +75,5 @@ Voir l’entretien cité dans la référence précédente pour des éclaricissem
 
 J’aime beaucoup cet album. De la créativité et de la recherche, dans un langage distinctif. Des idées musicales foisonnent, avec de temps en temps des sons et bruitages inattendus et plaisants.`
 		}
-	],
-	fileDate: "2026-04-20"
+	]
 };
