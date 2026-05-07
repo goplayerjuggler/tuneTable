@@ -72,5 +72,6 @@ Voir l’entretien cité dans la référence précédente pour des éclaricissem
 
 J’aime beaucoup cet album. De la créativité et de la recherche, dans un langage distinctif. Des idées musicales foisonnent, avec de temps en temps des sons et bruitages inattendus et plaisants.`
 		}
-	]
+	],
+	fileDate: "2026-04-20"
 };
