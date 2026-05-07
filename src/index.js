@@ -758,19 +758,20 @@ function extractArtistNames(artists) {
 		.join(", ");
 }
 
-// Parse an identifier string like "ttId=123" or "theSessionId=42" into a plain object.
+// Parse an identifier strings like "key=123", with key = ttId or theSessionId, into a plain object.
 function parseTuneIdStr(str) {
-	const params = new URLSearchParams(str);
+	const split = str?.split("=");
+	if (split?.length !== 2 || ["ttId", "theSessionId"].indexOf(split[0]) < 0)
+		return;
 	const obj = {};
-	for (const [k, v] of params) obj[k] = isNaN(v) ? v : Number(v);
+	obj[split[0]] = +split[1];
 	return obj;
 }
 
 // Resolve an ID object (with theSessionId or ttId) to a tune in the current data set.
 function resolveTuneById(idObj) {
-	if (idObj.theSessionId != null)
-		return _crBySessionId.get(idObj.theSessionId) ?? null;
-	if (idObj.ttId != null) return _crByTtId.get(idObj.ttId) ?? null;
+	if (idObj.theSessionId) return _crBySessionId.get(idObj.theSessionId) ?? null;
+	if (idObj.ttId) return _crByTtId.get(idObj.ttId) ?? null;
 	return null;
 }
 
@@ -781,7 +782,7 @@ function formatNoteLinks(text) {
 	return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => {
 		if (/^(?:ttId|theSessionId)=/.test(target)) {
 			const t = resolveTuneById(parseTuneIdStr(target));
-			if (t != null) return `<a href="#cr-t${t._crId}">${label}</a>`;
+			if (t) return `<a href="#cr-t${t._crId}">${label}</a>`;
 		}
 		return `<a href="${target}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 	});
@@ -832,9 +833,14 @@ function calculateCrossRefs(tunes) {
 			});
 		});
 
-		/*		if (tune.ttId === 523) {
+		/*	
+		if (tune.name === "Le chapeau de paille") {
+			console.log("Le chapeau de paille");
+		}
+		if (tune.ttId === 512) {
 			console.log("debug");
-		}*/
+		}
+		*/
 
 		// Mark tunes referenced by [label](id) patterns in notes as anchor targets
 		(tune.references ?? [])

@@ -16,18 +16,6 @@ const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
-/**
- * JSON fileNames (without path) that are built in dev mode only and excluded
- * from the production / GitHub Pages output.
- * @type {string[]}
- */
-export const FILES_TO_NOT_PUBLISH = [
-  "82 The Chapel Bell.data.js",
-  "84 Aherne's Egg.data.js",
-  "101 Sixpenny Money.data.js"
-  //excluding the above 3 as I'm not sure I'm really interested in them!
-];
-
 /** Composer-based list definitions. */
 const COMPOSER_EXTRACTS = [
   {
@@ -46,7 +34,7 @@ const COMPOSER_EXTRACTS = [
 /** Origin-based list definitions. */
 const ORIGIN_EXTRACTS = [
   { id: "france", label: "France", match: (o) => /^france/i.test(o) },
-  { id: "england", label: "England", match: (o) => /england/i.test(o) },
+  //{ id: "england", label: "England", match: (o) => /england/i.test(o) },
   {
     id: "nordic",
     label: "Nordic",
@@ -291,6 +279,7 @@ export async function buildTuneLists({
   for (const file of tuneFiles) {
     const content = await fs.readFile(file, "utf8");
     const tune = parseTuneFile(content);
+    if (tune.excludeFromBuild) continue;
     let metadata = {};
     try {
       const firstAbc = getFirstAbc(tune);
@@ -320,9 +309,11 @@ export async function buildTuneLists({
    * @returns {Promise<boolean>} `true` if the file was written.
    */
   const writeList = async (fileName, tunes, setLists = []) => {
-    if (!isDevelopment && FILES_TO_NOT_PUBLISH.includes(fileName)) return false;
+    //if (!isDevelopment && FILES_TO_NOT_PUBLISH.includes(fileName)) return false;
     const data = {
-      tunes: tunes.map(sanitizeTune),
+      tunes: tunes
+        .filter((t) => isDevelopment || !t.isPrivate)
+        .map(sanitizeTune),
       setLists: setLists.map(sanitizeSetList)
     };
     await fs.writeFile(

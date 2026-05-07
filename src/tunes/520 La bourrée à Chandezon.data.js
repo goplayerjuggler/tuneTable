@@ -1,4 +1,5 @@
 export default {
+	ttId: 520,
 	tags: "pas carrée",
 	aka: ["Chandeson"],
 	parts: "AA’BB",

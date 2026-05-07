@@ -7,7 +7,8 @@ T: Le chapeau de paille
 O:France, Auvergne.
 R:Bourrée à 3 temps
 S:Michel Esbelin, cabrette
-D:La Valse des Ombres
+D:La Valse des Ombres (2005)
+N:Suite Du Cézallier
 N:Suivi de [la bourrée à Chandezon](ttId=520)
 F:https://music.youtube.com/watch?v=Xd0QOuqU0Qs&t=44
 Z:abc-transcription Malcolm Schonfield
@@ -15,7 +16,7 @@ Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4
 M:3/8
 L:1/8
 K:C
-ded | c2d | .ed2 | c/d/ef | e2d | c3 | 
+ded | c2d | ed2 | c/d/ef | e2d | c3 | 
 ded | c/B/AG | "<("">)"B/c/d2 | ded |  c2 ||
  |: d | c/d/ef | e2d | c/B/cd | ed2 | c/d/ef | e2d |1  c2  :|2  c3 ||
 `,

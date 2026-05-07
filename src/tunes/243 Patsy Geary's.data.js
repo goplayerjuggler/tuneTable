@@ -5,7 +5,8 @@ X: 1
 T: Patsy Geary's
 R: slide
 M: 12/8
-N: H. Norbeck has this as a single jig rather than a slide. (I’m not sure, meself!)
+N: H. Norbeck has this as a single jig rather than a slide. 
+N: (I haven’t yet understood what “single reel” actually means…)
 L: 1/8
 Z:abc-transcription Malcolm Schonfield %2025-03-26
 Z:abc-transcription used this score as a starting point: https://thesession.org/tunes/325#setting325

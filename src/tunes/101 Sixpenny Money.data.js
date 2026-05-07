@@ -12,5 +12,6 @@ K:Dmajor
  FAA FAA|BAG FGE|DED AFA|dfd e2 d:|
  fef gfg|afd ede|fef gfg|afd e2 d|
  fef gfg|afd fga|ABA AFA|dfd e2 d:|`,
-	theSessionId: 387
+	theSessionId: 387,
+	excludeFromBuild: true
 };
