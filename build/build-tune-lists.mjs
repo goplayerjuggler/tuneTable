@@ -44,32 +44,6 @@ const ORIGIN_EXTRACTS = [
   { id: "québec", label: "Québec", match: (o) => /qu[eé]bec/i.test(o) }
 ];
 
-// ─── Tune-dates cache ─────────────────────────────────────────────────────────
-
-/**
- * Serialise tune-dates data with 10 entries per line in `tuneDates1`
- * for human readability.
- *
- * @param {Array<string|null>} tuneDates1
- * @param {Record<string, string>} tuneDates2
- * @returns {string}
- */
-function serialiseTuneDates(tuneDates1, tuneDates2) {
-  const CHUNK = 10;
-  const rows = [];
-  for (let i = 0; i < tuneDates1.length; i += CHUNK) {
-    rows.push(
-      tuneDates1
-        .slice(i, i + CHUNK)
-        .map((d) => (d === null ? "null" : `"${d}"`))
-        .join(", ")
-    );
-  }
-  const arr = rows.length ? `[\n    ${rows.join(",\n    ")}\n  ]` : "[]";
-  const dict = JSON.stringify(tuneDates2, null, 2).replace(/\n/g, "\n  ");
-  return `{\n  "tuneDates1": ${arr},\n  "tuneDates2": ${dict}\n}\n`;
-}
-
 function toDateString(ms) {
   const d = new Date(ms);
   return [
@@ -79,79 +53,49 @@ function toDateString(ms) {
   ].join("-");
 }
 
+// ─── Tune-dates cache ─────────────────────────────────────────────────────────
+
 /**
- * Load the committed tune-dates cache, update any entries whose filesystem
- * mtime is newer than the stored date, write back if changed, and return a
- * Map from fileName → YYYY-MM-DD date string.
+ * Load the committed tune-dates cache and return a Map from fileName → YYYY-MM-DD.
+ * Dates are never written here; run `npm run update-dates` to refresh from git.
  *
- * Tune files named `[integer] [name].data.js` are stored in the compact
- * `tuneDates1` array (indexed by the leading integer); all others go into
- * the `tuneDates2` dictionary keyed by full fileName.
- *
- * The cache is committed to source control so that CI/CD environments
- * (where a fresh checkout sets all mtimes to "now") use accurate dates.
- *
- * @param {string[]} tuneFileNames - Absolute paths to all tune files.
+ * @param {string[]} tuneFileNames - File names (not paths) of all tune files.
  * @returns {Promise<Map<string, string>>}
  */
-async function loadAndUpdateTuneDates(tuneFileNames) {
+async function loadTuneDates(tuneFileNames) {
   let tuneDates1 = [];
   let tuneDates2 = {};
   try {
     const raw = await fs.readFile(DATES_FILE, "utf8");
     ({ tuneDates1, tuneDates2 } = JSON.parse(raw));
   } catch {
-    // Cache doesn't exist yet — will be created below
+    console.warn(
+      "Warning: tune-dates.json not found — run `npm run update-dates`"
+    );
   }
 
-  const fileNameDates = new Map();
-  await Promise.all(
-    tuneFileNames.map(async (fileName) => {
-      const stat = await fs.stat(path.join(SOURCE_DIR, fileName));
-      fileNameDates.set(fileName, stat.mtime);
-    })
-  );
-  let dirty = false;
   const dateMap = new Map();
 
-  //numbered
   tuneFileNames
-    .filter((fileName) => /^(\d+)\s/.test(fileName))
-    .map((fileName) => [parseInt(fileName.match(/^(\d+)\s/)[1], 10), fileName])
-    .sort((a, b) => a[0] - b[0])
-    .forEach((item) => {
-      const [i, fileName] = item;
-      const fsDate = toDateString(fileNameDates.get(fileName));
-
-      while (tuneDates1.length < i) {
-        tuneDates1.push(null);
-        dirty = true;
-      }
-      if (!tuneDates1[i] || fsDate > tuneDates1[i]) {
-        tuneDates1[i] = fsDate;
-        dirty = true;
-      }
-      dateMap.set(fileName, tuneDates1[i]);
-    });
-  //not numbered
-  tuneFileNames
-    .filter((fileName) => !/^(\d+)\s/.test(fileName))
-    .forEach((file) => {
-      const fileName = path.basename(file);
-      const fsDate = toDateString(fileNameDates.get(file));
-      {
-        if (!tuneDates2[fileName] || fsDate > tuneDates2[fileName]) {
-          tuneDates2[fileName] = fsDate;
-          dirty = true;
-        }
-        dateMap.set(fileName, tuneDates2[fileName]);
-      }
+    .filter((f) => /^(\d+)\s/.test(f))
+    .forEach((fileName) => {
+      const i = parseInt(fileName.match(/^(\d+)\s/)[1], 10);
+      if (tuneDates1[i]) dateMap.set(fileName, tuneDates1[i]);
+      else
+        console.warn(
+          `Warning: no date cached for ${fileName} — run \`npm run update-dates\``
+        );
     });
 
-  if (dirty) {
-    await fs.writeFile(DATES_FILE, serialiseTuneDates(tuneDates1, tuneDates2));
-    console.log("✓ tune-dates.json updated");
-  }
+  tuneFileNames
+    .filter((f) => !/^(\d+)\s/.test(f))
+    .forEach((fileName) => {
+      if (tuneDates2[fileName]) dateMap.set(fileName, tuneDates2[fileName]);
+      else
+        console.warn(
+          `Warning: no date cached for ${fileName} — run \`npm run update-dates\``
+        );
+    });
 
   return dateMap;
 }
@@ -249,9 +193,8 @@ const listLastUpdate = (tunes, setLists) =>
  * `.data.js` files and the set lists in `tunes-template.data.js`.
  *
  * `lastUpdate` for each generated list reflects the most recent date among
- * the constituent tunes' filesystem modification dates (tracked in
- * `build/tune-dates.json`, committed to source control for CI accuracy) and
- * the `dateModified` fields of its set lists.
+ * the constituent tunes' commit dates (tracked in `build/tune-dates.json`,
+ * updated via `npm run update-dates`) and the `dateModified` fields of its set lists.
  *
  * In production mode (`isDevelopment: false`) any fileName listed in
  * {@link FILES_TO_NOT_PUBLISH} is silently skipped so it never reaches
@@ -273,7 +216,7 @@ export async function buildTuneLists({
 
   console.log(`Found ${tuneFiles.length} tune files`);
 
-  const dateMap = await loadAndUpdateTuneDates(tuneFileNames);
+  const dateMap = await loadTuneDates(tuneFileNames);
 
   const allTunes = [];
   for (const file of tuneFiles) {
