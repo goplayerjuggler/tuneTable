@@ -6,6 +6,7 @@ T:The Boys Of Ballisodare
 R:hop jig
 F:https://youtu.be/cuxgx5lwb8Y
 S:Joseph Mannion, accordion; Ellen O’Gorman, fiddle; Donal Clancy, guitar; Donnchadh Gough, bodhrán
+H:I’m very struck by how they play this set. Fast and forward-moving; and there’s something unstoppable about it that reminds me of how “bourrées à 3 temps” from Auvergne or Limousin are sometimes played. I vaguely remember someone comparing them to how a tractor ploughs a field – it doesn’t stop!
 L:1/8
 M:9/8
 N:Imported from https://thesession.org/tunes/1340#setting14690

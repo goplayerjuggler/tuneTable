@@ -22,7 +22,7 @@ N: bar nb 1, which creates a sort of a tension and makes the tune
 N: particularly interesting/special.
 N:2. Many years ago I was taught this tune by the fiddler Basile Brémaud, 
 N: in a workshop. I found it a tough tune to play nicely.
-N:3. There’s another, different bourrée à trois temps that goes by the
+N:3. There’s [another, different bourrée](ttId=528) à trois temps that goes by the
 N: same name.
 N:4. I put this as AABB’ but it could also be written AABC, or AAB with 
 N:the B part twice as long as the A.
@@ -53,5 +53,6 @@ fe2|Adc|def|ga2|g/a/g/f/e|d2|]`,
 From 01:23 onwards. The B part here is slightly different from the score I wrote.`,
 			album: "Iris"
 		}
-	]
+	],
+	ttId: 511
 };
