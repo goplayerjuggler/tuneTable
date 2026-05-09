@@ -31,13 +31,12 @@ K:C mixolydian
 X:3
 T:Bourrée du Merle 
 S:Vermerie
-N:Cette version est « pas carrée »
-M:3/4
-L:1/8
+M:3/8
+L:1/16
 Q:1/8=300
 K:D dorian
-~f2z2fg|a2b2c'b|a2fgfg|[1,3agfed2:|[2,4a2fdf2|aba4:|
-|:~f2z2fe|~d2e2f2|[1,3~g2z2f2|~e2~f2d2:|[2,4g2{f}~e2c2|d6:|`,
+~f2 z2 fg|a2b2c'neb|a2fgfg|[1,3agfed2:|[2,4a2fdf2|aba4:|
+|:~f2 z2fe|~d2e2f2|[1,3~g2 z2 f2|~e2~f2d2:|[2,4g2{f}~e2c2|d6:|`,
 		`
 X:4
 T:Bourrée du Merle 
@@ -47,8 +46,8 @@ Q:3/8=78
 L:1/16
 M:3/8
 K:G
-B2babc | d2e2=fe | d2BGBd | cBABAG |
-B2babc | d2e2=fe | dBG2d2 | e2 d4 :|
+B2BABc | d2e2=fe | d2BGBd | cBABAG |
+B2BABc | d2e2=fe | dBG2d2 | e2 d4 :|
 |: B4G2 | FGA2B2 | c4dc| B2A4 |
 B4G2 | FGA2B2 | c2A2F2 | G6:|
 `
@@ -56,8 +55,12 @@ B4G2 | FGA2B2 | c2A2F2 | G6:|
 	references: [
 		{
 			notes: `À ne pas confondre avec [une autre bourrée du même non](ttId=511).
-			Cette bourrée se joue de plusieurs façons. Aujourd’hui (2026-05-09), je viens de retrouver [des vieilles échanges sur un forum](https://forum.tradzone.net/topic/8322-bourr%C3%A9e-du-merle/) en 2010 où l’on m’avait gentiment partagé quelques enregistrements. Bien sûr maintenant les fichiers partagés sont inaccessibles, mais je mets ici les particions que j’avais faites à l’époque. Pour plus tard : compléter les données discographiques.` //todo
+			Cette bourrée se joue de plusieurs façons. Aujourd’hui (2026-05-09), je viens de retrouver [des vieilles échanges sur un forum](https://forum.tradzone.net/topic/8322-bourr%C3%A9e-du-merle/) en 2010 où l’on m’avait gentiment partagé quelques enregistrements. Bien sûr maintenant les fichiers partagés sont inaccessibles, mais je mets ici les particions que j’avais faites à l’époque. Pour plus tard : compléter les données discographiques.
+
+Comme les phrases sont toutes de longueur 4 (mesures), je considère ceci comme une bourrée « carrée » - à comparer avec les bourrées que j’ai marquées « pas carrée ». Sauf que la version de Vermerie à sa partie A en « 2.(4+5) », c’est donc une version « pas carrée ».
+ ` //todo
 		}
 	],
+	structure: "2.2.(4+4)",
 	ttId: 528
 };

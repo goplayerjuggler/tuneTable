@@ -54,5 +54,6 @@ From 01:23 onwards. The B part here is slightly different from the score I wrote
 			album: "Iris"
 		}
 	],
+	structure: "2.2.(6+6)",
 	ttId: 511
 };
