@@ -3,28 +3,28 @@ export default {
 	aka: ["Lo merle", "Le merle"],
 	abc: [
 		`X:1
-T:Bourrée du merle
+T:Bourrée du Merle
 R:Bourrée à 3 temps
 S:DCA
 O:France; Auvergne.
-M:3/4
-L:1/8
+M:3/8
+L:1/16
 K:C mixo
 P:A
-e3d ef | g4 .a2 | ~a2 gf ef | gf ed c2 | .e2 ed ef | g4 .a2 | ~a2 gf ef | .a2 g4 :|
+e3def|g4.a2|~a2gfef|gfedc2|.e2edef|g4.a2|~a2gfef|.a2g4:|
 P:B
 K:C dorian
-|: e4 d2 | c2 d2 e2 | f4 e2 | d2 c4 | e4 d2 | c2 d2 e2 | [1 f2 d2 e2 | c6 :| [2 f2 d2 =e2 | c6 :|`,
+|:e4d2|c2d2e2|f4e2|d2c4|e4d2|c2d2e2|[1f2d2e2|c6:|[2f2d2=e2|c6:|`,
 		`
 X:2
 T:Bourrée du Merle
 S: « lo Merle »
-M:3/4
-L:1/8
-Q:1/4=300
+M:3/8
+L:1/16
+Q:1/8=300
 K:C mixolydian
-.e2.e2ef | g2a2ba | g2efef | [1,3 gfedc2 :| [2,4 gag4 :|
-|: .e2.e2ed | c2.d2e2 | f2 [1 .g2f2 | .e2.d2c2 :| [2 .d2.B2 | c6 :|
+.e2.e2ef|g2a2ba|g2efef|[1,3gfedc2:|[2,4gag4:|
+|:.e2.e2ed|c2.d2e2|f2[1.g2f2|.e2.d2c2:|[2.d2.B2|c6:|
 % le coda: commence ainsi : e2e2ef | gfedc2 | e2e2ef| g6 | e2e2ef | gfedc2 |
 `,
 		`
@@ -34,10 +34,10 @@ S:Vermerie
 N:Cette version est « pas carrée »
 M:3/4
 L:1/8
-Q:1/4=300
+Q:1/8=300
 K:D dorian
-~f2z2fg | a2b2c'b | a2fgfg | [1,3 agfed2 :| [2,4 a2fdf2 | aba4 :|
-|: ~f2z2fe | ~d2e2f2 | [1,3 ~g2z2f2 | ~e2~f2d2 :| [2,4 g2{f}~e2c2 | d6 :|`,
+~f2z2fg|a2b2c'b|a2fgfg|[1,3agfed2:|[2,4a2fdf2|aba4:|
+|:~f2z2fe|~d2e2f2|[1,3~g2z2f2|~e2~f2d2:|[2,4g2{f}~e2c2|d6:|`,
 		`
 X:4
 T:Bourrée du Merle 
