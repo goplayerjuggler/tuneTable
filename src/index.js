@@ -693,32 +693,18 @@ function toggleTuneSelected(tuneIndex, row) {
 	btn.classList.toggle("btn-select--checked", tune.selected);
 }
 
-function expandNotes(tuneIndex, refIndex) {
-	const truncated = document.querySelector(
-		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-	);
-	const full = document.querySelector(
-		`.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-	);
-
-	if (truncated && full) {
-		truncated.style.display = "none";
-		full.style.display = "block";
-	}
+function expandNotes(btn) {
+	const truncated = btn.closest(".notes-truncated");
+	const full = truncated.nextElementSibling; // .notes-full
+	truncated.style.display = "none";
+	full.style.display = "block";
 }
 
-function collapseNotes(tuneIndex, refIndex) {
-	const truncated = document.querySelector(
-		`.notes-truncated[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-	);
-	const full = document.querySelector(
-		`.notes-full[data-tune-index="${tuneIndex}"][data-ref-index="${refIndex}"]`
-	);
-
-	if (truncated && full) {
-		truncated.style.display = "block";
-		full.style.display = "none";
-	}
+function collapseNotes(btn) {
+	const full = btn.closest(".notes-full");
+	const truncated = full.previousElementSibling; // .notes-truncated
+	full.style.display = "none";
+	truncated.style.display = "block";
 }
 
 // Extract all metadata values from a tune for display and filtering.
@@ -1098,13 +1084,13 @@ function renderTable() {
 							lines.slice(0, 5).join("\n").replace(/\n/g, "<br />")
 						);
 						notesHtml = `
-					<div class="notes notes-truncated" data-tune-index="${index}" data-ref-index="${refIndex}">
+					<div class="notes notes-truncated"">
 					  ${truncatedNotes}
-					  <br /><button class="more-btn" onclick="expandNotes(${index}, ${refIndex})">More…</button>
+					  <br /><button class="more-btn" onclick="expandNotes(this)">More…</button>
 					</div>
-					<div class="notes notes-full" data-tune-index="${index}" data-ref-index="${refIndex}" style="display: none;">
+					<div class="notes notes-full" style="display: none;">
 					  ${formattedNotes}
-					  <br /><button class="more-btn" onclick="collapseNotes(${index}, ${refIndex})">Less</button>
+					  <br /><button class="more-btn" onclick="collapseNotes(this)">Less</button>
 					</div>`;
 					} else {
 						notesHtml = `<div class="notes">${formattedNotes}</div>`;
