@@ -6,6 +6,8 @@ X: 2
 T: Maud Millar
 T: version of 2025-10-15%2024-08-21 %2024-06-27 %2025-04-11%2025-10-15
 R: reel
+Z:abc-transcription Malcolm Schonfield
+Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 Q:1/4=110
 M: 4/4
 L: 1/16
