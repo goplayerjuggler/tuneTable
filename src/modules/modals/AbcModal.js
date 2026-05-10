@@ -34,6 +34,7 @@ import { resolveAbcForEntry, tuneMatchesEntry } from "../setUtils.js";
  *
  * **Key methods**:
  * - `openWithTune(tune)`: Initialise and open the modal for a tune
+ * - `openWithSet(setContext)`: Initialise and open the modal directly in set mode
  * - `selectContext(idx)`: Switch between solo view (0) and set views (1+)
  * - `transpose(semitones)`: Transpose the displayed music (solo)
  * - `navigate(direction)`: Move between tune settings (solo)
@@ -71,6 +72,7 @@ export default class AbcModal extends Modal {
 			size: "large",
 			title: "Score viewer",
 			autoHideHeader: true,
+			onClose: () => this._onClose(),
 			autoHideDelay: 0,
 			content: `
         <div id="abcRendered" class="abc-rendered"></div>
@@ -153,8 +155,9 @@ export default class AbcModal extends Modal {
 		this.elements.rendered.style.cursor = "pointer";
 
 		this.updateContextRow();
-		this.updateDisplayAfterTranspose();
 		this.updateControls();
+		if (this.isSetMode) this.renderSetAbc();
+		else this.updateDisplayAfterTranspose();
 
 		// Re-render score when the window is resized (e.g. orientation change, zoom).
 		// Debounced at 250 ms to avoid thrashing abcjs on continuous resize events.
@@ -249,23 +252,31 @@ export default class AbcModal extends Modal {
 		}
 	}
 
-	/** Rebuild the context-selector row. Hidden when the tune belongs to no sets. */
+	/**
+	 * Rebuild the context-selector row.
+	 * Hidden when the tune belongs to no sets, when opened directly in set mode
+	 * (no solo tune to return to), or when only one option would be shown.
+	 */
 	updateContextRow() {
 		const { contextRow, contextSelect } = this.elements;
 		if (!this.setContexts?.length) {
 			contextRow.style.display = "none";
 			return;
 		}
-		contextRow.style.display = "";
-		contextSelect.innerHTML = "";
 		const options = [
-			{ label: "Single tune", idx: 0 },
+			...(this.tune ? [{ label: "Single tune", idx: 0 }] : []),
 			...this.setContexts.map((ctx, i) => ({
 				label: `Set: ${ctx.setName}`,
 				idx: i + 1,
 				title: ctx.setListName
 			}))
 		];
+		if (options.length <= 1) {
+			contextRow.style.display = "none";
+			return;
+		}
+		contextRow.style.display = "";
+		contextSelect.innerHTML = "";
 		options.forEach(({ label, idx, title }) => {
 			const opt = document.createElement("option");
 			opt.value = idx;
@@ -501,6 +512,29 @@ export default class AbcModal extends Modal {
 		this.open();
 	}
 
+	/**
+	 * Initialise and open the modal directly in set mode for a given set context.
+	 * No solo-tune controls are shown; the context-selector row is hidden (there
+	 * is no solo tune to switch back to).
+	 * @param {{  setName: string, tunes: object[], onClose:callback }} setContext
+	 */
+	openWithSet(setContext) {
+		this._onCloseCb = setContext.onClose ?? null;
+		this.tune = null;
+		this.currentAbcArray = [];
+		this.originalAbcArray = [];
+		this.currentAbcIndex = 0;
+		this.currentTuneAbc = "";
+		this.currentTransposedAbc = "";
+		this.currentTranspose = 0;
+		this.currentViewMode = "rendered";
+		this.currentPage = 0;
+		this.setContexts = [setContext];
+		this.currentContextIndex = 1;
+
+		this.open();
+	}
+
 	toggleView() {
 		if (this.currentViewMode === "rendered") {
 			this.currentViewMode = "text";
@@ -667,10 +701,7 @@ export default class AbcModal extends Modal {
 		this.close();
 	}
 
-	onClose() {
-		document.removeEventListener("keydown", this.handleKeydown);
-		this.handleKeydown = null;
-
+	_onClose() {
 		if (this._resizeHandler) {
 			window.removeEventListener("resize", this._resizeHandler);
 			this._resizeHandler = null;
@@ -680,5 +711,7 @@ export default class AbcModal extends Modal {
 		this.currentAbcIndex = 0;
 		this.currentPage = 0;
 		this.allSvgs = [];
+		this._onCloseCb?.();
+		this._onCloseCb = null;
 	}
 }

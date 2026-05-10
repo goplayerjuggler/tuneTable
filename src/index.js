@@ -40,6 +40,7 @@ let slotManager;
 let currentListState = null;
 let isDirty = false;
 let pendingUrlParams = null;
+let pendingSetParam = null;
 let _manifestCache = null;
 
 // Lookup maps for cross-reference resolution; populated by calculateCrossRefs when a list is loaded.
@@ -937,6 +938,7 @@ async function initialiseData() {
 
 	// Store q/n params for post-load application via onListSelected
 	if (params.has("q") || params.has("n")) pendingUrlParams = params;
+	if (params.has("s")) pendingSetParam = params.get("s");
 
 	// ?g= auto-selects a matching server list
 	const gParam = params.get("g");
@@ -1025,7 +1027,66 @@ function openAbcModal(tune) {
 	if (!tune.abc) return;
 	getAbcModal().openWithTune(tune);
 }
+function findSetByName(name) {
+	const needle = name.toLowerCase();
+	for (const setList of window._setLists ?? []) {
+		const set = setList.sets?.find((s) => s.name?.toLowerCase() === needle);
+		if (set)
+			return { setListName: setList.name, setName: set.name, tunes: set.tunes };
+	}
+	return null;
+}
+function scrollToSetFirstTune(tunes) {
+	const first = tunes?.[0];
+	if (!first) return;
+	const tune = first.theSessionId
+		? _crBySessionId.get(first.theSessionId)
+		: first.ttId
+			? _crByTtId.get(first.ttId)
+			: null;
+	if (!tune) return;
+	document
+		.getElementById(`cr-t${tune._crId}`)
+		?.scrollIntoView({ behavior: "smooth", block: "center" });
+}
 
+// function scrollToSetFirstTune(tunes) {
+// 	console.log("[scrollToSetFirstTune] tunes:", tunes);
+// 	const first = tunes?.[0];
+// 	if (!first) {
+// 		console.warn("[scrollToSetFirstTune] no first tune");
+// 		return;
+// 	}
+
+// 	const tune = first.theSessionId
+// 		? _crBySessionId.get(first.theSessionId)
+// 		: first.ttId
+// 			? _crByTtId.get(first.ttId)
+// 			: null;
+// 	console.log(
+// 		"[scrollToSetFirstTune] first entry:",
+// 		first,
+// 		"→ resolved tune:",
+// 		tune
+// 	);
+// 	if (!tune) {
+// 		console.warn(
+// 			"[scrollToSetFirstTune] could not resolve tune from cross-ref maps"
+// 		);
+// 		return;
+// 	}
+
+// 	const id = `cr-t${tune._crId}`;
+// 	const el = document.getElementById(id);
+// 	console.log("[scrollToSetFirstTune] looking for element #" + id, "→", el);
+// 	if (!el) {
+// 		console.warn("[scrollToSetFirstTune] element not found in DOM");
+// 		return;
+// 	}
+
+// 	el.scrollIntoView({ behavior: "smooth", block: "center" });
+// 	console.log("[scrollToSetFirstTune] scrollIntoView called on", el);
+// }
 function renderTable() {
 	const tbody = document.getElementById("tunesTableBody");
 
@@ -1463,11 +1524,24 @@ document.addEventListener("DOMContentLoaded", async function () {
 	//
 	// Priority order:
 	//   1. No list loaded yet         → open the tune-list selector.
-	//   2. URL params narrowed to one → open the score viewer for that tune.
+	//   2. URL params narrowed to one tune or set → open the score viewer for it
 	//   3. Otherwise                  → do nothing; table is already shown.
 	function runPostLoadAction() {
 		if (initResult?.needsSelector) {
 			tuneListSelectorModal.openWithContext(initResult.manifest, null);
+			return;
+		}
+		// ?s= opens the set viewer for a named set
+		if (pendingSetParam) {
+			const setData = findSetByName(pendingSetParam);
+
+			if (setData)
+				getAbcModal().openWithSet({
+					...setData,
+					onClose: () => scrollToSetFirstTune(setData.tunes)
+				});
+			else console.warn(`?s=: no set found matching "${pendingSetParam}"`);
+			pendingSetParam = null;
 			return;
 		}
 		// Open score viewer automatically when a ?n= / ?q= param resolves to a
