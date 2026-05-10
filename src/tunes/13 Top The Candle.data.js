@@ -1,5 +1,5 @@
 export default {
-	groups: "ALORA",
+	groups: "ALORA,su",
 	abc: [
 		`X: 1
 T: Top The Candle

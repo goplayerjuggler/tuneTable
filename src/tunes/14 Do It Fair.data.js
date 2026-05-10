@@ -1,5 +1,5 @@
 export default {
-	groups: "ALORA",
+	groups: "ALORA,su",
 	abc: `
 % 2024-08-22, 2024-08-25, 2024-11-08, 2025-09-29, 251029
 X: 1

@@ -1,6 +1,6 @@
 export default {
 	parts: "AB",
-	groups: "alora",
+	groups: "alora,su",
 	abc: `X:1
 T: Cucanandy
 R:hop jig

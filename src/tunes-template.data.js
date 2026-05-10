@@ -814,7 +814,7 @@ export default {
 		},
 		{
 			id: "1777487795486-cm14l",
-			groups: "default",
+			groups: "default,su,alora",
 			name: "Hop jigs sets",
 			dateCreated: "2026-04-29T18:36:35.486Z",
 			dateModified: "2026-05-04T09:49:22.581Z",
