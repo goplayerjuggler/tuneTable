@@ -17,9 +17,9 @@ N:Craiceann Bodhrán Festival 2024
 K:Gmajor
 |:"G" D2 G G2 A B2 d|"C" ege d2 e g3|"G" D2 G G2 B d2 B|"D"AGA B2 G "D"E2 G|
  "G" D2 G G2 A B2 d|"C" ege d2 e "D"g2 a|"Em"b2 a g2 e d2 B|"D"AGA B2 G E2 G:|
-|: "G" B2 d d2 B d2 B|"D" "_*"d3-def "G"g3|"C" B2 d d2 B d2 B|"Am"AGA B2 G E2 "<("">)"D|
- "G"B2 d d2 B d2 B|"Bm" "_*"d3-def  g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 [1 "<("">)"D:| [2 "<("">)"G!D.C.!|]
- "^variation : *"d3 def g3 |
+|: "G" B2 d d2 B d2 B|"D" "_(*)"d3-def "G"g3|"C" B2 d d2 B d2 B|"Am"AGA B2 G E2 "<("">)"D|
+ "G"B2 d d2 B d2 B|"Bm" "_(*)"d3-def  g2 a|"C" b2 a g2 e d2 B|"D" AGA B2 G E2 [1 "<("">)"D:| [2 "<("">)"G!D.C.!|]
+ "^(*), variation 1 "d3 def g3 || "^(*), variation 2 "dBd e2f g3 |]
  `,
 	theSessionId: 1340,
 	theSessionSettingId: 14690

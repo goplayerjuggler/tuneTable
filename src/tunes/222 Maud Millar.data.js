@@ -11,8 +11,8 @@ M: 4/4
 L: 1/16
 K: G
 P:I
-gf|"C(E)"edBA "D(F#)"GEDE "G"G2"_v1"BG  "_v2"d2Bd|"C(E)" "_v3,v4"e2dB "_v5,v6"A2GA "D(F#)"Beed efgf|
-"C(E)"edBA "D(F#)"GEDE   "G" "_v7"G2BG dGBd|"Em"e2dB A2GA "D""_v8"Beed  "_v9,v10,v11"e2ge||
+gf|"C/E"edBA "D/F#"GEDE "G"G2"_v1"BG  "_v2"d2Bd|"C/E" "_v3,v4"e2dB "_v5,v6"A2GA "D(F#)"Beed efgf|
+"C/E"edBA "D/F#)"GEDE   "G" "_v7"G2BG dGBd|"Em"e2dB A2GA "D""_v8"Beed  "_v9,v10,v11"e2ge||
 P:II
 "G"dega bgg2   "D"agef "G"g3e|"G"dega bgg2 "C"aged eage|
 "G"dega bgg2   "D"agef "G"g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
