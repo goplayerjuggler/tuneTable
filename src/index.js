@@ -1114,11 +1114,14 @@ function renderTable() {
 			hasTheSessionLink = false;
 		(tune.referencesFromAbc ?? [])
 			.concat(tune.references ?? [])
-			.forEach((ref, refIndex) => {
+			.forEach((ref) => {
 				let notesHtml = "";
-				if (ref.notes) {
+
+				if (ref.notes || ref.album) {
+					const rawText =
+						(ref.album ? `album: ${ref.album}\n` : "") + (ref.notes ?? "");
 					const formattedNotes = formatNoteLinks(
-						ref.notes.replace(/\n/g, "<br />")
+						rawText.replace(/\n/g, "<br />")
 					)
 						.replace(/(?<!")https?:\/\/[^\s<>"']+/g, (url) => {
 							try {
@@ -1139,7 +1142,7 @@ function renderTable() {
 						})
 						.replace(/```([^`]+)```/g, "<pre>$1</pre>");
 
-					const lines = ref.notes.split("\n");
+					const lines = rawText.split("\n");
 					if (lines.length > 12) {
 						const truncatedNotes = formatNoteLinks(
 							lines.slice(0, 5).join("\n").replace(/\n/g, "<br />")

@@ -21,8 +21,8 @@ de|:"Bm"f2ef dBBd "A"cAeA fAeA|"Bm"f2ef dBBd "A"cAec "Bm"dBde|
 			artists:
 				"Seán Maguire, fiddle; Wilcil McDowell, piano; Sean O’Driscoll, banjo",
 			notes: `Segs Hornpipe / Allister Frazer's Reel
-From 1:33 onwards
-Album: A Man Apart (2004)`
+From 1:33 onwards`,
+			album: `A Man Apart (2004)`
 		}
 	]
 };

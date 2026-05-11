@@ -21,8 +21,8 @@ agf gfe fed e/f/ed|cBA BAG AFD D3:|`,
 		{
 			url: "https://open.spotify.com/track/3ooiN8bT2gx1hzDokGpQpI",
 			artists: "Seán Maguire, fiddle; Wilcil McDowell, piano",
-			notes: `The Black Rogue; Morrison’s
-Album: A Man Apart (2004)`
+			notes: `The Black Rogue; Morrison’s`,
+			album: `A Man Apart (2004)`
 		},
 		{
 			notes: `I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic. Using the key signature and dots given here, it can be taken as A mixolydian, or else D major. At the moment I’m going with the first option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.`
