@@ -1,7 +1,7 @@
 export default {
 	parts: "AABB",
 	abc: `X:1
-T:
+T:Jimmy Ward's
 C:Jimmy Ward
 R:jig
 L:1/8

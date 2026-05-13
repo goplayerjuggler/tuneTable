@@ -18,6 +18,12 @@ fef gfg faf d2e|fdF AFA GEA D2 A:|
 |:AGG AEE AGE EDD|AGG c2 e dcA AGE|
 AGG AEE AGE EDD|cdc A2G EAA D3:|
 `,
+	references: [
+		{
+			notes: `As mentioned in a comment on thesession, the A part is related to [Hag With The Money](theSessionId=351)`
+		}
+	],
 	theSessionId: 870,
-	norbeckId: 469
+	norbeckId: 469,
+	parts: "AABBCC"
 };

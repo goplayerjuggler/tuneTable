@@ -11,7 +11,6 @@ export default {
 	],
 	incipit: `X: 1
 L: 1/8
-O:Ireland
 M: 12/8
 K: D
 AFA Agf ede fdB|ABA AGF`,

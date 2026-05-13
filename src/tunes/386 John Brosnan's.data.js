@@ -13,9 +13,9 @@ D>E DB AF FB|AF DE FEEF/E/|`,
 		{
 			url: "https://jasonorourke.bandcamp.com/track/john-brosnans-the-frozen-mouse-polka-timmy-mccarthys",
 			artists: "Jason O’Rourke, concertina; Stevie Dunne, guitar",
-			notes: `John Brosnan’s / The Frozen Mouse / Timmy McCarthy’s
-Album:  The Northern Concertina (2015)
-The guitar could be Tim Edey and not S Dunne, going from the meagre info available online; but I suspect it’s S Dunne as he seems to be the main backer for JO’R.`
+			notes: `John Brosnan’s / [The Frozen Mouse](theSessionId=18688) / [Timmy McCarthy’s](theSessionId=7386)
+The guitar could be Tim Edey and not S Dunne, going from the meagre info available online; but I suspect it’s S Dunne as he seems to be the main backer for JO’R.`,
+			album: "The Northern Concertina (2015)"
 		}
 	]
 };

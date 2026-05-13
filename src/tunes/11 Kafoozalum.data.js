@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	parts: "AABB",
 	aka: ["Davy Maguire’s"],
 	abc: `X:1
 T:Kafoozalum

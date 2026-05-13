@@ -1,5 +1,7 @@
 export default {
 	groups: "ALORA",
+	tags: "crooked",
+	parts: "AABB",
 	abc: `X: 3 %240403 % in slow 6 - or 5. with chords, and in E - for whistle playing
 T: Bransle d'Écosse
 M: 6/2
