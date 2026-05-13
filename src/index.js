@@ -1272,9 +1272,6 @@ function renderTable() {
 					</div>
 				</div>
 				<div class="${incipitClass}"></div>
-				<div class="tune-references-panel">
-					${referencesHtml}${scoresHtml}
-				</div>
 			</td>
 			<td class="col-references">${referencesHtml}${scoresHtml}</td>`;
 
