@@ -79,22 +79,24 @@ Thanks to:
 * Anthropic: roughly 95% of the code here was written by Claude.ai / Sonnet 4.6 extended.
 * Github for hosting this repo.
 
-## Licenses
+## Licences
 
-This project uses dual licensing:
+This project uses multiple licences depending on the type of content:
 
-- **Code (JavaScript, HTML, CSS)**: [MIT License](LICENSE-CODE)
+- **Code (JavaScript, HTML, CSS)**: [MIT Licence](LICENSE-CODE)
 - **Tune list data (.data.js files)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
+- **ABC tune files (`tunes/` folder)**: from external sources – licencing terms are embedded within each individual file
 
 ### What this means:
 
-**Code**: Can be freely used, modified, and distributed (see MIT License terms)
+**Code**: Can be freely used, modified, and distributed (see [MIT Licence terms](LICENSE-CODE))
 
 **Tune list data**: Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), which means:
 - **BY** (Attribution): You must give appropriate credit to the original creator
 - **NC** (NonCommercial): You may not use the data for commercial purposes
 - **SA** (ShareAlike): If you remix or build upon the data, you must distribute your contributions under the same CC BY-NC-SA 4.0 license
 
+**ABC tune files**: These files are from external sources. Each file contains its own licensing information – please refer to the individual file before reusing or redistributing it.
 
 ## Dev notes
 ### abc-tools - a related repo

@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import abcTools from "@goplayerjuggler/abc-tools";
 
-const { getMetadata } = abcTools;
+const { getMetadata, getTunes } = abcTools;
 
 const __dirName = path.dirname(fileURLToPath(import.meta.url));
 
@@ -168,6 +168,30 @@ function getGroupDisplayName(group) {
 }
 
 /**
+ * Parse list metadata from an ABC file header — the lines before the first
+ * `X:` field. Recognises three optional directives:
+ *   %% list-name:        <string>
+ *   %% list-description: <string>
+ *   %% list-date:        YYYY-MM-DD
+ *
+ * @param {string} content - Raw ABC file content.
+ * @param {string} stem    - File stem used as fallback name.
+ * @returns {{ name: string, description: string, listDate: string|undefined }}
+ */
+function parseAbcHeader(content, stem) {
+  const header = content.split(/^X:/m)[0];
+  const find = (key) => {
+    const m = header.match(new RegExp(`^%%\\s*list-${key}:\\s*(.+)`, "m"));
+    return m?.[1].trim() ?? null;
+  };
+  return {
+    name: find("name") ?? stem,
+    description: find("description") ?? "",
+    listDate: find("date") ?? undefined
+  };
+}
+
+/**
  * Returns the most recent YYYY-MM-DD date among the provided values,
  * or today as a fallback.
  */
@@ -218,7 +242,7 @@ export async function buildTuneLists({
 
   const dateMap = await loadTuneDates(tuneFileNames);
 
-  const allTunes = [];
+  const tunesFromDataJsFiles = [];
   for (const file of tuneFiles) {
     const content = await fs.readFile(file, "utf8");
     const tune = parseTuneFile(content);
@@ -232,7 +256,7 @@ export async function buildTuneLists({
         `Warning: could not parse ABC metadata from ${path.basename(file)}`
       );
     }
-    allTunes.push({
+    tunesFromDataJsFiles.push({
       metadataFromAbc: metadata,
       ...tune,
       fileDate: tune.fileDate ?? dateMap.get(path.basename(file))
@@ -276,7 +300,9 @@ export async function buildTuneLists({
     );
 
   // Default list — excludes tunes flagged with `excludeFromDefault: true`
-  const defaultTunes = allTunes.filter((t) => !t.excludeFromDefault);
+  const defaultTunes = tunesFromDataJsFiles.filter(
+    (t) => !t.excludeFromDefault
+  );
   const defaultSetLists = setListsFor("default");
   await writeList("default.json", defaultTunes, defaultSetLists);
   generatedLists.push({
@@ -295,7 +321,7 @@ export async function buildTuneLists({
 
   // Group-based lists
   const groupMap = new Map();
-  allTunes.forEach((tune) => {
+  tunesFromDataJsFiles.forEach((tune) => {
     tune.groups
       ?.split(",")
       .map((g) => g.trim().toLowerCase())
@@ -343,7 +369,7 @@ export async function buildTuneLists({
 
   // Origin-based lists
   for (const { id, label, match, description } of ORIGIN_EXTRACTS) {
-    const tunes = allTunes.filter(
+    const tunes = tunesFromDataJsFiles.filter(
       (t) => t.metadataFromAbc?.origin && match(t.metadataFromAbc?.origin)
     );
     if (tunes.length === 0) continue;
@@ -363,8 +389,9 @@ export async function buildTuneLists({
   }
 
   // Composer-based lists
+  // if (isDevelopment) {
   for (const { id, label, match } of COMPOSER_EXTRACTS) {
-    const tunes = allTunes.filter(
+    const tunes = tunesFromDataJsFiles.filter(
       (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
     );
     if (tunes.length === 0) continue;
@@ -380,6 +407,38 @@ export async function buildTuneLists({
         category: "composers"
       });
       console.log(`✓ ${fileName} (${tunes.length} tunes)`);
+    }
+  }
+  // }
+
+  // ABC file lists
+  const abcFileNames = (await fs.readdir(SOURCE_DIR)).filter((f) =>
+    f.endsWith(".abc")
+  );
+  for (const abcFileName of abcFileNames.sort()) {
+    const content = await fs.readFile(
+      path.join(SOURCE_DIR, abcFileName),
+      "utf8"
+    );
+    const stem = path.basename(abcFileName, ".abc");
+    const { name, description, listDate } = parseAbcHeader(content, stem);
+    const abcTunes = getTunes(content)
+      .filter((abc) => abc.trim())
+      .map((abc) => ({ abc }));
+    if (abcTunes.length === 0) continue;
+    const id = `abc-${stem}`;
+    const fileName = `${id}.json`;
+    if (await writeList(fileName, abcTunes)) {
+      generatedLists.push({
+        id,
+        name,
+        file: fileName,
+        ...(listDate && { lastUpdate: listDate }),
+        count: abcTunes.length,
+        description,
+        category: "abc"
+      });
+      console.log(`✓ ${fileName} (${abcTunes.length} tunes) [ABC]`);
     }
   }
 

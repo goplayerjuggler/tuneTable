@@ -120,9 +120,9 @@ export default class TuneListSelectorModal extends Modal {
 			`
 			<div class="tls-section tls-actions">
 				<button class="tls-action-btn" id="tls-create">➕ Create a new tune list</button>
-				<button class="tls-action-btn" id="tls-load-url">🔗 Load from URL… (experimental/untested)</button>
-				<button class="tls-action-btn" id="tls-import">💾 Import JSON file… (experimental/untested)</button>
 				<button class="tls-action-btn" id="tls-export">📦 Export all local lists</button>
+				<button class="tls-action-btn" id="tls-load-url">🔗 Load from URL… </button>
+				<button class="tls-action-btn" id="tls-import">💾 Import JSON file… </button>
 				<input type="file" id="tls-file-input" accept=".json" style="display:none">
 			</div>
 			<div class="tls-storage-info">

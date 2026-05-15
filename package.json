@@ -46,7 +46,7 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "1.1.1"
+    "@goplayerjuggler/abc-tools": "1.1.2"
   },
   "devDependencies": {
     "@eslint/css": "^0.13.0",
