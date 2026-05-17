@@ -372,6 +372,28 @@ async function fetchManifest() {
 		const res = await fetch("./tune-lists/manifest.json");
 		if (!res.ok) return null;
 		_manifestCache = await res.json();
+		const params = new URLSearchParams(window.location.search);
+		//pwd protect the "su" (Steam Up!) server list
+		//not really sensitive data, but prefer not to show this info to casual users
+		const sha = async (input) => {
+			const encoder = new TextEncoder();
+			const data = encoder.encode(input);
+			const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+			const hashArray = Array.from(new Uint8Array(hashBuffer));
+			const hashHex = hashArray
+				.map((b) => b.toString(16).padStart(2, "0"))
+				.join("");
+			return hashHex;
+		};
+		if (
+			!params.has("suPwd") ||
+			(await sha(params.get("suPwd"))) !==
+				"bc6b0e9299f75bacc4f56f8a91a5a6b0ccc762b8c0896457937c984aaf47a8e3"
+		)
+			_manifestCache.lists = _manifestCache.lists?.filter(
+				(l) => l.id !== "group-su"
+			);
+
 		return _manifestCache;
 	} catch {
 		return null;
