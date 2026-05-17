@@ -56,6 +56,8 @@ async function getGitDate(filePath) {
   try {
     const { stdout } = await execFileAsync("git", [
       "log",
+      "-n",
+      "1", //just need the most recent
       "--follow",
       "--format=%ai",
       "--",
