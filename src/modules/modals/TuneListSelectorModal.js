@@ -3,12 +3,16 @@ import Modal from "./Modal.js";
 const relativeTime = (iso) => {
 	if (!iso) return "unknown";
 	const diff = Date.now() - new Date(iso).getTime();
-	const mins = Math.floor(diff / 60000);
-	if (mins < 1) return "just now";
-	if (mins < 60) return `${mins}m ago`;
-	const hrs = Math.floor(mins / 60);
-	if (hrs < 24) return `${hrs}h ago`;
-	return `${Math.floor(hrs / 24)}d ago`;
+	const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+	if (days < 1) return "today";
+	if (days < 30) return `${days}d ago`;
+
+	const months = Math.floor(days / 30);
+	if (months < 12) return `${months}mo ago`;
+
+	const years = Math.floor(days / 365);
+	return `${years}y ago`;
 };
 
 /**
@@ -20,6 +24,7 @@ const relativeTime = (iso) => {
  * **Features**:
  * - Browse local slots and server-compiled lists
  * - Slot CRUD: create, rename, duplicate, delete
+ * - Save server lists to a local slot
  * - Import/export JSON backups
  * - Load from URL (external lists)
  * - Session-group lists from manifest
@@ -28,7 +33,7 @@ const relativeTime = (iso) => {
  * - `openWithContext(manifest, currentListState)`: Open with latest manifest data
  * - `onSelect` callback: called with `{ source, sourceId, displayName, tunes, setLists }`
  */
-export default class TuneListSelectorModal extends Modal {
+class TuneListSelectorModal extends Modal {
 	constructor({ slotManager, onSelect }) {
 		super({
 			id: "tuneListSelectorModal",
@@ -165,12 +170,23 @@ export default class TuneListSelectorModal extends Modal {
 			list.setListCount > 0
 				? `; ${list.setListCount} set list${list.setListCount > 1 ? "s" : ""}`
 				: "";
+		const desc = list.description
+			? `<span class="tls-item-desc">${list.description}</span>`
+			: "";
+		const lastUpdated = list.lastUpdate
+			? ` &bull; Updated ${relativeTime(list.lastUpdate)}`
+			: "";
 		return `
 			<div class="tls-item tls-server-item${isActive ? " tls-item--active" : ""}"
-					data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}"
-					title="${list.description} &bull; Last updated: ${list.lastUpdate ?? "unknown"}">
-				<span class="tls-item-name">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
-				<span class="tls-item-meta">${list.count ?? "?"} tunes${setLists}</span>
+					data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}">
+				<div class="tls-item-info">
+					<span class="tls-item-name">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
+					${desc}
+					<span class="tls-item-meta">${list.count ?? "?"} tunes${setLists}${lastUpdated}</span>
+				</div>
+				<div class="tls-item-actions">
+					<button class="btn btn-sm tls-btn-save-local" data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate ?? ""}">Save locally</button>
+				</div>
 			</div>
 		`;
 	}
@@ -184,13 +200,14 @@ export default class TuneListSelectorModal extends Modal {
 		});
 
 		container.querySelectorAll(".tls-server-item").forEach((el) => {
-			el.addEventListener("click", () =>
+			el.addEventListener("click", (e) => {
+				if (e.target.closest("button")) return;
 				this._loadServer(
 					el.dataset.listId,
 					el.dataset.listFile,
 					el.dataset.listLastUpdate
-				)
-			);
+				);
+			});
 		});
 
 		container.querySelectorAll(".tls-btn-duplicate").forEach((btn) => {
@@ -209,6 +226,12 @@ export default class TuneListSelectorModal extends Modal {
 			btn.addEventListener("click", (e) => {
 				e.stopPropagation();
 				this._deleteSlot(btn.dataset.slotId);
+			});
+		});
+		container.querySelectorAll(".tls-btn-save-local").forEach((btn) => {
+			btn.addEventListener("click", (e) => {
+				e.stopPropagation();
+				this._saveServerToLocal(btn.dataset.listId, btn.dataset.listFile);
 			});
 		});
 
@@ -265,6 +288,38 @@ export default class TuneListSelectorModal extends Modal {
 			this.close();
 		} catch (e) {
 			this._setStatus(`Failed to load: ${e.message}`, "error");
+		}
+	}
+
+	async _saveServerToLocal(listId, listFile) {
+		this._setStatus("Loading…");
+		try {
+			const res = await fetch(`./tune-lists/${listFile}`);
+			if (!res.ok) throw new Error(`HTTP ${res.status}`);
+			const data = await res.json();
+			const listInfo = this.manifest?.lists.find((l) => l.id === listId);
+			const baseName = listInfo?.name ?? listId;
+			const name = prompt("Save as:", baseName);
+			if (!name?.trim()) {
+				this._setStatus("");
+				return;
+			}
+			if (await this.slotManager.slotNameExists(name.trim())) {
+				alert("A list with that name already exists.");
+				this._setStatus("");
+				return;
+			}
+			const id = await this.slotManager.generateSlotId();
+			await this.slotManager.saveSlot(
+				id,
+				name.trim(),
+				data.tunes ?? [],
+				data.setLists ?? []
+			);
+			this._setStatus(`Saved as "${name.trim()}"`, "success");
+			this._render();
+		} catch (e) {
+			this._setStatus(`Failed: ${e.message}`, "error");
 		}
 	}
 
@@ -401,8 +456,13 @@ export default class TuneListSelectorModal extends Modal {
 			container.prepend(el);
 		}
 		el.textContent = message;
-		el.style.cssText = `padding:8px 12px; margin-bottom:12px; border-radius:4px; background:${type === "error" ? "#fee" : "#eef"}; color:${type === "error" ? "#c33" : "#339"}`;
+		const bg = type === "error" ? "#fee" : type === "success" ? "#efe" : "#eef";
+		const color =
+			type === "error" ? "#c33" : type === "success" ? "#2a7a2a" : "#339";
+		el.style.cssText = `padding:8px 12px; margin-bottom:12px; border-radius:4px; background:${bg}; color:${color}`;
 	}
 
 	onClose() {}
 }
+
+export { relativeTime, TuneListSelectorModal };

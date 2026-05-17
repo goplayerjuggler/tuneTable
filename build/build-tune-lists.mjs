@@ -13,7 +13,8 @@ const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
 const TEMPLATE_FILE = path.resolve(__dirName, "../src/tunes-template.data.js");
 const DEFAULT_OUT_DIR = path.resolve(__dirName, "../dist/tune-lists");
 const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
-const subsetComment = " – a subset of the default list";
+const defaultListName = "goPlayer’s tune list";
+const subsetComment = `– extracted from ${defaultListName}`;
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
@@ -40,7 +41,7 @@ const ORIGIN_EXTRACTS = [
     id: "nordic",
     label: "Nordic",
     match: (o) => /^sweden|norway/i.test(o),
-    description: "Swedish/Norwegian tunes"
+    description: "Swedish & Norwegian tunes" + subsetComment
   },
   { id: "québec", label: "Québec", match: (o) => /qu[eé]bec/i.test(o) }
 ];
@@ -177,7 +178,7 @@ function getGroupDisplayName(group) {
  *
  * @param {string} content - Raw ABC file content.
  * @param {string} stem    - File stem used as fallback name.
- * @returns {{ name: string, description: string, listDate: string|undefined }}
+ * @returns {{ name: string, description: string, listDate: string|undefined, defaultSort: string|undefined}}
  */
 function parseAbcHeader(content, stem) {
   const header = content.split(/^X:/m)[0];
@@ -188,7 +189,8 @@ function parseAbcHeader(content, stem) {
   return {
     name: find("name") ?? stem,
     description: find("description") ?? "",
-    listDate: find("date") ?? undefined
+    listDate: find("date") ?? undefined,
+    defaultSort: find("defaultSort") ?? undefined
   };
 }
 
@@ -308,12 +310,12 @@ export async function buildTuneLists({
   await writeList("default.json", defaultTunes, defaultSetLists);
   generatedLists.push({
     id: "default",
-    name: "goplayer’s tune list",
+    name: defaultListName,
     file: "default.json",
     lastUpdate: listLastUpdate(defaultTunes, defaultSetLists),
     count: defaultTunes.length,
     setListCount: defaultSetLists.length,
-    description: "my repertoire plus some tunes I’m interested in",
+    description: "my repertoire, plus some tunes I’m interested in",
     default: true
   });
   console.log(
@@ -423,7 +425,10 @@ export async function buildTuneLists({
       "utf8"
     );
     const stem = path.basename(abcFileName, ".abc");
-    const { name, description, listDate } = parseAbcHeader(content, stem);
+    const { name, description, listDate, defaultSort } = parseAbcHeader(
+      content,
+      stem
+    );
     const abcTunes = getTunes(content)
       .filter((abc) => abc.trim())
       .map((abc) => ({ abc }));
@@ -436,9 +441,10 @@ export async function buildTuneLists({
         name,
         file: fileName,
         ...(listDate && { lastUpdate: listDate }),
+        ...(defaultSort && { defaultSort }),
         count: abcTunes.length,
         description,
-        category: "abc"
+        category: "other sources"
       });
       console.log(`✓ ${fileName} (${abcTunes.length} tunes) [ABC]`);
     }

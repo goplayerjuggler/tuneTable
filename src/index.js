@@ -14,7 +14,10 @@ import AbcModal from "./modules/modals/AbcModal.js";
 import EditModal from "./modules/modals/EditModal.js";
 import AddTunesModal from "./modules/modals/AddTunesModal.js";
 import LoadJsonModal from "./modules/modals/LoadJsonModal.js";
-import TuneListSelectorModal from "./modules/modals/TuneListSelectorModal.js";
+import {
+	TuneListSelectorModal,
+	relativeTime
+} from "./modules/modals/TuneListSelectorModal.js";
 import TuneListSlotManager from "./modules/TuneListSlotManager.js";
 
 import TheSessionImportModal from "./modules/modals/TheSessionImportModal.js";
@@ -388,7 +391,7 @@ async function fetchManifest() {
 		if (
 			!params.has("suPwd") ||
 			(await sha(params.get("suPwd"))) !==
-				"bc6b0e9299f75bacc4f56f8a91a5a6b0ccc762b8c0896457937c984aaf47a8e3"
+				"c6d77287906f75674e46e1a01cefb0ec32f42baf7bc3b200e303f25e48f06468"
 		)
 			_manifestCache.lists = _manifestCache.lists?.filter(
 				(l) => l.id !== "group-su"
@@ -517,20 +520,6 @@ function applyUrlFilters(params) {
 }
 
 // -- Footer -------------------------------------------------------------------
-const relativeTime = (iso) => {
-	if (!iso) return "unknown";
-	const diff = Date.now() - new Date(iso).getTime();
-	const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-	if (days < 1) return "today";
-	if (days < 30) return `${days}d ago`;
-
-	const months = Math.floor(days / 30);
-	if (months < 12) return `${months}mo ago`;
-
-	const years = Math.floor(days / 365);
-	return `${years}y ago`;
-};
 
 function updateFooter() {
 	const el = document.getElementById("spLastUpdated");

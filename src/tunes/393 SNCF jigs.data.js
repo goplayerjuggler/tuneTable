@@ -8,7 +8,12 @@ export default {
 T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
-N: 1. Several choices are left up to the performer(s):
+
+N: 1. This tune came to me a long time ago; I first wrote it down in 2010. 
+N: I chose not to completely fix the order the parts are played in; and 
+N: whether or not to double them. 
+N: 2. Obviously the SNCF jingle is prominent in the tune, whence its name.
+N: 3. Several choices are left up to the performer(s):
 N: a) Each part can be played either once or twice.
 N: b) The order parts are played in is to some extent open, as 
 N: explained as follows.
@@ -18,18 +23,17 @@ N: d) Part F’ is a variant of F; play F or F’ but probably not one
 N: followed by the other, i.e. F followed by F’.
 N: e) Parts D, E, and F “go together”, in the given order, ie DEF’.
 N: f) The first time round you may just play DE and then return to part A.
-N: 2. I sketched out some chords for backing instruments; 
+N: 4. I sketched out some chords for backing instruments; 
 N: just some ideas; can be tweaked.
-N: 3. All the “A*” chords are optional; also they can be A (major) or F#m,
+N: 5. All the “A*” chords are optional; also they can be A (major) or F#m,
 N: or even “open” F# (no A or A#) ad lib. 
-N: 4. This is a revised version; an earlier (flawed) version follows as 
+N: 6. This is a revised version; an earlier (flawed) version follows as 
 N: it has some more info.
-N: 5. On the fiddle these days I tend to play it in Am but on the whistle I 
+N: 7. On the fiddle these days I tend to play it in Am but on the whistle I 
 N: think it works better in Bm.
 L:1/8
 M:12/8
 K:Bm
-%260306
 P:A
 "Bm"Fcd ~A3 "G"Gcd ~A3 | "Bm"~f3  edc "Em"BAG FGE | "Bm"Fcd ~A3 "G"Gcd ~A3 | "Bm"~f3 edc BAG ~F3 ||
 P:B
@@ -44,18 +48,15 @@ P:F
  Bcd | "G"G2e c3 "Bm"cdA B3 | "G"GBe c3 "Bm"cea f3 | "G"G2e c3 "Bm"cdA B3 | "G"GBe "A*"cdA "Bm"B3 ||
 P:F’
  Bcd | .G2e-e2 c- cdc Bcd | .G2e- e2c- cde fdB | .G2e-e2 c- cdc Bcd | G2e cAF B3 ||`,
-
 		`
 X:2
 T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
 L:1/8
-N: 1. This tune came to me sometime between 2010 and 2016. I chose not to
-N:  completely fix the order the parts are played in; and whether or not to double them. 
-N: 2. Obviously the SNCF jingle is prominent in the tune, whence its name.
-N: 3. This score has many defects and maybe sometime soonish I’ll get round to redoing it.
-N: 4. The ABC code here has many hidden comments which are related to “ossia” – alternative
+N: 1. This is an older version of the score, initially from 2010 but 
+N: with revisions in 2016 and 2017.
+N: 2. The ABC code here has many hidden comments which are related to “ossia” – alternative
 N: ways of playing a section. Not sure if that idea (ossias embedded in ABC) will be developed
 N: or not in the foreseeable future.
 M:12/8
