@@ -15,8 +15,7 @@ cBA EAB cBA aed|c`,
 		{
 			url: "https://open.spotify.com/track/20Grwxqv2wiZy3aBbO7Kd1",
 			artists: "Fisher Street",
-			notes: `(1991) album: Out in the night
-Steam up: played in a set followed by Drummond Castle`
+			album: `Out in the night (1991)`
 		}
 	]
 };

@@ -154,7 +154,7 @@ export default class TuneListSelectorModal extends Modal {
 				<div class="tls-item-actions">
 					<button class="btn btn-sm tls-btn-duplicate" data-slot-id="${slot.id}">Duplicate</button>
 					<button class="btn btn-sm tls-btn-rename" data-slot-id="${slot.id}">Rename</button>
-					<button class="btn btn-sm btn-danger tls-btn-delete" data-slot-id="${slot.id}">Delete</button>
+					<button class="btn btn-sm tls-btn-delete" data-slot-id="${slot.id}">Delete</button>
 				</div>
 			</div>
 		`;

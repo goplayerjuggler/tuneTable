@@ -49,7 +49,7 @@ I built this for myself as a way of exploring and organising repertoire I’m in
 * Parameters can be combined. Example: 
 [load Darby the driver from the default list](https://goplayerjuggler.github.io/tuneTable/?l=default&n=darby+the+driver) 
 * the `s` parameter selects a set. Example: 
-[goplayerjuggler.github.io/tuneTable/?l=default&s=Boys Of Ballisodare set - 3 hop jigs](https://goplayerjuggler.github.io/tuneTable/?l=default&s=Boys Of Ballisodare set - 3 hop jigs)
+[goplayerjuggler.github.io/tuneTable/?l=default&s=Boys Of Ballisodare set - 3 hop jigs](https://goplayerjuggler.github.io/tuneTable/?l=default&s=Boys%20Of%20Ballisodare%20set%20-%203%20hop%20jigs)
 
 
 ## Upcoming features / wishlist
