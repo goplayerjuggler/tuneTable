@@ -13,6 +13,7 @@ const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
 const TEMPLATE_FILE = path.resolve(__dirName, "../src/tunes-template.data.js");
 const DEFAULT_OUT_DIR = path.resolve(__dirName, "../dist/tune-lists");
 const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
+const subsetComment = " – a subset of the default list";
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
@@ -314,10 +315,10 @@ export async function buildTuneLists({
     if (await writeList(fileName, tunes, setLists)) {
       switch (group) {
         case "su":
-          description = "Steam Up! tunes";
+          description = "Steam Up! tunes" + subsetComment;
           break;
         case "alora":
-          description = "ALORA trad music tunes";
+          description = "ALORA trad music tunes" + subsetComment;
           break;
 
         default:
@@ -355,7 +356,8 @@ export async function buildTuneLists({
         file: fileName,
         lastUpdate: listLastUpdate(tunes, []),
         count: tunes.length,
-        description: description ?? `Tunes originating from ${label}`,
+        description:
+          description ?? `Tunes originating from ${label}` + subsetComment,
         category: "origins"
       });
       console.log(`✓ ${fileName} (${tunes.length} tunes)`);
@@ -376,7 +378,7 @@ export async function buildTuneLists({
         file: fileName,
         lastUpdate: listLastUpdate(tunes, []),
         count: tunes.length,
-        description: `Tunes by ${label}`,
+        description: `Tunes by ${label}` + subsetComment,
         category: "composers"
       });
       console.log(`✓ ${fileName} (${tunes.length} tunes)`);
