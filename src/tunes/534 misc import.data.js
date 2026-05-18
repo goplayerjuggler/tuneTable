@@ -88,6 +88,7 @@ g2ae geed ecdB cAGE|GAcd ecdc cAGE EDD2|]`,
 		theSessionSettingId: 27363
 	}, //260518 TODO
 	{
+		groups: "su",
 		abc: `X:1
 T:Johnny Loughran's
 R:reel
@@ -106,6 +107,7 @@ defg a^gaf ~b3f ~a3f|~g3e ~f3e dgfe dcdB||`,
 		theSessionSettingId: 4562
 	},
 	{
+		groups: "su",
 		abc: `X:1
 T:The Fall Of Dunboy
 C:John Dwyer
@@ -204,12 +206,10 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/1760#setting21642
 N:Setting entered in thesession by user “Nigel Gatherer” on 2013-06-05
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Edorian
-|:BE FE|BE FE|D2 FA DE FA|
-BE FE|BE FE|D2 FA FE E2:|
-ef/e/ dB|ef/e/ dB|AF dF AB/c/ d2|
-ef/e/ dB|ef/e/ dB|AF dF FE E2:|`,
+|:BEFE BEFE D2FA DEFA| BEFE BEFE D2FA FEE2:|
+|: ef/e/dB ef/e/dB AFdF AB/c/d2| ef/e/dB ef/e/dB AFdF FEE2:|`,
+		parts: "AB",
 		theSessionId: 1760,
 		theSessionSettingId: 21642
 	},
