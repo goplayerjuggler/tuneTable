@@ -527,6 +527,7 @@ A/B/c|:"D"d2dc defg a2a^g afdf|"G"=gB B/B/B BccB "A7"Aa^ga "D"baga|
 	{
 		abc: `X:1
 T:Le 24 Juin
+O:Québec
 C:Phillippe Bruneau
 R:reel
 L:1/16
@@ -593,6 +594,7 @@ G2Bd gdBG F2Ac fcAF|GABd cAGF DGG^F G2:|`,
 	{
 		abc: `X:1
 T:Reel Eugène
+O:Québec
 R:reel
 L:1/16
 M:4/4
