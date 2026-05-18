@@ -7,7 +7,7 @@ L:1/8
 M:12/8
 K:Dmajor
 dcd fef dfd AFD|GBG FAF`,
-	structure: "AABB’",
+	parts: "AABB’",
 	theSessionId: 1822,
 	references: [
 		{

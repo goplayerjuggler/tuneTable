@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB",
 	abc: `X:1
 T:Australian Waters
 R:jig
