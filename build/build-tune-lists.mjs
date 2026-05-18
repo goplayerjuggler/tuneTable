@@ -14,7 +14,7 @@ const TEMPLATE_FILE = path.resolve(__dirName, "../src/tunes-template.data.js");
 const DEFAULT_OUT_DIR = path.resolve(__dirName, "../dist/tune-lists");
 const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
 const defaultListName = "goPlayer’s tune list";
-const subsetComment = `– extracted from ${defaultListName}`;
+const subsetComment = ` – extracted from ${defaultListName}`;
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
@@ -441,7 +441,7 @@ export async function buildTuneLists({
         name,
         file: fileName,
         ...(listDate && { lastUpdate: listDate }),
-        ...(defaultSort && { defaultSort }),
+        defaultSort: defaultSort ?? "rhythmContourName",
         count: abcTunes.length,
         description,
         category: "other sources"

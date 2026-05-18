@@ -420,7 +420,8 @@ async function onListSelected({
 	displayName,
 	tunes,
 	setLists,
-	lastUpdate
+	lastUpdate,
+	defaultSort
 }) {
 	// Server/external tunes are raw; local tunes are already processed.
 	window.tunesData = window.tunesData = (tunes ?? [])
@@ -437,14 +438,15 @@ async function onListSelected({
 		sourceId,
 		displayName,
 		//loadedAt: new Date().toISOString(),
-		lastUpdate
+		lastUpdate,
+		defaultSort
 	};
 	localStorage.setItem(CURRENT_LIST_KEY, JSON.stringify(currentListState));
 
 	if (source === "local") await slotManager.touchSlot(sourceId);
 
 	isDirty = false;
-
+	if (defaultSort) currentSortType = defaultSort;
 	sortWithDefaultSort();
 	populateFilters();
 
@@ -458,7 +460,13 @@ async function onListSelected({
 	updateFooter();
 }
 
-async function loadServerListById(listId, listFile, displayName, lastUpdate) {
+async function loadServerListById(
+	listId,
+	listFile,
+	displayName,
+	lastUpdate,
+	defaultSort
+) {
 	const res = await fetch(`./tune-lists/${listFile}`);
 	if (!res.ok) throw new Error(`HTTP ${res.status}`);
 	const { tunes, setLists } = await res.json();
@@ -468,7 +476,8 @@ async function loadServerListById(listId, listFile, displayName, lastUpdate) {
 		displayName,
 		tunes,
 		setLists,
-		lastUpdate
+		lastUpdate,
+		defaultSort
 	});
 }
 
@@ -482,7 +491,8 @@ async function resumeCurrentList(listState, manifest) {
 			displayName: slot.name,
 			tunes: slot.tunes ?? [],
 			setLists: slot.setLists ?? [],
-			lastUpdate: slot.modified
+			lastUpdate: slot.modified,
+			defaultSort: slot.defaultSort
 		});
 	} else if (listState.source === "server") {
 		const listInfo = manifest?.lists.find((l) => l.id === listState.sourceId);
@@ -491,7 +501,8 @@ async function resumeCurrentList(listState, manifest) {
 			listState.sourceId,
 			listInfo.file,
 			listInfo.name,
-			listInfo.lastUpdate
+			listInfo.lastUpdate,
+			listInfo.defaultSort
 		);
 	} else {
 		throw new Error(`Unsupported source: ${listState.source}`);
@@ -534,7 +545,7 @@ function updateFooter() {
 
 	el.innerHTML =
 		`tune list: ${currentListState.displayName}` +
-		` (${currentListState.source}; ${counts})Tunes sorted by: “${currentSortType}` +
+		` (${currentListState.source}; ${counts})Tunes sorted by: “${currentSortType}”` +
 		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
 		`<button id="footer-list-link">tune lists</button>
@@ -966,7 +977,8 @@ async function initialiseData() {
 					match.id,
 					match.file,
 					match.name,
-					match.lastUpdate
+					match.lastUpdate,
+					match.defaultSort
 				);
 				return;
 			} catch (e) {

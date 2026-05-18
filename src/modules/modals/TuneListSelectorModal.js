@@ -264,7 +264,8 @@ class TuneListSelectorModal extends Modal {
 			displayName: slot.name,
 			lastUpdate: slot.lastUpdate,
 			tunes: slot.tunes ?? [],
-			setLists: slot.setLists ?? []
+			setLists: slot.setLists ?? [],
+			defaultSort: slot.defaultSort
 		});
 		this.close();
 	}
@@ -275,7 +276,7 @@ class TuneListSelectorModal extends Modal {
 			const res = await fetch(`./tune-lists/${listFile}`);
 			if (!res.ok) throw new Error(`HTTP ${res.status}`);
 			const data = await res.json();
-			const { tunes, setLists } = data;
+			const { tunes, setLists, defaultSort } = data;
 			const listInfo = this.manifest?.lists.find((l) => l.id === listId);
 			await this.onSelect({
 				source: "server",
@@ -283,7 +284,8 @@ class TuneListSelectorModal extends Modal {
 				displayName: listInfo?.name ?? listId,
 				tunes,
 				setLists,
-				lastUpdate
+				lastUpdate,
+				defaultSort
 			});
 			this.close();
 		} catch (e) {
