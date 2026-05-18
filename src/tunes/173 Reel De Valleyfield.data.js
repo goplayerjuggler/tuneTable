@@ -1,7 +1,7 @@
 export default {
 	abc: `X:1
 T:Reel De Valleyfield
-O:Quebec
+O:Québec
 R:reel
 L:1/16
 M:4/4

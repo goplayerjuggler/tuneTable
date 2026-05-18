@@ -4,7 +4,7 @@ T:Reel des Éboulements
 R:reel
 L:1/16
 M:4/4
-O:Quebec
+O:Québec
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/2911#setting2911
 N:Setting entered in thesession by user “jdave” on 2004-04-28

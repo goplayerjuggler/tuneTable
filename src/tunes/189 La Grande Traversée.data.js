@@ -2,7 +2,7 @@ export default {
 	abc: `X:1
 T:La Grande Traversée
 C:Marcel Messervier
-O:Quebec
+O:Québec
 R:reel
 L:1/16
 M:4/4

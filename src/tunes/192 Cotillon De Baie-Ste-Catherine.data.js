@@ -1,7 +1,7 @@
 export default {
 	abc: `X:1
 T:Cotillon De Baie-Ste-Catherine
-O:Quebec
+O:Québec
 R:reel
 L:1/16
 D: Traditional tunes of Québec (2001)

@@ -114,7 +114,7 @@ async function loadTuneDates(tuneFileNames) {
  * @returns {object}
  */
 function parseTuneFile(content) {
-  const body = content.replace(/export\s+default\s*(?=\{)/, "return ");
+  const body = content.replace(/export\s+default\s*(?=[{[])/, "return ");
 
   return new Function(body)();
 }
@@ -248,21 +248,24 @@ export async function buildTuneLists({
   const tunesFromDataJsFiles = [];
   for (const file of tuneFiles) {
     const content = await fs.readFile(file, "utf8");
-    const tune = parseTuneFile(content);
-    if (tune.excludeFromBuild) continue;
-    let metadata = {};
-    try {
-      const firstAbc = getFirstAbc(tune);
-      if (firstAbc) metadata = getMetadata(firstAbc);
-    } catch {
-      console.warn(
-        `Warning: could not parse ABC metadata from ${path.basename(file)}`
-      );
-    }
-    tunesFromDataJsFiles.push({
-      metadataFromAbc: metadata,
-      ...tune,
-      fileDate: tune.fileDate ?? dateMap.get(path.basename(file))
+    let data = parseTuneFile(content);
+    if (!Array.isArray(data)) data = [data];
+    data.forEach((tune) => {
+      if (tune.excludeFromBuild) return;
+      let metadata = {};
+      try {
+        const firstAbc = getFirstAbc(tune);
+        if (firstAbc) metadata = getMetadata(firstAbc);
+      } catch {
+        console.warn(
+          `Warning: could not parse ABC metadata from ${path.basename(file)}`
+        );
+      }
+      tunesFromDataJsFiles.push({
+        metadataFromAbc: metadata,
+        ...tune,
+        fileDate: tune.fileDate ?? dateMap.get(path.basename(file))
+      });
     });
   }
 

@@ -1,7 +1,7 @@
 export default {
 	abc: `X:1
 T:Partie De Quadrille
-O:Quebec
+O:Québec
 R:jig
 L:1/8
 M:12/8
