@@ -5,13 +5,14 @@ export default {
 	abc: `X:1
 T:Top It Off
 R:hop jig
+S:Sylvain Barou, flute; Bríd Harper, fiddle; Libby McCrohan, bouzouki
 L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2026-05-06,
 N:from https://thesession.org/tunes/2608#setting23345
 N:Setting entered in thesession by user “Lucy Rietmann” on 2014-01-29
 N:(edited after importing)
-N:I think this is more or less how it’s played by S Barou, B Harper;
+N:I think this is more or less how it’s played by S. Barou & B. Harper;
 N: see the linked reference under Cucanandy.
 N: This can also be played with a “straight” A part but keeping the 
 N: shortened last bar of the B; and more often in sessions both the 
@@ -30,7 +31,7 @@ K:Dmajor
 			album: "The Beat of the Breath (2013)",
 			url: "https://open.spotify.com/track/4g4dyeyuQ52w6ImdUQd5Hp",
 			notes: `Slip Jigs: The Boys of Ballysadare / Top It Off (feat. Seán McElwain & Donnchadh Gough)
-Top It Off is played completely “straight” here.`
+Top It Off is played completely “straight” here; not at all “crooked”.`
 		}
 	],
 	crossReferences: [

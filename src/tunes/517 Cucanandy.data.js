@@ -23,7 +23,8 @@ e2d!D.C.!|]
 			artists:
 				"Sylvain Barou, uilleann pipes; Bríd Harper, fiddle; Libby McCrohan, bouzouki",
 			album: "The Fog Is Lifting (2025)",
-			notes: "Hop jigs & Reel: Cucanandy/Top it Off/The Sunny Banks "
+			notes:
+				"Hop jigs & Reel: Cucanandy / [Top it Off](theSessionId=2608) / The Sunny Banks "
 		}
 	],
 	crossReferences: [
