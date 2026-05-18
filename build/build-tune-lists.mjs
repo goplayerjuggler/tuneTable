@@ -315,7 +315,7 @@ export async function buildTuneLists({
     lastUpdate: listLastUpdate(defaultTunes, defaultSetLists),
     count: defaultTunes.length,
     setListCount: defaultSetLists.length,
-    description: "my repertoire, plus some tunes I’m interested in",
+    description: "My tunebook: tunes I play or am interested in",
     default: true
   });
   console.log(
