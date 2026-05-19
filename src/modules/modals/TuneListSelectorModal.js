@@ -276,7 +276,7 @@ class TuneListSelectorModal extends Modal {
 			const res = await fetch(`./tune-lists/${listFile}`);
 			if (!res.ok) throw new Error(`HTTP ${res.status}`);
 			const data = await res.json();
-			const { tunes, setLists, defaultSort } = data;
+			const { tunes, setLists } = data;
 			const listInfo = this.manifest?.lists.find((l) => l.id === listId);
 			await this.onSelect({
 				source: "server",
@@ -285,7 +285,7 @@ class TuneListSelectorModal extends Modal {
 				tunes,
 				setLists,
 				lastUpdate,
-				defaultSort
+				...(listInfo.defaultSort ? { defaultSort: listInfo.defaultSort } : {})
 			});
 			this.close();
 		} catch (e) {

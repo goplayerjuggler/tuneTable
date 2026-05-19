@@ -10,7 +10,8 @@ B2dB cAFA G2BG DGBG |`,
 	theSessionId: 472,
 	references: [
 		{
-			notes: "See the entry for the Mountain Road"
+			notes: `1. See the entry for the Mountain Road.
+2. I came up with a [setting of this](ttId=535) as a jig in a minor key.`
 		}
 	]
 };

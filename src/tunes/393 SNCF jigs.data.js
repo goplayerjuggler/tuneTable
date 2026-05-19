@@ -8,7 +8,6 @@ export default {
 T:SNCF jigs
 R:jig
 C:Malcolm Schonfield
-
 N: 1. This tune came to me a long time ago; I first wrote it down in 2010. 
 N: I chose not to completely fix the order the parts are played in; and 
 N: whether or not to double them. 
@@ -31,6 +30,7 @@ N: 6. This is a revised version; an earlier (flawed) version follows as
 N: it has some more info.
 N: 7. On the fiddle these days I tend to play it in Am but on the whistle I 
 N: think it works better in Bm.
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 L:1/8
 M:12/8
 K:Bm
@@ -59,6 +59,7 @@ N: with revisions in 2016 and 2017.
 N: 2. The ABC code here has many hidden comments which are related to “ossia” – alternative
 N: ways of playing a section. Not sure if that idea (ossias embedded in ABC) will be developed
 N: or not in the foreseeable future.
+Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M:12/8
 K:Am
 %160509, 160510, 160519, 160623 (chords), 160627, 171107 transposed from G aeol to A aeol, 260206 abc syntax, 260212 comments, 260217

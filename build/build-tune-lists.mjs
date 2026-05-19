@@ -85,7 +85,7 @@ async function loadTuneDates(tuneFileNames) {
       if (tuneDates1[i]) dateMap.set(fileName, tuneDates1[i]);
       else
         console.warn(
-          `Warning: no date cached for ${fileName} — run \`npm run update-dates\``
+          `Warning: no date cached for ${fileName} — commit it, then run \`npm run update-dates -- only-check 30m\``
         );
     });
 
@@ -452,6 +452,10 @@ export async function buildTuneLists({
       console.log(`✓ ${fileName} (${abcTunes.length} tunes) [ABC]`);
     }
   }
+
+  generatedLists.forEach((l) => {
+    if (!l.defaultSort) l.defaultSort = "rhythmContourName";
+  });
 
   // Manifest
   const manifest = {
