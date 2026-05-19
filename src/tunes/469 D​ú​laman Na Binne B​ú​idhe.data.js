@@ -1,5 +1,6 @@
 export default {
 	parts: "AB",
+	theSessionId: 2428,
 	abc: `X:1
 T:Dúlaman Na Binne Búidhe
 N: As played by Néillidh Boyle
