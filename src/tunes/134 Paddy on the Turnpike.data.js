@@ -5,7 +5,6 @@ export default {
 	abc: [
 		`X:1
 T:Paddy on the Turnpike 
-T:as played by Fidel Martin
 S:Fidel Martin, fiddle
 O:USA
 M:4/4
@@ -35,7 +34,6 @@ P:Coda
 [M:5/4]!coda!d(cAc) fgfd cABG (A/B/G/A/)GE .F2z2|]`,
 		`X:5
 T:Paddy on the Turnpike
-T: as played by Manco Sneed
 S:Manco Sneed, fiddle
 M:4/4
 L:1/16

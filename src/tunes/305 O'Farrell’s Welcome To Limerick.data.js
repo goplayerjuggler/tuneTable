@@ -4,7 +4,6 @@ export default {
 	abc: `
 X: 1
 T: O'Farrell’s Welcome To Limerick
-T: (as played by Tommy Peoples)
 C:Patrick O’Farrell
 S: Tommy Peoples
 D: The High Part Of The Road (1976)

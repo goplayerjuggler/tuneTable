@@ -2,7 +2,6 @@ export default {
 	aka: "Martin Wynne's #1",
 	incipit: `
 X:1
-T:
 T:Martin Wynne's
 R:reel
 C:Martin Wynne 

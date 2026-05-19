@@ -1,14 +1,15 @@
 export default {
 	abc: `
 X: 1
-T: Denis Doody's – the “Lunny” effect
-T: The way I hear it, played by Dónal Lunny's band
-T: 1987, Live at the National Concert Hall, Dublin
+T: Denis Doody's
 S: Dónal Lunny & his band
 D: Donal Lunny
 R: polka
 F:https://youtu.be/gVLtA4uX_NM?t=354
 M: 2/4
+N: *** Denis Doody's – the “Lunny” effect ***
+N: - The way I hear it, played by Dónal Lunny's band
+N: - 1987, Live at the National Concert Hall, Dublin
 N: 1. I used [Dr. Dow’s setting](https://thesession.org/tunes/1338#setting14686) as a starting point and then made some tweaks,
 N: as I wasn’t in complete agreement with it.
 N: 2. In a comment made 23 years ago (!), Dr Dow mentions something he calls the
@@ -39,7 +40,7 @@ gf ge|BB AB|zE>F G|1 A B/c/B/A/ B :|2  A B/c/B/A/ G | EF/E/ DB, !D.S.! ||
 
 X: 2
 T: Denis Doody's
-T: (same as previous but “cut up” differenly)
+N: Same as previous but “cut up” differenly
 N: 1. This is a more concise way to write it; but it’s less accurate 
 N: w.r.t. the A part’s structure, IMO.
 N: I don't hear it this way! Just leaving it here for reference.

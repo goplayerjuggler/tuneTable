@@ -1,9 +1,11 @@
 export default {
 	groups: "ALORA",
+	parts: "ABAC",
 	abc: `% Bransle d’écosse — détournée, à 3 temps
 X: 1 
 T: Bransle d'Écosse — déstructurée ; à 3 temps
 C:Malcolm Schonfield %2025-07-29, 2025-09-05, 2025-10-02
+N:Une version « déstructurée » de [Bransle d'Écosse](theSessionId=2086)
 M: 3/4
 R: polska?
 L: 1/8

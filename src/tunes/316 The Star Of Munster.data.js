@@ -3,7 +3,7 @@ export default {
 	parts: "AABB",
 	abc: `X: 1
 T:The Star Of Munster
-T: (as played by Patsy Hanly – more or less!)
+N: As played by Patsy Hanly – more or less!
 S:Patsy Hanly, flute
 R: reel
 F:https://youtu.be/IpsE74EcGR0

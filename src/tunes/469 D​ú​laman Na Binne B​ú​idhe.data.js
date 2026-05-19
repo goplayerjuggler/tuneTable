@@ -2,7 +2,7 @@ export default {
 	parts: "AB",
 	abc: `X:1
 T:Dúlaman Na Binne Búidhe
-T:as played by Néillidh Boyle
+N: As played by Néillidh Boyle
 N:
 N: 1. Played fast, with a swing on the semiquavers, so “𝅘𝅥𝅯𝅘𝅥𝅯=♪𝅘𝅥𝅯”.
 N: 2. N. Boyle seems to be playing on a violin tuned roughly 

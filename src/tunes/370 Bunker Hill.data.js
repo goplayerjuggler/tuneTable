@@ -1,7 +1,6 @@
 export default {
 	abc: `X:1
 T:Bunker Hill
-T:from ITMA | Selections from the McConnell Family Collection | October 2024
 R:reel
 M:4/4
 Q:1/4=110
@@ -9,10 +8,11 @@ L:1/16
 D:ITMA | Selections from the McConnell Family Collection | October 2024
 S:Gussie Russel
 F: https://www.itma.ie/playlists/mcconnell-playlist-october24/?track=4
-N:0. As played by Gussie Russel (1927-2004) on a whistle; 1974-01-19; Doonagore, Co. Clare.
-N:1. Just a rough attempt to transcribe how it was played the first 
+N:1. from ITMA | Selections from the McConnell Family Collection | October 2024
+N:2. As played by Gussie Russel (1927-2004) on a whistle; 1974-01-19; Doonagore, Co. Clare.
+N:3. Just a rough attempt to transcribe how it was played the first 
 N:time round.
-N:2. I’m using my own, admittedly idiosyncratic choice of time
+N:4. I’m using my own, admittedly idiosyncratic choice of time
 N:signature and note length. The standard way has bars that are
 N:half as long, using 4/4 with quavers. Here it’s 4/4 with
 N:semiquavers. (I did consider using 4/2 with quavers. That 

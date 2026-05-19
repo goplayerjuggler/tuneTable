@@ -60,11 +60,10 @@ M:9/16
  E3 cde d2^c|d2B G2B D2G|E2G ce2 D2F|.G3 G3||`,
 		`X:3
 T:The First Draft
-T:with chords added by M. Schonfield, 2025-01-26
 %T:(second score from https://www.itma.ie/scores/first-draft/)
 C:Siobhán Peoples
-N: 1. This is the first score here, with added chords. They may not be quite right, but 
-N: should be better than nothing.
+N: 1. This is just the first score here, with some chords I added (2025-01-26).
+N: They may not be quite right, but it could be better than nothing.
 N: 3. I put a passing D chord on the third beat in a couple of places; it can 
 N: played or left out, depending on how you feel.
 R: Mazurka
