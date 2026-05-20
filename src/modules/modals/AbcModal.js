@@ -426,6 +426,13 @@ export default class AbcModal extends Modal {
 	}
 
 	setupControls() {
+		//move the close button from the header to the footer
+		const closeButton = document.querySelector("#abcModal .modal__close");
+		const newParent = document.querySelector(
+			"#abcModal .control-row.pagination-controls"
+		);
+		newParent.appendChild(closeButton);
+
 		this.elements.doubleBtn?.addEventListener("click", () =>
 			this.changeBarLength(1)
 		);

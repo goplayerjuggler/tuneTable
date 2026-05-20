@@ -312,17 +312,20 @@ td {
   vertical-align: top;
 }
 
-th {
+#tunesTable th {
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  cursor: pointer;
   position: relative;
   transition: background-color 0.2s ease;
 }
 
-th:hover {
+#tunesTable th:first-child {
+  cursor: pointer;
+}
+
+#tunesTable th:first-child:hover {
   background-color: var(--primary-hover);
 }
 
