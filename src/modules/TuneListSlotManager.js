@@ -121,14 +121,15 @@ export default class TuneListSlotManager {
 	}
 
 	/**
-	 * Creates or updates a slot with the supplied tune and set-list data.
+	 * Creates or updates a slot with the supplied data (tune, set-list and default sort).
 	 * @param {string}   id
 	 * @param {string}   name
 	 * @param {object[]} tunes
 	 * @param {object[]} [setLists=[]]
+	 * @param {string}   defaultSort
 	 * @returns {Promise<void>}
 	 */
-	async saveSlot(id, name, tunes, setLists = []) {
+	async saveSlot(id, name, tunes, setLists = [], defaultSort) {
 		const now = new Date().toISOString();
 		const existing = await this.getSlot(id);
 		const slot = existing
@@ -138,6 +139,7 @@ export default class TuneListSlotManager {
 					tunes,
 					setLists,
 					lastUpdate: now,
+					defaultSort,
 					metadata: { ...existing.metadata, lastOpened: now }
 				}
 			: {
@@ -147,6 +149,7 @@ export default class TuneListSlotManager {
 					lastUpdate: now,
 					tunes,
 					setLists,
+					defaultSort,
 					metadata: { lastOpened: now }
 				};
 

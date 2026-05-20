@@ -142,15 +142,12 @@ export default class Modal {
 			if (this.onOpen) this.onOpen();
 			this.trapFocus();
 
-			// Focus first focusable element or close button
-			const firstFocusable = this.element.querySelector(
-				'input, button, select, textarea, [tabindex]:not([tabindex="-1"])'
-			);
-			if (firstFocusable) {
-				firstFocusable.focus();
-			} else {
-				this.element.querySelector(".modal__close").focus();
-			}
+			// Focus first focusable element in body, or fall back to close button
+			const firstFocusable =
+				this.element.querySelector(
+					'.modal__body input, .modal__body button, .modal__body select, .modal__body textarea, .modal__body [tabindex]:not([tabindex="-1"])'
+				) ?? this.element.querySelector(".modal__close");
+			firstFocusable.focus();
 
 			// Start auto-hide timer if enabled
 			this.startAutoHideTimer();
@@ -186,32 +183,41 @@ export default class Modal {
 	}
 
 	/**
-	 * Traps focus within the modal for accessibility
+	 * Traps focus within the modal for accessibility.
+	 * The close button is placed last in the cycle so Tab moves through
+	 * body elements first, then reaches the close button before wrapping.
+	 * Focusable elements are queried on each keydown to handle dynamic content.
 	 */
 	trapFocus() {
-		const focusableElements = this.element.querySelectorAll(
-			'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-		);
-
-		if (focusableElements.length === 0) return;
-
-		const firstElement = focusableElements[0];
-		const lastElement = focusableElements[focusableElements.length - 1];
-
 		this.element.addEventListener("keydown", (e) => {
 			if (e.key !== "Tab") return;
+			e.preventDefault();
 
-			if (e.shiftKey) {
-				if (document.activeElement === firstElement) {
-					lastElement.focus();
-					e.preventDefault();
-				}
-			} else {
-				if (document.activeElement === lastElement) {
-					firstElement.focus();
-					e.preventDefault();
-				}
+			const focusableElements = Array.from(
+				this.element.querySelectorAll(
+					'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+				)
+			);
+
+			if (focusableElements.length === 0) return;
+
+			// Move close button to end: body elements → close button → wrap
+			const closeBtn = this.element.querySelector(".modal__close");
+			const closeBtnIdx = closeBtn ? focusableElements.indexOf(closeBtn) : -1;
+			if (closeBtnIdx !== -1) {
+				focusableElements.splice(closeBtnIdx, 1);
+				focusableElements.push(closeBtn);
 			}
+
+			const current = focusableElements.indexOf(document.activeElement);
+			const next = e.shiftKey
+				? current <= 0
+					? focusableElements.length - 1
+					: current - 1
+				: current >= focusableElements.length - 1
+					? 0
+					: current + 1;
+			focusableElements[next].focus();
 		});
 	}
 }

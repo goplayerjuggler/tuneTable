@@ -1,5 +1,5 @@
 %% list-name: Nottingham Music Database
-%% list-description: See https://github.com/jukedeck/nottingham-dataset
+%% list-description: See [nottingham-dataset](https://github.com/jukedeck/nottingham-dataset)
 %% list-description2: This is a concatenation of all the abc files in the ABC_cleaned folder, and so it is covered by the GPL-3.0 license.
 %% list-date: 2017-03-07
 %% list-defaultSort: meterContourName

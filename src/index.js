@@ -29,7 +29,7 @@ import IntroModal from "./modules/modals/IntroModal.js";
 // Legacy key kept for one-time cleanup only
 const storageKey = "tunesData";
 const CURRENT_LIST_KEY = "currentTuneList";
-let currentSortType = sortConstants.PREDEFINED_SORT_NAMES[0];
+window.currentSortType = sortConstants.PREDEFINED_SORT_NAMES[0];
 let currentSortIndex = 0;
 
 let editModal,
@@ -446,7 +446,7 @@ async function onListSelected({
 	if (source === "local") await slotManager.touchSlot(sourceId);
 
 	isDirty = false;
-	if (defaultSort) currentSortType = defaultSort;
+	if (defaultSort) window.currentSortType = defaultSort;
 	sortWithDefaultSort();
 	populateFilters();
 
@@ -545,7 +545,7 @@ function updateFooter() {
 
 	el.innerHTML =
 		`tune list: ${currentListState.displayName}` +
-		` (${currentListState.source}; ${counts})Tunes sorted by: “${currentSortType}”` +
+		` (${currentListState.source}; ${counts})Tunes sorted by: “${window.currentSortType}”` +
 		` &bull; Last updated: ${relativeTime(currentListState.lastUpdate ?? currentListState.modified)}${dirty}` +
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
 		`<button id="footer-list-link">tune lists</button>
@@ -789,7 +789,7 @@ function resolveTuneById(idObj) {
 
 // Replace [label](target) patterns in note text.
 // Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row;
-// all other patterns become external links, as before.
+// all other patterns become external links.
 function formatNoteLinks(text) {
 	return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => {
 		if (/^(?:ttId|theSessionId)=/.test(target)) {
@@ -875,7 +875,7 @@ function calculateCrossRefs(tunes) {
 }
 
 function sortWithDefaultSort() {
-	sortTunesArray(window.tunesData, { predefinedSort: currentSortType });
+	sortTunesArray(window.tunesData, { predefinedSort: window.currentSortType });
 }
 
 function openTheSessionImport(e, dropdown, howToOpen) {
@@ -1427,8 +1427,11 @@ function sortData() {
 	} else {
 		currentSortIndex = 0;
 	}
-	currentSortType = sortConstants.PREDEFINED_SORT_NAMES[currentSortIndex];
-	sortTunesArray(window.filteredData, { predefinedSort: currentSortType });
+	window.currentSortType =
+		sortConstants.PREDEFINED_SORT_NAMES[currentSortIndex];
+	sortTunesArray(window.filteredData, {
+		predefinedSort: window.currentSortType
+	});
 	renderTable();
 	updateFooter();
 }

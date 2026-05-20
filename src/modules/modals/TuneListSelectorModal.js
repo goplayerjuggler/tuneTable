@@ -15,6 +15,12 @@ const relativeTime = (iso) => {
 	return `${years}y ago`;
 };
 
+function formatNoteLinks(text) {
+	return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => {
+		return `<a href="${target}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+	});
+}
+
 /**
  * Tune List Selector Modal
  *
@@ -150,19 +156,23 @@ class TuneListSelectorModal extends Modal {
 		const tuneCount = slot.tunes?.length ?? 0;
 		const setCount = slot.setLists?.length ?? 0;
 		const meta = `${tuneCount} tune${tuneCount !== 1 ? "s" : ""}${setCount > 0 ? `, ${setCount} set list${setCount !== 1 ? "s" : ""}` : ""} &bull; Modified ${relativeTime(slot.lastUpdate)}`;
+		const desc = slot.description
+			? `<span class="tls-item-desc">${formatNoteLinks(slot.description)}</span>`
+			: "";
 		return `
-			<div class="tls-item tls-slot${isActive ? " tls-item--active" : ""}" data-slot-id="${slot.id}">
-				<div class="tls-item-info">
-					<span class="tls-item-name">${slot.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}</span>
-					<span class="tls-item-meta">${meta}</span>
-				</div>
-				<div class="tls-item-actions">
-					<button class="btn btn-sm tls-btn-duplicate" data-slot-id="${slot.id}">Duplicate</button>
-					<button class="btn btn-sm tls-btn-rename" data-slot-id="${slot.id}">Rename</button>
-					<button class="btn btn-sm tls-btn-delete" data-slot-id="${slot.id}">Delete</button>
-				</div>
+		<div class="tls-item tls-slot${isActive ? " tls-item--active" : ""}" data-slot-id="${slot.id}">
+			<div class="tls-item-info">
+				<button class="tls-item-name tls-item-load">${slot.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}</button>
+				${desc}
+				<span class="tls-item-meta">${meta}</span>
 			</div>
-		`;
+			<div class="tls-item-actions">
+				<button class="btn btn-sm tls-btn-duplicate" data-slot-id="${slot.id}">Duplicate</button>
+				<button class="btn btn-sm tls-btn-rename" data-slot-id="${slot.id}">Rename</button>
+				<button class="btn btn-sm tls-btn-delete" data-slot-id="${slot.id}">Delete</button>
+			</div>
+		</div>
+	`;
 	}
 
 	_serverItemHTML(list, isActive) {
@@ -171,66 +181,63 @@ class TuneListSelectorModal extends Modal {
 				? `; ${list.setListCount} set list${list.setListCount > 1 ? "s" : ""}`
 				: "";
 		const desc = list.description
-			? `<span class="tls-item-desc">${list.description}</span>`
+			? `<span class="tls-item-desc">${formatNoteLinks(list.description)}</span>`
 			: "";
 		const lastUpdated = list.lastUpdate
 			? ` &bull; Updated ${relativeTime(list.lastUpdate)}`
 			: "";
 		return `
-			<div class="tls-item tls-server-item${isActive ? " tls-item--active" : ""}"
-					data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}">
-				<div class="tls-item-info">
-					<span class="tls-item-name">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</span>
-					${desc}
-					<span class="tls-item-meta">${list.count ?? "?"} tunes${setLists}${lastUpdated}</span>
-				</div>
-				<div class="tls-item-actions">
-					<button class="btn btn-sm tls-btn-save-local" data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate ?? ""}">Save locally</button>
-				</div>
+		<div class="tls-item tls-server-item${isActive ? " tls-item--active" : ""}"
+				data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate}">
+			<div class="tls-item-info">
+				<button class="tls-item-name tls-item-load">${list.category ? `(${list.category}) ` : ""}${list.name}${isActive ? ' <span class="tls-badge">Active</span>' : ""}${list.default ? ' <span class="tls-badge tls-badge--recommended">Recommended</span>' : ""}</button>
+				${desc}
+				<span class="tls-item-meta">${list.count ?? "?"} tunes${setLists}${lastUpdated}</span>
 			</div>
-		`;
+			<div class="tls-item-actions">
+				<button class="btn btn-sm tls-btn-save-local" data-list-id="${list.id}" data-list-file="${list.file}" data-list-last-update="${list.lastUpdate ?? ""}">Save locally</button>
+			</div>
+		</div>
+	`;
 	}
 
 	_attachHandlers(container) {
-		container.querySelectorAll(".tls-slot").forEach((el) => {
-			el.addEventListener("click", (e) => {
-				if (e.target.closest("button")) return;
-				this._loadLocal(el.dataset.slotId);
-			});
+		container.querySelectorAll(".tls-slot .tls-item-load").forEach((btn) => {
+			btn.addEventListener("click", () =>
+				this._loadLocal(btn.closest(".tls-slot").dataset.slotId)
+			);
 		});
 
-		container.querySelectorAll(".tls-server-item").forEach((el) => {
-			el.addEventListener("click", (e) => {
-				if (e.target.closest("button")) return;
-				this._loadServer(
-					el.dataset.listId,
-					el.dataset.listFile,
-					el.dataset.listLastUpdate
+		container
+			.querySelectorAll(".tls-server-item .tls-item-load")
+			.forEach((btn) => {
+				const el = btn.closest(".tls-server-item");
+				btn.addEventListener("click", () =>
+					this._loadServer(
+						el.dataset.listId,
+						el.dataset.listFile,
+						el.dataset.listLastUpdate
+					)
 				);
 			});
-		});
 
 		container.querySelectorAll(".tls-btn-duplicate").forEach((btn) => {
 			btn.addEventListener("click", (e) => {
-				e.stopPropagation();
 				this._duplicateSlot(btn.dataset.slotId);
 			});
 		});
 		container.querySelectorAll(".tls-btn-rename").forEach((btn) => {
 			btn.addEventListener("click", (e) => {
-				e.stopPropagation();
 				this._renameSlot(btn.dataset.slotId);
 			});
 		});
 		container.querySelectorAll(".tls-btn-delete").forEach((btn) => {
 			btn.addEventListener("click", (e) => {
-				e.stopPropagation();
 				this._deleteSlot(btn.dataset.slotId);
 			});
 		});
 		container.querySelectorAll(".tls-btn-save-local").forEach((btn) => {
 			btn.addEventListener("click", (e) => {
-				e.stopPropagation();
 				this._saveServerToLocal(btn.dataset.listId, btn.dataset.listFile);
 			});
 		});
@@ -316,7 +323,8 @@ class TuneListSelectorModal extends Modal {
 				id,
 				name.trim(),
 				data.tunes ?? [],
-				data.setLists ?? []
+				data.setLists ?? [],
+				data.defaultSort ?? ""
 			);
 			this._setStatus(`Saved as "${name.trim()}"`, "success");
 			this._render();
@@ -399,15 +407,23 @@ class TuneListSelectorModal extends Modal {
 				`Copy data from current list (${this.currentListState.displayName})?`
 			);
 		const tunes = copyData ? (window.tunesData ?? []) : [],
-			setLists = copyData ? (window._setLists ?? []) : [];
+			setLists = copyData ? (window._setLists ?? []) : [],
+			defaultSort = copyData ? window.currentSortType : "";
 		const id = await this.slotManager.generateSlotId();
-		await this.slotManager.saveSlot(id, name.trim(), tunes, setLists);
+		await this.slotManager.saveSlot(
+			id,
+			name.trim(),
+			tunes,
+			setLists,
+			defaultSort
+		);
 		await this.onSelect({
 			source: "local",
 			sourceId: id,
 			displayName: name.trim(),
 			tunes,
-			setLists
+			setLists,
+			defaultSort
 		});
 		this.close();
 	}
