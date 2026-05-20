@@ -1,6 +1,5 @@
 export default {
 	groups: "su",
-	excludeFromDefault: true,
 	parts: "AABB",
 	incipit: `X:1
 T:Back To The Heater
