@@ -10,11 +10,12 @@ S:Joseph Mannion, accordion; Ellen O’Gorman, fiddle; Donal Clancy, guitar; Don
 M:9/8
 L:1/8
 K: G
-"G"B3-B2 A G2 A|B2 d d2 B d3|B3-B2 A G2 A|"Em"B2 e e2 d e2d|
-"G"B3-B2 A G2 A|B2 d d2 B d2g|e2B B2 A G2 A|"Em"B2 e e2 d e3|
+"G""_v0"B3-B2 A G2 A|B2 d d2 B d3|"_v1"B3-B2 A G2 A|"Em"B2 e e2 d e2d|
+"G""_v1"B3-B2 A G2 A|B2 d d2 B d2g|e2B B2 A G2 A|"Em""_v2"B2 e e2 d e3||
 "Em"e2 f g2 f g2d|"D"B2 d d2 B d3|"Em"e2 f g2 f g2 d|"Em"B2 e e2 d e3|
-"Em"e2 f g2 f g2d|"D"B2 d d2 B d2g|"Em"e2 B B2 A G2 A|"Em"B2 e e2 d \\ %"_to end this set, finish on a held note here with a backing C chord"
-e2d!D.C.!|]
+"Em"e2 f g2 f g2d|"D"B2 d d2 B d2g|"Em"e2 B B2 A G2 A|"Em""_v3-v5"B2 e e2 d e2d!D.C.!|]
+P:Variations/embellishments
+"_v0"B3 B2 A G2 A||"_v1"A2!slide!B-B2A||"_v2"Bcd e2d e3||"_v3"B2g e2d e2d ||"_v4"B2g f2d e2d ||"_v5 (coda)"B2e e2d "C"!fermata!e3 |]
 `,
 	theSessionId: 1374,
 	references: [
