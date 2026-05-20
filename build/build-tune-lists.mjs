@@ -30,6 +30,11 @@ const COMPOSER_EXTRACTS = [
     id: "tommy-peoples",
     label: "Tommy Peoples",
     match: (c) => /tommy\s+peoples/i.test(c)
+  },
+  {
+    id: "go-player",
+    label: "GoPlayer",
+    match: (c) => /malcolm\s+schonfield/i.test(c)
   }
 ];
 
