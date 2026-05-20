@@ -2,7 +2,9 @@ export default {
 	groups: "ALORA",
 	parts: "AABB",
 	norbeckId: 12,
+	theSessionId: 1649,
 	abc: `X: 1
+T: Dornoch Links
 T: Joe Bane's
 C:John MacDonald
 O:Scotland
