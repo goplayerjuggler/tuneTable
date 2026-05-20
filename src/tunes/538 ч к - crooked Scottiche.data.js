@@ -3,7 +3,7 @@ export default {
 	excludeFromDefault: true,
 	groups: "alora",
 	tags: "crooked",
-	ttId: 514,
+	ttId: 538,
 	abc: `
 X:1
 T:червона калина as a crooked Scottiche
