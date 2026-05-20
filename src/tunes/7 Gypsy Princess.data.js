@@ -2,6 +2,7 @@ export default {
 	groups: "ALORA",
 	parts: "AABB",
 	norbeckId: 14,
+	theSessionId: 4577,
 	abc: `
 %251029
 X: 2
