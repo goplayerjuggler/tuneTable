@@ -223,8 +223,7 @@ const listLastUpdate = (tunes, setLists) =>
  * the constituent tunes' commit dates (tracked in `build/tune-dates.json`,
  * updated via `npm run update-dates`) and the `dateModified` fields of its set lists.
  *
- * In production mode (`isDevelopment: false`) any fileName listed in
- * {@link FILES_TO_NOT_PUBLISH} is silently skipped so it never reaches
+ * In production mode (`isDevelopment: false`) any tune flagged isPrivate never reaches
  * GitHub Pages.
  *
  * @param {{ isDevelopment?: boolean, outputDir?: string }} [options]
@@ -282,7 +281,6 @@ export async function buildTuneLists({
    * @returns {Promise<boolean>} `true` if the file was written.
    */
   const writeList = async (fileName, tunes, setLists = []) => {
-    //if (!isDevelopment && FILES_TO_NOT_PUBLISH.includes(fileName)) return false;
     const data = {
       tunes: tunes
         .filter((t) => isDevelopment || !t.isPrivate)
