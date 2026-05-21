@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB",
 	abc: `X:1
 T:Kringelleken
 Z:Malcolm Schonfield%230427,250325,251025
