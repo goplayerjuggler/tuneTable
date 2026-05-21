@@ -1,5 +1,6 @@
 export default [
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Road To Errogie
 C:Adam Sutherland
@@ -23,6 +24,7 @@ DGG2 AGAB dGG2 AGBd|e3g edBG AGBA G3E||`,
 		parts: "AABB"
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: [
 			`X:1
 T:The Glass Of Beer
@@ -43,6 +45,7 @@ GA|BEE2 BEdE BEE2 A2GA|BEE2 B3A GBdB A2:|
 		theSessionSettingId: 12836
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Paddy's Trip To Scotland
 R:reel
@@ -62,6 +65,7 @@ Adfd Adfd g2fg efge|aAA2 BABc[1 dfec d2dB:|2 dfec dABc||`,
 		theSessionSettingId: 32617
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Graf Spee
 R:reel
@@ -89,6 +93,7 @@ g2ae geed ecdB cAGE|GAcd ecdc cAGE EDD2|]`,
 	}, //260518 TODO
 	{
 		groups: "su",
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Johnny Loughran's
 R:reel
@@ -108,6 +113,7 @@ defg a^gaf ~b3f ~a3f|~g3e ~f3e dgfe dcdB||`,
 	},
 	{
 		groups: "su",
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Fall Of Dunboy
 C:John Dwyer
@@ -135,6 +141,7 @@ BGBd gfdc|BGBd gfdc B2G2 G2:|`,
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: [
 			`X:1
 T:Willie Coleman's
@@ -157,10 +164,14 @@ gfg edB dgb age|d^cd gdB AGF G2:|`
 		theSessionSettingId: 13367
 	},
 	{
+		parts: "AABB",
 		abc: `X:1
 T:Waverly
 C:Art Galbraith
-S:USA
+O:USA;Missouri.
+S:John Carty, banjo; Michael McGoldrick, uillean pipes
+H:https://racketrecords.bandcamp.com/track/waverly-r-l-m-irt-n-sheamuis
+A:At Our Leisure
 R:reel
 L:1/16
 M:4/4
@@ -168,6 +179,14 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/22069#setting44877
 N:Setting entered in thesession by user “dersulle” on 2022-09-23
 N:*abc-tools: convert to M:4/4 & L:1/16*
+N:(edited after importing)
+N:---
+N:Played in the album in a set: Waverly / Ríl Máirtín Sheamuis.
+N:They (Carty & McGoldrick) also play this set on [this video](https://www.facebook.com/watch/?v=1209416829844418), 
+N:with Michael McCague and Matt Griffin (on bouzouki & guitar - not 
+N:sure who plays which!)
+N:McGoldrick calls this an old-timey tune; he 
+N:got it from the fiddler Tatiana Hargreaves.
 K:Dmajor
 |:D2E2 G2AG BGAG BddB|d2de B2A2 GBAG EGGE|
 D2E2 G2AG BGAG BddB|efed B2BA[1 GBAG EGGE:|2 GBAG EGGf||
@@ -175,9 +194,25 @@ D2E2 G2AG BGAG BddB|efed B2BA[1 GBAG EGGE:|2 GBAG EGGf||
 [M:3/4]g2gf gfed B2d2|[M:4/4]efed B2BA[1 GBAG EGGf:|2 GBAG EGGE||`,
 		theSessionId: 22069,
 		theSessionSettingId: 44877,
-		tags: "crooked"
+		tags: "crooked",
+		references: [
+			{
+				artists: "Tatiana Hargreaves, fiddle; Bruce C. Molsky, guitar",
+				url: "https://www.youtube.com/watch?v=vvpAFdNj4vk",
+				album: "Started Out To Ramble (2009)",
+				notes: `The [whole album](https://youtube.com/playlist?list=OLAK5uy_mMTFfLFYXA7sDQRDhX536Vt1sGXxPFg0I) is well worth a listen.`
+			},
+			{
+				artists: "Tricia Spencer, fiddle; Howard Rains, guitar",
+				url: "https://www.youtube.com/watch?v=0j4oYP_NZa4",
+				notes: `Another original USA old-timey setting.
+Played AAB (and not AABB as in the other settings given here).`
+			}
+		],
+		fileDate: "2026-05-21"
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:O'Connor's
 R:polka
@@ -197,6 +232,7 @@ af f/e/d/f/ af fe/f|eB cd ed d2:|`,
 		theSessionSettingId: 25362
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Curragh Races
 R:reel
@@ -214,6 +250,7 @@ K:Edorian
 		theSessionSettingId: 21642
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Heathery Cruach
 R:reel
@@ -233,6 +270,7 @@ cAA2 cAGB cBcd efe2|f2ed cAA2 EFGE A2:|`,
 		theSessionSettingId: 1265
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Dusty Miller
 R:three-two
@@ -250,6 +288,7 @@ K:Fmajor
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Ashplant
 R:reel
@@ -269,6 +308,7 @@ B2 eB gBeB B2 dB ADFA|(3Bcd ef g3a gedB A2GA||`,
 		theSessionSettingId: 25454
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: [
 			`X:1
 T:The Lilting Fisherman
@@ -300,6 +340,7 @@ c'aba agef gedB cABA|GE~E2 G2Bd egdB cABA||`
 		theSessionSettingId: 13147
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Caucus
 C:Jean Duval
@@ -330,6 +371,7 @@ b ~g3 "D"agea "G"gage dBGA|B2 BG "D"AGEG "G"GEDE Gd|
 		theSessionSettingId: 15991
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Newcastle
 R:barndance
@@ -350,6 +392,7 @@ K:Gmajor
 		theSessionSettingId: 32370
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Her Long Dark Hair Flowing Down Her Back
 C:Junior Crehan
@@ -370,6 +413,7 @@ eggf gede cAAB c3d|edcA dcAG A2AG ABcd:|`,
 		theSessionSettingId: 31232
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: [
 			`X:1
 T:Dan Collins' Father's
@@ -411,6 +455,7 @@ d2 A BAB def a3 aba f2 e edd d3:|`
 		theSessionSettingId: 15582
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Stack Of Barley
 R:hornpipe
@@ -442,6 +487,7 @@ efed B2 dB AG (3EFG AcBA|GFGA (3Bcd Ac B2 G2 G2:|
 		theSessionSettingId: 15594
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Hommage À Joe Bouchard
 O:Québec
@@ -464,6 +510,7 @@ fgf "F#7/E"efe "Bm/D"ded "F#7/C#"cBc|"Bm"d3 dcd BFF FBc|d3 dcB "F#7"cFF F3
 		theSessionSettingId: 52529
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: [
 			`X:1
 T:Black Pat
@@ -503,6 +550,7 @@ b^abg egdg gedA B/c/d g=a|b2 ag eddB AGGF ~G3 z:|`
 		theSessionSettingId: 14161
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Daisy Bell
 C:Martin Murray
@@ -525,6 +573,7 @@ A/B/c|:"D"d2dc defg a2a^g afdf|"G"=gB B/B/B BccB "A7"Aa^ga "D"baga|
 		theSessionSettingId: 53114
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Le 24 Juin
 O:Québec
@@ -551,6 +600,7 @@ ABcA ~E3B|cdec BcdB A2AB AGFE|
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Glencolmcille
 R:reel
@@ -571,6 +621,7 @@ fded cBAg fdef g2fg|afge fded cABc d3g:|`,
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Girl Who Broke My Heart
 R:reel
@@ -592,6 +643,7 @@ G2Bd gdBG F2Ac fcAF|GABd cAGF DGG^F G2:|`,
 		theSessionSettingId: 48947
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Reel Eugène
 O:Québec
@@ -612,6 +664,7 @@ K:Aminor
 		theSessionSettingId: 30059
 	},
 	{
+		fileDate: "2026-05-18",
 		abc: [
 			`X:1
 T:Hommage à Gilles Laprise
@@ -636,6 +689,7 @@ Afed B2 BB Bgfe a3 a|Afed cAce[1 agec d2 dd[2 agec d2 d2||`
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Throw Away The Keys
 R:reel
@@ -655,6 +709,7 @@ K:Dmajor
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:Mick Finn's
 R:reel
@@ -681,6 +736,7 @@ d2fd Adfd g2fg edBc|dBBA Bcde[1 f2gf edBc:|2 f2gf edAF||`,
 	},
 
 	{
+		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Flower Of The Flock
 R:reel
