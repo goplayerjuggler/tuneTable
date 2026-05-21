@@ -794,7 +794,10 @@ function formatNoteLinks(text) {
 	return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => {
 		if (/^(?:ttId|theSessionId)=/.test(target)) {
 			const t = resolveTuneById(parseTuneIdStr(target));
-			if (t) return `<a href="#cr-t${t._crId}">${label}</a>`;
+			if (t) {
+				if (window.filteredData.indexOf(t) >= 0)
+					return `<a href="#cr-t${t._crId}">${label}</a>`;
+			} else return label;
 		}
 		return `<a href="${target}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 	});
@@ -1212,8 +1215,13 @@ function renderTable() {
 					//260506 broken - todo - fix
 					cr.artistNames
 				: "";
-			const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
-			referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}]</div>`;
+			const targetIsPresent =
+				window.filteredData.some((t) => t._crId === cr.tuneId) >= 0;
+			if (targetIsPresent) {
+				const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
+				referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}]</div>`;
+			} else
+				referencesHtml += `<div class="reference-item reference-item--cr">cross-referenced to: ${artistLink ? ` [${artistLink}] / ` : ""}  [${cr.tuneName}] (currently not on-screen)</div>`;
 		});
 
 		// ── Score links ───────────────────────────────────────────────
