@@ -797,7 +797,8 @@ function formatNoteLinks(text) {
 			if (t) {
 				if (window.filteredData.indexOf(t) >= 0)
 					return `<a href="#cr-t${t._crId}">${label}</a>`;
-			} else return label;
+				else return `[${label}] (cross-reference not on-screen)`;
+			}
 		}
 		return `<a href="${target}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 	});
@@ -1079,43 +1080,6 @@ function scrollToSetFirstTune(tunes) {
 		?.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
-// function scrollToSetFirstTune(tunes) {
-// 	console.log("[scrollToSetFirstTune] tunes:", tunes);
-// 	const first = tunes?.[0];
-// 	if (!first) {
-// 		console.warn("[scrollToSetFirstTune] no first tune");
-// 		return;
-// 	}
-
-// 	const tune = first.theSessionId
-// 		? _crBySessionId.get(first.theSessionId)
-// 		: first.ttId
-// 			? _crByTtId.get(first.ttId)
-// 			: null;
-// 	console.log(
-// 		"[scrollToSetFirstTune] first entry:",
-// 		first,
-// 		"→ resolved tune:",
-// 		tune
-// 	);
-// 	if (!tune) {
-// 		console.warn(
-// 			"[scrollToSetFirstTune] could not resolve tune from cross-ref maps"
-// 		);
-// 		return;
-// 	}
-
-// 	const id = `cr-t${tune._crId}`;
-// 	const el = document.getElementById(id);
-// 	console.log("[scrollToSetFirstTune] looking for element #" + id, "→", el);
-// 	if (!el) {
-// 		console.warn("[scrollToSetFirstTune] element not found in DOM");
-// 		return;
-// 	}
-
-// 	el.scrollIntoView({ behavior: "smooth", block: "center" });
-// 	console.log("[scrollToSetFirstTune] scrollIntoView called on", el);
-// }
 function renderTable() {
 	const tbody = document.getElementById("tunesTableBody");
 
