@@ -42,6 +42,7 @@ let editModal,
 let slotManager;
 let currentListState = null;
 let isDirty = false;
+let activeBadgeFilters = new Map(); // Map<metaType, Set<lowercaseValue>> — badge-click filter state
 let pendingUrlParams = null;
 let pendingSetParam = null;
 let _manifestCache = null;
@@ -734,28 +735,39 @@ function collapseNotes(btn) {
 }
 
 // Extract all metadata values from a tune for display and filtering.
-// Returns an array of metadata strings including rhythm, parts, key, composer(s), origin, tags, and structure.
+// Returns an array of { type, value } objects covering rhythm, parts, key,
+// composer(s), origin, tags, and structure.
 function getTuneMetadata(tune) {
 	const tags = tune.tags
 		? Array.isArray(tune.tags)
 			? tune.tags
 			: [tune.tags]
 		: [];
-	const origin = tune.origin
+	const origins = tune.origin
 		? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
 		: [];
-
-	const composer = tune.composer ? tune.composer.split("; ") : [];
+	const composers = tune.composer ? tune.composer.split("; ") : [];
 
 	return [
-		tune.rhythm,
-		tune.parts,
-		tune.key,
-		...composer,
-		...origin,
-		...tags,
-		tune.structure
-	].filter((m) => m);
+		tune.rhythm && { type: "rhythm", value: tune.rhythm },
+		tune.parts && { type: "parts", value: tune.parts },
+		tune.key && { type: "key", value: tune.key },
+		...composers.map((v) => ({ type: "composer", value: v })),
+		...origins.map((v) => ({ type: "origin", value: v })),
+		...tags.map((v) => ({ type: "tag", value: v })),
+		tune.structure && { type: "structure", value: tune.structure }
+	].filter(Boolean);
+}
+
+// Toggle a badge filter on/off. Uses AND-logic between types, OR-logic within
+// the same type: clicking two tags shows tunes matching either tag.
+function toggleBadgeFilter(type, value) {
+	const key = value.toLowerCase();
+	if (!activeBadgeFilters.has(type)) activeBadgeFilters.set(type, new Set());
+	const set = activeBadgeFilters.get(type);
+	set.has(key) ? set.delete(key) : set.add(key);
+	if (set.size === 0) activeBadgeFilters.delete(type);
+	applyFilters();
 }
 
 // -- Cross-references ---------------------------------------------------------
@@ -1028,6 +1040,7 @@ async function initialiseData() {
 }
 
 function populateFilters() {
+	activeBadgeFilters.clear(); // reset badge filters when the tune list changes
 	const rhythms = [
 		...new Set(
 			window.tunesData
@@ -1233,7 +1246,10 @@ function renderTable() {
 			: `<span class="tune-name" data-tune-index="${index}"${tooltip}>${tune.name}</span>`;
 
 		const metadata = getTuneMetadata(tune)
-			.map((m) => `<span class="badge">${m}</span>`)
+			.map(({ type, value }) => {
+				const isActive = activeBadgeFilters.get(type)?.has(value.toLowerCase());
+				return `<span class="badge${isActive ? " badge--active" : ""}" data-meta-type="${type}" data-meta-value="${value}">${value}</span>`;
+			})
 			.join(" ");
 
 		// .tune-contour and .tune-incipit are always present as empty placeholders;
@@ -1320,6 +1336,12 @@ function renderTable() {
 			menu.hidden = true;
 			deleteTune(index);
 		});
+		// Badge clicks toggle metadata filters
+		row.querySelector(".tune-meta").addEventListener("click", (e) => {
+			const badge = e.target.closest(".badge");
+			if (badge)
+				toggleBadgeFilter(badge.dataset.metaType, badge.dataset.metaValue);
+		});
 
 		tbody.appendChild(row);
 		observer.observe(row);
@@ -1342,8 +1364,22 @@ function applyFilters() {
 		(rhythmFilter === "" || tune.rhythm === rhythmFilter) &&
 		(keyFilter === "" || tune.key === keyFilter);
 
+	// AND across types, OR within the same type
+	const matchesBadgeFilters = (tune) => {
+		if (activeBadgeFilters.size === 0) return true;
+		const meta = getTuneMetadata(tune);
+		for (const [type, values] of activeBadgeFilters) {
+			if (
+				!meta.some((m) => m.type === type && values.has(m.value.toLowerCase()))
+			)
+				return false;
+		}
+		return true;
+	};
+
 	window.filteredData = window.tunesData.filter((tune) => {
 		if (!matchesDropdowns(tune)) return false;
+		if (!matchesBadgeFilters(tune)) return false;
 		if (searchTerm === "") return true;
 
 		// Search in tune name
@@ -1357,7 +1393,11 @@ function applyFilters() {
 			return true;
 
 		// Search in metadata (rhythm, parts, key, composer, origin, tags, structure)
-		if (getTuneMetadata(tune).some((m) => m.toLowerCase().includes(searchTerm)))
+		if (
+			getTuneMetadata(tune).some((m) =>
+				m.value.toLowerCase().includes(searchTerm)
+			)
+		)
 			return true;
 
 		// Search in references (artists and notes)

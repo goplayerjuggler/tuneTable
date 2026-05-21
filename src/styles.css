@@ -436,6 +436,16 @@ tbody tr:hover > td {
   font-weight: 600;
   vertical-align: middle;
   margin: 3px 1px;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.badge--active {
+  background: var(--badge-border);
+  color: var(--bg-container);
 }
 
 /* ============================================
