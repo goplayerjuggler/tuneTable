@@ -6,16 +6,11 @@ C:Bobby Casey
 R:reel
 L:1/16
 M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/263#setting263
-N:Setting entered in thesession by user “Zina Lee” on 2001-08-30
-N:(edited after importing)
-N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Ddorian
-|:DE|F2DE F2DE FEFG ECCE|F2DE FGAG FDEC A,D DE|
-F2DE FGAB cAGF EDCE|DEFG AddB cAGE EDD2:|
+|:DE|F2DE FGAG F2FG ECCE|F2DE FGAG F/E/DEC A,D DE|
+F2DE FGAB cAGF EDCE|DEFG AddB cAGE ED:|d2||
 d2 Ad dcAG F2DF ECC2|d3(d d)cAG ABcA d3e|
-fded cAAG EGcG EDCE|DEFG AddB cAGE EDD2:|`,
+fdec dcAB cAGF EDCE|DEFG AddB cAGE EDD2:|`,
 	theSessionId: 263,
 	norbeckId: 398,
 	references: [

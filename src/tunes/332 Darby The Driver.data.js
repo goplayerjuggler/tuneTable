@@ -1,5 +1,5 @@
 export default {
-	aka: ["Joe Burke’s", "Cronin’s Favourite"],
+	aka: ["Joe Burke's", "Cronin's Favourite"],
 	abc: `X:1
 T:Darby The Driver
 R:jig
@@ -18,7 +18,7 @@ eag e2d eaa bag|efg edB BAG A2:|`,
 	references: [
 		{
 			notes:
-				"Starts just like the Mist Covered Mountain, but is actually a different tune."
+				"Starts just like the [Mist Covered Mountain](theSessionId=256), but is actually a different tune."
 		},
 		{
 			artists: "Tulla Céilí band",
@@ -29,7 +29,7 @@ eag e2d eaa bag|efg edB BAG A2:|`,
 		{
 			artists: "Charlie Mulvihill, concertina",
 			url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=11",
-			notes: "Followed by the jig Hetty O’Hady."
+			notes: "Followed by the jig [Hetty O’Hady](theSessionId=15402)."
 		}
 	],
 	theSessionId: 1137
