@@ -761,13 +761,25 @@ function getTuneMetadata(tune) {
 
 // Toggle a badge filter on/off. Uses AND-logic between types, OR-logic within
 // the same type: clicking two tags shows tunes matching either tag.
-function toggleBadgeFilter(type, value) {
+// anchorTune / anchorOffset: restore the tune's vertical position after re-render.
+function toggleBadgeFilter(type, value, anchorTune, anchorOffset) {
 	const key = value.toLowerCase();
 	if (!activeBadgeFilters.has(type)) activeBadgeFilters.set(type, new Set());
 	const set = activeBadgeFilters.get(type);
 	set.has(key) ? set.delete(key) : set.add(key);
 	if (set.size === 0) activeBadgeFilters.delete(type);
+
 	applyFilters();
+
+	// After re-render, scroll so the anchor tune is back at the same viewport position.
+
+	const newIndex = window.filteredData.indexOf(anchorTune);
+	if (newIndex >= 0) {
+		const newRow =
+			document.getElementById("tunesTableBody")?.children[newIndex];
+		if (newRow)
+			window.scrollBy(0, newRow.getBoundingClientRect().top - anchorOffset);
+	}
 }
 
 // -- Cross-references ---------------------------------------------------------
@@ -1090,7 +1102,7 @@ function scrollToSetFirstTune(tunes) {
 	if (!tune) return;
 	document
 		.getElementById(`cr-t${tune._crId}`)
-		?.scrollIntoView({ behavior: "smooth", block: "center" });
+		?.scrollIntoView({ block: "center" });
 }
 
 function renderTable() {
@@ -1336,11 +1348,17 @@ function renderTable() {
 			menu.hidden = true;
 			deleteTune(index);
 		});
-		// Badge clicks toggle metadata filters
+		// Badge clicks toggle metadata filters; preserve the tune's viewport position
 		row.querySelector(".tune-meta").addEventListener("click", (e) => {
 			const badge = e.target.closest(".badge");
-			if (badge)
-				toggleBadgeFilter(badge.dataset.metaType, badge.dataset.metaValue);
+			if (!badge) return;
+			const anchorOffset = row.getBoundingClientRect().top;
+			toggleBadgeFilter(
+				badge.dataset.metaType,
+				badge.dataset.metaValue,
+				tune,
+				anchorOffset
+			);
 		});
 
 		tbody.appendChild(row);
