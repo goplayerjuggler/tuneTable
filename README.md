@@ -3,7 +3,7 @@
 ## TL;DR
 Why read this? Don’t – read the intro instead!  
 
-Instead of reading this, go and run the thing: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/). There’s a non-technical intro screen that displays automatically the first time, which may well be an easier/better read than this document. There is some overlap between the two documents. The intro can be opened again afterwards by clicking on a label (**__about “Tune table”__**) in the footer, and in the Edit menu.
+Instead of reading this, go and open the thing: [goplayerjuggler.github.io/tuneTable](https://goplayerjuggler.github.io/tuneTable/). There’s a non-technical intro screen that displays automatically the first time, which may well be an easier/better read than this document. There is some overlap between the two documents. The intro can be opened again afterwards by clicking on a label (**__about “Tune table”__**) in the footer, and in the Edit menu.
 
 The HTML code for the intro is [here](./src/modules/modals/IntroModal.html).
 
@@ -25,7 +25,7 @@ I built this for myself and the musicians I play with, to explore, organise and 
 * sort tunes based on the tune’s _contour_ w.r.t. to the tonic:
   * key and mode agnostic; also to some extent octave agnostic – more details [here](https://github.com/goplayerjuggler/abc-tools/blob/main/docs/contour_sort.md).
   * contours are displayed next to the tune’s title
-  * switch different types of multilevel sorting involving “contour” sorting, by successive clicks on the first column header of the main table.
+  * switch between different types of multi-level sorting involving “contour” sorting, by successive clicks on the first column header of the main table.
 * incipits are shown next to tune titles. They are extracted from a full score; optionally they can instead be given explicitly as part of the tune data.
 * a popup score viewer with transpose buttons, for tunes with one or more settings in ABC. Longer scores are paginated.
 * tunes may have additional information such as comments/notes; tags; and external links to recordings, websites like thesession.org, and other online resources.
@@ -33,7 +33,7 @@ I built this for myself and the musicians I play with, to explore, organise and 
 * import & export functions
   * lists of tunes in ABC format can be imported
   * tune lists can be exported/imported using a custom JavaScript format
-  * export data for one single tune, or one single set list
+  * copy data for one single tune, or one single set list
   * integration with thesession.org: load a member’s tune book or one specific tune; load a member’s sets
 * a set list creation and management feature that allows users to select tunes from the main table and arrange them into ordered sets for sessions, or gigs, or classes, or other events. With some customisable Print functionality too. 
 * bar length switcher: toggle between standard bar lengths, and bars that are twice as long, which I often prefer. For the moment this feature is limited to reels, jigs, polkas, hornpipes, and barndances. For reels, it also converts quavers to semiquavers.
