@@ -2,7 +2,7 @@ export default {
 	incipit: `X:1
 T:The Butterfly
 C:Tommy Potts
-R:slip jig
+R:hop jig
 L:1/8
 M:9/8
 K:Eminor
