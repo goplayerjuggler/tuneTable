@@ -400,26 +400,26 @@ export async function buildTuneLists({
 
   // Composer-based lists
   if (isDevelopment) {
-  for (const { id, label, match } of COMPOSER_EXTRACTS) {
-    const tunes = tunesFromDataJsFiles.filter(
-      (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
-    );
-    if (tunes.length === 0) continue;
-    const fileName = `composer-${id}.json`;
-    if (await writeList(fileName, tunes)) {
-      generatedLists.push({
-        id: `composer-${id}`,
-        name: label,
-        file: fileName,
-        lastUpdate: listLastUpdate(tunes, []),
-        count: tunes.length,
-        description: `Tunes by ${label}` + subsetComment,
-        category: "composers"
-      });
-      console.log(`✓ ${fileName} (${tunes.length} tunes)`);
+    for (const { id, label, match } of COMPOSER_EXTRACTS) {
+      const tunes = tunesFromDataJsFiles.filter(
+        (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
+      );
+      if (tunes.length === 0) continue;
+      const fileName = `composer-${id}.json`;
+      if (await writeList(fileName, tunes)) {
+        generatedLists.push({
+          id: `composer-${id}`,
+          name: label,
+          file: fileName,
+          lastUpdate: listLastUpdate(tunes, []),
+          count: tunes.length,
+          description: `Tunes by ${label}` + subsetComment,
+          category: "composers"
+        });
+        console.log(`✓ ${fileName} (${tunes.length} tunes)`);
+      }
     }
   }
-  // }
 
   // ABC file lists
   const abcFileNames = (await fs.readdir(SOURCE_DIR)).filter((f) =>
@@ -475,7 +475,6 @@ export async function buildTuneLists({
     `✓ manifest.json\n\nTune list build complete! (${generatedLists.length} lists)`
   );
 }
-
 // ─── CLI entry point ──────────────────────────────────────────────────────────
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
