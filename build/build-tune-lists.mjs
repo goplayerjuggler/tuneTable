@@ -20,17 +20,17 @@ const subsetComment = ` – extracted from ${defaultListName}`;
 
 /** Composer-based list definitions. */
 const COMPOSER_EXTRACTS = [
-  {
-    id: "paddy-fahey",
-    label: "Paddy Fahey",
-    match: (c) => /paddy\s+fahey/i.test(c)
-  },
-  { id: "ed-reavy", label: "Ed Reavy", match: (c) => /ed\s+reavy/i.test(c) },
-  {
-    id: "tommy-peoples",
-    label: "Tommy Peoples",
-    match: (c) => /tommy\s+peoples/i.test(c)
-  },
+  // {
+  //   id: "paddy-fahey",
+  //   label: "Paddy Fahey",
+  //   match: (c) => /paddy\s+fahey/i.test(c)
+  // },
+  // { id: "ed-reavy", label: "Ed Reavy", match: (c) => /ed\s+reavy/i.test(c) },
+  // {
+  //   id: "tommy-peoples",
+  //   label: "Tommy Peoples",
+  //   match: (c) => /tommy\s+peoples/i.test(c)
+  // },
   {
     id: "go-player",
     label: "GoPlayer",
@@ -399,7 +399,7 @@ export async function buildTuneLists({
   }
 
   // Composer-based lists
-  // if (isDevelopment) {
+  if (isDevelopment) {
   for (const { id, label, match } of COMPOSER_EXTRACTS) {
     const tunes = tunesFromDataJsFiles.filter(
       (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
