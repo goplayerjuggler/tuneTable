@@ -4,10 +4,14 @@ import {
 	normaliseKey,
 	sort as sortTunesArray,
 	contourToSvg,
-	sortConstants
+	sortConstants,
+	canDoubleBarLength,
+	canHalveBarLength,
+	convertStandardTune,
+	convertToStandardTune
 } from "@goplayerjuggler/abc-tools";
 
-import { processTuneData } from "./processTuneData.js";
+import { processTuneData, reprocessTune } from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
 import AbcModal from "./modules/modals/AbcModal.js";
@@ -650,6 +654,54 @@ function copyTunesToClipboard() {
 		window.tunesData,
 		document.getElementById("copyTunesBtn")
 	);
+}
+/**
+ * Apply a bar-length conversion to all eligible tunes in tunesData.
+ * Mirrors the per-tune changeBarLength / save logic in AbcModal.
+ * @param {1|-1} direction  1 = double, -1 = halve
+ */
+async function bulkChangeBarLength(direction) {
+	const checkFn = direction === 1 ? canDoubleBarLength : canHalveBarLength;
+	const convertFn =
+		direction === 1 ? convertStandardTune : convertToStandardTune;
+	const toArray = (abc) => (Array.isArray(abc) ? abc : [abc]);
+
+	const indices = window.tunesData.reduce((acc, tune, idx) => {
+		if (tune.abc && toArray(tune.abc).some(checkFn)) acc.push(idx);
+		return acc;
+	}, []);
+
+	if (!indices.length) {
+		alert("No tunes are eligible for this conversion.");
+		return;
+	}
+	if (
+		!confirm(
+			`Apply bar-length conversion to ${indices.length} tune${indices.length !== 1 ? "s" : ""}?`
+		)
+	)
+		return;
+
+	for (const idx of indices) {
+		const tune = window.tunesData[idx];
+		const isArray = Array.isArray(tune.abc);
+		try {
+			const newAbc = toArray(tune.abc).map((abc) =>
+				checkFn(abc) ? (convertFn(abc) ?? abc) : abc
+			);
+			tune.abc = isArray ? newAbc : newAbc[0];
+			// Regenerate incipit; preserve contour (bar-length changes don't affect melodic contour)
+			window.tunesData[idx] = reprocessTune(tune, { removeContour: false });
+		} catch (error) {
+			console.log(
+				`error: ${error} / tune: ${JSON.stringify({ name: tune.name, theSessionId: tune.theSessionId, abc: tune.abc, incipit: tune.incipit })}`
+			);
+		}
+	}
+
+	await saveTunesToStorage();
+	populateFilters();
+	applyFilters(); // → renderTable() → lazy observer regenerates on-screen incipits first
 }
 
 /**
@@ -1538,6 +1590,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 	dropdownAction("emptyTunesBtn", () => emptyTunes());
 	dropdownAction("manageSlotsBtn", () => openTuneListSelector());
 	dropdownAction("tuneListSelectorBtn", () => openTuneListSelector());
+	dropdownAction("doubleBtn2", () => bulkChangeBarLength(1));
+	dropdownAction("halveBtn2", () => bulkChangeBarLength(-1));
 
 	// thesession import: openTheSessionImport needs the original event and dropdown ref
 	document
@@ -1558,6 +1612,23 @@ document.addEventListener("DOMContentLoaded", async function () {
 		// Keep enabled state in sync when the dropdown opens
 		editMenuBtn.addEventListener("click", () => {
 			tuneSelectionsBtn.disabled = !tuneSelectionsModal.isEnabled();
+			const toArray = (abc) => (Array.isArray(abc) ? abc : [abc]);
+			document
+				.getElementById("doubleBtn2")
+				?.toggleAttribute(
+					"disabled",
+					!window.tunesData?.some(
+						(t) => t.abc && toArray(t.abc).some(canDoubleBarLength)
+					)
+				);
+			document
+				.getElementById("halveBtn2")
+				?.toggleAttribute(
+					"disabled",
+					!window.tunesData?.some(
+						(t) => t.abc && toArray(t.abc).some(canHalveBarLength)
+					)
+				);
 		});
 	}
 
