@@ -11,6 +11,7 @@ import {
 	convertToStandardTune
 } from "@goplayerjuggler/abc-tools";
 
+import manifest from "./generated/tune-lists-manifest.json";
 import { processTuneData, reprocessTune } from "./processTuneData.js";
 // import theSessionImport from "./thesession-import.js";
 import AbcJs from "abcjs";
@@ -377,9 +378,7 @@ async function saveSetListsToStorage(setLists) {
 async function fetchManifest() {
 	if (_manifestCache) return _manifestCache;
 	try {
-		const res = await fetch("./tune-lists/manifest.json");
-		if (!res.ok) return null;
-		_manifestCache = await res.json();
+		_manifestCache = manifest;
 		const params = new URLSearchParams(window.location.search);
 		//pwd protect the "su" (Steam Up!) server list
 		//not really sensitive data, but prefer not to show this info to casual users

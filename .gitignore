@@ -12,4 +12,4 @@ mytunebook*.js
 node_modules/
 dist/
 # compiled
-src/tunes.compiled.js
+src/generated/

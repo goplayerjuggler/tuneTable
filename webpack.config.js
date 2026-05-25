@@ -61,7 +61,11 @@ class ConcatenateTunesPlugin {
 					// template change (same input-hash guard as concatenation above)
 					await buildTuneLists({
 						isDevelopment: this.isDevelopment,
-						outputDir: path.join(compiler.outputPath, "tune-lists")
+						outputDir: path.join(compiler.outputPath, "tune-lists"),
+						manifestPath: path.resolve(
+							__dirname,
+							"src/generated/tune-lists-manifest.json"
+						)
 					});
 
 					// Only update hash after both steps succeed
@@ -185,16 +189,16 @@ export default (env, argv) => {
 			watchFiles: {
 				paths: [path.resolve(__dirname, "src/**/*")],
 				options: {
-					ignored: [
-						"**/node_modules/**",
-						"**/dist/**",
-						"**/src/tunes.compiled.js"
-					]
+					ignored: ["**/node_modules/**", "**/dist/**", "**/src/generated/**"]
 				}
 			}
 		},
 		watchOptions: {
-			ignored: ["**/node_modules/**", "**/src/tunes.compiled.js"]
+			ignored: [
+				"**/node_modules/**",
+				"**/src/tunes.compiled.js",
+				"**/src/generated/**"
+			]
 		},
 		optimization: {
 			minimizer: [

@@ -1,4 +1,5 @@
 // build/build-tune-lists.mjs
+import { createHash } from "crypto";
 import process from "process";
 import fs from "fs/promises";
 import path from "path";
@@ -231,12 +232,13 @@ const listLastUpdate = (tunes, setLists) =>
  * In production mode (`isDevelopment: false`) any tune flagged isPrivate never reaches
  * GitHub Pages.
  *
- * @param {{ isDevelopment?: boolean, outputDir?: string }} [options]
+ * @param {{ isDevelopment?: boolean, outputDir?: string, manifestPath?: string }} [options]
  * @returns {Promise<void>}
  */
 export async function buildTuneLists({
   isDevelopment = false,
-  outputDir = DEFAULT_OUT_DIR
+  outputDir = DEFAULT_OUT_DIR,
+  manifestPath = null
 } = {}) {
   console.log("Building tune lists from source files...");
 
@@ -281,22 +283,24 @@ export async function buildTuneLists({
 
   const generatedLists = [];
 
+  const writtenFiles = new Set();
+
   /**
    * Write a list JSON file, unless it is excluded from publication.
-   * @returns {Promise<boolean>} `true` if the file was written.
-   */
-  const writeList = async (fileName, tunes, setLists = []) => {
+   * Serialises, hashes content, writes `${baseId}.${hash}.json`; returns hashed filename. */
+  const writeList = async (baseId, tunes, setLists = []) => {
     const data = {
       tunes: tunes
         .filter((t) => isDevelopment || !t.isPrivate)
         .map(sanitizeTune),
       setLists: setLists.map(sanitizeSetList)
     };
-    await fs.writeFile(
-      path.join(outputDir, fileName),
-      JSON.stringify(data, null, 2)
-    );
-    return true;
+    const json = JSON.stringify(data, null, 2);
+    const hash = createHash("md5").update(json).digest("hex").slice(0, 10);
+    const fileName = `${baseId}.${hash}.json`;
+    await fs.writeFile(path.join(outputDir, fileName), json);
+    writtenFiles.add(fileName);
+    return fileName;
   };
 
   /** Set lists associated with a given group name. */
@@ -313,11 +317,16 @@ export async function buildTuneLists({
     (t) => !t.excludeFromDefault
   );
   const defaultSetLists = setListsFor("default");
-  await writeList("default.json", defaultTunes, defaultSetLists);
+  const defaultFileName = await writeList(
+    "default",
+    defaultTunes,
+    defaultSetLists
+  );
+
   generatedLists.push({
     id: "default",
     name: defaultListName,
-    file: "default.json",
+    file: defaultFileName,
     lastUpdate: listLastUpdate(defaultTunes, defaultSetLists),
     count: defaultTunes.length,
     setListCount: defaultSetLists.length,
@@ -343,10 +352,10 @@ export async function buildTuneLists({
   for (const [group, tunes] of [...groupMap.entries()].sort((a, b) =>
     a[0].localeCompare(b[0])
   )) {
-    const fileName = `group-${group}.json`;
     let description = "";
     const setLists = setListsFor(group);
-    if (await writeList(fileName, tunes, setLists)) {
+    const fileName = await writeList(`group-${group}`, tunes, setLists);
+    if (fileName) {
       switch (group) {
         case "su":
           description = "Steam Up! tunes" + subsetComment;
@@ -382,8 +391,8 @@ export async function buildTuneLists({
       (t) => t.metadataFromAbc?.origin && match(t.metadataFromAbc?.origin)
     );
     if (tunes.length === 0) continue;
-    const fileName = `origin-${id}.json`;
-    if (await writeList(fileName, tunes)) {
+    const fileName = await writeList(`origin-${id}`, tunes);
+    if (fileName) {
       generatedLists.push({
         id: `origin-${id}`,
         name: label,
@@ -405,8 +414,8 @@ export async function buildTuneLists({
         (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
       );
       if (tunes.length === 0) continue;
-      const fileName = `composer-${id}.json`;
-      if (await writeList(fileName, tunes)) {
+      const fileName = await writeList(`composer-${id}`, tunes);
+      if (fileName) {
         generatedLists.push({
           id: `composer-${id}`,
           name: label,
@@ -440,8 +449,8 @@ export async function buildTuneLists({
       .map((abc) => ({ abc }));
     if (abcTunes.length === 0) continue;
     const id = `abc-${stem}`;
-    const fileName = `${id}.json`;
-    if (await writeList(fileName, abcTunes)) {
+    const fileName = await writeList(id, abcTunes);
+    if (fileName) {
       generatedLists.push({
         id,
         name,
@@ -461,19 +470,35 @@ export async function buildTuneLists({
   });
 
   // Manifest
+  // Prune stale hashed files left by a previous build
+  for (const existing of await fs.readdir(outputDir)) {
+    if (existing.endsWith(".json") && !writtenFiles.has(existing)) {
+      await fs.rm(path.join(outputDir, existing));
+      console.log(`  removed stale: ${existing}`);
+    }
+  }
+
   const manifest = {
     version: "1.0",
     generated: new Date().toISOString(),
     lists: generatedLists,
     externalSources: []
   };
-  await fs.writeFile(
-    path.join(outputDir, "manifest.json"),
-    JSON.stringify(manifest, null, 2)
-  );
-  console.log(
-    `✓ manifest.json\n\nTune list build complete! (${generatedLists.length} lists)`
-  );
+  const manifestJson = JSON.stringify(manifest, null, 2);
+
+  // Always write to dist/tune-lists/ (useful for CLI inspection)
+  await fs.writeFile(path.join(outputDir, "manifest.json"), manifestJson);
+  console.log(`✓ manifest.json`);
+
+  // Write to src/generated/ for static import into the bundle.
+  // This path is in watchOptions.ignored so it never triggers recompilation.
+  if (manifestPath) {
+    await fs.mkdir(path.dirname(manifestPath), { recursive: true });
+    await fs.writeFile(manifestPath, manifestJson);
+    console.log(`✓ ${path.basename(manifestPath)} (bundle import)`);
+  }
+
+  console.log(`\nTune list build complete! (${generatedLists.length} lists)`);
 }
 // ─── CLI entry point ──────────────────────────────────────────────────────────
 
