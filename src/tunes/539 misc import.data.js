@@ -1,4 +1,4 @@
-[
+export default [
 	{
 		abc: `X:1
 T:Denis Murphy's Quirky Fling
@@ -12,7 +12,7 @@ N:from https://thesession.org/tunes/13359#setting23423
 N:Setting entered in thesession by user “SebastianM” on 2014-02-06
 N:*abc-tools: convert to M:4/2*
 N:(todo: not yet revised)
-KAmajor
+K:Amajor
 cB|AFEF ABcA BAcA BAcB|AFEF ABcd (3efe (3dcB ABcB|
 AFEF ABcA BAcA BAcB|AFEF ABcd (3efe (3dcB A4||
 eac'a eac'a eac'a babc'|eac'a eac'a babc' a4|
@@ -31,7 +31,7 @@ N:from https://thesession.org/tunes/66#setting66
 N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 |F2 EG FDDG FDAG FDDE|F2 EG FDDG FABc dBAG|
 F2 EG FDDG FDAG FDDE|F2 EG FDDG FABc d2 cd|
 e4 efed cdef g2 fg|a2e2 efed cABc d2 cd|
@@ -51,7 +51,7 @@ N:from https://thesession.org/tunes/5951#setting17849
 N:Setting entered in thesession by user “Dr. Dow” on 2012-08-11
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 ge|dBAB ~G3E DG~G2 DGBc|dBAB ~G3A Beed eage|
 dBAB ~G3E DG~G2 DGBc|dBAB ~G3A Beed e2ge||
 dB~B2 dBge dB~B2 ~d3e|dB~B2 gfgd egdB A2Bc|
@@ -71,7 +71,7 @@ N:from https://thesession.org/tunes/4312#setting37286
 N:Setting entered in thesession by user “Damien Rogeau” on 2020-02-16
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KAdorian
+K:Adorian
 |:eAAG AAeA A2fg edBA|G3B dGBA GABg bgag|
 eAAG AAeA A2fg edBA|G2 (3ABd gbag egdB A2(3Bcd:|
 |:eaag a2ag eaag bgag|edd2 ^cdef g2ba gedg|
@@ -92,7 +92,7 @@ N:from https://thesession.org/tunes/1200#setting14487
 N:Setting entered in thesession by user “ceolachan” on 2005-11-20
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 |:A>FD DFA d>ed cBA|BGE EF/G/A B2 A Bcd|
 AFD DFA ded cBA|BB/c/d ecA ded:|
 f2 d dcd faa afd|cAA eAA cAc ee/f/g|
@@ -114,7 +114,7 @@ N:from https://thesession.org/tunes/2708#setting52257
 N:Setting entered in thesession by user “Jeremy” on 2024-11-02
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 |:ge|dBB2 GEDE GBB2 dBGB|A3B AGED EGAB c2Bc|
 dBB2 GEDE GBB2 dBGA|B2BA BddB AGAB G2:|
 |:ga|bggg bggg afff afff|bggg bgag eaag a2ga|
@@ -133,7 +133,7 @@ N:from https://thesession.org/tunes/816#setting30530
 N:Setting entered in thesession by user “JACKB” on 2017-06-19
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KDmixolydian
+K:Dmixolydian
 |:d3 AFA AGE EDD|Add A3 AGE DF/G/A|
 d3 AFA AGE EDD|E3 cAG[1 BGE DFA:|2 BGE D2B||
 |:c3 dB/c/d edc BAG|Bc/d/B c2A BGE GAB|
@@ -155,7 +155,7 @@ N:from https://thesession.org/tunes/999#setting14210
 N:Setting entered in thesession by user “ceolachan” on 2006-06-16
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KAdorian
+K:Adorian
 |:~e2 dB ~A3 G EAAG ~A2 Bd|~e2 dB ~A3 G EGGF ~G2:|
 ~e3 d edBd eaag ea ~a2|~e3 d edBd (3Bcd ef g2:|`,
 		theSessionId: 999,
@@ -173,7 +173,7 @@ N:from https://thesession.org/tunes/58#setting12499
 N:Setting entered in thesession by user “Dr. Dow” on 2012-04-13
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KEdorian
+K:Edorian
 EB,~B,2 EGFE DA,~A,2 DEFD|GEED EFGA B2ec dBAF|
 EB,~B,2 EGFE DA,~A,2 DEFD|E2BE dEBE DEFA BFAF|
 EB,~B,2 EGFE DA,~A,2 DEFD|GEED EFGA B2ec dBAF|
@@ -197,7 +197,7 @@ N:from https://thesession.org/tunes/1341#setting1341
 N:Setting entered in thesession by user “Dr. Dow” on 2003-01-16
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KAdorian
+K:Adorian
 ~A3G ABcA GE~E2 GED2|EAAG ABcd edgd (3ABc dB|
 AG~G2 AG~G2 GEDE GED2|A2AG ABcd eBdB BAdB|
 ~A3B c3A GE~E2 GED2|EAAG ABcd edgd (3ABc dB|
@@ -218,7 +218,7 @@ N:from https://thesession.org/tunes/771#setting24743
 N:Setting entered in thesession by user “JACKB” on 2014-08-18
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 |:DED F2A dfe d2A|B/c/dB Adf afd e2f|
 DED F2A dfe d2A|B/c/dB AFA dAF E2D:|
 |:dfa afa bge edB|dfa afa bge efe|
@@ -237,7 +237,7 @@ N:from https://thesession.org/tunes/1237#setting25099
 N:Setting entered in thesession by user “JACKB” on 2014-11-06
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KDmixolydian
+K:Dmixolydian
 |:ded c3 ded c3|ded cde dcA GED|
 ded c3 ded cAG|A3 ABc[1 dcA GAc:|2 dcA GED||
 |:dcA AGE A3 ABc|dcA ABc dcA GED|
@@ -262,7 +262,7 @@ N:from https://thesession.org/tunes/112#setting12698
 N:Setting entered in thesession by user “ceolachan” on 2011-10-19
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KBminor
+K:Bminor
 |:BdfB d3 f e3 d cdec|BdfB d3 f[1 edcd B4:|2 edcd B2 BA:|
 |:BdfB g3 e f3 a fefd|BdfB g3 e[1 fedf e4:|2 fedf e2 a2:|
 |:cdfc dfdc BcdB cdcB|AceA ceAe[1 edcd B4:|2 edcd B2 BA:|`
@@ -282,7 +282,7 @@ N:from https://thesession.org/tunes/2064#setting15462
 N:Setting entered in thesession by user “ceolachan” on 2012-02-26
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 d>c |B>G (3GGG D>G (3GGG B>d (3def g>ed<c | B>G G2 D>G G2 B<ed>B (3ABA (3edc |
 B>G (3GGG D>G (3GGG (3Bcd e>f g2 g>a | b>ga>f g2 (3fed e>gd<B A2 ||
 (3Bcd |e2 e>f e>dB<A (3Bcd e>f g>ed<c | B>G (3GGG D>G (3GGG B<ed>B A2 B>d |
@@ -302,7 +302,7 @@ N:from https://thesession.org/tunes/1299#setting25317
 N:Setting entered in thesession by user “JACKB” on 2014-12-08
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KAminor
+K:Aminor
 |:e2AB cedc BGBd gdBd|e2AB cedc BcdB cA A2|
 e2AB cedc BGBd gdBG|ABcA Bcdf edcB cA A2:|
 |:e2ag egdc BGBd gdBd|e2ag egdc BcdB cA A2|
@@ -323,7 +323,7 @@ N:from https://thesession.org/tunes/438#setting13299
 N:Setting entered in thesession by user “Dr. Dow” on 2006-04-30
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 |:DFAF BFAF DFAF E2FE|D2FA BAFA[1 (3Bcd ec dBAF:|2 (3Bcd ec d3A||
 d2fd Adfd Adfd BABc|d2fd Adfb afea fddA|
 d2fd Adfd Adfd ~e3f|gfec dcBA (3Bcd ec dBAF||`
@@ -343,7 +343,7 @@ N:from https://thesession.org/tunes/1722#setting15148
 N:Setting entered in thesession by user “ceolachan” on 2009-04-17
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 GBdg egdB GBdB egdg|eAcA eAcA Bdef gedB|
 GBdg egdB GBdB egdg|cdef gedc BcAF G2 Bc||
 d2 gg B2 gg dgbg egdg|eAcA eAcA Bdef gedB|
@@ -365,7 +365,7 @@ N:from https://thesession.org/tunes/648#setting13678
 N:Setting entered in thesession by user “Dr. Dow” on 2007-02-21
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 |:G,2B,D GBdB cafd cAFA|G2BG DGBG AF~F2 dFAF|
 G2BG DGB,G Aafd ^cdef|~g3d ~c3A[1 FGAc BGDB,:|2 FGAF G2Bd||
 |:~g3d ^cdBG DGBd =cAFA|GBBA BcdB cafd ^cdef|
@@ -386,7 +386,7 @@ N:from https://thesession.org/tunes/150#setting26266
 N:Setting entered in thesession by user “JACKB” on 2015-04-07
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 |:G2 BD GBdB c2 ag fgdc|BG3 BcdB cBAG FDcA|
 G2 BD GBdB c2 ag fgdc|BG3 BcdB[1 cAFA G2 BA:|2 cAFA G2 Bc||
 |:dgfa gdBG FGAB c2 Bc|dffg a3g fdAd BdAd|
@@ -405,7 +405,7 @@ N:from https://thesession.org/tunes/3291#setting29773
 N:Setting entered in thesession by user “ceolachan” on 2017-02-07
 N:*abc-tools: convert to M:4/2*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 |:b>a|g>ed>B c>Ad>c B2 G2 G2 g>a|b>ag>f g>ba>g f2 d2 d2 d>B|
 c>eg>c' B>dg>b A>ce>a G>Bd>g|f>ga>b c'>af>d g2 g2 g2:|
 |:d>c|B>gd>g B>gd>g b>ag>f e>dc>B|c>ae>a c>ae>a c'>ba>g (3fgf (3edc|
@@ -429,7 +429,7 @@ N:from https://thesession.org/tunes/2243#setting28125
 N:Setting entered in thesession by user “David Levine” on 2016-01-25
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 D|:GFGB dBGB eBdB cBAF|D3E FGAB cAed cAFA|
 Bggf gdBd eBdB cBAc|Bg (3gfg bgag fdcA BGG2:|
 |:Bdge dB (3BBB cBAG FADF|GABG Aaag (3efg ag fdcA|
@@ -449,7 +449,7 @@ N:from https://thesession.org/tunes/2232#setting15603
 N:Setting entered in thesession by user “ceolachan” on 2007-02-14
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 |:dD (3DDD ADFA gfed cded|BE (3EEE gfed cdec Agfe|
 dDFA BcdB gfed cdeg|fgaf gfed ceag fd d2:|
 |:afdf afba gece gfga|fdAd fgaf gece abga|
@@ -467,7 +467,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/5318#setting5318
 N:Setting entered in thesession by user “Nigel Gatherer” on 2005-12-17
 N:(todo: not yet revised)
-KAmixolydian
+K:Amixolydian
 |:c/d/|e>f ec|A>B Aa/g/|fe/c/ e/f/a/e/|cB Bc/d/|
  e>f ec|A>B Aa/g/|fe/c/ e/f/a/e/|cA A:|
  |:a|fe/c/ e/f/a/e/|f/a/e/c/ Ba|fe/c/ e/f/a/e/|fB Ba|
@@ -490,7 +490,7 @@ N:from https://thesession.org/tunes/2332#setting27641
 N:Setting entered in thesession by user “ceolachan” on 2015-11-12
 N:*abc-tools: convert to M:4/2*
 N:(todo: not yet revised)
-KAmajor
+K:Amajor
 |:E/|(3ABc E>F A>ce>c (3def B>c d>e f2|f>ec>e a>ec>A (3Bcd c>A B>A F2|
 (3ABc E>F A>c e2 (3def B>c d>e f2|f>ec>e a>ec>A[1 (3Bcd c>B A2- A3/2:|2 (3Bcd c>B A4||
 |:a>ec>e f>ec>e a>ec>e f>ec>B|A>ec>e f>ec>A (3Bcd c>A B>A F2|
@@ -509,7 +509,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/13158#setting46519
 N:Setting entered in thesession by user “JACKB” on 2023-03-23
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 DB|:A2 D2 DE|F3E ED|A3F ED|BF d3B|A3B BA|
  F3E ED|ED EF ED|B2 de dB|A2 D2DE|F3E ED|A3F ED|
  B2d2dB|A2D3E|F3E ED|D3E DE-|1 D3 E DB:|2 D3E FA||
@@ -529,7 +529,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/1064#setting1064
 N:Setting entered in thesession by user “slainte” on 2002-10-21
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 |:FAB FAB AFD|FAB FAB d2A|FAB FAB AFD|FAd edc B2A:|
  ~f3 efe d2e|~f3 efg a2g|~f3 efe dBA|AFA dfa b2a|
  ~f3 efe d2e|~f3 def gfg|afd gfe dBA|BAF DFA B2A||`,
@@ -547,7 +547,7 @@ N:from https://thesession.org/tunes/299#setting13054
 N:Setting entered in thesession by user “Dr. Dow” on 2004-06-11
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KBdorian
+K:Bdorian
 |:fBB aBB fec cBc|ABA cAc efg ~a3|
 fBB aBB fec cBc|Ace ~a3[1 fec Bce:|2 fec B2A||
 |:Bbb baf abb baf|~a3 aec Ace ~a3|
@@ -565,7 +565,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/4176#setting16936
 N:Setting entered in thesession by user “ceolachan” on 2005-01-30
 N:(todo: not yet revised)
-KAmixolydian
+K:Amixolydian
 |:E2 A ABA G2 A Bcd|e2 A ABA G2 A F2 G|
  E2 A ABA G2 A Bcd|efe dcB A3 A3:|
  |:e3 efe d3 c2 d|e2 A ABA G2 A F2 G|
@@ -584,7 +584,7 @@ N:from https://thesession.org/tunes/395#setting40882
 N:Setting entered in thesession by user “JACKB” on 2021-03-27
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 gfed cA A2 cAdA cA A2|gfed cA A2 fage d2ef|
 gfed cA A2 cAdA cA A2|gfed cA A2 fage dABc||
 df f2 af f2 dfaf gece|df f2 af f2 g3e cABc|
@@ -607,7 +607,7 @@ N:from https://thesession.org/tunes/1608#setting15020
 N:Setting entered in thesession by user “DubChieftain” on 2007-05-19
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 |BEBA BEge dBge dBGA|BEBA BEge dBAc BGGA|
 BEBA BEge dBge dBGA|BEBA BEge dBAc BGef||
 gfed eB{c}Bd gfed eBef|gfed efge afge dfgf|
@@ -631,7 +631,7 @@ N:from https://thesession.org/tunes/13036#setting22413
 N:Setting entered in thesession by user “sebastian the m3g4p0p” on 2013-10-04
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 |:D|DGA B2d cAG FGA|BdB AFD GBG AFD|
 DGA Bcd cAG FGA|(B/c/d)B AFD DGG G2:|
 B/c/|ded dcB cdc cBc|ded fef dgg g2a|
@@ -653,7 +653,7 @@ N:from https://thesession.org/tunes/613#setting50196
 N:Setting entered in thesession by user “ceili” on 2024-04-15
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
-KGmajor
+K:Gmajor
 B|:"C"AGEG "G"DG,B,D BAGA BedB|"Am"AGEC "G"B,DA,C "D7"B,A, A,/A,/A, "Em"B,EED|
 E2 EF "G"GEDB, "D7"D2 B,E "G"DG,B,D|"Em"E3G "D"DEGA[1 "G"BdAB G3 B:|2 "G"BdAB G2 Bc||
 |:"G"dG G/G/G "C"EGDC "G"B,G,B,D GABd|"C"ec c/c/c "Am"AcGE "D7"DEFA fed^c|
@@ -678,7 +678,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/17592#setting49595
 N:Setting entered in thesession by user “Mike Bennett” on 2024-02-09
 N:(todo: not yet revised)
-KDmajor
+K:Dmajor
 M: 2/4
  "Asus4"zA de|:"D" f3 f<f/|"G" g>f ga|"D" (f2d)>e|f/e/d|
  "G"B3d|1 "A"cd e>d|"D" (f4|f)"Asus4" Ade:|2 "A"cd e>A|"D"(d4|d)"D/F#" fdc||
@@ -703,7 +703,7 @@ N:from https://thesession.org/tunes/1114#setting14373
 N:Setting entered in thesession by user “slainte” on 2005-12-04
 N:*abc-tools: convert to M:4/2*
 N:(todo: not yet revised)
-KAdorian
+K:Adorian
 |:B/|A2A>B c>BA>e A2A>c B>AG>B|A2A>B c>de>c B>dg>e d/c/B/A/ G3/2:|
 d/|^c<eA>e c<e d/B/A c<eA>e d/c/B/A/ G>d|^c<eA>e c<ee>f g>ag>e d/=c/B/A/ G3/2:|`,
 		theSessionId: 1114,
@@ -720,7 +720,7 @@ N:from https://thesession.org/tunes/4844#setting38997
 N:Setting entered in thesession by user “JACKB” on 2020-09-13
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KAdorian
+K:Adorian
 |:e3 edB dBA A2B|G3 GBd edB AB/c/d|
 e3 efg aea e2f|g3 dB/c/d[1 ecA A2d:|2 ecA Ae/f/g||
 |:a3 efg aea e2f|g3 gfe dBA AB/c/d|
@@ -768,7 +768,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/1292#setting36057
 N:Setting entered in thesession by user “ceolachan” on 2019-09-24
 N:(todo: not yet revised)
-KAmajor
+K:Amajor
 M:6/8
  |:A|c>BA fec|e3 e2 A|c>BA fec|B3- B2 A|
  c>BA fec|e2 A a2 f|eAc B2 A|A3- A2:|
@@ -802,7 +802,7 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/23166#setting47206
 N:Setting entered in thesession by user “GoPlayer” on 2023-05-19
 N:(todo: not yet revised)
-KDminor
+K:Dminor
 |:D2 E | F2F FDF GAG GFG|ABA AGF G2D D2 C|
  F2F FDF GAG GFG | ABA AGF G2D :|
  |: D2e| f2f e/f/ge ~f2d d2e|f2f dgf ~e2c cde|

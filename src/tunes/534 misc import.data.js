@@ -736,34 +736,21 @@ d2fd Adfd g2fg edBc|dBBA Bcde[1 f2gf edBc:|2 f2gf edAF||`,
 	},
 
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-05-25",
 		abc: `X:1
 T:The Flower Of The Flock
 R:reel
 L:1/16
 M:4/4
-N:I wish I could remember where I learned this tune. Might've been off a tape of
-N:Frankie Gavin. I've heard an Eileen Ivers' version and it went fast and driving:
-N:|DEGA B3 B|cABG A ~E3| etc. The way I first heard it, this was a swingy,
-N:not-too-fast Clare sort of tune, with lots of time for variations and rolls
-N:sprinkled around. That opening phrase can go a zillion ways:
-N:|DEGA B (3BBB|cABG AGEG| |DEGA BGGB|c2 Bc AGEG| |DEGA BDGB|(3cdc BG A~E3 |DEGA
-N:BGBd|(3cBA BG ABGE| you get the idea. The rest of the tune is almost as mutable.
-N:The first bars of the B Part could go:
-N:|gdeg (3ded Bd| then add any second bar from above | |g2 (3efg dcBd| ditto | and
-N:so on.
-N:This is a fairly common session tune, and it's an easy G major tune to fall into
-N:from all those D reels out there, starting on that open D.
-N:---
-N:Imported into *tuneTable* on 2026-05-18,
-N:from https://thesession.org/tunes/585#setting13579
+N:Imported into *tuneTable* on 2026-05-25,
+N:from https://thesession.org/tunes/585#setting585
 N:Setting entered in thesession by user “Will Harmon” on 2002-03-12
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Gmajor
-DEGA B (3BBB|cABG AGEG DEGA BGGB|c2 Bc AGEG 
-DEGA BDGB|(3cdc BG A~E3DEGA BGBd (3cBA BG ABGE|`,
+|:DEGA BG (3GGG cABG AGEG|DEGA B2ge[1 dBAc BGGE:|2 dBAc BGGe||
+~g3e dcBd cABG AGEG|~g3e d2eg a2ab agef|
+~g3e dcBd cABG AGEG|DEGA Bdge dBAc BGGE||`,
 		theSessionId: 585,
-		theSessionSettingId: 13579
+		theSessionSettingId: 585
 	}
 ];

@@ -2,6 +2,7 @@ export default {
 	tags: "crooked",
 	abc: `X:1
 T: La Cardeuse
+R:reel
 O:Québec
 S:Pascal Gemme
 M:4/4
