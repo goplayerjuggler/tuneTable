@@ -86,9 +86,9 @@ export default class AbcModal extends Modal {
               💾 Save
             </button>
             <button id="doubleBtn" class="transpose-btn"
-              aria-label="Double bar length">2×bar</button>
+              aria-label="Double bar length">2 × bar</button>
             <button id="halveBtn" class="transpose-btn"
-              aria-label="Halve bar length">½bar</button>
+              aria-label="Halve bar length">½ bar</button>
             <button id="transposeDownBtn" class="transpose-btn"
               aria-label="Transpose down one semitone">♭</button>
             <button id="transposeUpBtn" class="transpose-btn"
