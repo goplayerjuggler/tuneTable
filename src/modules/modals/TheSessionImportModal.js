@@ -539,9 +539,15 @@ ${setting.abc
 			 * split when '!' (TheSession's line-break encoding) is replaced with '\n'.
 			 */
 
-			if (config.doubleBarLengthWherePossible)
-				return maybeConvertStandardTune(raw, tuneData.type);
-			else return raw;
+			if (config.doubleBarLengthWherePossible) {
+				try {
+					return maybeConvertStandardTune(raw, tuneData.type);
+				} catch (error) {
+					console.log(`Call to \`maybeConvertStandardTune\` failed; skipping. Details: 
+error: ${error}
+abc: ${raw}`);
+				}
+			} else return raw;
 		};
 
 		return {
