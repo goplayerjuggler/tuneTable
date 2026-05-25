@@ -68,15 +68,15 @@ A good proportion of the tune settings was loaded from [thesession.org](https://
 
 ## Upcoming features / wishlist
 Here are some features I would like to have:
-* improve the score viewer: adapt the score layout depending on user input and available screen space; print functionality
+* improve the score viewer: adapt the score layout depending on user input and available screen space; print functionality (maybe add outbound links to Michael Eskin's abcTools which already has such functionality)
 * a user preferences UI: settings for sorting and displaying tunes, importing data, and PDF output.
 * provide several incipits for a single tune - indexing by B, C parts etc.
 * parsing of ABC to determine the structure of a tune - i.e. is it made up of parts ABCDE, or AABB, or something else.
 * a feature to format ABC code (this would go in the `abcTools` repo; but would be handy here, e.g. to improve the beaming in the end result when a reel is switched to 4/4 with semiquavers).
 * rename the whole thing – I started this project in September 2025 and it now seems that “tune _library_” would be a better name.
 
-## A previous version from ~2005
-Around 2005, I made another [table of tunes](http://malcolm.schonfield.free.fr/zik.php) to publish some music scores I had written. It has a similar approach to this project and is really a prior version of the concept. It has some music content I mean to copy over to this repo at some point.
+## A previous project from ~2005
+Around 2005, I made another [table of tunes](http://malcolm.schonfield.free.fr/zik.php), to publish some music scores I had written. It has a similar approach to this project, and it has some music content I mean to copy over to this repo at some point. So this project is a second attempt along the same lines.
 
 ## Thanks
 Thanks to: 
