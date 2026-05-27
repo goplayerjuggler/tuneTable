@@ -6,12 +6,12 @@ export default {
 	ttId: 538,
 	abc: `
 X:1
-T:червона калина as a crooked Scottish
+T:червона калина as a crooked Schottische
 C:Malcolm Schonfield
-H:(2026-05-19) This setting of [Ой, у лузі червона калина](ttId=514) came to me today. Rhythmically I think it's related to the Scottish (a French folk dance). 
+H:(2026-05-19) This setting of [Ой, у лузі червона калина](ttId=514) came to me today. Rhythmically I think it's related to the Scottiche (a French folk dance). 
 H:(2026-05-20) I revised the score. It's still a little vague in my mind; there are several directions it could go in. But maybe these notes could be helpful. 
-H:(2026-05-27) further small revisions
-R:Scottish
+H:(2026-05-27) further small revisions. Checked the spelling – in English it’s [Scottiche](https://en.wikipedia.org/wiki/Schottische). 
+R:Schottische
 M:4/4
 L:1/16
 K:Dm

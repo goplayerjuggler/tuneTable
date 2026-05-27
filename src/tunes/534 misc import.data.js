@@ -365,44 +365,22 @@ eggf gede cAAB c3d|edcA dcAG A2AG ABcd:|`,
 		theSessionSettingId: 31232
 	},
 	{
-		fileDate: "2026-05-18",
-		abc: [
-			`X:1
+		parts: "AABB",
+		fileDate: "2026-05-27",
+		abc: `X:1
 T:Dan Collins' Father's
 R:jig
 L:1/8
 M:12/8
-N:First this transcription transposed to G Major ~
-N:X: 1 T: Bill Collins' T: Dan Collins' Father's T: Dan Sullivan's Father's M:
-N:12/8 L: 1/8 R: slide K: Dmaj |: d2 A BAB def a3 | aba f2 e d2 B BAB | d2 A BAB
-N:def a3 | aba f2 e edd d3 :| |: faa faa afe f3 | aba f2 e d2 B BAB | d2 A BAB def
-N:a3 | aba f2 e edd d3 :| K: GMaj |: G2 D EDE GAB d3 | ded B2 A G2 E EDE | G2 D
-N:EDE GAB d3 | ded B2 A AGG G3 :| |: Bdd Bdd dBA B3 | ded B2 A G2 E EDE | G2 D EDE
-N:GAB d3 | ded B2 A AGG G3 :|
-N:& other possibilities in G ~ and then back to D...
-N:X: 2 T: Bill Collins' T: Dan Collins' Father's T: Dan Sullivan's Father's M:
-N:12/8 L: 1/8 R: slide K: GMaj |: BA |\\ G2 D E^DE GAB =d2 B | ded B2 A BGE E^DE |
-N:GDD E^DE GG/A/B =d3 | ded B2 A AGF G :| |: GA |\\ B2 d Bde dBA B2 c | ded B2 A
-N:BGE E^DE | G2 D E^DE GAB =d2 ^c | ded B2 A AGF G :|
-N:X: 3 T: Bill Collins' Jig T: Dan Collins’ Father’s Jig M: 12/8 L: 1/8 R: slide
-N:K: DMaj |: c |\\ d2 A B^AB def =a2 f | aba f2 e edd dfe | dAA B^AB dd/e/f =a3 |
-N:aba f2 e edd d2 :| |: g |\\ faa faa afe f2 g | aa/a/a ff/f/f dB/B/^A BAB | d2 A
-N:B^AB dd/e/f =a2 f | aba f2 e edd d2 :|
-N:The more I reacquaint myself with this the more I realize I've played it in both
-N:keys and mixed with slides and jigs. However you take it, it's a fun tune.
-N:---
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/2217#setting15582
 N:Setting entered in thesession by user “ceolachan” on 2012-01-14
-N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
 K:Dmajor
 M:12/8
-|:d2 A BAB def a3 aba f2 e d2 B BAB|
-d2 A BAB def a3 aba f2 e edd d3:|
-|:faa faa afe f3 aba f2 e d2 B BAB|
-d2 A BAB def a3 aba f2 e edd d3:|`
-		],
+|:d2 A BAB def a3| aba f2 e d2 B BAB|
+  d2 A BAB def a3| aba f2 e edd d3:|
+|:faa faa afe f3 |aba f2 e d2 B BAB|
+  d2 A BAB def a3| aba f2 e edd d3:|`,
 		theSessionId: 2217,
 		theSessionSettingId: 15582
 	},
