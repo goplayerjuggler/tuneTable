@@ -83,7 +83,7 @@ Thanks to:
 * Michael Eskin for his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which I’ve found very handy over the years. Michael has already kindly given me a several tips about handling ABC. The code for the incipit generator – now in my abc-tools repo – is a fork of his code.
 * Jeremy from [thesession.org](https://thesession.org) for providing such a great resource and helping me with a question about it. Thesession was an inspiration for quite a few features here.
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project.
-* Gilles Raymond for requesting the set list & print feature.
+* Gilles Reymond for requesting the set list & print feature.
 * Treasa Harkin, at [itma.ie](https://itma.ie), for reviewing an earlier version and for suggesting two features which have since been made: the intro page and the “badge filtering”. 
 * Anthropic: roughly 90% of the code (in this repo and in my other related repo, [abc-tools](#abc-tools---a-related-repo)) was written by Claude.ai / Sonnet 4.6 extended.
 * Github for hosting this whole thing
