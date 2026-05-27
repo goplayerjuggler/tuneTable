@@ -85,7 +85,7 @@ Thanks to:
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project.
 * Gilles Reymond for requesting the set list & print feature.
 * Treasa Harkin, at [itma.ie](https://itma.ie), for reviewing an earlier version and for suggesting two features which have since been made: the intro page and the “badge filtering”. 
-* Anthropic: roughly 90% of the code (in this repo and in my other related repo, [abc-tools](#abc-tools---a-related-repo)) was written by Claude.ai / Sonnet 4.6 extended.
+* Anthropic: roughly 90% of the code (in this repo and in my other related repo, [abc-tools](#abc-tools--a-related-repo)) was written by Claude.ai / Sonnet 4.6 extended.
 * Github for hosting this whole thing
 
 ## Licences
