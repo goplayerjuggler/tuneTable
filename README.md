@@ -25,7 +25,7 @@ I built this for myself and the musicians I play with, to explore, organise and 
 * sort tunes based on the tune’s _contour_ w.r.t. to the tonic:
   * key and mode agnostic; also to some extent octave agnostic – more details [here](https://github.com/goplayerjuggler/abc-tools/blob/main/docs/contour_sort.md).
   * contours are displayed next to the tune’s title
-  * switch between different types of multi-level sorting involving “contour” sorting, by successive clicks on the first column header of the main table.
+  * cycle through different types of multi-level sorting involving “contour” sorting, by successive clicks on the header of the first column in the main table.
 * incipits are shown next to tune titles. They are extracted from a full score; optionally they can instead be given explicitly as part of the tune data.
 * a popup score viewer with transpose buttons, for tunes with one or more settings in ABC. Longer scores are paginated.
 * tunes may have additional information such as comments/notes; tags; and external links to recordings, websites like thesession.org, and other online resources.
@@ -48,15 +48,14 @@ I built this for myself and the musicians I play with, to explore, organise and 
 [goplayerjuggler.github.io/tuneTable/?n=cameronian](https://goplayerjuggler.github.io/tuneTable/?n=cameronian) 
 * query everything that matches a full-text search with `q` in the URL:
 [goplayerjuggler.github.io/tuneTable/?q=crooked](https://goplayerjuggler.github.io/tuneTable/?q=crooked)
-* the `g` parameter selects a “server list” that was prepared based on the `tune.groups` property. Example: 
-[goplayerjuggler.github.io/tuneTable/?g=alora](https://goplayerjuggler.github.io/tuneTable/?g=alora) 
+* the `g` parameter selects a “server list” that was prepared based on the `tune.groups` property. Example:  
+[goplayerjuggler.github.io/tuneTable/?g=alora](https://goplayerjuggler.github.io/tuneTable/?g=alora) opens the “ALORA” list.
 * the `l` parameter selects any “server list”. Example: 
-[goplayerjuggler.github.io/tuneTable/?l=default](https://goplayerjuggler.github.io/tuneTable/?l=default)
+[goplayerjuggler.github.io/tuneTable/?l=default](https://goplayerjuggler.github.io/tuneTable/?l=default) opens the default list.
 * Parameters can be combined. Example: 
 [load Darby the driver from the default list](https://goplayerjuggler.github.io/tuneTable/?l=default&n=darby+the+driver) 
 * the `s` parameter selects a set. Example: 
-[goplayerjuggler.github.io/tuneTable/?l=default&s=Boys Of Ballisodare set - 3 hop jigs](https://goplayerjuggler.github.io/tuneTable/?l=default&s=Boys%20Of%20Ballisodare%20set%20-%203%20hop%20jigs)
-
+[goplayerjuggler.github.io/tuneTable/?l=default&s=Boys Of Ballisodare set – 3 hop jigs](https://goplayerjuggler.github.io/tuneTable/?l=default&s=Boys%20Of%20Ballisodare%20set%20-%203%20hop%20jigs)
 
 ## Current list of tunes
 It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
@@ -64,14 +63,14 @@ A fair number of the scores there are my own work, either transcriptions of othe
 
 I try to provide at least one setting or incipit for each tune.
 
-A good proportion of the tune settings was loaded from [thesession.org](https://thesession.org) based on my tune book there; but I haven’t yet gone systematically through all the tunes to check important things like the key – for contour sorting, it makes a big difference, e.g. having `K:G` instead of `K: Dmix`! But I believe the key is mostly correct. In general if a reel is still in 4/4 with quavers, then I haven’t yet gotten round to reviewing it since it was imported.
+Most (but not all) of the tune settings were imported from [thesession.org](https://thesession.org) based on [my tune book there](https://thesession.org/members/40345/tunebook). I tweaked many of these imported tunes afterwards. However I haven’t yet gone systematically through all the tunes to check important things like the key – for contour sorting, it makes a big difference, e.g. having `K:G` instead of `K: Dmix`! But I believe the key is mostly correct. In general if a reel is still in 4/4 with quavers, then I haven’t yet gotten round to reviewing it since it was imported.
 
 ## Upcoming features / wishlist
 Here are some features I would like to have:
 * improve the score viewer: adapt the score layout depending on user input and available screen space; print functionality (maybe add outbound links to Michael Eskin's abcTools which already has such functionality)
 * a user preferences UI: settings for sorting and displaying tunes, importing data, and PDF output.
-* provide several incipits for a single tune - indexing by B, C parts etc.
-* parsing of ABC to determine the structure of a tune - i.e. is it made up of parts ABCDE, or AABB, or something else.
+* provide several incipits for a single tune – indexing by B, C parts etc.
+* parsing of ABC to determine the structure of a tune – i.e. is it made up of parts ABCDE, or AABB, or something else.
 * a feature to format ABC code (this would go in the `abcTools` repo; but would be handy here, e.g. to improve the beaming in the end result when a reel is switched to 4/4 with semiquavers).
 * rename the whole thing – I started this project in September 2025 and it now seems that “tune _library_” would be a better name.
 
@@ -81,7 +80,7 @@ Around 2005, I made another [table of tunes](http://malcolm.schonfield.free.fr/z
 ## Thanks
 Thanks to: 
 * Paul Rosen and Gregory Dyke for their fantastic library [abcjs](https://github.com/paulrosen/abcjs). These days it’s behind most of the online resources related to music written in ABC format.
-* Michael Eskin for his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which I’ve found very handy over the years. Michael has already kindly given me a several tips about handling ABC. I used some of his code as a starting point when building the incipit generator.
+* Michael Eskin for his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which I’ve found very handy over the years. Michael has already kindly given me a several tips about handling ABC. The code for the incipit generator – now in my abc-tools repo – is a fork of his code.
 * Jeremy from [thesession.org](https://thesession.org) for providing such a great resource and helping me with a question about it. Thesession was an inspiration for quite a few features here.
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project.
 * Gilles Raymond for requesting the set list & print feature.
@@ -109,7 +108,7 @@ This project uses multiple licences depending on the type of content:
 **ABC tune files**: These files are from external sources. Each file should contain its own licensing information, or give a reference to a website with this info – please refer to the individual file before reusing or redistributing it.
 
 ## Dev notes
-### abc-tools - a related repo
+### abc-tools – a related repo
 Apart from rendering scores and transposition (handled by `abcjs`), all other functionality related to ABC is from my [“abc-tools” repo](https://github.com/goplayerjuggler/abc-tools).
 
 ### npm scripts
@@ -126,7 +125,7 @@ node .\build\build-tune-lists.mjs
 # build website
 npm run build # this includes the tune lists
 
-# working with abc-tools: just install it as a sibling - same parent folder 
+# working with abc-tools: just install it as a sibling – same parent folder 
 npm run dev:local # this way abc-tools is from local version, not from the npm package
 ```
 
@@ -134,8 +133,45 @@ npm run dev:local # this way abc-tools is from local version, not from the npm p
 (Just an outline of how I think it could work.)
 
 First clone the repo. 
-* ABC files: add your own ABC files under `.\src\tunes\`; just add some header lines `%% list-name` etc - use an abc file in the folder as a model.
+* ABC files: add your own ABC files under `.\src\tunes\`; just add some header lines `%% list-name` etc – use an abc file in the folder as a model.
 * working with `.data.js` files: probably just start inside the tool by loading tunes in ABC format, and exporting the data in JavaScript format. Then in VS Code or elsewhere, run a script (`.\dev\split-tunes.mjs`) to get the `.data.js` files. 
+
+### my local import settings
+I currently use the following settings. 
+
+(Please don’t infer anything special from the list of accounts. They’re just people whose settings I found at some point to be well-done. I had to put them in an order, but it’s fairly arbitrary.)
+
+```JavaScript
+//open the project locally, then in Dev Tools run this:
+localStorage.setItem('theSessionImportConfig', JSON.stringify({
+	withComments: true,
+	skipLevel: "ifTuneExists",
+	doubleBarLengthWherePossible: true,
+	importAllSettingsForSpecifiedUser: true,
+	settingChoiceCriteria: [
+		{
+			preferredUserIds: [
+				[40345, "GoPlayerJuggler"],
+				[11705, "ceolachan"],
+				[4763, "Dr. Dow"],
+				[5628, "hnorbeck"],
+				[13094, "birlibirdie"],
+				[11834, "Nigel Gatherer"],
+				[1, "Jeremy"],
+				[6451, "jackb"],
+				[116353, "John E Roche"],
+				[3150, "slainte"],
+				[60897, "Fernando Durbán Galnares"],
+				[119445, "piperDave"],
+				[8648, "erik-fiddler"]
+			]
+		},
+		"withChords",
+		"preferShorter"
+	]
+}))
+
+```
 
 ### Contributing
 Issues and pull requests are welcome.
