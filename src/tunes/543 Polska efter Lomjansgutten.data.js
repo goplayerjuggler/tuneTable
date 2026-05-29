@@ -1,4 +1,5 @@
 export default {
+	ttId: 543,
 	parts: "AABB",
 	aka: "Lomjansguten",
 	abc: `
@@ -25,6 +26,10 @@ A2 (3:B^cd e2 f2a|geg fdf e2a | geg fdf e2d |(3^cBc-c d6  :|
 				"Mattias Pérezm mandolin(?); Nina Pérez, fiddle(?); Mia Marine, 5-stringed fiddle",
 			notes: `This was a reference shared by Katja. I find it to be quite close to her version, but with some differences.
 [discogs](https://www.discogs.com/release/8668391-MP3-Guldvingen)`
+		},
+		{
+			notes:
+				"I found a [different setting](http://www.folkwiki.se/Musik/153) on folkwiki.se."
 		}
 	]
 };
