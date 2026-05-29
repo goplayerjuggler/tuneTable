@@ -1012,165 +1012,93 @@ function openTheSessionImport(e, dropdown, howToOpen) {
 	if (howToOpen === 1) modal.openInSetsMode();
 }
 
-// -- Initialisation -----------------------------------------------------------
+// -- Filters ------------------------------------------------------------------
 
-async function initialiseData() {
-	// Expose global functions
-	window.addNewTune = addNewTune;
-	window.applyFilters = applyFilters;
-	window.collapseNotes = collapseNotes;
-	window.copyTunesToClipboard = copyTunesToClipboard;
-	window.copySingleTune = copySingleTune;
-	window.deleteTune = deleteTune;
-	window.toggleTuneSelected = toggleTuneSelected;
-	window.emptyTunes = emptyTunes;
-	window.expandNotes = expandNotes;
-	window.populateFilters = populateFilters;
-	window.saveTunesToStorage = saveTunesToStorage;
-	window.sortWithDefaultSort = sortWithDefaultSort;
-	window.openTuneSelections = () => tuneSelectionsModal?.open();
-	window.saveSetListsToStorage = saveSetListsToStorage;
+// Chromatic sort order for tonics, sharp/flat-aware.
+// Maps each tonic to its chromatic position (C=0 … B=11).
+// Enharmonics share a position (e.g. F♯ and G♭ both = 6) and are kept as
+// separate entries with separate counts; relative order between them is
+// not guaranteed and not significant.
+const TONIC_SORT_KEY = new Map([
+	["C", 0],
+	["C♯", 1],
+	["D♭", 1],
+	["D", 2],
+	["D♯", 3],
+	["E♭", 3],
+	["E", 4],
+	["F", 5],
+	["F♯", 6],
+	["G♭", 6],
+	["G", 7],
+	["G♯", 8],
+	["A♭", 8],
+	["A", 9],
+	["A♯", 10],
+	["B♭", 10],
+	["B", 11]
+]);
 
-	eventBus.on("tuneImported", async (tuneData) => {
-		window.tunesData.push(tuneData);
-		await saveTunesToStorage();
-	});
-	eventBus.on("refreshTable", () => {
-		sortWithDefaultSort();
-		populateFilters();
-		applyFilters();
-	});
-
-	const callbacks = {
-		saveTunesToStorage,
-		populateFilters,
-		applyFilters,
-		renderTable,
-		sortWithDefaultSort
-	};
-
-	slotManager = new TuneListSlotManager();
-	await slotManager.init();
-
-	editModal = new EditModal(callbacks);
-	getAbcModal = () => new AbcModal(callbacks);
-	addTunesModal = new AddTunesModal(callbacks);
-	loadJsonModal = new LoadJsonModal(callbacks);
-	tuneListSelectorModal = new TuneListSelectorModal({
-		slotManager,
-		onSelect: onListSelected
-	});
-	tuneSelectionsModal = new TuneSelectionsModal({
-		saveSetListsToStorage,
-		applyFilters
-	});
-
-	window.tunesData = [];
-	window.filteredData = [];
-	window._setLists = [];
-
-	// Cleanup from previous storage format
-	localStorage.removeItem(storageKey + "_saveDate");
-	localStorage.removeItem(storageKey + "_setLists");
-
-	// -- Async: resolve which list to load ------------------------------------
-
-	const manifest = await fetchManifest();
-	const params = new URLSearchParams(window.location.search);
-
-	// Store q/n params for post-load application via onListSelected
-	if (
-		params.has("q") ||
-		params.has("n") ||
-		params.has("ttId") ||
-		params.has("theSessionId")
-	)
-		pendingUrlParams = params;
-	if (params.has("s")) pendingSetParam = params.get("s");
-
-	// ?g= auto-selects a matching server list
-	const gParam = params.get("g");
-	if (gParam && manifest) {
-		const match = manifest.lists.find(
-			(l) => l.group?.toLowerCase() === gParam.toLowerCase()
-		);
-		if (match) {
-			try {
-				await loadServerListById(
-					match.id,
-					match.file,
-					match.name,
-					match.lastUpdate,
-					match.defaultSort
-				);
-				return;
-			} catch (e) {
-				console.warn("Failed to auto-load ?g= list:", e);
-			}
-		}
-	}
-	// ?l= auto-selects a matching server list
-	const lParam = params.get("l");
-	if (lParam && manifest) {
-		const match = manifest.lists.find(
-			(l) => l.id.toLowerCase() === lParam.toLowerCase()
-		);
-		if (match) {
-			try {
-				await loadServerListById(
-					match.id,
-					match.file,
-					match.name,
-					match.lastUpdate
-				);
-				return;
-			} catch (e) {
-				console.warn("Failed to auto-load ?l= list:", e);
-			}
-		}
-	}
-
-	// Resume last used list
-	const saved = readCurrentListState();
-	if (saved) {
-		try {
-			await resumeCurrentList(saved, manifest);
-			return;
-		} catch (e) {
-			console.warn("Failed to resume last list:", e);
-			localStorage.removeItem(CURRENT_LIST_KEY);
-		}
-	}
-
-	// Signal to caller: open the selector
-	return { needsSelector: true, manifest };
+// Split a normalised key string (e.g. "D major", "B♭ minor") into { tonic, mode }.
+// Keys with no space (unusual) are treated as tonic-only with an empty mode.
+function splitKey(keyStr) {
+	const spaceIdx = keyStr.indexOf(" ");
+	return spaceIdx === -1
+		? { tonic: keyStr, mode: "" }
+		: { tonic: keyStr.slice(0, spaceIdx), mode: keyStr.slice(spaceIdx + 1) };
 }
 
 function populateFilters() {
 	activeBadgeFilters.clear(); // reset badge filters when the tune list changes
-	const rhythms = [
-		...new Set(
-			window.tunesData
-				.map((tune) => tune.rhythm?.toLowerCase())
-				.filter((r) => r)
-		)
+
+	// Build a flat list of normalised key strings from all tunes
+	const allKeys = window.tunesData
+		.map((tune) => tune.key)
+		.filter(Boolean)
+		.map((k) => normaliseKey(k).join(" "));
+
+	// Count tunes per rhythm, tonic, and mode (global counts across all tunes)
+	const rhythmCounts = new Map();
+	const tonicCounts = new Map();
+	const modeCounts = new Map();
+
+	window.tunesData.forEach((tune) => {
+		if (tune.rhythm) {
+			const r = tune.rhythm.toLowerCase();
+			rhythmCounts.set(r, (rhythmCounts.get(r) ?? 0) + 1);
+		}
+	});
+	allKeys.forEach((k) => {
+		const { tonic, mode } = splitKey(k);
+		tonicCounts.set(tonic, (tonicCounts.get(tonic) ?? 0) + 1);
+		if (mode) modeCounts.set(mode, (modeCounts.get(mode) ?? 0) + 1);
+	});
+
+	// Musical sort for tonics: by chromatic position (C=0 … B=11).
+	// Enharmonics share a position; relative order between them is not significant.
+	const tonics = [...new Set(allKeys.map((k) => splitKey(k).tonic))].sort(
+		(a, b) => (TONIC_SORT_KEY.get(a) ?? 999) - (TONIC_SORT_KEY.get(b) ?? 999)
+	);
+
+	const modes = [
+		...new Set(allKeys.map((k) => splitKey(k).mode).filter(Boolean))
 	].sort();
-	const keys = [
-		...new Set(
-			window.tunesData
-				.map((tune) => tune.key)
-				.filter((k) => k)
-				.map((k) => normaliseKey(k).join(" "))
-		)
-	].sort();
+	const rhythms = [...rhythmCounts.keys()].sort();
+
+	const toOption = (value, counts) =>
+		`<option value="${value}">${value} (${counts.get(value) ?? 0})</option>`;
 
 	document.getElementById("rhythmFilter").innerHTML =
 		'<option value="">All rhythms</option>' +
-		rhythms.map((r) => `<option value="${r}">${r}</option>`).join("");
+		rhythms.map((r) => toOption(r, rhythmCounts)).join("");
 
-	document.getElementById("keyFilter").innerHTML =
-		'<option value="">All keys</option>' +
-		keys.map((k) => `<option value="${k}">${k}</option>`).join("");
+	document.getElementById("tonicFilter").innerHTML =
+		'<option value="">All tonics</option>' +
+		tonics.map((t) => toOption(t, tonicCounts)).join("");
+
+	document.getElementById("modeFilter").innerHTML =
+		'<option value="">All modes</option>' +
+		modes.map((m) => toOption(m, modeCounts)).join("");
 }
 
 function openAbcModal(tune) {
@@ -1189,12 +1117,6 @@ function findSetByName(name) {
 function scrollToFirstTune(tunes) {
 	const first = tunes?.[0];
 	if (!first || !first._crId) return;
-	// const tune = first.theSessionId
-	// 	? _crBySessionId.get(first.theSessionId)
-	// 	: first.ttId
-	// 		? _crByTtId.get(first.ttId)
-	// 		: null;
-	// if (!tune) return;
 	const el = document.getElementById(`cr-t${first._crId}`);
 	el?.scrollIntoView({ block: "center" });
 }
@@ -1481,12 +1403,22 @@ function renderTable() {
 function applyFilters() {
 	const searchTerm = document.getElementById("searchInput").value.toLowerCase();
 	const rhythmFilter = document.getElementById("rhythmFilter").value;
-	const keyFilter = document.getElementById("keyFilter").value;
+	const tonicFilter = document.getElementById("tonicFilter").value;
+	const modeFilter = document.getElementById("modeFilter").value;
 
-	// Extracted to avoid repeating the same two checks in every search branch
-	const matchesDropdowns = (tune) =>
-		(rhythmFilter === "" || tune.rhythm === rhythmFilter) &&
-		(keyFilter === "" || tune.key === keyFilter);
+	// Extracted to avoid repeating the same checks in every search branch.
+	// Tonic and mode are matched against the normalised key string split on first space.
+	const matchesDropdowns = (tune) => {
+		if (rhythmFilter !== "" && tune.rhythm?.toLowerCase() !== rhythmFilter)
+			return false;
+		if (tonicFilter !== "" || modeFilter !== "") {
+			const normKey = tune.key ? normaliseKey(tune.key).join(" ") : "";
+			const { tonic, mode } = splitKey(normKey);
+			if (tonicFilter !== "" && tonic !== tonicFilter) return false;
+			if (modeFilter !== "" && mode !== modeFilter) return false;
+		}
+		return true;
+	};
 
 	// AND across types, OR within the same type
 	const matchesBadgeFilters = (tune) => {
@@ -1593,6 +1525,140 @@ function sortData() {
 	updateFooter();
 }
 
+// -- Initialisation -----------------------------------------------------------
+
+async function initialiseData() {
+	// Expose global functions
+	window.addNewTune = addNewTune;
+	window.applyFilters = applyFilters;
+	window.collapseNotes = collapseNotes;
+	window.copyTunesToClipboard = copyTunesToClipboard;
+	window.copySingleTune = copySingleTune;
+	window.deleteTune = deleteTune;
+	window.toggleTuneSelected = toggleTuneSelected;
+	window.emptyTunes = emptyTunes;
+	window.expandNotes = expandNotes;
+	window.populateFilters = populateFilters;
+	window.saveTunesToStorage = saveTunesToStorage;
+	window.sortWithDefaultSort = sortWithDefaultSort;
+	window.openTuneSelections = () => tuneSelectionsModal?.open();
+	window.saveSetListsToStorage = saveSetListsToStorage;
+
+	eventBus.on("tuneImported", async (tuneData) => {
+		window.tunesData.push(tuneData);
+		await saveTunesToStorage();
+	});
+	eventBus.on("refreshTable", () => {
+		sortWithDefaultSort();
+		populateFilters();
+		applyFilters();
+	});
+
+	const callbacks = {
+		saveTunesToStorage,
+		populateFilters,
+		applyFilters,
+		renderTable,
+		sortWithDefaultSort
+	};
+
+	slotManager = new TuneListSlotManager();
+	await slotManager.init();
+
+	editModal = new EditModal(callbacks);
+	getAbcModal = () => new AbcModal(callbacks);
+	addTunesModal = new AddTunesModal(callbacks);
+	loadJsonModal = new LoadJsonModal(callbacks);
+	tuneListSelectorModal = new TuneListSelectorModal({
+		slotManager,
+		onSelect: onListSelected
+	});
+	tuneSelectionsModal = new TuneSelectionsModal({
+		saveSetListsToStorage,
+		applyFilters
+	});
+
+	window.tunesData = [];
+	window.filteredData = [];
+	window._setLists = [];
+
+	// Cleanup from previous storage format
+	localStorage.removeItem(storageKey + "_saveDate");
+	localStorage.removeItem(storageKey + "_setLists");
+
+	// -- Async: resolve which list to load ------------------------------------
+
+	const manifest = await fetchManifest();
+	const params = new URLSearchParams(window.location.search);
+
+	// Store q/n params for post-load application via onListSelected
+	if (
+		params.has("q") ||
+		params.has("n") ||
+		params.has("ttId") ||
+		params.has("theSessionId")
+	)
+		pendingUrlParams = params;
+	if (params.has("s")) pendingSetParam = params.get("s");
+
+	// ?g= auto-selects a matching server list
+	const gParam = params.get("g");
+	if (gParam && manifest) {
+		const match = manifest.lists.find(
+			(l) => l.group?.toLowerCase() === gParam.toLowerCase()
+		);
+		if (match) {
+			try {
+				await loadServerListById(
+					match.id,
+					match.file,
+					match.name,
+					match.lastUpdate,
+					match.defaultSort
+				);
+				return;
+			} catch (e) {
+				console.warn("Failed to auto-load ?g= list:", e);
+			}
+		}
+	}
+	// ?l= auto-selects a matching server list
+	const lParam = params.get("l");
+	if (lParam && manifest) {
+		const match = manifest.lists.find(
+			(l) => l.id.toLowerCase() === lParam.toLowerCase()
+		);
+		if (match) {
+			try {
+				await loadServerListById(
+					match.id,
+					match.file,
+					match.name,
+					match.lastUpdate
+				);
+				return;
+			} catch (e) {
+				console.warn("Failed to auto-load ?l= list:", e);
+			}
+		}
+	}
+
+	// Resume last used list
+	const saved = readCurrentListState();
+	if (saved) {
+		try {
+			await resumeCurrentList(saved, manifest);
+			return;
+		} catch (e) {
+			console.warn("Failed to resume last list:", e);
+			localStorage.removeItem(CURRENT_LIST_KEY);
+		}
+	}
+
+	// Signal to caller: open the selector
+	return { needsSelector: true, manifest };
+}
+
 // -- DOMContentLoaded ---------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -1612,7 +1678,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 	document
 		.getElementById("rhythmFilter")
 		.addEventListener("change", applyFilters);
-	document.getElementById("keyFilter").addEventListener("change", applyFilters);
+	document
+		.getElementById("tonicFilter")
+		.addEventListener("change", applyFilters);
+	document
+		.getElementById("modeFilter")
+		.addEventListener("change", applyFilters);
 
 	document.querySelectorAll("th.sortable").forEach((th) => {
 		th.addEventListener("click", function () {
