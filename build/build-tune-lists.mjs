@@ -112,9 +112,9 @@ async function loadTuneDates(tuneFileNames) {
 
 /**
  * Evaluate a tune `.data.js` file without going through the Node module cache.
- * Each file exports a single object literal; we convert `export default` to a
- * `return` statement and run it with `new Function`. Leading line comments
- * (e.g. the fileName comment) are harmless and left in place.
+ * Each file exports a single object literal, or an array of such objects; this converts
+ * `export default` to a `return` statement and run it with `new Function`.
+ * Leading line comments (e.g. the fileName comment) are harmless and left in place.
  *
  * @param {string} content - Raw file content.
  * @returns {object}
