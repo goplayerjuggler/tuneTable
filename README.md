@@ -57,6 +57,8 @@ I built this for myself and the musicians I play with, to explore, organise and 
 * the `s` parameter selects a set. Example: 
 [goplayerjuggler.github.io/tuneTable/?l=default&s=Boys Of Ballisodare set – 3 hop jigs](https://goplayerjuggler.github.io/tuneTable/?l=default&s=Boys%20Of%20Ballisodare%20set%20-%203%20hop%20jigs)
 
+Similarly, there are `ttId` and `theSessionId` query parameters. They are used by the “share link” feature.
+
 ## Current list of tunes
 It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
 A fair number of the scores there are my own work, either transcriptions of other people’s tunes or original pieces. I reserve some rights on this via a CC licence; details below.

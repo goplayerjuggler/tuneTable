@@ -51,6 +51,7 @@ let activeBadgeFilters = new Map(); // Map<metaType, Set<lowercaseValue>> — ba
 let pendingUrlParams = null;
 let pendingSetParam = null;
 let _manifestCache = null;
+let _spinnerHidden = false;
 
 // Lookup maps for cross-reference resolution; populated by calculateCrossRefs when a list is loaded.
 let _crBySessionId = new Map();
@@ -523,6 +524,18 @@ function applyUrlFilters(params) {
 			filtered = true;
 		}
 	}
+
+	const idProperties = ["ttId", "theSessionId"];
+	for (let i = 0; i < idProperties.length; i++) {
+		const idProperty = idProperties[i];
+		const value = +params.get(idProperty);
+		if (value) {
+			selectByIdProperty(idProperty, value);
+			filtered = true;
+			break;
+		}
+	}
+
 	if (params.has("n")) {
 		const n = params.get("n");
 		if (n) {
@@ -636,14 +649,38 @@ function copyTuneDataToClipboard(tunes, button) {
 	navigator.clipboard.writeText(result).then(
 		() => {
 			const originalText = button.textContent;
-			button.textContent = "✓ Copied!";
+			button.textContent = "✓ Code copied!";
 			setTimeout(() => {
 				button.textContent = originalText;
 			}, 2000);
 		},
 		(err) => {
-			console.error("Failed to copy:", err);
-			alert("Failed to copy to clipboard");
+			console.error("Failed to copy code:", err);
+			alert("Failed to copy code");
+		}
+	);
+}
+function copyShareToClipboard(tune, button) {
+	const root = window.location.origin + (window.location.pathname ?? "");
+	const remaining = tune.ttId
+		? "ttId=" + tune.ttId
+		: tune.theSessionId
+			? "theSessionId=" + tune.theSessionId
+			: "n=" + encodeURIComponent(tune.name);
+	const result = `${root}?l=${currentListState.sourceId}&${remaining}`;
+	navigator.clipboard.writeText(result).then(
+		() => {
+			const originalText = button.textContent;
+			button.textContent = "✓ share link copied!";
+			if (!tune.ttId && !tune.theSessionId)
+				button.textContent = "⚠ name-only link";
+			setTimeout(() => {
+				button.textContent = originalText;
+			}, 2000);
+		},
+		(err) => {
+			console.error("Failed to copy share link:", err);
+			alert("Failed to copy share link");
 		}
 	);
 }
@@ -707,14 +744,15 @@ async function bulkChangeBarLength(direction) {
  * Copy a single tune's data to clipboard as a JavaScript literal.
  * @param {number} tuneIndex - Index of the tune in filteredData
  */
-function copySingleTune(tuneIndex) {
+function copySingleTune(tuneIndex, triggerButton) {
 	const tune = window.filteredData[tuneIndex];
-	const button = document.querySelector(
-		`.btn-copy[data-tune-index="${tuneIndex}"]`
-	);
-	copyTuneDataToClipboard([tune], button);
+	copyTuneDataToClipboard([tune], triggerButton);
 }
 
+function copyShare(tuneIndex, triggerButton) {
+	const tune = window.filteredData[tuneIndex];
+	copyShareToClipboard(tune, triggerButton);
+}
 // Add New Tune
 async function addNewTune() {
 	const newTune = {
@@ -1041,7 +1079,13 @@ async function initialiseData() {
 	const params = new URLSearchParams(window.location.search);
 
 	// Store q/n params for post-load application via onListSelected
-	if (params.has("q") || params.has("n")) pendingUrlParams = params;
+	if (
+		params.has("q") ||
+		params.has("n") ||
+		params.has("ttId") ||
+		params.has("theSessionId")
+	)
+		pendingUrlParams = params;
 	if (params.has("s")) pendingSetParam = params.get("s");
 
 	// ?g= auto-selects a matching server list
@@ -1142,18 +1186,17 @@ function findSetByName(name) {
 	}
 	return null;
 }
-function scrollToSetFirstTune(tunes) {
+function scrollToFirstTune(tunes) {
 	const first = tunes?.[0];
-	if (!first) return;
-	const tune = first.theSessionId
-		? _crBySessionId.get(first.theSessionId)
-		: first.ttId
-			? _crByTtId.get(first.ttId)
-			: null;
-	if (!tune) return;
-	document
-		.getElementById(`cr-t${tune._crId}`)
-		?.scrollIntoView({ block: "center" });
+	if (!first || !first._crId) return;
+	// const tune = first.theSessionId
+	// 	? _crBySessionId.get(first.theSessionId)
+	// 	: first.ttId
+	// 		? _crByTtId.get(first.ttId)
+	// 		: null;
+	// if (!tune) return;
+	const el = document.getElementById(`cr-t${first._crId}`);
+	el?.scrollIntoView({ block: "center" });
 }
 
 function renderTable() {
@@ -1325,6 +1368,12 @@ function renderTable() {
 			? 'tune-incipit svg-pending" data-pending title="preparing the incipit…'
 			: "tune-incipit";
 
+		const shareButton =
+			currentListState.source === "server"
+				? //no extra check on ttId / theSessionId being available
+					`<button class="tune-menu-item btn-share" role="menuitem">🔗 Copy share link</button>`
+				: "";
+
 		// ── Row HTML ──────────────────────────────────────────────────
 		row.innerHTML = `
 			<td>
@@ -1340,9 +1389,10 @@ function renderTable() {
 							<div class="tune-context-menu" hidden role="menu">
 								<button class="tune-menu-item btn-select${tune.selected ? " btn-select--checked" : ""}"
 									role="menuitem">${tune.selected ? "☑" : "☐"} Select</button>
-								<button class="tune-menu-item btn-edit" role="menuitem">✎ Edit</button>
-								<button class="tune-menu-item btn-copy" data-tune-index="${index}" role="menuitem">📋 Copy</button>
+								${shareButton}
 								<button class="tune-menu-item btn-delete" role="menuitem">🗑 Delete</button>
+								<button class="tune-menu-item btn-copy" role="menuitem">📋 Copy code</button>
+								<button class="tune-menu-item btn-edit" role="menuitem">✏️ Edit</button>
 							</div>
 						</div>
 					   ${contourHtml}
@@ -1391,9 +1441,14 @@ function renderTable() {
 			menu.hidden = true;
 			editModal.openWithTune(window.filteredData[index], index);
 		});
+
 		row.querySelector(".btn-copy").addEventListener("click", () => {
 			menu.hidden = true;
-			copySingleTune(index);
+			copySingleTune(index, trigger);
+		});
+		row.querySelector(".btn-share")?.addEventListener("click", () => {
+			menu.hidden = true;
+			copyShare(index, trigger);
 		});
 		row.querySelector(".btn-delete").addEventListener("click", () => {
 			menu.hidden = true;
@@ -1502,6 +1557,27 @@ function filterByName(searchTerm) {
 	renderTable();
 }
 
+function selectByIdProperty(idProperty, id) {
+	const tunes = window.tunesData.filter((tune) => tune[idProperty] === id);
+	if (tunes.length > 0) {
+		tunes[0]._isCrTarget = true;
+		tunes[0].selected = true;
+	}
+
+	populateFilters();
+	applyFilters();
+	removeSpinner();
+	scrollToFirstTune(tunes);
+}
+
+function removeSpinner() {
+	if (!_spinnerHidden) {
+		document.getElementById("page-spinner").setAttribute("hidden", "");
+		document.getElementById("page-main").removeAttribute("hidden");
+	}
+	_spinnerHidden = true;
+}
+
 function sortData() {
 	if (currentSortIndex < sortConstants.PREDEFINED_SORT_NAMES.length - 1) {
 		currentSortIndex++;
@@ -1526,8 +1602,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 	} catch (e) {
 		console.error("Initialisation error:", e);
 	} finally {
-		document.getElementById("page-spinner").setAttribute("hidden", "");
-		document.getElementById("page-main").removeAttribute("hidden");
+		removeSpinner();
 	}
 
 	document.getElementById("searchForm").addEventListener("submit", (e) => {
@@ -1667,21 +1742,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 			if (setData)
 				getAbcModal().openWithSet({
 					...setData,
-					onClose: () => scrollToSetFirstTune(setData.tunes)
+					onClose: () => scrollToFirstTune(setData.tunes)
 				});
 			else console.warn(`?s=: no set found matching "${pendingSetParam}"`);
 			pendingSetParam = null;
 			return;
 		}
-		// Open score viewer automatically when a ?n= / ?q= param resolves to a
-		// single tune with ABC notation attached.
-		if (
-			window.location.search.length > 0 &&
-			window.filteredData?.length === 1 &&
-			window.filteredData[0].abc
-		) {
-			openAbcModal(window.filteredData[0]);
-		}
+		// // Open score viewer automatically when a ?n= / ?q= param resolves to a
+		// // single tune with ABC notation attached.
+		// if (
+		// 	window.location.search.length > 0 &&
+		// 	window.filteredData?.length === 1 &&
+		// 	window.filteredData[0].abc
+		// ) {
+		// 	openAbcModal(window.filteredData[0]);
+		// }
 	}
 
 	if (!IntroModal.hasBeenSeen()) {
