@@ -503,7 +503,8 @@ A/B/c|:"D"d2dc defg a2a^g afdf|"G"=gB B/B/B BccB "A7"Aa^ga "D"baga|
 		theSessionSettingId: 53114
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-05-29",
+		parts: "AABB",
 		abc: `X:1
 T:Le 24 Juin
 O:Québec
@@ -515,15 +516,11 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/3358#setting3358
 N:Setting entered in thesession by user “jdicarlo” on 2004-08-03
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Gminor
-|:G3A BABc d2de dcBA|G^FGA BABc 
-d^cde d3d|dccB c3c cBBA B3B|
+|:G3A BABc d2de dcBA|G^FGA BABc d^cde d3d|dccB c3c cBBA B3B|
 [1 A2^GA BAGA dDcD BDAD:|2 A2^GA dcBA =G=BA^F G2A2||
-N:(todo: not yet revised)
 K:G
-~B3B ABcA GABG DEDC|B,DGA BAGB 
-ABcA ~E3B|cdec BcdB A2AB AGFE|
+~B3B ABcA GABG DEDC|B,DGA BAGB ABcA ~E3B|cdec BcdB A2AB AGFE|
 [1 DEFG ABcd efge dcBA:|2 fedB cAFD GBAF G2F2||`,
 		theSessionId: 3358,
 		theSessionSettingId: 3358
