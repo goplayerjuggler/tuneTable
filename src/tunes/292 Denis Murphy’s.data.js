@@ -6,7 +6,6 @@ M: 4/4
 L: 1/8
 K: Dmaj
 f/g/f/e/ d>B AD FA | GE e>d`,
-	origin: "Ireland",
 	rhythm: "polka",
 	references: [
 		{

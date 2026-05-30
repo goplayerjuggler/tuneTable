@@ -7,7 +7,6 @@ M: 4/4
 L: 1/16
 K: G
 BGG2 DGG2 BGG2 cedc | `,
-	origin: "Ireland",
 	rhythm: "reel",
 	parts: "AB",
 	references: [

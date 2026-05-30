@@ -63,7 +63,6 @@ BG (3Bcd edeg abge g2eg | abge dBGB [1 ABGF ~G3A:| [2 ABGF G2dc||
 BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 	],
 	groups: "ALORA",
-	origin: "Ireland",
 	references: [
 		{
 			notes:
@@ -73,6 +72,7 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 			artists:
 				"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
 			url: "https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel",
+			album: "The High Seas",
 			notes: `1:48 onwards
 The Drunken Landlady / Christmas Eve / The Abbey Reel`
 		},

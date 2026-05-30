@@ -7,7 +7,6 @@ M: 4/4
 L: 1/16
 K: Dmaj
 dB|A2FA A2dB A2FA BEE2|A2FA defe`,
-	origin: "Ireland",
 	rhythm: "reel",
 	references: [
 		{

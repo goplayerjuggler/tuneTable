@@ -6,7 +6,6 @@ M: 12/8
 L: 1/8
 K: D
 e|fdd cAA BGG A2G|`,
-	origin: "Ireland",
 	rhythm: "jig",
 	references: [
 		{

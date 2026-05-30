@@ -1,7 +1,6 @@
 export default {
 	name: "John Ryan’s",
 	groups: "ALORA",
-	origin: "Ireland",
 	rhythm: "polka",
 	incipit: `X:1
 M: 4/4

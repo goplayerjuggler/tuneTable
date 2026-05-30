@@ -7,7 +7,6 @@ M: 4/4
 L: 1/16
 K: D
 dB| A2FA A2dB A2FA BEE2|A2FA A2Bd eg`,
-	origin: "Ireland",
 	rhythm: "reel",
 	references: [
 		{

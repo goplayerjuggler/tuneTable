@@ -8,7 +8,6 @@ M: 4/4
 L: 1/16
 K: G
 DGBG A2BA GEE2 cEGE | `,
-	origin: "Ireland",
 	rhythm: "reel",
 	parts: "AB",
 	references: [

@@ -6,7 +6,6 @@ M: 4/4
 L: 1/16
 K: Dmaj
 A2AB AFED B2BA BcdB | A2AB`,
-	origin: "Ireland",
 	rhythm: "reel",
 	parts: "AB",
 	references: [

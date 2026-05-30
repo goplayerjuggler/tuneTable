@@ -1,6 +1,5 @@
 export default {
 	groups: "ALORA,su",
-	origin: "Ireland",
 	rhythm: "slip jig",
 	abc: `%240620, 21, 27, 240718, 260209, 260223
 X: 1
