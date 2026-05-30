@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	parts: "AABBCCDDEEFF",
 	incipit: `X: 1
 M: 4/2
 L: 1/8
