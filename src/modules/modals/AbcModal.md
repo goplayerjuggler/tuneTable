@@ -18,7 +18,7 @@ Displays the tune that was clicked. All editing controls are available: transpos
 
 Displays all tunes in a set as a single concatenated score. The tunes are read from `window.tunesData` using each set-list entry's preferred setting (resolved via `resolveAbcForEntry` from `setUtils.js`). Editing controls are hidden; pagination still works.
 
-The directive `%%writefields NSD false` is prepended to suppress N (notes), S (source), and D (discography) header lines from the rendered score.
+N (notes), S (source), and D (discography) header lines are removed from the ABC that's sent to ABCJS.
 
 ---
 

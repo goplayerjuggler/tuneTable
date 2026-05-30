@@ -4,6 +4,7 @@ import Modal from "./Modal.js";
 import PrintPreviewModal from "./PrintPreviewModal.js";
 import { getIncipit } from "@goplayerjuggler/abc-tools";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
+import { sendToEskinsTool } from "./sendToEskinsTool.js";
 
 import { findTuneByEntry } from "../setUtils.js";
 
@@ -195,6 +196,7 @@ export default class TuneSelectionsModal extends Modal {
 			<div class="modal__footer">
 				<button class="btn ts-close-btn">Close</button>
 				<button class="btn btn-primary ts-preview-btn" title="Print preview">🖨️ Preview &amp; print</button>
+				<button class="btn ts-eskin-btn" title="Open in Michael Eskin’s ABC Transcription Tools">Open in Michael Eskin’s ABC Transcription Tools</button>
 			</div>`;
 
 		this.element
@@ -203,6 +205,9 @@ export default class TuneSelectionsModal extends Modal {
 		this.element
 			.querySelector(".ts-preview-btn")
 			.addEventListener("click", () => this._openPreview());
+		this.element
+			.querySelector(".ts-eskin-btn")
+			.addEventListener("click", () => this._sendToEskinsTool());
 		this.element
 			.querySelector(".ts-new-btn")
 			.addEventListener("click", () => this._newSetList());
@@ -1188,6 +1193,48 @@ export default class TuneSelectionsModal extends Modal {
 
 	getSetLists() {
 		return this._setLists;
+	}
+
+	/*
+	The setting-resolution logic in _sendToEskinsTool is a deliberate copy of the logic in _buildSetTuneEntry; if you later centralise that logic (e.g. a resolveSettingIdx(entry, abcs) utility in setUtils.js), both call sites can be simplified in one pass.
+	*/
+	_sendToEskinsTool() {
+		if (!this._current) return;
+
+		// Collect the selected setting's ABC for every tune in every set, in order
+		const abcStrings = this._current.sets.flatMap((set) =>
+			(set.tunes ?? []).flatMap((entry) => {
+				const tune = findTuneByEntry(entry, window.tunesData);
+				if (!tune) return [];
+
+				const abcs = Array.isArray(tune.abc)
+					? tune.abc
+					: tune.abc
+						? [tune.abc]
+						: [];
+				if (!abcs.length) return [];
+
+				// Resolve which setting is active for this entry (mirrors _buildSetTuneEntry)
+				let settingIdx = 0;
+				if (abcs.length > 1) {
+					if (entry.theSessionSettingId != null) {
+						const found = abcs.findIndex((a) =>
+							a.includes(`#setting${entry.theSessionSettingId}`)
+						);
+						if (found >= 0) settingIdx = found;
+					} else if (entry.x != null) {
+						const found = abcs.findIndex((a) =>
+							new RegExp(String.raw`(?:^|\n)X:\s?${entry.x}\n`).test(a)
+						);
+						if (found >= 0) settingIdx = found;
+					}
+				}
+
+				return [abcs[settingIdx]];
+			})
+		);
+
+		sendToEskinsTool(abcStrings, { shareName: this._current.name });
 	}
 
 	_openPreview() {

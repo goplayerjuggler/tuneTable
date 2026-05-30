@@ -46,7 +46,8 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "1.1.8"
+    "@goplayerjuggler/abc-tools": "1.1.9",
+    "pako": "^2.1.0"
   },
   "devDependencies": {
     "@eslint/css": "^0.13.0",
