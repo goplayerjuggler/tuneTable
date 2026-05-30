@@ -8,7 +8,7 @@ import Modal from "./Modal.js";
 import AbcJs from "abcjs";
 import { reprocessTune } from "../../processTuneData.js";
 import { resolveAbcForEntry, tuneMatchesEntry } from "../setUtils.js";
-
+import { sendToEskinsTool } from "./sendToEskinsTool.js";
 /**
  * ### AbcModal
  * **Purpose**: Display sheet music for a single tune or for a full set of tunes.
@@ -85,6 +85,7 @@ export default class AbcModal extends Modal {
               aria-label="Save changes">
               💾 Save
             </button>
+			 <button id="eskinBtn" class="nav-btn" aria-label="Open in Michael Eskin’s ABC Transcription Tools">Open in ABC Transcription Tools</button>
             <button id="doubleBtn" class="transpose-btn"
               aria-label="Double bar length">2 × bar</button>
             <button id="halveBtn" class="transpose-btn"
@@ -138,7 +139,8 @@ export default class AbcModal extends Modal {
 				pageCounter: document.getElementById("pageCounter"),
 				saveBtn: document.getElementById("saveAbcBtn"),
 				contextRow: document.getElementById("abcContextRow"),
-				contextSelect: document.getElementById("abcContextSelect")
+				contextSelect: document.getElementById("abcContextSelect"),
+				eskinBtn: document.getElementById("eskinBtn")
 			};
 			this.setupControls();
 		}
@@ -493,6 +495,10 @@ export default class AbcModal extends Modal {
 				e.stopPropagation();
 			}
 		});
+
+		this.elements.eskinBtn?.addEventListener("click", () =>
+			this._sendToEskinsTool()
+		);
 	}
 
 	// ── Lifecycle ─────────────────────────────────────────────────────────────
@@ -706,6 +712,29 @@ export default class AbcModal extends Modal {
 		this.callbacks.renderTable();
 		this.callbacks.populateFilters();
 		this.close();
+	}
+
+	/**
+	 * Collect the current ABC content — transposed setting in solo mode,
+	 * or all resolved set-entry ABCs in set mode — and forward to Eskin's tool.
+	 */
+	_sendToEskinsTool() {
+		if (this.isSetMode) {
+			const ctx = this.setContexts[this.currentContextIndex - 1];
+			const abcStrings = (ctx.tunes ?? []).flatMap((entry) => {
+				const tune = (window.tunesData ?? []).find((t) =>
+					tuneMatchesEntry(t, entry)
+				);
+				const abc = resolveAbcForEntry(entry, tune);
+				return abc ? [abc] : [];
+			});
+			sendToEskinsTool(abcStrings, { shareName: ctx.setName });
+		} else {
+			// Solo mode: send the currently displayed (possibly transposed) setting
+			sendToEskinsTool([this.currentTransposedAbc], {
+				shareName: this.tune?.name ?? "Tune"
+			});
+		}
 	}
 
 	_onClose() {

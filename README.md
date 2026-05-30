@@ -82,8 +82,8 @@ Around 2005, I made another [table of tunes](http://malcolm.schonfield.free.fr/z
 ## Thanks
 Thanks to: 
 * Paul Rosen and Gregory Dyke for their fantastic library [abcjs](https://github.com/paulrosen/abcjs). These days it’s behind most of the online resources related to music written in ABC format.
-* Michael Eskin for his amazing online ABC editor, [ABC tools](https://michaeleskin.com/app/abctools.html), which I’ve found very handy over the years. Michael has already kindly given me a several tips about handling ABC. The code for the incipit generator – now in my abc-tools repo – is a fork of his code.
 * Jeremy from [thesession.org](https://thesession.org) for providing such a great resource and helping me with a question about it. Thesession was an inspiration for quite a few features here.
+* Michael Eskin for his amazing online resource, [ABC Transcription Tools](https://michaeleskin.com/app/abctools.html), and for his interest in this project. The code for the incipit generator – now in my [abc-tools](#abc-tools--a-related-repo) repo – is a fork of his code. And this tool has features to open tunes in ABC Transcription Tools.
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project.
 * Gilles Reymond for requesting the set list & print feature.
 * Treasa Harkin, at [itma.ie](https://itma.ie), for reviewing an earlier version and for suggesting two features which have since been made: the intro page and the “badge filtering”. 

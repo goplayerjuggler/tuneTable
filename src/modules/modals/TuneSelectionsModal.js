@@ -175,11 +175,11 @@ export default class TuneSelectionsModal extends Modal {
 							<input type="text" class="ts-name-input" placeholder="Set list name…" />
 						</div>
 						<div class="ts-action-row">
-							<button class="btn btn-sm ts-new-btn"       title="Create a new set list">✨ New</button>
-							<button class="btn btn-sm ts-save-btn"      title="Save">💾 Save</button>
-							<button class="btn btn-sm ts-duplicate-btn" title="Duplicate">📋 Duplicate</button>
-							<button class="btn btn-sm ts-copy-btn"      title="Copy set list data to clipboard as JS literal">⬡ Copy data</button>
-							<button class="btn btn-sm ts-delete-btn"    title="Delete this set list">🗑️ Delete</button>
+							<button class="btn btn-sm ts-new-btn"       aria-label="Create a new set list">✨ New</button>
+							<button class="btn btn-sm ts-save-btn"      aria-label="Save">💾 Save</button>
+							<button class="btn btn-sm ts-duplicate-btn" aria-label="Duplicate">📋 Duplicate</button>
+							<button class="btn btn-sm ts-copy-btn"      aria-label="Copy set list data to clipboard as JS literal">⬡ Copy data</button>
+							<button class="btn btn-sm ts-delete-btn"    aria-label="Delete this set list">🗑️ Delete</button>
 						</div>
 						<div class="ts-saved-row">
 							<span>Saved set lists:</span>
@@ -195,8 +195,8 @@ export default class TuneSelectionsModal extends Modal {
 			</div>
 			<div class="modal__footer">
 				<button class="btn ts-close-btn">Close</button>
-				<button class="btn btn-primary ts-preview-btn" title="Print preview">🖨️ Preview &amp; print</button>
-				<button class="btn ts-eskin-btn" title="Open in Michael Eskin’s ABC Transcription Tools">Open in Michael Eskin’s ABC Transcription Tools</button>
+				<button class="btn btn-primary ts-preview-btn" aria-label="Print preview">🖨️ Preview &amp; print</button>
+				<button class="btn ts-eskin-btn" aria-label="Open in Michael Eskin’s ABC Transcription Tools">Open in ABC Transcription Tools</button>
 			</div>`;
 
 		this.element
