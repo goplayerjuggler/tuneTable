@@ -19,7 +19,7 @@ Beed e2de f2df efdB|A2Bc dfec dBAF E2FA:|`,
 	crossReferences: [
 		{
 			theSessionId: 440,
-			index: 1 //The Drunken Landlady / Christmas Eve / The Abbey Reel - CNG, COM
+			index: 4 //The Drunken Landlady / Christmas Eve / The Abbey Reel - CNG, COM
 		}
 	]
 };

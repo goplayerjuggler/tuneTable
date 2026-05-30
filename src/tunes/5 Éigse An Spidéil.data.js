@@ -14,5 +14,11 @@ K:Gmajor
  |:c4 B4|(3ABc BA GEDB|c4 B2 (3GBd|eage dcBd|
  c4 B4|(3ABc BA GEDG|EFGE B,EGE|1 FGAF GBdB:|2 FGAB cBAd||`,
 	theSessionId: 20543,
-	theSessionSettingId: 40673
+	theSessionSettingId: 40673,
+	crossReferences: [
+		{
+			theSessionId: 474,
+			index: 1
+		}
+	]
 };
