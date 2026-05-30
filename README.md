@@ -69,7 +69,7 @@ Most (but not all) of the tune settings were imported from [thesession.org](http
 
 ## Upcoming features / wishlist
 Here are some features I would like to have:
-* improve the score viewer: adapt the score layout depending on user input and available screen space; print functionality (maybe add outbound links to Michael Eskin's abcTools which already has such functionality)
+* improve the score viewer: adapt the score layout depending on user input and available screen space.
 * a user preferences UI: settings for sorting and displaying tunes, importing data, and PDF output.
 * provide several incipits for a single tune – indexing by B, C parts etc.
 * parsing of ABC to determine the structure of a tune – i.e. is it made up of parts ABCDE, or AABB, or something else.
@@ -83,7 +83,7 @@ Around 2005, I made another [table of tunes](http://malcolm.schonfield.free.fr/z
 Thanks to: 
 * Paul Rosen and Gregory Dyke for their fantastic library [abcjs](https://github.com/paulrosen/abcjs). These days it’s behind most of the online resources related to music written in ABC format.
 * Jeremy from [thesession.org](https://thesession.org) for providing such a great resource and helping me with a question about it. Thesession was an inspiration for quite a few features here.
-* Michael Eskin for his amazing online resource, [ABC Transcription Tools](https://michaeleskin.com/app/abctools.html), and for his interest in this project. The code for the incipit generator – now in my [abc-tools](#abc-tools--a-related-repo) repo – is a fork of his code. And this tool has features to open tunes in ABC Transcription Tools.
+* Michael Eskin for his amazing online resource, [ABC Transcription Tools](https://michaeleskin.com/app/abctools.html), and for his interest in this project. The code for the incipit generator – now in my [abc-tools](#abc-tools--a-related-repo) repo – is a fork of his code. This tool also has features to open tunes in ABC Transcription Tools.
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project.
 * Gilles Reymond for requesting the set list & print feature.
 * Treasa Harkin, at [itma.ie](https://itma.ie), for reviewing an earlier version and for suggesting two features which have since been made: the intro page and the “badge filtering”. 
