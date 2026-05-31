@@ -9,7 +9,7 @@ H: Info copiée depuis l’album : « Jouée par M. Rouffet, né vers 1900, viol
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 N:0. Pour des infos discographiques, voir la [mazurka de Louis Jarraud](ttId=471)
-N: 1. Les accords donnés sontune parmi de multiples possibilités – 
+N: 1. Les accords donnés sont une parmi de multiples possibilités – 
 N: le mieux serait d’écouter la version de Duo Rivaud Lacouchie.
 N: 2. Dans les « sleeve notes » de l’album, cet air est aussi 
 N: appelé « mazurka de Saint-Bonnet ».
