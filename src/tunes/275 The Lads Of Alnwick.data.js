@@ -1,7 +1,7 @@
 export default {
-	origin: "England, Northumberland",
 	abc: `X:1
 T:The Lads Of Alnwick
+O:England; Northumberland.
 R:three-two
 L:1/8
 M:3/2

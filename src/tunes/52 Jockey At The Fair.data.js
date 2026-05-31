@@ -3,7 +3,7 @@ export default {
 X: 3
 T: Jockey At The Fair
 R: Set dance
-O: Ireland and England
+O: Ireland; England.
 M: 6/8
 L: 1/8
 B: “The Roche Collection of Traditional Irish Music, Volume II”, page 32, tune #277

@@ -323,14 +323,13 @@ b ~g3 "D"agea "G"gage dBGA|B2 BG "D"AGEG "G"GEDE Gd|
 		theSessionSettingId: 15991
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-05-30",
 		abc: `X:1
 T:Newcastle
 R:barndance
+O:England
 L:1/8
 M:4/4
-N:My setting of the tune, with chords.
-N:---
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/3727#setting32370
 N:Setting entered in thesession by user “Mix O'Lydian” on 2018-04-30
