@@ -9,6 +9,7 @@ O: Sweden; Värmland.
 R: Polska
 Z:abc-transcription Malcolm Schonfield
 H:This is an attempt to write down the complex rhythms of the version taught by the fiddler Katja Levander, in a workshop in Paris, April 2026. I don't think it's quite right, but maybe it's good enough as an approximation. I've spent ages already getting it this far!
+H:Katja learnt it from Mia Marine.
 M: 9/8
 L: 1/8
 Q:1/4=200
@@ -22,6 +23,7 @@ A2 (3:B^cd e2 f2a|geg fdf e2a | geg fdf e2d |(3^cBc-c d6  :|
 	references: [
 		{
 			url: "https://youtu.be/_q4CyRLg-eQ",
+			album: "Guldvingen (2016)",
 			artists:
 				"Mattias Pérezm mandolin(?); Nina Pérez, fiddle(?); Mia Marine, 5-stringed fiddle",
 			notes: `This was a reference shared by Katja. I find it to be quite close to her version, but with some differences.

@@ -16,5 +16,12 @@ BAG AFD GBd ~g3|def gdB[1 cAF G2A:|2 cAF G2B||
 bag agf g2g fd^c|def gdB[1 cAF G2B:|2 cA F GBc||
 |:dBG GFG DGB dBG|cA=F FEF CFA cBA|
 dBG GBd g2g fd^c|def gdB[1 cAF GBc:|2 cAF G2A||`,
-	theSessionId: 1334
+	theSessionId: 1334,
+	references: [
+		{
+			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2026/?track=3",
+			artists: "Andy McGann, fiddle; Brian Conway, fiddle; Felix Dolan, piano",
+			notes: "Luck penny; Pipe on the hob (1988)"
+		}
+	]
 };
