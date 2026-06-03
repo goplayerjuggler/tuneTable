@@ -1,5 +1,6 @@
 export default {
-	abc: `
+	abc: [
+		`
 X: 1
 T: Denis Doody's
 S: Dónal Lunny & his band
@@ -37,13 +38,14 @@ G/F/G/ | EF/E/ DB,|:SEE z/G/F/G/|A/F/ D>E F|G A/c/B/A/ G|EF/E/ DB,|
 E E>F G|A B/c/B/A/ G|1 Fd FG | EF/E/ DB, :|2 Fd AB||
 |: e e/f/e/d/ B|e e/f/e/d/ B/^c/|de f2|ge f2|
 gf ge|BB AB|zE>F G|1 A B/c/B/A/ B :|2  A B/c/B/A/ G | EF/E/ DB, !D.S.! ||
-
+`,
+		`
 X: 2
 T: Denis Doody's
-N: Same as previous but “cut up” differenly
+N: Same as previous but “cut up” differently.
 N: 1. This is a more concise way to write it; but it’s less accurate 
 N: w.r.t. the A part’s structure, IMO.
-N: I don't hear it this way! Just leaving it here for reference.
+N: I don't hear it this way; just leaving it here for reference.
 R: polka
 M: 2/4
 L: 1/8
@@ -52,7 +54,8 @@ G/F/G/|:EF/E/ DB,|EE z/G/F/G/|A/F/ D>E F|GA/c/ B/A/G|
 EF/E/ DB,|E E>F G|AB/c/ B/A/G|1 Fd FG :|2 Fd AB||
 e e/f/e/d/ B|e e/f/e/d/ B/^c/|de f2|ge f2|
 gf ge|BB AB|zE>FG|1 A B/c/B/A/ B :|2 AB/c/ B/A/ G ||
-`,
+`
+	],
 	theSessionId: 1338,
 	incipit: `
 X: 1

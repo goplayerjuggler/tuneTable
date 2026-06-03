@@ -1,4 +1,5 @@
 export default {
+	tags: "jig from reel",
 	ttId: 535,
 	abc: `X:1
 C:Malcolm Schonfield
