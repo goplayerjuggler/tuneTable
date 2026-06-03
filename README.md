@@ -147,7 +147,7 @@ I currently use the following settings.
 //open the project locally, then in Dev Tools run this:
 localStorage.setItem('theSessionImportConfig', JSON.stringify({
 	withComments: true,
-	skipLevel: "ifTuneExists",
+	skipLevel: "ifAbcExists",
 	doubleBarLengthWherePossible: true,
 	importAllSettingsForSpecifiedUser: true,
 	settingChoiceCriteria: [

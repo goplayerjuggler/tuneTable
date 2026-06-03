@@ -20,6 +20,7 @@ const defaultTheSessionImportConfig = {
  * Import behaviour config.
  *
  * skipLevel:
+ *   'ifAbcExists'    — skip if a tune with the same theSessionId already exists, and that tune has ABC.
  *   'ifTuneExists'    — skip if a tune with the same theSessionId already exists.
  *   'ifSettingExists' — skip only if the chosen setting's URL is already present in
  *                       an ABC string. When the tune exists but not the setting, the
@@ -650,6 +651,11 @@ abc: ${raw}`);
 				const existingTune = this.tunesData.find(
 					(t) => t.theSessionId === tuneId
 				);
+
+				if (skipLevel === "ifAbcExists" && existingTune?.abc) {
+					skippedNames.push(tuneData.name);
+					continue;
+				}
 
 				if (skipLevel === "ifTuneExists" && existingTune) {
 					skippedNames.push(tuneData.name);
