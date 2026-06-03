@@ -709,8 +709,7 @@ export default class AbcModal extends Modal {
 		}
 
 		await this.callbacks.saveTunesToStorage();
-		this.callbacks.renderTable();
-		this.callbacks.populateFilters();
+		this.callbacks.applyFilters();
 		this.close();
 	}
 

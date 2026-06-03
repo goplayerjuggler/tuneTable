@@ -616,14 +616,21 @@ function prepareTunesForExport(tunes) {
 	// deep copy so the original data is never mutated.
 	const tunesCopy = JSON.parse(JSON.stringify(tunes));
 	tunesCopy.forEach((tune) => {
-		["name", "key", "rhythm", "meter", "composer", "origin", "titles"].forEach(
-			(prop) => {
-				if (tune[`${prop}IsFromAbc`]) {
-					delete tune[prop];
-					delete tune[`${prop}IsFromAbc`];
-				}
+		[
+			"name",
+			"key",
+			"rhythm",
+			"meter",
+			"composer",
+			"origin",
+			"titles",
+			"incipit"
+		].forEach((prop) => {
+			if (tune[`${prop}IsFromAbc`]) {
+				delete tune[prop];
+				delete tune[`${prop}IsFromAbc`];
 			}
-		);
+		});
 		delete tune.selected;
 		delete tune.incipitSvg;
 		delete tune.referencesFromAbc;

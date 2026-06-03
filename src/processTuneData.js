@@ -95,6 +95,7 @@ function processTuneData(tune) {
 
 			if (!tune.incipit) {
 				processed.incipit = getIncipit({ abc: abcArray[0] });
+				processed.incipitIsFromAbc = true;
 			}
 			if (!tune.contour) {
 				const withSwingTransform =
@@ -141,7 +142,10 @@ function reprocessTune(tune, options = {}) {
 	delete reprocessed.keyIsFromAbc;
 	delete reprocessed.rhythm;
 	delete reprocessed.rhythmIsFromAbc;
-	delete reprocessed.incipit;
+	if (reprocessed.incipitIsFromAbc) {
+		delete reprocessed.incipit;
+		delete reprocessed.incipitIsFromAbc;
+	}
 	delete reprocessed.incipitSvg;
 	delete reprocessed.referencesFromAbc;
 
