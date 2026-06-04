@@ -63,6 +63,24 @@ function promptForHeadersToRemove() {
 	return [...result.trim().toUpperCase()];
 }
 
+async function useUrl(url) {
+	const result = prompt(
+		`Copy to clipboard (Y)? Or open in a new browser tab (O)?`,
+		"Y"
+	);
+	if (result?.toLowerCase() === "o")
+		window.open(url, "_blank", "noopener,noreferrer");
+	else if (result?.toLowerCase() === "y")
+		try {
+			await navigator.clipboard.writeText(url);
+		} catch {
+			alert(`Copy failed. 
+Try again? If you go faster it may well work.
+
+(Sorry, this part of the UI is a bit "rough and ready"!)`);
+		}
+}
+
 // ─── Compression ─────────────────────────────────────────────────────────────
 
 function bytesToBase64URL(bytes) {
@@ -127,7 +145,7 @@ export function sendToEskinsTool(abcStrings, options = {}) {
 	const shareName = prompt("Name for this share link:", defaultName);
 	if (shareName === null) return; // user cancelled the name prompt
 
-	// 4) Build URL and open
+	// 4) Build URL
 	const url = buildShareUrl(payload, shareName.trim() || defaultName);
 	if (!url) {
 		alert(
@@ -137,6 +155,6 @@ export function sendToEskinsTool(abcStrings, options = {}) {
 		);
 		return;
 	}
-
-	window.open(url, "_blank", "noopener,noreferrer");
+	// 5) use url
+	useUrl(url);
 }
