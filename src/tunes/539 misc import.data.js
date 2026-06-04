@@ -556,7 +556,7 @@ fbb fbb eaa eaa|fec ~a3[1 fec B2A:|2 fec Bce||`,
 		theSessionId: 299,
 		theSessionSettingId: 13054
 	},
-	{
+	{parts:'AABB', 
 		abc: `X:1
 T:Eileen O'Riordan's
 R:slide
@@ -647,8 +647,6 @@ C:Larry Redican
 R:reel
 L:1/16
 M:4/4
-N:Wit chords....
-N:---
 N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/613#setting50196
 N:Setting entered in thesession by user “ceili” on 2024-04-15
@@ -669,12 +667,6 @@ C:Réjean Lizotte
 R:march
 L:1/8
 M:4/4
-N:Just posting a "fix" to prior posted version, basically placing the pick-up
-N:notes before the eight-bar phrases, and changing the meter to 2/4 (because the
-N:prior poster had written 2/4 measures). *Note: the entire piece could be placed
-N:in 4/4, but then the measures need to be re-written in 4/4 as well. I hope this
-N:new version makes the tune more readable.
-N:---
 N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/17592#setting49595
 N:Setting entered in thesession by user “Mike Bennett” on 2024-02-09
