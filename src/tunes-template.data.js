@@ -809,6 +809,19 @@ export default {
 						}
 					],
 					collapsed: true
+				},
+				{
+					name: "червона калина",
+					tunes: [
+						{
+							ttId: 538
+						},
+						{
+							ttId: 514,
+							x: 2
+						}
+					],
+					collapsed: true
 				}
 			]
 		},

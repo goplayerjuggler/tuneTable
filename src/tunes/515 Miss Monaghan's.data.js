@@ -16,5 +16,13 @@ K:Dmajor
 |:faab afdf gefd edBc|~d3B ABde fede fee2|
 faab afdf g2fd edBc|d2dB ABdB AFEG FDD2:|`,
 	theSessionId: 471,
-	theSessionSettingId: 471
+	theSessionSettingId: 471,
+	references: [
+		{
+			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2026/?track=11",
+			notes: "Miss Monaghan's; The ewe; Jackie Coleman's (1991)",
+			artists:
+				"Catherine McEvoy, flute; John McEvoy, fiddle; Felix Dolan, piano"
+		}
+	]
 };

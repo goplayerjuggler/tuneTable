@@ -208,6 +208,8 @@ AG~G2 AG~G2 GEDE GED2|A2AG ABcd eBdB BAA2||
 		theSessionSettingId: 1341
 	},
 	{
+		parts: "AABB",
+		fileDate: "2026-6-03",
 		abc: `X:1
 T:The Carraroe
 R:jig
@@ -217,7 +219,6 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/771#setting24743
 N:Setting entered in thesession by user “JACKB” on 2014-08-18
 N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
 K:Dmajor
 |:DED F2A dfe d2A|B/c/dB Adf afd e2f|
 DED F2A dfe d2A|B/c/dB AFA dAF E2D:|

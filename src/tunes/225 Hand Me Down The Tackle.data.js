@@ -1,4 +1,6 @@
 export default {
+	parts: "AABB’",
+	AKA: "Tom Steele's",
 	abc: `X:1
 T:Hand Me Down The Tackle
 R:reel
