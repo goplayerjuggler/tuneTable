@@ -155,16 +155,16 @@ localStorage.setItem('theSessionImportConfig', JSON.stringify({
 			preferredUserIds: [
 				[40345, "GoPlayerJuggler"],
 				[11705, "ceolachan"],
-				[4763, "Dr. Dow"],
+				[3150, "slainte"],
 				[5628, "hnorbeck"],
 				[13094, "birlibirdie"],
 				[11834, "Nigel Gatherer"],
 				[1, "Jeremy"],
 				[6451, "jackb"],
 				[116353, "John E Roche"],
-				[3150, "slainte"],
 				[60897, "Fernando Durbán Galnares"],
 				[119445, "piperDave"],
+				[4763, "Dr. Dow"],
 				[8648, "erik-fiddler"]
 			]
 		},
