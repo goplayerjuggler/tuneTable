@@ -1,4 +1,5 @@
 export default {
+	tags: "shifted downbeat",
 	abc: [
 		`
 X: 1

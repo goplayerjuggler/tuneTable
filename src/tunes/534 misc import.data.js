@@ -260,38 +260,27 @@ B2 eB gBeB B2 dB ADFA|(3Bcd ef g3a gedB A2GA||`,
 		theSessionSettingId: 25454
 	},
 	{
-		fileDate: "2026-05-18",
-		abc: [
-			`X:1
+		fileDate: "2026-06-05",
+		parts: "AABB",
+		abc: `X:1
 T:The Lilting Fisherman
 R:reel
 L:1/16
 M:4/4
-N:James Morrison recorded a strange version of this which puts the 1st part in a
-N:different key altogether.
-N:X: 1 T: Kerryman's Daughter, The M: 4/4 L: 1/8 R: reel K: Gmaj DE|G2~G2
-N:G2Bd|egdB cABA|GE~E2 G2Bd|gedB cABA| GBAF G2Bd|egdB cABA|GE~E2 G2Bd|gedB ~c3d||
-N:eg~g2 ~a3e|gedB cAA2|eg~g2 eaab|(3c'ba b^g aba=g| eg~g2 eaaf|gedB cABA|GE~E2
-N:G2Bd|egdB ~c3d| eg~g2 ~a3e|gedB cAA2|eg~g2 eaab|(3c'ba b^g abab| c'aba agef|gedB
-N:cABA|GE~E2 G2Bd|egdB cABA||
-N:---
-N:Imported into *tuneTable* on 2026-05-18,
-N:from https://thesession.org/tunes/345#setting13147
-N:Setting entered in thesession by user “Dr. Dow” on 2012-06-20
+N:Imported into *tuneTable* on 2026-06-05,
+N:from https://thesession.org/tunes/345#setting13144
+N:Setting entered in thesession by user “slainte” on 2003-05-13
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
-K:Gmajor
-DE|G2~G2 G2Bd egdB cABA|GE~E2 G2Bd gedB cABA|
-GBAF G2Bd egdB cABA|GE~E2 G2Bd gedB ~c3d||
-eg~g2 ~a3e gedB cAA2|eg~g2 eaab (3c'ba b^g aba=g|
-eg~g2 eaaf gedB cABA|GE~E2 G2Bd egdB ~c3d|
-eg~g2 ~a3e gedB cAA2|eg~g2 eaab (3c'ba b^g abab|
-c'aba agef gedB cABA|GE~E2 G2Bd egdB cABA||`
-		],
+N:(edited after importing)
+K:Cmajor
+|:GEE2 GAcd edcB cAA2|GEE2 GAcd[1 edcB c3A:|2 edcB c3d||
+|:egg2 agea gede cAA2|egg2 eaa2 gabg a3g|
+  egg2 agea gede cAA2|GEE2 GAcd edcB c3A:|`,
 		theSessionId: 345,
-		theSessionSettingId: 13147
+		theSessionSettingId: 13144
 	},
 	{
+		excludeFromBuild: true,
 		fileDate: "2026-05-18",
 		abc: `X:1
 T:The Caucus

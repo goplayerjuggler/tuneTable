@@ -1,4 +1,6 @@
 export default {
+	tags: "flexible structure",
+
 	incipit: `X: 4
 T: Captain White's
 R: jig

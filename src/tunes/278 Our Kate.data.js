@@ -1,6 +1,7 @@
 export default {
 	abc: `X:1
 T:Our Kate
+C:Kathryn Tickell
 R:waltz
 L:1/8
 M:3/4
