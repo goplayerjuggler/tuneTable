@@ -21,6 +21,6 @@ D2B2 D2BA GFGA B3d | (3edc (3dc=B (3cBG (3AGF DEFD E2DE |
 C2c2 =BGFD C2DE FGFD | CDCD CDCD C4-C2 :|
 P:variations
 (3"^v1"EDC (3FED (3EDC FD`,
-	tags: "crooked",
+	tags: "pas carré",
 	parts: "AABB"
 };

@@ -65,7 +65,7 @@ Adfd Adfd g2fg efge|aAA2 BABc[1 dfec d2dB:|2 dfec dABc||`,
 		theSessionSettingId: 32617
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-08",
 		abc: `X:1
 T:The Graf Spee
 R:reel
@@ -81,7 +81,7 @@ EDcD EGG2 AGcG AGcG|EDcD EGG2 AGcG EDD2|
 EDcD EGG2 AGcG AGcG|EDD2 EGG2 AGcG EDD2||
 e3d cAGE Gced cAA2|eAA2 dAcA GEcE EDD2|
 e3d cAGE Gced cAA2|a3g e3d cAGE EDD2||
-egge g3d eaag a3g|(3efg ed cBcd e2 ge edd2|
+egge g3d eaag a3g|(3efg ed cBcd e2ge edd2|
 egge g3d eaag a3g|(3efg ed cBcd eage edd2||
 ecde cAGE Gced cAGE|GAcd ecdc AGcG EDD2|
 ecde cAGE Gced cAAG|a3g e3d cAGE EDDG||
@@ -90,12 +90,14 @@ g2ae geed ecdB cAGE|GAcd ecdc cAGE EDD2|]`,
 		parts: "ABCDE",
 		theSessionId: 581,
 		theSessionSettingId: 27363
-	}, //260518 TODO
+	},
 	{
 		groups: "su",
-		fileDate: "2026-05-18",
+		parts: "AB",
+		fileDate: "2026-06-08",
 		abc: `X:1
 T:Johnny Loughran's
+T:Over The Bridge To Beeta
 R:reel
 L:1/16
 M:4/4
@@ -103,17 +105,23 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/1643#setting4562
 N:Setting entered in thesession by user “Dr. Dow” on 2005-06-05
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
 |:AFdF AdAB AFdF efdB|AFdF ABde[1 fedf e2dB:|2 fedf e2fe||
 defg a^gaf ~b3f ~a3f|defg a^gaf bfaf (3ef=g fe|
 defg a^gaf ~b3f ~a3f|~g3e ~f3e dgfe dcdB||`,
 		theSessionId: 1643,
+		references: [
+			{
+				notes: "The setting I learnt is a bit different" //todo
+			}
+		],
 		theSessionSettingId: 4562
 	},
 	{
 		groups: "su",
-		fileDate: "2026-05-18",
+		tags: "pas carré",
+		fileDate: "2026-06-08",
+		parts: "AABB",
 		abc: `X:1
 T:The Fall Of Dunboy
 C:John Dwyer
@@ -127,15 +135,16 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/10336#setting40252
 N:Setting entered in thesession by user “Theirlandais” on 2021-01-17
 N:*abc-tools: convert to M:4/2*
-N:(todo: not yet revised)
+N:(edited after importing)
+N:Tagging this as “pas carré” because the B part is in 9 (long) bars –
+N:not a multiple of 4, as is the general rule.
 K:Gmajor
 |:dc|B2GB DBGB d2BG d2BG|B2GB DBGB c2AD c2AD|
 BGBd c2dc BGBd gfdc|BGBd gfdc B2G2 G2:|
 |:Bc|dgBg d2Bd gBdg B3d|~g3a b3a gfgb d3e|
 =fefd cdcd fefd g3e|fgfd cdfa g2gf g3a|
-b3a gfga b2bg d3e|fafd fafd gbgd gbgd|
-fafd fafd dccB c2dc|BGBd d2cA 
-BGBd gfdc|BGBd gfdc B2G2 G2:|`,
+b3a gfga b2bg d3e|fafd fafd gbgd gbgd|fafd fafd dccB c2dc|
+BGBd d2cA BGBd gfdc|BGBd gfdc B2G2 G2:|`,
 		theSessionId: 10336,
 		theSessionSettingId: 40252
 	},

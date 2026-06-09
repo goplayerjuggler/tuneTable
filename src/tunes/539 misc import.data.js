@@ -209,7 +209,7 @@ AG~G2 AG~G2 GEDE GED2|A2AG ABcd eBdB BAA2||
 	},
 	{
 		parts: "AABB",
-		fileDate: "2026-6-03",
+		fileDate: "2026-06-03",
 		abc: `X:1
 T:The Carraroe
 R:jig
@@ -556,7 +556,9 @@ fbb fbb eaa eaa|fec ~a3[1 fec B2A:|2 fec Bce||`,
 		theSessionId: 299,
 		theSessionSettingId: 13054
 	},
-	{parts:'AABB', 
+	{
+		parts: "AABB",
+		fileDate: "2026-06-09",
 		abc: `X:1
 T:Eileen O'Riordan's
 R:slide
@@ -565,7 +567,6 @@ M:12/8
 N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/4176#setting16936
 N:Setting entered in thesession by user “ceolachan” on 2005-01-30
-N:(todo: not yet revised)
 K:Amixolydian
 |:E2 A ABA G2 A Bcd|e2 A ABA G2 A F2 G|
  E2 A ABA G2 A Bcd|efe dcB A3 A3:|
