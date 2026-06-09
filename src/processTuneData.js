@@ -5,10 +5,14 @@ import {
 	normaliseKey,
 	getKey,
 	getMetadata,
-	getTunes
+	getTunes,
+	sortConstants
 } from "@goplayerjuggler/abc-tools";
 
-const applySwingTransform = ["hornpipe", "barndance", "fling", "mazurka"];
+const swingTransformRhythms =
+	sortConstants.DEFAULT_CONTOUR_OPTIONS.swingTransformRhythms;
+const swingTransform3_4_rhythms =
+	sortConstants.DEFAULT_CONTOUR_OPTIONS.swingTransform3_4_rhythms;
 
 function updateFromMetadata(
 	metaData,
@@ -99,7 +103,9 @@ function processTuneData(tune) {
 			}
 			if (!tune.contour) {
 				const withSwingTransform =
-					applySwingTransform.indexOf(processed.rhythm) >= 0;
+					swingTransformRhythms.includes(processed.rhythm) ||
+					(processed.meter === "3/4" &&
+						swingTransform3_4_rhythms.includes(processed.rhythm));
 				let shortAbc;
 				if (processed.incipit)
 					shortAbc = getIncipitForContourGeneration(processed.incipit);
@@ -182,7 +188,7 @@ function getIncipitWithSelector(tune, selector = {}) {
 
 export {
 	processTuneData,
-	applySwingTransform,
+	swingTransformRhythms as applySwingTransform,
 	reprocessTune,
 	getIncipitWithSelector
 };

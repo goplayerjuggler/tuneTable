@@ -46,7 +46,7 @@
     }
   ],
   "dependencies": {
-    "@goplayerjuggler/abc-tools": "1.1.9",
+    "@goplayerjuggler/abc-tools": "1.1.10",
     "pako": "^2.1.0"
   },
   "devDependencies": {
