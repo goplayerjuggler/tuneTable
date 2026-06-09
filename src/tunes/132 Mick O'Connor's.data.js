@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB",
 	abc: `X:1
 T:Mick O'Connor's
 C:Mick O'Connor

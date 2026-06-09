@@ -1,7 +1,8 @@
 export default {
+	parts: "AABB",
 	abc: `X:1
 T:Comb Your Hair And Curl It
-R:slip jig
+R:hop jig
 L:1/8
 M:9/8
 N:Imported into *tuneTable* on 2025-10-25,

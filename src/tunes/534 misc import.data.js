@@ -150,7 +150,8 @@ BGBd d2cA BGBd gfdc|BGBd gfdc B2G2 G2:|`,
 	},
 
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-09",
+		parts: "AABB",
 		abc: [
 			`X:1
 T:Willie Coleman's
@@ -162,7 +163,6 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/476#setting13367
 N:Setting entered in thesession by user “ceolachan” on 2010-03-04
 N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
 K:Gmajor
 |:A|B2 G AGE GED GBd|edB dgb age dBA|
 B2 G AGE GED GBd|edB dBA BGF G2:|
@@ -173,7 +173,8 @@ gfg edB dgb age|d^cd gdB AGF G2:|`
 		theSessionSettingId: 13367
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-09",
+		parts: "AABB",
 		abc: `X:1
 T:O'Connor's
 R:polka
@@ -183,35 +184,17 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/2097#setting25362
 N:Setting entered in thesession by user “ceolachan” on 2014-12-14
 N:*abc-tools: convert to M:4/4*
-N:(todo: not yet revised)
 K:Dmajor
 |:A>B df A>B d/e/f/e/|dB BA/B/ dB B/c/d/B/|
 AA/B/ df A>B df|eB cd ed d2:|
 |:af fe/f/ af f>e|dB BA/B/ dB B/c/d/f/|
-af f/e/d/f/ af fe/f|eB cd ed d2:|`,
+af f/e/d/f/ af fe/f/|eB cd ed d2:|`,
 		theSessionId: 2097,
 		theSessionSettingId: 25362
 	},
 	{
-		fileDate: "2026-05-18",
-		abc: `X:1
-T:The Curragh Races
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-05-18,
-N:from https://thesession.org/tunes/1760#setting21642
-N:Setting entered in thesession by user “Nigel Gatherer” on 2013-06-05
-N:*abc-tools: convert to M:4/4 & L:1/16*
-K:Edorian
-|:BEFE BEFE D2FA DEFA| BEFE BEFE D2FA FEE2:|
-|: ef/e/dB ef/e/dB AFdF AB/c/d2| ef/e/dB ef/e/dB AFdF FEE2:|`,
-		parts: "AB",
-		theSessionId: 1760,
-		theSessionSettingId: 21642
-	},
-	{
-		fileDate: "2026-05-18",
+		parts: "AABB",
+		fileDate: "2026-06-09",
 		abc: `X:1
 T:The Heathery Cruach
 R:reel
@@ -221,17 +204,18 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/1265#setting1265
 N:Setting entered in thesession by user “emily_bmore” on 2002-12-29
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
+N:(edited after importing)
 K:Dmajor
 |:Bc|d2AG FDAG FDAF E2Bc|d2AG FDAG FGAF Dgfe|
 d2AG FDAG FDAF E2FG|ABAG FDDE FGAF D2:|
 |:ed|cAA2 cAGB cBcd efed|cAA2 cAGB EFGE Dfed|
-cAA2 cAGB cBcd efe2|f2ed cAA2 EFGE A2:|`,
+cAA2 cAGB cBcd efe2|f2ed cAA2 EFGE D2:|`,
 		theSessionId: 1265,
 		theSessionSettingId: 1265
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-09",
+		parts: "AABB",
 		abc: `X:1
 T:Dusty Miller
 R:three-two
@@ -240,7 +224,6 @@ M:3/2
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/7436#setting20900
 N:Setting entered in thesession by user “ceolachan” on 2013-02-14
-N:(todo: not yet revised)
 K:Fmajor
 |:A3B c2A2 G2F2|E2G2 G2A2 B2G2|A3B c2A2 G2F2|C2F2 F2G2 A2F2:|
  |:A2c2 d2e2 f4|g2G2 G2A2 B2G2|A2c2 d2f2 "tr"e2de|f2F2 F2G2 A2F2:|`,
@@ -249,7 +232,8 @@ K:Fmajor
 	},
 
 	{
-		fileDate: "2026-05-18",
+		parts: "AB",
+		fileDate: "2026-06-09",
 		abc: `X:1
 T:The Ashplant
 R:reel
@@ -259,18 +243,17 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/726#setting25454
 N:Setting entered in thesession by user “JACKB” on 2014-12-27
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Edorian
-GA|BE E2 BAGA BE E2 G3A|BE E2 BABd (3gfe dB A2 GA|
-BE E2 BAGA BE E2 G3A|B2 BA (3Bcd ef gedB A2GA||
-B2 eB gBeB B2 dB ADFA|B2 eB g3a gedB A2 GA|
-B2 eB gBeB B2 dB ADFA|(3Bcd ef g3a gedB A2GA||`,
+GA|BEE2 BAGA BEE2 G3A|BEE2 BABd (3gfe dB A2GA|
+   BEE2 BAGA BEE2 G3A|B2BA (3Bcd ef gedB A2GA||
+   B2eB gBeB B2dB ADFA|B2eB g3a gedB A2GA|
+   B2eB gBeB B2dB ADFA|(3Bcd ef g3a gedB A2GA||`,
 		theSessionId: 726,
 		theSessionSettingId: 25454
 	},
 	{
-		fileDate: "2026-06-05",
-		parts: "AABB",
+		fileDate: "2026-06-09",
+		parts: "AB",
 		abc: `X:1
 T:The Lilting Fisherman
 R:reel
@@ -283,8 +266,8 @@ N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(edited after importing)
 K:Cmajor
 |:GEE2 GAcd edcB cAA2|GEE2 GAcd[1 edcB c3A:|2 edcB c3d||
-|:egg2 agea gede cAA2|egg2 eaa2 gabg a3g|
-  egg2 agea gede cAA2|GEE2 GAcd edcB c3A:|`,
+  egg2 agea gede cAA2|egg2 eaa2 gabg a3g|
+  egg2 agea gede cAA2|GEE2 GAcd edcB c3A||`,
 		theSessionId: 345,
 		theSessionSettingId: 13144
 	},
@@ -321,17 +304,16 @@ b ~g3 "D"agea "G"gage dBGA|B2 BG "D"AGEG "G"GEDE Gd|
 		theSessionSettingId: 15991
 	},
 	{
-		fileDate: "2026-05-30",
+		fileDate: "2026-06-09",
 		abc: `X:1
 T:Newcastle
-R:barndance
+R:country dance
 O:England
 L:1/8
 M:4/4
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/3727#setting32370
 N:Setting entered in thesession by user “Mix O'Lydian” on 2018-04-30
-N:(todo: not yet revised)
 K:Gmajor
 |:A2|"G" B2 d2 G2 A2|"G" G3 A G2 D2|"G" B2 d2 G2 d2|"C" e2 g4 fe|
  "G" d2 B2 A2 G2|"C" E2 e4 dc|"G" d2 B2 "D" A3 G|"G" G6:|
@@ -341,7 +323,8 @@ K:Gmajor
 		theSessionSettingId: 32370
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-09",
+		parts: "AABB",
 		abc: `X:1
 T:Her Long Dark Hair Flowing Down Her Back
 C:Junior Crehan
@@ -352,7 +335,6 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/1263#setting31232
 N:Setting entered in thesession by user “JACKB” on 2017-11-01
 N:*abc-tools: convert to M:4/2*
-N:(todo: not yet revised)
 K:Adorian
 |:cd|edce d2cA GE E2 GAcd|edce d2cd eaag a2g=f|
 edce d2cA GE E2 GAcd|edcA dcAG A2AG ABcd:|
