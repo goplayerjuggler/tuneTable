@@ -23,11 +23,7 @@ class ConcatenateTunesPlugin {
 
 	apply(compiler) {
 		const tunesDir = path.resolve(__dirname, "src", "tunes");
-		const templateFile = path.resolve(
-			__dirname,
-			"src",
-			"tunes-template.data.js"
-		);
+		const setListsFile = path.resolve(__dirname, "src", "set-lists.data.js");
 		// Persists across recompilations within one webpack session
 		let lastInputHash = null;
 
@@ -40,14 +36,14 @@ class ConcatenateTunesPlugin {
 						.filter((f) => f.endsWith(".data.js"));
 
 					// Hash based on filenames + mtimes — cheap and sufficient
-					const templateStat = fs.statSync(templateFile);
+					const setListsStat = fs.statSync(setListsFile);
 					const inputHash =
 						tuneFiles
 							.map((f) => {
 								const stat = fs.statSync(path.join(tunesDir, f));
 								return `${f}:${stat.mtimeMs}`;
 							})
-							.join("|") + `|template:${templateStat.mtimeMs}`;
+							.join("|") + `|template:${setListsStat.mtimeMs}`;
 
 					if (inputHash === lastInputHash) {
 						// Inputs unchanged — skip silently (handles duplicate startups
@@ -85,7 +81,7 @@ class ConcatenateTunesPlugin {
 				compilation.contextDependencies.add(tunesDir);
 
 				// Watch the template file
-				compilation.fileDependencies.add(templateFile);
+				compilation.fileDependencies.add(setListsFile);
 
 				// Watch individual tune files for edits
 				// (contextDependencies covers add/delete but not content changes)

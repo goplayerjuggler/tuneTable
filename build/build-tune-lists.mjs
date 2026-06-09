@@ -11,7 +11,7 @@ const { getMetadata, getTunes } = abcTools;
 const __dirName = path.dirname(fileURLToPath(import.meta.url));
 
 const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
-const TEMPLATE_FILE = path.resolve(__dirName, "../src/tunes-template.data.js");
+const setListsFile = path.resolve(__dirName, "../src/set-lists.data.js");
 const DEFAULT_OUT_DIR = path.resolve(__dirName, "../dist/tune-lists");
 const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
 const defaultListName = "goPlayer’s tune list";
@@ -132,10 +132,8 @@ function parseTuneFile(content) {
  * @param {string} content - Raw template file content.
  * @returns {object}
  */
-function parseTemplateFile(content) {
-  const body = content
-    .replace("//CopyTunesHere", "tunes: [],")
-    .replace(/export\s+default\s*(?=\{)/, "return ");
+function parseSetListsFile(content) {
+  const body = content.replace(/export\s+default\s*(?=\{)/, "return ");
 
   return new Function(body)();
 }
@@ -275,9 +273,16 @@ export async function buildTuneLists({
     });
   }
 
-  const templateContent = await fs.readFile(TEMPLATE_FILE, "utf8");
-  const template = parseTemplateFile(templateContent);
-  const allSetLists = template.setLists ?? [];
+  const templateContent = await fs.readFile(setListsFile, "utf8");
+
+  const allSetLists = (() => {
+    try {
+      const parsed = parseSetListsFile(templateContent);
+      return parsed.setLists ?? [];
+    } catch {
+      return [];
+    }
+  })();
 
   await fs.mkdir(outputDir, { recursive: true });
 
