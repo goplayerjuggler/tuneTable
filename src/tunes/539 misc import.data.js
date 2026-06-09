@@ -704,6 +704,8 @@ d/|^c<eA>e c<e d/B/A c<eA>e d/c/B/A/ G>d|^c<eA>e c<ee>f g>ag>e d/=c/B/A/ G3/2:|`
 		theSessionSettingId: 14373
 	},
 	{
+		parts: "AABB’",
+		fileDate: "2026-06-09",
 		abc: `X:1
 T:The Further, The Deeper
 R:jig
@@ -713,7 +715,6 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/4844#setting38997
 N:Setting entered in thesession by user “JACKB” on 2020-09-13
 N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
 K:Adorian
 |:e3 edB dBA A2B|G3 GBd edB AB/c/d|
 e3 efg aea e2f|g3 dB/c/d[1 ecA A2d:|2 ecA Ae/f/g||

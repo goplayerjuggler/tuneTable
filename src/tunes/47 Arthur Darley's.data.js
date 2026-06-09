@@ -1,6 +1,9 @@
 export default {
+	parts: "AABBCC",
+	aka: "Arthur Darley's Swedish",
 	abc: `X:1
 T:Arthur Darley's
+T:The Swedish
 C:Arthur Darley
 R:jig
 L:1/8

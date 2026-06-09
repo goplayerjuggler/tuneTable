@@ -1,17 +1,17 @@
 export default {
+	persoTags: "YvAn",
+	parts: "AABB",
 	abc: `X:1
 T:The Man Of Aran
 C:Darach De Brun
 R:reel
-L:1/8
+L:1/16
 M:4/4
-N:Imported into *tuneTable* on 2025-10-25,
-N:from https://thesession.org/tunes/973#setting973
-N:Setting entered in thesession by user “Mark Cordova” on 2002-09-18
+H:Adapted from a setting entered in thesession by user “Mark Cordova” on 2002-09-18
 K:Bminor
-|:FBfe dB (3BBB|Aced cA A2|FBfe dB B2|FB B2 cB B2|
- FBfe dB B2|ce e2 ce e2|f3e dB B2|cedc dB B2:|
- |:df f2 df f2|ce e2 ce e2|df f2 df f2|c2ec dB B2|
- dfaf dfaf|cege cege|dfeg fB B2|f3e fedc:|`,
+|:FBfe d~B3 Aced c~A3|FBfe d~B3 F~B3 c~B3|
+FBfe d~B3 c~e3 c~e3|~f3e d~B3 cedc d~B3:|
+|:d~f3 d~f3 c~e3 c~e3|d~f3 d~f3 cedc d~B3|
+dfaf dfaf cege cege|d2 (3efg f~B3 f3e [1 fedc:| [2 fedB||`,
 	theSessionId: 973
 };

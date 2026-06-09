@@ -1,10 +1,11 @@
 export default {
 	groups: "alora",
+
 	abc: [
 		`X:1
 T:The Snowy Path
 C:Mark Kelly
-R:slip jig
+R:hop jig
 L:1/8
 M:9/8
 N:Imported from https://thesession.org/tunes/104#setting104
@@ -22,7 +23,8 @@ K:Dmajor
 			artists: "Altan, 1991",
 			url: "https://music.youtube.com/watch?v=BP_nsOCubf0",
 			notes: "https://www.discogs.com/release/2408131-Altan-Harvest-Storm"
-		}
+		},
+		{ notes: "(2026-06-09) I see this more as a hop jig than as a slip jig." }
 	],
 	theSessionId: 104
 };
