@@ -3111,3 +3111,8 @@ details.intro-section summary:hover {
   text-decoration: underline;
   color: var(--text-link-hover);
 }
+
+/*other*/
+input[type="radio"] {
+  margin-right: 6px;
+}
