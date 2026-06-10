@@ -17,7 +17,7 @@ N: is a bit different.
 N:2. I believe this is really a set dance, not a hornpipe; but I’ve put “hornpipe”
 N:so as to see it amongst the hornpipes as it shares a lot with them rhythmically.
 L: 1/8
-K: D mixo
+K: G
 G>A|BB3 ((3c"<("">)"dc) ((3B"<("">)"cB) {B}A2^G>B A>Bc>A|d>cd>e d>cA>F G>FG>F DD-D>E|
 F>EF>G A>df>e d>d-{e}d>d- {e}d>cA>F|[M:3/2]G>EF>E (3DED ^C>E D2 G>A|
 (3Bcd B>d c>dB>c (3ABA ^G>B A>Bc>B | A>df>e d>^cA>F G>FG>F DD-D>E|

@@ -15,4 +15,5 @@ K:Dmajor
  f2 f2 f2 e>d|c>Bc>d e2- e>f|g2 g2 g2 (3ABc|d>ef>g a2- a>g|
  f2 f2 f2 e>d|c>Bc>d e2 e>f|g2 g2 A2 B>c|(3efe d2 d2- d3/2||`,
 	theSessionId: 3536
+	//todo: https://thesession.org/tunes/3536#setting36561 & ref. to the Fog is lifting
 };
