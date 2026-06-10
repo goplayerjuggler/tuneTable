@@ -18,5 +18,13 @@ fggf gbag fggf gfeg|fggf gbag (3fga ea fddc|
 dfaf gbag fgaf gfeg|feec dcBA ^GABc dgfe||`,
 	theSessionId: 1941,
 	parts: "AABB",
-	norbeckId: 565
+	norbeckId: 565,
+	references: [
+		{
+			artists: "Paddy Killoran, fiddle; ?, guitar",
+			url: "http://www.juneberry78s.com/sounds/mo33024t01.mp3",
+			notes: `Sligo Maid's Lament / Malloy's Favorite
+A recording by the composer! From an old ’78. There’s lots of good stuff from [juneberry78s.com](http://www.juneberry78s.com/sounds/ListenToIrishDance.htm).`
+		}
+	]
 };

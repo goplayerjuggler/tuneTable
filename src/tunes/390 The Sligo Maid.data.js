@@ -16,5 +16,8 @@ A2BA Bdef gedB AGEF|G2`,
 From 1:07 onwards
 Album: A Man Apart (2004)`
 		}
+	],
+	crossReferences: [
+		{ theSessionId: 1941, index: 0 } //Sligo Maid's Lament / Malloy's Favorite - Paddy Killoran
 	]
 };
