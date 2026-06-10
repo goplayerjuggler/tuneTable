@@ -1081,16 +1081,26 @@ function populateFilters() {
 		if (mode) modeCounts.set(mode, (modeCounts.get(mode) ?? 0) + 1);
 	});
 
+	// Sort by count descending, then alphanumerically
+	const sortByCountThenAlpha = (a, b, counts) => {
+		const countDiff = (counts.get(b) ?? 0) - (counts.get(a) ?? 0);
+		if (countDiff !== 0) return countDiff;
+		return a.localeCompare(b);
+	};
+
 	// Musical sort for tonics: by chromatic position (C=0 … B=11).
 	// Enharmonics share a position; relative order between them is not significant.
 	const tonics = [...new Set(allKeys.map((k) => splitKey(k).tonic))].sort(
 		(a, b) => (TONIC_SORT_KEY.get(a) ?? 999) - (TONIC_SORT_KEY.get(b) ?? 999)
 	);
 
+	const rhythms = [...rhythmCounts.keys()].sort((a, b) =>
+		sortByCountThenAlpha(a, b, rhythmCounts)
+	);
+
 	const modes = [
 		...new Set(allKeys.map((k) => splitKey(k).mode).filter(Boolean))
-	].sort();
-	const rhythms = [...rhythmCounts.keys()].sort();
+	].sort((a, b) => sortByCountThenAlpha(a, b, modeCounts));
 
 	const toOption = (value, counts) =>
 		`<option value="${value}">${value} (${counts.get(value) ?? 0})</option>`;
