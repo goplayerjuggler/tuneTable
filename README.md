@@ -89,6 +89,7 @@ Thanks to:
 * Treasa Harkin, at [itma.ie](https://itma.ie), for reviewing an earlier version and for suggesting two features which have since been made: the intro page and the “badge filtering”. 
 * Anthropic: roughly 90% of the code (in this repo and in my other related repo, [abc-tools](#abc-tools--a-related-repo)) was written by Claude.ai / Sonnet 4.6 extended.
 * Github for hosting this whole thing
+* The open source community for making this possible with dev tools like npm, webpack, eslint, prettier, and all their dependencies; and also the teams behind `pako` and `daypilot/modal`, which are other tools that get used here.
 
 ## Licences
 

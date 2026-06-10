@@ -16,11 +16,12 @@
  */
 
 import pako from "pako";
+import { Modal } from "@daypilot/modal";
 
 const ABC_TOOLS_URL = "https://michaeleskin.com/abctools/abctools.html";
 const SHARE_LINK_MAX = 8100;
 
-// Headers removed by default (user may override via prompt)
+// Headers removed by default (user may override via the modal)
 const DEFAULT_REMOVE_HEADERS = ["N", "S", "D", "H"];
 
 // ─── Header filtering ────────────────────────────────────────────────────────
@@ -38,47 +39,6 @@ function stripHeaders(abc, headers) {
 		.split("\n")
 		.filter((line) => !prefixes.has(line.slice(0, 2)))
 		.join("\n");
-}
-
-/**
- * Prompt the user for which headers to remove.
- * Returns null if the user cancelled (→ remove nothing),
- * otherwise returns an array of single-letter header codes.
- */
-function promptForHeadersToRemove() {
-	const defaults = DEFAULT_REMOVE_HEADERS.join("");
-	const msg =
-		"Headers to strip from the ABC before sending.\n\n" +
-		'Enter a string of single-letter codes (e.g. "NSDH"), ' +
-		"or leave blank to accept the defaults (" +
-		defaults +
-		").\n" +
-		"Press Cancel to send the ABC unmodified.";
-
-	const result = prompt(msg, defaults);
-	if (result === null) return []; // cancelled → no stripping
-	if (result.trim() === "") return DEFAULT_REMOVE_HEADERS; // blank → defaults
-
-	// Each character in the input is treated as one header code
-	return [...result.trim().toUpperCase()];
-}
-
-async function useUrl(url) {
-	const result = prompt(
-		`Copy to clipboard (Y)? Or open in a new browser tab (O)?`,
-		"Y"
-	);
-	if (result?.toLowerCase() === "o")
-		window.open(url, "_blank", "noopener,noreferrer");
-	else if (result?.toLowerCase() === "y")
-		try {
-			await navigator.clipboard.writeText(url);
-		} catch {
-			alert(`Copy failed. 
-Try again? If you go faster it may well work.
-
-(Sorry, this part of the UI is a bit "rough and ready"!)`);
-		}
 }
 
 // ─── Compression ─────────────────────────────────────────────────────────────
@@ -120,41 +80,87 @@ function buildShareUrl(abcPayload, shareName) {
 // ─── Public entry point ──────────────────────────────────────────────────────
 
 /**
- * Filter, confirm, compress and open the tunes in Eskin's ABC Transcription Tools.
+ * Show a single modal to collect options, then compress and dispatch the tunes
+ * to Eskin's ABC Transcription Tools (open in tab or copy link to clipboard).
  *
  * @param {string[]} abcStrings - Pre-resolved ABC strings, in playback order
  * @param {object}  [options]
  * @param {string}  [options.shareName="Share_Link"]
  */
-export function sendToEskinsTool(abcStrings, options = {}) {
+export async function sendToEskinsTool(abcStrings, options = {}) {
 	if (!abcStrings?.length) {
-		alert("No ABC content to send.");
+		await Modal.alert("No ABC content to send.");
 		return;
 	}
 
-	// 1) Ask which headers to strip (null → cancelled → keep all)
-	const headers = promptForHeadersToRemove();
+	const defaultName = options.shareName ?? "Share_Link";
+	const defaultHeaders = DEFAULT_REMOVE_HEADERS.join("");
 
-	// 2) Filter and join
+	const form = [
+		{
+			name: "Share link name",
+			id: "shareName",
+			type: "text"
+		},
+		{
+			html: "<small>Enter header codes to strip (e.g. <code>NSDH</code>), or leave blank to keep all.</small>",
+			name: ""
+		},
+		{
+			name: "Headers to strip",
+			id: "stripHeaders",
+			type: "text"
+		},
+		{
+			name: "Action",
+			id: "action",
+			type: "radio",
+			options: [
+				{ name: "Copy link to clipboard", id: "copy" },
+				{ name: "Open in new tab", id: "open" }
+			]
+		}
+	];
+
+	const data = {
+		shareName: defaultName,
+		stripHeaders: defaultHeaders,
+		action: "copy"
+	};
+
+	const modal = await Modal.form(form, data);
+	if (modal.canceled) return;
+
+	const { shareName, stripHeaders: headerInput, action } = modal.result;
+
+	// Parse header codes: each character is one code; blank string → no stripping
+	const headers = headerInput.trim()
+		? [...headerInput.trim().toUpperCase()]
+		: [];
+
+	// Filter and join
 	const payload = abcStrings
 		.map((abc) => stripHeaders(abc, headers))
 		.join("\n\n");
 
-	// 3) Let the user confirm / edit the share name
-	const defaultName = options.shareName ?? "Share_Link";
-	const shareName = prompt("Name for this share link:", defaultName);
-	if (shareName === null) return; // user cancelled the name prompt
-
-	// 4) Build URL
+	// Build URL
 	const url = buildShareUrl(payload, shareName.trim() || defaultName);
 	if (!url) {
-		alert(
-			"The ABC content is too large to encode in a URL " +
-				`(limit: ${SHARE_LINK_MAX} characters).\n\n` +
-				"Try reducing the number of tunes."
+		await Modal.alert(
+			`The ABC content is too large to encode in a URL ` +
+				`(limit: ${SHARE_LINK_MAX} characters).\n\nTry reducing the number of tunes.`
 		);
 		return;
 	}
-	// 5) use url
-	useUrl(url);
+
+	// Dispatch
+	if (action === "open") {
+		window.open(url, "_blank", "noopener,noreferrer");
+	} else {
+		try {
+			await navigator.clipboard.writeText(url);
+		} catch {
+			await Modal.alert("Copy failed.");
+		}
+	}
 }
