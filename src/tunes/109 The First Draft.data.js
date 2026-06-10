@@ -1,5 +1,7 @@
 export default {
 	groups: "alora",
+	tags: "flexible structure",
+	parts: "AABB",
 	abc: [
 		`X:1
 T:The First Draft
@@ -84,9 +86,13 @@ DG | "G"Bc d/c/B cA | "G"G<B D2 GF | "C"EG ce dc | "G"BG [D2B,2] DG | "G"Bc d/c/
 More info in youtube - follow the link.`
 		},
 		{
+			notes: `1. The original score has it as “AAB”, but the online recordings all play the B twice, giving “AABB”. I think both ways are possible.
+2. Several other S. Peoples compositions (three slip jigs, two reels, one barndance, one waltz, and one other mazurka) with scores, and recordings made by the composer, are [available on itma](https://www.itma.ie/saothar/siobhan-peoples/).`
+		},
+		{
+			url: "https://www.youtube.com/watch?v=b1Dj8v2XDds",
 			notes:
-				"Several other S. Peoples compositions (three slip jigs, two reels, one barndance, one waltz, and one other mazurka) with scores, and recordings made by the composer.",
-			url: "https://www.itma.ie/saothar/siobhan-peoples/"
+				"“Sierra Fiddle Camp in California - June 2017. Ciarán Ó Maonaigh from Donegal, Ireland taught this mazurka to the students. Here they are rehearsing it for the final concert - fiddles, cellos, pianos, guitars, harp, trombone and trumpet! 257 players!” (1:03)"
 		}
 	],
 	theSessionId: 23320,
