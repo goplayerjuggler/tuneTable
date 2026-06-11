@@ -77,6 +77,26 @@ function buildShareUrl(abcPayload, shareName) {
 	return url.length > SHARE_LINK_MAX ? null : url;
 }
 
+// ─── LocalStorage persistence ────────────────────────────────────────────────
+
+const PREFS_KEY = "sendToEskinsTool.prefs";
+
+function loadPrefs() {
+	try {
+		return JSON.parse(localStorage.getItem(PREFS_KEY)) ?? {};
+	} catch {
+		return {};
+	}
+}
+
+function savePrefs(prefs) {
+	try {
+		localStorage.setItem(PREFS_KEY, JSON.stringify(prefs));
+	} catch {
+		/* quota exceeded or private browsing — silently ignore */
+	}
+}
+
 // ─── Public entry point ──────────────────────────────────────────────────────
 
 /**
@@ -94,7 +114,7 @@ export async function sendToEskinsTool(abcStrings, options = {}) {
 	}
 
 	const defaultName = options.shareName ?? "Share_Link";
-	const defaultHeaders = DEFAULT_REMOVE_HEADERS.join("");
+	const prefs = loadPrefs();
 
 	const form = [
 		{
@@ -124,14 +144,15 @@ export async function sendToEskinsTool(abcStrings, options = {}) {
 
 	const data = {
 		shareName: defaultName,
-		stripHeaders: defaultHeaders,
-		action: "copy"
+		stripHeaders: prefs.stripHeaders ?? DEFAULT_REMOVE_HEADERS.join(""),
+		action: prefs.action ?? "open"
 	};
 
 	const modal = await Modal.form(form, data);
 	if (modal.canceled) return;
 
 	const { shareName, stripHeaders: headerInput, action } = modal.result;
+	savePrefs({ stripHeaders: headerInput.trim(), action });
 
 	// Parse header codes: each character is one code; blank string → no stripping
 	const headers = headerInput.trim()
