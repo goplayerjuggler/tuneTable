@@ -576,6 +576,8 @@ K:Amixolydian
 		theSessionSettingId: 16936
 	},
 	{
+		parts: "AB",
+		fileDate: "2026-06-11",
 		abc: `X:1
 T:The Flowing Bowl
 R:reel
@@ -585,12 +587,11 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/395#setting40882
 N:Setting entered in thesession by user “JACKB” on 2021-03-27
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
-gfed cA A2 cAdA cA A2|gfed cA A2 fage d2ef|
-gfed cA A2 cAdA cA A2|gfed cA A2 fage dABc||
-df f2 af f2 dfaf gece|df f2 af f2 g3e cABc|
-df f2 af f2 dfaf gece|f3d g3e fage d2 ef||`,
+gfed cAA2 cAdA cAA2|gfed cAA2 fage d2ef|
+gfed cAA2 cAdA cAA2|gfed cAA2 fage dABc||
+dff2 aff2 dfaf gece|dff2 aff2 g3e cABc|
+dff2 aff2 dfaf gece|f3d g3e fage d2ef||`,
 		theSessionId: 395,
 		theSessionSettingId: 40882
 	},

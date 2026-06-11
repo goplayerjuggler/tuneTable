@@ -18,6 +18,6 @@ Album: A Man Apart (2004)`
 		}
 	],
 	crossReferences: [
-		{ theSessionId: 1941, index: 0 } //Sligo Maid's Lament / Malloy's Favorite - Paddy Killoran
+		{ theSessionId: 1941, index: 1 } //Sligo Maid's Lament / Malloy's Favorite - Paddy Killoran
 	]
 };

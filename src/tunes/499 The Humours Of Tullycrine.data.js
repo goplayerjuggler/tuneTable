@@ -26,7 +26,7 @@ A^GAB cBcd eaag (3efe dB|cAAc dBGB A2 A^G A2 ed:|`,
 	crossReferences: [
 		{
 			theSessionId: 2170,
-			index: 0 //golden castle / Kevin Burke
+			index: 1 //golden castle / Kevin Burke
 		}
 	]
 };

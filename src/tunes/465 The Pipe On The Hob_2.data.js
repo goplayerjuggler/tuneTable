@@ -11,7 +11,7 @@ d^cd A2G F2D DED|EDE cBc`,
 	crossReferences: [
 		{
 			theSessionId: 1334,
-			index: 0
+			index: 1
 			//Luck penny; Pipe on the hob (1988) - McGann & Conway
 		}
 	]
