@@ -4,7 +4,7 @@ export default {
 	abc: `
 X: 1
 T: Le chapeau de paille
-O:France, Auvergne.
+O:France; Auvergne.
 R:Bourrée à 3 temps
 S:Michel Esbelin, cabrette
 D:La Valse des Ombres (2005)

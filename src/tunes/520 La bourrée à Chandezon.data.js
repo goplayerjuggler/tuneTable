@@ -8,7 +8,7 @@ export default {
 	abc: [
 		`X: 1
 T:La bourrée à Chandezon
-O:France, Auvergne, Cézallier.
+O:France; Auvergne; Cézallier.
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R:Bourrée à 3 temps
@@ -21,7 +21,7 @@ def | e2d | g3 | def | e2d | cgf | ed2 | def | e2d | c3 |]
 		`
 X: 2
 T:La bourrée à Chandezon
-O:France, Auvergne.
+O:France; Auvergne.
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R:Bourrée à 3 temps
