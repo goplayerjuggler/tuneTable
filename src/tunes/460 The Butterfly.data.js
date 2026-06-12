@@ -8,5 +8,12 @@ M:9/8
 K:Eminor
 B2E G2E F3|B2E G2E FED|`,
 	theSessionId: 10,
-	parts: "AABB"
+	parts: "AABB",
+	references: [
+		{
+			url: "https://youtu.be/PbxgHDlMlO8",
+			album: "The Liffey Banks (1972)",
+			artists: "Tommy Potts, fiddle"
+		}
+	]
 };
