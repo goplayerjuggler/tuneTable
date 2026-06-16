@@ -823,6 +823,17 @@ export default {
 					],
 					collapsed: true
 				}
+				// { left out for now as no full score yet
+				// 	name: "Killavil / Dogs",
+				// 	tunes: [
+				// 		{
+				// 			theSessionId: 576
+				// 		},
+				// 		{
+				// 			theSessionId: 595
+				// 		}
+				// 	]
+				// }
 			]
 		},
 		{

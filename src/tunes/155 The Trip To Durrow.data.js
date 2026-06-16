@@ -18,7 +18,13 @@ d2de fefg afdf gfed|(3Bcd ef gbag fdec d2de|
 fdec d2de fded B3c|dBBA dBBA FADE FEE2|
 D2DF ADFA dfed B3c|dBBA FAdB AFEG FDD2:|`,
 	theSessionId: 891,
-	crossReferences: [{ theSessionId: 1552, index: 1 }],
+	crossReferences: [
+		{
+			theSessionId: 1552,
+			index: 1
+			//Lucy Campbell - MacMahon & Hill
+		}
+	],
 	references: [
 		{
 			url: "https://raelachrecords.bandcamp.com/track/reels-the-whigs-of-fyfe-the-sailor-on-the-rock-the-trip-to-durrow",

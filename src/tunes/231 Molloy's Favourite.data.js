@@ -10,7 +10,7 @@ N:from https://thesession.org/tunes/1941#setting1941
 N:Setting entered in thesession by user “Conway” on 2003-09-02
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(edited after importing)
-N:Goes well in a set after Maud Millar.
+N:Goes well in a set after [Maud Millar](theSessionId=1177).
 K:Dmajor
 d2Ad fdAF GFEF GABc|d2Ad fdAF GAAG FDDd|
 dcde fdAF GFEF GABc|d2Ad fdAF GAAG FDD2|
@@ -23,7 +23,7 @@ dfaf gbag fgaf gfeg|feec dcBA ^GABc dgfe||`,
 		{
 			artists: "Paddy Killoran, fiddle; ?, guitar",
 			url: "http://www.juneberry78s.com/sounds/mo33024t01.mp3",
-			notes: `Sligo Maid's Lament / Malloy's Favorite
+			notes: `[Sligo Maid's Lament](theSessionId=399) / Malloy's Favorite
 A recording by the composer! From an old ’78. There’s lots of good stuff from [juneberry78s.com](http://www.juneberry78s.com/sounds/ListenToIrishDance.htm).`
 		}
 	]

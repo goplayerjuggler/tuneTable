@@ -5,7 +5,7 @@ import { eventBus } from "../events/EventBus.js";
 import { maybeConvertStandardTune } from "@goplayerjuggler/abc-tools";
 /** Conservative defaults suitable for the public demo. */
 const defaultTheSessionImportConfig = {
-	skipLevel: "ifTuneExists",
+	skipLevel: "ifAbcExists",
 	doubleBarLengthWherePossible: false,
 	importAllSettingsForSpecifiedUser: true,
 	withComments: true,

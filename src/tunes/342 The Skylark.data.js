@@ -1,11 +1,4 @@
 export default {
-	incipit: `X: 1
-T:The Skylark
-R: reel
-M: 4/4
-L: 1/16
-K: Cmaj
-G2ge decA GEE2 CEGc|`,
 	references: [
 		{
 			notes:
@@ -13,25 +6,23 @@ G2ge decA GEE2 CEGc|`,
 		}
 	],
 	ttId: 342,
-
+	contourShift: 0,
 	abc: `X:1
 T:The Skylark
 C:James Morrison
 R:reel
 L:1/16
 M:4/4
-N:My take
-N:---
 N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/632#setting35314
 N:Setting entered in thesession by user “JACKB” on 2019-07-16
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
-|:agfg efdB AF F2 DFAd|BG G2 (3EFG E2 FA A2 FAdf|
-agfg efdB AF F2 DFAd|BG G2 E2 ag f2 eg fd d2:|
-|:a2 fd Adfd e3d cA A2|a2 fa bged Beed efge|
-f3a g3e f2 ef dBAG|FA A2 faag faeg fd d2:|`,
+|:agfg efdB AFF2 DFAd|BGG2 (3EFG E2 FAA2 FAdf|
+  agfg efdB AFF2 DFAd|BGG2 E2ag f2eg fdd2:|
+|:a2fd Adfd e3d  cAA2|a2fa bged Beed efge|
+  f3a  g3e  f2ef dBAG|FAA2 faag faeg fdd2:|`,
 	theSessionId: 632,
-	theSessionSettingId: 35314
+	theSessionSettingId: 35314,
+	parts: "AABB"
 };
