@@ -1,4 +1,6 @@
 export default {
+	groups: "ALORA",
+
 	incipit: `X:1
 T:The Maid Behind The Bar
 R:reel

@@ -1,13 +1,22 @@
 export default {
-	name: "The Dogs Among The Bushes",
 	groups: "ALORA",
+	abc: `X:1
+T:The Dogs Among The Bushes
+R:reel
+L:1/16
+M:4/4
+N:Slightly simplified from Willie Clancy's version.
+N:---
+N:Imported into *tuneTable* on 2026-06-16,
+N:from https://thesession.org/tunes/595#setting56948
+N:Setting entered in thesession by user “j_clark” on 2026-03-30
+N:*abc-tools: convert to M:4/4 & L:1/16*
+K:Gmajor
+|:BGG2 DGG2 BGG2 cedc|BGG2 DGFG AFfe fdcA:|
+dggf g3f dgg2 bgaf|dffe fgfe dff2 afge|
+dggf g3f dgg2 bgag|bgg2 aggf d^cde fd=cA||`,
 	theSessionId: 595,
-	incipit: `X: 1
-M: 4/4
-L: 1/16
-K: G
-BGG2 DGG2 BGG2 cedc | `,
-	rhythm: "reel",
+	theSessionSettingId: 56948,
 	parts: "AB",
 	references: [
 		{

@@ -822,18 +822,18 @@ export default {
 						}
 					],
 					collapsed: true
+				},
+				{
+					name: "Killavil / Dogs",
+					tunes: [
+						{
+							theSessionId: 576
+						},
+						{
+							theSessionId: 595
+						}
+					]
 				}
-				// { left out for now as no full score yet
-				// 	name: "Killavil / Dogs",
-				// 	tunes: [
-				// 		{
-				// 			theSessionId: 576
-				// 		},
-				// 		{
-				// 			theSessionId: 595
-				// 		}
-				// 	]
-				// }
 			]
 		},
 		{
