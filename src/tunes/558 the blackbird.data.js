@@ -1,4 +1,5 @@
 export default {
+	groups: "su",
 	parts: "AABB",
 	abc: [
 		`X: 1

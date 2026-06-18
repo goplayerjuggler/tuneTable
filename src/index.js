@@ -929,7 +929,7 @@ function formatNoteLinks(text) {
  * Sets on each tune:
  *   _crId              — stable integer ID (tunesData index) for generating anchor targets
  *   _isCrTarget        — true if this tune is the target of any cross-reference link
- *   _resolvedCrossRefs — array of { tuneName, tuneId, refIndex, artistNames } for rendering
+ *   _resolvedCrossRefs — array of { tuneName, tuneId, refIndex, artistNames, notes } for rendering
  * Sets on each referenced reference object:
  *   _crId              — string "tuneId-refIndex" for generating anchor IDs on reference items
  */
@@ -962,10 +962,13 @@ function calculateCrossRefs(tunes) {
 			ref._crId = `${target._crId}-${refIndex}`;
 
 			tune._resolvedCrossRefs.push({
-				tuneName: target.name,
-				tuneId: target._crId,
-				refIndex,
-				artistNames: extractArtistNames(ref.artists)
+				...{
+					tuneName: target.name,
+					tuneId: target._crId,
+					refIndex,
+					artistNames: extractArtistNames(ref.artists)
+				},
+				...(cr.notes ? { notes: cr.notes } : {})
 			});
 		});
 
@@ -1239,11 +1242,12 @@ function renderTable() {
 				: "";
 			const targetIsPresent =
 				window.filteredData.some((t) => t._crId === cr.tuneId) >= 0;
+			const notes = cr.notes ? " " + cr.notes : "";
 			if (targetIsPresent) {
 				const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
-				referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `see [${artistLink}]` : "see entry"} under [${tuneLink}]</div>`;
+				referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `[See ${artistLink}.` : "[See entry"} under ${tuneLink}.${notes}]</div>`;
 			} else
-				referencesHtml += `<div class="reference-item reference-item--cr">cross-referenced to: ${artistLink ? ` [${artistLink}] / ` : ""}  [${cr.tuneName}] (currently not on-screen)</div>`;
+				referencesHtml += `<div class="reference-item reference-item--cr">[Cross-referenced to: ${artistLink ? ` ${artistLink}] / ` : ""}  ${cr.tuneName}.${notes} (currently not on-screen)]</div>`;
 		});
 
 		// ── Score links ───────────────────────────────────────────────

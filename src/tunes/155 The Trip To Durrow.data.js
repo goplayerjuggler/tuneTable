@@ -1,4 +1,5 @@
 export default {
+	tags: "Flexible structure",
 	parts: "AABCBC",
 	abc: `X:1
 T:The Trip To Durrow
@@ -21,8 +22,10 @@ D2DF ADFA dfed B3c|dBBA FAdB AFEG FDD2:|`,
 	crossReferences: [
 		{
 			theSessionId: 1552,
-			index: 1
+			index: 1,
 			//Lucy Campbell - MacMahon & Hill
+			notes:
+				"From “-02:58” onwards. Here they play it “AABBCC”, not “AABCBC”, which is the way it tends to be played these days."
 		}
 	],
 	references: [

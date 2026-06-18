@@ -346,6 +346,7 @@ eggf gede cAAB c3d|edcA dcAG A2AG ABcd:|`,
 	{
 		parts: "AABB",
 		fileDate: "2026-05-27",
+		groups: "su",
 		abc: `X:1
 T:Dan Collins' Father's
 R:jig
@@ -370,23 +371,11 @@ T:The Stack Of Barley
 R:hornpipe
 L:1/8
 M:4/2
-N:Key signature: G Major Submitted on November 25th 2006 by Aidan Crossey.
-N:T: Little Stack Of Barley, The M: 4/4 L: 1/8 R: hornpipe K: G Major |: gf | efed
-N:B2 dB | AG (3EFG AcBA | GFGA BA (3Bcd | e2 A2 A2 gf | efed B2 dB | AG (3EFG AcBA
-N:| GFGA (3Bcd Ac | B2 G2 G2 :| |: GA | BABd (3gag fg | agfg (3efe de | (3gag fg
-N:ed (3Bcd | e2 A2 A2 gf | (3efg af (3gag fe | dBAG (3ABc BA | GFGA (3Bcd Ac | B2
-N:G2 G2 :|
-N:This setting is the one I play and differs a little from other settings I've
-N:seen in various places. ~ the only difference between The Little Stack Of Barley
-N:and The Stack Of Barley is the key ... ... a lot of people call this tune The
-N:Stack Of Barley anyway.
-N:# Posted on November 25th 2006 by Aidan Crossey
-N:---
+N:Submitted on November 25th 2006 by Aidan Crossey.
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/2224#setting15594
 N:Setting entered in thesession by user “ceolachan” on 2006-11-25
 N:*abc-tools: convert to M:4/2*
-N:(todo: not yet revised)
 K:Gmajor
 |:gf|efed B2 dB AG (3EFG AcBA|GFGA BA (3Bcd e2 A2 A2 gf|
 efed B2 dB AG (3EFG AcBA|GFGA (3Bcd Ac B2 G2 G2:|
@@ -419,7 +408,7 @@ fgf "F#7/E"efe "Bm/D"ded "F#7/C#"cBc|"Bm"d3 dcd BFF FBc|d3 dcB "F#7"cFF F3
 		theSessionSettingId: 52529
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-18",
 		abc: [
 			`X:1
 T:Black Pat
@@ -429,32 +418,22 @@ L:1/16
 M:4/4
 N:COMMENT:
 N:Peoples Tune
-N:This comes off of a CD that Brad Hurley sent me containing a famous session tape
-N:from Gort in 1991. Brad added some tracks at the end that feature Kevin Crawford
-N:conducting a workshop that usually involves sitting and listening in amazement
-N:as he plays. Someone had the good sense to switch a tape recorder on and capture
-N:this tune that I've never heard anywhere else. If someone has a name other than
-N:what Kevin referred to it as, please elucidate.
-N:Here's a link to an mp3 I made of the tune:
-N:http://www.tipsyhouse.com/Peoplestune.mp3
-N:This tune submission is in response to this discussion:
-N:https://thesession.org/discussions/18336
-N:---
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/966#setting14161
 N:Setting entered in thesession by user “ceolachan” on 2008-07-05
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
+N:(edited after importing)
 K:Gmajor
-|:~G3 B e2 dB ADBA GE ~E2|~G3 B edBA B/c/d gb a2 ga|
-bg ~g2 aged ABdB AGED|~G3 B eddB AGBA ~G3 z:|
-DG ~G2 GEDE ~G3 A Be ~e2|d2 BG dGBG ADBA GE ~E2|
-GFGA GEDE ~G3 B dega|bg ~g2 ageg dgba ~g3 z|
-d3 B BAGE DEGA Be ~e2|d2 BG dGBG ADBA GE ~E2|
-GFGA GEDE ~G3 B dega|bg ~g2 ageg dgba ~g3 z||
-|:~b3 g egde gedB ~G3 z|b2 gd b2 gd ea ~a2 ~a2 ga|
-b^abg egdg gedA B/c/d g=a|b2 ag eddB AGGF ~G3 z:|`
+|:~G3B   e2dB ADBA GE~E2 | ~G3B edBA B/c/dgb a2ga|
+   bg~g2 aged ABdB AGED  | ~G3B eddB AGBA ~G3z:|
+   DG~G2 GEDE ~G3A Be~e2|  d2BG dGBG ADBA GE ~E2|
+   GFGA  GEDE ~G3B dega|   bg~g2 ageg dgba ~g3z|
+   d3B   BAGE DEGA Be~e2|  d2BG dGBG ADBA GE~E2|
+   GFGA  GEDE ~G3B dega|   bg~g2 ageg dgba ~g3z||
+|:~b3g egde gedB ~G3z|b2gd b2gd ea~a2 ~a2ga|
+   b^abg egdg gedA B/c/dg=a|b2ag eddB AGGF ~G3z:|`
 		],
+		parts: "AABBCC",
 		theSessionId: 966,
 		theSessionSettingId: 14161
 	},
