@@ -16,6 +16,12 @@ FAAB AFED FAAB ABde|fBBA Bcde`,
 			url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK",
 			album: "Poirt an Phíobaire (1983)",
 			notes: "The Maid Behind the Bar / O'Rourke's / Eilish Brogan"
+		},
+		{
+			artists: "Antóin Mac Gabhann, fiddle; Paddy Ryan, fiddle",
+			url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=3",
+			year: "1978",
+			notes: "Maid behind the bar; The woman of the house"
 		}
 	]
 };

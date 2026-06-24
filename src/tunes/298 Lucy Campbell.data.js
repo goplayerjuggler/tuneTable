@@ -17,7 +17,8 @@ dB|A2FA A2dB A2FA BEE2|A2FA defe`,
 			url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
 			notes: `Sally Gardens/The foxhunters/The humours of Tulla/The flogging reel/Lucy Campbell/Toss the feathers/Trip to Durrow (1993)
 I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
-Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)`
+Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)
+Just after Toss the feathers they come back to Lucy Campbell, playing it twice before moving on.`
 		},
 		{
 			notes: `Chords (TBC):
