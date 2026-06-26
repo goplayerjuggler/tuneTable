@@ -544,14 +544,31 @@ N:(todo: not yet revised)
 K:Aminor
 |:"Am"A2AB cBA2 "Dm"d2de fdBd|"E#7"e2ef edcd eaae aecB|
 "Am"A2AB cBA2 "Dm"d2de fdBd|"E#7"e2ef edcB[1 "Am"A4 "E#7"E4:|2 "F"A4 "G7"G4||
-|:"C"e2ed c2cA GGce "Co"a2e2|"Dm"g2gf d2 Bd "G7"GBdf (3ege d2|
+|:"C"e2ed c2cA GGce "Co"a2e2|"Dm"g2gf d2Bd "G7"GBdf (3ege d2|
 "C"e2ed c2cA GGce "Co"a2e2|"Dm"g2gf dfdB[1 "G7"cedB "C"c3d:|2 "G7"cedB "C"c4||`,
 		theSessionId: 9555,
 		theSessionSettingId: 30059
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-26",
+		parts: "AABB",
 		abc: [
+			`X:1
+T:Hommage à Gilles Laprise
+O:Québec
+C:Phillippe Bruneau
+R:reel
+L:1/16
+M:4/4
+H:1. This setting is based one one I got from thesession, by ceolachan (included here, as the next setting). The main change is a few tweaks of bar lengths. I also changed a few other small details.
+H: // 
+H:2. Even though it could be written down all the way through with four beats to the bar, I don’t hear it that way. It’s related to where the downbeat is – for me. The way I hear it, there’s something special happening in between the A and B parts: one longer bar (in 5/4) going from A to B and one shorter bar (in 3/4) going from B to A. Anyway, that’s why I’ve tagged this tune as “crooked”. 
+K:Dmajor
+|:a2aa gfeg fefg afdf|edef gece defg a2AA|
+a2aa gfeg fefg afdf|[1 edef gece dfec d2z2 :|2 [M:5/4] edef gecA dfec d3A Afed |
+M:4/4
+|: B3B Bgfe a2aa Afed | cAce ageg fafd Afed | 
+B2BB Bgfe a3a Afed |1 cAce agec d2dd Afed :| [2 [M:3/4] cAce agec d2!D.C.!z2 |]`,
 			`X:1
 T:Hommage à Gilles Laprise
 O:Québec
@@ -563,19 +580,20 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/10640#setting20454
 N:Setting entered in thesession by user “ceolachan” on 2010-08-10
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
-|:a3 a gfeg fefg afdf|edef gecA defg agfg|
-a2 aa gfeg fefg afdf|edef gecA[1 dfec defg:|2 dfec d3 A||
-|:Afed B3 B Bgfe a2 aa|Afed cAce ageg fafd|
-Afed B2 BB Bgfe a3 a|Afed cAce[1 agec d2 dd[2 agec d2 d2||`
+|:a3a gfeg fefg afdf|edef gecA defg agfg|
+a2aa gfeg fefg afdf|edef gecA[1 dfec defg:|2 dfec d3A||
+|:Afed B3B Bgfe a2aa|Afed cAce ageg fafd|
+Afed B2BB Bgfe a3a|Afed cAce[1 agec d2dd[2 agec d2d2||`
 		],
 		theSessionId: 10640,
-		theSessionSettingId: 20454
+		theSessionSettingId: 20454,
+		tags: "crooked"
 	},
 
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-06-24",
+		parts: "AB",
 		abc: `X:1
 T:Throw Away The Keys
 R:reel
@@ -585,7 +603,6 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/1540#setting1540
 N:Setting entered in thesession by user “Dr. Dow” on 2003-03-22
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
 |:~A3B defa ~a2fd efdB|~A2AB defe dBAF EFD2:|
 ~a3f defa ~a2fd efd2|~a3f defe dBAF EFD2|
