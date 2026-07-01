@@ -4,7 +4,7 @@ import {
 	getIncipitForContourGeneration,
 	normaliseKey,
 	getKey,
-	getMetadata,
+	getHeaders,
 	getTunes,
 	sortConstants
 } from "@goplayerjuggler/abc-tools";
@@ -72,7 +72,7 @@ function processTuneData(tune) {
 		if (typeof tune.aka === "string") processed.aka = [tune.aka];
 		if (typeof tune.badges === "string") processed.badges = [tune.badges];
 		if (tune.incipit && !processed.abc) {
-			const abcMeta = getMetadata(tune.incipit);
+			const abcMeta = getHeaders(tune.incipit);
 			updateFromMetadata(abcMeta, processed, false);
 			processed.incipit =
 				//  getFirstBars(tune.incipit, 4, true, false, {
@@ -91,7 +91,7 @@ function processTuneData(tune) {
 				: [processed.abc];
 
 			abcArray.forEach((abcString, index) => {
-				const abcMeta = getMetadata(abcString);
+				const abcMeta = getHeaders(abcString);
 
 				if (index === 0) updateFromMetadata(abcMeta, processed);
 				else updateFromMetadata(abcMeta, processed, false, false);

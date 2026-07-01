@@ -724,6 +724,9 @@ tr:hover .tune-menu-trigger,
 /* ============================================
    ABC-modal
    ============================================ */
+.abc-meta-fields {
+  margin-top: 10px;
+}
 .abc-modal-controls .control-row {
   flex-wrap: wrap;
   gap: 6px;

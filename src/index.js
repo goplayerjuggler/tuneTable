@@ -1,5 +1,6 @@
 "use strict";
 import "./styles.css";
+
 import {
 	normaliseKey,
 	sort as sortTunesArray,
@@ -30,6 +31,7 @@ import TuneSelectionsModal from "./modules/modals/TuneSelectionsModal.js";
 import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 import IntroModal from "./modules/modals/IntroModal.js";
+import { formatReference } from "./utils.js";
 
 // Legacy key kept for one-time cleanup only
 const storageKey = "tunesData";
@@ -910,18 +912,13 @@ function resolveTuneById(idObj) {
 // Replace [label](target) patterns in note text.
 // Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row;
 // all other patterns become external links.
-function formatNoteLinks(text) {
-	return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, target) => {
-		if (/^(?:ttId|theSessionId)=/.test(target)) {
-			const t = resolveTuneById(parseTuneIdStr(target));
-			if (t) {
-				if (window.filteredData.indexOf(t) >= 0)
-					return `<a href="#cr-t${t._crId}">${label}</a>`;
-				else return `[${label}] (cross-reference not on-screen)`;
-			}
-		}
-		return `<a href="${target}" target="_blank" rel="noopener noreferrer">${label}</a>`;
-	});
+function setUpCrossRefLink(label, target) {
+	const t = resolveTuneById(parseTuneIdStr(target));
+	if (t) {
+		if (window.filteredData.indexOf(t) >= 0)
+			return `<a href="#cr-t${t._crId}">${label}</a>`; //return `[${label}] (cross-reference not on-screen)`;
+		else return `[${label}] `;
+	}
 }
 
 /**
@@ -948,6 +945,9 @@ function calculateCrossRefs(tunes) {
 	tunes.forEach((tune) => {
 		// Resolve explicit crossReferences entries
 		(tune.crossReferences ?? []).forEach((cr) => {
+			// if (cr.theSessionId === 474) {
+			// 	console.log("debug");
+			// }
 			const target = resolveTuneById(cr);
 			if (!target) return;
 
@@ -1164,74 +1164,13 @@ function renderTable() {
 		if (tune._isCrTarget) row.id = `cr-t${tune._crId}`;
 
 		// ── References column ─────────────────────────────────────────
-		let referencesHtml = "",
-			hasTheSessionLink = false;
-		(tune.referencesFromAbc ?? [])
+		const acc = { referencesHtml: "", hasTheSessionLink: false };
+		(tune.referencesFromAbc && tune.referencesFromAbc.length > 0
+			? [tune.referencesFromAbc[0]]
+			: []
+		)
 			.concat(tune.references ?? [])
-			.forEach((ref) => {
-				let notesHtml = "";
-
-				if (ref.notes || ref.album) {
-					const rawText =
-						(ref.album ? `album: ${ref.album}\n` : "") + (ref.notes ?? "");
-					const formattedNotes = formatNoteLinks(
-						rawText.replace(/\n/g, "<br />")
-					)
-						.replace(/(?<!")https?:\/\/[^\s<>"']+/g, (url) => {
-							try {
-								const { hostname, pathname, search } = new URL(url);
-								if (
-									!hasTheSessionLink &&
-									hostname === "thesession.org" &&
-									pathname &&
-									pathname.match(/\/tunes\/\d+/)
-								)
-									hasTheSessionLink = true;
-								const display = hostname + pathname + search;
-								return `<a href="${url}" target="_blank" rel="noopener noreferrer">${display}</a>`;
-							} catch {
-								// In case URL parsing fails, leave the original
-								return url;
-							}
-						})
-						.replace(/```([^`]+)```/g, "<pre>$1</pre>");
-
-					const lines = rawText.split("\n");
-					if (lines.length > 12) {
-						const truncatedNotes = formatNoteLinks(
-							lines.slice(0, 5).join("\n").replace(/\n/g, "<br />")
-						);
-						notesHtml = `
-					<div class="notes notes-truncated"">
-					  ${truncatedNotes}
-					  <br /><button class="more-btn" onclick="expandNotes(this)">More…</button>
-					</div>
-					<div class="notes notes-full" style="display: none;">
-					  ${formattedNotes}
-					  <br /><button class="more-btn" onclick="collapseNotes(this)">Less</button>
-					</div>`;
-					} else {
-						notesHtml = `<div class="notes">${formattedNotes}</div>`;
-					}
-				}
-				const domain = ref.url
-					? ref.url.match(/^(?:https?:\/\/)?(?:www\.)?([^/]+)/)[1]
-					: "";
-				const refHeader =
-					ref.artists && ref.url
-						? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a></div>`
-						: ref.artists
-							? `<div class="artists">${ref.artists}</div>`
-							: ref.url
-								? `<div class="url"><a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
-								: "";
-				const refItemId = ref._crId ? ` id="cr-r${ref._crId}"` : "";
-				referencesHtml += `
-					<div class="reference-item"${refItemId}>
-						${refHeader}
-						${notesHtml}
-					</div>`;
-			});
+			.forEach((ref) => formatReference(ref, acc, setUpCrossRefLink));
 
 		// Cross-reference items
 		(tune._resolvedCrossRefs ?? []).forEach((cr) => {
@@ -1245,14 +1184,14 @@ function renderTable() {
 			const notes = cr.notes ? " " + cr.notes : "";
 			if (targetIsPresent) {
 				const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
-				referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `[See ${artistLink}.` : "[See entry"} under ${tuneLink}.${notes}]</div>`;
+				acc.referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `[See ${artistLink}.` : "[See entry"} under ${tuneLink}.${notes}]</div>`;
 			} else
-				referencesHtml += `<div class="reference-item reference-item--cr">[Cross-referenced to: ${artistLink ? ` ${artistLink}] / ` : ""}  ${cr.tuneName}.${notes} (currently not on-screen)]</div>`;
+				acc.referencesHtml += `<div class="reference-item reference-item--cr">[Cross-referenced to: ${artistLink ? ` ${artistLink}] / ` : ""}  ${cr.tuneName}.${notes} (currently not on-screen)]</div>`;
 		});
 
 		// ── Score links ───────────────────────────────────────────────
 		const scores = [...tune.scores];
-		if (tune.theSessionId && !hasTheSessionLink) {
+		if (tune.theSessionId && !acc.hasTheSessionLink) {
 			const setting = tune.theSessionSettingId
 				? `#setting${tune.theSessionSettingId}`
 				: "";
@@ -1343,7 +1282,7 @@ function renderTable() {
 				</div>
 				<div class="${incipitClass}"></div>
 			</td>
-			<td class="col-references">${referencesHtml}${scoresHtml}</td>`;
+			<td class="col-references">${acc.referencesHtml}${scoresHtml}</td>`;
 
 		// ── Event listeners (no inline JS for action buttons) ─────────
 		if (hasAbc) {
@@ -1499,7 +1438,6 @@ function applyFilters() {
 
 		return false;
 	});
-
 	renderTable();
 }
 

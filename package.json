@@ -47,7 +47,7 @@
   ],
   "dependencies": {
     "@daypilot/modal": "^3.17.0",
-    "@goplayerjuggler/abc-tools": "1.1.10",
+    "@goplayerjuggler/abc-tools": "1.1.11",
     "pako": "^2.1.0"
   },
   "devDependencies": {

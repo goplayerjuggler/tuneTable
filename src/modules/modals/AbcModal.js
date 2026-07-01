@@ -2,13 +2,16 @@ import {
 	canDoubleBarLength,
 	canHalveBarLength,
 	convertStandardTune,
-	convertToStandardTune
+	convertToStandardTune,
+	getHeaders,
+	stripHeaders
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
 import { reprocessTune } from "../../processTuneData.js";
 import { resolveAbcForEntry, tuneMatchesEntry } from "../setUtils.js";
 import { sendToEskinsTool } from "./sendToEskinsTool.js";
+import { formatNoteLinks, formatReference } from "../../utils.js";
 /**
  * ### AbcModal
  * **Purpose**: Display sheet music for a single tune or for a full set of tunes.
@@ -325,30 +328,10 @@ export default class AbcModal extends Modal {
 			);
 			let abc = resolveAbcForEntry(entry, tune);
 			if (!abc) continue;
-			// omit N:, V1 : next bit doesn't work so use the ABCJS `fields` option instead
-			// // Suppress N/S/D info fields per the ABC spec directive
-			// abc = "%%writefields NSD false\n" + abc;
-
 			scratch.innerHTML = "";
 			AbcJs.renderAbc(
 				scratch,
-				abc
-					// omit header data, V3
-					.split("\n")
-					.filter(
-						(line) =>
-							!line.startsWith("N:") &&
-							!line.startsWith("S:") &&
-							!line.startsWith("D:") &&
-							!line.startsWith("Z:") &&
-							!line.startsWith("R:") &&
-							!line.startsWith("H:")
-					)
-					/*
-					 `+:` line continuations aren't handled
-					  todo: move to abc-tools
-					*/
-					.join("\n"),
+				stripHeaders(abc, ["N", "S", "D", "Z", "R", "H"]),
 				abcOptions
 			);
 			scratch
@@ -619,6 +602,9 @@ export default class AbcModal extends Modal {
 				this.elements.rendered.appendChild(this.allSvgs[i].cloneNode(true));
 		}
 
+		if (this.currentPage === totalPages - 1 && !this.isSetMode)
+			this._renderMetaFields(this.currentTransposedAbc);
+
 		this.updatePaginationButtons(totalPages);
 	}
 
@@ -650,6 +636,45 @@ export default class AbcModal extends Modal {
 		}
 	}
 
+	/**
+	 * Appends N: and H: metadata beneath the score in the rendered container.
+	 * Only called in solo mode; shown only on the last page.
+	 * @param {string} abc - the current (possibly transposed) ABC string
+	 */
+	_renderMetaFields(abc) {
+		const { comments, hComments } = getHeaders(abc);
+		if (!comments?.length && !hComments) return;
+
+		const block = document.createElement("div");
+		block.className = "abc-meta-fields notes";
+
+		const heading = document.createElement("strong");
+		heading.textContent = "History / notes";
+		block.appendChild(heading);
+
+		(comments ?? []).forEach((line) => {
+			const p = document.createElement("p");
+			p.innerHTML = formatNoteLinks(line);
+			block.appendChild(p);
+		});
+
+		if (hComments) {
+			const p = document.createElement("p");
+			p.innerHTML = formatNoteLinks(hComments);
+			block.appendChild(p);
+		}
+		const acc = { referencesHtml: "", hasTheSessionLink: false };
+
+		(this.tune.references ?? []).forEach((ref) => formatReference(ref, acc));
+		if (acc.referencesHtml) {
+			const p = document.createElement("p");
+			p.innerHTML = acc.referencesHtml;
+			block.appendChild(p);
+		}
+
+		this.elements.rendered.appendChild(block);
+	}
+
 	updateDisplayAfterTranspose() {
 		// currentTuneAbc is always the pre-transposition base; transposition is
 		// applied cumulatively via currentTranspose. The result is held in
@@ -663,16 +688,20 @@ export default class AbcModal extends Modal {
 
 		const staffwidth = this._getStaffWidth();
 		this.elements.rendered.innerHTML = "";
-		AbcJs.renderAbc("abcRendered", this.currentTransposedAbc, {
-			scale: 1.0,
-			staffwidth,
-			paddingtop: 10,
-			paddingbottom: 10,
-			paddingright: 20,
-			paddingleft: 20,
-			responsive: "resize",
-			oneSvgPerLine: true
-		});
+		AbcJs.renderAbc(
+			"abcRendered",
+			stripHeaders(this.currentTransposedAbc, ["N", "H"]),
+			{
+				scale: 1.0,
+				staffwidth,
+				paddingtop: 10,
+				paddingbottom: 10,
+				paddingright: 20,
+				paddingleft: 20,
+				responsive: "resize",
+				oneSvgPerLine: true
+			}
+		);
 
 		this.allSvgs = Array.from(this.elements.rendered.querySelectorAll("svg"));
 		this.updatePagination();
