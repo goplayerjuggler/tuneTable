@@ -6,7 +6,7 @@ export default {
 X: 1
 T:The Singing Snail
 C:Siobhán Peoples
-C:Siobhán Peoples, fiddle
+S:Siobhán Peoples, fiddle
 F:https://www.itma.ie/scores/276410-singing-snail/
 R: Mazurka
 N: A lovely tune IMO.
