@@ -15,8 +15,8 @@ N: For me they should be seen as two separate tunes, even though there’s a ver
 N: and strong link between them: the session standard was surely inspired by and derived
 N: from N. Boyle’s tune.
 N:4. I’ve included here a (tweaked) score by Daniel Parker.
-M:4/2
-L: 1/8
+M:4/4
+L: 1/16
 K: Fmaj
 |:CFAF DFAF CFAF DFAF|G2=BG dGBG ~G2Ac BGAF|
 [C2F2]AF DFDF C2F2AF DFAF|G2=Bc defd[1 gfdc AGFA:|2 gfdc =Bcde||

@@ -219,11 +219,12 @@ cAA2 cAGB cBcd efe2|f2ed cAA2 EFGE D2:|`,
 		abc: `X:1
 T:Dusty Miller
 R:three-two
-L:1/8
-M:3/2
+L:1/16
+M:3/4
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/7436#setting20900
 N:Setting entered in thesession by user “ceolachan” on 2013-02-14
+N:(Edited after importing)
 K:Fmajor
 |:A3B c2A2 G2F2|E2G2 G2A2 B2G2|A3B c2A2 G2F2|C2F2 F2G2 A2F2:|
  |:A2c2 d2e2 f4|g2G2 G2A2 B2G2|A2c2 d2f2 "tr"e2de|f2F2 F2G2 A2F2:|`,

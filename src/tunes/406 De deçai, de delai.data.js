@@ -25,5 +25,6 @@ Elle a été enregistrée notamment par Carré d'Auvergne et Traucatèrme »`
 			album:
 				"Chants traditionnels d'Auvergne et du Bourbonnais à danser et à écouter"
 		}
-	]
+	],
+	ttId: 406
 };

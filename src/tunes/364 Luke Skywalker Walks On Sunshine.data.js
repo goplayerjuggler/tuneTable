@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB",
 	incipit: `X: 1
 T: Luke Skywalker Walks On Sunshine
 R: 7/8

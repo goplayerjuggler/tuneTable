@@ -3,8 +3,8 @@ export default {
 T:The Lads Of Alnwick
 O:England; Northumberland.
 R:three-two
-L:1/8
-M:3/2
+L:1/16
+M:3/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1194#setting1194
 N:Setting entered in thesession by user “Dr. Dow” on 2002-12-10
