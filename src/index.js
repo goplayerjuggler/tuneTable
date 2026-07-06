@@ -909,6 +909,8 @@ function resolveTuneById(idObj) {
 	return null;
 }
 
+const CR_NOT_ON_SCREEN = " (currently not on-screen)";
+
 // Replace [label](target) patterns in note text.
 // Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row;
 // all other patterns become external links.
@@ -916,8 +918,8 @@ function setUpCrossRefLink(label, target) {
 	const t = resolveTuneById(parseTuneIdStr(target));
 	if (t) {
 		if (window.filteredData.indexOf(t) >= 0)
-			return `<a href="#cr-t${t._crId}">${label}</a>`; //return `[${label}] (cross-reference not on-screen)`;
-		else return `[${label}] `;
+			return `<a href="#cr-t${t._crId}">${label}</a>`;
+		else return `[${label}]${CR_NOT_ON_SCREEN}`;
 	}
 }
 
@@ -1179,14 +1181,15 @@ function renderTable() {
 					//260506 broken - todo - fix
 					cr.artistNames
 				: "";
-			const targetIsPresent =
-				window.filteredData.some((t) => t._crId === cr.tuneId) >= 0;
+			const targetIsPresent = window.filteredData.some(
+				(t) => t._crId === cr.tuneId
+			);
 			const notes = cr.notes ? " " + cr.notes : "";
 			if (targetIsPresent) {
 				const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
 				acc.referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `[See ${artistLink}.` : "[See entry"} under ${tuneLink}.${notes}]</div>`;
 			} else
-				acc.referencesHtml += `<div class="reference-item reference-item--cr">[Cross-referenced to: ${artistLink ? ` ${artistLink}] / ` : ""}  ${cr.tuneName}.${notes} (currently not on-screen)]</div>`;
+				acc.referencesHtml += `<div class="reference-item reference-item--cr">[Cross-referenced to: ${artistLink ? ` ${artistLink}] / ` : ""}  ${cr.tuneName}.${notes}${CR_NOT_ON_SCREEN}]</div>`;
 		});
 
 		// ── Score links ───────────────────────────────────────────────
