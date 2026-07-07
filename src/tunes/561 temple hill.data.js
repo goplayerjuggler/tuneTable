@@ -13,12 +13,12 @@ H: (2026-07-07) This score is a simple adaptation of Bickford’s score;  I've m
 H: [Mark Bickford’s score](https://www.itma.ie/scores/pob1268_itma0290338_016/) is is on the excellent, new itma score database, and it synchs very nicely with the audio recording by Paddy O’Brien.
 H: The way I see it, and the way I've put it here, the A part is a standard jig except without a repeat, and the B part is a sort of a crooked slip jig. Written in 6/8, it makes seven bars, whereas normal jigs have eight bars of 6/8. 
 H: I think it's a fine tune. Very interesting too; I'm only aware of a handful of such crooked jigs. Currently in this tune list there are only three other crooked jigs.
-H: I discovered this jig very recently via the itma page, [Mark Bickford’s picks from the Paddy O’Brien Tune Collection](https://www.itma.ie/playlists/mark-bickford-tune-selection/?track=10).
+H: I discovered this jig very recently via the ITMA page, [Mark Bickford’s picks from the Paddy O’Brien Tune Collection](https://www.itma.ie/playlists/mark-bickford-tune-selection/?track=10).
 H:
-H: There's some tantalising info alongside the itma score: 
-H: 
-H: “‘Temple Hill’ is the final tune of a long descriptive set of tunes similar to ‘The Fox Chase’, but in this case it sets the mood of the Battle of Cnoc na nDos (also known as Knockinoss), fought in 1647, that ended with the death of Alastair ‘Colkitto’ MacDonald, a Scottish general who fought with the Irish side”. 
-H: 
+H: There's some tantalising info alongside the score: 
+H: \`\`\`
+H: ‘Temple Hill’ is the final tune of a long descriptive set of tunes similar to ‘The Fox Chase’, but in this case it sets the mood of the Battle of Cnoc na nDos (also known as Knockinoss), fought in 1647, that ended with the death of Alastair ‘Colkitto’ MacDonald, a Scottish general who fought with the Irish side. 
+H: \`\`\`
 H: I presume this is a note written by Paddy O'Brien. I wonder what other info is available about this set of tunes.
 L:1/8
 K:A min
