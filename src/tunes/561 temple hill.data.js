@@ -17,7 +17,7 @@ H: I discovered this jig very recently via the itma page, [Mark Bickford’s pic
 H:
 H: There's some tantalising info alongside the itma score: 
 H: 
-H: “‘Temple Hill’ is the final tune of a long descriptive set of tunes similar to ‘The Fox Chase’, but in this case it sets the mood of the Battle of Cnoc H: na nDos (also known as Knockinoss), fought in 1647, that ended with the death of Alastair ‘Colkitto’ MacDonald, a Scottish general who fought with the H: Irish side”. 
+H: “‘Temple Hill’ is the final tune of a long descriptive set of tunes similar to ‘The Fox Chase’, but in this case it sets the mood of the Battle of Cnoc na nDos (also known as Knockinoss), fought in 1647, that ended with the death of Alastair ‘Colkitto’ MacDonald, a Scottish general who fought with the Irish side”. 
 H: 
 H: I presume this is a note written by Paddy O'Brien. I wonder what other info is available about this set of tunes.
 L:1/8
