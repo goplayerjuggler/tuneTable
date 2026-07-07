@@ -129,7 +129,10 @@ node .\build\build-tune-lists.mjs
 npm run build # this includes the tune lists
 
 # working with abc-tools: just install it as a sibling – same parent folder 
-npm run dev:local # this way abc-tools is from local version, not from the npm package
+npm run dev:local 
+	<# this way abc-tools is from local version, not from the npm package #>
+# update dates file
+npm run update-dates -- only-check 4h 
 ```
 
 ### Using other tune collections – as a developer
