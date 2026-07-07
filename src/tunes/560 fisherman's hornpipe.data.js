@@ -1,5 +1,6 @@
 export default {
 	groups: "alora",
+	aka: "Fisherman's Hornpipe",
 	tags: "crooked",
 	parts: "AABB",
 	abc: [
@@ -12,7 +13,8 @@ R:reel
 D:[Danse ce Soir](https://www.youtube.com/watch?v=nmO8cnnQ4UI)
 F:https://lauriehart.bandcamp.com/track/fishers-hornpipe-reel-de-pointe-au-pic
 B:Hart & Sandel (2001) Danse ce Soir; #2, p.40
-H:This is a [setting from tunearch](https://tunearch.org/wiki/Fisher's_Hornpipe) that I (Malcolm) tweaked a little. Despite the name, I think it’s more like a reel than a hornpipe.
+H:This is a [setting from tunearch](https://tunearch.org/wiki/Fisher's_Hornpipe) that I (Malcolm) tweaked a little. 
+H:I’ve classified this as a reel, not as a hornpipe, despite the name, because I think that’s a better fit with how it’s played.
 M:4/4
 L:1/16
 K:F

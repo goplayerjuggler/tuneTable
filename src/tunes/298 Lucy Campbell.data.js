@@ -2,15 +2,31 @@ export default {
 	name: "Lucy Campbell",
 	groups: "ALORA, su",
 	parts: "ABCD",
-	incipit: `X: 1
-M: 4/4
-L: 1/16
+	abc: `
+X: 3
+T: Lucy Campbell
+R: reel
+M:4/4
+L:1/16
 K: Dmaj
-dB|A2FA A2dB A2FA BEE2|A2FA defe`,
+N:Imported into *tuneTable* on 2026-07-02,
+N:from https://thesession.org/tunes/1552#setting28377
+N:Setting entered in thesession by user “Jesse” on 2016-02-26
+N:*abc-tools: convert to M:4/4 & L:1/16*
+dB|AD~D2 A3B ADFA BE~E2|ADFA dfec dBAF AD~D2|
+   AD~D2 A3B ADFA BE~E2|ADFA dfec dBAF A2~D2||
+   dBAB defe d2cA BE~E2|dBAB defe dBAF AD~[AD]2|
+   dBAB defe dB~B2 gB~B2|dBAB defe dBAF A2~[AD]2||
+   aaaf defg a2fa beeg|aaaf defe dBAF A2~A2|
+   aaaf defg a2fa bgef|g3e f3e dBAF A2 ~A2||
+   dfef dfef dfef dfef|dffe ~f3e dBAF A2~[AD]2|
+   dfef dfef dfef dfef|~g3e ~f3e dBAF AD||
+`,
 	rhythm: "reel",
 	references: [
 		{
-			notes: "Compare with [The Bucks Of Oranmore](theSessionId=2)"
+			notes:
+				"Has some similarities with [The Bucks Of Oranmore](theSessionId=2). I’ve seen settings of the two tunes that start identically."
 		},
 		{
 			artists: "Tony MacMahon, accordion; Noel Hill, concertina",
