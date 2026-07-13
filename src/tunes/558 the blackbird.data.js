@@ -16,7 +16,7 @@ N: have a go at sketching them out too. This is just a transcription of the firs
 N: time round; on the recording it gets played four times and each time 
 N: is a bit different. 
 N:2. I believe this is really a set dance, not a hornpipe; but I’ve put “hornpipe”
-N:so as to see it amongst the hornpipes as it shares a lot with them rhythmically.
+N:so as to see it amongst the hornpipes, as it shares a lot with them rhythmically.
 L: 1/8
 K: G
 G>A|BB3 ((3c"<("">)"dc) ((3B"<("">)"cB) {B}A2^G>B A>Bc>A|d>cd>e d>cA>F G>FG>F DD-D>E|

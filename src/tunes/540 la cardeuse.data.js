@@ -1,5 +1,12 @@
 export default {
 	tags: "crooked",
+	//incipit needed as getFirstBars doesn't work well enough here
+	incipit: `X:1
+M:4/4
+L:1/16
+K:G
+ef|g2d2 {fg}fdef g2d2 {fg}fdef|\\
+[M:3/4][L:1/8]{ga}g{fg}f {ef}e{de}d`,
 	abc: `X:1
 T: La Cardeuse
 R:reel
@@ -14,12 +21,9 @@ Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4
 P:(ABCC’)2.ABC
 K:G
 P:A
-ef|g2d2 {fg}fdef g2d2 {fg}fdef|\
-M:3/4
-L:1/8
-{ga}g{fg}f {ef}e{de}d {cd}c{Bc}B | \
-L:1/16
-[M:4/4]{AB}AGAc BGG2 B2d2 d2ef | 
+ef|g2d2 {fg}fdef g2d2 {fg}fdef|\\
+[M:3/4][L:1/8]{ga}g{fg}f {ef}e{de}d {cd}c{Bc}B | \\
+[M:4/4][L:1/16]{AB}AGAc BGG2 B2d2 d2ef | 
 {f}g2d2 fdef g2d2 fdef |  gage {de}d2Bd cBAc {Bc}B2G2||
 P:B
 |: Bc{Bc}BA G2BG FGAc {Bc}B2G2 | Bc{Bc}BA G2[1BG FGAF (G3D):|
