@@ -82,6 +82,7 @@ export default class AbcModal extends Modal {
         <div id="abcText" class="abc-text">
           <pre id="abcTextContent"></pre>
         </div>
+        <div id="abcReferences" class="abc-references"></div>
         <div class="modal-controls abc-modal-controls">
           <div class="control-row">
             <button id="saveAbcBtn" class="save-btn" style="display:none"
@@ -127,6 +128,7 @@ export default class AbcModal extends Modal {
 		if (!this.elements) {
 			this.elements = {
 				rendered: document.getElementById("abcRendered"),
+				references: document.getElementById("abcReferences"),
 				text: document.getElementById("abcText"),
 				textContent: document.getElementById("abcTextContent"),
 				toggleBtn: document.getElementById("toggleViewBtn"),
@@ -641,38 +643,34 @@ export default class AbcModal extends Modal {
 	 * Only called in solo mode; shown only on the last page.
 	 * @param {string} abc - the current (possibly transposed) ABC string
 	 */
-	_renderMetaFields(abc) {
-		const { comments, hComments } = getHeaders(abc);
-		if (!comments?.length && !hComments) return;
+	_renderMetaFields() {
+		// Only the reference from the currently-displayed setting is relevant here;
+		// referencesFromAbc entries are tagged with the ABC-array index they came from
+		// (see processTuneData.js), since not every setting necessarily has one.
+		const currentAbcRef = (this.tune.referencesFromAbc ?? []).find(
+			(ref) => ref._abcIndex === this.currentAbcIndex
+		);
+		if (!currentAbcRef && (this.tune.references?.length ?? 0) === 0) return;
 
 		const block = document.createElement("div");
 		block.className = "abc-meta-fields notes";
 
 		const heading = document.createElement("strong");
-		heading.textContent = "History / notes";
+		heading.textContent = "Notes / references";
 		block.appendChild(heading);
 
-		(comments ?? []).forEach((line) => {
-			const p = document.createElement("p");
-			p.innerHTML = formatNoteLinks(line);
-			block.appendChild(p);
-		});
-
-		if (hComments) {
-			const p = document.createElement("p");
-			p.innerHTML = formatNoteLinks(hComments);
-			block.appendChild(p);
-		}
 		const acc = { referencesHtml: "", hasTheSessionLink: false };
 
-		(this.tune.references ?? []).forEach((ref) => formatReference(ref, acc));
+		(currentAbcRef ? [currentAbcRef] : [])
+			.concat(this.tune.references ?? [])
+			.forEach((ref) => formatReference(ref, acc));
 		if (acc.referencesHtml) {
 			const p = document.createElement("p");
 			p.innerHTML = acc.referencesHtml;
 			block.appendChild(p);
 		}
 
-		this.elements.rendered.appendChild(block);
+		this.elements.references.appendChild(block);
 	}
 
 	updateDisplayAfterTranspose() {
@@ -690,7 +688,7 @@ export default class AbcModal extends Modal {
 		this.elements.rendered.innerHTML = "";
 		AbcJs.renderAbc(
 			"abcRendered",
-			stripHeaders(this.currentTransposedAbc, ["N", "H"]),
+			stripHeaders(this.currentTransposedAbc, ["N", "H", "D"]),
 			{
 				scale: 1.0,
 				staffwidth,

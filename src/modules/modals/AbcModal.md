@@ -49,6 +49,9 @@ When a tune has multiple settings (an array of ABC strings), **↑ Previous sett
 
 Arrow keys ↑ / ↓ also navigate settings.
 
+### notes / references
+In solo mode only, notes and references (link to audio/video) are shown beneath the score or raw ABC. “ABC references” (references/notes extracted from H, N, D, F, and S ABC headers) are updated for tunes with multiple settings; only the reference from the currently-selected setting is displayed. (Each entry in `tune.referencesFromAbc` is tagged with the index of the ABC setting it was extracted from, and only the entry matching `currentAbcIndex` is shown.) Manually-added references (`tune.references`) are shown alongside the score or raw ABC, regardless of setting.
+
 ### Save changes
 Appears when any setting has been modified relative to the state at open (dirty detection). Saves all settings in `currentAbcArray`, reprocesses the tune, persists to storage, re-renders the table, and closes the modal.
 
@@ -95,6 +98,7 @@ The modal header (title bar) hides automatically after opening to maximise the v
 | `abcjs` | Rendering ABC and transposition |
 | `Modal` | Base modal class |
 | `reprocessTune` (`processTuneData.js`) | Updating tune metadata after save |
+| `formatReference`, `formatNoteLinks` (`utils.js`) | Rendering the notes/references block beneath the score |
 | `resolveAbcForEntry`, `tuneMatchesEntry` (`setUtils.js`) | Set-list entry resolution |
 
 `setUtils.js` is also imported by `TuneSelectionsModal.js`, which should use the same exported `findTuneByEntry` instead of its local copy.

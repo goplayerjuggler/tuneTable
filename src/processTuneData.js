@@ -18,7 +18,8 @@ function updateFromMetadata(
 	metaData,
 	processed,
 	setIsFromAbc = true,
-	updateBasicInfo = true
+	updateBasicInfo = true,
+	abcIndex
 ) {
 	if (updateBasicInfo) {
 		if (!processed.name && metaData.title) {
@@ -59,6 +60,7 @@ function updateFromMetadata(
 				(metaData.hComments ? metaData.hComments : "")
 			}`
 		};
+		if (abcIndex !== undefined) abcRef._abcIndex = abcIndex;
 		//if (abcRef.notes) abcRef.notes += " (notes extracted from ABC)";
 
 		processed.referencesFromAbc.push(abcRef);
@@ -93,8 +95,9 @@ function processTuneData(tune) {
 			abcArray.forEach((abcString, index) => {
 				const abcMeta = getHeaders(abcString);
 
-				if (index === 0) updateFromMetadata(abcMeta, processed);
-				else updateFromMetadata(abcMeta, processed, false, false);
+				if (index === 0)
+					updateFromMetadata(abcMeta, processed, true, true, index);
+				else updateFromMetadata(abcMeta, processed, false, false, index);
 			});
 
 			if (!tune.incipit) {
