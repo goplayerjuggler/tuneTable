@@ -4,14 +4,15 @@ T:The Wonder
 C:James Hill
 R:hornpipe
 L:1/8
-M:4/4
+M:4/2
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/337#setting337
 N:Setting entered in thesession by user “Joerg Froese” on 2001-10-21
+N:*abc-tools: convert to M:4/2*
 K:Gmajor
-|:(3DEF|GdBG FcAF|(3GFG BG D2GF|EGAB cBAG|Fd (3d^cd ed=cA|
- GdBG FcAF|(3GFG BG D2GF|Eedc BAGF|A2G2 G2:|
- |:AG|FAd^c dBAG|FAd^c dfed|^cdef (3gfe ^ce|d^cde d2 =c2|
- BcBA ^GBe2|ABA=G FAd2|egfe (3ded (3cBA|GgdB G2:|`,
+|:(3DEF|GdBG FcAF (3GFG BG D2GF|EGAB cBAG Fd (3d^cd ed=cA|
+GdBG FcAF (3GFG BG D2GF|Eedc BAGF A2G2 G2:|
+|:AG|FAd^c dBAG FAdc dfed|^cdef (3gfe ^ce dcde d2 =c2|
+BcBA ^GBe2 ABA=G FAd2|egfe (3ded (3cBA GgdB G2:|`,
 	theSessionId: 337
 };

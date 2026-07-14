@@ -4,17 +4,12 @@ T:The Moving Cloud
 R: reel
 O:Ireland; Donegal.
 C:Néillidh Boyle
+D:A Feeling In The Blood
 F: https://donegalfiddlemusic.bandcamp.com/album/a-feeling-in-the-blood
-N:1. Composed in 1942.
-N:2. The album [A Feeling In The Blood](https://donegalfiddlemusic.bandcamp.com/album/a-feeling-in-the-blood) has several recordings of the composer 
-N: playing his tune. They were are real eye-opener to me and I’m very fond of them; N. Boyle has a 
-N: unique way of playing. Full of variations and energy. His playing won’t be to everyone’s taste 
-N: these days of course, which is a pity but it’s their loss!
-N:3. This tune is quite unlike today’s session standard by the same name.
-N: For me they should be seen as two separate tunes, even though there’s a very simple 
-N: and strong link between them: the session standard was surely inspired by and derived
-N: from N. Boyle’s tune.
-N:4. I’ve included here a (tweaked) score by Daniel Parker.
+H:1. Composed in 1942.
+H:2. This album has several recordings of the composer playing his tune. They were are real eye-openers to me and I’m very fond of them; N. Boyle has a unique way of playing. Full of variations and energy. His playing won’t be to everyone’s taste these days of course, which is a pity but it’s their loss!
+H:3. This tune is quite unlike today’s session standard by the same name. For me they should be seen as two separate tunes, even though there’s a very simple and strong link between them: the session standard was surely inspired by and derived from N. Boyle’s tune.
+H:4. I’ve included here a (tweaked) score by Daniel Parker.
 M:4/4
 L: 1/16
 K: Fmaj
@@ -25,11 +20,11 @@ K: Fmaj
 c2ac ccac acca ccac|d2bd bdbd bdbb dbbd|
 c2 (3ccc ccac cccd ccac|ccac bbag[1 fdcA cFA=B:|2 fdcA c[C2F2]F||
 `,
-	incipit: `X:1
+	/*	incipit: `X:1
 M:4/2
 L: 1/16
 K: Fmaj
-CFAF DFAF CFAF DFAF|G2=BG dGBG`,
+CFAF DFAF CFAF DFAF|G2=BG dGBG`,*/
 	theSessionId: 1091,
 	theSessionSettingId: 32456
 };

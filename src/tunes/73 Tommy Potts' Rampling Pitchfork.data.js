@@ -36,8 +36,8 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/2329#setting2329
 N:Setting entered in thesession by user “Christopher Reynolds” on 2003-12-31
 N:*abc-tools: convert to M:12/8*
-N:This version from thesession seems to be close to the previous Jimmy Power setting
-KDminor
+N:This version from thesession seems to be close to the previous, Jimmy Power setting.
+K:Dminor
 |:FFF AFF cFF AF^F|G^FG ABg fed cAG|
 ^FDD ADD CDD A,DD|G^FG ABG A=FD D3:|
 fff ecA BBB AFD|G^FG ABg fed cAG|

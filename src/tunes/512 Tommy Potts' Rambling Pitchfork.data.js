@@ -20,7 +20,7 @@ L: 1/8
 K: Dmin
 E |:[P:A] F2F AFF cFF AGF | G2A Bde fed cAG | 
 FDD ADD CDD A,DF | G2A BAG [1 AFD DCD :| [2 AFC D2d ||
-|:[P:B] d^cd ^fed e^cA =B/c/de | d^cd e^fg a2^f gfe |
+|:[P:B] d^cd ^fed e^cA =B/c/de | d^cd e^fg a2f gfe |
 d2e =fed e^cA E^FG | ^FGA BAG A^ce [1 dcA:| [2 dag ||
 [P:C] fed ecA dAc AFD | G2A Bde fed cAG |
 FDD ADD CDD A,DF | G2A BAG AFC D2 !D.C.! |]`,

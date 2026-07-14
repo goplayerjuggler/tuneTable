@@ -3,7 +3,7 @@ export default {
 T:Kitty Hayes'
 R:hornpipe
 L:1/8
-M:4/4
+M:4/2
 N:ABC borrowed from here: https://tunesfromdoolin.com/kitty-hayes-hornpipe/ I
 N:added a c#. The proprietor of that site, Charles Monod, says this about the
 N:tune:
@@ -18,12 +18,14 @@ N:---
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/21525#setting43012
 N:Setting entered in thesession by user “What's the name of this tune?” on 2022-02-06
+N:*abc-tools: convert to M:4/2*
 K:Eminor
-|:BEED E2DE|GABG A2GA|BEED E2DE|GABG A2d^c|
- BEED E2DE|GABG AAGA|B2BA GEDE|G2GF G2GA:|
- |:BABd e2eg|fedf edBA|BA (3Bcd e2eg|fe (3def e2ed|
- edBA d2ed|BAGA BAGE|B2BA GEDE|G2GF G2GA:|`,
+|:BEED E2DE GABG A2GA|BEED E2DE GABG A2d^c|
+BEED E2DE GABG AAGA|B2BA GEDE G2GF G2GA:|
+|:BABd e2eg fedf edBA|BA (3Bcd e2eg fe (3def e2ed|
+edBA d2ed BAGA BAGE|B2BA GEDE G2GF G2GA:|`,
 	parts: "AABB",
+	groups: "su",
 	theSessionId: 21525,
 	theSessionSettingId: 43012
 };
