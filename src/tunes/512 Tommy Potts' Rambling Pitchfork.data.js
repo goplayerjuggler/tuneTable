@@ -33,7 +33,7 @@ FDD ADD CDD A,DF | G2A BAG AFC D2 !D.C.! |]`,
 			url: "https://www.itma.ie/scores/pob0421_itma040375_021/",
 			artists: "Paddy O’Brien, button accordion",
 			notes: `
-Quite similar but not quite the same as the track on Bright And Early.
+Similar, but not quite the same as the track on Bright And Early.
 This new ITMA resource provides scores that are hooked up to the recording. Very handy; very nice! And it has additional info too: 
 
 “This more intricate version is from the way I heard Tommy Potts play it. Tommy told me he rearranged the jig out of pure musical devilment, which was his way of exploring the melodic makeup of some of his favorite jigs and reels.”
