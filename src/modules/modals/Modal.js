@@ -1,4 +1,12 @@
 /**
+ * Elements considered part of the natural Tab order within a modal.
+ * Shared between the initial-focus logic in open() and trapFocus(), so both
+ * agree on what counts as "focusable".
+ */
+const FOCUSABLE_SELECTOR =
+	'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+/**
  * Base Modal class providing consistent behaviour and styling
  * All modals should extend this class
  */
@@ -35,6 +43,7 @@ export default class Modal {
 	 */
 	render() {
 		this.element = document.createElement("div");
+		this.element.tabIndex = -1;
 		this.element.className = `modal modal-${this.size}`;
 		this.element.id = this.id;
 		this.element.setAttribute("role", "dialog");
@@ -82,6 +91,13 @@ export default class Modal {
 			}
 		};
 		document.addEventListener("keydown", this.escHandler);
+
+		// Focus trap: attached once per element here (render() only runs once
+		// per element lifecycle), rather than in open(), which can run several
+		// times against the same still-live element (e.g. switching tunes
+		// without closing the modal first) and would otherwise stack duplicate
+		// keydown listeners, making Tab jump by more than one control per press.
+		this.trapFocus();
 	}
 
 	/**
@@ -91,6 +107,19 @@ export default class Modal {
 	isTopModal() {
 		const modals = document.querySelectorAll(".modal-active");
 		return modals[modals.length - 1] === this.element;
+	}
+
+	/**
+	 * True if the element is actually rendered (not display:none, not
+	 * detached, not collapsed to nothing) and therefore a legitimate Tab stop.
+	 * Elements that aren't rendered can't receive focus at all — calling
+	 * .focus() on one is a silent no-op — so they must be excluded from any
+	 * focus-order calculation, not just visually hidden from the user.
+	 * @param {HTMLElement} el
+	 * @returns {boolean}
+	 */
+	_isVisible(el) {
+		return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
 	}
 
 	/**
@@ -140,14 +169,13 @@ export default class Modal {
 			this.element.classList.add("modal-active");
 
 			if (this.onOpen) this.onOpen();
-			this.trapFocus();
 
-			// Focus first focusable element in body, or fall back to close button
-			const firstFocusable =
-				this.element.querySelector(
-					'.modal__body input, .modal__body button, .modal__body select, .modal__body textarea, .modal__body [tabindex]:not([tabindex="-1"])'
-				) ?? this.element.querySelector(".modal__close");
-			firstFocusable.focus();
+			// Focus the modal container itself, not a control inside it — focusing a
+			// footer button auto-scrolls the nearest scrollable ancestor to bring it
+			// into view, which jumps long scores straight to the bottom on open.
+			// tabIndex -1 keeps it out of the normal Tab order; the first real Tab
+			// press still lands on the first visible control via trapFocus().
+			this.element.focus();
 
 			// Start auto-hide timer if enabled
 			this.startAutoHideTimer();
@@ -194,10 +222,8 @@ export default class Modal {
 			e.preventDefault();
 
 			const focusableElements = Array.from(
-				this.element.querySelectorAll(
-					'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-				)
-			);
+				this.element.querySelectorAll(FOCUSABLE_SELECTOR)
+			).filter((el) => this._isVisible(el));
 
 			if (focusableElements.length === 0) return;
 

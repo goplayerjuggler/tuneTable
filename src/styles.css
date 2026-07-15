@@ -727,6 +727,20 @@ tr:hover .tune-menu-trigger,
 .abc-meta-fields {
   margin-top: 10px;
 }
+
+/* References are shown larger here than elsewhere in the app (e.g. the main
+   tune table), where space is tighter. */
+#abcReferences .notes {
+  font-size: 16px;
+}
+
+.abc-file-date {
+  margin-top: 6px;
+  font-size: 10px;
+  font-style: normal;
+  color: var(--text-tertiary, var(--text-secondary));
+}
+
 .abc-modal-controls .control-row {
   flex-wrap: wrap;
   gap: 6px;
@@ -797,6 +811,33 @@ tr:hover .tune-menu-trigger,
   border-radius: 6px;
   border: 1px solid var(--border-color, #ccc);
   cursor: pointer;
+}
+
+/* Groups settings-nav (↑/↓) and page-nav (←/→) controls so each cluster's
+   buttons and counter stay together when the row wraps on narrow screens. */
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* The base Modal's close button is relocated into this row by AbcModal
+   (setupControls). Push it to the far right, away from the nav clusters,
+   and give it the more visible footer treatment instead of the small
+   transparent header style. */
+.nav-row .modal__close {
+  margin-left: auto;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  color: white;
+  background: var(--btn-delete-bg);
+  border-radius: 6px;
+}
+
+.nav-row .modal__close:hover {
+  background: var(--btn-delete-hover);
+  color: white;
 }
 
 .close-btn {

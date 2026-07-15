@@ -3,7 +3,6 @@ import {
 	canHalveBarLength,
 	convertStandardTune,
 	convertToStandardTune,
-	getHeaders,
 	stripHeaders
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
@@ -11,7 +10,7 @@ import AbcJs from "abcjs";
 import { reprocessTune } from "../../processTuneData.js";
 import { resolveAbcForEntry, tuneMatchesEntry } from "../setUtils.js";
 import { sendToEskinsTool } from "./sendToEskinsTool.js";
-import { formatNoteLinks, formatReference } from "../../utils.js";
+import { formatReference } from "../../utils.js";
 /**
  * ### AbcModal
  * **Purpose**: Display sheet music for a single tune or for a full set of tunes.
@@ -100,19 +99,21 @@ export default class AbcModal extends Modal {
               aria-label="Transpose up one semitone">♯</button>
             <button class="toggle-view-btn" id="toggleViewBtn">ABC text</button>
           </div>
-          <div class="control-row">
-            <button id="prevAbcBtn" class="nav-btn" aria-label="Previous setting">↑ Prev</button>
-            <span id="abcCounter" aria-live="polite"></span>
-            <button id="nextAbcBtn" class="nav-btn" aria-label="Next setting">↓ Next</button>
-          </div>
-          <div class="control-row pagination-controls">
+          <div class="control-row nav-row">
             <div id="abcContextRow" style="display:none">
               <label for="abcContextSelect">Mode</label>
               <select id="abcContextSelect"></select>
             </div>
-            <button id="prevPageBtn" class="nav-btn" aria-label="Previous page">← Prev</button>
-            <span id="pageCounter" aria-live="polite"></span>
-            <button id="nextPageBtn" class="nav-btn" aria-label="Next page">Next →</button>
+            <div class="nav-group" id="abcSettingNav">
+              <button id="prevAbcBtn" class="nav-btn" aria-label="Previous setting">↑ Prev</button>
+              <span id="abcCounter" aria-live="polite"></span>
+              <button id="nextAbcBtn" class="nav-btn" aria-label="Next setting">↓ Next</button>
+            </div>
+            <div class="nav-group" id="abcPageNav">
+              <button id="prevPageBtn" class="nav-btn" aria-label="Previous page">← Prev</button>
+              <span id="pageCounter" aria-live="polite"></span>
+              <button id="nextPageBtn" class="nav-btn" aria-label="Next page">Next →</button>
+            </div>
           </div>
         </div>
       `
@@ -346,6 +347,7 @@ export default class AbcModal extends Modal {
 		this.elements.rendered.innerHTML = "";
 		this.allSvgs = svgs;
 		this.updatePagination();
+		this._updateReferences();
 	}
 
 	// ── Controls ──────────────────────────────────────────────────────────────
@@ -415,9 +417,7 @@ export default class AbcModal extends Modal {
 	setupControls() {
 		//move the close button from the header to the footer
 		const closeButton = document.querySelector("#abcModal .modal__close");
-		const newParent = document.querySelector(
-			"#abcModal .control-row.pagination-controls"
-		);
+		const newParent = document.querySelector("#abcModal .control-row.nav-row");
 		newParent.appendChild(closeButton);
 
 		this.elements.doubleBtn?.addEventListener("click", () =>
@@ -604,9 +604,6 @@ export default class AbcModal extends Modal {
 				this.elements.rendered.appendChild(this.allSvgs[i].cloneNode(true));
 		}
 
-		if (this.currentPage === totalPages - 1 && !this.isSetMode)
-			this._renderMetaFields(this.currentTransposedAbc);
-
 		this.updatePaginationButtons(totalPages);
 	}
 
@@ -639,18 +636,28 @@ export default class AbcModal extends Modal {
 	}
 
 	/**
-	 * Appends N: and H: metadata beneath the score in the rendered container.
-	 * Only called in solo mode; shown only on the last page.
-	 * @param {string} abc - the current (possibly transposed) ABC string
+	 * Rebuilds the notes/references block beneath the score for the current
+	 * setting (solo mode only). Always clears the container first, so this is
+	 * safe to call repeatedly (e.g. on every setting change) without
+	 * accumulating duplicate content. Deliberately independent of pagination —
+	 * references stay visible under the score on every page, not just the last.
 	 */
-	_renderMetaFields() {
+	_updateReferences() {
+		this.elements.references.innerHTML = "";
+		if (this.isSetMode || !this.tune) return;
+
 		// Only the reference from the currently-displayed setting is relevant here;
 		// referencesFromAbc entries are tagged with the ABC-array index they came from
 		// (see processTuneData.js), since not every setting necessarily has one.
 		const currentAbcRef = (this.tune.referencesFromAbc ?? []).find(
 			(ref) => ref._abcIndex === this.currentAbcIndex
 		);
-		if (!currentAbcRef && (this.tune.references?.length ?? 0) === 0) return;
+		if (
+			!currentAbcRef &&
+			(this.tune.references?.length ?? 0) === 0 &&
+			!this.tune.fileDate
+		)
+			return;
 
 		const block = document.createElement("div");
 		block.className = "abc-meta-fields notes";
@@ -668,6 +675,13 @@ export default class AbcModal extends Modal {
 			const p = document.createElement("p");
 			p.innerHTML = acc.referencesHtml;
 			block.appendChild(p);
+		}
+
+		if (this.tune.fileDate) {
+			const dateEl = document.createElement("div");
+			dateEl.className = "abc-file-date";
+			dateEl.textContent = `File date: ${this.tune.fileDate}`;
+			block.appendChild(dateEl);
 		}
 
 		this.elements.references.appendChild(block);
@@ -703,6 +717,7 @@ export default class AbcModal extends Modal {
 
 		this.allSvgs = Array.from(this.elements.rendered.querySelectorAll("svg"));
 		this.updatePagination();
+		this._updateReferences();
 		this.updateSaveButton();
 	}
 
