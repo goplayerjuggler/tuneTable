@@ -44,6 +44,9 @@ Semitone-by-semitone transposition up (♯) or down (♭). Transpositions accumu
 ### View toggle
 Switches between the rendered score and a plain-text view of the raw ABC source. The text view reflects the current transposed state.
 
+### Copy ABC
+Copies the current setting's ABC (with any transposition and bar-length changes applied) to the clipboard. Button label briefly shows "✓ Copied!" for two seconds on success.
+
 ### Settings navigation
 When a tune has multiple settings (an array of ABC strings), **↑ Previous setting** and **↓ Next setting** buttons appear, along with a `n / total` counter. Navigating commits any transposition on the departing setting before switching.
 
@@ -85,6 +88,7 @@ The modal header (title bar) hides automatically after opening to maximise the v
 | `transpose(semitones)` | Transpose by ±n semitones (solo only). |
 | `navigate(direction)` | Move between tune settings: `+1` or `−1` (solo only). |
 | `toggleView()` | Switch between rendered and ABC-text views (solo only). |
+| `copyAbc()` | Copy the current setting's ABC to the clipboard (solo only). |
 | `nextPage() / prevPage()` | Advance or retreat one page. |
 | `save()` | Persist all modified settings and close. |
 

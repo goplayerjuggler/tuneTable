@@ -29,6 +29,7 @@ import { formatReference } from "../../utils.js";
  * - Pagination for long scores, with click and keyboard navigation (both modes)
  * - Auto-hiding header to maximise score viewing area
  * - Toggle between rendered and text views (solo only)
+ * - Copy the current ABC to the clipboard (solo only)
  * - Transpose up/down by semitones (solo only)
  * - Double or halve bar length (solo only)
  * - Navigate between multiple tune settings (solo only)
@@ -41,6 +42,7 @@ import { formatReference } from "../../utils.js";
  * - `transpose(semitones)`: Transpose the displayed music (solo)
  * - `navigate(direction)`: Move between tune settings (solo)
  * - `toggleView()`: Switch between rendered and text views (solo)
+ * - `copyAbc()`: Copy the current ABC to the clipboard (solo)
  * - `nextPage() / prevPage()`: Paginate the score
  * - `save()`: Persist all modified settings back to the tune data (solo)
  *
@@ -98,6 +100,7 @@ export default class AbcModal extends Modal {
             <button id="transposeUpBtn" class="transpose-btn"
               aria-label="Transpose up one semitone">♯</button>
             <button class="toggle-view-btn" id="toggleViewBtn">ABC text</button>
+            <button id="copyAbcBtn" class="nav-btn" aria-label="Copy ABC to clipboard">Copy ABC</button>
           </div>
           <div class="control-row nav-row">
             <div id="abcContextRow" style="display:none">
@@ -146,7 +149,8 @@ export default class AbcModal extends Modal {
 				saveBtn: document.getElementById("saveAbcBtn"),
 				contextRow: document.getElementById("abcContextRow"),
 				contextSelect: document.getElementById("abcContextSelect"),
-				eskinBtn: document.getElementById("eskinBtn")
+				eskinBtn: document.getElementById("eskinBtn"),
+				copyAbcBtn: document.getElementById("copyAbcBtn")
 			};
 			this.setupControls();
 		}
@@ -354,7 +358,7 @@ export default class AbcModal extends Modal {
 
 	/**
 	 * Show or hide all mode-dependent controls in one pass.
-	 * Transpose and toggle-view buttons are always hidden in set mode;
+	 * Transpose, toggle-view and copy-ABC buttons are always hidden in set mode;
 	 * the per-setting controls (nav, bar-length, save) delegate to their own
 	 * update methods, which also check `isSetMode` internally.
 	 */
@@ -363,7 +367,8 @@ export default class AbcModal extends Modal {
 		[
 			this.elements.transposeUpBtn,
 			this.elements.transposeDownBtn,
-			this.elements.toggleBtn
+			this.elements.toggleBtn,
+			this.elements.copyAbcBtn
 		].forEach((el) => el && (el.style.display = setMode ? "none" : ""));
 
 		this.updateNavigationButtons();
@@ -427,6 +432,7 @@ export default class AbcModal extends Modal {
 			this.changeBarLength(-1)
 		);
 		this.elements.toggleBtn?.addEventListener("click", () => this.toggleView());
+		this.elements.copyAbcBtn?.addEventListener("click", () => this.copyAbc());
 		this.elements.transposeUpBtn?.addEventListener("click", () =>
 			this.transpose(1)
 		);
@@ -545,6 +551,27 @@ export default class AbcModal extends Modal {
 			this.elements.text.classList.remove("active");
 			this.elements.toggleBtn.textContent = "ABC text";
 		}
+	}
+
+	/**
+	 * Copy the currently displayed ABC (transposed, current bar length,
+	 * current setting) to the clipboard. Solo mode only.
+	 */
+	copyAbc() {
+		const button = this.elements.copyAbcBtn;
+		navigator.clipboard.writeText(this.currentTransposedAbc).then(
+			() => {
+				const originalText = button.textContent;
+				button.textContent = "✓ Copied!";
+				setTimeout(() => {
+					button.textContent = originalText;
+				}, 2000);
+			},
+			(err) => {
+				console.error("Failed to copy ABC:", err);
+				alert("Failed to copy ABC");
+			}
+		);
 	}
 
 	navigate(direction) {
