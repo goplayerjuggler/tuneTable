@@ -1461,7 +1461,13 @@ function selectByIdProperty(idProperty, id) {
 	populateFilters();
 	applyFilters();
 	removeSpinner();
+
 	scrollToFirstTune(tunes);
+	// This is reached via a share link (ttId=/theSessionId= URL params), so
+	// open the score viewer directly as well as scrolling to the tune.
+
+	const first = tunes[0];
+	if (first?.abc) openAbcModal(first);
 }
 
 function removeSpinner() {
