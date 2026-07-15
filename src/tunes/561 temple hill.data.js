@@ -1,5 +1,6 @@
 export default {
 	tags: "crooked",
+	groups: "alora",
 	parts: "AB",
 	structure: "4.4.3;2.(3.3 + 4.3)",
 	abc: [
@@ -26,6 +27,19 @@ c | !segno! cAG A/B/AA ABA A2 d | cAG A/B/AA  ABA GAB |
     cAG A/B/AA ABA A2{/^c} d | cAG A/B/AA   ABA GED || 
     [M:9/8] EDE ccE ccE | [M:12/8] EDE cde dcA  GED |
     [M:9/8] EDE ccE ccE | [M:12/8] EFE cde dcA GAB !D.S.! |]  
+`,
+		`
+X:1
+T:Temple Hill
+R:jig
+M:12/8
+N: Same as the previous score, but with some chords I added. Just a sketch.
+L:1/8
+K:A min
+c | !segno! "Am" cAG A/B/AA ABA A2 d | "Am" cAG A/B/AA  ABA "G" GAB | 
+    "Am"cAG A/B/AA ABA A2{/^c} d | cAG A/B/AA   ABA "G"GED || 
+    [M:9/8] "C"EDE ccE ccE | [M:12/8] "C"EDE cde dcA  "G"GED |
+    [M:9/8] "C"EDE ccE ccE | [M:12/8] "C"EFE cde dcA "G"GAB !D.S.! |]  
 `
 	],
 	ttId: 561
