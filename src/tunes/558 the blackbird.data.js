@@ -69,7 +69,7 @@ G>A|"G"B4 c2 B2 "D"A2^G>B A>Bc>A|"D"d>cd>e d>cA>F "G"G>FG>F "(D)"D2 D>E|
 "D"F>EF>G A2f>e "D"d>^cd>e d>cA>F|[M:3/2]"G"G>EF>E "D"D2 ^C>E "D"D2 
 M:4/2
 K:D
-|:d>e|"D"f>dd>e f2g2 "D"a2a>g f>ga>f  | "G"g2g>f g>ba>f "G"g>ag>f "(D)""d2d>e |
+|:d>e|"D"f>dd>e f2g2 "D"a2a>g f>ga>f  | "G"g2g>f g>ba>f "G"g>ag>f "(D)"d2d>e |
       "D"f>dd>e f2g2 "D"a2-a>g f>ga>f | [M:5/2]"G"g>ag>f "D"d2d>c d>ef>g a2a>g f>ga>f | 
 M:3/2
 "G(C)"g>f (3efg "D"f2e>f d>cA2 | "A"A>Bc>d "A/C#(C)"e>f (3gfe "A"a2 a2|
