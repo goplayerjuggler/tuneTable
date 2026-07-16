@@ -1549,6 +1549,12 @@ async function initialiseData() {
 	window.tunesData = [];
 	window.filteredData = [];
 	window._setLists = [];
+	window.sortByMostRecent = () => {
+		window.filteredData = window.filteredData.sort((a, b) =>
+			b.fileDate.localeCompare(a.fileDate)
+		);
+		renderTable();
+	};
 
 	// Cleanup from previous storage format
 	localStorage.removeItem(storageKey + "_saveDate");
