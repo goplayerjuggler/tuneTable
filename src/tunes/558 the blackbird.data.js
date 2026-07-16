@@ -74,7 +74,7 @@ K:D
 M:3/2
 "G(C)"g>f (3efg "D"f2e>f d>cA2 | "A"A>Bc>d "A/C#(C)"e>f (3gfe "A"a2 a2|
 M:4/2
-"A"A2-A>G F>GA>B "A(A/C#)(C)"c>d e2 "D"d>cA>F | [M:3/2] "G"G>EF>E "D"(3DED C>E "D"D2 :| 
+"A"A2-A>G F>GA>B "A/C#(C)"c>d e2 "D"d>cA>F | [M:3/2] "G"G>EF>E "D"(3DED C>E "D"D2 :| 
 `
 	],
 	tags: "crooked",
