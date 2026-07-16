@@ -1,24 +1,23 @@
 export default {
+	groups: "alora",
+	parts: "AABB",
 	abc: `X:1
 T:Fanny Power
 C:Turlough O'Carolan
 R:waltz
-L:1/8
+L:1/4
 M:3/4
-N:Imported into *tuneTable* on 2026-06-09,
-N:from https://thesession.org/tunes/957#setting23668
-N:Setting entered in thesession by user “ceolachan” on 2014-02-27
-K:Fmajor
-M:6/8
- "Grazioso"F|F2 C FGA|B2 A G2 F|E2 D CEC|E2 F G2 B|
- AGF ABc|d2 G G2 F|E2 D CFE|F3 F2||
- A|cA/B/c cA/B/c|FAF FAF|dB/c/d dB/c/d|GBG GBG|
- ABc def|efg cdc|A2 F GAG|F3 F2||
- M:3/4
- "Grazioso"F2|F4 C2|F2 G2 A2|B4 A2|G4 F2|E4 D2|C2 E2 C2|E4 F2|G4 B2|
- A2 G2 F2|A2 B2 c2|d4 G2|G4 F2|E4 D2|C2 F2 E2|F6|F4||
- A2|c2 AB c2|c2 AB c2|F2 A2 F2|F2 A2 F2|d2 Bc d2|d2 Bc d2|G2 B2 G2|G2 B2 G2|
- A2 B2 c2|d2 e2 f2|e2 f2 g2|c2 d2 c2|A4 F2|G2 A2 G2|F6|F4||`,
+N:Imported into *tuneTable* on 2026-07-16,
+N:from https://thesession.org/tunes/957#setting25632
+N:Setting entered in thesession by user “BenH” on 2015-01-19
+N:(Edited after importing)
+H:I left out the lyrics here as there was an issue with the sheet music; see the setting on thesession for them.
+K:Gmajor
+|:D|"G" G2 D |G>AB|"Am"c2 B | A2 G|"D" F>GE | DED|"D7" F2 G | A>Bc|
+ "G" B>AG| Bcd|"C" e2 A |A2 G|"D" F>GE| DGF|"G" G2 G |G2:|
+ |:d|"G" dB/c/d | "(Bm/F#)" dB/c/d|"Em" G>AG |GBd|"C" ec/d/e |"(Am)" ec/d/e|"D" A>BA | ABc|
+ "G" B>cd | "Em" efg|"D (Am)" fga | "(D)" d2 c|"G (G/D)" B>AG | "D" A/B/cF|"G" G2 G | G2:|
+ `,
 	theSessionId: 957,
-	theSessionSettingId: 23668
+	theSessionSettingId: 25632
 };
