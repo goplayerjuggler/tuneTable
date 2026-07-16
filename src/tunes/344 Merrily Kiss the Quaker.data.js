@@ -2,7 +2,7 @@ export default {
 	groups: "su",
 	incipit: `X:1
 T:Merrily Kiss the Quaker 
-R: jig
+R: single jig
 N: H. Norbeck has this as a single jig, and thession.org has it as a slide. It doesn’t feel like a slide to me…
 M:12/8
 L:1/8

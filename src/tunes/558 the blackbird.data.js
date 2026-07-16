@@ -54,6 +54,27 @@ M:3/2
 g>f (3efg f2e>f d>cA2 | A>Bc>d e>f (3gfe a2 a2|
 M:4/2
 A2-A>G F>GA>B c>d e2 d>cA>F | [M:3/2] G>EF>E (3DED C>E D2 :| 
+`,
+		`X: 3
+T: The Blackbird
+N:Same as the previous entry, but with some chords quickly jotted down.
+S:Michael Coleman
+R: hornpipe
+M: 4/2
+L: 1/8
+K: D mixo
+G>A|"G"B4 c2 B2 "D"A2^G>B A>Bc>A|"D"d>cd>e d>cA>F "G"G>FG>F "(D)"D2 D>E|
+"D"F>EF>G A>df>e "D"d2d>e d>cA>F|[M:3/2]"G"G>EF>E "D"(3DED ^C>E "D"D2 G>A |
+"G"(3Bcd B>d c>dB>c "D"A>B^G>B A>Bc>B | "D"A>df>e d>cA>F "G"G>EG>F "D"D2D>E|
+"D"F>EF>G A2f>e "D"d>^cd>e d>cA>F|[M:3/2]"G"G>EF>E "D"D2 ^C>E "D"D2 
+M:4/2
+K:D
+|:d>e|"D"f>dd>e f2g2 "D"a2a>g f>ga>f  | "G"g2g>f g>ba>f "G"g>ag>f "(D)""d2d>e |
+      "D"f>dd>e f2g2 "D"a2-a>g f>ga>f | [M:5/2]"G"g>ag>f "D"d2d>c d>ef>g a2a>g f>ga>f | 
+M:3/2
+"G(C)"g>f (3efg "D"f2e>f d>cA2 | "A"A>Bc>d "A/C#(C)"e>f (3gfe "A"a2 a2|
+M:4/2
+"A"A2-A>G F>GA>B "A(A/C#)(C)"c>d e2 "D"d>cA>F | [M:3/2] "G"G>EF>E "D"(3DED C>E "D"D2 :| 
 `
 	],
 	tags: "crooked",
