@@ -83,8 +83,12 @@ async function updateTuneDates({ onlyCheckWithin = null } = {}) {
     // Cache doesn't exist yet — will be created below
   }
 
-  const tuneFileNames = (await fs.readdir(SOURCE_DIR)).filter((f) =>
-    f.endsWith(".data.js")
+  // `.data.js` files and bare `.abc` files directly under `src/tunes/` both
+  // need a cached commit date. `readdir` is non-recursive, so `collections/`
+  // and `set-lists/` are excluded automatically (their entries match neither
+  // extension) — files in `collections/` use `%% list-date` instead.
+  const tuneFileNames = (await fs.readdir(SOURCE_DIR)).filter(
+    (f) => f.endsWith(".data.js") || f.endsWith(".abc")
   );
 
   let filesToCheck = tuneFileNames;

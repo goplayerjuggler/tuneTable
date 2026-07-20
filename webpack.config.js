@@ -5,7 +5,6 @@ import HtmlInlineScriptPlugin from "html-inline-script-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
-import fs from "fs";
 import { buildTuneLists } from "./build/build-tune-lists.mjs";
 
 const HtmlInlineCssWebpackPlugin =
@@ -15,46 +14,24 @@ const HtmlInlineCssWebpackPlugin =
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Custom plugin to concatenate tune files and build tune-list JSON files before build
+// Builds tune-list JSON files before a production build. Runs once per
+// build. In development this plugin is a no-op: tune lists are built
+// separately, via `npm run build:tunes`, rather than as part of webpack's
+// compile — see the npm scripts section of the README.
 class ConcatenateTunesPlugin {
 	constructor({ isDevelopment = false } = {}) {
 		this.isDevelopment = isDevelopment;
 	}
 
 	apply(compiler) {
-		const tunesDir = path.resolve(__dirname, "src", "tunes");
-		const setListsFile = path.resolve(__dirname, "src", "set-lists.data.js");
-		// Persists across recompilations within one webpack session
-		let lastInputHash = null;
+		// No-op in development — see comment above.
+		if (this.isDevelopment) return;
 
 		compiler.hooks.beforeCompile.tapAsync(
 			"ConcatenateTunesPlugin",
 			async (params, callback) => {
 				try {
-					const tuneFiles = fs
-						.readdirSync(tunesDir)
-						.filter((f) => f.endsWith(".data.js"));
-
-					// Hash based on filenames + mtimes — cheap and sufficient
-					const setListsStat = fs.statSync(setListsFile);
-					const inputHash =
-						tuneFiles
-							.map((f) => {
-								const stat = fs.statSync(path.join(tunesDir, f));
-								return `${f}:${stat.mtimeMs}`;
-							})
-							.join("|") + `|template:${setListsStat.mtimeMs}`;
-
-					if (inputHash === lastInputHash) {
-						// Inputs unchanged — skip silently (handles duplicate startups
-						// and any spurious recompilations)
-						return callback();
-					}
-
-					console.log(`tune lists from ${tuneFiles.length} tune files...`);
-
-					// Build tune-list JSON files — runs only when tune files or the
-					// template change (same input-hash guard as concatenation above)
+					console.log("Building tune lists...");
 					await buildTuneLists({
 						isDevelopment: this.isDevelopment,
 						outputDir: path.join(compiler.outputPath, "tune-lists"),
@@ -63,33 +40,11 @@ class ConcatenateTunesPlugin {
 							"src/generated/tune-lists-manifest.json"
 						)
 					});
-
-					// Only update hash after both steps succeed
-					lastInputHash = inputHash;
 					callback();
 				} catch (error) {
 					console.error("Error in pre-build step:", error);
 					callback(error);
 				}
-			}
-		);
-
-		compiler.hooks.thisCompilation.tap(
-			"ConcatenateTunesPlugin",
-			(compilation) => {
-				// Watch the directory itself — triggers on add/delete
-				compilation.contextDependencies.add(tunesDir);
-
-				// Watch the template file
-				compilation.fileDependencies.add(setListsFile);
-
-				// Watch individual tune files for edits
-				// (contextDependencies covers add/delete but not content changes)
-				fs.readdirSync(tunesDir)
-					.filter((f) => f.endsWith(".data.js"))
-					.forEach((f) =>
-						compilation.fileDependencies.add(path.join(tunesDir, f))
-					);
 			}
 		);
 	}
@@ -185,7 +140,13 @@ export default (env, argv) => {
 			watchFiles: {
 				paths: [path.resolve(__dirname, "src/**/*")],
 				options: {
-					ignored: ["**/node_modules/**", "**/dist/**", "**/src/generated/**"]
+					ignored: [
+						"**/node_modules/**",
+						"**/dist/**",
+						"**/src/generated/**",
+						// Tune data is no longer watched — run `npm run build:tunes` manually
+						"**/src/tunes/**"
+					]
 				}
 			}
 		},
@@ -193,7 +154,9 @@ export default (env, argv) => {
 			ignored: [
 				"**/node_modules/**",
 				"**/src/tunes.compiled.js",
-				"**/src/generated/**"
+				"**/src/generated/**",
+				// Tune data is no longer watched — run `npm run build:tunes` manually
+				"**/src/tunes/**"
 			]
 		},
 		optimization: {

@@ -262,6 +262,55 @@ class TuneListSelectorModal extends Modal {
 			);
 	}
 
+	/**
+	 * Fetch and parse a server list's JSON file.
+	 * @param {string} listFile - Hashed file name, e.g. "default.a1b2c3d4e5.json".
+	 */
+	async _fetchListJson(listFile) {
+		const res = await fetch(`./tune-lists/${listFile}`);
+		if (!res.ok) throw new Error(`HTTP ${res.status}`);
+		return res.json();
+	}
+
+	/**
+	 * Fetch a fresh copy of the manifest and merge it into `this.manifest` in
+	 * place, so any other reference to the same object (e.g. in index.js)
+	 * picks up the update too.
+	 */
+	async _refreshManifest() {
+		const res = await fetch("./tune-lists/manifest.json", {
+			cache: "no-store"
+		});
+		if (!res.ok) throw new Error(`HTTP ${res.status}`);
+		const fresh = await res.json();
+		if (this.manifest) Object.assign(this.manifest, fresh);
+		else this.manifest = fresh;
+		return this.manifest;
+	}
+
+	/**
+	 * Runs `fn(listFile)` against a server list's file, retrying once with a
+	 * freshly-fetched manifest if the first attempt fails. This recovers from
+	 * stale cached file-name hashes — list files are re-hashed whenever their
+	 * content changes — without requiring the user to hard-refresh the page.
+	 */
+	async _withFreshManifestOnFailure(listId, listFile, fn) {
+		try {
+			return await fn(listFile);
+		} catch (e) {
+			let fresh;
+			try {
+				await this._refreshManifest();
+				fresh = this.manifest?.lists.find((l) => l.id === listId);
+			} catch {
+				throw e; // couldn't even refresh the manifest — surface the original error
+			}
+			// Nothing changed for this list — same failure would recur.
+			if (!fresh || fresh.file === listFile) throw e;
+			return fn(fresh.file);
+		}
+	}
+
 	async _loadLocal(slotId) {
 		const slot = await this.slotManager.getSlot(slotId);
 		if (!slot) return;
@@ -280,10 +329,14 @@ class TuneListSelectorModal extends Modal {
 	async _loadServer(listId, listFile, lastUpdate) {
 		this._setStatus("Loading…");
 		try {
-			const res = await fetch(`./tune-lists/${listFile}`);
-			if (!res.ok) throw new Error(`HTTP ${res.status}`);
-			const data = await res.json();
-			const { tunes, setLists } = data;
+			const { tunes, setLists } = await this._withFreshManifestOnFailure(
+				listId,
+				listFile,
+				(file) => this._fetchListJson(file)
+			);
+			// Re-read after a possible manifest refresh, so name/lastUpdate/
+			// defaultSort reflect the latest data rather than what was shown
+			// when the modal was rendered.
 			const listInfo = this.manifest?.lists.find((l) => l.id === listId);
 			await this.onSelect({
 				source: "server",
@@ -291,8 +344,8 @@ class TuneListSelectorModal extends Modal {
 				displayName: listInfo?.name ?? listId,
 				tunes,
 				setLists,
-				lastUpdate,
-				...(listInfo.defaultSort ? { defaultSort: listInfo.defaultSort } : {})
+				lastUpdate: listInfo?.lastUpdate ?? lastUpdate,
+				...(listInfo?.defaultSort ? { defaultSort: listInfo.defaultSort } : {})
 			});
 			this.close();
 		} catch (e) {
@@ -303,9 +356,11 @@ class TuneListSelectorModal extends Modal {
 	async _saveServerToLocal(listId, listFile) {
 		this._setStatus("Loading…");
 		try {
-			const res = await fetch(`./tune-lists/${listFile}`);
-			if (!res.ok) throw new Error(`HTTP ${res.status}`);
-			const data = await res.json();
+			const data = await this._withFreshManifestOnFailure(
+				listId,
+				listFile,
+				(file) => this._fetchListJson(file)
+			);
 			const listInfo = this.manifest?.lists.find((l) => l.id === listId);
 			const baseName = listInfo?.name ?? listId;
 			const name = prompt("Save as:", baseName);

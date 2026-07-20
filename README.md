@@ -96,8 +96,8 @@ Thanks to:
 This project uses multiple licences depending on the type of content:
 
 - **Code (JavaScript, HTML, CSS)**: [MIT Licence](LICENSE-CODE)
-- **Tune list data (.data.js files)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
-- **ABC tune files (`tunes/` folder)**: from external sources – licencing terms are embedded within each individual file or are available from the linked websites
+- **Tune list data (`.data.js` files, including bare `.abc` files directly under `tunes/`)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
+- **ABC tune collections (`tunes/collections/` folder)**: from external sources – licencing terms are embedded within each individual file or are available from the linked websites
 
 ### What this means:
 
@@ -108,7 +108,9 @@ This project uses multiple licences depending on the type of content:
 - **NC** (NonCommercial): You may not use the data for commercial purposes
 - **SA** (ShareAlike): If you remix or build upon the data, you must distribute your contributions under the same CC BY-NC-SA 4.0 license
 
-**ABC tune files**: These files are from external sources. Each file should contain its own licensing information, or give a reference to a website with this info – please refer to the individual file before reusing or redistributing it.
+This also covers bare `.abc` files placed directly under `tunes/`, since these are merged into my own tunebook (the default list) the same way `.data.js` tunes are.
+
+**ABC tune collections**: Files under `tunes/collections/` are each a standalone list from an external source. Each file should contain its own licensing information, or give a reference to a website with this info – please refer to the individual file before reusing or redistributing it.
 
 ## Dev notes
 ### abc-tools – a related repo
@@ -119,28 +121,34 @@ Apart from rendering scores and transposition (handled by `abcjs`), all other fu
 # setup
 npm install
 
-# run local version
+# build tune lists — run this first, and again whenever tune data changes
+npm run build:tunes
+
+# run local version (dev mode no longer rebuilds tune lists automatically;
+# re-run `npm run build:tunes` and refresh the browser after editing tunes)
 npm run dev
 
-# build tune lists
-node .\build\build-tune-lists.mjs 
-
-# build website
-npm run build # this includes the tune lists
-
-# working with abc-tools: just install it as a sibling – same parent folder 
+# run local version, with local abc-tools: just install it as a sibling – same parent folder 
+# this way abc-tools is from local version, not from the npm package
 npm run dev:local 
-	<# this way abc-tools is from local version, not from the npm package #>
+
+# first build tunes, then run local version, with local abc-tools
+npm run dev:full
+
+# build website in Production mode
+# this includes the tune lists
+npm run build 
+
 # update dates file
 npm run update-dates -- only-check 4h 
 ```
 
 ### Using other tune collections – as a developer
-(Just an outline of how I think it could work.)
+(Just two sketches/outlines of how I think it could work.)
 
 First clone the repo. 
-* ABC files: add your own ABC files under `.\src\tunes\`; just add some header lines `%% list-name` etc – use an abc file in the folder as a model.
-* working with `.data.js` files: probably just start inside the tool by loading tunes in ABC format, and exporting the data in JavaScript format. Then in VS Code or elsewhere, run a script (`.\dev\split-tunes.mjs`) to get the `.data.js` files. 
+* (method 1) ABC files: add your own ABC files under `.\src\tunes\collections\`; just add some header lines `%% list-name` etc – use an abc file in the folder as a model.
+* (method 2) working with `.data.js` files: (a simple method, discarding my tune files and using your own) remove the `.data.js` directly under `.\src\tunes\`, then use the tool to load your tunes in ABC format, and then export the data in JavaScript format. Then in VS Code or elsewhere, run a script (`.\dev\split-tunes.mjs`) to get the `.data.js` files. 
 
 ### my local import settings
 I currently use the following settings. 

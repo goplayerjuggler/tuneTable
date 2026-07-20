@@ -11,7 +11,13 @@ const { getMetadata, getTunes } = abcTools;
 const __dirName = path.dirname(fileURLToPath(import.meta.url));
 
 const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
-const setListsFile = path.resolve(__dirName, "../src/set-lists.data.js");
+// Set lists are split across N files here, one per group plus a default file.
+const SET_LISTS_DIR = path.resolve(SOURCE_DIR, "set-lists");
+// Standalone ABC collections — each file becomes its own tune list (see
+// parseAbcHeader). Bare .abc files directly under SOURCE_DIR are handled
+// differently: their tunes are merged into the default list (see the main
+// tune-loading loop below).
+const COLLECTIONS_DIR = path.resolve(SOURCE_DIR, "collections");
 const DEFAULT_OUT_DIR = path.resolve(__dirName, "../dist/tune-lists");
 const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
 const defaultListName = "goPlayer’s tune list";
@@ -67,7 +73,9 @@ function toDateString(ms) {
  * Load the committed tune-dates cache and return a Map from fileName → YYYY-MM-DD.
  * Dates are never written here; run `npm run update-dates` to refresh from git.
  *
- * @param {string[]} tuneFileNames - File names (not paths) of all tune files.
+ * @param {string[]} tuneFileNames - File names (not paths) of all tune files,
+ *   i.e. `.data.js` files and bare `.abc` files directly under `src/tunes/`
+ *   (collections under `src/tunes/collections/` use `%% list-date` instead).
  * @returns {Promise<Map<string, string>>}
  */
 async function loadTuneDates(tuneFileNames) {
@@ -126,10 +134,12 @@ function parseTuneFile(content) {
 }
 
 /**
- * Load `tunes-template.data.js` without the webpack pre-processing step by
- * substituting the `//CopyTunesHere` placeholder with an empty tunes array.
+ * Evaluate one `src/tunes/set-lists/*.data.js` file without going through the
+ * Node module cache. Each file exports a single object with a `setLists`
+ * array; this converts `export default` to a `return` statement and runs it
+ * with `new Function`.
  *
- * @param {string} content - Raw template file content.
+ * @param {string} content - Raw file content.
  * @returns {object}
  */
 function parseSetListsFile(content) {
@@ -220,8 +230,11 @@ const listLastUpdate = (tunes, setLists) =>
 // ─── Main export ──────────────────────────────────────────────────────────────
 
 /**
- * Build all tune-list JSON files and `manifest.json` from the source
- * `.data.js` files and the set lists in `tunes-template.data.js`.
+ * Build all tune-list JSON files and `manifest.json` from the source tune
+ * files under `src/tunes/` — `.data.js` files and bare `.abc` files
+ * contribute to the default list, `.abc` files under `tunes/collections/`
+ * each become their own standalone list — and the set lists split across
+ * `src/tunes/set-lists/*.data.js`.
  *
  * `lastUpdate` for each generated list reflects the most recent date among
  * the constituent tunes' commit dates (tracked in `build/tune-dates.json`,
@@ -240,8 +253,11 @@ export async function buildTuneLists({
 } = {}) {
   console.log("Building tune lists from source files...");
 
-  const tuneFileNames = (await fs.readdir(SOURCE_DIR)).filter((f) =>
-    f.endsWith(".data.js")
+  // `.data.js` files and bare `.abc` files sitting directly under `src/tunes/`
+  // (readdir is non-recursive, so `collections/` and `set-lists/` are excluded
+  // automatically — their entries don't match either extension).
+  const tuneFileNames = (await fs.readdir(SOURCE_DIR)).filter(
+    (f) => f.endsWith(".data.js") || f.endsWith(".abc")
   );
   const tuneFiles = tuneFileNames.map((f) => path.join(SOURCE_DIR, f));
 
@@ -249,40 +265,62 @@ export async function buildTuneLists({
 
   const dateMap = await loadTuneDates(tuneFileNames);
 
-  const tunesFromDataJsFiles = [];
+  // Tunes destined for the default list: from `.data.js` files (one or more
+  // tune objects per file) and from bare `.abc` files (one or more tunes per
+  // file, parsed via getTunes). Both share the same metadata/date handling.
+  const tunesFromSourceFiles = [];
   for (const file of tuneFiles) {
+    const fileName = path.basename(file);
     const content = await fs.readFile(file, "utf8");
-    let data = parseTuneFile(content);
-    if (!Array.isArray(data)) data = [data];
-    data.forEach((tune) => {
-      if (tune.excludeFromBuild) return;
+    const fileDate = dateMap.get(fileName);
+
+    let rawTunes;
+    if (fileName.endsWith(".data.js")) {
+      let data = parseTuneFile(content);
+      if (!Array.isArray(data)) data = [data];
+      rawTunes = data.filter((tune) => !tune.excludeFromBuild);
+    } else {
+      // Bare ABC file directly under `tunes/` — every tune it contains is
+      // merged into the default list, same as `.data.js` tunes, but without
+      // the build-time flags (`groups`, `excludeFromDefault`, etc.) that only
+      // a `.data.js` wrapper object can carry.
+      rawTunes = getTunes(content)
+        .filter((abc) => abc.trim())
+        .map((abc) => ({ abc }));
+    }
+
+    rawTunes.forEach((tune) => {
       let metadata = {};
       try {
         const firstAbc = getFirstAbc(tune);
         if (firstAbc) metadata = getMetadata(firstAbc);
       } catch {
-        console.warn(
-          `Warning: could not parse ABC metadata from ${path.basename(file)}`
-        );
+        console.warn(`Warning: could not parse ABC metadata from ${fileName}`);
       }
-      tunesFromDataJsFiles.push({
+      tunesFromSourceFiles.push({
         metadataFromAbc: metadata,
         ...tune,
-        fileDate: tune.fileDate ?? dateMap.get(path.basename(file))
+        fileDate: tune.fileDate ?? fileDate
       });
     });
   }
 
-  const templateContent = await fs.readFile(setListsFile, "utf8");
+  // Set lists are split across one file per group plus a default file, all
+  // under src/tunes/set-lists/. Merge them into a single array.
+  const setListsFileNames = (
+    await fs.readdir(SET_LISTS_DIR).catch(() => [])
+  ).filter((f) => f.endsWith(".data.js"));
 
-  const allSetLists = (() => {
+  const allSetLists = [];
+  for (const f of setListsFileNames) {
     try {
-      const parsed = parseSetListsFile(templateContent);
-      return parsed.setLists ?? [];
+      const content = await fs.readFile(path.join(SET_LISTS_DIR, f), "utf8");
+      const parsed = parseSetListsFile(content);
+      allSetLists.push(...(parsed.setLists ?? []));
     } catch {
-      return [];
+      console.warn(`Warning: could not parse set lists from ${f}`);
     }
-  })();
+  }
 
   await fs.mkdir(outputDir, { recursive: true });
 
@@ -318,7 +356,7 @@ export async function buildTuneLists({
     );
 
   // Default list — excludes tunes flagged with `excludeFromDefault: true`
-  const defaultTunes = tunesFromDataJsFiles.filter(
+  const defaultTunes = tunesFromSourceFiles.filter(
     (t) => !t.excludeFromDefault
   );
   const defaultSetLists = setListsFor("default");
@@ -344,7 +382,7 @@ export async function buildTuneLists({
 
   // Group-based lists
   const groupMap = new Map();
-  tunesFromDataJsFiles.forEach((tune) => {
+  tunesFromSourceFiles.forEach((tune) => {
     tune.groups
       ?.split(",")
       .map((g) => g.trim().toLowerCase())
@@ -392,7 +430,7 @@ export async function buildTuneLists({
 
   // Origin-based lists
   for (const { id, label, match, description } of ORIGIN_EXTRACTS) {
-    const tunes = tunesFromDataJsFiles.filter(
+    const tunes = tunesFromSourceFiles.filter(
       (t) => t.metadataFromAbc?.origin && match(t.metadataFromAbc?.origin)
     );
     if (tunes.length === 0) continue;
@@ -415,7 +453,7 @@ export async function buildTuneLists({
   // Composer-based lists
   if (isDevelopment) {
     for (const { id, label, match } of COMPOSER_EXTRACTS) {
-      const tunes = tunesFromDataJsFiles.filter(
+      const tunes = tunesFromSourceFiles.filter(
         (t) => t.metadataFromAbc?.composer && match(t.metadataFromAbc?.composer)
       );
       if (tunes.length === 0) continue;
@@ -435,13 +473,15 @@ export async function buildTuneLists({
     }
   }
 
-  // ABC file lists
-  const abcFileNames = (await fs.readdir(SOURCE_DIR)).filter((f) =>
-    f.endsWith(".abc")
-  );
+  // ABC collection lists — each file under tunes/collections/ is its own
+  // standalone tune list (unlike bare .abc files directly under tunes/,
+  // which get merged into the default list above).
+  const abcFileNames = (
+    await fs.readdir(COLLECTIONS_DIR).catch(() => [])
+  ).filter((f) => f.endsWith(".abc"));
   for (const abcFileName of abcFileNames.sort()) {
     const content = await fs.readFile(
-      path.join(SOURCE_DIR, abcFileName),
+      path.join(COLLECTIONS_DIR, abcFileName),
       "utf8"
     );
     const stem = path.basename(abcFileName, ".abc");
@@ -508,7 +548,13 @@ export async function buildTuneLists({
 // ─── CLI entry point ──────────────────────────────────────────────────────────
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  buildTuneLists({ isDevelopment: true }).catch((err) => {
+  buildTuneLists({
+    isDevelopment: true,
+    manifestPath: path.resolve(
+      __dirName,
+      "../src/generated/tune-lists-manifest.json"
+    )
+  }).catch((err) => {
     console.error("Build failed:", err);
     process.exit(1);
   });
