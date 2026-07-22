@@ -842,8 +842,15 @@ function getTuneMetadata(tune) {
 			: [tune.tags]
 		: [];
 	const origins = tune.origin
-		? tune.origin.match(/([^;.]+)/g).map((o) => o.trim())
+		? tune.origin.match(/([^;]+)\.?/g).map((o) => o.trim())
 		: [];
+	//next bit removes the last full stop. Must be a better way...!
+	if (origins.length > 1) {
+		origins[origins.length - 1] = origins[origins.length - 1].replace(
+			/\.$/,
+			""
+		);
+	}
 	const composers = tune.composer ? tune.composer.split("; ") : [];
 
 	return [
