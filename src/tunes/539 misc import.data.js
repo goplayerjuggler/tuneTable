@@ -62,25 +62,6 @@ dB~B2 gB~B2 edef gfga|bgaf gfed egfa gf||`
 	},
 	{
 		abc: `X:1
-T:The Pigeon On The Gate
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-05-25,
-N:from https://thesession.org/tunes/4312#setting37286
-N:Setting entered in thesession by user “Damien Rogeau” on 2020-02-16
-N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
-K:Adorian
-|:eAAG AAeA A2fg edBA|G3B dGBA GABg bgag|
-eAAG AAeA A2fg edBA|G2 (3ABd gbag egdB A2(3Bcd:|
-|:eaag a2ag eaag bgag|edd2 ^cdef g2ba gedg|
-eaag a2 ag eaag bgag|ed^cd gbag egdB A2(3B=cd:|`,
-		theSessionId: 4312,
-		theSessionSettingId: 37286
-	},
-	{
-		abc: `X:1
 T:Shandon Bells
 R:jig
 L:1/8

@@ -20,9 +20,13 @@ G2~g2 gagf dg~g2 bgag|dc~c2 gceg fdcA G2~c2:|`
 			url: "https://donegalfiddlemusic.bandcamp.com/album/a-feeling-in-the-blood",
 			album: "A Feeling In The Blood",
 			artists: "Néillidh Boyle, fiddle",
-			notes: `1. There are three different N. Boyle recordings of this here, under the name “The Pigeon on the Gate” – no “Old”. The first one is in a set, followed by [Jenny Picking Cockles](theSessionId=202).
+			notes:
+				`1. There are three different N. Boyle recordings of this here, under the name “The Pigeon on the Gate” – no “Old”. The first one is in a set, followed by [Jenny Picking Cockles](theSessionId=202).
 2. Compare with a more commonly played reel, [The Pigeon On The Gate](ttId=201).
-3. [On thesession](theSessionId=1596) there are some other settings it could be worth looking into – a note to myself…` //todo
+3. [On thesession](theSessionId=1596) there are some other settings it could be worth looking into – a note to myself…` + //todo
+				`
+4. There’s [another entry on thesession with ID 4312](theSessionId=4312) and who knows, there may well be others.
+`
 		},
 		{
 			url: "https://donegalfiddlemusic.bandcamp.com/track/track-15-the-pigeon-on-the-gate-jenny-picking-cockles-reels",
