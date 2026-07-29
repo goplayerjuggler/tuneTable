@@ -40,9 +40,10 @@ E3 FEF G2F E3 BcA BGD|E3 FEF G2A`,*/
 		},
 		{
 			artists: "Andy McGann",
-			url: "http://www.juneberry78s.com/sounds/ListenToIrishDance.htm",
-			notes:
-				"1. Another six-part version; the sixth part is different to the M. Gorman one. 2. Played like a “normal” slip jig; I would write this one down in 9/8, not in 18/8 or 18/16"
+			url: "http://www.juneberry78s.com/sounds/ami15.mp3",
+			notes: `1. Another six-part version; the sixth part is different to the M. Gorman one. 
+2. Played like a “normal” slip jig; I would write this one down in 9/8, not in 18/8 or 18/16.
+3. There's lots of good, [old ITM recordings](http://www.juneberry78s.com/sounds/ListenToIrishDance.htm) on the juneberry website. `
 		}
 	],
 	theSessionId: 52,

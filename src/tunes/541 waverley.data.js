@@ -6,7 +6,7 @@ C:Art Galbraith
 O:USA;Missouri.
 S:Michael McGoldrick, uillean pipes; John Carty, banjo; Matt Griffin, guitar
 H:https://racketrecords.bandcamp.com/track/waverly-r-l-m-irt-n-sheamuis
-A:At Our Leisure
+D:At Our Leisure
 R:reel
 L:1/16
 M:4/4

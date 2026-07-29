@@ -1,8 +1,10 @@
 export default [
 	{
+		fileDate: "2026-07-29",
+		parts: "AB",
 		abc: `X:1
 T:Denis Murphy's Quirky Fling
-R:hornpipe
+R:fling
 L:1/8
 M:4/2
 N:Transcribed from Mick O'Brien & Caoimhín Ó Raghallaigh's "Deadly Buzz"
@@ -11,7 +13,6 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/13359#setting23423
 N:Setting entered in thesession by user “SebastianM” on 2014-02-06
 N:*abc-tools: convert to M:4/2*
-N:(todo: not yet revised)
 K:Amajor
 cB|AFEF ABcA BAcA BAcB|AFEF ABcd (3efe (3dcB ABcB|
 AFEF ABcA BAcA BAcB|AFEF ABcd (3efe (3dcB A4||
@@ -21,25 +22,24 @@ eac'a eac'a eac'a bae2|(3agf fe fecd (3efe (3dcB A4||`,
 		theSessionSettingId: 23423
 	},
 	{
+		fileDate: "2026-07-29",
+		parts: "AB",
 		abc: `X:1
-T:Mulqueeney's
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-05-25,
-N:from https://thesession.org/tunes/66#setting66
-N:Setting entered in thesession by user “Jeremy” on 2001-05-25
-N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
-K:Dmajor
-|F2 EG FDDG FDAG FDDE|F2 EG FDDG FABc dBAG|
-F2 EG FDDG FDAG FDDE|F2 EG FDDG FABc d2 cd|
-e4 efed cdef g2 fg|a2e2 efed cABc d2 cd|
-e2 e2 efed cdef g2 fg|a2f2 g2 e2 dfec dBAG|`,
-		theSessionId: 66,
-		theSessionSettingId: 66
+		T:Mulqueeney's
+		R:reel
+		L:1/16
+		M:4/4
+		H:The is just the setting I have in my head today – with no internet access handy to check!
+		K:Dmajor
+		F2EG FDDE FGAG FDDE|F2EG FDDE FABc dBAG|
+		F2EG FDDE FGAG FDDE|F2EG FDDE FABc d2cd||
+		e4 efed cdef g2fg|e"<("AA/A/">)"A efed cABc d2cd|
+		e4 efed cdef g2fg|aff/"<("f/">)"f gee/"<("e/">)"e dfec dBAG|]`,
+		theSessionId: 66
 	},
 	{
+		fileDate: "2026-07-29",
+		parts: "AB",
 		abc: [
 			`X:1
 T:Mary O'Neill's Fancy
@@ -50,7 +50,6 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/5951#setting17849
 N:Setting entered in thesession by user “Dr. Dow” on 2012-08-11
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Gmajor
 ge|dBAB ~G3E DG~G2 DGBc|dBAB ~G3A Beed eage|
 dBAB ~G3E DG~G2 DGBc|dBAB ~G3A Beed e2ge||
@@ -72,16 +71,18 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/1200#setting14487
 N:Setting entered in thesession by user “ceolachan” on 2005-11-20
 N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
+N:(Edited after importing)
 K:Dmajor
 |:A>FD DFA d>ed cBA|BGE EF/G/A B2 A Bcd|
-AFD DFA ded cBA|BB/c/d ecA ded:|
-f2 d dcd faa afd|cAA eAA cAc ee/f/g|
-fdd dcd f2 a afd|Bcd ecA ded:|`,
+AFD DFA ded cBA|BB/c/d ecA ded [1dcB :|[2 d2e |
+|: f2 d dcd faa afd|cAA eAA cAc ee/f/g|
+fdd dcd f2 a afd|Bcd ecA ded [1d2e :|[2dcB |]`,
 		theSessionId: 1200,
 		theSessionSettingId: 14487
 	},
 	{
+		fileDate: "2026-07-29",
+		parts: "AABB",
 		abc: `X:1
 T:John Dwyer's
 C:John Dwyer
@@ -94,7 +95,6 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/2708#setting52257
 N:Setting entered in thesession by user “Jeremy” on 2024-11-02
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Gmajor
 |:ge|dBB2 GEDE GBB2 dBGB|A3B AGED EGAB c2Bc|
 dBB2 GEDE GBB2 dBGA|B2BA BddB AGAB G2:|
@@ -104,6 +104,7 @@ bgg2 agef gfge dBGA|B2BA BddB AGAB G2:|`,
 		theSessionSettingId: 52257
 	},
 	{
+		fileDate: "2026-05-25",
 		abc: `X:1
 T:Tom Billy's
 R:jig
@@ -139,6 +140,8 @@ N:(todo: not yet revised)
 K:Adorian
 |:~e2 dB ~A3 G EAAG ~A2 Bd|~e2 dB ~A3 G EGGF ~G2:|
 ~e3 d edBd eaag ea ~a2|~e3 d edBd (3Bcd ef g2:|`,
+
+		fileDate: "2026-05-25",
 		theSessionId: 999,
 		theSessionSettingId: 14210
 	},
@@ -164,6 +167,7 @@ efed BAFA BE~E2 (3Bcd ef|~g3e ~f3d efed BAgf|
 eB~B2 egfe defa gfed|(3Bcd ef ~g3e fgaf gfed|
 eB~B2 GBFB EBBA (3Bcd ef|~g3e ~f3d efed BAFD||`
 		],
+		fileDate: "2026-05-25",
 		theSessionId: 58,
 		theSessionSettingId: 12499
 	},
@@ -186,6 +190,7 @@ AG~G2 AG~G2 GEDE GED2|A2AG ABcd eBdB BAA2||
 |:eg~g2 ea~a2 gedB cAA2|eg~g2 eaab age^c d2ef|
 ~g3e ~a3f gedB cAAB|~c2gc acgc[1 eage ~d2cd:|2 eage ~d3c||`,
 		theSessionId: 1341,
+		fileDate: "2026-05-25",
 		theSessionSettingId: 1341
 	},
 	{
@@ -225,9 +230,11 @@ ded c3 ded cAG|A3 ABc[1 dcA GAc:|2 dcA GED||
 |:dcA AGE A3 ABc|dcA ABc dcA GED|
 dcA AGE A3 AGE|D3 cde[1 dcA GED:|2 dcA GAc||`,
 		theSessionId: 1237,
+		fileDate: "2026-05-25",
 		theSessionSettingId: 25099
 	},
 	{
+		fileDate: "2026-05-25",
 		abc: [
 			`X:1
 T:The Trip To Pakistan
@@ -270,10 +277,12 @@ B>G (3GGG D>G (3GGG (3Bcd e>f g2 g>a | b>ga>f g2 (3fed e>gd<B A2 ||
 (3Bcd |e2 e>f e>dB<A (3Bcd e>f g>ed<c | B>G (3GGG D>G (3GGG B<ed>B A2 B>d |
 (3eee e>f e2 d>c (3Bcd e>f g>fg>a | b2 (3agf g>fe>d e<gd>B A2 ||`
 		],
+		fileDate: "2026-05-25",
 		theSessionId: 2064,
 		theSessionSettingId: 15462
 	},
 	{
+		fileDate: "2026-05-25",
 		abc: `X:1
 T:Jimmy's Return
 R:reel
@@ -310,6 +319,7 @@ K:Dmajor
 d2fd Adfd Adfd BABc|d2fd Adfb afea fddA|
 d2fd Adfd Adfd ~e3f|gfec dcBA (3Bcd ec dBAF||`
 		],
+		fileDate: "2026-05-25",
 		theSessionId: 438,
 		theSessionSettingId: 13299
 	},
@@ -331,6 +341,7 @@ GBdg egdB GBdB egdg|cdef gedc BcAF G2 Bc||
 d2 gg B2 gg dgbg egdg|eAcA eAcA Bdef gedB|
 d2 gg B2 gg dgbg egdg|cedf gedc BcAF G4||`
 		],
+		fileDate: "2026-05-25",
 		theSessionId: 1722,
 		theSessionSettingId: 15148
 	},
@@ -353,6 +364,7 @@ G2BG DGB,G Aafd ^cdef|~g3d ~c3A[1 FGAc BGDB,:|2 FGAF G2Bd||
 |:~g3d ^cdBG DGBd =cAFA|GBBA BcdB cafd ^cdef|
 gbaf gdBG DGBd cAFA|BG~G2 AF~F2[1 BdcA G2Bd:|2 BdcA G2DB,||`
 		],
+		fileDate: "2026-05-25",
 		theSessionId: 648,
 		theSessionSettingId: 13678
 	},
@@ -373,6 +385,7 @@ K:Gmajor
 G2 BD GBdB c2 ag fgdc|BG3 BcdB[1 cAFA G2 BA:|2 cAFA G2 Bc||
 |:dgfa gdBG FGAB c2 Bc|dffg a3g fdAd BdAd|
 g2 fa gdBG FGAB c2 Bc|dg3 defd[1 cAFA G2 Bc:|2 cAFA G2 DB||`,
+		fileDate: "2026-05-25",
 		theSessionId: 150,
 		theSessionSettingId: 26266
 	},
@@ -392,6 +405,7 @@ K:Gmajor
 c>eg>c' B>dg>b A>ce>a G>Bd>g|f>ga>b c'>af>d g2 g2 g2:|
 |:d>c|B>gd>g B>gd>g b>ag>f e>dc>B|c>ae>a c>ae>a c'>ba>g (3fgf (3edc|
 B>gd>g B>gd>g b>ag>f e>dc>B|c>ed>c B>AG>F A2 G2 G2:|`,
+		fileDate: "2026-05-25",
 		theSessionId: 3291,
 		theSessionSettingId: 29773
 	},
@@ -416,6 +430,7 @@ D|:GFGB dBGB eBdB cBAF|D3E FGAB cAed cAFA|
 Bggf gdBd eBdB cBAc|Bg (3gfg bgag fdcA BGG2:|
 |:Bdge dB (3BBB cBAG FADF|GABG Aaag (3efg ag fdcA|
 Bg (3gfg dBGB cBAG FADC|B,DGB Ac (3ccc dB cA BGG2:|`,
+		fileDate: "2026-05-25",
 		theSessionId: 2243,
 		theSessionSettingId: 28125
 	},
@@ -436,6 +451,7 @@ K:Dmajor
 dDFA BcdB gfed cdeg|fgaf gfed ceag fd d2:|
 |:afdf afba gece gfga|fdAd fgaf gece abga|
 (3fgf ef dAFA BG (3GFG EFGE|FA (3ABA GEed cAGE FD D2:|`,
+		fileDate: "2026-05-25",
 		theSessionId: 2232,
 		theSessionSettingId: 15603
 	},
@@ -458,6 +474,7 @@ K:Amixolydian
  A>B ca|fe/c/ Bc/B/|A/B/c/d/ e/f/e/c/|cA A:|
  |:c/d/|e>f ec|e>f ea|f>e fa|fe/c/ Ba|
  fe/c/ e/f/a/e/|f/a/e/c/ Ba|fe/c/ e/f/a/e/|cA A:|`,
+		fileDate: "2026-05-25",
 		theSessionId: 5318,
 		theSessionSettingId: 5318
 	},
@@ -477,6 +494,7 @@ K:Amajor
 (3ABc E>F A>c e2 (3def B>c d>e f2|f>ec>e a>ec>A[1 (3Bcd c>B A2- A3/2:|2 (3Bcd c>B A4||
 |:a>ec>e f>ec>e a>ec>e f>ec>B|A>ec>e f>ec>A (3Bcd c>A B>A F2|
 A>cE>F A>c e2 d>fB>c d>e f2|f>ec>e a>e (3cBA[1 B>dc>B A4:|2 (3Bcd c>B A2- A3/2||`,
+		fileDate: "2026-05-25",
 		theSessionId: 2332,
 		theSessionSettingId: 27641
 	},
@@ -498,6 +516,7 @@ DB|:A2 D2 DE|F3E ED|A3F ED|BF d3B|A3B BA|
  |:dA de- ed|B2 de dB|AF AB BA|F3E ED|d3 e ed|
  B2d3e|f6|f3e ed|d3 e ed|B2 de dB|AF AB BA|
  F3 E ED|D2A2AB|A2 F2ED|D3E DE|1 D3E FA:|2 D3 A dB||`,
+		fileDate: "2026-05-25",
 		theSessionId: 13158,
 		theSessionSettingId: 46519
 	},
@@ -515,6 +534,7 @@ K:Dmajor
 |:FAB FAB AFD|FAB FAB d2A|FAB FAB AFD|FAd edc B2A:|
  ~f3 efe d2e|~f3 efg a2g|~f3 efe dBA|AFA dfa b2a|
  ~f3 efe d2e|~f3 def gfg|afd gfe dBA|BAF DFA B2A||`,
+		fileDate: "2026-05-25",
 		theSessionId: 1064,
 		theSessionSettingId: 1064
 	},
@@ -534,6 +554,7 @@ K:Bdorian
 fBB aBB fec cBc|Ace ~a3[1 fec Bce:|2 fec B2A||
 |:Bbb baf abb baf|~a3 aec Ace ~a3|
 fbb fbb eaa eaa|fec ~a3[1 fec B2A:|2 fec Bce||`,
+		fileDate: "2026-05-25",
 		theSessionId: 299,
 		theSessionSettingId: 13054
 	},
@@ -597,6 +618,7 @@ K:Gmajor
 DGA Bcd cAG FGA|(B/c/d)B AFD DGG G2:|
 B/c/|ded dcB cdc cBc|ded fef dgg g2a|
 bag fed cAG FGA|(B/c/d)B AFD DGG G2:|`,
+		fileDate: "2026-05-25",
 		theSessionId: 13036,
 		theSessionSettingId: 22413
 	},
@@ -617,6 +639,7 @@ B|:"C"AGEG "G"DG,B,D BAGA BedB|"Am"AGEC "G"B,DA,C "D7"B,A, A,/A,/A, "Em"B,EED|
 E2 EF "G"GEDB, "D7"D2 B,E "G"DG,B,D|"Em"E3G "D"DEGA[1 "G"BdAB G3 B:|2 "G"BdAB G2 Bc||
 |:"G"dG G/G/G "C"EGDC "G"B,G,B,D GABd|"C"ec c/c/c "Am"AcGE "D7"DEFA fed^c|
 "G"dG G/G/G "C"EGDC "G"B,G,B,D GABd|"C"ec c/c/c "Em"afge[1 "G"dBcA G2 Bc:|2 "G"dBcA G4||`,
+		fileDate: "2026-05-25",
 		theSessionId: 613,
 		theSessionSettingId: 50196
 	},
@@ -637,6 +660,7 @@ M: 2/4
  "G"B3d|1 "A"cd e>d|"D" (f4|f)"Asus4" Ade:|2 "A"cd e>A|"D"(d4|d)"D/F#" fdc||
  |:"G" B3d|"A" c>B "A/C#"ce|"D" d2(A2|A)d/e/ "D/F#"f/e/ d|"G" B3d|"A" c>A "A/C#"ce|1 "D"(d4|d) "D/F#"f dc:|
  [2"D"(d4|d) "Asus4"A de]||["(Last time) D"[(d4|d4)||`,
+		fileDate: "2026-05-25",
 		theSessionId: 17592,
 		theSessionSettingId: 49595
 	},
@@ -659,6 +683,7 @@ N:(todo: not yet revised)
 K:Adorian
 |:B/|A2A>B c>BA>e A2A>c B>AG>B|A2A>B c>de>c B>dg>e d/c/B/A/ G3/2:|
 d/|^c<eA>e c<e d/B/A c<eA>e d/c/B/A/ G>d|^c<eA>e c<ee>f g>ag>e d/=c/B/A/ G3/2:|`,
+		fileDate: "2026-05-25",
 		theSessionId: 1114,
 		theSessionSettingId: 14373
 	},
@@ -730,6 +755,7 @@ M:6/8
  f>gf agf|eAB caf|eAc B2 A|A3- A2 c|
  fgf agf|e3- e2 c|fec eAc|B3- B2 e/d/|
  c>BA fec|e>AA Ha2 f|eAc HB2 A|A3- A2||`,
+		fileDate: "2026-05-25",
 		theSessionId: 1292,
 		theSessionSettingId: 36057
 	},
@@ -761,6 +787,7 @@ K:Dminor
  F2F FDF GAG GFG | ABA AGF G2D :|
  |: D2e| f2f e/f/ge ~f2d d2e|f2f dgf ~e2c cde|
  f2f e/f/ge cde ~f2d | ecA BAG A2D :|`,
+		fileDate: "2026-05-25",
 		theSessionId: 23166,
 		theSessionSettingId: 47206
 	}

@@ -441,27 +441,26 @@ K:Gmajor
 		theSessionSettingId: 14161
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-07-29",
 		abc: `X:1
 T:Daisy Bell
 C:Martin Murray
 R:reel
 L:1/16
 M:4/4
-N:with chords
-N:---
 N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/6954#setting53114
 N:Setting entered in thesession by user “ceili” on 2025-02-04
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
-A/B/c|:"D"d2dc defg a2a^g afdf|"G"=gB B/B/B BccB "A7"Aa^ga "D"baga|
-"D"fd d/d/d Adfd "G"=gB B/B/B B2cB|"D"ABcd "E7"edcB "A"ABcA "D"d2A/B/c:|
-|:"D"dcde fedc "G"Bg g/g/g agfg|"A"efde "D"cdBc "A7"Aa a/a/a "D"ba^ga|
-"D"fd d/d/d Adfd "G"=gB B/B/B B2cB|"D"ABcd "E7"edcB[1 "A"ABcA "D"d2A/B/c:|2 "A"ABcA "D"d4||`,
+A/B/c|:"D"d2dc defg a2a^g afdf|"G"=gBB/B/B BccB "A7"Aa^ga "D"baga|
+"D"fdd/d/d Adfd "G"=gBB/B/B B2cB|"D"ABcd "E7"edcB "A"ABcA "D"d2A/B/c:|
+|:"D"dcde fedc "G"Bgg/g/g agfg|"A"efde "D"cdBc "A7"Aaa/a/a "D"ba^ga|
+"D"fdd/d/d Adfd "G"=gBB/B/B B2cB|"D"ABcd "E7"edcB[1 "A"ABcA "D"d2A/B/c:|2 "A"ABcA "D"d4||`,
 		theSessionId: 6954,
-		theSessionSettingId: 53114
+		parts: "AABB",
+		theSessionSettingId: 53114,
+		contourShift: 0
 	},
 	{
 		fileDate: "2026-05-29",
@@ -532,7 +531,8 @@ G2Bd gdBG F2Ac fcAF|GABd cAGF DGG^F G2:|`,
 		parts: "AABB"
 	},
 	{
-		fileDate: "2026-05-18",
+		parts: "AABB",
+		fileDate: "2026-07-29",
 		abc: `X:1
 T:Reel Eugène
 O:Québec
@@ -543,11 +543,10 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/9555#setting30059
 N:Setting entered in thesession by user “JACKB” on 2017-03-16
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Aminor
 |:"Am"A2AB cBA2 "Dm"d2de fdBd|"E#7"e2ef edcd eaae aecB|
 "Am"A2AB cBA2 "Dm"d2de fdBd|"E#7"e2ef edcB[1 "Am"A4 "E#7"E4:|2 "F"A4 "G7"G4||
-|:"C"e2ed c2cA GGce "Co"a2e2|"Dm"g2gf d2Bd "G7"GBdf (3ege d2|
+|:"C"e2ed c2cA GGce "Co"a2e2|"Dm"g2gf d2Bd "G7"GBdf (3eged2|
 "C"e2ed c2cA GGce "Co"a2e2|"Dm"g2gf dfdB[1 "G7"cedB "C"c3d:|2 "G7"cedB "C"c4||`,
 		theSessionId: 9555,
 		theSessionSettingId: 30059
@@ -615,6 +614,7 @@ K:Dmajor
 	},
 
 	{
+		//todo: find another setting
 		fileDate: "2026-05-18",
 		abc: `X:1
 T:Mick Finn's
@@ -633,7 +633,7 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/1723#setting15150
 N:Setting entered in thesession by user “slainte” on 2004-07-14
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
+N:(not yet revised)
 K:Dmajor
 |:d2fd Adfd g2fg edBc|d2fd Adfd g2fg e3A|
 d2fd Adfd g2fg edBc|dBBA Bcde[1 f2gf edBc:|2 f2gf edAF||`,
