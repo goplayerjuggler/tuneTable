@@ -387,7 +387,7 @@ efed B2 dB AG (3EFG AcBA|GFGA (3Bcd Ac B2 G2 G2:|
 		theSessionSettingId: 15594
 	},
 	{
-		fileDate: "2026-05-18",
+		fileDate: "2026-07-29",
 		abc: `X:1
 T:Hommage À Joe Bouchard
 O:Québec
@@ -398,14 +398,15 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/25035#setting52529
 N:Setting entered in thesession by user “Ollie w.” on 2024-11-28
 N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
+N:(Edited after importing)
 K:Bminor
-|:"Bm"d3 dcd BFF FBc|d3 "G"dcB "F#7"cFF F3 "Em"e3 "C#7/F"ede|"F#7"cFF F3 
-fgf "F#7/E"efe "Bm/D"ded "F#7/C#"cBc|"Bm"d3 dcd BFF FBc|d3 dcB "F#7"cFF F3 
-"Em"e3 "F#7/F"ede|"F#7"cFF F3 fgf edc[1 "Bm"B3 BBc:|2 "Bm"B3 "A7"A3||
-|:"D"F3 FGB A3 ABc|dcd "G"edB "D/F#"A3 "Fdim7"FAd "Em"c3 Ace|"A7"g3 Ace 
-"Em"c'ba "A7"gfe "D"fed "A7"cBA|"D"F3 FGB A3 ABc|dcd "G"edB
-"D/F#"A3 "Fdim7"FAd "Em"c3 Ace|"A7"g3 Ace "Em"c'ba "A7"gfe "D"dAF D3:|`,
+|:"Bm"d3 dcd BFF FBc|d3 "G"dcB "F#7"cFF F3 | "Em"e3 "C#7/F"ede  "F#7"cFF F3 |
+fgf "F#7/E"efe "Bm/D"ded "F#7/C#"cBc|"Bm"d3 dcd BFF FBc|d3 dcB "F#7"cFF F3 |
+"Em"e3 "F#7/F"ede "F#7"cFF F3 | fgf edc[1 "Bm"B3 BBc:|2 "Bm"B3 "A7"A3||
+|:"D"F3 FGB A3 ABc|dcd "G"edB "D/F#"A3 "Fdim7"FAd | 
+"Em"c3 Ace "A7"g3 Ace | "Em"c'ba "A7"gfe "D"fed "A7"cBA|
+"D"F3 FGB A3 ABc|dcd "G"edB "D/F#"A3 "Fdim7"FAd|
+"Em"c3 Ace "A7"g3 Ace |"Em"c'ba "A7"gfe "D"dAF D3:|`,
 		theSessionId: 25035,
 		theSessionSettingId: 52529
 	},
@@ -503,6 +504,7 @@ K:Dmajor
 A,B,DE FEDF Adcd BAFA|B3c dBAG[1 FDEC D3B,:|2 FDEC D3g||
 fded cBAg fdef g2ag|fded cBAF EBAG FDD2|
 fded cBAg fdef g2fg|afge fded cABc d3g:|`,
+		parts: "AABB",
 		theSessionId: 420,
 		theSessionSettingId: 30384
 	},
@@ -520,14 +522,14 @@ N:Imported into *tuneTable* on 2026-05-18,
 N:from https://thesession.org/tunes/669#setting48947
 N:Setting entered in thesession by user “Jeremy” on 2023-12-08
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Gmixolydian
 |:dc|BGFD EDCE DGG^F GABc|defd cAGF DFFE F2dc|
 BGFD EDCE DGG^F GABc|defd cAGF DGG^F G2:|
 |:D^F|G2Bd gdBG F2Ac fcAF|G2Bd gdBd cBcd cAFA|
 G2Bd gdBG F2Ac fcAF|GABd cAGF DGG^F G2:|`,
 		theSessionId: 669,
-		theSessionSettingId: 48947
+		theSessionSettingId: 48947,
+		parts: "AABB"
 	},
 	{
 		fileDate: "2026-05-18",
