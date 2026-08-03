@@ -20,6 +20,12 @@ K:Aminor
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=5",
 			artists:
 				"Brian Conway, fiddle; Rose Clancy, fiddle; Martin Wynne, fiddle; Joe Madden, accordion; Felix Dolan, piano; Kevin Killeen, piano accordion"
+		},
+		{
+			url: "https://www.itma.ie/playlists/padraics-picks-june-2026/?track=11",
+			notes:
+				"(1973) itma catalogue: [seth-289725-301085](https://itma.accesstomemory.org/seth-289725-301085)",
+			artists: "Tommy McCarthy, concertina; Bobby Casey, fiddle"
 		}
 	]
 };

@@ -1,5 +1,5 @@
 export default {
-	tags: "Flexible structure",
+	tags: "flexible structure",
 	parts: "AABCBC",
 	abc: `X:1
 T:The Trip To Durrow
@@ -25,7 +25,7 @@ D2DF ADFA dfed B3c|dBBA FAdB AFEG FDD2:|`,
 			index: 1,
 			//Lucy Campbell - MacMahon & Hill
 			notes:
-				"From “-02:58” onwards. Here they play it “AABBCC”, not “AABCBC”, which is the way it tends to be played these days."
+				"From “-02:58” onwards. Here they play it “AABBCC”, rather than “AABCBC”, which is the way it tends to be played these days. (The score here is AABBCC.) Because of this, I tagged this tune as “flexible structure”."
 		}
 	],
 	references: [

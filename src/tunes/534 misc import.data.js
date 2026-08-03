@@ -119,7 +119,7 @@ defg a^gaf ~b3f ~a3f|~g3e ~f3e dgfe dcdB||`,
 	},
 	{
 		groups: "su",
-		tags: "pas carré",
+		tags: "pas carrée",
 		fileDate: "2026-06-08",
 		parts: "AABB",
 		abc: `X:1

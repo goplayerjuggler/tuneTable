@@ -17,6 +17,14 @@ efed B2Bc dedA FDDF|Beed B3c d2AF GEED:|
 GBeB GEED FAAG FDED|G2GF GFEG BGFG E3F:|`,
 	theSessionId: 257,
 	theSessionSettingId: 242,
+	references: [
+		{
+			url: "https://www.itma.ie/playlists/padraics-picks-june-2026/?track=8",
+			notes:
+				"(1973) itma catalogue: [seth-289725-301083](https://itma.accesstomemory.org/seth-289725-301083)",
+			artists: "Bobby Casey, fiddle"
+		}
+	],
 	crossReferences: [
 		{
 			theSessionId: 1335,

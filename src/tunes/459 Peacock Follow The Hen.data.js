@@ -1,4 +1,5 @@
 export default {
+	parts: "AABB",
 	abc: `X:1
 T:Peacock Follow The Hen
 R:slip jig
@@ -11,4 +12,6 @@ K:Adorian
 |:cde cAA cAA|cde cAA B2G|cde cAA cAA|Bcd dgd B2G:|
  cde gee gee|cde gee f2d|cde gee gee|Bcd dgd B2G:|`,
 	theSessionId: 1145
+	// todo: Kathryn Tickell, decade, Jason OR (?)
+	//https://raelachrecords.bandcamp.com/track/jenny-jumped-over-the-wall-a-fig-for-a-kiss-slip-jigs
 };

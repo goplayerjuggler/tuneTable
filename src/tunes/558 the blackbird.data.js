@@ -77,6 +77,6 @@ M:4/2
 "A"A2-A>G F>GA>B "A/C#(C)"c>d e2 "D"d>cA>F | [M:3/2] "G"G>EF>E "D"(3DED C>E "D"D2 :| 
 `
 	],
-	tags: "crooked",
+	tags: ["crooked", "set dance"],
 	theSessionId: 1104
 };

@@ -313,15 +313,16 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/438#setting13299
 N:Setting entered in thesession by user “Dr. Dow” on 2006-04-30
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Dmajor
 |:DFAF BFAF DFAF E2FE|D2FA BAFA[1 (3Bcd ec dBAF:|2 (3Bcd ec d3A||
 d2fd Adfd Adfd BABc|d2fd Adfb afea fddA|
 d2fd Adfd Adfd ~e3f|gfec dcBA (3Bcd ec dBAF||`
 		],
-		fileDate: "2026-05-25",
 		theSessionId: 438,
-		theSessionSettingId: 13299
+		theSessionSettingId: 13299,
+		parts: "AB",
+		tags: "may be doubled",
+		fileDate: "2026-07-31"
 	},
 	{
 		abc: [
@@ -334,16 +335,17 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/1722#setting15148
 N:Setting entered in thesession by user “ceolachan” on 2009-04-17
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
 K:Gmajor
 GBdg egdB GBdB egdg|eAcA eAcA Bdef gedB|
-GBdg egdB GBdB egdg|cdef gedc BcAF G2 Bc||
-d2 gg B2 gg dgbg egdg|eAcA eAcA Bdef gedB|
-d2 gg B2 gg dgbg egdg|cedf gedc BcAF G4||`
+GBdg egdB GBdB egdg|cdef gedc BcAF G2Bc||
+d2gg B2gg dgbg egdg|eAcA eAcA Bdef gedB|
+d2gg B2gg dgbg egdg|cedf gedc BcAF G4||`
 		],
-		fileDate: "2026-05-25",
 		theSessionId: 1722,
-		theSessionSettingId: 15148
+		theSessionSettingId: 15148,
+		parts: "AB",
+		tags: "may be doubled",
+		fileDate: "2026-07-31"
 	},
 	{
 		abc: [

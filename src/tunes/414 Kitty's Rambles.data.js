@@ -34,4 +34,11 @@ df/g/a df/g/a df/g/a afd | ceg ceg ceg gfe |
 ~D3 cBA d^cd efg | fed ^cAG ABc dAF| 
 "^The rest is omitted"y `,
 	norbeckId: 300
+	/*
+	todo 260731
+	https://www.itma.ie/playlists/padraics-picks-june-2026/?track=3
+	The rambles of Kitty, jig / Willie Clancy, uilleann pipes ; Peadar O'Loughlin, fiddle ; J.C. Talty, flute ; Jimmy Ward, banjo 
+	thesessionId
+	third part in this setting too - worth transcribing
+	*/
 };
