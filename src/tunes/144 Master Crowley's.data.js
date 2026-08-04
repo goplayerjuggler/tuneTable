@@ -1,4 +1,5 @@
 export default {
+	aka: "Master Crowley's no. 1",
 	parts: "AABB",
 	abc: `X:1
 T:Master Crowley's
@@ -14,5 +15,12 @@ K:Edorian
 B,E (3EEE B,EFE EDB,D A,DFD|B,E (3EEE B,EGB[1 AFdF FEED:|2 AFdF FEEA||
 |:Bbab fgeg fd (3ddd Adfd|Bbab fgeg fdAF FEEA|
 Bbab fgeg fd (3ddd Adfd|EFGA BABd[1 AFdF FEEA:|2 AFdF FEED||`,
-	theSessionId: 281
+	theSessionId: 281,
+	references: [
+		{
+			url: "https://www.itma.ie/playlists/selections-from-the-marcas-o-murchu-collection/?track=5",
+			artists: "Davy Rice, fiddle; Doris Crawford, piano",
+			notes: "Master Crowley's no. 1; Master Crowley's no. 2"
+		}
+	]
 };
