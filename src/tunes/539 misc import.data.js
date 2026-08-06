@@ -22,19 +22,19 @@ eac'a eac'a eac'a bae2|(3agf fe fecd (3efe (3dcB A4||`,
 		theSessionSettingId: 23423
 	},
 	{
-		fileDate: "2026-07-29",
+		fileDate: "2026-08-06",
 		parts: "AB",
 		abc: `X:1
-		T:Mulqueeney's
-		R:reel
-		L:1/16
-		M:4/4
-		H:The is just the setting I have in my head today – with no internet access handy to check!
-		K:Dmajor
-		F2EG FDDE FGAG FDDE|F2EG FDDE FABc dBAG|
-		F2EG FDDE FGAG FDDE|F2EG FDDE FABc d2cd||
-		e4 efed cdef g2fg|e"<("AA/A/">)"A efed cABc d2cd|
-		e4 efed cdef g2fg|aff/"<("f/">)"f gee/"<("e/">)"e dfec dBAG|]`,
+T:Mulqueeney's
+R:reel
+L:1/16
+M:4/4
+H:The is just the setting I have in my head today – with no internet access handy to check!
+K:Dmajor
+F2EG FDDE FGAG FDDE|F2EG FDDE FABc dBAG|
+F2EG FDDE FGAG FDDE|F2EG FDDE FABc d2cd||
+e4 efed cdef g2fg|e"<("AA/A/">)"A efed cABc d2cd|
+e4 efed cdef g2fg|aff/"<("f/">)"f gee/"<("e/">)"e dfec dBAG|]`,
 		theSessionId: 66
 	},
 	{
@@ -715,7 +715,7 @@ e3 efg aea e2f|g3 dB/c/d[1 ecA A2d:|2 ecA Ae/f/g||
 T:Hector The Hero
 C:James Scott Skinner
 R:waltz
-L:1/8
+L:1/4
 M:3/4
 N:University of Aberdeen –Scott Skinner Manuscript, minus ornaments
 N:https://www.abdn.ac.uk
@@ -748,15 +748,14 @@ N:---
 N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/1292#setting36057
 N:Setting entered in thesession by user “ceolachan” on 2019-09-24
-N:(todo: not yet revised)
+H:I tweaked this by writing it in 3/4 with bars twice as short as the prior version, which was in 6/8.
 K:Amajor
-M:6/8
- |:A|c>BA fec|e3 e2 A|c>BA fec|B3- B2 A|
- c>BA fec|e2 A a2 f|eAc B2 A|A3- A2:|
- c|fgf agf|e3- e2 c|fec eAc|B3- B2 c|
- f>gf agf|eAB caf|eAc B2 A|A3- A2 c|
- fgf agf|e3- e2 c|fec eAc|B3- B2 e/d/|
- c>BA fec|e>AA Ha2 f|eAc HB2 A|A3- A2||`,
+ |:A|c>BA | fec|e3 |e2 A|c>BA | fec|B3- |B2 A|
+     c>BA | fec|e2 A |a2 f|eAc |B2 A|A3- |A2:|
+   c|fgf | agf|e3- |e2 c|fec |eAc|B3- |B2 c|
+     f>gf | agf|eAB| caf|eAc |B2 A|A3- |A2 c|
+     fgf | agf|e3- |e2 c|fec |eAc|B3- |B2 e/d/|
+     c>BA | fec|e>AA |Ha2 f|eAc |HB2 A|A3-| A2||`,
 		fileDate: "2026-05-25",
 		theSessionId: 1292,
 		theSessionSettingId: 36057
