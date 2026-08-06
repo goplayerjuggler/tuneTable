@@ -1003,7 +1003,6 @@ function calculateCrossRefs(tunes) {
 					const t = resolveTuneById(parseTuneIdStr(m[2]));
 					if (t) {
 						t._isCrTarget = true;
-						return;
 					}
 				}
 			});
