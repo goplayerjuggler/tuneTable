@@ -1,4 +1,5 @@
 export default {
+	fileDate: "2026-07-29",
 	groups: "ALORA,su",
 	rhythm: "slip jig",
 	abc: `%240620, 21, 27, 240718, 260209, 260223
@@ -43,7 +44,7 @@ E3 FEF G2F E3 BcA BGD|E3 FEF G2A`,*/
 			url: "http://www.juneberry78s.com/sounds/ami15.mp3",
 			notes: `1. Another six-part version; the sixth part is different to the M. Gorman one. 
 2. Played like a “normal” slip jig; I would write this one down in 9/8, not in 18/8 or 18/16.
-3. There's lots of good, [old ITM recordings](http://www.juneberry78s.com/sounds/ListenToIrishDance.htm) on the juneberry website. `
+3. There's lots of good, [old ITM recordings](http://www.juneberry78s.com/sounds/ListenToIrishDance.htm) on the juneberry website.`
 		}
 	],
 	theSessionId: 52,

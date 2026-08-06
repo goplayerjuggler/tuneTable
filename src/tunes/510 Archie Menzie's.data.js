@@ -11,10 +11,10 @@ N:from https://thesession.org/tunes/10689#setting20478
 N:Setting entered in thesession by user “Nigel Gatherer” on 2010-09-14
 N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Fmajor
-|:FE|~F2 CF AFEF Acde fcA^F|G2 DG BGDG (3Bcd ef gdBG|
-~F2 CF AFCF Acde fcAF|BdGB AcFA GECE F2:|
-fe|ffcf afef cfag fed^f|g2 dg bg^fg dgba g=fed|
-f2 cf afef cfag fedc|BdGB AcFA GECE F2:|`,
+|:FE|~F2CF AFEF Acde fcA^F|G2DG BGDG (3Bcd ef gdBG|
+     ~F2CF AFCF Acde fcAF|BdGB AcFA GECE F2:|
+  fe|ffcf afef cfag fed^f|g2dg bg^fg dgba g=fed|
+     f2cf afef cfag fedc|BdGB AcFA GECE F2:|`,
 	theSessionSettingId: 20478,
 	theSessionId: 10689,
 	references: [
