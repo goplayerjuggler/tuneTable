@@ -5,7 +5,7 @@ R: reel
 M: 4/4
 L: 1/16
 K: Dmix
-AD (3DDD FAGF EC (3CCC EFGB A2AG FAde|=fedc`,
+dc|ADDE FAGF EB,CD EFGB A2AG FAde|=fdec`,
 	theSessionId: 1010,
 	parts: "AABB"
 };

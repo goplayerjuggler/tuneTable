@@ -10,7 +10,7 @@ R:reel
 L:1/16
 M:4/4
 K:Eminor
-GA|BE (3EEE G2BG AcBA GEDE|~G3A BAGA `,
+GA|BEE/E/E G2BG AcBA GEDE|~G3A BAGA `,
 	references: [
 		{
 			artists:
