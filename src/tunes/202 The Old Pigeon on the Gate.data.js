@@ -25,7 +25,7 @@ G2~g2 gagf dg~g2 bgag|dc~c2 gceg fdcA G2~c2:|`
 2. Compare with a more commonly played reel, [The Pigeon On The Gate](ttId=201).
 3. [On thesession](theSessionId=1596) there are some other settings it could be worth looking into – a note to myself…` + //todo
 				`
-4. There’s [another entry on thesession with ID 4312](theSessionId=4312) and who knows, there may well be others.
+4. There’s [another entry on thesession with ID 4312](https://thesession.org/tunes/4312) and who knows, there may well be others.
 `
 		},
 		{
