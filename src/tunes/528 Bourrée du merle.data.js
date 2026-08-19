@@ -35,7 +35,7 @@ M:3/8
 L:1/16
 Q:1/8=300
 K:D dorian
-~f2 z2 fg|a2b2c'neb|a2fgfg|[1,3agfed2:|[2,4a2fdf2|aba4:|
+~f2 z2 fg|a2b2c'b|a2fgfg|[1,3agfed2:|[2,4a2fdf2|aba4:|
 |:~f2 z2fe|~d2e2f2|[1,3~g2 z2 f2|~e2~f2d2:|[2,4g2{f}~e2c2|d6:|`,
 		`
 X:4
@@ -58,7 +58,7 @@ B4G2 | FGA2B2 | c2A2F2 | G6:|
 			Cette bourrée se joue de plusieurs façons. Aujourd’hui (2026-05-09), je viens de retrouver [des vieilles échanges sur un forum](https://forum.tradzone.net/topic/8322-bourr%C3%A9e-du-merle/) en 2010 où l’on m’avait gentiment partagé quelques enregistrements. Bien sûr maintenant les fichiers partagés sont inaccessibles, mais je mets ici les particions que j’avais faites à l’époque. Pour plus tard : compléter les données discographiques.
 
 Comme les phrases sont toutes de longueur 4 (mesures), je considère ceci comme une bourrée « carrée » - à comparer avec les bourrées que j’ai marquées « pas carrée ». Sauf que la version de Vermerie à sa partie A en « 2.(4+5) », c’est donc une version « pas carrée ».
- ` //todo
+ ` //todo: discography
 		}
 	],
 	structure: "2.2.(4+4)",

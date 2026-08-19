@@ -6,8 +6,12 @@ M: 4/2
 L: 1/8
 K: Dmaj
 AG|FD (3EFG AFD2 dA (3Bcd ecAg|fd`,
-	theSessionId: 1143
-	//todo
-	// BTDP Ballinakill Traditional Dance Players RICK'S - BYRNE'S hornpipes
-	//http://www.juneberry78s.com/sounds/btdp-02.mp3
+	theSessionId: 1143,
+	references: [
+		{
+			url: "http://www.juneberry78s.com/sounds/btdp-02.mp3",
+			notes: `Rick's - Byrne's (archive)`,
+			artists: "Ballinakill Traditional Dance Players"
+		}
+	]
 };

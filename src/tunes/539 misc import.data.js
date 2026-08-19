@@ -104,7 +104,8 @@ bgg2 agef gfge dBGA|B2BA BddB AGAB G2:|`,
 		theSessionSettingId: 52257
 	},
 	{
-		fileDate: "2026-05-25",
+		fileDate: "2026-08-18",
+		parts: "AABBCC",
 		abc: `X:1
 T:Tom Billy's
 R:jig
@@ -114,7 +115,6 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/816#setting30530
 N:Setting entered in thesession by user “JACKB” on 2017-06-19
 N:*abc-tools: convert to M:12/8*
-N:(todo: not yet revised)
 K:Dmixolydian
 |:d3 AFA AGE EDD|Add A3 AGE DF/G/A|
 d3 AFA AGE EDD|E3 cAG[1 BGE DFA:|2 BGE D2B||
