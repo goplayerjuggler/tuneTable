@@ -767,29 +767,19 @@ T:Cronin's
 R:slide
 L:1/8
 M:12/8
-N:Transcribed from Jack Talty & Cormac Begley's album Na Fir Bolg (track#7, first
-N:tune in the set). It's called Cronin’s in this album.
-N:In a comment (on the tune I Do Not Incline https://thesession.org/tunes/17098, 4
-N:years ago) jeff_lindqvist said this tune on the Talty/Begley album is the jig
-N:called Around the World for Sport ( https://thesession.org/tunes/3149 ) but I
-N:think that's a different tune. I think the confusion arose because the first
-N:part of both tunes is more or less the same. I believe this one is a different
-N:tune because its second part is very different from those given for Around the
-N:World for Sport.
-N:I'm not an expert but this sounds like a slide to me, rather than a jig. I could
-N:be wrong of course...
-N:---
-N:Imported into *tuneTable* on 2026-05-25,
+S:Jack Talty, concertina; Cormac Begley, concertina
+D:Na Fir Bolg
+H:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/23166#setting47206
 N:Setting entered in thesession by user “GoPlayer” on 2023-05-19
-N:(todo: not yet revised)
 K:Dminor
 |:D2 E | F2F FDF GAG GFG|ABA AGF G2D D2 C|
  F2F FDF GAG GFG | ABA AGF G2D :|
  |: D2e| f2f e/f/ge ~f2d d2e|f2f dgf ~e2c cde|
  f2f e/f/ge cde ~f2d | ecA BAG A2D :|`,
-		fileDate: "2026-05-25",
+		fileDate: "2026-08-20",
 		theSessionId: 23166,
-		theSessionSettingId: 47206
+		theSessionSettingId: 47206,
+		parts: "AABB"
 	}
 ];

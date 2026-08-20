@@ -3,8 +3,8 @@ export default {
 T:The Red Crow
 C:Mairéad Ní Mhaonaigh
 R:reel
-L:1/8
-M:4/2
+L:1/16
+M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/184#setting184
 N:Setting entered in thesession by user “Will Harmon” on 2001-07-03

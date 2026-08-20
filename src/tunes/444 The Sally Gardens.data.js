@@ -6,5 +6,6 @@ L:1/16
 M:4/4
 K:Gmajor
 G2DG BAGB dBeB dBAB|d2Bd efge`,
+	parts: "AABB",
 	theSessionId: 98
 };

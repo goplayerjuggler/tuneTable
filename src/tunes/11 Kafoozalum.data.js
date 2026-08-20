@@ -21,5 +21,6 @@ e2|:fdAd f2fa gece g2ge| fdAd f2fe[1 defd e2de:|[2 defd e2df||
 			notes: `1. On thesession, there are two entries, with Ids 8204 & 2570.
 As well as “Fling”, it’s also been described as a: country dance / march / highland schottische / highland fling / single reel.`
 		}
-	]
+	],
+	contourShift: 0
 };
