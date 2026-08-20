@@ -18,6 +18,7 @@ K:A
 e2 fe efae ^Bcec Ac e2|Fcaf ee c<e [EB]BeB A2 ee:|
 `,
 		tags: "old-timey",
-		parts: "AABB"
+		parts: "AABB",
+		ttId: 566
 	}
 ];
