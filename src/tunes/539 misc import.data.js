@@ -172,28 +172,6 @@ eB~B2 GBFB EBBA (3Bcd ef|~g3e ~f3d efed BAFD||`
 		theSessionSettingId: 12499
 	},
 	{
-		abc: `X:1
-T:Sailing Into Walpole's Marsh
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-05-25,
-N:from https://thesession.org/tunes/1341#setting1341
-N:Setting entered in thesession by user “Dr. Dow” on 2003-01-16
-N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
-K:Adorian
-~A3G ABcA GE~E2 GED2|EAAG ABcd edgd (3ABc dB|
-AG~G2 AG~G2 GEDE GED2|A2AG ABcd eBdB BAdB|
-~A3B c3A GE~E2 GED2|EAAG ABcd edgd (3ABc dB|
-AG~G2 AG~G2 GEDE GED2|A2AG ABcd eBdB BAA2||
-|:eg~g2 ea~a2 gedB cAA2|eg~g2 eaab age^c d2ef|
-~g3e ~a3f gedB cAAB|~c2gc acgc[1 eage ~d2cd:|2 eage ~d3c||`,
-		theSessionId: 1341,
-		fileDate: "2026-05-25",
-		theSessionSettingId: 1341
-	},
-	{
 		parts: "AABB",
 		fileDate: "2026-06-03",
 		abc: `X:1

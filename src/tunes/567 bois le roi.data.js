@@ -56,50 +56,6 @@ GED GFG ABd B3|ABd BAG AGE G3:|
 	{
 		excludeFromDefault: true,
 		groups: "blr",
-		abc: [
-			`X:1
-T:The Kesh
-R:jig
-L:1/8
-M:12/8
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/55#setting12493
-N:Setting entered in thesession by user “ceolachan” on 2007-06-10
-N:*abc-tools: convert to M:12/8*
-K:Gmajor
-|:D|G2 G GAB A2 A AB/c/d|edd gdd edB dBA|
-GAG G2 B AA/A/A ABd|edd gdB AGF G2:|
-|:d|B2 B dB/c/d e/f/ge dBA|~B3 BA^G ~A3 F=GA|
-B^AB d^cd ege dBd|g2 g a^ga b=gf g2:|`
-		],
-		theSessionId: 55,
-		theSessionSettingId: 12493
-	},
-	{
-		excludeFromDefault: true,
-		groups: "blr",
-		abc: `X:1
-T:Morrison's
-R:jig
-L:1/8
-M:12/8
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/71#setting71
-N:Setting entered in thesession by user “Jeremy” on 2001-05-25
-N:*abc-tools: convert to M:12/8*
-K:Edorian
-|:E3 B3 EBE AFD|EDE B3 dcB AFD|
-E3 B3 EBE AFD|G3 FGA dAG FED:|
-Bee fee aee fee|Bee fee a2g fed|
-Bee fee aee fee|gfe d2A BAG FGA|
-Bee fee aee fee|Bee fee faf def|
-g3 gfe def g2d|edc d2A BAG FED|`,
-		theSessionId: 71,
-		theSessionSettingId: 71
-	},
-	{
-		excludeFromDefault: true,
-		groups: "blr",
 		abc: `X:1
 T:Saint Patrick's Day
 R:jig
@@ -144,31 +100,6 @@ faa e2 a|daa c2 a dfe dcB|cA^G A2:|`
 		excludeFromDefault: true,
 		groups: "blr",
 		abc: `X:1
-T:The Humours Of Ennistymon
-C:Qualey
-R:jig
-L:1/8
-M:12/8
-N:Piping Jig.
-N:---
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/228#setting26013
-N:Setting entered in thesession by user “JACKB” on 2015-03-16
-N:*abc-tools: convert to M:12/8*
-K:Gmajor
-|:A|B3 GBd cBc ABc|B3 GBd cAG FGA|
-B3 GBd cBc ABc|df/e/d cAF AGF G2:|
-d|f3 fed cAG FGA|dgg gfg afd d2 e|
-f3 fed cAG FGA|B/c/dB cAF AGF G2:|
-f|gdB gdB ecA ecA|B3 GBd cAG FGA|
-gdB gdB ecA ecA|B/c/dB cAF AGF G2:|`,
-		theSessionId: 228,
-		theSessionSettingId: 26013
-	},
-	{
-		excludeFromDefault: true,
-		groups: "blr",
-		abc: `X:1
 T:Tyrell's Pass
 C:Brendan Ring
 R:jig
@@ -207,49 +138,6 @@ GBd g3 agf g2e|fed edB[1 cAF G2D:|2 cAF G2d||`,
 		theSessionSettingId: 25094
 	},
 	{
-		excludeFromDefault: true,
-		groups: "blr",
-		abc: [
-			`X:1
-T:The Morning Dew
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/69#setting12526
-N:Setting entered in thesession by user “ceolachan” on 2010-04-06
-N:*abc-tools: convert to M:4/4 & L:1/16*
-K:Edorian
-|:E3 B- BAFD EDEB BAFD|E3 B- BAFA BcdB AFDF:|
-|:B2 eB fBeB B2 eB AFDF|B2eB fBeB[1 BcdB AFDF:|2 Bdeg fdec|d2 dA BAFD||
-|:B2 EB GBEB|B2 EB AFDF 1 B2 EB GBEB|BcdB AFDF:|2 Bdeg fdec|d2 dA BAFD||
-|:BAGF EFGA|B2 GB A2 GA BAGF EFGA|BcdB AFDF:|`
-		],
-		theSessionId: 69,
-		theSessionSettingId: 12526
-	},
-	{
-		excludeFromDefault: true,
-		groups: "blr",
-		abc: `X:1
-T:The Maid Behind The Bar
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/64#setting12512
-N:Setting entered in thesession by user “slainte” on 2005-02-23
-N:*abc-tools: convert to M:4/4 & L:1/16*
-K:Dmajor
-|:E|FAAB AFED FAAB A2de|fBBA Bcde fdgf efdB|
-FAAB AFED FAAB A2de|fBBA BcdB AFEF D3:|
-e|faag fdde fdad fdd2|efga beef gebe gee2|
-faaf b2af defd e2de|fBBA BcdB AFEF D3:|`,
-		theSessionId: 64,
-		theSessionSettingId: 12512
-	},
-	{
-		excludeFromDefault: true,
 		groups: "blr",
 		abc: `X:1
 T:The Swallow's Tail
@@ -262,14 +150,14 @@ N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Adorian
 |:eAcA eAcA cdef gedB|G2BG dGBG cdef g2fg|
-eA (3cBA eA (3cBA cdef g2fg|afge dBGB AcBG A2 gf:|
+eA (3cBA eA (3cBA cdef g2fg|afge dBGB AcBG A2gf:|
 |:eaag abag edef gedB|(3GFG BG dGBG cdef g2fg|
-eaag abag edef g2fg|afge dBGB AcBG A2 gf:|`,
+eaag abag edef g2fg|afge dBGB AcBG A2gf:|`,
 		theSessionId: 105,
-		theSessionSettingId: 105
+		theSessionSettingId: 105,
+		parts: "AABB"
 	},
 	{
-		excludeFromDefault: true,
 		groups: "blr",
 		abc: `X:1
 T:The Morning Star
@@ -288,7 +176,8 @@ K:Dmajor
 Bdef gfeg fedf edBA|Bdef gfeg fedf e2ed|
 Bdef g2eg f2df edBA|Bddc d2de faaf gfed||`,
 		theSessionId: 828,
-		theSessionSettingId: 33637
+		theSessionSettingId: 33637,
+		parts: "AB"
 	},
 	{
 		excludeFromDefault: true,
@@ -316,26 +205,6 @@ B>E (3EE^D E>FG>A B2 e2 e>^de>f|e2 B2- B>AG>F E2 (3EEE E2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
-		abc: `X:1
-T:Off To California
-R:hornpipe
-L:1/8
-M:4/2
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/30#setting30
-N:Setting entered in thesession by user “Jeremy” on 2001-05-21
-N:*abc-tools: convert to M:4/2*
-K:Gmajor
-|:GFGB AGED GBdg e2df|gfgd edBG ABAG E2DE|
-G2GB AGED GBdg e2df|gfgd edBG ABAF G4:|
-|:gfeg fedf edef edBd|gfgd edBG ABAG EDEF|
-GFGB AGED GBdg e2df|gfgd edBG ABAF G4:|`,
-		theSessionId: 30,
-		theSessionSettingId: 30
-	},
-	{
-		excludeFromDefault: true,
-		groups: "blr",
 		abc: [
 			`X:1
 T:Horse Keane's
@@ -355,26 +224,6 @@ e2 e>f g>a (3gfe d>bg>e d>B (3GAB|c2 c>e d>BG>A B>AA>G A2 d>c|
 		],
 		theSessionId: 1786,
 		theSessionSettingId: 15229
-	},
-	{
-		excludeFromDefault: true,
-		groups: "blr",
-		abc: `X:1
-T:The Rights Of Man
-R:hornpipe
-L:1/8
-M:4/2
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/83#setting24377
-N:Setting entered in thesession by user “ceolachan” on 2014-06-30
-N:*abc-tools: convert to M:4/2*
-K:Eminor
-|:G>A|(3BcB (3ABA G>GF>G E>FG>A B2 e>f|g>fe>d B>dg>f (3efe (3dcB A2 G>A|
-(3BcB (3ABA G>AF>G E>FG>A B2 e>f|g>fe>d B>dg>f e2 E2 E2:|
-|:g>a|b>gb>g e>fg>a b>gb>g e>gf>e|d>cd>e d>ef>g a>fa>b a2 g>f|
-e>ee>g f>df>a g>fe>d B2 e>f|g>fe>d B>dg>f e2 E2 E2:|`,
-		theSessionId: 83,
-		theSessionSettingId: 24377
 	},
 	{
 		excludeFromDefault: true,

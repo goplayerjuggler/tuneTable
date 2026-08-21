@@ -7,7 +7,7 @@ L: 1/8
 K: Edor
 EDE BAB EBE AFD|EDE ~B3`,
 	parts: "AABB",
-	groups: "alora",
+	groups: "alora,blr",
 	norbeckId: 30,
 	theSessionId: 71,
 	references: [

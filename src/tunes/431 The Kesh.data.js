@@ -1,4 +1,5 @@
 export default {
+	groups: "blr",
 	abc: `X:1
 T:The Kesh
 R:jig
