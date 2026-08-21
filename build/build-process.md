@@ -53,7 +53,7 @@ Every `.data.js` file under `src/tunes/set-lists/` is evaluated the same way (`p
 ### 3. Generate lists
 
 - **Default list** (`default`): all loaded tunes except those flagged `excludeFromDefault`, plus set lists tagged for the `"default"` group.
-- **Group lists** (`group-<name>`): tunes are grouped by their `groups` property (comma-separated, lower-cased); one list per distinct group, alphabetically. `getGroupDisplayName()` maps known group ids (`alora`, `su`) to friendly names, falling back to `Group: <name>` for anything else.
+- **Group lists** (`group-<name>`): tunes are grouped by their `groups` property (comma-separated, lower-cased); one list per distinct group, alphabetically. `getGroupDisplayName()` maps known group ids (`alora`, `su`, `blr`) to friendly names, falling back to `Group: <name>` for anything else.
 - **Origin lists** (`origin-<id>`): tunes matching an entry in `ORIGIN_EXTRACTS`, based on `metadataFromAbc.origin`.
 - **Composer lists** (`composer-<id>`, development builds only): same idea via `COMPOSER_EXTRACTS`, gated on `isDevelopment` since these are exploratory/incomplete.
 - **Collection lists** (`abc-<stem>`): one per file under `tunes/collections/`, parsed via `parseAbcHeader()` for `%% list-name`, `%% list-description`, `%% list-date`, `%% list-defaultSort` directives in the header (the lines before the first `X:` field). A list without a `%% list-defaultSort` directive (or any generated list without an explicit `defaultSort`) falls back to `"rhythmContourName"`.

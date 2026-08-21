@@ -178,7 +178,8 @@ function sanitizeSetList({ groups, ...setList }) {
 function getGroupDisplayName(group) {
   const names = {
     alora: "ALORA (lunchtime workshops)",
-    su: "Steam Up!"
+    su: "Steam Up!",
+    blr: "Bois le Roi / Jam session irlandaise en librairie !"
   };
   return names[group] ?? `Group: ${group}`;
 }
@@ -402,6 +403,9 @@ export async function buildTuneLists({
       switch (group) {
         case "su":
           description = "Steam Up! tunes" + subsetComment;
+          break;
+        case "blr":
+          description = "Répertoire pour les sessions de Bois le Roi (2026)";
           break;
         case "alora":
           description = "ALORA trad music tunes" + subsetComment;
