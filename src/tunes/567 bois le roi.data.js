@@ -74,27 +74,24 @@ c>dc cef|gag gec d>cd ecG|A2 [DB] [E2c2]:|`,
 		theSessionSettingId: 24558
 	},
 	{
-		excludeFromDefault: true,
-		groups: "blr",
+		groups: "blr,alora",
+		parts: "AABB",
 		abc: [
-			`X:1
-T:The Irish Washerwoman
-R:jig
-L:1/8
+			`X: 2
+T: The Irish Washerwoman
+R: jig
 M:12/8
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/92#setting12640
-N:Setting entered in thesession by user “ceolachan” on 2012-02-12
+L: 1/8
+N:Setting entered in thesession by user “Davy” on 2003-06-19
 N:*abc-tools: convert to M:12/8*
-K:Adorian
-|:B|cAA E2 A cAc edc|BGG DGG BGB dcB|
-cAA EAA cA/B/c e2 f|gfg dcB cA^G A2:|
-K: Amin
-|:d|cee Aee|cea c'ba gdd Gdd|gdg ba^g 
-faa e2 a|daa c2 a dfe dcB|cA^G A2:|`
+K: Gmaj
+|:dc|BAB DGB DGB dcB|cBc EGc EGc edc|
+BAB DGB DGB dcB[1 cBc ed^c dfa g:|2 cBc BGB AFA G||
+|:ef|gfg Bdg Bdg bag|fef Adf Adf agf|
+gbg faf gfe dBG|cBc BGB AFA G:|`
 		],
 		theSessionId: 92,
-		theSessionSettingId: 12640
+		theSessionSettingId: 12633
 	},
 	{
 		excludeFromDefault: true,
@@ -148,11 +145,12 @@ N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/105#setting105
 N:Setting entered in thesession by user “Jeremy” on 2001-05-25
 N:*abc-tools: convert to M:4/4 & L:1/16*
-K:Adorian
-|:eAcA eAcA cdef gedB|G2BG dGBG cdef g2fg|
-eA (3cBA eA (3cBA cdef g2fg|afge dBGB AcBG A2gf:|
-|:eaag abag edef gedB|(3GFG BG dGBG cdef g2fg|
-eaag abag edef g2fg|afge dBGB AcBG A2gf:|`,
+N:(Edited after importing: transposed to E)
+K:Edorian
+|:BEGE BEGE GABc dBAF|D2FD ADFD GABc d2cd|
+BE (3GFE BE (3GFE GABc d2cd|ecdB AFDF EGFD E2dc:|
+|:Beed efed BABc dBAF|(3DCD FD ADFD GABc d2cd|
+Beed efed BABc d2cd|ecdB AFDF EGFD E2dc:|`,
 		theSessionId: 105,
 		theSessionSettingId: 105,
 		parts: "AABB"
@@ -171,7 +169,8 @@ N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/828#setting33637
 N:Setting entered in thesession by user “Jeremy” on 2018-11-29
 N:*abc-tools: convert to M:4/4 & L:1/16*
-K:Dmajor
+N:(Edited after importing: K:G)
+K:G
 |:B2BA BGEF G2Bd efgd|B3A BGEF GBAF G2GA:|
 Bdef gfeg fedf edBA|Bdef gfeg fedf e2ed|
 Bdef g2eg f2df edBA|Bddc d2de faaf gfed||`,
@@ -278,7 +277,7 @@ M:4/4
 N:From this slidified take on the melody ~
 N:https://thesession.org/tunes/5117
 N:~ to the following:
-N:T: Johnny O'Leary's M: 12/8 L: 1/8 R: slide K: Gmaj |: B/d/ | eA AB/d/ | ed Bd |
+N:T: Johnny O'Leary's M: 12/8 L: 1/8 R: slide K: Cmaj |: B/d/ | eA AB/d/ | ed Bd |
 N:eA AB/A/ | G>A Bd | eA AB/d/ | BA/B/ dB | BG/B/ dB | A3 :| |: B/d/ | ef/g/ a>b |
 N:ag ed | Bc/d/ e>f | ga fg | ea a>b | ag ed | BA/B/ d>B | A3 :|
 N:---
@@ -286,11 +285,12 @@ N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/1113#setting14365
 N:Setting entered in thesession by user “ceolachan” on 2005-11-04
 N:*abc-tools: convert to M:4/4*
-K:Edorian
-|:BE EF/A/ BA FA|BE EF/E/ D>E FA|
-BE EF/A/ B/c/B/A/ FA|BA/B/ dF FE E2:|
-|:Be ef ed BA|Be ef d2 d>A|
-Be ef ed B>c|dB AF E2 E2:|`,
+N:(Edited after importing: transposed to A)
+K:Adorian
+|:eA AB/d/ ed Bd|eA AB/A/ G>A Bd|
+eA AB/d/ e/f/e/d/ Bd|ed/e/ gB BA A2:|
+|:ea ab ag ed|ea ab g2 g>d|
+ea ab ag e>f|ge dB A2 A2:|`,
 		theSessionId: 1113,
 		theSessionSettingId: 14365
 	},
@@ -405,11 +405,12 @@ M:3/4
 N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/6030#setting17933
 N:Setting entered in thesession by user “ceolachan” on 2006-07-27
-K:Aminor
-|:e>f ec AA|e>f ec AA|B2 B/c/d cB|A>B cd e2|
- e>f ec AA|e>f ec AA|B2 B/c/d cB|A>B cB A2:|
- |:a>a aa gf|e>f ee dc|B2 B/c/d cB|A>B cd e2|
- a>a aa gf|e>f ee dc|B2 B/c/d cB|A>B cB A2:|`,
+N:(Edited after importing: transposed to G)
+K:Eminor
+|:B>c BG EE|B>c BG EE|F2 F/G/A GF|E>F GA B2|
+ B>c BG EE|B>c BG EE|F2 F/G/A GF|E>F GF E2:|
+ |:e>e ee dc|B>c BB AG|F2 F/G/A GF|E>F GA B2|
+ e>e ee dc|B>c BB AG|F2 F/G/A GF|E>F GF E2:|`,
 		theSessionId: 6030,
 		theSessionSettingId: 17933
 	},
@@ -434,5 +435,27 @@ K:Dmajor
 		],
 		theSessionId: 872,
 		theSessionSettingId: 14048
+	},
+	{
+		groups: "blr",
+		parts: "AABB",
+		abc: [
+			`X:1
+T:John Ryan's
+R:polka
+L:1/8
+M:4/4
+N:Imported into *tuneTable* on 2026-08-21,
+N:from https://thesession.org/tunes/441#setting13305
+N:Setting entered in thesession by user “ceolachan” on 2008-02-20
+N:*abc-tools: convert to M:4/4*
+K:Dmajor
+|:dd B/c/d/B/ AF AF|dd B/c/d/B/ AF ED|
+dd B/c/d/B/ AF Ad/e/|fd ec[1 df d2:|2 df dd/e/||
+|:fd de/f/ g>f ed/e/|fd Ad fd/f/ a>g|
+fd- de/f/ g/a/g/f ed/e/|fd ed/c/[1 d2 d>e:|2 d2 d2||`
+		],
+		theSessionId: 441,
+		theSessionSettingId: 13305
 	}
 ];
