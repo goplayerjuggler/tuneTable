@@ -2,6 +2,7 @@ export default [
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-22",
 		abc: `X:1
 T:Tobin's Favourite
 R:jig
@@ -11,11 +12,6 @@ N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/308#setting24194
 N:Setting entered in thesession by user “slainte” on 2014-05-24
 N:*abc-tools: convert to M:12/8*
-K:Gmajor
-|:E|D2G GFG A2G FGA|BAB cBc A2G FGE|
-D2G GFG A2G FGA|BAB cAF AGF G2:|
-|:c|B2d dcB ABc ABc|BAB cBc A2G FGE|
-D2G GFG A2G FGA|BAB cAF AGF G2:|
 K: Dmaj
 |:B|A2d dcd|e2d cde fef gfg|e2d cdB 
 A2d dcd|e2d cde fef gec|edc d2:|
@@ -27,6 +23,7 @@ A2d dcd|e2d cde fef gec|edc d2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: [
 			`X:1
 T:The Lisnagun
@@ -56,6 +53,7 @@ GED GFG ABd B3|ABd BAG AGE G3:|
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Saint Patrick's Day
 R:jig
@@ -76,6 +74,7 @@ c>dc cef|gag gec d>cd ecG|A2 [DB] [E2c2]:|`,
 	{
 		groups: "blr,alora",
 		parts: "AABB",
+		fileDate: "2026-08-21",
 		abc: [
 			`X: 2
 T: The Irish Washerwoman
@@ -96,6 +95,7 @@ gbg faf gfe dBG|cBc BGB AFA G:|`
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Tyrell's Pass
 C:Brendan Ring
@@ -117,6 +117,7 @@ B3 ged ged BAG|ABG AGE DGF G3:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:The Humours Of Lisheen
 R:jig
@@ -136,6 +137,7 @@ GBd g3 agf g2e|fed edB[1 cAF G2D:|2 cAF G2d||`,
 	},
 	{
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:The Swallow's Tail
 R:reel
@@ -157,6 +159,7 @@ Beed efed BABc d2cd|ecdB AFDF EGFD E2dc:|`,
 	},
 	{
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:The Morning Star
 R:reel
@@ -181,6 +184,7 @@ Bdef g2eg f2df edBA|Bddc d2de faaf gfed||`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:King Of The Fairies
 R:hornpipe
@@ -204,6 +208,7 @@ B>E (3EE^D E>FG>A B2 e2 e>^de>f|e2 B2- B>AG>F E2 (3EEE E2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: [
 			`X:1
 T:Horse Keane's
@@ -227,6 +232,7 @@ e2 e>f g>a (3gfe d>bg>e d>B (3GAB|c2 c>e d>BG>A B>AA>G A2 d>c|
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:The Munster Bank
 R:polka
@@ -247,6 +253,7 @@ G>E DE GA Bd|ed BG/B/ AG G2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: [
 			`X:1
 T:The Other Clog
@@ -269,6 +276,7 @@ ce dd/f/ ea c2|e>d BG A2 AA/:|`
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Tralee Gaol
 R:polka
@@ -297,6 +305,7 @@ ea ab ag e>f|ge dB A2 A2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Newmarket
 R:polka
@@ -317,6 +326,7 @@ f/g/a gf ed B/c/d|Ad de fd d2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Connie In The Pool
 C:Séamus Creagh
@@ -338,6 +348,7 @@ ae cA GA Bc|d/e/d/c/ dB A2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: [
 			`X:1
 T:Inisheer
@@ -373,6 +384,7 @@ K:Gmajor
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Eleanor Plunkett
 C:Turlough O'Carolan
@@ -397,6 +409,7 @@ GA|B2 B2 AG|G2 G2 ag|e2 e2 ed|B2 B2 AG|
 	{
 		excludeFromDefault: true,
 		groups: "blr",
+		fileDate: "2026-08-21",
 		abc: `X:1
 T:Emma
 R:waltz
@@ -415,6 +428,7 @@ K:Eminor
 		theSessionSettingId: 17933
 	},
 	{
+		fileDate: "2026-08-21",
 		abc: [
 			`X:1
 T:Fisher's
@@ -439,6 +453,7 @@ K:Dmajor
 	{
 		groups: "blr",
 		parts: "AABB",
+		fileDate: "2026-08-21",
 		abc: [
 			`X:1
 T:John Ryan's
