@@ -430,7 +430,7 @@ K:Eminor
 T:Fisher's
 R:reel
 L:1/16
-M:4/24
+M:4/4
 N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/872#setting14048
 N:Setting entered in thesession by user “ceolachan” on 2011-03-02
