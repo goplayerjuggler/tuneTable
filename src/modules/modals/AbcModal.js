@@ -703,13 +703,20 @@ export default class AbcModal extends Modal {
 			p.innerHTML = acc.referencesHtml;
 			block.appendChild(p);
 		}
-
+		const fileEl = document.createElement("div");
+		fileEl.className = "abc-file-info";
 		if (this.tune.fileDate) {
-			const dateEl = document.createElement("div");
-			dateEl.className = "abc-file-date";
-			dateEl.textContent = `File date: ${this.tune.fileDate}`;
-			block.appendChild(dateEl);
+			const p = document.createElement("p");
+			p.textContent = `File date: ${this.tune.fileDate}`;
+			// fileEl.textContent =`File name: ${this.tune.fileName}`;
+			fileEl.appendChild(p);
 		}
+		if (this.tune.fileName) {
+			const p = document.createElement("p");
+			p.textContent = `File name: ${this.tune.fileName}`;
+			fileEl.appendChild(p);
+		}
+		if (this.tune.fileDate || this.tune.fileName) block.appendChild(fileEl);
 
 		this.elements.references.appendChild(block);
 	}

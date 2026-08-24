@@ -301,7 +301,8 @@ export async function buildTuneLists({
       tunesFromSourceFiles.push({
         metadataFromAbc: metadata,
         ...tune,
-        fileDate: tune.fileDate ?? fileDate
+        fileDate: tune.fileDate ?? fileDate,
+        fileName
       });
     });
   }
