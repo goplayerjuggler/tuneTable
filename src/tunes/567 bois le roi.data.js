@@ -1,6 +1,6 @@
 export default [
 	{
-		excludeFromDefault: true,
+		parts: "AABB",
 		groups: "blr",
 		fileDate: "2026-08-22",
 		abc: `X:1
@@ -13,10 +13,10 @@ N:from https://thesession.org/tunes/308#setting24194
 N:Setting entered in thesession by user “slainte” on 2014-05-24
 N:*abc-tools: convert to M:12/8*
 K: Dmaj
-|:B|A2d dcd|e2d cde fef gfg|e2d cdB 
-A2d dcd|e2d cde fef gec|edc d2:|
-|:g f2a agf|efg efg fef gfg|e2d cdB 
-A2d dcd|e2d cde fef gec|edc d2:|`,
+|:B|A2d dcd e2d cde | fef gfg e2d cdB |
+    A2d dcd e2d cde | fef gec edc d2 :|
+|:g | f2a agf efg efg | fef gfg e2d cdB |
+A2d dcd e2d cde | fef gec edc d2:|`,
 		theSessionId: 308,
 		theSessionSettingId: 24194
 	},
@@ -206,7 +206,6 @@ B>E (3EE^D E>FG>A B2 e2 e>^de>f|e2 B2- B>AG>F E2 (3EEE E2:|`,
 		theSessionSettingId: 13361
 	},
 	{
-		excludeFromDefault: true,
 		groups: "blr",
 		fileDate: "2026-08-21",
 		abc: [
@@ -253,7 +252,8 @@ G>E DE GA Bd|ed BG/B/ AG G2:|`,
 	{
 		excludeFromDefault: true,
 		groups: "blr",
-		fileDate: "2026-08-21",
+		fileDate: "2026-08-24",
+		parts: "AABB",
 		abc: [
 			`X:1
 T:The Other Clog
@@ -264,36 +264,31 @@ N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/4249#setting16979
 N:Setting entered in thesession by user “ceolachan” on 2008-03-18
 N:*abc-tools: convert to M:4/4*
-K:Amajor
-|:cA A>B cA Ac|BE GA Bc d/c/B/d/|
-cA A>B cA Ac|BE G>A BA AA/:|
-ce df ea c2|e>d BG fe c>=c|
-ce dd/f/ ea c2|e>d BG A2 AA/:|`
+N:(Edited after importing)
+K:Gmajor
+|:BG G>A BG GB|AD FG AB c/B/A/c/|
+BG G>A BG GB|AD F>G AG GG/:|
+|:Bd ce dg B2|d>c AF ed B>^A|
+Bd cc/e/ dg B2|d>c AF G2 GG:|`
 		],
 		theSessionId: 4249,
 		theSessionSettingId: 16979
 	},
 	{
-		excludeFromDefault: true,
+		parts: "AABB",
 		groups: "blr",
-		fileDate: "2026-08-21",
+		fileDate: "2026-08-24",
 		abc: `X:1
 T:Tralee Gaol
 R:polka
 L:1/8
 M:4/4
-N:From this slidified take on the melody ~
-N:https://thesession.org/tunes/5117
-N:~ to the following:
-N:T: Johnny O'Leary's M: 12/8 L: 1/8 R: slide K: Cmaj |: B/d/ | eA AB/d/ | ed Bd |
-N:eA AB/A/ | G>A Bd | eA AB/d/ | BA/B/ dB | BG/B/ dB | A3 :| |: B/d/ | ef/g/ a>b |
-N:ag ed | Bc/d/ e>f | ga fg | ea a>b | ag ed | BA/B/ d>B | A3 :|
-N:---
 N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/1113#setting14365
 N:Setting entered in thesession by user “ceolachan” on 2005-11-04
 N:*abc-tools: convert to M:4/4*
 N:(Edited after importing: transposed to A)
+H:There's a version of this tune as a slide, called [Barrack Hill](https://thesession.org/tunes/5117).
 K:Adorian
 |:eA AB/d/ ed Bd|eA AB/A/ G>A Bd|
 eA AB/d/ e/f/e/d/ Bd|ed/e/ gB BA A2:|
@@ -428,7 +423,7 @@ K:Eminor
 		theSessionSettingId: 17933
 	},
 	{
-		fileDate: "2026-08-21",
+		fileDate: "2026-08-24",
 		abc: [
 			`X:1
 T:Fisher's
@@ -441,11 +436,12 @@ N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/872#setting14048
 N:Setting entered in thesession by user “ceolachan” on 2011-03-02
 N:*abc-tools: convert to M:4/2*
+N:(Edited after importing)
 K:Dmajor
 |:(3ABc|"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FDFD "G" GBAG "D" FDFD "A" E2 (3ABc|
-"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FGAB cdec d2 d/e/d/c/ d2:|
-|:cd|"A" ecAc efge "D" fdAd fgaf|"A" ecAc efgf edcB A2 A2|
-"D" BGDG BdcB "G" AFDF A2 GA|"D" BdcB "A" AGFE "D"D2 d2 D2:|`
+"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FGAB cdec .d2c2 d2:|
+|:cd|"A" ecAc efge "D" fdAd fgaf|"A" ecAc efgf edcB A2GA|
+"D" BGDG BdcB "G" AFDF A2GA|"D" BdcB "A" AGFE "D"D2d2 D2:|`
 		],
 		theSessionId: 872,
 		theSessionSettingId: 14048
