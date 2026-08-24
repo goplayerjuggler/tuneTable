@@ -424,19 +424,19 @@ K:Eminor
 	},
 	{
 		fileDate: "2026-08-24",
+		groups: "blr",
 		abc: [
 			`X:1
 T:Fisher's
-R:hornpipe
-L:1/8
-M:4/2
-N:"Fisher's Hornpipe" ~ /tunes/11097 Submitted on March 2nd 2011 by davis135
-N:---
+R:reel
+L:1/16
+M:4/24
 N:Imported into *tuneTable* on 2026-08-21,
 N:from https://thesession.org/tunes/872#setting14048
 N:Setting entered in thesession by user “ceolachan” on 2011-03-02
 N:*abc-tools: convert to M:4/2*
 N:(Edited after importing)
+H:I've chosen to put this as a reel for now, as mostly these days I hear it played that way rather than as a hornpipe.
 K:Dmajor
 |:(3ABc|"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FDFD "G" GBAG "D" FDFD "A" E2 (3ABc|
 "D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FGAB cdec .d2c2 d2:|
