@@ -415,30 +415,5 @@ K:Eminor
  e>e ee dc|B>c BB AG|F2 F/G/A GF|E>F GF E2:|`,
 		theSessionId: 6030,
 		theSessionSettingId: 17933
-	},
-	{
-		fileDate: "2026-08-27",
-		groups: "blr",
-		abc: [
-			`X:1
-T:Fisher's hornpipe
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/872#setting14048
-N:Setting entered in thesession by user “ceolachan” on 2011-03-02
-N:*abc-tools: convert to M:4/2*
-N:(Edited after importing)
-H:1. Bien que le nom comporte le mot « hornpipe », je préfère classer cet air comme un « reel » car à mon sens cela convient le mieux à la façon dont c'est habituellement joué de nos jours.
-H:2. Voir aussi quelques [versions façon « country »](ttId=560).
-K:Dmajor
-|:(3ABc|"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FDFD "G" GBAG "D" FDFD "A" E2 (3ABc|
-"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FGAB cdec .d2c2 d2:|
-|:cd|"A" ecAc efge "D" fdAd fgaf|"A" ecAc efgf edcB A2GA|
-"D" BGDG BdcB "G" AFDF A2GA|"D" BdcB "A" AGFE "D"D2d2 D2:|`
-		],
-		theSessionId: 872,
-		theSessionSettingId: 14048
 	}
 ];
