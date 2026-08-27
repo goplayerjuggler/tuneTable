@@ -8,7 +8,7 @@ export default [
 			`
 X:183
 T:Fisher's Hornpipe
-S:Laurie Hart, fiddle; Greg Sandell, piano, Paul Marchand, guitar
+S:Laurie Hart, fiddle; Greg Sandell, piano
 O:Québec
 R:reel
 D:Danse ce soir! Traditional tunes of Québec
@@ -17,7 +17,7 @@ B:Hart & Sandell (2001) Danse ce Soir; #2, p.40
 H:This is a [setting from tunearch](https://tunearch.org/wiki/Fisher's_Hornpipe) that I (Malcolm) tweaked a little. 
 H:I’ve classified this as a reel, not as a hornpipe, despite the name, because I think that’s a better fit with how it’s played.
 H:The original ABC gives the source as André Alain, but for me the source is L. Hart; I don’t have any info on A. Alain.
-H:More info about the album and the tunebook that go with it [here](https://lauriehartfiddle.com/danse-ce-soir-cd); it can also be purchased.
+H:More info about the album and the tunebook that go with it [here](https://lauriehartfiddle.com/danse-ce-soir-cd).
 M:4/4
 L:1/16
 K:F
