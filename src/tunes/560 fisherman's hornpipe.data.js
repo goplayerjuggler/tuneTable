@@ -1,5 +1,5 @@
 export default {
-	groups: "alora",
+	groups: "alora,blr",
 	aka: "Fisherman's Hornpipe",
 	tags: "crooked",
 	parts: "AABB",
@@ -39,8 +39,12 @@ P:A’
 			notes:
 				"Another, different, oldtime setting – a “straight” one (non-“crooked”). I’m not 100% sure about the backing musicians.",
 			year: 1990
+		},
+		{
+			notes:
+				"I added a “straight” setting in a [separate entry](theSessionId=872)."
 		}
 	],
-	theSessionId: 872
+	ttId: 560
 	// theSessionSettingId: 47650
 };

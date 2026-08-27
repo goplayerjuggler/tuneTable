@@ -229,7 +229,6 @@ e2 e>f g>a (3gfe d>bg>e d>B (3GAB|c2 c>e d>BG>A B>AA>G A2 d>c|
 		theSessionSettingId: 15229
 	},
 	{
-		excludeFromDefault: true,
 		groups: "blr",
 		fileDate: "2026-08-21",
 		abc: `X:1
@@ -298,23 +297,23 @@ ea ab ag e>f|ge dB A2 A2:|`,
 		theSessionSettingId: 14365
 	},
 	{
-		excludeFromDefault: true,
+		parts: "AABB",
 		groups: "blr",
-		fileDate: "2026-08-21",
-		abc: `X:1
-T:Newmarket
-R:polka
-L:1/8
+		fileDate: "2026-08-26",
+		abc: `X: 2
+T: Newmarket
+R: polka
 M:4/4
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/331#setting22748
-N:Setting entered in thesession by user “ceolachan” on 2013-11-14
+N:Imported into *tuneTable* on 2026-08-26,
+N:from https://thesession.org/tunes/331#setting13111
+N:Setting entered in thesession by user “fidicen” on 2002-12-20
+L: 1/8
 N:*abc-tools: convert to M:4/4*
-K:Dmajor
-|:A2 Af ed B/c/d|A2 Af ed B2|
-A2 Af ed B/c/d|fa af ed d2:|
-|:f/g/a gf ed B/c/d|Ad de fe e2|
-f/g/a gf ed B/c/d|Ad de fd d2:|`,
+K: Gmaj
+|:D>D DB AG EG|D>D DB AG GE|
+D>D DB AG EG|D2 d>B[1 AG GE:|2 AG GA||
+|:Bd A>B AG EG|Bd A>B AG G>A|
+Bd A>B AG EG|D2 d>B[1 AG G>A:|2 AG G2||`,
 		theSessionId: 331,
 		theSessionSettingId: 22748
 	},
@@ -352,11 +351,6 @@ R:waltz
 L:1/8
 M:3/4
 N:Key signature: G Major Submitted on July 25th 2007 by spindizzy.
-N:https://thesession.org/tunes/7542
-N:X: 1 T: Eagle's Feather, The M: 3/4 L: 1/8 R: waltz K: G Major |:D GA | B2 BA Bd
-N:| B2 BA Bd | E3 B AB | D3 E (3FED | B2 BA Bd | B2 BA Bd | E3 B AB | G3 :| |:A Bd
-N:| e2 ef ed | B2 BA Bd | ef ed Bd | e3 f gf | e2 ef ed | B2 BA Bd | E3 B AB | G3
-N::|
 N:A Slow Air rather than a waltz - we play this with "Eleanor Plunkett" for a slow
 N:set ~ https://thesession.org/tunes/2575
 N:This is a vanilla version - add ornaments to taste.
@@ -423,11 +417,11 @@ K:Eminor
 		theSessionSettingId: 17933
 	},
 	{
-		fileDate: "2026-08-24",
+		fileDate: "2026-08-27",
 		groups: "blr",
 		abc: [
 			`X:1
-T:Fisher's
+T:Fisher's hornpipe
 R:reel
 L:1/16
 M:4/4
@@ -436,7 +430,8 @@ N:from https://thesession.org/tunes/872#setting14048
 N:Setting entered in thesession by user “ceolachan” on 2011-03-02
 N:*abc-tools: convert to M:4/2*
 N:(Edited after importing)
-H:I've chosen to put this as a reel for now, as mostly these days I hear it played that way rather than as a hornpipe.
+H:1. Bien que le nom comporte le mot « hornpipe », je préfère classer cet air comme un « reel » car à mon sens cela convient le mieux à la façon dont c'est habituellement joué de nos jours.
+H:2. Voir aussi quelques [versions façon « country »](ttId=560).
 K:Dmajor
 |:(3ABc|"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FDFD "G" GBAG "D" FDFD "A" E2 (3ABc|
 "D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FGAB cdec .d2c2 d2:|
@@ -445,28 +440,5 @@ K:Dmajor
 		],
 		theSessionId: 872,
 		theSessionSettingId: 14048
-	},
-	{
-		groups: "blr",
-		parts: "AABB",
-		fileDate: "2026-08-21",
-		abc: [
-			`X:1
-T:John Ryan's
-R:polka
-L:1/8
-M:4/4
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/441#setting13305
-N:Setting entered in thesession by user “ceolachan” on 2008-02-20
-N:*abc-tools: convert to M:4/4*
-K:Dmajor
-|:dd B/c/d/B/ AF AF|dd B/c/d/B/ AF ED|
-dd B/c/d/B/ AF Ad/e/|fd ec[1 df d2:|2 df dd/e/||
-|:fd de/f/ g>f ed/e/|fd Ad fd/f/ a>g|
-fd- de/f/ g/a/g/f ed/e/|fd ed/c/[1 d2 d>e:|2 d2 d2||`
-		],
-		theSessionId: 441,
-		theSessionSettingId: 13305
 	}
 ];
