@@ -74,23 +74,23 @@ c>dc cef|gag gec d>cd ecG|A2 [DB] [E2c2]:|`,
 	{
 		groups: "blr,alora",
 		parts: "AABB",
-		fileDate: "2026-08-21",
+		fileDate: "2026-08-28",
 		abc: [
 			`X: 2
 T: The Irish Washerwoman
 R: jig
 M:12/8
 L: 1/8
-N:Setting entered in thesession by user “Davy” on 2003-06-19
+N:Setting entered in thesession by user “Emmanuel Delahaye” on 2010-02-24
 N:*abc-tools: convert to M:12/8*
 K: Gmaj
-|:dc|BAB DGB DGB dcB|cBc EGc EGc edc|
-BAB DGB DGB dcB[1 cBc ed^c dfa g:|2 cBc BGB AFA G||
-|:ef|gfg Bdg Bdg bag|fef Adf Adf agf|
-gbg faf gfe dBG|cBc BGB AFA G:|`
+|:BGG DGG BGB dcB|cAA EAA cAc edc|
+  BGG DGG BGB dcB|cBc Adc BGG G3:|
+|:gdd Bdd gdg bag|fdd Add fdf agf|
+  egg dgg cgg BgB|cBc Adc BGG G3:|`
 		],
 		theSessionId: 92,
-		theSessionSettingId: 12633
+		theSessionSettingId: 12636
 	},
 	{
 		excludeFromDefault: true,
