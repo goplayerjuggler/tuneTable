@@ -9,7 +9,7 @@ D:Les poufs à cordes / La Trotteuse (2013)
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 H:1. De toute évidence, cette valse magnifique nous vient d’[Antonin Chabrier](http://www.violoneux.fr/wiki/Antonin_Chabrier), violonneux de l’Artense.
-H:2. Les accords que j’ai rajoutés ne sont qu’une esquisse harmonique. J'ai mis des “Bb (Gm)” mais ça pourrait très bien être des C7 ou autre chose, genre des accords ouverts; ou rien ! 
+H:2. Les accords que j’ai rajoutés ne sont qu’une esquisse harmonique. J'ai mis des “Bb (Gm)” mais ça pourrait très bien être des C7 ou autre chose, genre des accords ouverts; ou rien ! Dans l'enregistrement c'est plutôt un tapis de son fait au violoncelle, qui évoque pour moi de la musique indienne avec un sitar.
 H:3. J’ai donné quelques indications sommaires sur le phrasé, mais il vaut mieux écouter ça si on peut !
 H: Il y a quelque chose de magique ici…
 M:3/4
