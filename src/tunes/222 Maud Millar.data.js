@@ -40,7 +40,8 @@ Interesting setting and backing chords.`
 			artists: "Seán Maguire, fiddle",
 			notes: `Joe O'Dowds; Skylark; Maud Millar
 He only plays Maud Millar once, in F, sandwiched in between the Skylark. Good stuff!
-Also [here on itma](https://www.itma.ie/playlists/the-felix-dolan-collection/?track=6)`
+Also [here on itma](https://www.itma.ie/playlists/the-felix-dolan-collection/?track=6).
+Interestingly, here he plays it “doubled” (AABB, rather than AB).`
 		},
 		{
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-july-2025/?track=3",
