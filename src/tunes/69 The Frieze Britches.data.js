@@ -15,7 +15,7 @@ FED EFG A2 d cAG|A`,
 			artists:
 				"Tony MacMahon, accordion; Noel Hill, concertina; John Beag Ó Flatharta, guitar",
 			notes:
-				"Cúnla [The frieze britches], jig; Na ceannabháin bhána, slip jig; Cailleach an airgid, jig"
+				"Cúnla [The frieze britches]; [Na ceannabháin bhána](theSessionId=612) [The Fair Cannavans], slip jig; [Cailleach an airgid](theSessionId=351) [The Hag With The Money], jig"
 		}
 	]
 };
