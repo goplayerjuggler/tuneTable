@@ -5,7 +5,7 @@ T:Spel-Görans vals
 R:Waltz
 O:Sweden;Blekinge.
 S:Emelie Waldken, nyckelharpa
-F:https://www.youtube.com/watch?v=HSU86cDzmF4
+F:https://youtu.be/HSU86cDzmF4?t=103
 H:ABC score copied from [folkwiki.se](http://www.folkwiki.se/Musik/2816), and edited slightly.
 M:3/4
 L:1/8
