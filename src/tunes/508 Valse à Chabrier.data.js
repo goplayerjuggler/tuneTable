@@ -15,7 +15,7 @@ H: Il y a quelque chose de magique ici…
 M:3/4
 L:1/4
 K:C mixo
-"C"G~AG|cB~A|Gcd|e-!>!~e/d/e/f/|g.ag|"Bb (Gm)"fd/e/d/e/|fg/f/e/d/|"C"e>dc/A/|
+"C"G~AG|"C (Bb)"cB~A|"C (Bb)"Gcd|"C"e-!>!~e/d/e/f/|"C"g.ag|"Bb (Gm)"fd/e/d/e/|"Bb (Gm)"fg/f/e/d/|"C"e>dc/A/|
 GAG|cB~A|Gcd|e-!>!~e/d/e/f/|g.ag|"Bb (Gm)"fd/e/d/e/|fg/f/e/d/|[1c3:|[2c2.G||
 "C"c>Bc/d/|edc|e>de/f/|g3|Ggf|e/f/g/f/e/f/|"Bb (Gm)"de/f/e/d/|"C"e/d/c/G/e/d/|
 "C"c>Bc/d/|edc|e>de/f/|g3|G~g~f|e/f/g/f/e/f/|"Bb (Gm)"de/f/e/d/|"C"c3||
