@@ -1,6 +1,6 @@
 export default {
 	aka: "The Yellow Tinker",
-	groups: "ALORA",
+	groups: "ALORA,su",
 	abc: `X: 1
 T:The Drunken Tinker
 R:reel

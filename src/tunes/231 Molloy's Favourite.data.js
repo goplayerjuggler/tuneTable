@@ -1,4 +1,5 @@
 export default {
+	groups: "su",
 	abc: `X:1
 T:Molloy's Favourite
 C:Paddy Killoran
@@ -25,6 +26,17 @@ dfaf gbag fgaf gfeg|feec dcBA ^GABc dgfe||`,
 			url: "http://www.juneberry78s.com/sounds/mo33024t01.mp3",
 			notes: `[Sligo Maid's Lament](theSessionId=399) / Malloy's Favorite
 A recording by the composer! From an old ’78. There’s lots of good stuff from [juneberry78s.com](http://www.juneberry78s.com/sounds/ListenToIrishDance.htm).`
+		},
+		{
+			artists:
+				"Frankie Gavin, fiddle; Malachi Bourke, fiddle; Brian Bourke, bodhran",
+			album: "The Master's Return (2023)",
+			notes: "The Sligo Maid's Lament / Molloy's Favourite"
+		},
+		{
+			url: "https://www.youtube.com/watch?v=9cBmHIDlzzE&t=216s",
+			notes: `Lady Ann Montgomery, Maud Millar, Molloy's Favourite
+house session in kyoto, 2014}`
 		}
 	]
 };

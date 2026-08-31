@@ -1,5 +1,5 @@
 export default {
-	groups: "alora",
+	groups: "alora,su",
 	incipit: `X: 3
 T:The Sligo Maid
 R: reel

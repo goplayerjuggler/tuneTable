@@ -4,11 +4,11 @@ export default {
 	incipit: `X: 1
 T: Devils Of Dublin
 R: reel
-N: A close relative of the Merry Blacksmith.
+N: A close relative of the [Merry Blacksmith](theSessionId=72).
 M: 4/4
 L: 1/16
 K: Dmaj
-dcBA BAFB AFBF A~F3|Ad (3ddd Adfd`,
+dcBA BAFB AFBF A~F3|Add/d/d Adfd`,
 	theSessionId: 538,
 	norbeckId: 868,
 	references: [

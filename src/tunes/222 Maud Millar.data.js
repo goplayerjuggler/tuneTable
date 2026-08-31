@@ -8,20 +8,21 @@ N: version of 2025-10-15%2024-08-21 %2024-06-27 %2025-04-11%2025-10-15
 R: reel
 Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-Q:1/4=110
+H:The three "Em" chords at the end of bars 2, 4, and 8 could be "D" or "D/F#" instead. And maybe the "C/E" at the start of bars 2 & 4 could be "Am"? (todo)
 M: 4/4
 L: 1/16
 K: G
 P:I
-gf|"C/E"edBA "D/F#"GEDE "G"G2"_v1"BG  "_v2"d2Bd|"C/E" "_v3,v4"e2dB "_v5,v6"A2GA "D(F#)"Beed efgf|
-"C/E"edBA "D/F#)"GEDE   "G" "_v7"G2BG dGBd|"Em"e2dB A2GA "D""_v8"Beed  "_v9,v10,v11"e2ge||
+gf|"C/E"edBA "D/F#""_v0"GEDE "G"G2"_v1"BG  "_v2"d2Bd|"C/E" "_v3,v4"e2dB "_v5,v6"A2GA "Em""_v7"Beed efgf|
+"C/E"edBA "D/F#)"GEDE   "G" "_v8"G2BG dGBd|"C/E"e2dB A2GA "Em""_v9"Beed  "_v10,v11"e2ge||
 P:II
-"G"dega bgg2   "D"agef "G"g3e|"G"dega bgg2 "C"aged eage|
-"G"dega bgg2   "D"agef "G"g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
+"G"dega bg~g2   "D"agef "G"~g3e|"G"dega bg~g2 "C"aged eage|
+"G"dega bg~g2   "D"agef "G"~g3a|"G"bgaf gfed !coda!"Em"Beed ef!D.C.!||
 P:Coda
-!coda!Beed e2gf| "C(E)"edBA "D(F)"GEDE "G"G4-!fermata!G2 |]
+!coda!Beed e2gf| "C/E"edBA "D/F#"GEDE "G"G4-!fermata!G2 |]
 P:Variations/embellishments
-"_v1"Be||"_v2"dG||"_v3"(3ege||"_v4"eBdB ABGA||"_v5"ABGA||"_v6"A/B/AGA||"_v7"(3GGG||"_v8"BeeB||||"_v9"efge||"_v10"eage||"_v11"e2(3gfe||`,
+"_v0"GBDE||"_v1"Be||"_v2"dG||"_v3"e/g/e||"_v4"eBdB ABGA||"_v5"ABGA||
+"_v6"A/B/AGA||"_v7"Bged||"_v8"G/G/G||"_v9"BeeB||||"_v10"efgf||"_v11"eage||`,
 	references: [
 		{
 			url: "https://frankiegavin.bandcamp.com/track/maud-millar",

@@ -51,7 +51,6 @@ P:A’
 		ttId: 560
 		// theSessionSettingId: 47650
 	},
-	,
 	{
 		groups: "alora,blr",
 		abc: [
