@@ -1,5 +1,6 @@
 export default {
 	parts: "ABCD",
+	groups: "su",
 	abc: `X:1
 T:The Spike Island Lasses
 R:reel
@@ -18,5 +19,11 @@ eaag efge dfed cAG2|AddA d3c Adde fded||
 =cAGE A3d B3G A2dB|=cAGB AGFG Add^c d3e||
 f2ad faad faaf geeg|faad faaf g3f dcAc|
 defg a3b agfa g3e|f3d edcA dcde fded||`,
-	ttId: 574
+	theSessionId: 737,
+	theSessionSettingId: 56502,
+	references: [
+		{
+			notes: `See also a [shorter version](ttId=574) I really like, that i got from a fine album by Doireann Glackin and Sarah Flynn.`
+		}
+	]
 };
