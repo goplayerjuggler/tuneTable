@@ -5,7 +5,7 @@ export default {
 M: 4/4
 L: 1/16
 K: Dmaj
-A,3B, DEFA BFAF EFAc|d2`,
+A,DD/D/D A,DFA BFAF EFGA|dB{d}BA BdAF`,
 	references: [
 		{
 			artists: "Kathleen Harrington, fiddle; Moya Acheson, piano",
@@ -15,6 +15,6 @@ Mrs Kathleen Harrington née Gardiner (1897-1984)`
 		}
 	],
 	theSessionId: 234,
-	groups: "alora",
+	groups: "alora,blr",
 	parts: "AABB"
 };

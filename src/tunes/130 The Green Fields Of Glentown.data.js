@@ -1,4 +1,5 @@
 export default {
+	parts: "AABBCC",
 	abc: `X:1
 T:The Green Fields Of Glentown
 C:Tommy Peoples

@@ -1,5 +1,5 @@
 export default {
-	groups: "su",
+	groups: "su,blr",
 	parts: "AB",
 	abc: `X:1
 T:Sporting Paddy
