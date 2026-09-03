@@ -8,8 +8,6 @@ R:reel
 Z:Nigel Gatherer 
 L:1/16
 M:4/4
-N:I love this version I heard on the radio once:
-N:---
 N:Imported into *tuneTable* on 2026-03-23,
 N:from https://thesession.org/tunes/430#setting13294
 N:Setting entered in thesession by user “Nigel Gatherer” on 2007-04-03

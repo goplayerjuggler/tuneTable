@@ -34,6 +34,12 @@ A recording by the composer! From an old ’78. There’s lots of good stuff fro
 			notes: "The Sligo Maid's Lament / Molloy's Favourite"
 		},
 		{
+			url: "https://comhaltas.ie/comhaltaslive/a-group-of-8-fiddle-players/",
+			artists:
+				"Philip Doddy, Geraldine Seery, Adrienne Lee, Caoimhe Kearns, Fiona Doherty, Ava Glancy, Mary Kate Nolan and Michael Hurley: fiddles;  Fionnuala Kearns, piano",
+			notes: `The Sligo Maid / Molloy's Favourite (2023)`
+		},
+		{
 			url: "https://www.youtube.com/watch?v=9cBmHIDlzzE&t=216s",
 			notes: `Lady Ann Montgomery, Maud Millar, Molloy's Favourite
 house session in kyoto, 2014}`
