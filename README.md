@@ -188,5 +188,12 @@ localStorage.setItem('theSessionImportConfig', JSON.stringify({
 
 ```
 
+## Sort by most recently updated, in the default list
+(I haven't yet set up the UI for this.) I use a little JS in Dev tools:
+```JavaScript
+tunesData.sort((a, b) => b.fileDate.localeCompare(a.fileDate));
+```
+Followed by rerendering by pushing a "badge filter" twice.
+
 ### Contributing
 Issues and pull requests are welcome.
