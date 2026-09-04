@@ -11,7 +11,7 @@ P: ABC
 M: 4/4
 L: 1/16
 K: Ddor
-d|cAGA ~=F3d cAGc AddB|cAGE F2 (3efg fd`,
+d|cAGA ~=F3d cAGc AddB|cAGE F2(3efg fd`,
 	theSessionId: 1335,
 	norbeckId: 93,
 	references: [
