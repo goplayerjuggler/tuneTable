@@ -13,7 +13,7 @@ N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Dmajor
 =cAGE ADD2 FDAD FDD2|=cAGc AGFG Adde fded|
 =cAGE ADD2 FDAD FDD2|=cAGc AGFG Add^c d3e||
-f3d e3c dfed cA A2|f3d edcB Addc d2 (3Bcd|
+f3d e3c dfed cAA2|f3d edcB Addc d2 (3Bcd|
 eaag efge dfed cAG2|AddA d3c Adde fded||
 =cAGE A3d B3G A2dB|=cAGB AGFG Adde fded|
 =cAGE A3d B3G A2dB|=cAGB AGFG Add^c d3e||

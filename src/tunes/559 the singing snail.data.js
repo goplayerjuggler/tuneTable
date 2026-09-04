@@ -21,7 +21,7 @@ M: 3/4
 L: 1/8
 K: D
 (3ABc|:!segno!"D"d<F A>d F>A | "Em"G<E B>G E>D |"A"C<E G>E C>E | "D"D>F B>F (3ABc|
-"D"d<F A>d F>A | "em"G<E B>G E>D |"A"C<E G>E C>E | "D"(3DED C>E D2:|
+"D"d<F A>d F>A | "Em"G<E B>G E>D |"A"C<E G>E C>E | "D"(3DED C>E D2:|
 |:"D"F=F ^FG AF|"G".G2 .B2 B2 | "A"AB cd ef | "D"(3gfe fd Bd | 
   "D"A<D FG AF |"G".G2 .B2 B2 | "A"AB cd ec| [1d6 :| [2d4 (3ABc !D.S.!|]
 `
