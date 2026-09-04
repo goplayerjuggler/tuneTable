@@ -1,5 +1,7 @@
 export default {
-	groups: "alora",
+	aka: "The Ballydesmond no. 3",
+	parts: "AABB",
+	groups: "alora,blr",
 	abc: `X: 1
 T:The Ballydesmond
 R: polka
@@ -10,5 +12,6 @@ K: Ador
 "Am".ea g>e "G".dB GA/B/ |"C".ce "Em".dB "Am"A2A2:|
 "Am".ea ag/e/ "G".dg g>d |"Am".ea ab "Em"(ga/g/) .ed|
 "Am".ea g>e "G".dB GA/B/ |"Am".ce "Em"dB "Am"A2A2:|`,
-	theSessionId: 239
+	theSessionId: 239,
+	crossReferences: [{ theSessionId: 298 }]
 };

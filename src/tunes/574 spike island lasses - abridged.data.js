@@ -12,7 +12,6 @@ H:This is clearly a close relative of the [(longer) reel by the same name](theSe
 H:In my mind I hear this one in D, but after checking, it seems Glackin and Flynn recorded it in the unusual key of A flat!
 H:For me, the difference is nothing to do with the unusual key it's played in.
 Z:abc-transcription Malcolm Schonfield
-Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 M:4/4
 L:1/16
 K:Ab
