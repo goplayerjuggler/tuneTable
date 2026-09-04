@@ -139,28 +139,6 @@ GBd g3 agf g2e|fed edB[1 cAF G2D:|2 cAF G2d||`,
 		groups: "blr",
 		fileDate: "2026-08-21",
 		abc: `X:1
-T:The Swallow's Tail
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/105#setting105
-N:Setting entered in thesession by user “Jeremy” on 2001-05-25
-N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(Edited after importing: transposed to E)
-K:Edorian
-|:BEGE BEGE GABc dBAF|D2FD ADFD GABc d2cd|
-BE (3GFE BE (3GFE GABc d2cd|ecdB AFDF EGFD E2dc:|
-|:Beed efed BABc dBAF|(3DCD FD ADFD GABc d2cd|
-Beed efed BABc d2cd|ecdB AFDF EGFD E2dc:|`,
-		theSessionId: 105,
-		theSessionSettingId: 105,
-		parts: "AABB"
-	},
-	{
-		groups: "blr",
-		fileDate: "2026-08-21",
-		abc: `X:1
 T:The Morning Star
 R:reel
 L:1/16
