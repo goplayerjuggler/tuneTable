@@ -11,7 +11,7 @@ M: 4/4
 L: 1/8
 K: Ador
 |:"Am"EA AB cd e2   |"G"G>F GAGE ED|
-  "Am"EA AB B/c/d ef|"G"g/f/e"Em" dB "Am"A2 A2:|
+  "Am"EA AB B/c/d ef|"G"g/f/e "Em"dB "Am"A2 A2:|
 |:"Am"a>g ab ag ef|"G"g>f ga ge d2|
 "Am"ea ab ag ef|"G"ge "E7"dB "Am"A2 A2:|`,
 	theSessionId: 238,
