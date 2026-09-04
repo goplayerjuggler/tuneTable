@@ -8,10 +8,10 @@ X: 1
 T: The Ballydesmond
 O:Ireland; Sliabh Luachra.
 S:Lucy Farr, fiddle; Denis Murphy, fiddle
-D:The Star Above The Garter
+D:The Star Above The Garter (1969)
 F:https://www.youtube.com/watch?v=a2ykXumZ5ks
 R: polka
-H:0. I highly recommend listening to the recording which has amazing swing/drive, and lots of embellishments and variations. It's a recording of the three “Ballydesmond polkas”.
+H:0. I highly recommend listening to the recording which has amazing swing/drive, and lots of embellishments and variations. It's a recording of the three “Ballydesmond polkas” as a set.
 H:1. I believe the C’s here are somewhere between C natural and C sharp; and aren’t all at exactly the same pitch. Which makes it very interesting and a good listen, IMO. Gives it a sort of mixo feel. Inndeed, this tune is often written in D mixolydian.
 H:2. Rather than playing each part (= four bars of 4/4) twice the same way, they vary it each time. It’s not simplly an AABB, or AABB’ where B’ just changes the last two bars. It’s more like AA’BB’.
 Z:abc-transcription Malcolm Schonfield

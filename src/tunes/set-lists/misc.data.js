@@ -8,6 +8,21 @@ export default {
 			dateModified: "2026-04-29T00:00:00.000",
 			sets: [
 				{
+					name: "Ballydesmond polkas",
+					tunes: [
+						{
+							theSessionId: 298,
+							x: 1
+						},
+						{
+							theSessionId: 238
+						},
+						{
+							theSessionId: 239
+						}
+					]
+				},
+				{
 					name: "Polkas d’après Jason O’Rourke",
 					tunes: [
 						{
@@ -198,6 +213,41 @@ export default {
 						}
 					],
 					collapsed: true
+				}
+			]
+		},
+		{
+			id: "1788507233702-7vi3t",
+			name: "Bois le Roi sets",
+			groups: "blr",
+			dateCreated: "2026-09-04T07:33:53.702Z",
+			dateModified: "2026-09-04T07:35:29.775Z",
+			sets: [
+				{
+					name: "Ballydesmond polkas",
+					tunes: [
+						{
+							theSessionId: 298,
+							x: 1
+						},
+						{
+							theSessionId: 238
+						},
+						{
+							theSessionId: 239
+						}
+					]
+				},
+				{
+					name: "road to lis..",
+					tunes: [
+						{
+							theSessionId: 105
+						},
+						{
+							theSessionId: 111
+						}
+					]
 				}
 			]
 		}
