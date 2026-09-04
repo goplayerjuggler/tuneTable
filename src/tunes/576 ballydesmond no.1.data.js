@@ -32,7 +32,7 @@ P:a variation
 		`
 X: 1
 T: The Ballydesmond
-H:same as the previous setting, but with chords (just a sketch, jotted down quickly; there may be mistakes). The "Am (G)" could be optionally be "Em" or "Am9", or something else entirely! And for the "Am", Em", you could leave out the third - not sure how that's conventionally written… Same for the "D". 
+H:Same as the previous setting, but with chords (just a sketch, jotted down quickly; there may be mistakes). The "Am (G)" (meaning: A minor or optionally G major) could optionally be something like "E5" (E without the "G" third), "Asus2", "Asus4", or something else entirely! And for the "Am" and Em", you could leave out the third, which is apparently written "A5" and "E5". Same for the "G" and "D".
 Z:abc-transcription Malcolm Schonfield
 M: 4/4
 L: 1/8

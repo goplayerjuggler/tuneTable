@@ -4,6 +4,7 @@ export default {
 	aka: "The Ballydesmond no. 2",
 	abc: `X: 2
 T: The Ballydesmond
+O:Ireland; Sliabh Luachra.
 R: polka
 H:Imported into *tuneTable* on 2026-09-04, from https://thesession.org/tunes/238#setting12940. Setting entered in thesession by user “rune stone” in 2006. (Edited after importing.)
 M: 4/4

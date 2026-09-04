@@ -4,6 +4,7 @@ export default {
 	groups: "alora,blr",
 	abc: `X: 1
 T:The Ballydesmond
+O:Ireland; Sliabh Luachra.
 R: polka
 M: 4/4
 L: 1/8
