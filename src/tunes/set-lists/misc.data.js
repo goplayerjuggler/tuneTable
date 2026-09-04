@@ -8,7 +8,7 @@ export default {
 			dateModified: "2026-04-29T00:00:00.000",
 			sets: [
 				{
-					name: "Ballydesmond polkas",
+					name: "Ballydesmond polkas (3)",
 					tunes: [
 						{
 							theSessionId: 298,
@@ -19,6 +19,18 @@ export default {
 						},
 						{
 							theSessionId: 239
+						}
+					]
+				},
+				{
+					name: "road to Lisdoonvarna + 2",
+					tunes: [
+						{ theSessionId: 250 },
+						{
+							theSessionId: 106
+						},
+						{
+							theSessionId: 111
 						}
 					]
 				},
@@ -224,7 +236,7 @@ export default {
 			dateModified: "2026-09-04T07:35:29.775Z",
 			sets: [
 				{
-					name: "Ballydesmond polkas",
+					name: "Ballydesmond polkas (3)",
 					tunes: [
 						{
 							theSessionId: 298,
@@ -239,7 +251,7 @@ export default {
 					]
 				},
 				{
-					name: "road to lis..",
+					name: "road to Lisdoonvarna + 2",
 					tunes: [
 						{ theSessionId: 250 },
 						{
