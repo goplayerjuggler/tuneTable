@@ -2,7 +2,7 @@ export default {
 	parts: "AB",
 	groups: "su",
 	abc: `X:1
-T:Spike Island Lasses
+T:The Spike Island Lasses
 D:The Housekeepers (2019)
 S:Doireann Glackin, fiddle; Sarah Flynn, concertina
 F:https://thehousekeepers.bandcamp.com/track/spike-island-lasses-pride-of-rathmore-reels
