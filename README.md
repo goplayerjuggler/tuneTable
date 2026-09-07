@@ -168,7 +168,7 @@ localStorage.setItem('theSessionImportConfig', JSON.stringify({
 			preferredUserIds: [
 				[40345, "GoPlayerJuggler"],
 				[7899, "Emmanuel Delahaye"],
-				[11705, "ceolachan"],
+				[3080, "gian marco"],
 				[3150, "slainte"],
 				[5628, "hnorbeck"],
 				[13094, "birlibirdie"],
@@ -179,7 +179,8 @@ localStorage.setItem('theSessionImportConfig', JSON.stringify({
 				[60897, "Fernando Durbán Galnares"],
 				[119445, "piperDave"],
 				[4763, "Dr. Dow"],
-				[8648, "erik-fiddler"]
+				[8648, "erik-fiddler"],
+				[11705, "ceolachan"]
 			]
 		},
 		"withChords",
