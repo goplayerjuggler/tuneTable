@@ -261,6 +261,97 @@ export default {
 							theSessionId: 111
 						}
 					]
+				},
+				{
+					name: "morning star / morning dew",
+					tunes: [
+						{
+							theSessionId: 69
+						},
+						{
+							theSessionId: 828
+						}
+					]
+				},
+				{
+					name: "Connie in the pool /Tralee",
+					tunes: [
+						{
+							theSessionId: 9959
+						},
+						{
+							theSessionId: 1113
+						}
+					]
+				},
+				{
+					name: "King of the fairies / rights of man",
+					tunes: [
+						{
+							theSessionId: 475
+						},
+						{
+							theSessionId: 83
+						}
+					]
+				},
+				{
+					name: "Lisheen / Washerwoman / Kesh",
+					tunes: [
+						{
+							theSessionId: 1600
+						},
+						{
+							theSessionId: 92
+						},
+						{
+							theSessionId: 55
+						}
+					]
+				},
+				{
+					name: "Morrison's / Kesh",
+					tunes: [
+						{
+							theSessionId: 71
+						},
+						{
+							theSessionId: 55
+						}
+					]
+				},
+				{
+					name: "Sporting Paddy/Maid Of Hollywell/Farrell O'Gara",
+					tunes: [
+						{
+							theSessionId: 430
+						},
+						{
+							theSessionId: 2167
+						},
+						{
+							theSessionId: 234
+						}
+					]
+				},
+				{
+					name: "Erin Go Bragh / Tobin's",
+					tunes: [
+						{
+							theSessionId: 8775
+						},
+						{
+							theSessionId: 308
+						}
+					]
+				},
+				{
+					name: "Jessica's/ Magic Slipper / the 150 boots",
+					tunes: [
+						{ theSessionId: 1532 },
+						{ theSessionId: 604 },
+						{ theSessionId: 18105 }
+					]
 				}
 			]
 		}

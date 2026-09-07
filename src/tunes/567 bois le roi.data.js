@@ -1,26 +1,5 @@
 export default [
 	{
-		parts: "AABB",
-		groups: "blr",
-		fileDate: "2026-08-22",
-		abc: `X:1
-T:Tobin's Favourite
-R:jig
-L:1/8
-M:12/8
-N:Imported into *tuneTable* on 2026-08-21,
-N:from https://thesession.org/tunes/308#setting24194
-N:Setting entered in thesession by user “slainte” on 2014-05-24
-N:*abc-tools: convert to M:12/8*
-K: Dmaj
-|:B|A2d dcd e2d cde | fef gfg e2d cdB |
-    A2d dcd e2d cde | fef gec edc d2 :|
-|:g | f2a agf efg efg | fef gfg e2d cdB |
-A2d dcd e2d cde | fef gec edc d2:|`,
-		theSessionId: 308,
-		theSessionSettingId: 24194
-	},
-	{
 		excludeFromDefault: true,
 		groups: "blr",
 		fileDate: "2026-08-21",
