@@ -7,6 +7,7 @@ L: 1/16
 Z: Malcolm Schonfield
 D: Mícheál Ó Raghallaigh • Inside Out
 F: https://music.youtube.com/watch?v=-5TqQuQyPS8&t=157
+H: NB there's another different reel by the same name, in E minor.
 K: D mixo
 [P:A] 
 DDFD  ADFD  ABc-[ce]- cAGE | DDFD  A2FA  dfed ^cAGE |

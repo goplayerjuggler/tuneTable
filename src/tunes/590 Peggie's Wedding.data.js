@@ -4,19 +4,21 @@ export default [
 T: Peggie's Wedding
 S:Michael McGoldrick, uileann pipes, John Carty, fiddle
 D:At Our Leisure
-R: hornpipe
+R: reel
 Z:abc-transcription Malcolm Schonfield
-N: A laid-back, hornpipe-ey abridged version of [Over The Moor To Maggie](theSessionid=115)
-H:I jotted down the dots just now from memory; hope to check it sone other time.
+N: A laid-back, slowish reel that's a close relative of [Over The Moor To Maggie](theSessionid=115)
+H:I jotted down the dots more or less from memory, after giving it a couple of listens.
 M: 4/2
 L: 1/8
 K: Gmaj
-|:BA|GFGA BABd efge dBAG|EAAG ABAG EAAc BAGD|
-GFGA BABd efge dBAG|DGGF GBAG DGGF G2 :|
-|:ga|babg agaf gfge dBG2|eaag abag eaag a2ga|
-babg agaf gfge dBG2|dggf g2ag egfa g2:|
+|:BA|GFGA BABd efed BAGA|BAAB A2AG EAAc BAGD|
+     GFGA BABd efge BAGA|DGGA G2ED DGGA G2 :|
+|:ga|babg agaf gfge dBG2|eaab a2gaa eaab a2ga|
+babg agaf gfge dBG2|dgga g2ed egga g2:|gf
+|:efed Bdde gfge dBGB|EAAB A2GA EAAB A2BD|
+     efed Bdde gfge dBGB|DGGA G2ED EGGA [1G2Bd :| [2G2!!D.C.!|]
 `,
-		parts: "AABB",
+		parts: "AABBCC",
 		ttId: 590
 	}
 ];
