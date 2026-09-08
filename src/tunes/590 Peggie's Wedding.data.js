@@ -6,7 +6,7 @@ S:Michael McGoldrick, uileann pipes, John Carty, fiddle
 D:At Our Leisure
 R: reel
 Z:abc-transcription Malcolm Schonfield
-N: A laid-back, slowish reel that's a close relative of [Over The Moor To Maggie](theSessionid=115)
+N: A laid-back, slowish reel that's a close relative of [Over The Moor To Maggie](theSessionId=115)
 H:I jotted down the dots more or less from memory, after giving it a couple of listens.
 M: 4/2
 L: 1/8
