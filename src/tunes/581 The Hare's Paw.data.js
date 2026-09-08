@@ -6,6 +6,7 @@ X: 1
 T: The Hare's Paw
 S:Gilles Raymond, flute
 R: reel
+Z:abc-transcription Malcolm Schonfield
 N:Adapted from a setting entered in thesession by user “Bannerman” in 2002 or 2003.
 M: 4/4
 L: 1/16
