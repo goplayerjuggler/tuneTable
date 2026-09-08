@@ -361,11 +361,11 @@ N:Setting entered in thesession by user “JACKB” on 2015-04-07
 N:*abc-tools: convert to M:4/4 & L:1/16*
 N:(todo: not yet revised)
 K:Gmajor
-|:G2 BD GBdB c2 ag fgdc|BG3 BcdB cBAG FDcA|
-G2 BD GBdB c2 ag fgdc|BG3 BcdB[1 cAFA G2 BA:|2 cAFA G2 Bc||
-|:dgfa gdBG FGAB c2 Bc|dffg a3g fdAd BdAd|
-g2 fa gdBG FGAB c2 Bc|dg3 defd[1 cAFA G2 Bc:|2 cAFA G2 DB||`,
-		fileDate: "2026-05-25",
+|:G2BD GBdB c2ag fgdc|BG3 BcdB cBAG FDcA|
+G2BD GBdB c2ag fgdc|BG3 BcdB[1 cAFA G2BA:|2 cAFA G2Bc||
+|:dgfa gdBG FGAB c2Bc|dffg a3g fdAd BdAd|
+g2fa gdBG FGAB c2Bc|dg3 defd[1 cAFA G2Bc:|2 cAFA G2DB||`,
+		fileDate: "2026-09-09",
 		theSessionId: 150,
 		theSessionSettingId: 26266
 	},
