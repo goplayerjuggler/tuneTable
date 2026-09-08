@@ -2,7 +2,7 @@ export default [
 	{
 		abc: `X: 1
 T: Peggie's Wedding
-S:Michael McGoldrick, uillean pipes, John Carty, fiddle
+S:Michael McGoldrick, uileann pipes, John Carty, fiddle
 D:At Our Leisure
 R: hornpipe
 Z:abc-transcription Malcolm Schonfield
