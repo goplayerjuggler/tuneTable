@@ -569,9 +569,9 @@ function updateFooter() {
 		//+ ` &bull; Loaded ${relativeTime(currentListState.loadedAt)}`
 		`<button id="footer-list-link">tune lists</button>
 		<br/><button id="footer-about-link" title="About “Tune table”" type="button"
-        aria-label="About “Tune table”">
-        about “Tune table”
-      </button>
+		aria-label="About “Tune table”">
+		about “Tune table”
+	  </button>
 	  
 		
 	  `;
@@ -930,11 +930,47 @@ function setUpCrossRefLink(label, target) {
 	}
 }
 
+// Matches [label](ttId=…) / [label](theSessionId=…) patterns embedded in reference notes.
+const CROSS_REF_LINK_RE = /\[([^\]]+)\]\(((?:ttId|theSessionId)=[^)]+)\)/g;
+
+// Push a _resolvedCrossRefs entry onto `target`, pointing back at `source`'s reference
+// at `refIndex`, unless one for the same (source, refIndex) pair is already present —
+// this can happen when an explicit crossReferences entry and an auto-detected note
+// link both describe the same pairing during the migration to note-embedded links.
+function addResolvedCrossRef(target, source, refIndex, ref, extra = {}) {
+	const alreadyPresent = target._resolvedCrossRefs.some(
+		(cr) => cr.tuneId === source._crId && cr.refIndex === refIndex
+	);
+	if (alreadyPresent) return;
+
+	target._resolvedCrossRefs.push({
+		tuneName: source.name,
+		tuneId: source._crId,
+		refIndex,
+		artistNames: extractArtistNames(ref.artists),
+		...extra
+	});
+}
+
 /**
  * Annotate tunes with cross-reference data. Called once when a full data set is loaded.
+ *
+ * Cross-refs come from two sources:
+ *   1. Explicit tune.crossReferences entries — still supported for the (now rare) case
+ *      where the reverse side needs its own custom note beyond what's already in the
+ *      target reference's text.
+ *   2. [label](ttId=…) / [label](theSessionId=…) links embedded directly in a
+ *      reference's notes (e.g. a track listing that names another tune) — this is now
+ *      the normal way to record a cross-reference, and needs no entry on the linked
+ *      tune's side at all.
+ * Both paths resolve refIndex against the same referencesFromAbc.concat(references)
+ * ordering, so indices mean the same thing regardless of which path produced them.
+ *
  * Sets on each tune:
  *   _crId              — stable integer ID (tunesData index) for generating anchor targets
- *   _isCrTarget        — true if this tune is the target of any cross-reference link
+ *   _isCrTarget         — true if this tune's row is the target of any cross-reference link
+ *                         (either a reverse "See entry under X" pointer, or a direct inline
+ *                         link from another tune's note text)
  *   _resolvedCrossRefs — array of { tuneName, tuneId, refIndex, artistNames, notes } for rendering
  * Sets on each referenced reference object:
  *   _crId              — string "tuneId-refIndex" for generating anchor IDs on reference items
@@ -952,58 +988,48 @@ function calculateCrossRefs(tunes) {
 	});
 
 	tunes.forEach((tune) => {
-		// Resolve explicit crossReferences entries
+		// 1. Resolve explicit crossReferences entries
 		(tune.crossReferences ?? []).forEach((cr) => {
-			// if (cr.theSessionId === 474) {
-			// 	console.log("debug");
-			// }
 			const target = resolveTuneById(cr);
 			if (!target) return;
 
 			const refIndex = cr.index ?? 0;
-			const ref = //target.references?.[refIndex];
-				(target.referencesFromAbc ?? []).concat(target.references ?? [])?.[
-					refIndex
-				];
+			const ref = (target.referencesFromAbc ?? []).concat(
+				target.references ?? []
+			)?.[refIndex];
 			if (!ref) return;
 
 			target._isCrTarget = true;
 			ref._crId = `${target._crId}-${refIndex}`;
 
-			tune._resolvedCrossRefs.push({
-				...{
-					tuneName: target.name,
-					tuneId: target._crId,
-					refIndex,
-					artistNames: extractArtistNames(ref.artists)
-				},
-				...(cr.notes ? { notes: cr.notes } : {})
-			});
+			addResolvedCrossRef(
+				tune,
+				target,
+				refIndex,
+				ref,
+				cr.notes ? { notes: cr.notes } : {}
+			);
 		});
 
-		/*	
-		if (tune.name === "Le chapeau de paille") {
-			console.log("Le chapeau de paille");
-		}
-		if (tune.ttId === 512) {
-			console.log("debug");
-		}
-		*/
+		// 2. Auto-detect cross-ref links embedded in this tune's own reference notes.
+		// Each match both marks the linked tune as directly reachable (for the inline
+		// link itself) and adds the reverse pointer to this tune's row automatically.
+		(tune.referencesFromAbc ?? [])
+			.concat(tune.references ?? [])
+			.forEach((ref, refIndex) => {
+				if (!ref.notes) return;
 
-		// Mark tunes referenced by [label](id) patterns in notes as anchor targets
-		(tune.references ?? [])
-			.concat(tune.referencesFromAbc ?? [])
-			.forEach((ref) => {
-				const note = ref.notes;
-				if (!note) return;
-
-				const RE = /\[([^\]]+)\]\(((?:ttId|theSessionId)=[^)]+)\)/g;
+				CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per note
 				let m;
-				while ((m = RE.exec(note)) !== null) {
-					const t = resolveTuneById(parseTuneIdStr(m[2]));
-					if (t) {
-						t._isCrTarget = true;
-					}
+				while ((m = CROSS_REF_LINK_RE.exec(ref.notes)) !== null) {
+					const target = resolveTuneById(parseTuneIdStr(m[2]));
+					if (!target) continue;
+
+					target._isCrTarget = true; // linked tune: direct inline-link target
+					tune._isCrTarget = true; // this tune: target of the reverse pointer below
+					ref._crId = `${tune._crId}-${refIndex}`;
+
+					addResolvedCrossRef(target, tune, refIndex, ref);
 				}
 			});
 	});
