@@ -31,10 +31,10 @@ dB|AD~D2 A3B ADFA BE~E2|ADFA dfec dBAF AD~D2|
 		{
 			artists: "Tony MacMahon, accordion; Noel Hill, concertina",
 			url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
-			notes: `Sally Gardens/The foxhunters/The humours of Tulla/The flogging reel/Lucy Campbell/Toss the feathers/Trip to Durrow (1993)
+			notes: `[Sally Gardens](theSessionId=98) / [The foxhunters](theSessionId=511) / [The humours of Tulla](theSessionId=141) / [The flogging reel](theSessionId=195) / Lucy Campbell / [Toss the feathers](theSessionId=113) / Lucy Campbell / [Trip to Durrow](theSessionId=891) (1993)
 I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
 Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)
-Just after Toss the feathers they come back to Lucy Campbell, playing it twice before moving on.`
+Just after Toss the feathers they come back to Lucy Campbell, playing it twice before moving on. “Let's go back to Lucy!”`
 		},
 		{
 			notes: `Chords (TBC):

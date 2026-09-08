@@ -14,5 +14,13 @@ K:Gmajor
 	contourShift: 0,
 	parts: "AB",
 	theSessionId: 141,
-	theSessionSettingId: 530
+	theSessionSettingId: 530,,
+	crossReferences: [
+		{
+			//McMahon & Hill; Lucy Campbell
+			theSessionId: 1552,
+			notes: `Here they start with the B part and then repeat it a few times - I haven’t counted - and then move on to the Flogging reel. That gives: B AB AB .. AB
+`
+		}
+	]
 };
