@@ -46,8 +46,7 @@ F3e fdcA F3e fdcA|d~g3 b~g3 d~g3 b~g3 |
 	],
 	references: [
 		{
-			notes: `1. I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic.  Using the key signature and dots given here, it can be taken as F lydian, or else G Mixolydian. At the moment I’m going with the latter option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.
-2. `
+			notes: `1. I tagged this as “ambiguous tonic”, as it’s not completely clear what to take as the tonic.  Using the key signature and dots given here, it can be taken as F lydian, or else G Mixolydian. At the moment I’m going with the latter option. This is a non-trivial question that changes how the sorting algorithm here works on this tune.`
 		}
 	],
 	theSessionId: 17551
