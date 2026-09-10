@@ -20,9 +20,10 @@ faaf b2af defd e2de|fBBA BcdB AFEF D3:|`,
 	references: [
 		{
 			artists: "Paddy Keenan, uilleann pipes",
-			url: "https://open.spotify.com/track/6RyZ6G20xL8xOa8JAsFcNK",
+			url: "https://youtu.be/yzYKPnEvYJE",
 			album: "Poirt an Phíobaire (1983)",
-			notes: "The Maid Behind the Bar / O'Rourke's / Eilish Brogan"
+			notes:
+				"The Maid Behind the Bar / O'Rourke's / [Eilish Brogan](theSessionId=576)"
 		},
 		{
 			artists: "Antóin Mac Gabhann, fiddle; Paddy Ryan, fiddle",

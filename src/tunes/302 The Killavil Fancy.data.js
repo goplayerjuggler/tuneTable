@@ -34,11 +34,5 @@ G (C) G (D) | G (C) G - | G (C) G (D) | C - G C ||
 \`\`\`
 `
 		}
-	],
-	crossReferences: [
-		{
-			theSessionId: 64,
-			index: 0 //maid behind the bar, Paddy Keenan
-		}
 	]
 };
