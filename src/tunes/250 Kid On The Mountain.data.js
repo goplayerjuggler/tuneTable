@@ -36,6 +36,12 @@ E3 FEF G2F E3 BcA BGD|E3 FEF G2A`,*/
 	parts: "AABBCCDDEEFF",
 	references: [
 		{
+			artists: "Tommy Peoples, fiddle; Paul Brady, guitar",
+			url: "https://youtu.be/XhmGhbbQfJM",
+			album: "The High Part of the Road (1976)",
+			notes: "The Kid On The Mountain / O'Farrell's Welcome to Limerick"
+		},
+		{
 			artists: "Michael Gorman",
 			url: "https://music.youtube.com/watch?v=Ftm1147osmo"
 		},
