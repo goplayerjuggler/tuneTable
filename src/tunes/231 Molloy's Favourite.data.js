@@ -1,5 +1,5 @@
 export default {
-	groups: "su",
+	groups: "su,alora",
 	abc: `X:1
 T:Molloy's Favourite
 C:Paddy Killoran
