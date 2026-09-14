@@ -1,4 +1,5 @@
 export default {
+	groups: "alora",
 	parts: "AABBCC",
 	abc: `X: 1
 T: Over The Moor To Maggie
@@ -8,7 +9,7 @@ N:from https://thesession.org/tunes/115#setting115
 N:Setting entered in thesession by user "Jeremy" in 2001 (?)
 N:*abc-tools: convert to M:4/4 & L:1/16*
 M: 4/4
-L: 1/8
+L: 1/16
 K: Gmaj
 |:DE|G2GA B2Bd efge dBAG|EAAG ABAG EAAG AcBA|
      GFGA BABd efge dBAG|DGGF GBAG EDEF G2:|

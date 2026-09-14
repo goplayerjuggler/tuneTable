@@ -3,6 +3,7 @@ export default {
 	groups: "ALORA",
 	abc: `X: 1
 T: Hommage À Jos Bouchard
+C:Philippe Bruneau
 O:Québec
 R: jig
 M: 12/8
@@ -16,7 +17,7 @@ B2c|:"Bm"d3 dcd BFF FBc|d3 "G"dcB "F#7"cFF F3|
 |:"D"F3 FGB A3 ABc|dcd "G"edB "D/F#"A3 "Fdim7"FAd|
 "Em"c3 Ace "A7"g3 Ace|"Em"c'ba "A7"gfe "D"fed "A7"cBA|
 "D"F3 FGB A3 ABc|dcd "G"edB "D/F#"A3 "Fdim7"FAd|
-"Em"c3 Ace "A7"g3 Ace|"Em"c'ba "A7"gfe"D"dAF D3:|`,
+"Em"c3 Ace "A7"g3 Ace|"Em"c'ba "A7"gfe "D"dAF D3:|`,
 	theSessionId: 25035,
 	theSessionSettingId: 52529,
 	parts: "AABB"
