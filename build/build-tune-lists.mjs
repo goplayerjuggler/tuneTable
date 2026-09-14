@@ -278,6 +278,7 @@ export async function buildTuneLists({
     let rawTunes;
     if (fileName.endsWith(".data.js")) {
       let data = parseTuneFile(content);
+      if (!data) continue;
       if (!Array.isArray(data)) data = [data];
       rawTunes = data.filter((tune) => !tune.excludeFromBuild);
     } else {
