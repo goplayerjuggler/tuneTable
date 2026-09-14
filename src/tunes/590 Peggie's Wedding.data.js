@@ -5,7 +5,7 @@ export default [
 			`X: 1
 T: Peggie's Wedding
 S:Michael McGoldrick, uileann pipes; John Carty, fiddle
-D:At Our Leisure
+D:[At Our Leisure](https://racketrecords.bandcamp.com/album/at-our-leisure)
 R: reel
 Z:abc-transcription Malcolm Schonfield
 N: A laid-back, slowish reel that's a close relative of [Over The Moor To Maggie](theSessionId=115).
