@@ -3,9 +3,8 @@ export default {
 	abc: `X:1
 C:Malcolm Schonfield
 T:Truthful greensleeves
-N:1. I first published this back in 2009, [here](http://malcolm.schonfield.free.fr/zik.php?tune=truthful_greensleeves).
-N:2. The starting point for this tune was perhaps 
-N:“greensleeves”, a well-known historical tune.
+H:1. I first published this back in 2009, [here](http://malcolm.schonfield.free.fr/zik.php?tune=truthful_greensleeves).
+H:2. The starting point for this tune was perhaps “greensleeves”, a well-known historical tune.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R:Jig
 M:12/8
