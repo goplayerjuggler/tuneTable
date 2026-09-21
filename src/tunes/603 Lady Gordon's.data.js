@@ -3,7 +3,7 @@ export default {
 	parts: "AB",
 	abc: `X: 1
 T: Lady Gordon's
-S:Antoin Mac Gabhann, fiddle; Mick O'Connor, banjo; _?, guitar
+S:Antóin MacGabhann, fiddle; Mick O'Connor, banjo; _?, guitar
 D:Doorways And Windowsills (?)
 R: reel
 H: This is an attempt from memory to write down their setting. Probably needs some more work - checking against the recording, mostly.
