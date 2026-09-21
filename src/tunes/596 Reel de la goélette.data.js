@@ -1,11 +1,12 @@
 export default {
 	parts: "AABB",
-	incipit: `X:1
+	abc: `X:1
 T:Reel de la goélette
 O:Québec
 R:reel
-Z:Malcolm schonfield
+S:« La Bolduc » (1929)
 F:https://archive.org/details/chansons-de-la-bolduc-songs/404+Reel+de+la+go%C3%A9lette.mp3
+Z:Malcolm schonfield
 M:4/4
 L:1/16
 K:Dmaj

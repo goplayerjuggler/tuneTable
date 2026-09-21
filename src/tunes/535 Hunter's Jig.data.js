@@ -19,12 +19,11 @@ P:B
 "^variations on the B part"
 |: BgBaBg BgfdcB | c=ea baf dfa gdc | B2g (3g/2a/2g/2^fg (2Bg dcB | cAg f/2g/2af gdB cAF :|
 `,
-	//	excludeFromDefault: true,
 	parts: "AABB",
 	references: [
 		{
 			notes: `1. This tune was inspired by the [classic session reel “Reavy's”](theSessionId=472), also known as “The Hunter's House”, written by Ed Reavy.
-2. This is more or less [the score I published back in 2005](http://malcolm.schonfield.free.fr/zik.php?lang=fr&tune=reavy).`
+2. This is more or less [the score I published back in 2005](http://malcolm.schonfield.free.fr/zik.php?lang=en&tune=reavy).`
 		}
 	]
 };
