@@ -9,9 +9,7 @@ N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/1428#setting1428
 N:Setting entered in thesession by user “milesnagopaleen” on 2003-02-11
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(2026-06-09) One could argue the structure is “AABBCC”, not “ABC”, but I went with
-N:the latter, as I’m taking the unit length for a part as four (long)
-N:bars.
+H:One could argue the structure is “AABBCC”, not “ABC”, but I went with the latter, as I’m taking the unit length for a part to be four (long) bars.
 K:Dmajor
 |:A|defe dBAF BFAF E3A|defe dBAF BFAF D3:|
 E|:F/E/DAD BDAD G/F/EBE G/F/EBE|F/E/DAD FAA2[1 B/c/dAF D2DE:|2 B/c/dAF Defg||
