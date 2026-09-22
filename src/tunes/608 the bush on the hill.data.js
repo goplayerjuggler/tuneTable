@@ -19,8 +19,8 @@ GBd gfg ege dBG|cec BdB AGF G2z:|
 	theSessionSettingId: 14619,
 	references: [
 		{
-			artists: "Mick O'Connor, banjo; _?, guitar",
-			album: "Doorways And Windowsills (?)",
+			artists: "Mick O'Connor, banjo; Eddie Whelan, guitar",
+			album: "Doorways & Windowsills",
 			notes: `The Humours Of Miltown / [The Hole In The Hedge](theSessionId=755) / [Seamus Cooley’s](theSessionId=414)`
 		}
 	]

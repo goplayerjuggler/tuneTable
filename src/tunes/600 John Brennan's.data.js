@@ -19,5 +19,13 @@ D2FA d2ed cdBd ADFA|BAGB ABde faeg fdd2||`
 	],
 	theSessionId: 404,
 	theSessionSettingId: 13253,
-	parts: "AABB"
+	parts: "AABB",
+	references: [
+		{
+			artists:
+				"Antóin MacGabhann, fiddle; Mick O'Connor, banjo; Marcas Ó Murchú, flute; Eddie Whelan, guitar",
+			album: "Doorways & Windowsills",
+			notes: `John Brennan's / [The Red-Haired Lass](theSessionId=1716) / [The Christening](theSessionId=486)`
+		}
+	]
 };

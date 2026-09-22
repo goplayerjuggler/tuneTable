@@ -4,8 +4,8 @@ export default {
 	abc: `
 X: 8
 T: The Boys Of Portaferry
-S:Antóin MacGabhann, fiddle; Mick O'Connor, banjo; _?, guitar
-D:Doorways And Windowsills (?)
+S:Antóin MacGabhann, fiddle; Mick O'Connor, banjo; Eddie Whelan, guitar
+D:Doorways & Windowsills
 R: reel
 M: 4/4
 L: 1/16

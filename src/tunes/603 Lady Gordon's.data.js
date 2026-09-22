@@ -3,8 +3,8 @@ export default {
 	parts: "AB",
 	abc: `X: 1
 T: Lady Gordon's
-S:Antóin MacGabhann, fiddle; Mick O'Connor, banjo; _?, guitar
-D:Doorways And Windowsills (?)
+S:Antóin MacGabhann, fiddle; Mick O'Connor, banjo; Eddie Whelan, guitar
+D:Doorways & Windowsills
 R: reel
 H: This is an attempt from memory to write down their setting. Probably needs some more work - checking against the recording, mostly.
 Z:Malcolm Schonfield

@@ -17,8 +17,8 @@ K: Ador
 	theSessionId: 1807,
 	references: [
 		{
-			artists: "Antóin MacGabhann, fiddle; _?, guitar",
-			album: "Doorways And Windowsills (?)",
+			artists: "Antóin MacGabhann, fiddle; Eddie Whelan, guitar",
+			album: "Doorways & Windowsills",
 			notes: `The Rainy Day / [The Flowers Of Redhill](theSessionId=2867) `
 		}
 	]

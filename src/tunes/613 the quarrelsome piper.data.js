@@ -18,8 +18,9 @@ K: Gmaj
 	theSessionSettingId: 3490,
 	references: [
 		{
-			artists: "Antóin MacGabhann, fiddle; Mick O'Connor, banjo; _?, guitar",
-			album: "Doorways And Windowsills (?)",
+			artists:
+				"Antóin MacGabhann, fiddle; Mick O'Connor, banjo; Eddie Whelan, guitar",
+			album: "Doorways & Windowsills",
 			notes: `The Quarrelsome Piper / [Scully Casey's](theSessionId=10804) `
 		}
 	]
