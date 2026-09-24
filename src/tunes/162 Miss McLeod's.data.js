@@ -7,10 +7,12 @@ M:4/4
 N:Imported into *tuneTable* on 2025-10-25,
 N:from https://thesession.org/tunes/75#setting75
 N:Setting entered in thesession by user “Jeremy” on 2001-05-25
+N:*abc-tools: convert to M:4/4 & L:1/16*
 K:Gmajor
-|:G2 BG AGBG|B2 BA BcBA|G2 BG AGBG|A2 AG AcBA|
- G2 BG AGBG|B2 BA B2 d2|e2 ef edef|gfed BcBA:|
- |:G2 gf edeg|B2 BA BcBA|G2 gf edeg|a2 ag aeef|
- g2 gf edeg|BcBA B2 d2|edef edef|gfed BcBA:|`,
+|:G2BG AGBG B2BA BcBA|G2BG AGBG A2AG AcBA|
+  G2BG AGBG B2BA B2d2|e2ef edef gfed BcBA:|
+|:G2gf edeg B2BA BcBA|G2gf edeg a2ag aeef|
+  g2gf edeg BcBA B2d2|edef edef gfed BcBA:|`,
+	parts: "AABB",
 	theSessionId: 75
 };

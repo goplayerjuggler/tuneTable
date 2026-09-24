@@ -2,7 +2,7 @@ export default {
 	abc: `X:1
 T:Gigue Du Plateau
 C:Jean Claude Belanger
-O:Québec
+O:Canada; Québec.
 R:reel
 L:1/16
 M:4/4

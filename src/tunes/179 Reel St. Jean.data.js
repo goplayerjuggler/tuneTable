@@ -2,7 +2,7 @@ export default {
 	abc: `X:1
 T:Reel St. Jean
 C:Theodore Duguay
-O:Québec
+O:Canada; Québec.
 R:reel
 L:1/8
 M:4/4

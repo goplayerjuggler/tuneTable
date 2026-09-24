@@ -2,7 +2,7 @@ export default {
 	parts: "AABB",
 	abc: `X:1
 T:Reel de la goélette
-O:Québec
+O:Canada; Québec.
 R:reel
 S:« La Bolduc » (1929)
 F:https://archive.org/details/chansons-de-la-bolduc-songs/404+Reel+de+la+go%C3%A9lette.mp3

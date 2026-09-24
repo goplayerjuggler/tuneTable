@@ -443,7 +443,7 @@ A/B/c|:"D"d2dc defg a2a^g afdf|"G"=gBB/B/B BccB "A7"Aa^ga "D"baga|
 		parts: "AABB",
 		abc: `X:1
 T:Le 24 Juin
-O:Québec
+O:Canada; Québec.
 C:Phillippe Bruneau
 R:reel
 L:1/16
@@ -511,7 +511,7 @@ G2Bd gdBG F2Ac fcAF|GABd cAGF DGG^F G2:|`,
 		fileDate: "2026-07-29",
 		abc: `X:1
 T:Reel Eugène
-O:Québec
+O:Canada; Québec.
 R:reel
 L:1/16
 M:4/4
@@ -533,7 +533,7 @@ K:Aminor
 		abc: [
 			`X:1
 T:Hommage à Gilles Laprise
-O:Québec
+O:Canada; Québec.
 C:Phillippe Bruneau
 R:reel
 L:1/16
@@ -549,7 +549,7 @@ M:4/4
 B2BB Bgfe a3a Afed |1 cAce agec d2dd Afed :| [2 [M:3/4] cAce agec d2!D.C.!z2 |]`,
 			`X:1
 T:Hommage à Gilles Laprise
-O:Québec
+O:Canada; Québec.
 C:Phillippe Bruneau
 R:reel
 L:1/16

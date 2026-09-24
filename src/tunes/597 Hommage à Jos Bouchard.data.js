@@ -4,7 +4,7 @@ export default {
 	abc: `X: 1
 T: Hommage À Jos Bouchard
 C:Philippe Bruneau
-O:Québec
+O:Canada; Québec.
 R: jig
 M: 12/8
 N: Copied from a setting by “Ollie w.” on thesession

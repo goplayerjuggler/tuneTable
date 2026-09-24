@@ -9,7 +9,7 @@ export default [
 X:183
 T:Fisher's Hornpipe
 S:Laurie Hart, fiddle; Greg Sandell, piano
-O:Québec
+O:Canada; Québec.
 R:reel
 D:Danse ce soir! Traditional tunes of Québec
 F:https://lauriehart.bandcamp.com/track/fishers-hornpipe-reel-de-pointe-au-pic

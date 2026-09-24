@@ -3,7 +3,7 @@ export default {
 	abc: `X:506
 T:Reel du Cultivateur
 C:Joseph Allard
-O:Québec
+O:Canada; Québec.
 R:reel
 N:Originally in C, but most often played in D 
 N:---

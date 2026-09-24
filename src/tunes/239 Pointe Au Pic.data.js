@@ -1,7 +1,7 @@
 export default {
 	abc: `X:1
 T:Pointe Au Pic
-O:Québec
+O:Canada; Québec.
 R:reel
 L:1/16
 M:4/4

@@ -10,7 +10,7 @@ ef|g2d2 {fg}fdef g2d2 {fg}fdef|\\
 	abc: `X:1
 T: La Cardeuse
 R:reel
-O:Québec
+O:Canada; Québec.
 S:Pascal Gemme
 M:4/4
 L:1/16
