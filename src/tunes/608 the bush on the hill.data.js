@@ -1,10 +1,10 @@
 export default {
-	isPrivate: true, //todo
 	parts: "AABB",
+	aka: "The Humours Of Miltown",
 	abc: `X: 2
 T: The Bush On The Hill
 M:12/8
-H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/1305#setting14619. Setting entered in thesession by user “b.maloney” in 2002 (?)
+H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/1305#setting14619. Setting entered in thesession by user “b.maloney” in 2003.
 N:*abc-tools: convert to M:12/8*
 R: jig
 M: 12/8

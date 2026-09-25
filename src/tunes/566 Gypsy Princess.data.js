@@ -1,10 +1,11 @@
 export default [
 	{
+		fileDate: "2026-08-20",
 		abc: `X:1
 T:Gypsy Princess
 R:Barndance
-S:John Carty, bajo; Michael McGoldrick, uillean pipes
-D:At Our Leisure
+S:Michael McGoldrick, uilleann pipes; John Carty, banjo; Matt Griffin, guitar
+D:At Our Leisure (2022)
 F:https://racketrecords.bandcamp.com/track/gypsy-princess
 Z:Nigel Gatherer
 H:This transcription was kindly done by NG on 2026-08-19 after I made a [post](https://thesession.org/discussions/51252) about this tune on thesession. I have taken the liberty of making a few minor tweaks to the bar lines, without changing any of the dots.

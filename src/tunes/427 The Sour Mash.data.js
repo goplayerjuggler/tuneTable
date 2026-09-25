@@ -1,4 +1,5 @@
 export default {
+	fileDate: "2026-03-07",
 	groups: "su",
 	parts: "AABB",
 	incipit: `%abc-2.1
@@ -12,8 +13,8 @@ Z:abc-transcription Malcolm Schonfield
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 I:abc-charset utf-8
 N: As far as I can tell from info on Bandcamp, the artist/instrument list here is:
-N: Angus MacKenzie, uillean pipes; Damian Helliwell, mandolin; Gabe McVarish, fiddles; 
-N: Ross Martin, guitar; Griogair Labhruidh, uillean pipes; Jenny Hill: double bass
+N: Angus MacKenzie, uilleann pipes; Damian Helliwell, mandolin; Gabe McVarish, fiddles; 
+N: Ross Martin, guitar; Griogair Labhruidh, uilleann pipes; Jenny Hill: double bass
 N: Waiting to hear from Dàimh before publishing my full transcription.
 R: strathspey
 M: 4/2

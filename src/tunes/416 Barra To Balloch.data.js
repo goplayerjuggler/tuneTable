@@ -1,4 +1,5 @@
 export default {
+	fileDate: "2026-03-07",
 	groups: "su",
 	incipit: `X: 2
 T: Barra To Balloch
@@ -8,7 +9,7 @@ D:Tuneship (2013)
 F:https://daimh.bandcamp.com/track/barra-to-balloch
 N: As far as I can tell from info on Bandcamp, the artist/instrument list here is:
 N: Angus MacKenzie, whistle; Damian Helliwell, mandolin; Gabe McVarish, fiddles; 
-N: Ross Martin, guitar; Griogair Labhruidh, uillean pipes; Eilidh Shaw: fiddle; Duncan Lyall: bass
+N: Ross Martin, guitar; Griogair Labhruidh, uilleann pipes; Eilidh Shaw: fiddle; Duncan Lyall: bass
 R: jig
 M: 12/8
 L: 1/8

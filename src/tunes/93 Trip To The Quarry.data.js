@@ -1,9 +1,10 @@
 export default {
+	fileDate: "2026-04-02",
 	aka: "A Curious Denis Murphy Jig",
 	incipit: `X:1
 T:Trip To The Quarry
 C:Thady Murphy
-S:Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle
+S:Mick O'Brien, uilleann pipes; Caoimhín Ó Raghallaigh, fiddle
 D:Deadly buzz | Aoibhinn Crónán 
 H:https://irishmusic.bandcamp.com/track/a-curious-denis-murphy-jig-the-belles-of-liscarroll
 R:jig

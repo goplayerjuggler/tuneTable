@@ -1,4 +1,5 @@
 export default {
+	fileDate: "2026-03-07",
 	aka: "The Humours of Derrykissane",
 	incipit: `X: 1
 T:The Foxhunter
@@ -13,7 +14,7 @@ K: Dmaj
 	references: [
 		{
 			notes: "Gone for his Tea, The Humours of Derrykissane",
-			artists: "Mick O'Brien, uillean pipes; Caoimhín Ó Raghallaigh, fiddle",
+			artists: "Mick O'Brien, uilleann pipes; Caoimhín Ó Raghallaigh, fiddle",
 			url: "https://irishmusic.bandcamp.com/track/gone-for-his-tea-the-humours-of-derrykissane",
 			album: "Deadly Buzz | Aoibhinn Crónán "
 		}

@@ -1,11 +1,10 @@
 export default {
-	isPrivate: true, //todo
 	parts: "AABB",
 	abc: `X: 1
 T: Seamus Cooley's
 R: jig
 M:12/8
-H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/414#setting414. Setting entered in thesession by user “Toni Ribas” in 2001 (?)
+H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/414#setting414. Setting entered in thesession by user “Toni Ribas” in 2001.
 N:*abc-tools: convert to M:12/8*
 L: 1/8
 K: Gmaj

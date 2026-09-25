@@ -1,11 +1,10 @@
 export default {
-	isPrivate: true, //todo
 	parts: "AABB",
 	abc: `
 X: 1
 T: The Hole In The Hedge
 M:12/8
-H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/755#setting755. Setting entered in thesession by user “milesnagopaleen” in 2002 (?)
+H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/755#setting755. Setting entered in thesession by user “milesnagopaleen” in 2002.
 N:*abc-tools: convert to M:12/8*
 R: jig
 M: 6/8
