@@ -1,5 +1,4 @@
 export default {
-	isPrivate: true, //todo
 	parts: "AB",
 	abc: `
 X: 1
@@ -12,7 +11,7 @@ D:Doorways & Windowsills
 Z:Malcolm Schonfield
 N: Quinns / [The Boys Of Portaferry](theSessionId=154) / [Lady Gordon](theSessionId=4954)
 H:Adapted from a setting entered by “CreadurMawnOrganig” on thessesion
-H: This is an attempt from memory to write down their setting. Probably needs some more work - checking against the recording, mostly.
+H: This is an attempt to write down the MacGabhann/O'Connor setting from memory.
 K: Dmaj
 |:D2FA BAFA dfed BE~E2|D2FA BABc[1 dBAG FGAF:|2 dBAG FABc||
 d2fd adfa (3gag fg edBA | d2fd adfa faeg fddA| 
