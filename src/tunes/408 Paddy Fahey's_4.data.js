@@ -8,11 +8,10 @@ C:Paddy Fahey
 R: reel
 F:https://www.youtube.com/watch?v=T0e_og0XaKo
 D:The Bunch Of Keys
-N:Paddy Fahey’s, Paddy Kelly’s, Father O’Grady’s Trip To Bucca
+N:Paddy Fahey’s, [Paddy Kelly’s](theSessionId=2125), [Father O’Grady’s Trip To Bucca](theSessionId=180)
 S:Jason O’Rourke, button accordion; Ruadhrai O’Kane, fiddle; Paul McSherry, guitar; ?, bodhrán
 M: 4/4
 L: 1/16
 K: Dmaj
-dcAG EFGE A2dA cdec|dcAB cdef`,
-	theSessionId: 1402
+dcAG EFGE A2dA cdec|dcAB cdef`
 };
