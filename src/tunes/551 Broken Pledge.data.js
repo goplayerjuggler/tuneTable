@@ -1,5 +1,5 @@
 export default {
-	tags: "jig from reel",
+	tags: "transformed",
 	abc: `X:1
 T:The Broken Pledge
 R:jig
@@ -18,5 +18,7 @@ dcA Ade f2g ecA|cAG E3 edd eag|
 ecA deg faa ecA|D3 FGA cAG EDD|`,
 	theSessionId: 4217,
 	theSessionSettingId: 42758,
-	crossReferences: [{ theSessionId: 1423 }]
+	crossReferences: [{ theSessionId: 1423 }],
+	fileDate: "2026-06-03",
+	parts: "AABB"
 };

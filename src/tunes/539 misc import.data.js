@@ -212,7 +212,7 @@ dcA AGE A3 AGE|D3 cde[1 dcA GED:|2 dcA GAc||`,
 		theSessionSettingId: 25099
 	},
 	{
-		fileDate: "2026-05-25",
+		fileDate: "2026-09-30",
 		abc: [
 			`X:1
 T:The Trip To Pakistan
@@ -228,10 +228,10 @@ N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/112#setting12698
 N:Setting entered in thesession by user “ceolachan” on 2011-10-19
 N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
+N:(Edited after importing)
 K:Bminor
-|:BdfB d3 f e3 d cdec|BdfB d3 f[1 edcd B4:|2 edcd B2 BA:|
-|:BdfB g3 e f3 a fefd|BdfB g3 e[1 fedf e4:|2 fedf e2 a2:|
+|:BdfB d3f e3d cdec|BdfB d3f[1 edcd B4:|2 edcd B2BA:|
+|:BdfB g3e f3a edcd|BdfB g3e[1 fedf e4:|2 fedf e2a2:|
 |:cdfc dfdc BcdB cdcB|AceA ceAe[1 edcd B4:|2 edcd B2 BA:|`
 		],
 		theSessionId: 112,
@@ -242,20 +242,19 @@ K:Bminor
 			`X:1
 T:The Honeymoon
 R:reel
-L:1/16
-M:4/4
+L:1/8
+M:4/2
 N:Imported into *tuneTable* on 2026-05-25,
 N:from https://thesession.org/tunes/2064#setting15462
 N:Setting entered in thesession by user “ceolachan” on 2012-02-26
-N:*abc-tools: convert to M:4/4 & L:1/16*
-N:(todo: not yet revised)
+N:(Malcolm) For once I'm putting this in 4/2, not 4/4. No point being too strict with self-imposed rules eh!
 K:Gmajor
 d>c |B>G (3GGG D>G (3GGG B>d (3def g>ed<c | B>G G2 D>G G2 B<ed>B (3ABA (3edc |
 B>G (3GGG D>G (3GGG (3Bcd e>f g2 g>a | b>ga>f g2 (3fed e>gd<B A2 ||
 (3Bcd |e2 e>f e>dB<A (3Bcd e>f g>ed<c | B>G (3GGG D>G (3GGG B<ed>B A2 B>d |
 (3eee e>f e2 d>c (3Bcd e>f g>fg>a | b2 (3agf g>fe>d e<gd>B A2 ||`
 		],
-		fileDate: "2026-05-25",
+		fileDate: "2026-09-30",
 		theSessionId: 2064,
 		theSessionSettingId: 15462
 	},

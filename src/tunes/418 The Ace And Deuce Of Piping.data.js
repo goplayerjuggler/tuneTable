@@ -7,6 +7,7 @@ F:https://thehousekeepers.bandcamp.com/track/the-ace-and-deuce-of-piping-hornpip
 R:Hornpipe
 M:4/2
 N: Swung throughout – so always have “𝅘𝅥𝅮𝅘𝅥𝅮=𝅘𝅥𝅘𝅥𝅮”
+H: I think this can be thought of as a different (but related) tune to the [other set dance by the same name](https://thesession.org/tunes/1107).
 Q:1/2=80
 L:1/8
 Z:abc-transcription Malcolm Schonfield %2025-03-17, 260212
@@ -22,5 +23,6 @@ C2c2 =BGFD C2DE FGFD | CDCD CDCD C4-C2 :|
 P:variations
 (3"^v1"EDC (3FED (3EDC FD`,
 	tags: ["pas carrée", "set dance"],
-	parts: "AABB"
+	parts: "AABB",
+	ttId: 418
 };
