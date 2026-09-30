@@ -21,5 +21,12 @@ K:Gmajor
  "^(*), variation 1 "d3 def g3 || "^(*), variation 2 "dBd e2f g3 |]
  `,
 	theSessionId: 1340,
-	theSessionSettingId: 14690
+	theSessionSettingId: 14690,
+	references: [
+		{
+			url: "https://www.itma.ie/people/martin-wynne/?track=4",
+			artists: "James Lad O'Beirne, fiddle; Martin Wynne, fiddle",
+			notes: `The boys of Ballisodare, hop jig; Tommy Hunt's, hop jig`
+		}
+	]
 };

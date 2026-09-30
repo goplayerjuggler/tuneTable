@@ -9,7 +9,7 @@ T: Ciel d'automne – valsée
 C:André Brunet
 R: waltz
 M: 3/4
-H:I (Malcolm) have tweaked this lovely tune by André Brunet. The [standard version](theSessionId=10119) is in 4/4.
+H:This waltz setting came to me (Malcolm) in September 2026. The [original tune](theSessionId=10119), a lovely André Brunet composition, is in 4/4.
 H: I first heard Ciel d'automne in the monthly Parisian “session québecoise”, perhaps in 2025.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 L: 1/8
@@ -18,7 +18,7 @@ K: Dmaj
 g4-gf| e2d3e|fdA2F2 |G4 AB|A2d2cd| efg3e|1 edd2c2 | d2"<("">)"Acde:|2 edd2c2 | d4cA||
 |:B3cd2| A2F4|B3dc2| A6|B3cd2| A2F2d2|efg3f| e3"<("">)"def|
 g4f2 |e3de2|fdA2F2| G4AB|A2d2cd| efg3f| edd2c2|1 d4zA:|2 d2Ac!D.C.!de|]]
-`,
+`, //This waltz setting came to me (Malcolm) on 2026-09-21.
 			`
 X: 1
 T: Ciel d'automne – valsée

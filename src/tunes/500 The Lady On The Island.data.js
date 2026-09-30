@@ -16,5 +16,12 @@ BAFB AFEF D2FA BAdB|BAFB A2AB defd e2(3ABc||
 d2fd efge afdf edBA|d2fd efge afdf e2(3ABc|
 d2fd efge afdf edBA|defg a2ab afdf e2dB||`,
 	theSessionId: 938,
-	theSessionSettingId: 36179
+	theSessionSettingId: 36179,
+	references: [
+		{
+			notes:
+				"There are two recordings of Martin Wynne (fiddle) playing this tune here. Pretty poor sound quality, but interesting nonetheless. Playing a fiddle duet with James 'Lad' O'Beirne on one of them; and some remarkable electric guitar accompanying by Jack McKenna on the other.",
+			url: "https://www.itma.ie/people/martin-wynne/"
+		}
+	]
 };

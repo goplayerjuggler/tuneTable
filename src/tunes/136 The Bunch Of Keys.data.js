@@ -23,11 +23,12 @@ BGG2 BGdG BGGA Bcde|f/g/age fdcA GBAF DGG:|`,
 	Gardiner, John Joe, 1893-1979`
 		},
 		{
-			artists: "James Lad O'Beirne, fiddle; Martin Wynne, fiddle ",
+			artists: "James Lad O'Beirne, fiddle; Martin Wynne, fiddle",
 			url: "https://www.itma.ie/people/martin-wynne/?track=3"
 		}
 	],
 	theSessionId: 344,
 	theSessionsettingId: 45634,
-	parts: "AABBCC"
+	parts: "AABBCC",
+	fileDate: "2026-09-21"
 };
