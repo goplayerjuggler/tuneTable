@@ -279,8 +279,11 @@ export async function buildTuneLists({
     if (fileName.endsWith(".data.js")) {
       let data = parseTuneFile(content);
       if (!data) continue;
+
       if (!Array.isArray(data)) data = [data];
-      rawTunes = data.filter((tune) => !tune.excludeFromBuild);
+      rawTunes = data.filter(
+        (tune) => !tune.excludeFromBuild && (tune.abc || tune.incipit)
+      );
     } else {
       // Bare ABC file directly under `tunes/` — every tune it contains is
       // merged into the default list, same as `.data.js` tunes, but without

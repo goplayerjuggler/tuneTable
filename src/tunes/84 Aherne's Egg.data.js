@@ -19,7 +19,7 @@ N:from https://thesession.org/tunes/4440#setting17067
 N:Setting entered in thesession by user “Dr. Dow” on 2005-04-28
 N:*abc-tools: convert to M:12/8*
 N:(todo: not yet revised)
-KEmixolydian
+K:Emixolydian
 B|GEB EDB, DEF EGB|~e3 geB {f}edB AFA|
 Bec- cde cAB GEF|=GDB, ^G/A/BG AFB E2B|
 EBE {B}EDB, DEF EGB|~e3 geB f/e/dB AFA|
