@@ -1,16 +1,25 @@
-// build/build-tune-lists.mjs
 import { createHash } from "crypto";
 import process from "process";
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 import abcTools from "@goplayerjuggler/abc-tools";
+import { parseDataFile } from "./parse-data-file.mjs";
+import {
+  loadEntities,
+  projectRecordings,
+  entitiesFor
+} from "./build-entities.mjs";
 
 const { getMetadata, getTunes } = abcTools;
 
 const __dirName = path.dirname(fileURLToPath(import.meta.url));
 
-const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
+// All hand-maintained data lives under src/data: tunes/ (below), plus the
+// recordings/, releases/, artists/ and instruments/ entity folders
+// (see build-entities.mjs).
+const DATA_DIR = path.resolve(__dirName, "../src/data");
+const SOURCE_DIR = path.resolve(DATA_DIR, "tunes");
 // Set lists are split across N files here, one per group plus a default file.
 const SET_LISTS_DIR = path.resolve(SOURCE_DIR, "set-lists");
 // Standalone ABC collections — each file becomes its own tune list (see
@@ -74,8 +83,8 @@ function toDateString(ms) {
  * Dates are never written here; run `npm run update-dates` to refresh from git.
  *
  * @param {string[]} tuneFileNames - File names (not paths) of all tune files,
- *   i.e. `.data.js` files and bare `.abc` files directly under `src/tunes/`
- *   (collections under `src/tunes/collections/` use `%% list-date` instead).
+ *   i.e. `.data.js` files and bare `.abc` files directly under `src/data/tunes/`
+ *   (collections under `src/data/tunes/collections/` use `%% list-date` instead).
  * @returns {Promise<Map<string, string>>}
  */
 async function loadTuneDates(tuneFileNames) {
@@ -114,38 +123,6 @@ async function loadTuneDates(tuneFileNames) {
     });
 
   return dateMap;
-}
-
-// ─── File parsing ─────────────────────────────────────────────────────────────
-
-/**
- * Evaluate a tune `.data.js` file without going through the Node module cache.
- * Each file exports a single object literal, or an array of such objects; this converts
- * `export default` to a `return` statement and run it with `new Function`.
- * Leading line comments (e.g. the fileName comment) are harmless and left in place.
- *
- * @param {string} content - Raw file content.
- * @returns {object}
- */
-function parseTuneFile(content) {
-  const body = content.replace(/export\s+default\s*(?=[{[])/, "return ");
-
-  return new Function(body)();
-}
-
-/**
- * Evaluate one `src/tunes/set-lists/*.data.js` file without going through the
- * Node module cache. Each file exports a single object with a `setLists`
- * array; this converts `export default` to a `return` statement and runs it
- * with `new Function`.
- *
- * @param {string} content - Raw file content.
- * @returns {object}
- */
-function parseSetListsFile(content) {
-  const body = content.replace(/export\s+default\s*(?=\{)/, "return ");
-
-  return new Function(body)();
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -231,11 +208,14 @@ const listLastUpdate = (tunes, setLists) =>
 // ─── Main export ──────────────────────────────────────────────────────────────
 
 /**
- * Build all tune-list JSON files and `manifest.json` from the source tune
- * files under `src/tunes/` — `.data.js` files and bare `.abc` files
- * contribute to the default list, `.abc` files under `tunes/collections/`
- * each become their own standalone list — and the set lists split across
- * `src/tunes/set-lists/*.data.js`.
+ * Build all tune-list JSON files and `manifest.json` from the source data
+ * under `src/data/`: the tune files in `tunes/` — `.data.js` files and bare
+ * `.abc` files contribute to the default list, `.abc` files under
+ * `tunes/collections/` each become their own standalone list — and the set
+ * lists split across `tunes/set-lists/*.data.js`.
+ *
+ * Recordings, releases, artists and instruments (see build-entities.mjs) are
+ * not lists of their own: each list JSON embeds the subset related to its tunes.
  *
  * `lastUpdate` for each generated list reflects the most recent date among
  * the constituent tunes' commit dates (tracked in `build/tune-dates.json`,
@@ -254,7 +234,7 @@ export async function buildTuneLists({
 } = {}) {
   console.log("Building tune lists from source files...");
 
-  // `.data.js` files and bare `.abc` files sitting directly under `src/tunes/`
+  // `.data.js` files and bare `.abc` files sitting directly under `src/data/tunes/`
   // (readdir is non-recursive, so `collections/` and `set-lists/` are excluded
   // automatically — their entries don't match either extension).
   const tuneFileNames = (await fs.readdir(SOURCE_DIR)).filter(
@@ -277,7 +257,7 @@ export async function buildTuneLists({
 
     let rawTunes;
     if (fileName.endsWith(".data.js")) {
-      let data = parseTuneFile(content);
+      let data = parseDataFile(content);
       if (!data) continue;
       if (!Array.isArray(data)) data = [data];
       rawTunes = data.filter((tune) => !tune.excludeFromBuild);
@@ -309,7 +289,7 @@ export async function buildTuneLists({
   }
 
   // Set lists are split across one file per group plus a default file, all
-  // under src/tunes/set-lists/. Merge them into a single array.
+  // under src/data/tunes/set-lists/. Merge them into a single array.
   const setListsFileNames = (
     await fs.readdir(SET_LISTS_DIR).catch(() => [])
   ).filter((f) => f.endsWith(".data.js"));
@@ -318,12 +298,20 @@ export async function buildTuneLists({
   for (const f of setListsFileNames) {
     try {
       const content = await fs.readFile(path.join(SET_LISTS_DIR, f), "utf8");
-      const parsed = parseSetListsFile(content);
+      const parsed = parseDataFile(content);
       allSetLists.push(...(parsed.setLists ?? []));
     } catch {
       console.warn(`Warning: could not parse set lists from ${f}`);
     }
   }
+
+  // Entities: recordings add `referencesFromRecordings` to the tunes they contain;
+  // each list then embeds the related subset (see writeList).
+  const entities = await loadEntities(DATA_DIR, { isDevelopment });
+  projectRecordings(entities, tunesFromSourceFiles);
+  console.log(
+    `Found ${entities.recordings.length} recordings, ${entities.releases.length} releases, ${entities.artists.length} artists`
+  );
 
   await fs.mkdir(outputDir, { recursive: true });
 
@@ -335,11 +323,11 @@ export async function buildTuneLists({
    * Write a list JSON file, unless it is excluded from publication.
    * Serialises, hashes content, writes `${baseId}.${hash}.json`; returns hashed filename. */
   const writeList = async (baseId, tunes, setLists = []) => {
+    const publishedTunes = tunes.filter((t) => isDevelopment || !t.isPrivate);
     const data = {
-      tunes: tunes
-        .filter((t) => isDevelopment || !t.isPrivate)
-        .map(sanitizeTune),
-      setLists: setLists.map(sanitizeSetList)
+      tunes: publishedTunes.map(sanitizeTune),
+      setLists: setLists.map(sanitizeSetList),
+      ...entitiesFor(publishedTunes, entities)
     };
     const json = JSON.stringify(data, null, 2);
     const hash = createHash("md5").update(json).digest("hex").slice(0, 10);

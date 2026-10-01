@@ -1,6 +1,6 @@
 # Build process
 
-This documents the full build pipeline: how tune data becomes the tune-list JSON files and manifest the app loads, and how webpack turns the app itself into a deployable bundle. Aimed at anyone (including future me) maintaining or extending the build, not at end users.
+This documents the full build pipeline: how tune data (and the recordings, releases, artists and instruments related to it) becomes the tune-list JSON files and manifest the app loads, and how webpack turns the app itself into a deployable bundle. Aimed at anyone maintaining or extending the build, not at end users.
 
 ## Source layout
 
@@ -10,18 +10,29 @@ src/
   index.html
   generated/
     tune-lists-manifest.json   # written by the build; statically imported by index.js
-  tunes/
-    0001 some tune.data.js     # numbered .data.js — contributes to the default list
-    another tune.data.js       # unnumbered .data.js — same
-    a-jig.abc                  # bare .abc — its tune(s) also merged into the default list
-    collections/
-      norbeck-book3.abc        # a standalone, self-contained list of tunes
-      another-collection.abc
-    set-lists/
-      default.data.js          # setLists with groups: "default" (or none)
-      alora.data.js             # setLists with groups: "alora"
-      steam-up.data.js          # setLists with groups: "su"
+  data/                        # everything maintained by hand
+    tunes/
+      0001 some tune.data.js   # numbered .data.js — contributes to the default list
+      another tune.data.js     # unnumbered .data.js — same
+      a-jig.abc                # bare .abc — its tune(s) also merged into the default list
+      collections/
+        norbeck-book3.abc      # a standalone, self-contained list of tunes
+        another-collection.abc
+      set-lists/
+        default.data.js        # setLists with groups: "default" (or none)
+        alora.data.js          # setLists with groups: "alora"
+        steam-up.data.js       # setLists with groups: "su"
+    recordings/                # one file per recording, or many per file
+      itma recordings.data.js
+    releases/
+      tommy peoples.data.js
+    artists/
+      artists.data.js
+    instruments/
+      instruments.data.js      # one keyed object: { pipes: { qId, en, fr }, … }
 ```
+
+Paths in the rest of this document that start with `tunes/` are relative to `src/data/`.
 
 Three kinds of tune source file, three different treatments:
 
@@ -32,7 +43,7 @@ Three kinds of tune source file, three different treatments:
 | `tunes/collections/*.abc` | Raw ABC, one or more tunes, optional `%% list-*` header directives | Becomes its own **standalone list** (`abc-<stem>`), never merged into anything else |
 | `tunes/set-lists/*.data.js` | JS object with a `setLists` array, `export default` | Set lists, tagged with a `groups` field to say which generated list(s) they belong to |
 
-`fs.readdir` on `src/tunes/` is non-recursive, so `.data.js`/`.abc` files at the top level are picked up by the tune-loading loop, while `collections/` and `set-lists/` (being directories) are automatically skipped by it. The reverse is also true: files inside those two subfolders are only ever read by the code paths that specifically target them.
+`fs.readdir` on `src/data/tunes/` is non-recursive, so `.data.js`/`.abc` files at the top level are picked up by the tune-loading loop, while `collections/` and `set-lists/` (being directories) are automatically skipped by it. The reverse is also true: files inside those two subfolders are only ever read by the code paths that specifically target them.
 
 ## Tune list generation — `build/build-tune-lists.mjs`
 
@@ -40,17 +51,21 @@ Exports `buildTuneLists({ isDevelopment, outputDir, manifestPath })`, invoked ei
 
 ### 1. Load tunes
 
-For each `.data.js` and bare `.abc` file directly under `src/tunes/`:
-- `.data.js` → evaluated via `parseTuneFile` (a `new Function` sandbox, not `import`, so the script doesn't need a bundler); tunes flagged `excludeFromBuild` are dropped here.
+For each `.data.js` and bare `.abc` file directly under `src/data/tunes/`:
+- `.data.js` → evaluated via `parseDataFile` (`build/parse-data-file.mjs`; a `new Function` sandbox, not `import`, so the script doesn't need a bundler); tunes flagged `excludeFromBuild` are dropped here.
 - `.abc` → split into individual tunes with `getTunes()` from `@goplayerjuggler/abc-tools`; each becomes a bare `{ abc }` object.
 
 Both paths converge: for every tune, ABC metadata (key, rhythm, origin, composer, …) is extracted via `getMetadata()` into `metadataFromAbc`, and a `fileDate` is attached — from the tune's own `fileDate` property if a `.data.js` tune sets one explicitly, otherwise from the tune-dates cache (see below), keyed by the source file's name.
 
 ### 2. Load set lists
 
-Every `.data.js` file under `src/tunes/set-lists/` is evaluated the same way (`parseSetListsFile`) and their `setLists` arrays concatenated into one flat list. A set list's `groups` field (comma-separated) says which generated list(s) it should be attached to — `setListsFor(group)` filters on that.
+Every `.data.js` file under `src/data/tunes/set-lists/` is evaluated the same way (`parseDataFile`) and their `setLists` arrays concatenated into one flat list. A set list's `groups` field (comma-separated) says which generated list(s) it should be attached to — `setListsFor(group)` filters on that.
 
-### 3. Generate lists
+### 3. Load entities and attach recordings to tunes
+
+`loadEntities`, `projectRecordings` and `entitiesFor` live in `build/build-entities.mjs`; see "Recordings, releases, artists and instruments" below.
+
+### 4. Generate lists
 
 - **Default list** (`default`): all loaded tunes except those flagged `excludeFromDefault`, plus set lists tagged for the `"default"` group.
 - **Group lists** (`group-<name>`): tunes are grouped by their `groups` property (comma-separated, lower-cased); one list per distinct group, alphabetically. `getGroupDisplayName()` maps known group ids (`alora`, `su`, `blr`) to friendly names, falling back to `Group: <name>` for anything else.
@@ -58,29 +73,61 @@ Every `.data.js` file under `src/tunes/set-lists/` is evaluated the same way (`p
 - **Composer lists** (`composer-<id>`, development builds only): same idea via `COMPOSER_EXTRACTS`, gated on `isDevelopment` since these are exploratory/incomplete.
 - **Collection lists** (`abc-<stem>`): one per file under `tunes/collections/`, parsed via `parseAbcHeader()` for `%% list-name`, `%% list-description`, `%% list-date`, `%% list-defaultSort` directives in the header (the lines before the first `X:` field). A list without a `%% list-defaultSort` directive (or any generated list without an explicit `defaultSort`) falls back to `"rhythmContourName"`.
 
-### 4. Write output
+### 5. Write output
 
 `writeList(baseId, tunes, setLists)`:
 1. Filters out `isPrivate` tunes unless `isDevelopment` is true, so private tunes never reach a production build.
 2. Strips build-time-only properties (`groups`, `excludeFromDefault`, `metadataFromAbc` from tunes; `groups` from set lists) via `sanitizeTune`/`sanitizeSetList`.
-3. Serialises to JSON, MD5-hashes the content, and writes it as `<baseId>.<hash10>.json`.
+3. Adds the entities related to the remaining tunes (`recordings`, `releases`, `artists`, `instruments`, each only if non-empty) via `entitiesFor`.
+4. Serialises to JSON, MD5-hashes the content, and writes it as `<baseId>.<hash10>.json`.
 
 The content hash in the filename lets the app cache these files aggressively while still picking up changes immediately: a changed list gets a new filename, an unchanged one keeps its old (already-cached) one.
 
 After all lists are written, any `.json` file already present in `outputDir` that wasn't just (re)written is deleted — this prunes hashed files left behind by an earlier build whose content has since changed under the same `baseId`.
 
-### 5. Write the manifest
+### 6. Write the manifest
 
 `manifest.json` — `{ version, generated, lists: [...], externalSources: [] }` — is always written to `outputDir` (typically `dist/tune-lists/`), at a **stable, unhashed** path so it can be fetched at a known URL both by the browser at runtime and by anyone inspecting the CLI output directly. If `manifestPath` is also given, the same content is additionally written there — used to get the manifest into `src/generated/tune-lists-manifest.json`, which `index.js` statically imports (`import manifest from "./generated/tune-lists-manifest.json"`) so it's bundled directly rather than fetched at runtime.
+
+## Recordings, releases, artists and instruments
+
+Four kinds of entity, each a folder of `.data.js` files under `src/data/` (one entity per file or many; each file exports an object or an array, `instruments` a single keyed object). Fields are described in the data-model schema. They are not lists of their own: each generated list JSON gets extra sections holding just the entities related to that list's tunes, so `origin-france.<hash>.json` only carries the recordings, artists etc. that involve French tunes. A list with no related recordings is unchanged.
+
+### Loading and validation (`loadEntities`)
+
+- Files flagged `excludeFromBuild` are dropped on reading; `isPrivate` entities are dropped after validation unless `isDevelopment` is true. (A credit for a private artist in a public recording then simply shows no name.)
+- **Errors** (the build fails, all listed together): an entity with none of its identifiers; the same identifier used twice; a duplicate instrument key; `credits.indexes` outside the recording's `tunes`.
+- **Warnings**: a `releaseId` matching no release; a credit `id`/`qId` matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. `tunes` entries with only a title are never warned about. A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
+- A recording without an `id` is given one: `<release identifier>#<trackNumber>`.
+- Credits resolve to artists by `id`, then `qId`; a credit with only a `name` is inline.
+
+### Attaching recordings to tunes (`projectRecordings`)
+
+For each entry in a recording's `tunes` that matches a loaded tune (by `theSessionId`, then `ttId`, across all tunes, not per list), a reference-shaped object is appended to that tune's `referencesFromRecordings`:
+
+| Field | Content |
+|---|---|
+| `recordingId` | the recording's `id` (used to find its entities in the list JSON) |
+| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include it), as `Name (instrument, …)` using the English instrument labels; unknown performers are skipped |
+| `url` | the recording's first URL, falling back to the release's |
+| `album` | release title and year |
+| `notes` | track number and title, the tune's time range, the tune entry's and recording's `notes`, any further URLs |
+
+This shape is what `formatReference` in `utils.js` already renders, so the app shows recordings on tune rows without further changes; `index.js` only needs to append `referencesFromRecordings` after `references` (see `getCombinedReferences` in `processTuneData.js`).
+
+### Per-list subsets (`entitiesFor`)
+
+Given the tunes that will be published in a list, the recordings that they point to via `recordingId` are included, plus the releases, artists and instruments those recordings use.
 
 ## Tune-dates cache — `build/tune-dates.json` and `update-tune-dates.mjs`
 
 Tune `lastUpdate` values need a stable "when was this last changed" date, and `git log` is the source of truth for that — but shelling out to git for every tune on every build would be slow, so it's cached in `build/tune-dates.json`.
 
 - The cache holds `{ tuneDates1, tuneDates2 }`. Numbered files (`0001 some tune.data.js`) are indexed by number into the `tuneDates1` array; everything else (including bare `.abc` files) is a `fileName → date` entry in the `tuneDates2` dict.
-- `npm run update-dates` runs `git log -n 1 --follow --format=%ai -- <file>` for every `.data.js`/`.abc` file directly under `src/tunes/` and updates the cache if the date has changed. `--follow` means renames don't lose history.
+- `npm run update-dates` runs `git log -n 1 --follow --format=%ai -- <file>` for every `.data.js`/`.abc` file directly under `src/data/tunes/` and updates the cache if the date has changed. `--follow` means renames don't lose history.
 - `npm run update-dates -- only-check <duration>` (e.g. `4h`, `30m`, `7d`) restricts the git lookups to files whose mtime is within that window, so a quick "I just edited a couple of files" pass doesn't have to re-check everything.
 - `build-tune-lists.mjs` never writes this file; it only reads it and warns if a file has no cached date, telling you to run `update-dates`.
+- Recordings, releases, artists and instruments are not covered by this cache either, and don't affect a list's `lastUpdate`.
 - Collections under `tunes/collections/` are not covered by this cache — they use the `%% list-date` header directive instead, since each collection is a single external file rather than something tracked tune-by-tune in this repo's git history.
 - `lastUpdate` for a generated list is the most recent date among its constituent tunes' `fileDate`s and its set lists' `dateModified` fields (`listLastUpdate()`/`maxDate()`), falling back to today's date if nothing is available.
 
@@ -110,7 +157,7 @@ In development builds, the plugin registers no hooks at all: tune list generatio
 
 ### Dev server and watching
 
-`devServer` serves `dist/` statically on port 8080 with hot reloading enabled. `devServer.watchFiles` watches `src/**/*` for the dev server's own reload behaviour (distinct from webpack's compiler dependency graph), but explicitly ignores `node_modules/`, `dist/`, `src/generated/`, and `src/tunes/` — so only application code changes trigger a reload; tune data does not. `watchOptions.ignored` mirrors this for webpack's own watcher (also ignoring the legacy `src/tunes.compiled.js` path), for the same reason.
+`devServer` serves `dist/` statically on port 8080 with hot reloading enabled. `devServer.watchFiles` watches `src/**/*` for the dev server's own reload behaviour (distinct from webpack's compiler dependency graph), but explicitly ignores `node_modules/`, `dist/`, `src/generated/`, and `src/data/` — so only application code changes trigger a reload; data files (tunes, recordings, …) do not. `watchOptions.ignored` mirrors this for webpack's own watcher (also ignoring the legacy `src/tunes.compiled.js` path), for the same reason.
 
 ## npm scripts
 
@@ -118,12 +165,12 @@ In development builds, the plugin registers no hooks at all: tune list generatio
 # setup
 npm install
 
-# build tune lists — run this first, and again whenever tune data changes
+# build tune lists — run this first, and again whenever data files change
 npm run build:tunes
 
 # run local version (tune lists are not rebuilt automatically while this
 # is running — re-run `npm run build:tunes` and refresh the browser after
-# editing tunes)
+# editing tunes or other data files)
 npm run dev
 
 # build website — this includes building the tune lists

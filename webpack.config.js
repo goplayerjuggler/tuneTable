@@ -144,8 +144,9 @@ export default (env, argv) => {
 						"**/node_modules/**",
 						"**/dist/**",
 						"**/src/generated/**",
-						// Tune data is no longer watched — run `npm run build:tunes` manually
-						"**/src/tunes/**"
+						// Data files (tunes, recordings, releases, …) are not watched —
+						// run `npm run build:tunes` manually
+						"**/src/data/**"
 					]
 				}
 			}
@@ -155,8 +156,9 @@ export default (env, argv) => {
 				"**/node_modules/**",
 				"**/src/tunes.compiled.js",
 				"**/src/generated/**",
-				// Tune data is no longer watched — run `npm run build:tunes` manually
-				"**/src/tunes/**"
+				// Data files (tunes, recordings, releases, …) are not watched —
+				// run `npm run build:tunes` manually
+				"**/src/data/**"
 			]
 		},
 		optimization: {

@@ -14,7 +14,7 @@ import { fileURLToPath } from "url";
 const execFileAsync = promisify(execFile);
 
 const __dirName = path.dirname(fileURLToPath(import.meta.url));
-const SOURCE_DIR = path.resolve(__dirName, "../src/tunes");
+const SOURCE_DIR = path.resolve(__dirName, "../src/data/tunes");
 const DATES_FILE = path.resolve(__dirName, "tune-dates.json");
 
 // ─── Duration parsing ─────────────────────────────────────────────────────────
@@ -83,7 +83,7 @@ async function updateTuneDates({ onlyCheckWithin = null } = {}) {
     // Cache doesn't exist yet — will be created below
   }
 
-  // `.data.js` files and bare `.abc` files directly under `src/tunes/` both
+  // `.data.js` files and bare `.abc` files directly under `src/data/tunes/` both
   // need a cached commit date. `readdir` is non-recursive, so `collections/`
   // and `set-lists/` are excluded automatically (their entries match neither
   // extension) — files in `collections/` use `%% list-date` instead.

@@ -963,8 +963,7 @@ function addResolvedCrossRef(target, source, refIndex, ref, extra = {}) {
  *      reference's notes (e.g. a track listing that names another tune) — this is now
  *      the normal way to record a cross-reference, and needs no entry on the linked
  *      tune's side at all.
- * Both paths resolve refIndex against the same referencesFromAbc.concat(references)
- * ordering, so indices mean the same thing regardless of which path produced them.
+ * Both paths resolve refIndex against the same ordering, so indices mean the same thing regardless of which path produced them.
  *
  * Sets on each tune:
  *   _crId              — stable integer ID (tunesData index) for generating anchor targets
@@ -994,9 +993,8 @@ function calculateCrossRefs(tunes) {
 			if (!target) return;
 
 			const refIndex = cr.index ?? 0;
-			const ref = (target.referencesFromAbc ?? []).concat(
-				target.references ?? []
-			)?.[refIndex];
+			// explicit crossReferences
+			const ref = target.combinedReferences?.[refIndex];
 			if (!ref) return;
 
 			target._isCrTarget = true;
@@ -1014,24 +1012,22 @@ function calculateCrossRefs(tunes) {
 		// 2. Auto-detect cross-ref links embedded in this tune's own reference notes.
 		// Each match both marks the linked tune as directly reachable (for the inline
 		// link itself) and adds the reverse pointer to this tune's row automatically.
-		(tune.referencesFromAbc ?? [])
-			.concat(tune.references ?? [])
-			.forEach((ref, refIndex) => {
-				if (!ref.notes) return;
+		tune.combinedReferences.forEach((ref, refIndex) => {
+			if (!ref.notes) return;
 
-				CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per note
-				let m;
-				while ((m = CROSS_REF_LINK_RE.exec(ref.notes)) !== null) {
-					const target = resolveTuneById(parseTuneIdStr(m[2]));
-					if (!target) continue;
+			CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per note
+			let m;
+			while ((m = CROSS_REF_LINK_RE.exec(ref.notes)) !== null) {
+				const target = resolveTuneById(parseTuneIdStr(m[2]));
+				if (!target) continue;
 
-					target._isCrTarget = true; // linked tune: direct inline-link target
-					tune._isCrTarget = true; // this tune: target of the reverse pointer below
-					ref._crId = `${tune._crId}-${refIndex}`;
+				target._isCrTarget = true; // linked tune: direct inline-link target
+				tune._isCrTarget = true; // this tune: target of the reverse pointer below
+				ref._crId = `${tune._crId}-${refIndex}`;
 
-					addResolvedCrossRef(target, tune, refIndex, ref);
-				}
-			});
+				addResolvedCrossRef(target, tune, refIndex, ref);
+			}
+		});
 	});
 }
 
@@ -1199,10 +1195,7 @@ function renderTable() {
 
 		// ── References column ─────────────────────────────────────────
 		const acc = { referencesHtml: "", hasTheSessionLink: false };
-		(tune.referencesFromAbc && tune.referencesFromAbc.length > 0
-			? [tune.referencesFromAbc[0]]
-			: []
-		)
+		tune.combinedReferences
 			.concat(tune.references ?? [])
 			.forEach((ref) => formatReference(ref, acc, setUpCrossRefLink));
 
@@ -1453,13 +1446,11 @@ function applyFilters() {
 
 		// Search in references (artists and notes)
 		if (
-			(tune.references ?? [])
-				.concat(tune.referencesFromAbc ?? [])
-				.some(
-					(ref) =>
-						ref.artists?.toLowerCase().includes(searchTerm) ||
-						ref.notes?.toLowerCase().includes(searchTerm)
-				)
+			tune.combinedReferences.some(
+				(ref) =>
+					ref.artists?.toLowerCase().includes(searchTerm) ||
+					ref.notes?.toLowerCase().includes(searchTerm)
+			)
 		)
 			return true;
 
