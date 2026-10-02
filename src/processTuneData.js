@@ -19,14 +19,15 @@ const swingTransform3_4_rhythms =
  * `index` values (see cross-references.md) refer to:
  *   1. `referencesFromAbc`        — derived from the tune's ABC by processTuneData
  *   2. `references`               — entered by hand
- *   3. `referencesFromRecordings` — derived at build time from recordings that
- *                                   contain the tune (see build-entities.mjs)
+ *   3. `referencesFromEntities`   — derived at build time from the reference
+ *                                   entities that link to the tune (audio,
+ *                                   video, web, book…; see build-entities.mjs)
  * Later sources are appended, so adding one never shifts earlier indices.
  */
 function getCombinedReferences(tune) {
 	return (tune.referencesFromAbc ?? []).concat(
 		tune.references ?? [],
-		tune.referencesFromRecordings ?? []
+		tune.referencesFromEntities ?? []
 	);
 }
 
@@ -149,7 +150,7 @@ function processTuneData(tune) {
 		else processed.rhythm = processed.rhythm.toLowerCase();
 		if (!processed.references) processed.references = [];
 
-		tune.combinedReferences = getCombinedReferences(tune);
+		processed.combinedReferences = getCombinedReferences(processed);
 	} catch (error) {
 		console.log(
 			`error processing tune: ${processed.title ?? processed.abc ?? processed.incipit}. Error: ${error}`
@@ -161,7 +162,7 @@ function processTuneData(tune) {
 function reprocessTune(tune, options = {}) {
 	const { removeContour = true } = options;
 
-	// Reprocess tune data (`referencesFromRecordings` is build-derived, so it is kept)
+	// Reprocess tune data (`referencesFromEntities` is build-derived, so it is kept)
 	let reprocessed = Object.assign({}, tune);
 	delete reprocessed.name;
 	delete reprocessed.nameIsFromAbc;

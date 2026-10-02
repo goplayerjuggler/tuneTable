@@ -2,8 +2,8 @@ export default {
 	abc: `X:1
 T:The Maids Of Mitchelstown
 R:reel
-L:1/8
-M:4/2
+L:1/16
+M:4/4
 N:Imported into *tuneTable* on 2026-02-17,
 N:from https://thesession.org/tunes/120#setting120
 N:Setting entered in thesession by user “Jeremy” on 2001-06-04

@@ -1195,9 +1195,9 @@ function renderTable() {
 
 		// ── References column ─────────────────────────────────────────
 		const acc = { referencesHtml: "", hasTheSessionLink: false };
-		tune.combinedReferences
-			.concat(tune.references ?? [])
-			.forEach((ref) => formatReference(ref, acc, setUpCrossRefLink));
+		tune.combinedReferences.forEach((ref) =>
+			formatReference(ref, acc, setUpCrossRefLink)
+		);
 
 		// Cross-reference items
 		(tune._resolvedCrossRefs ?? []).forEach((cr) => {

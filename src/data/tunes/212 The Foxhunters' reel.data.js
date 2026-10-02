@@ -17,11 +17,5 @@ K:Gmajor
 |:dggf ~g2ge dggd egdB|dggf ~g2gd egdB AGAB:|
 |:G2BG dGBG GABG AGAB|~G2BG dGBd egdB AGAB:|`,
 	theSessionId: 511,
-	crossReferences: [
-		{
-			//McMahon & Hill; Lucy Campbell
-			theSessionId: 1552,
-			notes: `Here they start with the C part and then play it all the way through three times before moving on to the next (the Humours of Tulla). So that gives: CDE ABCDE ABCDE ABCDE`
-		}
-	]
+	fileDate: "2026-09-09"
 };

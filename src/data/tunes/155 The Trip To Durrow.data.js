@@ -19,20 +19,12 @@ d2de fefg afdf gfed|(3Bcd ef gbag fdec d2de|
 fdec d2de fded B3c|dBBA dBBA FADE FEE2|
 D2DF ADFA dfed B3c|dBBA FAdB AFEG FDD2:|`,
 	theSessionId: 891,
-	crossReferences: [
-		{
-			theSessionId: 1552,
-			index: 1,
-			//Lucy Campbell - MacMahon & Hill
-			notes:
-				"From “-02:58” onwards. Here they play it “AABBCC”, rather than “AABCBC”, which is the way it tends to be played these days. (The score here is AABBCC.) Because of this, I tagged this tune as “flexible structure”."
-		}
-	],
 	references: [
 		{
 			url: "https://raelachrecords.bandcamp.com/track/reels-the-whigs-of-fyfe-the-sailor-on-the-rock-the-trip-to-durrow",
 			artists: "Aidan Connolly, fiddle; Ruairí McGorman, bouzouki",
 			album: "The Portland Bow (2021)"
 		}
-	]
+	],
+	fileDate: "2026-08-03"
 };

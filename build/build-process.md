@@ -1,6 +1,6 @@
 # Build process
 
-This documents the full build pipeline: how tune data (and the recordings, releases, artists and instruments related to it) becomes the tune-list JSON files and manifest the app loads, and how webpack turns the app itself into a deployable bundle. Aimed at anyone maintaining or extending the build, not at end users.
+This documents the full build pipeline: how tune data (and the references, releases, artists and instruments related to it) becomes the tune-list JSON files and manifest the app loads, and how webpack turns the app itself into a deployable bundle. Aimed at anyone maintaining or extending the build, not at end users.
 
 ## Source layout
 
@@ -22,7 +22,7 @@ src/
         default.data.js        # setLists with groups: "default" (or none)
         alora.data.js          # setLists with groups: "alora"
         steam-up.data.js       # setLists with groups: "su"
-    recordings/                # one file per recording, or many per file
+    references/                # one file per reference, or many per file
       itma recordings.data.js
     releases/
       tommy peoples.data.js
@@ -61,9 +61,9 @@ Both paths converge: for every tune, ABC metadata (key, rhythm, origin, composer
 
 Every `.data.js` file under `src/data/tunes/set-lists/` is evaluated the same way (`parseDataFile`) and their `setLists` arrays concatenated into one flat list. A set list's `groups` field (comma-separated) says which generated list(s) it should be attached to — `setListsFor(group)` filters on that.
 
-### 3. Load entities and attach recordings to tunes
+### 3. Load entities and attach references to tunes
 
-`loadEntities`, `projectRecordings` and `entitiesFor` live in `build/build-entities.mjs`; see "Recordings, releases, artists and instruments" below.
+`loadEntities`, `projectReferences` and `entitiesFor` live in `build/build-entities.mjs`; see "References, releases, artists and instruments" below.
 
 ### 4. Generate lists
 
@@ -78,7 +78,7 @@ Every `.data.js` file under `src/data/tunes/set-lists/` is evaluated the same wa
 `writeList(baseId, tunes, setLists)`:
 1. Filters out `isPrivate` tunes unless `isDevelopment` is true, so private tunes never reach a production build.
 2. Strips build-time-only properties (`groups`, `excludeFromDefault`, `metadataFromAbc` from tunes; `groups` from set lists) via `sanitizeTune`/`sanitizeSetList`.
-3. Adds the entities related to the remaining tunes (`recordings`, `releases`, `artists`, `instruments`, each only if non-empty) via `entitiesFor`.
+3. Adds the entities related to the remaining tunes (`references`, `releases`, `artists`, `instruments`, each only if non-empty) via `entitiesFor`.
 4. Serialises to JSON, MD5-hashes the content, and writes it as `<baseId>.<hash10>.json`.
 
 The content hash in the filename lets the app cache these files aggressively while still picking up changes immediately: a changed list gets a new filename, an unchanged one keeps its old (already-cached) one.
@@ -89,35 +89,47 @@ After all lists are written, any `.json` file already present in `outputDir` tha
 
 `manifest.json` — `{ version, generated, lists: [...], externalSources: [] }` — is always written to `outputDir` (typically `dist/tune-lists/`), at a **stable, unhashed** path so it can be fetched at a known URL both by the browser at runtime and by anyone inspecting the CLI output directly. If `manifestPath` is also given, the same content is additionally written there — used to get the manifest into `src/generated/tune-lists-manifest.json`, which `index.js` statically imports (`import manifest from "./generated/tune-lists-manifest.json"`) so it's bundled directly rather than fetched at runtime.
 
-## Recordings, releases, artists and instruments
+## References, releases, artists and instruments
 
-Four kinds of entity, each a folder of `.data.js` files under `src/data/` (one entity per file or many; each file exports an object or an array, `instruments` a single keyed object). Fields are described in the data-model schema. They are not lists of their own: each generated list JSON gets extra sections holding just the entities related to that list's tunes, so `origin-france.<hash>.json` only carries the recordings, artists etc. that involve French tunes. A list with no related recordings is unchanged.
+Four kinds of entity, each a folder of `.data.js` files under `src/data/` (one entity per file or many; each file exports an object or an array, `instruments` a single keyed object). Fields are described in the data-model schema.
+
+- A **reference** is anything outside the tune data that points at tunes (0..N) and artists (0..N): an audio or video recording — typically one track of a release — a web page, a book. It has an optional `type` (`audio`, `video`, `web`, `book`) and a `language` (absent means English).
+- A **release** is a published whole that references can belong to: an album, a book.
+
+These *entity references* are not to be confused with a tune's own references (`tune.references`, `referencesFromAbc`, `referencesFromEntities`; see `getCombinedReferences` in `processTuneData.js`).
+
+Entities are not lists of their own: each generated list JSON gets extra sections holding just the entities related to that list's tunes, so `origin-france.<hash>.json` only carries the references, artists etc. that involve French tunes. A list with no related references is unchanged.
 
 ### Loading and validation (`loadEntities`)
 
-- Files flagged `excludeFromBuild` are dropped on reading; `isPrivate` entities are dropped after validation unless `isDevelopment` is true. (A credit for a private artist in a public recording then simply shows no name.)
-- **Errors** (the build fails, all listed together): an entity with none of its identifiers; the same identifier used twice; a duplicate instrument key; `credits.indexes` outside the recording's `tunes`.
-- **Warnings**: a `releaseId` matching no release; a credit `id`/`qId` matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. `tunes` entries with only a title are never warned about. A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
-- A recording without an `id` is given one: `<release identifier>#<trackNumber>`.
+- Files flagged `excludeFromBuild` are dropped on reading; `isPrivate` entities are dropped after validation unless `isDevelopment` is true. (A credit for a private artist in a public reference then simply shows no name.)
+- A reference is identified by its `id`, or by a release identifier + `trackNumber`, or — only when it has neither — by its first URL. That makes a web page need no `id`; a book without a URL does.
+- **Errors** (the build fails, all listed together): an entity with none of its identifiers; the same identifier used twice; a duplicate instrument key; `credits.indexes` outside the reference's `tunes`.
+- **Warnings**: an unknown `type`; a `releaseId` matching no release; a credit `id`/`qId` matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. `tunes` entries with only a title are never warned about. A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
+- A reference without an `id` is given one: `<release identifier>#<trackNumber>`, else its first URL.
 - Credits resolve to artists by `id`, then `qId`; a credit with only a `name` is inline.
 
-### Attaching recordings to tunes (`projectRecordings`)
+### Attaching references to tunes (`projectReferences`)
 
-For each entry in a recording's `tunes` that matches a loaded tune (by `theSessionId`, then `ttId`, across all tunes, not per list), a reference-shaped object is appended to that tune's `referencesFromRecordings`:
+For each entry in a reference's `tunes` that matches a loaded tune (by `theSessionId`, then `ttId`, across all tunes, not per list), a tune-shaped reference object is appended to that tune's `referencesFromEntities`:
 
 | Field | Content |
 |---|---|
-| `recordingId` | the recording's `id` (used to find its entities in the list JSON) |
-| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include it), as `Name (instrument, …)` using the English instrument labels; unknown performers are skipped |
-| `url` | the recording's first URL, falling back to the release's |
+| `referenceId` | the reference's `id` (used to find its entities in the list JSON) |
+| `type` | the reference's `type`, if any |
+| `language` | the reference's `language`, if any (absent means English) |
+| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include it), as `Name (role, instrument, …)` using the English instrument labels; unknown performers are skipped |
+| `url` | the reference's first URL, falling back to the release's |
 | `album` | release title and year |
-| `notes` | track number and title, the tune's time range, the tune entry's and recording's `notes`, any further URLs |
+| `notes` | track number and title, the tune's time range, the tune entry's and reference's `notes`, any further URLs |
 
-This shape is what `formatReference` in `utils.js` already renders, so the app shows recordings on tune rows without further changes; `index.js` only needs to append `referencesFromRecordings` after `references` (see `getCombinedReferences` in `processTuneData.js`).
+`url`, `album`, `artists` and `notes` are the shape that `formatReference` in `utils.js` already renders, so the app shows these references on tune rows without further changes; `type` and `language` are extra fields it can use. `index.js` only needs to append `referencesFromEntities` after `references` (see `getCombinedReferences` in `processTuneData.js`).
+
+A reference that matches no loaded tune is validated but not published in any list: for now a tune is the only way into a list.
 
 ### Per-list subsets (`entitiesFor`)
 
-Given the tunes that will be published in a list, the recordings that they point to via `recordingId` are included, plus the releases, artists and instruments those recordings use.
+Given the tunes that will be published in a list, the references that they point to via `referenceId` are included, plus the releases, artists and instruments those references use.
 
 ## Tune-dates cache — `build/tune-dates.json` and `update-tune-dates.mjs`
 
@@ -127,7 +139,7 @@ Tune `lastUpdate` values need a stable "when was this last changed" date, and `g
 - `npm run update-dates` runs `git log -n 1 --follow --format=%ai -- <file>` for every `.data.js`/`.abc` file directly under `src/data/tunes/` and updates the cache if the date has changed. `--follow` means renames don't lose history.
 - `npm run update-dates -- only-check <duration>` (e.g. `4h`, `30m`, `7d`) restricts the git lookups to files whose mtime is within that window, so a quick "I just edited a couple of files" pass doesn't have to re-check everything.
 - `build-tune-lists.mjs` never writes this file; it only reads it and warns if a file has no cached date, telling you to run `update-dates`.
-- Recordings, releases, artists and instruments are not covered by this cache either, and don't affect a list's `lastUpdate`.
+- References, releases, artists and instruments are not covered by this cache either, and don't affect a list's `lastUpdate`.
 - Collections under `tunes/collections/` are not covered by this cache — they use the `%% list-date` header directive instead, since each collection is a single external file rather than something tracked tune-by-tune in this repo's git history.
 - `lastUpdate` for a generated list is the most recent date among its constituent tunes' `fileDate`s and its set lists' `dateModified` fields (`listLastUpdate()`/`maxDate()`), falling back to today's date if nothing is available.
 
@@ -157,7 +169,7 @@ In development builds, the plugin registers no hooks at all: tune list generatio
 
 ### Dev server and watching
 
-`devServer` serves `dist/` statically on port 8080 with hot reloading enabled. `devServer.watchFiles` watches `src/**/*` for the dev server's own reload behaviour (distinct from webpack's compiler dependency graph), but explicitly ignores `node_modules/`, `dist/`, `src/generated/`, and `src/data/` — so only application code changes trigger a reload; data files (tunes, recordings, …) do not. `watchOptions.ignored` mirrors this for webpack's own watcher (also ignoring the legacy `src/tunes.compiled.js` path), for the same reason.
+`devServer` serves `dist/` statically on port 8080 with hot reloading enabled. `devServer.watchFiles` watches `src/**/*` for the dev server's own reload behaviour (distinct from webpack's compiler dependency graph), but explicitly ignores `node_modules/`, `dist/`, `src/generated/`, and `src/data/` — so only application code changes trigger a reload; data files (tunes, references, …) do not. `watchOptions.ignored` mirrors this for webpack's own watcher (also ignoring the legacy `src/tunes.compiled.js` path), for the same reason.
 
 ## npm scripts
 

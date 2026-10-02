@@ -7,7 +7,7 @@ import abcTools from "@goplayerjuggler/abc-tools";
 import { parseDataFile } from "./parse-data-file.mjs";
 import {
   loadEntities,
-  projectRecordings,
+  projectReferences,
   entitiesFor
 } from "./build-entities.mjs";
 
@@ -16,7 +16,7 @@ const { getMetadata, getTunes } = abcTools;
 const __dirName = path.dirname(fileURLToPath(import.meta.url));
 
 // All hand-maintained data lives under src/data: tunes/ (below), plus the
-// recordings/, releases/, artists/ and instruments/ entity folders
+// references/, releases/, artists/ and instruments/ entity folders
 // (see build-entities.mjs).
 const DATA_DIR = path.resolve(__dirName, "../src/data");
 const SOURCE_DIR = path.resolve(DATA_DIR, "tunes");
@@ -214,7 +214,7 @@ const listLastUpdate = (tunes, setLists) =>
  * `tunes/collections/` each become their own standalone list — and the set
  * lists split across `tunes/set-lists/*.data.js`.
  *
- * Recordings, releases, artists and instruments (see build-entities.mjs) are
+ * References, releases, artists and instruments (see build-entities.mjs) are
  * not lists of their own: each list JSON embeds the subset related to its tunes.
  *
  * `lastUpdate` for each generated list reflects the most recent date among
@@ -305,12 +305,12 @@ export async function buildTuneLists({
     }
   }
 
-  // Entities: recordings add `referencesFromRecordings` to the tunes they contain;
+  // Entities: references add `referencesFromEntities` to the tunes they link to;
   // each list then embeds the related subset (see writeList).
   const entities = await loadEntities(DATA_DIR, { isDevelopment });
-  projectRecordings(entities, tunesFromSourceFiles);
+  projectReferences(entities, tunesFromSourceFiles);
   console.log(
-    `Found ${entities.recordings.length} recordings, ${entities.releases.length} releases, ${entities.artists.length} artists`
+    `Found ${entities.references.length} references, ${entities.releases.length} releases, ${entities.artists.length} artists`
   );
 
   await fs.mkdir(outputDir, { recursive: true });

@@ -1,5 +1,6 @@
 export default {
 	groups: "su",
+	qId: 61070707,
 	abc: `X:1
 T:Drowsy Maggie
 R:reel
@@ -15,5 +16,6 @@ K:Edorian
 d2fd c2ec defg afge|d2fd c2ec BABc dAFA|
 d2fd c2ec defg afge|afge fdec BABc dAFD|`,
 	theSessionId: 27,
-	parts: "AB"
+	parts: "AB",
+	fileDate: "2026-08-03"
 };

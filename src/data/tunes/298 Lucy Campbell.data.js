@@ -29,14 +29,6 @@ dB|AD~D2 A3B ADFA BE~E2|ADFA dfec dBAF AD~D2|
 				"Has some similarities with [The Bucks Of Oranmore](theSessionId=2). I’ve seen settings of the two tunes that start identically."
 		},
 		{
-			artists: "Tony MacMahon, accordion; Noel Hill, concertina",
-			url: "https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7",
-			notes: `[Sally Gardens](theSessionId=98) / [The foxhunters](theSessionId=511) / [The humours of Tulla](theSessionId=141) / [The flogging reel](theSessionId=195) / Lucy Campbell / [Toss the feathers](theSessionId=113) / Lucy Campbell / [Trip to Durrow](theSessionId=891) (1993)
-I’ve listed to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
-Warning for ITMA pages: you have to click on the link in the player. 7:58 (-06:48)
-Just after Toss the feathers they come back to Lucy Campbell, playing it twice before moving on. “Let's go back to Lucy!”`
-		},
-		{
 			notes: `Chords (TBC):
 \`\`\`
 Part A
@@ -60,5 +52,6 @@ D - (D/F) (D, Dsus4, G or Em) D - Em -
 \`\`\``
 		}
 	],
-	theSessionId: 1552
+	theSessionId: 1552,
+	fileDate: "2026-09-09"
 };
