@@ -965,6 +965,15 @@ function addResolvedCrossRef(target, source, refIndex, ref, extra = {}) {
  *      tune's side at all.
  * Both paths resolve refIndex against the same ordering, so indices mean the same thing regardless of which path produced them.
  *
+ * A tune whose own references link to tune B never gets a pointer to B as well (from
+ * either source): its row already links to B. So when A and B link to each other,
+ * neither row gets a pointer.
+ *
+ * The tune list that the build writes into the notes of a reference entity with
+ * several tunes (`ref.tuneList`, see tuneListLine in build-entities.mjs) only makes
+ * its targets reachable by anchor: it adds no pointer, since every tune in it shows
+ * that reference itself. Links the author wrote in those notes work as usual.
+ *
  * Sets on each tune:
  *   _crId              — stable integer ID (tunesData index) for generating anchor targets
  *   _isCrTarget         — true if this tune's row is the target of any cross-reference link
@@ -986,11 +995,16 @@ function calculateCrossRefs(tunes) {
 		if (tune.ttId) _crByTtId.set(tune.ttId, tune);
 	});
 
+	// The links in each tune's own reference notes, resolved: { ref, refIndex, target }.
+	const linksByTune = new Map(tunes.map((tune) => [tune, crossRefLinks(tune)]));
+	const linksTo = (from, to) =>
+		linksByTune.get(from).some((link) => link.target === to);
+
 	tunes.forEach((tune) => {
 		// 1. Resolve explicit crossReferences entries
 		(tune.crossReferences ?? []).forEach((cr) => {
 			const target = resolveTuneById(cr);
-			if (!target) return;
+			if (!target || linksTo(tune, target)) return;
 
 			const refIndex = cr.index ?? 0;
 			// explicit crossReferences
@@ -1010,25 +1024,43 @@ function calculateCrossRefs(tunes) {
 		});
 
 		// 2. Auto-detect cross-ref links embedded in this tune's own reference notes.
-		// Each match both marks the linked tune as directly reachable (for the inline
-		// link itself) and adds the reverse pointer to this tune's row automatically.
-		tune.combinedReferences.forEach((ref, refIndex) => {
-			if (!ref.notes) return;
+		// Each match marks the linked tune as directly reachable (for the inline link
+		// itself) and, unless that tune's row links back here already, adds the reverse
+		// pointer to its row. Links in a build-generated tune list get no pointer.
+		linksByTune.get(tune).forEach(({ ref, refIndex, target, generated }) => {
+			target._isCrTarget = true; // linked tune: direct inline-link target
+			if (generated || linksTo(target, tune)) return; // generated tune list, or its row links back here (or it is this tune)
 
-			CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per note
-			let m;
-			while ((m = CROSS_REF_LINK_RE.exec(ref.notes)) !== null) {
-				const target = resolveTuneById(parseTuneIdStr(m[2]));
-				if (!target) continue;
+			tune._isCrTarget = true; // this tune: target of the reverse pointer below
+			ref._crId = `${tune._crId}-${refIndex}`;
 
-				target._isCrTarget = true; // linked tune: direct inline-link target
-				tune._isCrTarget = true; // this tune: target of the reverse pointer below
-				ref._crId = `${tune._crId}-${refIndex}`;
-
-				addResolvedCrossRef(target, tune, refIndex, ref);
-			}
+			addResolvedCrossRef(target, tune, refIndex, ref);
 		});
 	});
+}
+
+/**
+ * The tunes linked from a tune's own references, via `[label](theSessionId=…|ttId=…)` in their notes.
+ * `generated` is true for links inside the build-generated tune list (`ref.tuneList`).
+ */
+function crossRefLinks(tune) {
+	const links = [];
+	tune.combinedReferences.forEach((ref, refIndex) => {
+		if (!ref.notes) return;
+
+		const listAt = ref.tuneList ? ref.notes.indexOf(ref.tuneList) : -1;
+		CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per note
+		let m;
+		while ((m = CROSS_REF_LINK_RE.exec(ref.notes)) !== null) {
+			const target = resolveTuneById(parseTuneIdStr(m[2]));
+			const generated =
+				listAt >= 0 &&
+				m.index >= listAt &&
+				m.index < listAt + ref.tuneList.length;
+			if (target) links.push({ ref, refIndex, target, generated });
+		}
+	});
+	return links;
 }
 
 function sortWithDefaultSort() {

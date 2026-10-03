@@ -91,7 +91,30 @@ After all lists are written, any `.json` file already present in `outputDir` tha
 
 ## References, releases, artists and instruments
 
-Four kinds of entity, each a folder of `.data.js` files under `src/data/` (one entity per file or many; each file exports an object or an array, `instruments` a single keyed object). Fields are described in the data-model schema.
+Four kinds of entity, each a folder of `.data.js` files under `src/data/` (one entity per file or many; each file exports an object or an array, `instruments` a single keyed object).
+
+### Minimal schema
+
+Every field is optional unless stated. At least one *identifier* must be non-null on each artist, release and reference.
+
+| Entity | Identifiers | Other fields |
+|---|---|---|
+| artist | `id` (local), `qId` (Wikidata QID, integer), `theSessionComposerId` | `name`, `instruments` (keys, first = main instrument), `notes`, `urls` |
+| release | `id` (local), `mbId`, `discogsId`, `theSessionRecordingId` | `title`, `year`, `notes`, `urls` |
+| reference | `id` (local); or a release identifier (`releaseId`, `mbId`, `discogsId`, `theSessionRecordingId`) + `trackNumber`; or, failing both, `urls[0]` | `type`, `language`, `title`, `duration`, `notes`, `urls`, `tunes`, `credits` |
+| instrument | the key | `{ qId, en, fr }` |
+
+A reference's two lists:
+
+- `tunes` — ordered, in the sequence of the reference. Each entry has `theSessionId` or `ttId` (links a tune in the data), or just a `title` (not in the data yet); plus optional `startTime`, `endTime` (audio and video) and `notes`.
+- `credits` — each has `id` or `qId` (a known artist) or `name` (inline; `null` keeps the slot of an unknown performer), plus `instruments` (keys), `role` (free text, for non-performers: `author`) and `indexes` (0-based positions in `tunes`; absent = the whole reference).
+
+```js
+{ id: "fog-is-lifting-track-3", releaseId: "fog-is-lifting-2025", trackNumber: 3,
+  urls: ["https://…"],
+  tunes: [{ title: "The Stage" }, { theSessionId: 2716, startTime: "3:26" }],
+  credits: [{ id: "sylvain-barou", indexes: [1] }, { name: "Libby McCrohan", instruments: ["bouzouki"] }] }
+```
 
 - A **reference** is anything outside the tune data that points at tunes (0..N) and artists (0..N): an audio or video recording — typically one track of a release — a web page, a book. It has an optional `type` (`audio`, `video`, `web`, `book`) and a `language` (absent means English).
 - A **release** is a published whole that references can belong to: an album, a book.
@@ -108,22 +131,35 @@ Entities are not lists of their own: each generated list JSON gets extra section
 - **Warnings**: an unknown `type`; a `releaseId` matching no release; a credit `id`/`qId` matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. `tunes` entries with only a title are never warned about. A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
 - A reference without an `id` is given one: `<release identifier>#<trackNumber>`, else its first URL.
 - Credits resolve to artists by `id`, then `qId`; a credit with only a `name` is inline.
+- A credit that resolves to an artist, and has neither `role` nor `instruments`, gets the artist's first instrument (`artist.instruments[0]`). This is done on load, so the published credits carry it too. Give the credit its own `instruments` to override.
 
 ### Attaching references to tunes (`projectReferences`)
 
-For each entry in a reference's `tunes` that matches a loaded tune (by `theSessionId`, then `ttId`, across all tunes, not per list), a tune-shaped reference object is appended to that tune's `referencesFromEntities`:
+For each loaded tune that a reference's `tunes` matches (by `theSessionId`, then `ttId`, across all tunes, not per list), one tune-shaped reference object is appended to that tune's `referencesFromEntities`:
 
 | Field | Content |
 |---|---|
 | `referenceId` | the reference's `id` (used to find its entities in the list JSON) |
 | `type` | the reference's `type`, if any |
 | `language` | the reference's `language`, if any (absent means English) |
-| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include it), as `Name (role, instrument, …)` using the English instrument labels; unknown performers are skipped |
+| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include any of its positions), as `Name (role, instrument, …)` using the English instrument labels; unknown performers are skipped |
 | `url` | the reference's first URL, falling back to the release's |
 | `album` | release title and year |
-| `notes` | track number and title, the tune's time range, the tune entry's and reference's `notes`, any further URLs |
+| `notes` | track number and title, the list of the reference's tunes (when it has several), the tune's time range and the tune entry's `notes` (once per mention), the reference's `notes`, any further URLs |
 
 `url`, `album`, `artists` and `notes` are the shape that `formatReference` in `utils.js` already renders, so the app shows these references on tune rows without further changes; `type` and `language` are extra fields it can use. `index.js` only needs to append `referencesFromEntities` after `references` (see `getCombinedReferences` in `processTuneData.js`).
+
+A reference with several tunes appears on each of them. In the `notes` it lists all its tunes, in order, separated by ` / `, followed by a summary of their `rhythm`s in brackets:
+
+```text
+The Stage / [Ag Filleadh Abhaile](theSessionId=1234) / [O'Mahoney's](theSessionId=2716) (reel; 2 hornpipes)
+```
+
+- A tune that the reference mentions more than once gets a single merged reference: all its positions in the list are plain text, the credits are those of any of its positions, and the notes carry the time range and notes of each mention.
+- The tune whose row it is, and any tune not in the data, are plain text; every other tune is a note link, which `formatNoteLinks` turns into an anchor to that tune's row.
+- The summary counts the rhythms of the tunes found in the data, lower-cased, in order of first appearance: `2 jigs; hop jig`, `7 reels`, `slow air; 2 strathspeys; reel`. Tunes without a rhythm are left out.
+- A tune's name and rhythm are read from `tune.name` / `tune.rhythm`, falling back to `metadataFromAbc` (`tuneName`, `tuneRhythm` in `build-entities.mjs`).
+- These links are ordinary note links, so `calculateCrossRefs` sees them; it adds no pointer between tunes that already link to each other (see `src/cross-references.md`).
 
 A reference that matches no loaded tune is validated but not published in any list: for now a tune is the only way into a list.
 

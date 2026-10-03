@@ -19,7 +19,7 @@ export default [
 	{ id: "macmahon_to", name: "Tony MacMahon", instruments: ["accordion"] },
 	{
 		id: "oconnor_mi",
-		name: "Mick O'Connor",
+		name: "Mick O’Connor",
 		instruments: ["banjo"],
 		notes: `London’s Mick O’Connor, All Ireland winner on the tenor banjo in 1971, has been playing since 1967 and is a veteran of the great days of the London Irish music scene of the 1960s, 70s and 80s. In 2013, he was honoured by Comhaltas Ceoltóirí Éireann, which bestowed its Bardic Award on him for his “exceptional contribution to the promotion of Ireland’s cultural traditions”. He's one of the true gentlemen of Irish music, a fantastic music historian and has an encyclopaedic knowledge of Irish musicians worldwide over 50 years of playing and touring. A master story teller with a wicked sense of wit and humour, you're going to love this episode! ([Enda Scahill podcast / youtube](https://www.youtube.com/watch?v=lznc4KH0Cek))
 Was awarded the Mike Flanagan Banjo Award in Wexford on 7th August 2025.` //todo https://www.facebook.com/watch/?v=24175155408811016
@@ -31,6 +31,7 @@ Special Contribution Award / Gradam na gCeoltóirí 2017 Mick O’Connor, Co. Du
 https://www.tg4.ie/en/other-brands/gradam-ceoil/previous-winners/special-contribution/
 */
 	},
+	{ id: "omurchu_ma", name: "Marcas Ó Murchú", instruments: ["flute"] },
 	{
 		id: "peoples_to",
 		qId: 2012622,
@@ -42,5 +43,6 @@ https://www.tg4.ie/en/other-brands/gradam-ceoil/previous-winners/special-contrib
 			"https://en.wikipedia.org/wiki/Tommy_Peoples",
 			"https://www.itma.ie/collections/tommy-peoples/"
 		]
-	}
+	},
+	{ id: "whelan_ed", name: "Eddie Whelan", instruments: ["guitar"] }
 ];

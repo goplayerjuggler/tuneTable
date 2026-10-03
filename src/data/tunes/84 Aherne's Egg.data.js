@@ -1,4 +1,4 @@
-export default {
+export default {}; /*{
 	abc: [
 		`X:1
 T:Aherne's Egg
@@ -31,3 +31,4 @@ BGB ~e2c dAF DFA|G/A/BG AFB[1 EBE {B}EGB:|2 EBE {B}E2||`
 	theSessionSettingId: 17067,
 	excludeFromBuild: true
 };
+*/

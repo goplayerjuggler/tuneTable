@@ -10,8 +10,7 @@ export default [
 			{
 				//foxhunters
 				theSessionId: 511,
-				notes:
-					"`Here they start with the C part and then play it all the way through three times before moving on to the next (the Humours of Tulla). So that gives: CDE ABCDE ABCDE ABCDE`"
+				notes: `Here they start with the C part and then play it all the way through three times before moving on to the next (the Humours of Tulla). So that gives: CDE ABCDE ABCDE ABCDE`
 			},
 			{
 				//tulla
