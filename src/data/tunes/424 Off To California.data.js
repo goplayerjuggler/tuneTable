@@ -1,5 +1,5 @@
 export default {
-	groups: "blr",
+	groups: "blr,alora",
 	abc: `X:1
 T:Off To California
 R:hornpipe
@@ -17,5 +17,6 @@ GFGB AGED GBdg e2df|gfgd edBG ABAF G4:|`,
 	theSessionId: 30,
 	theSessionSettingId: 30,
 	parts: "AABB",
-	norbeckId: 81
+	norbeckId: 81,
+	fileDate: "2026-08-21"
 };
