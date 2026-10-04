@@ -697,6 +697,7 @@ export default class AbcModal extends Modal {
 
 		(currentAbcRef ? [currentAbcRef] : [])
 			.concat(this.tune.references ?? [])
+			.concat(this.tune.referencesFromEntities ?? [])
 			.forEach((ref) => formatReference(ref, acc));
 		if (acc.referencesHtml) {
 			const p = document.createElement("p");
