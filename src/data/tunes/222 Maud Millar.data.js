@@ -24,27 +24,28 @@ P:Coda
 P:Variations/embellishments
 "_v0"GBDE||"_v1"Be||"_v2"dG||"_v3"e/g/e||"_v4"eBdB ABGA||"_v5"ABGA||
 "_v6"A/B/AGA||"_v7"Bged||"_v8"G/G/G||"_v9"BeeB||||"_v10"efgf||"_v11"eage||`,
-		`
-
-X: 2
+		`X: 2
 T: Maud Millar
 R: reel
 S: Frankie Gavin, fiddle; Brian McGrath, Piano
 D: Fierce Traditional
 Z:abc-transcription Malcolm Schonfield%2026-10-01 - 04
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-N:An incomplete transcription 
+N:An incomplete transcription.
+H:I think he's playing on a fiddle that's tuned a semitone sharper than the standard tuning.
 M:4/4
 L:1/16
 K: Eb
 %swing 0.15
 %swing_offset 0
-"_lento, acell."y/2 !slide!e3.d  || cBGF ECB,C  "_a tempo" E2{A}GE  B,EGB|cGBG F2EF  GccB cded|
-cBGF EGB,C   EEGE B,EGB|cGBG F2EF  GccB  c2ec||
-Bcef geeg   fc~c2 efec| B/B/BGB geeg  f2{e}cB cefe|
-Bcef geeg   fc~c2 ~e3f|gfed edcB  Gc3 cfed||
-cBGF EG (3B,CD  E2GE  B,EGB|ecBG F2EF  Gcc2 Gced |
-cGFG FGB,C  E2GE B,EGB | cGBG FGEF  
+"_lento, acell."y/2 !slide!e3.d  || cBGF ECB,C  "_a tempo" E2{A}GE  B,EGB|cGBG !slide!!tenuto!F2EF  GccB cded|
+cBGF EGB,C EEGE B,EGB|cGBG !slide!!tenuto!F2EF  GccB  c2ec||
+Bcef geeg fc~c2 efec| B/B/BGB geeg  f2{e}cB cefe|
+[BE]cef geeg   fc~c2 [Ee]3f|gfed edcB  Gc3 cfed||
+cBGF EG (3B,CD  E2GE  B,EGB|ecBG !slide!!tenuto!F2EF  Gcc2 Gcec |
+BGFG FGB,C  !tenuto!E2GE B,EGB | ecBG F/F/FEF  GccB cfec ||
+Bcef ge[eE]g fc~c2 [eE]dec| B[eE]3 geeg  f2{e}cB cefz|
+[BE]cef geeg   fc~c2 edef|!slide!!tenuto!gfed edcB  GccB cfed||  
 `
 	],
 	references: [
