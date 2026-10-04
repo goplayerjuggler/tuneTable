@@ -1,5 +1,4 @@
 export default {
-	isPrivate: true, //todo
 	parts: "AABB",
 	abc: `X: 6
 T: The Rainy Day
@@ -14,12 +13,5 @@ K: Ador
 |:eaag ~a3g ba~a2 bgag|eggf ~g3a bg~g2 bgag|
   ea~a2 aged (3Bcd ef g2ag|eaag egdG|1 B2dB A3d:|2 B2dB A3G||
 `,
-	theSessionId: 1807,
-	references: [
-		{
-			artists: "Antóin MacGabhann, fiddle; Eddie Whelan, guitar",
-			album: "Doorways & Windowsills",
-			notes: `The Rainy Day / [The Flowers Of Redhill](theSessionId=2867) `
-		}
-	]
+	theSessionId: 1807
 };

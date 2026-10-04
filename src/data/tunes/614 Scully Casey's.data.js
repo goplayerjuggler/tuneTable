@@ -1,5 +1,4 @@
 export default {
-	isPrivate: true, //todo
 	parts: "AABB",
 	abc: `X: 1
 T: Take Your Churn
