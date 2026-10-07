@@ -7,7 +7,7 @@ import {
 } from "@goplayerjuggler/abc-tools";
 import Modal from "./Modal.js";
 import AbcJs from "abcjs";
-import { reprocessTune } from "../../processTuneData.js";
+import { getCombinedReferences, reprocessTune } from "../../processTuneData.js";
 import { resolveAbcForEntry, tuneMatchesEntry } from "../setUtils.js";
 import { sendToEskinsTool } from "./sendToEskinsTool.js";
 import { formatReference } from "../../utils.js";
@@ -674,17 +674,8 @@ export default class AbcModal extends Modal {
 		if (this.isSetMode || !this.tune) return;
 
 		// Only the reference from the currently-displayed setting is relevant here;
-		// referencesFromAbc entries are tagged with the ABC-array index they came from
-		// (see processTuneData.js), since not every setting necessarily has one.
-		const currentAbcRef = (this.tune.referencesFromAbc ?? []).find(
-			(ref) => ref._abcIndex === this.currentAbcIndex
-		);
-		if (
-			!currentAbcRef &&
-			(this.tune.references?.length ?? 0) === 0 &&
-			!this.tune.fileDate
-		)
-			return;
+		const references = getCombinedReferences(this.tune, this.currentAbcIndex);
+		if (!references.length && !this.tune.fileDate) return;
 
 		const block = document.createElement("div");
 		block.className = "abc-meta-fields notes";
@@ -695,10 +686,7 @@ export default class AbcModal extends Modal {
 
 		const acc = { referencesHtml: "", hasTheSessionLink: false };
 
-		(currentAbcRef ? [currentAbcRef] : [])
-			.concat(this.tune.references ?? [])
-			.concat(this.tune.referencesFromEntities ?? [])
-			.forEach((ref) => formatReference(ref, acc));
+		references.forEach((ref) => formatReference(ref, acc));
 		if (acc.referencesHtml) {
 			const p = document.createElement("p");
 			p.innerHTML = acc.referencesHtml;

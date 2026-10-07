@@ -308,8 +308,8 @@ export async function buildTuneLists({
     }
   }
 
-  // Entities: references add `referencesFromEntities` to the tunes they link to;
-  // each list then embeds the related subset (see writeList).
+  // Entities: references link the tunes that they mention (`referencesFromEntities`,
+  // as `{ referenceId, indices }`); each list then embeds the related subset (see writeList).
   const entities = await loadEntities(DATA_DIR, { isDevelopment });
   projectReferences(entities, tunesFromSourceFiles);
   console.log(

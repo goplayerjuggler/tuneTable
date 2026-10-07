@@ -32,6 +32,10 @@ import { eventBus } from "./modules/events/EventBus.js";
 import javascriptify from "@goplayerjuggler/abc-tools/src/javascriptify.js";
 import IntroModal from "./modules/modals/IntroModal.js";
 import { formatReference } from "./utils.js";
+import {
+	createEntityModel,
+	hydrateReferencesFromEntities
+} from "./entityReferences.mjs";
 
 // Legacy key kept for one-time cleanup only
 const storageKey = "tunesData";
@@ -428,12 +432,27 @@ async function onListSelected({
 	tunes,
 	setLists,
 	lastUpdate,
-	defaultSort
+	defaultSort,
+	// entities of the list: absent in local lists saved with the old, expanded shape
+	references,
+	releases,
+	artists,
+	instruments
 }) {
+	// Kept for features that show details of recordings, artists etc.
+	window.entities = createEntityModel({
+		references,
+		releases,
+		artists,
+		instruments
+	});
+
 	// Server/external tunes are raw; local tunes are already processed.
-	window.tunesData = window.tunesData = (tunes ?? [])
-		.filter(Boolean)
-		.map(processTuneData);
+	// Links to entities are expanded first, since processTuneData builds `combinedReferences` from them.
+	window.tunesData = hydrateReferencesFromEntities(
+		(tunes ?? []).filter(Boolean),
+		window.entities
+	).map(processTuneData);
 
 	calculateCrossRefs(window.tunesData);
 
@@ -476,7 +495,8 @@ async function loadServerListById(
 ) {
 	const res = await fetch(`./tune-lists/${listFile}`);
 	if (!res.ok) throw new Error(`HTTP ${res.status}`);
-	const { tunes, setLists } = await res.json();
+	const { tunes, setLists, references, releases, artists, instruments } =
+		await res.json();
 	await onListSelected({
 		source: "server",
 		sourceId: listId,
@@ -484,7 +504,11 @@ async function loadServerListById(
 		tunes,
 		setLists,
 		lastUpdate,
-		defaultSort
+		defaultSort,
+		references,
+		releases,
+		artists,
+		instruments
 	});
 }
 
@@ -499,7 +523,11 @@ async function resumeCurrentList(listState, manifest) {
 			tunes: slot.tunes ?? [],
 			setLists: slot.setLists ?? [],
 			lastUpdate: slot.modified,
-			defaultSort: slot.defaultSort
+			defaultSort: slot.defaultSort,
+			references: slot.references,
+			releases: slot.releases,
+			artists: slot.artists,
+			instruments: slot.instruments
 		});
 	} else if (listState.source === "server") {
 		const listInfo = manifest?.lists.find((l) => l.id === listState.sourceId);
@@ -646,6 +674,10 @@ function prepareTunesForExport(tunes) {
 		delete tune._isCrTarget;
 		delete tune._resolvedCrossRefs;
 		(tune.references ?? []).forEach((ref) => delete ref._crId);
+		(tune.referencesFromEntities ?? []).forEach((ref) => {
+			delete ref._crId;
+			delete ref._tuneList;
+		});
 
 		if (tune.scores?.length === 0) delete tune.scores;
 		if (tune.references?.length === 0) delete tune.references;
@@ -916,7 +948,7 @@ function resolveTuneById(idObj) {
 	return null;
 }
 
-const CR_NOT_ON_SCREEN = " (currently not on-screen)";
+const CR_NOT_ON_SCREEN = ""; //" (currently not on-screen)";
 
 // Replace [label](target) patterns in note text.
 // Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row;
@@ -953,6 +985,46 @@ function addResolvedCrossRef(target, source, refIndex, ref, extra = {}) {
 }
 
 /**
+ * The "See entry under …" pointers of a tune row (`tune._resolvedCrossRefs`) as one
+ * block. One item per tune pointed to (a tune with several references to this one is
+ * listed once, with their details together); tunes that are on screen are links, the
+ * others are named in a second list. `onScreenIds` holds the `_crId` of the tunes shown.
+ */
+function crossRefsHtml(crossRefs, onScreenIds) {
+	const groups = new Map();
+	crossRefs.forEach(({ tuneId, tuneName, artistNames, notes }) => {
+		//`<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
+		//260506 broken - todo - fix
+		const detail = [artistNames, notes].filter(Boolean).join(": ");
+		const group = groups.get(tuneId) ?? { tuneId, tuneName, details: [] };
+		if (detail) group.details.push(detail);
+		groups.set(tuneId, group);
+	});
+	const onScreen = [];
+	const offScreen = [];
+	groups.forEach((g) =>
+		(onScreenIds.has(g.tuneId) ? onScreen : offScreen).push(g)
+	);
+
+	const item = (g, name) =>
+		name + (g.details.length ? ` (${g.details.join(" / ")})` : "");
+	const sentences = [];
+	if (onScreen.length)
+		sentences.push(
+			`See ${onScreen.length > 1 ? "entries under:" : "entry under"} ${onScreen
+				.map((g) => item(g, `<a href="#cr-t${g.tuneId}">${g.tuneName}</a>`))
+				.join("; ")}.`
+		);
+	if (offScreen.length)
+		sentences.push(
+			`Cross-referenced to: ${offScreen.map((g) => item(g, g.tuneName)).join("; ")}.${CR_NOT_ON_SCREEN}`
+		);
+	return sentences.length
+		? `<div class="reference-item reference-item--cr">[${sentences.join(" ")}]</div>`
+		: "";
+}
+
+/**
  * Annotate tunes with cross-reference data. Called once when a full data set is loaded.
  *
  * Cross-refs come from two sources:
@@ -969,10 +1041,10 @@ function addResolvedCrossRef(target, source, refIndex, ref, extra = {}) {
  * either source): its row already links to B. So when A and B link to each other,
  * neither row gets a pointer.
  *
- * The tune list that the build writes into the notes of a reference entity with
- * several tunes (`ref.tuneList`, see tuneListLine in build-entities.mjs) only makes
+ * The tune list that the build keeps beside the notes of a reference entity with
+ * several tunes (`ref._tuneList`, see tuneListLine in entityReferences.mjs) only makes
  * its targets reachable by anchor: it adds no pointer, since every tune in it shows
- * that reference itself. Links the author wrote in those notes work as usual.
+ * that reference itself. Links in `notes` work as usual.
  *
  * Sets on each tune:
  *   _crId              — stable integer ID (tunesData index) for generating anchor targets
@@ -1040,29 +1112,27 @@ function calculateCrossRefs(tunes) {
 }
 
 /**
- * The tunes linked from a tune's own references, via `[label](theSessionId=…|ttId=…)` in their notes.
- * `generated` is true for links inside the build-generated tune list (`ref.tuneList`).
+ * The tunes linked from a tune's own references, via `[label](theSessionId=…|ttId=…)`
+ * in their notes. `generated` is true for links in the build-generated tune list
+ * (`ref._tuneList`), which is kept apart from the notes.
  */
 function crossRefLinks(tune) {
 	const links = [];
-	tune.combinedReferences.forEach((ref, refIndex) => {
-		if (!ref.notes) return;
-
-		const listAt = ref.tuneList ? ref.notes.indexOf(ref.tuneList) : -1;
-		CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per note
+	const scan = (ref, refIndex, text, generated) => {
+		if (!text) return;
+		CROSS_REF_LINK_RE.lastIndex = 0; // shared /g regex: reset state per text
 		let m;
-		while ((m = CROSS_REF_LINK_RE.exec(ref.notes)) !== null) {
+		while ((m = CROSS_REF_LINK_RE.exec(text)) !== null) {
 			const target = resolveTuneById(parseTuneIdStr(m[2]));
-			const generated =
-				listAt >= 0 &&
-				m.index >= listAt &&
-				m.index < listAt + ref.tuneList.length;
 			if (target) links.push({ ref, refIndex, target, generated });
 		}
+	};
+	tune.combinedReferences.forEach((ref, refIndex) => {
+		scan(ref, refIndex, ref.notes, false);
+		scan(ref, refIndex, ref._tuneList, true);
 	});
 	return links;
 }
-
 function sortWithDefaultSort() {
 	sortTunesArray(window.tunesData, { predefinedSort: window.currentSortType });
 }
@@ -1218,7 +1288,7 @@ function renderTable() {
 
 	tbody.innerHTML = "";
 	const observer = getRowObserver();
-
+	const onScreenIds = new Set(window.filteredData.map((t) => t._crId));
 	window.filteredData.forEach((tune, index) => {
 		const row = document.createElement("tr");
 		row.dataset.tuneIndex = index; // used by the IntersectionObserver callback
@@ -1231,23 +1301,10 @@ function renderTable() {
 			formatReference(ref, acc, setUpCrossRefLink)
 		);
 
-		// Cross-reference items
-		(tune._resolvedCrossRefs ?? []).forEach((cr) => {
-			const artistLink = cr.artistNames
-				? //`<a href="#cr-r${cr.tuneId}-${cr.refIndex}">${cr.artistNames}</a>`
-					//260506 broken - todo - fix
-					cr.artistNames
-				: "";
-			const targetIsPresent = window.filteredData.some(
-				(t) => t._crId === cr.tuneId
-			);
-			const notes = cr.notes ? " " + cr.notes : "";
-			if (targetIsPresent) {
-				const tuneLink = `<a href="#cr-t${cr.tuneId}">${cr.tuneName}</a>`;
-				acc.referencesHtml += `<div class="reference-item reference-item--cr">${artistLink ? `[See ${artistLink}.` : "[See entry"} under ${tuneLink}.${notes}]</div>`;
-			} else
-				acc.referencesHtml += `<div class="reference-item reference-item--cr">[Cross-referenced to: ${artistLink ? ` ${artistLink}] / ` : ""}  ${cr.tuneName}.${notes}${CR_NOT_ON_SCREEN}]</div>`;
-		});
+		acc.referencesHtml += crossRefsHtml(
+			tune._resolvedCrossRefs ?? [],
+			onScreenIds
+		);
 
 		// ── Score links ───────────────────────────────────────────────
 		const scores = [...tune.scores];
@@ -1268,7 +1325,7 @@ function renderTable() {
 		}
 		if (tune.itiId) {
 			scores.push({
-				url: `https://www.irishtune.info/tune/${tune.norbeckId}/`,
+				url: `https://www.irishtune.info/tune/${tune.itiId}/`,
 				name: "irishtune.info"
 			});
 		}

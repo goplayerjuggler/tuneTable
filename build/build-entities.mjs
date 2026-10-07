@@ -4,23 +4,35 @@
 // A reference is anything outside the tune data that points at tunes (and
 // artists): an audio or video recording (typically a track of a release), a
 // web page, a book… Not to be confused with a tune's own `references`.
+// A reference lives in a file of its own, or inside its release (`release.references`):
+// then it needn't name the release, which it takes from its parent.
 //
 // Pipeline (driven by build-tune-lists.mjs):
 //   1. loadEntities       — read, validate, resolve; returns the entity model
-//   2. projectReferences  — attach tune-shaped reference objects to the tunes
-//                           that a reference links to (`tune.referencesFromEntities`)
+//   2. projectReferences  — link each tune to the references that mention it
+//                           (`tune.referencesFromEntities`, as `{ referenceId, indices }`),
+//                           and note on each reference's `tunes` what the data knows of them
 //   3. entitiesFor        — per generated list, the subset of entities related
 //                           to that list's tunes, to embed in the list JSON
+//
+// The tunes only carry links: the app expands them into tune-shaped references
+// when it loads a list (see src/entityReferences.mjs, shared with this build).
 import fs from "fs/promises";
 import path from "path";
 import { parseDataFile } from "./parse-data-file.mjs";
+import {
+  has,
+  abcXs,
+  RELEASE_ID_FIELDS,
+  entityResolvers
+} from "../src/entityReferences.mjs";
 
 // ─── Identity ─────────────────────────────────────────────────────────────────
 
 // At least one of these must be non-null on each entity.
 const ARTIST_ID_FIELDS = ["id", "qId", "theSessionComposerId"];
-const RELEASE_ID_FIELDS = ["id", "mbId", "discogsId", "theSessionRecordingId"];
-// A reference names its release (an album, a book…) with any one of these fields.
+// A reference names its release (an album, a book…) with any one of these fields
+// (the counterparts of RELEASE_ID_FIELDS, in the same order: `id` is `releaseId`).
 const RELEASE_REF_FIELDS = [
   "releaseId",
   "mbId",
@@ -29,8 +41,6 @@ const RELEASE_REF_FIELDS = [
 ];
 // Known values for `reference.type` (optional; an unknown value is only a warning).
 const REFERENCE_TYPES = ["audio", "video", "web", "book"];
-
-const has = (v) => v != null;
 
 // How a loaded tune gives its name and rhythm (the ABC metadata is the fallback).
 const tuneName = (t) => t.name ?? t.metadataFromAbc?.title;
@@ -56,29 +66,13 @@ const referenceKeys = (ref) => {
 /** The id a reference is known by in the published data. */
 const referenceId = (ref) => ref.id ?? trackKey(ref) ?? ref.urls?.[0];
 
-/** Builds a finder that resolves a reference object against a list, by any of `fields`. */
-const lookup = (list, fields) => {
-  const maps = fields.map((f) => [
-    f,
-    new Map(list.filter((e) => has(e[f])).map((e) => [e[f], e]))
-  ]);
-  return (ref) => {
-    for (const [f, map] of maps)
-      if (has(ref[f]) && map.has(ref[f])) return map.get(ref[f]);
-  };
+/** How a reference names `release`: `{ releaseId }` for its `id`, else `{ mbId }`, … (nothing if it has no identifier). */
+const releaseIdentifier = (release) => {
+  const i = RELEASE_ID_FIELDS.findIndex((f) => has(release[f]));
+  return i < 0
+    ? {}
+    : { [RELEASE_REF_FIELDS[i]]: release[RELEASE_ID_FIELDS[i]] };
 };
-
-const asReleaseRef = ({
-  releaseId,
-  mbId,
-  discogsId,
-  theSessionRecordingId
-}) => ({
-  id: releaseId,
-  mbId,
-  discogsId,
-  theSessionRecordingId
-});
 
 /** A credit may be a bare artist id, shorthand for `{ id }`. */
 const asCredit = (credit) =>
@@ -116,6 +110,25 @@ async function readEntries(dir) {
   return entries;
 }
 
+/**
+ * The references embedded in releases (`release.references`), as entries like those read
+ * from the `references/` files: each names its release as its parent does, and is
+ * private if the release is.
+ */
+const embeddedReferences = (releasePairs) =>
+  releasePairs.flatMap(({ entry: release, fileName }) =>
+    (release.references ?? [])
+      .filter((ref) => !ref.excludeFromBuild)
+      .map((ref) => ({
+        entry: {
+          ...ref,
+          ...releaseIdentifier(release),
+          isPrivate: release.isPrivate || ref.isPrivate
+        },
+        fileName
+      }))
+  );
+
 /** Checks each entry has an identifier and that none is used twice; pushes problems onto `errors`. */
 function checkIdentity(kind, pairs, keysOf, errors) {
   const seen = new Map();
@@ -145,7 +158,8 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  * Entities flagged `excludeFromBuild` are dropped on reading; those flagged
  * `isPrivate` are dropped after validation unless `isDevelopment` is true.
  * References always get an `id` (derived from release + track, else the first
- * URL, if not given). An absent `language` means English. A credit (of a
+ * URL, if not given). References embedded in a release (`release.references`)
+ * are loaded with the others; the published release doesn't carry them. An absent `language` means English. A credit (of a
  * reference or a release) that names a known artist but gives neither `role`
  * nor `instruments` gets the artist's first instrument.
  *
@@ -153,12 +167,16 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  *   instruments: object, resolveArtist: Function, resolveRelease: Function}>}
  */
 export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
-  const [artistPairs, releasePairs, referencePairs, instrumentPairs] =
+  const [artistPairs, releasePairs, fileReferencePairs, instrumentPairs] =
     await Promise.all(
       ["artists", "releases", "references", "instruments"].map((name) =>
         readEntries(path.join(dataDir, name))
       )
     );
+  const referencePairs = [
+    ...fileReferencePairs,
+    ...embeddedReferences(releasePairs)
+  ];
   const errors = [];
 
   checkIdentity("artist", artistPairs, idKeys(ARTIST_ID_FIELDS), errors);
@@ -191,16 +209,8 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
 
   const artists = artistPairs.map((p) => p.entry);
   const releases = releasePairs.map((p) => p.entry);
-  const finders = (artistList, releaseList) => {
-    const findRelease = lookup(releaseList, RELEASE_ID_FIELDS);
-    return {
-      resolveArtist: lookup(artistList, ["id", "qId"]),
-      resolveRelease: (ref) => findRelease(asReleaseRef(ref))
-    };
-  };
-
   // Warnings — checked against everything, so private entities don't cause noise.
-  const all = finders(artists, releases);
+  const all = entityResolvers(artists, releases);
   const warner = (kind, fileName, entity) => (msg) =>
     console.warn(
       `Warning: ${fileName}: ${kind} "${entity.id ?? entity.title}" ${msg}`
@@ -226,8 +236,12 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
   });
 
   const visible = ({ entry }) => isDevelopment || !entry.isPrivate;
-  const visibleArtists = artistPairs.filter(visible).map((p) => p.entry);
-  const { resolveArtist } = finders(visibleArtists, []);
+  // const visibleArtists = artistPairs.filter(visible).map((p) => p.entry);
+  const visibleArtists = artistPairs
+    .filter(visible)
+    .map(({ entry: { notes, ...rest } }) => rest); //filter out notes for now
+
+  const { resolveArtist } = entityResolvers(visibleArtists, []);
   const withDefaultInstruments = (entity) =>
     entity.credits
       ? {
@@ -239,8 +253,10 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
       : entity;
   const visibleReleases = releasePairs
     .filter(visible)
-    .map((p) => withDefaultInstruments(p.entry));
-  const resolvers = finders(visibleArtists, visibleReleases);
+    .map(({ entry: { references, ...release } }) =>
+      withDefaultInstruments(release)
+    ); // `references`: published as references, not as part of the release
+  const resolvers = entityResolvers(visibleArtists, visibleReleases);
   const references = referencePairs.filter(visible).map(({ entry }) => ({
     ...withDefaultInstruments(entry),
     id: referenceId(entry)
@@ -257,126 +273,26 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
 
 // ─── Projection onto tunes ────────────────────────────────────────────────────
 
-/** "Name (role, instrument, …), …" for whoever is credited on any of the tunes at `indices` of a reference (or release, which may be absent). */
-function creditLine(ref, indices, { instruments, resolveArtist }) {
-  return (ref?.credits ?? [])
-    .filter((c) => !c.indexes || c.indexes.some((i) => indices.includes(i)))
-    .map((c) => {
-      const name = resolveArtist(c)?.name ?? c.name;
-      if (!name) return null; // unknown performer: slot kept in the data, nothing to show
-      const details = [
-        c.role,
-        ...(c.instruments ?? []).map((k) => instruments[k]?.en ?? k)
-      ].filter(Boolean);
-      return details.length ? `${name} (${details.join(", ")})` : name;
-    })
-    .filter(Boolean)
-    .join(", ");
-}
-
+/** A tune's id as written in a note link: `theSessionId=2`, or `ttId=7`. */
 const tuneIdStr = (t) =>
   t.theSessionId ? `theSessionId=${t.theSessionId}` : `ttId=${t.ttId}`;
 
-/** "jig" -> "jigs", "march" -> "marches"; a word already ending in "s" is left alone. */
-const plural = (word) =>
-  /(ch|sh|x|z)$/.test(word)
-    ? `${word}es`
-    : word.endsWith("s")
-      ? word
-      : `${word}s`;
-
-/** Counts the tunes' rhythms, in order of first appearance: "2 jigs; hop jig". */
-function rhythmSummary(tunes) {
-  const counts = new Map();
-  for (const tune of tunes) {
-    const rhythm = tuneRhythm(tune)?.trim().toLowerCase();
-    if (rhythm) counts.set(rhythm, (counts.get(rhythm) ?? 0) + 1);
-  }
-  return [...counts]
-    .map(([rhythm, n]) => (n > 1 ? `${n} ${plural(rhythm)}` : rhythm))
-    .join("; ");
-}
-
 /**
- * The tunes of a reference, in order, as seen from the tune at `indices`: "A / B / C (2 jigs; reel)".
- * Every other tune found in the database is a note link (`[B](theSessionId=2)`, resolved
- * by formatNoteLinks); the tune itself, and any tune not in the database, is plain text.
- * A tune is named as the reference names it (`entry.name`), else as the database does.
- * Null for a reference with fewer than two tunes.
- */
-function tuneListLine(matches, indices) {
-  if (matches.length < 2) return null;
-  const labels = matches.map(({ entry, tune }, i) => {
-    const name = (
-      entry.name ??
-      (tune && tuneName(tune)) ??
-      entry.title ??
-      `#${entry.theSessionId ?? entry.ttId ?? "?"}`
-    ).replace(/[[\]]/g, ""); // brackets would break the link syntax
-    return tune && !indices.includes(i)
-      ? `[${name}](${tuneIdStr(tune)})`
-      : name;
-  });
-  const summary = rhythmSummary(matches.map((m) => m.tune).filter(Boolean));
-  return labels.join(" / ") + (summary ? ` (${summary})` : "");
-}
-
-/**
- * A reference seen from one of its tunes, shaped like a manual `references` entry.
- * `indices` are the positions in `ref.tunes` of that tune (several if the reference
- * mentions it more than once: they are merged into one reference); `matches` pairs
- * each entry of `ref.tunes` with its loaded tune, if any.
- */
-function toReference(ref, indices, release, model, matches) {
-  const [url, ...moreUrls] = ref.urls?.length
-    ? ref.urls
-    : (release?.urls ?? []);
-  // Per mention of the tune: its time range, then its own notes.
-  const mentions = indices.flatMap((i) => {
-    const { startTime, endTime, notes } = ref.tunes[i];
-    return [
-      startTime && `Tune from ${startTime}${endTime ? ` to ${endTime}` : ""}`,
-      notes
-    ];
-  });
-  const tuneList = tuneListLine(matches, indices);
-  const notes = [
-    [has(ref.trackNumber) && `Track ${ref.trackNumber}`, ref.title]
-      .filter(Boolean)
-      .join(": "),
-    tuneList,
-    ...mentions,
-    ref.notes,
-    ...moreUrls // bare URLs are linkified by formatReference
-  ]
-    .filter(Boolean)
-    .join(" | ");
-
-  return {
-    referenceId: ref.id,
-    tuneList: tuneList || undefined, // lets calculateCrossRefs tell these links from hand-written ones
-    type: ref.type,
-    language: ref.language,
-    // The reference's own credits, else the release's.
-    artists:
-      creditLine(ref, indices, model) ||
-      creditLine(release, indices, model) ||
-      undefined,
-    url,
-    album:
-      release && `${release.title}${release.year ? ` (${release.year})` : ""}`,
-    notes
-  };
-}
-
-/**
- * For each reference, append a tune-shaped reference to `referencesFromEntities`
- * on every tune it links to (matched by `theSessionId`, then `ttId`). Tunes
- * entries with only a title are kept in the data but can't be linked, and a
- * reference that links to no loaded tune isn't published in any list. A reference
- * with several tunes lists them all in each tune's notes (see tuneListLine).
- * A tune that a reference mentions more than once gets one merged reference.
- * Mutates `tunes`.
+ * Link each tune to the references that mention it: for each reference, push
+ * `{ referenceId, indices }` onto `referencesFromEntities` of every tune it
+ * points to (matched by `theSessionId`, then `ttId`). `indices` are the
+ * positions of the tune in `ref.tunes` (several if the reference mentions it more
+ * than once: they make one reference). Tunes entries with only a title are kept
+ * in the data but can't be linked, and a reference that links to no loaded tune
+ * isn't published in any list. Mutates `tunes`.
+ *
+ * A `tunes` entry's `abcX` (the `X:` header of one of the tune's `abc` items; see
+ * getCombinedReferences in processTuneData.js) that matches none is only a warning.
+ *
+ * Each `ref.tunes` entry that is found in the database also gets
+ * `inDatabase: { idStr, name, rhythm }`, so that the reference can list all its
+ * tunes (see tuneListLine in src/entityReferences.mjs) in a list that doesn't
+ * contain them. Mutates the references of `model`.
  *
  * `referencesFromEntities` is last in the combined reference order (see
  * getCombinedReferences in processTuneData.js), so existing cross-reference
@@ -391,26 +307,50 @@ export function projectReferences(model, tunes) {
   });
 
   for (const ref of model.references) {
-    const release = model.resolveRelease(ref);
     const unmatched = [];
+    const noAbcX = [];
     const matches = (ref.tunes ?? []).map((entry) => ({
       entry,
       tune: bySessionId.get(entry.theSessionId) ?? byTtId.get(entry.ttId)
     }));
     const positions = new Map(); // tune -> its positions in ref.tunes
     matches.forEach(({ entry, tune }, index) => {
-      if (tune) positions.set(tune, [...(positions.get(tune) ?? []), index]);
-      else if (has(entry.theSessionId) || has(entry.ttId))
+      if (tune) {
+        positions.set(tune, [...(positions.get(tune) ?? []), index]);
+        if (
+          has(entry.abcX) &&
+          ![tune.abc].flat().flatMap(abcXs).includes(String(entry.abcX))
+        )
+          noAbcX.push(`${entry.abcX} (${tuneIdStr(tune)})`);
+      } else if (has(entry.theSessionId) || has(entry.ttId))
         unmatched.push(entry.theSessionId ?? `ttId ${entry.ttId}`);
     });
     positions.forEach((indices, tune) =>
-      (tune.referencesFromEntities ??= []).push(
-        toReference(ref, indices, release, model, matches)
-      )
+      (tune.referencesFromEntities ??= []).push({
+        referenceId: ref.id,
+        indices
+      })
     );
+    if (ref.tunes)
+      ref.tunes = matches.map(({ entry, tune }) =>
+        tune
+          ? {
+              ...entry,
+              inDatabase: {
+                idStr: tuneIdStr(tune),
+                name: tuneName(tune),
+                rhythm: tuneRhythm(tune)
+              }
+            }
+          : entry
+      );
     if (unmatched.length)
       console.warn(
         `Warning: reference "${ref.id}" has tunes not in the database: ${unmatched.join(", ")}`
+      );
+    if (noAbcX.length)
+      console.warn(
+        `Warning: reference "${ref.id}" has abcX matching no X: header: ${noAbcX.join(", ")}`
       );
   }
 }

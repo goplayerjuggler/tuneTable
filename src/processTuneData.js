@@ -8,6 +8,7 @@ import {
 	getTunes,
 	sortConstants
 } from "@goplayerjuggler/abc-tools";
+import { abcXs } from "./entityReferences.mjs";
 
 const swingTransformRhythms =
 	sortConstants.DEFAULT_CONTOUR_OPTIONS.swingTransformRhythms;
@@ -19,16 +20,46 @@ const swingTransform3_4_rhythms =
  * `index` values (see cross-references.md) refer to:
  *   1. `referencesFromAbc`        — derived from the tune's ABC by processTuneData
  *   2. `references`               — entered by hand
- *   3. `referencesFromEntities`   — derived at build time from the reference
- *                                   entities that link to the tune (audio,
- *                                   video, web, book…; see build-entities.mjs)
- * Later sources are appended, so adding one never shifts earlier indices.
+ *   3. `referencesFromEntities`   — linked at build time to the reference entities
+ *                                   that mention the tune (`{ referenceId, indices }`),
+ *                                   and expanded into the shape formatReference
+ *                                   renders on loading a list
+ *                                   (hydrateReferencesFromEntities, entityReferences.mjs)
+ * Later sources are appended, so adding one never shifts earlier indices
+ * (but see `abcX`, below).
+ *
+ * A reference entity may point to one setting of the tune, by the `X:` header of an
+ * item of `tune.abc` (`abcX`). The ABC-derived reference of that setting is then
+ * merged into the entity's: the entity supplies the url, album and artists (the ABC's
+ * F:, D: and S: are ignored), and the ABC's N: and H: comments are added to its notes.
+ * The merged reference is part 3, and the ABC-derived one leaves part 1.
+ * Nothing is mutated: the merge is redone on each call, so it survives reprocessTune.
+ *
+ * With `abcIndex`, only that setting's ABC-derived reference (the one solo mode of the
+ * ABC modal shows) is considered, so only that setting's comments are merged.
  */
-function getCombinedReferences(tune) {
-	return (tune.referencesFromAbc ?? []).concat(
-		tune.references ?? [],
-		tune.referencesFromEntities ?? []
+function getCombinedReferences(tune, abcIndex) {
+	const fromAbc = (tune.referencesFromAbc ?? []).filter(
+		(ref) => abcIndex === undefined || ref._abcIndex === abcIndex
 	);
+	const merged = new Set(); // the ABC-derived references that went into an entity's
+	const fromEntities = (tune.referencesFromEntities ?? []).map((ref) => {
+		const abcRefs = fromAbc.filter((abcRef) =>
+			ref.abcX?.includes(abcRef._abcX)
+		);
+		abcRefs.forEach((abcRef) => merged.add(abcRef));
+		return abcRefs.length
+			? {
+					...ref,
+					notes: [ref.notes, ...abcRefs.map((abcRef) => abcRef._abcNotes)]
+						.filter(Boolean)
+						.join("\n")
+				}
+			: ref;
+	});
+	return fromAbc
+		.filter((abcRef) => !merged.has(abcRef))
+		.concat(tune.references ?? [], fromEntities);
 }
 
 function updateFromMetadata(
@@ -36,7 +67,8 @@ function updateFromMetadata(
 	processed,
 	setIsFromAbc = true,
 	updateBasicInfo = true,
-	abcIndex
+	abcIndex,
+	abcX
 ) {
 	if (updateBasicInfo) {
 		if (!processed.name && metaData.title) {
@@ -69,15 +101,19 @@ function updateFromMetadata(
 		metaData.comments ||
 		metaData.hComments
 	) {
+		// The N: and H: comments, also kept apart (`_abcNotes`): they are all that gets
+		// merged into a reference entity that points to this setting (see getCombinedReferences).
+		const comments =
+			(metaData.comments ? metaData.comments.join("\n") + "\n" : "") +
+			(metaData.hComments ? metaData.hComments : "");
 		const abcRef = {
 			artists: metaData.source || "",
 			url: metaData.url || "",
-			notes: `${metaData.recording ? `recording/album: ${metaData.recording}\n` : ""}${
-				(metaData.comments ? metaData.comments.join("\n") + "\n" : "") +
-				(metaData.hComments ? metaData.hComments : "")
-			}`
+			notes: `${metaData.recording ? `recording/album: ${metaData.recording}\n` : ""}${comments}`,
+			_abcNotes: comments.trim()
 		};
 		if (abcIndex !== undefined) abcRef._abcIndex = abcIndex;
+		if (abcX !== undefined) abcRef._abcX = abcX;
 		//if (abcRef.notes) abcRef.notes += " (notes extracted from ABC)";
 
 		processed.referencesFromAbc.push(abcRef);
@@ -111,10 +147,11 @@ function processTuneData(tune) {
 
 			abcArray.forEach((abcString, index) => {
 				const abcMeta = getHeaders(abcString);
+				const [abcX] = abcXs(abcString);
 
 				if (index === 0)
-					updateFromMetadata(abcMeta, processed, true, true, index);
-				else updateFromMetadata(abcMeta, processed, false, false, index);
+					updateFromMetadata(abcMeta, processed, true, true, index, abcX);
+				else updateFromMetadata(abcMeta, processed, false, false, index, abcX);
 			});
 
 			if (!tune.incipit) {
@@ -212,6 +249,6 @@ export {
 	processTuneData,
 	swingTransformRhythms as applySwingTransform,
 	reprocessTune,
-	getIncipitWithSelector
-	//	getCombinedReferences
+	getIncipitWithSelector,
+	getCombinedReferences
 };

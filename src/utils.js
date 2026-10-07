@@ -60,10 +60,12 @@ function formatNoteLinks(text, setUpCrossRefLink = noCrossRefLink) {
 
 const formatReference = (ref, acc, setUpCrossRefLink = noCrossRefLink) => {
 	let notesHtml = "";
-
 	if (ref.notes || ref.album) {
-		const rawText =
-			(ref.album ? `album: ${ref.album}\n` : "") + (ref.notes ?? "");
+		// "album: X | Track 4 (3:17)"; multi-line notes stay on their own lines
+		const sep = ref.notes?.includes("\n") ? "\n" : " | ";
+		const rawText = [ref.album && `album: ${ref.album}`, ref.notes]
+			.filter(Boolean)
+			.join(sep);
 		const formattedNotes = formatNoteLinks(rawText, setUpCrossRefLink)
 			.replace(/(?<!")https?:\/\/[^\s<>"']+/g, (url) => {
 				try {
@@ -115,11 +117,16 @@ const formatReference = (ref, acc, setUpCrossRefLink = noCrossRefLink) => {
 					? `<div class="url"><a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a></div>` //extract the domain for display so as not to waste space on the full url
 					: "";
 	const refItemId = ref._crId ? ` id="cr-r${ref._crId}"` : "";
+	const tuneListHtml = ref._tuneList
+		? `<div class="notes tune-list">${formatNoteLinks(ref._tuneList, setUpCrossRefLink)}</div>`
+		: "";
 	acc.referencesHtml += `
-					<div class="reference-item"${refItemId}>
-						${refHeader}
-						${notesHtml}
-					</div>`;
+		<div class="reference-item"${refItemId}>
+
+			${refHeader}
+			${notesHtml}
+			${tuneListHtml}
+		</div>`;
 };
 
 export { addLineBreaks, formatNoteLinks, formatReference };
