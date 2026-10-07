@@ -82,7 +82,7 @@ Around 2005, I made another [table of tunes](http://malcolm.schonfield.free.fr/z
 ## Thanks
 Thanks to: 
 * Paul Rosen and Gregory Dyke for their fantastic library [abcjs](https://github.com/paulrosen/abcjs). These days it’s behind most of the online resources related to music written in ABC format.
-* Jeremy from [thesession.org](https://thesession.org) for providing such a great resource and helping me with a question about it. Thesession was an inspiration for quite a few features here.
+* Jeremy from [thesession.org](https://thesession.org) for providing such a great resource and helping me with questions about it. Thesession was an inspiration for quite a few features here, and serves as a valuable reference. A big Thank You also to all the many contributors to thesession whose transcriptions have ended up here in one way or another.
 * Michael Eskin for his amazing online resource, [ABC Transcription Tools](https://michaeleskin.com/app/abctools.html), which has been very handy, and for his interest in this project. The code for the incipit generator – now in my [abc-tools](#abc-tools--a-related-repo) repo – is a fork of his code. This tool also has features to open tunes in ABC Transcription Tools.
 * Anton Bregolas, whose [TuneTable](https://anton-bregolas.github.io/Tunetable/) inspired me to set up “import from thesession.org”. More recently, I see he’s published other projects such as the [Novi Sad Session Setlist App](https://ns.tunebook.app/) – a very well done app, with some parallels with this project.
 * Marie Marais, who gave me the idea about adding a Y axis with markers to contour SVGs.
@@ -91,13 +91,14 @@ Thanks to:
 * Anthropic: roughly 90% of the code (in this repo and in my other related repo, [abc-tools](#abc-tools--a-related-repo)) was written by Claude Sonnet 4.6.
 * Github for hosting
 * The open source community for making this possible with dev tools like npm, webpack, eslint, prettier, and all their dependencies; and also the teams behind `pako` and `daypilot/modal`, which are other tools that get used here.
+* Finally, thanks to all the musicians who have inspired me, and also those whose work I mention here. Too many names to be listed… Without whom, none of this would mean anything.
 
 ## Licences
 
 This project uses multiple licences depending on the type of content:
 
 - **Code (JavaScript, HTML, CSS)**: [MIT Licence](LICENSE-CODE)
-- **Tune list data (`.data.js` files, including bare `.abc` files directly under `tunes/`)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
+- **Tune list data (`.data.js` files, including bare `.abc` files directly under `src/data/`)**: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0](LICENSE-DATA)
 - **ABC tune collections (`tunes/collections/` folder)**: from external sources – licencing terms are embedded within each individual file or are available from the linked websites
 
 ### What this means:

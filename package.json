@@ -35,7 +35,8 @@
       "url": "https://opensource.org/licenses/MIT",
       "files": [
         "src/**/*.js",
-        "!src/**/tunes/*.data.js",
+        "!src/data/**/*.data.js",
+        "!src/data/**/*.abc",
         "src/**/*.html"
       ]
     },
@@ -43,8 +44,8 @@
       "type": "CC-BY-NC-SA-4.0",
       "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "files": [
-        "src/**/tunes/*.data.js",
-        "src/**/tunes/*.abc"
+        "src/data/**/*.data.js",
+        "src/data/**/*.abc"
       ]
     }
   ],
