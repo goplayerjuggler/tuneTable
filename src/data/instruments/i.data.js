@@ -8,7 +8,7 @@ export default {
 		// fr: "accordéon diatonique"
 	},
 	banjo: { qId: 258896, en: "banjo", fr: "banjo" },
-	bodhran: { qId: 244976, en: "bodhrán", fr: "bodhrán" },
+	bodhrán: { qId: 244976, en: "bodhrán", fr: "bodhrán" },
 	bouzouki: { qId: 322675, en: "bouzouki", fr: "bouzouki" },
 	cabrette: { qId: 1024962, en: "“cabrette” bagpipes", fr: "cabrette" },
 	cello: { qId: 8371, en: "cello", fr: "violoncelle" },
@@ -25,6 +25,11 @@ export default {
 	},
 	jHarp: { qId: 5994, en: "jew's harp", fr: "guimbarde" },
 	nyckelharpa: { qId: 182718, en: "nyckelharpa", fr: "nyckelharpa" },
+	pAccordion: {
+		qId: 264376,
+		en: "piano accordion",
+		fr: "accordéon à touches de piano"
+	},
 	piano: { qId: 5994, en: "piano", fr: "piano" },
 	spoons: { qId: 1879664, en: "spoons", fr: "cuillères" },
 	uPipes: { qId: 543833, en: "uilleann pipes", fr: "cornemuse irlandaise" },

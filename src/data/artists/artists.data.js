@@ -18,6 +18,12 @@ export default [
 	},
 	{ id: "macmahon_to", name: "Tony MacMahon", instruments: ["accordion"] },
 	{
+		id: "mcguire_se",
+		urls: ["https://en.wikipedia.org/wiki/Se%C3%A1n_McGuire_(fiddler)"],
+		name: "Seán McGuire",
+		instruments: ["flute"]
+	},
+	{
 		id: "oconnor_mi",
 		name: "Mick O’Connor",
 		instruments: ["banjo"],
@@ -43,6 +49,12 @@ https://www.tg4.ie/en/other-brands/gradam-ceoil/previous-winners/special-contrib
 			"https://en.wikipedia.org/wiki/Tommy_Peoples",
 			"https://www.itma.ie/collections/tommy-peoples/"
 		]
+	},
+	{
+		id: "orourke_ja",
+		name: "Jason O’Rourke",
+		instruments: ["concertina"],
+		urls: ["https://jasonorourke.info"]
 	},
 	{ id: "whelan_ed", name: "Eddie Whelan", instruments: ["guitar"] }
 ];

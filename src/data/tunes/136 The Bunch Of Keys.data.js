@@ -20,7 +20,7 @@ BGG2 BGdG BGGA Bcde|f/g/age fdcA GBAF DGG:|`,
 			artists: "John Joe Gardiner, fiddle; Moya Acheson, piano",
 			url: "https://www.itma.ie/blog/lesser-known-musicians-of-the-78-rpm-era/?track=9",
 			notes: `(78 rpm) The mountain top; Lord Wellington’s [The bunch of keys]
-	Gardiner, John Joe, 1893-1979`
+Gardiner, John Joe, 1893-1979`
 		},
 		{
 			artists: "James Lad O'Beirne, fiddle; Martin Wynne, fiddle",

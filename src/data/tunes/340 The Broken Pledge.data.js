@@ -5,7 +5,7 @@ R: reel
 M: 4/4
 L: 1/16
 K: Ddor
-dcAG ADDB cAGF ECCE|DEFG`,
+dcAG ADDB cAGF ECCE|DEFG Addc`,
 	theSessionId: 1423,
 	references: [
 		{

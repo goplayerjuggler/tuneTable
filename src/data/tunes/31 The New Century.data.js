@@ -16,11 +16,5 @@ Bcde fdce dDE^F GFGA|Bcde =fd (3e^fg afd^c d2 (3def|
 gdBG ecA^F GFGc AGEG|(3^FED AB cedF AGGF G2:|`,
 	parts: "AABB",
 	theSessionId: 2001,
-	crossReferences: [
-		{
-			theSessionId: 2488,
-			index: 0
-			// O'Mahony's / a recording by Jason O’Rourke`
-		}
-	]
+	fileDate: "2026-04-08"
 };

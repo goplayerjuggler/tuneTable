@@ -3,7 +3,7 @@ export default {
 	parts: "AB",
 	abc: [
 		`
-X: 2
+X: 1
 T: Maud Millar
 N: version of 2025-10-15%2024-08-21 %2024-06-27 %2025-04-11%2025-10-15
 R: reel
@@ -27,9 +27,9 @@ P:Variations/embellishments
 		`X: 2
 T: Maud Millar
 R: reel
-S: Frankie Gavin, fiddle; Brian McGrath, Piano
+S: Frankie Gavin, fiddle; Brian McGrath, piano
 D: Fierce Traditional
-Z:abc-transcription Malcolm Schonfield%2026-10-01 - 04
+Z:abc-transcription Malcolm Schonfield%2026-10-01 - 06
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 N:An incomplete transcription.
 H:I think he's playing on a fiddle that's tuned a semitone sharper than the standard tuning.
@@ -38,24 +38,25 @@ L:1/16
 K: Eb
 %swing 0.15
 %swing_offset 0
-"_lento, acell."y/2 !slide!e3.d  || cBGF ECB,C  "_a tempo" E2{A}GE  B,EGB|cGBG !slide!!tenuto!F2EF  GccB cded|
-cBGF EGB,C EEGE B,EGB|cGBG !slide!!tenuto!F2EF  GccB  c2ec||
-Bcef geeg fc~c2 efec| B/B/BGB geeg  f2{e}cB cefe|
-[BE]cef geeg   fc~c2 [Ee]3f|gfed edcB  Gc3 cfed||
-cBGF EG (3B,CD  E2GE  B,EGB|ecBG !slide!!tenuto!F2EF  Gcc2 Gcec |
-BGFG FGB,C  !tenuto!E2GE B,EGB | ecBG F/F/FEF  GccB cfec ||
-Bcef ge[eE]g fc~c2 [eE]dec| B[eE]3 geeg  f2{e}cB cefz|
-[BE]cef geeg   fc~c2 edef|!slide!!tenuto!gfed edcB  GccB cfed||  
+"^lento, acell."y/2 !slide!e3.d || cBGF ECB,C "^a tempo" E2{A}GE B,EGB|cGBG !slide!!tenuto!F2EF GccB cded|
+cBGF EGB,C EEGE B,EGB|cGBG !slide!!tenuto!F2EF GccB c2ec||
+Bcef geeg fc~c2 efec| B/B/BGB geeg f2{e}cB cefe|
+[BE]cef geeg fc~c2 [Ee]3f|gfed edcB Gc3 cfed||
+"^2nd"cBGF EGB,/C/D E2GE B,EGB|ecBG !slide!!tenuto!F2EF Gccc Gcec |
+BGFG FGB,C !tenuto!E2GE B,EGB | ecBG F/F/FEF GccB cfec ||
+Bcef ge[eE]g fc~c2 ~[eE]3c| B[eE]3 geeg f2{e}cB c/d/efz|
+[BE]cef geeg fc~c2 edef|!slide!!tenuto!gfed edcB GccB cfed||
+"^3rd"cBGF E/F/GB,C E2GE B,EGB|cGBG !slide!!tenuto!F2EF Gccc Gced|
+cBGF ECB,C EEGE B,EGB|!slide!!tenuto!ecBG !slide!F2EF GccB c2ec||
+[BE]cef geeg fc~c2 efec| B/B/BGB geeg fdeB c/d/efz|
+[BE]cef geeg fc~cB edef|gfed edcB Gccc Gced||
+"^4th"cBGF EGB,C !tenuto!E3G BEGB|ecBG F/F/FEF Gccc Gced|
+cBGF E/F/GB,C EEGE B,EGB|ecBG !slide!F2EF GccB cfec||
+[BE]2ef geeg fcc2 e3c| Bcef geeg fdeB c/d/efz|
+[BE]cef geeg fccB edef|gfed edcB GccB [c3E]"^starts second tune here"e|]  
 `
 	],
 	references: [
-		{
-			url: "https://frankiegavin.bandcamp.com/track/maud-millar",
-			artists: "Frankie Gavin, fiddle; Brian McGrath, piano",
-			album: "Fierce Traditional (2001)",
-			notes: `Maud Millar / Mary O’Neill’s Fancy
-Interesting setting and backing chords.`
-		},
 		{
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2024/?track=8",
 			artists: "Seán Maguire, fiddle",

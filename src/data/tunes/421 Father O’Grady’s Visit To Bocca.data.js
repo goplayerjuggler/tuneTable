@@ -1,6 +1,6 @@
 export default {
 	incipit: `X: 3
-T: Father O'Grady’s Visit To Bocca
+T: Father O’Grady’s Visit To Bocca
 C:Josie McDermott
 R: reel
 M: 4/4

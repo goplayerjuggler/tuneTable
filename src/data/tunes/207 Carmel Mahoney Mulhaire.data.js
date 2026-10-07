@@ -21,17 +21,8 @@ K:Dmajor
 |:FAA2 FADF ADFA bagf|g2fg efde cdBc ABAG|
   FAA2 FADF ADFA bagf|gefd ecdB [1 AFGE D2DE:|2 AFGE D4||`,
 	theSessionId: 2716,
+	fileDate: "2026-06-24",
 	references: [
-		{
-			notes: `The Holly Bush/O'Mahoney's/Mrs Brennan's Favourite
-01:11 / 4:35
-This is where I discovered this tune and got interested in it. I love the crazy energy here.`,
-			url: "https://music.youtube.com/watch?v=oC8emJV_RJg&t=71",
-
-			artists:
-				"Jason O’Rourke, button accordion; Ruadhrai O’Kane, fiddle; Paul McSherry, guitar; ?, bodhrán",
-			album: "The Bunch Of Keys (2009)"
-		},
 		{
 			url: "https://sylvainbarou.bandcamp.com/track/hornpipe-reels-the-stage-ag-filleadh-abhaile-omahoneys",
 			notes: `Hornpipe/Reels: The Stage/Ag Filleadh Abhaile/O'Mahoney's
