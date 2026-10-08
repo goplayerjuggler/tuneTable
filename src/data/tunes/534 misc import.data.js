@@ -615,24 +615,5 @@ K:Dmajor
 d2fd Adfd g2fg edBc|dBBA Bcde[1 f2gf edBc:|2 f2gf edAF||`,
 		theSessionId: 1723,
 		theSessionSettingId: 15150
-	},
-
-	{
-		fileDate: "2026-05-25",
-		abc: `X:1
-T:The Flower Of The Flock
-R:reel
-L:1/16
-M:4/4
-N:Imported into *tuneTable* on 2026-05-25,
-N:from https://thesession.org/tunes/585#setting585
-N:Setting entered in thesession by user “Will Harmon” on 2002-03-12
-N:*abc-tools: convert to M:4/4 & L:1/16*
-K:Gmajor
-|:DEGA BG (3GGG cABG AGEG|DEGA B2ge[1 dBAc BGGE:|2 dBAc BGGe||
-~g3e dcBd cABG AGEG|~g3e d2eg a2ab agef|
-~g3e dcBd cABG AGEG|DEGA Bdge dBAc BGGE||`,
-		theSessionId: 585,
-		theSessionSettingId: 585
 	}
 ];
