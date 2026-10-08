@@ -3160,3 +3160,25 @@ details.intro-section summary:hover {
 input[type="radio"] {
   margin-right: 6px;
 }
+
+/* Main table: the incipit opens the score viewer, like the tune title does */
+.tune-incipit--clickable {
+  cursor: pointer;
+}
+
+/* Score viewer: page controls, now inside .abc-last-line, which wraps the last
+   system of the page. Absolutely positioned over its bottom right corner, so
+   they are fully visible but add no height. */
+.abc-last-line {
+  position: relative;
+}
+#abcPageNav {
+  position: absolute;
+  right: 20px; /* same as the score's paddingright */
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  z-index: 1; /* stay above the SVG */
+  cursor: default;
+}

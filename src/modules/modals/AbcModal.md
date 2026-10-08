@@ -47,6 +47,11 @@ Switches between the rendered score and a plain-text view of the raw ABC source.
 ### Copy ABC
 Copies the current setting's ABC (with any transposition and bar-length changes applied) to the clipboard. Button label briefly shows "✓ Copied!" for two seconds on success.
 
+### Share
+Copies a link that reopens the current setting. Shown only in solo mode, for settings after the first (a plain link to the tune already opens the first), and only when the host app supplies `callbacks.canShare()` and `callbacks.getShareUrl(tune, abcX)`.
+
+The link carries an `abcX` URL parameter holding the setting's `X:` header. An error is raised (as an alert) if the setting has no `X:` header, or if several settings of the tune share the same one. These checks use the settings as stored, not unsaved edits. For tunes without a `ttId` or `theSessionId` the link falls back on a name search, which may match other tunes; the button label warns about this.
+
 ### Settings navigation
 When a tune has multiple settings (an array of ABC strings), **↑ Previous setting** and **↓ Next setting** buttons appear, along with a `n / total` counter. Navigating commits any transposition on the departing setting before switching.
 
@@ -60,13 +65,17 @@ Appears when any setting has been modified relative to the state at open (dirty 
 
 ---
 
+## Opening on a given setting
+
+`openWithTune(tune, { abcX })` opens on the setting whose `X:` header equals `abcX`, which is how `?abcX=` URL parameters are honoured. If no setting, or more than one, matches, a warning is logged and the first setting is shown.
+
 ## Pagination
 
 Long scores are split into pages of up to 12 SVG lines each.
 
 Navigation:
-- **← Prev page** / **Next page →** buttons (appear only when there is more than one page).
-- Clicking the **left half** of the score goes to the previous page; clicking the **right half** goes to the next.
+- **← Prev** / **Next →** buttons with a page counter (only when there is more than one page). They sit at the bottom right of the last system on the page, overlaid on the last system (absolutely positioned inside an `.abc-last-line` wrapper) so that they take no vertical space (see `#abcPageNav` in the stylesheet).
+- Clicking the **left half** of the score goes to the previous page; clicking the **right half** goes to the next. The pointer cursor is shown only when there is more than one page.
 - Arrow keys ← / → navigate pages.
 
 The current page and total are shown between the pagination buttons.
@@ -83,11 +92,12 @@ The modal header (title bar) hides automatically after opening to maximise the v
 
 | Method | Description |
 |---|---|
-| `openWithTune(tune)` | Initialise state and open the modal. Discovers set contexts from `window._setLists`. |
+| `openWithTune(tune, { abcX })` | Initialise state and open the modal, optionally on the setting matching `abcX`. Discovers set contexts from `window._setLists`. |
 | `selectContext(idx)` | Switch to solo (`0`) or a set context (`1+`). |
 | `transpose(semitones)` | Transpose by ±n semitones (solo only). |
 | `navigate(direction)` | Move between tune settings: `+1` or `−1` (solo only). |
 | `toggleView()` | Switch between rendered and ABC-text views (solo only). |
+| `share()` | Copy a link to the current setting (solo only, not the first setting). |
 | `copyAbc()` | Copy the current setting's ABC to the clipboard (solo only). |
 | `nextPage() / prevPage()` | Advance or retreat one page. |
 | `save()` | Persist all modified settings and close. |
@@ -103,6 +113,7 @@ The modal header (title bar) hides automatically after opening to maximise the v
 | `Modal` | Base modal class |
 | `reprocessTune` (`processTuneData.js`) | Updating tune metadata after save |
 | `formatReference`, `formatNoteLinks` (`utils.js`) | Rendering the notes/references block beneath the score |
+| `getAbcX`, `findAbcIndicesByX` (`utils.js`) | Reading and matching `X:` headers, for `abcX` and Share |
 | `resolveAbcForEntry`, `tuneMatchesEntry` (`setUtils.js`) | Set-list entry resolution |
 
 `setUtils.js` is also imported by `TuneSelectionsModal.js`, which should use the same exported `findTuneByEntry` instead of its local copy.
@@ -124,4 +135,4 @@ The modal header (title bar) hides automatically after opening to maximise the v
 | `currentContextIndex` | `0` = solo; `1+` = set at `setContexts[idx - 1]`. |
 | `allSvgs` | All SVG lines from the last render, used for pagination. |
 | `currentPage` | Zero-based current page index. |
-| `LINES_PER_PAGE` | Number of SVG lines per page (default: `9`). |
+| `LINES_PER_PAGE` | Number of SVG lines per page (default: `12`). |

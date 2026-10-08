@@ -10,7 +10,7 @@ import AbcJs from "abcjs";
 import { getCombinedReferences, reprocessTune } from "../../processTuneData.js";
 import { resolveAbcForEntry, tuneMatchesEntry } from "../setUtils.js";
 import { sendToEskinsTool } from "./sendToEskinsTool.js";
-import { formatReference } from "../../utils.js";
+import { findAbcIndicesByX, formatReference, getAbcX } from "../../utils.js";
 /**
  * ### AbcModal
  * **Purpose**: Display sheet music for a single tune or for a full set of tunes.
@@ -34,15 +34,19 @@ import { formatReference } from "../../utils.js";
  * - Double or halve bar length (solo only)
  * - Navigate between multiple tune settings (solo only)
  * - Dirty-state detection with Save button (solo only)
+ * - Share link to the current setting, via the `abcX` URL parameter (solo only,
+ *   settings after the first)
  *
  * **Key methods**:
- * - `openWithTune(tune)`: Initialise and open the modal for a tune
+ * - `openWithTune(tune, { abcX })`: Initialise and open the modal for a tune,
+ *   optionally on the setting whose X header matches `abcX`
  * - `openWithSet(setContext)`: Initialise and open the modal directly in set mode
  * - `selectContext(idx)`: Switch between solo view (0) and set views (1+)
  * - `transpose(semitones)`: Transpose the displayed music (solo)
  * - `navigate(direction)`: Move between tune settings (solo)
  * - `toggleView()`: Switch between rendered and text views (solo)
  * - `copyAbc()`: Copy the current ABC to the clipboard (solo)
+ * - `share()`: Copy a link that reopens the current setting (solo)
  * - `nextPage() / prevPage()`: Paginate the score
  * - `save()`: Persist all modified settings back to the tune data (solo)
  *
@@ -101,6 +105,7 @@ export default class AbcModal extends Modal {
               aria-label="Transpose up one semitone">♯</button>
             <button class="toggle-view-btn" id="toggleViewBtn">ABC text</button>
             <button id="copyAbcBtn" class="nav-btn" aria-label="Copy ABC to clipboard">Copy ABC</button>
+            <button id="shareAbcBtn" class="nav-btn" aria-label="Copy a link to this setting" style="display:none">Share</button>
           </div>
           <div class="control-row nav-row">
             <div id="abcContextRow" style="display:none">
@@ -146,11 +151,13 @@ export default class AbcModal extends Modal {
 				prevPageBtn: document.getElementById("prevPageBtn"),
 				nextPageBtn: document.getElementById("nextPageBtn"),
 				pageCounter: document.getElementById("pageCounter"),
+				pageNav: document.getElementById("abcPageNav"),
 				saveBtn: document.getElementById("saveAbcBtn"),
 				contextRow: document.getElementById("abcContextRow"),
 				contextSelect: document.getElementById("abcContextSelect"),
 				eskinBtn: document.getElementById("eskinBtn"),
-				copyAbcBtn: document.getElementById("copyAbcBtn")
+				copyAbcBtn: document.getElementById("copyAbcBtn"),
+				shareBtn: document.getElementById("shareAbcBtn")
 			};
 			this.setupControls();
 		}
@@ -158,13 +165,12 @@ export default class AbcModal extends Modal {
 		// Pagination state
 		this.currentPage = 0;
 		this.allSvgs = [];
-		this.LINES_PER_PAGE = 12;
+		this.LINES_PER_PAGE = 10;
 
 		// Ensure rendered view is shown
 		this.elements.rendered.style.display = "block";
 		this.elements.text.classList.remove("active");
 		this.elements.toggleBtn.textContent = "ABC text";
-		this.elements.rendered.style.cursor = "pointer";
 
 		this.updateContextRow();
 		this.updateControls();
@@ -374,6 +380,7 @@ export default class AbcModal extends Modal {
 		this.updateNavigationButtons();
 		this.updateBarLengthButtons();
 		this.updateSaveButton();
+		this.updateShareButton();
 	}
 
 	updateBarLengthButtons() {
@@ -406,6 +413,19 @@ export default class AbcModal extends Modal {
 			!this.isSetMode && this.isDirty ? "inline-block" : "none";
 	}
 
+	/**
+	 * Share is offered only for settings after the first: a plain link to the
+	 * tune already opens on the first one. Needs the host app to support links.
+	 */
+	updateShareButton() {
+		this.elements.shareBtn.style.display =
+			!this.isSetMode &&
+			this.currentAbcIndex > 0 &&
+			this.callbacks?.canShare?.()
+				? ""
+				: "none";
+	}
+
 	updateNavigationButtons() {
 		if (this.isSetMode || this.currentAbcArray.length <= 1) {
 			this.elements.prevBtn.style.display = "none";
@@ -433,6 +453,7 @@ export default class AbcModal extends Modal {
 		);
 		this.elements.toggleBtn?.addEventListener("click", () => this.toggleView());
 		this.elements.copyAbcBtn?.addEventListener("click", () => this.copyAbc());
+		this.elements.shareBtn?.addEventListener("click", () => this.share());
 		this.elements.transposeUpBtn?.addEventListener("click", () =>
 			this.transpose(1)
 		);
@@ -451,6 +472,8 @@ export default class AbcModal extends Modal {
 		// Click navigation on the rendered score — left half = prev, right half = next
 		this.elements.rendered?.addEventListener("click", (e) => {
 			if (this.currentViewMode !== "rendered") return;
+			// the page controls live inside the rendered area; they handle their own clicks
+			if (e.target.closest("#abcPageNav")) return;
 			const rect = this.elements.rendered.getBoundingClientRect();
 			if (e.clientX - rect.left < rect.width / 2) this.prevPage();
 			else this.nextPage();
@@ -499,14 +522,17 @@ export default class AbcModal extends Modal {
 	 * Discovers any sets in `window._setLists` that contain this tune and
 	 * stores them in `setContexts` for the context-selector row.
 	 * @param {object} tune - must have an `abc` property
+	 * @param {{ abcX?: string|null }} [options] - `abcX`: open on the setting whose X
+	 *   header equals this (from the `abcX` URL parameter); ignored, with a warning,
+	 *   unless exactly one setting matches
 	 */
-	openWithTune(tune) {
+	openWithTune(tune, { abcX } = {}) {
 		if (!tune.abc) return;
 		this.tune = tune;
 		this.currentAbcArray = Array.isArray(tune.abc) ? [...tune.abc] : [tune.abc];
 		this.originalAbcArray = [...this.currentAbcArray];
-		this.currentAbcIndex = 0;
-		this.currentTuneAbc = this.currentAbcArray[0];
+		this.currentAbcIndex = this._indexForX(abcX);
+		this.currentTuneAbc = this.currentAbcArray[this.currentAbcIndex];
 		this.currentTranspose = 0;
 		this.currentViewMode = "rendered";
 		this.currentPage = 0;
@@ -514,6 +540,20 @@ export default class AbcModal extends Modal {
 		this.setContexts = this.findSetContexts(tune);
 
 		this.open();
+	}
+
+	/**
+	 * Index of the setting whose X header matches `abcX`; 0 when `abcX` is absent
+	 * or does not identify exactly one setting.
+	 */
+	_indexForX(abcX) {
+		if (abcX == null) return 0;
+		const matches = findAbcIndicesByX(this.currentAbcArray, abcX);
+		if (matches.length !== 1)
+			console.warn(
+				`abcX=${abcX}: ${matches.length} matching settings in "${this.tune.name}"; showing the first setting`
+			);
+		return matches.length === 1 ? matches[0] : 0;
 	}
 
 	/**
@@ -558,18 +598,45 @@ export default class AbcModal extends Modal {
 	 * current setting) to the clipboard. Solo mode only.
 	 */
 	copyAbc() {
-		const button = this.elements.copyAbcBtn;
-		navigator.clipboard.writeText(this.currentTransposedAbc).then(
+		this._copyToClipboard(this.elements.copyAbcBtn, this.currentTransposedAbc);
+	}
+
+	/**
+	 * Copy a link that reopens the current setting (via the `abcX` URL parameter).
+	 * Alerts instead if the setting can't be addressed unambiguously: its X header
+	 * is missing, or shared with another setting of the same tune. Checked against
+	 * the settings as stored (`originalAbcArray`), since that is what a link resolves to.
+	 */
+	share() {
+		const abcX = getAbcX(this.originalAbcArray[this.currentAbcIndex]);
+		if (abcX === null)
+			return alert("This setting has no X: header, so it can't be linked to.");
+		if (findAbcIndicesByX(this.originalAbcArray, abcX).length > 1)
+			return alert(
+				`Several settings of this tune have X: ${abcX}. Give each setting a unique X: header to link to it.`
+			);
+		const { ttId, theSessionId } = this.tune;
+		this._copyToClipboard(
+			this.elements.shareBtn,
+			this.callbacks.getShareUrl(this.tune, abcX),
+			// without an id the link falls back on a name search, which may match other tunes
+			ttId || theSessionId ? "✓ Link copied!" : "⚠ Name-only link copied"
+		);
+	}
+
+	/** Copy `text` to the clipboard, briefly relabelling `button` on success. */
+	_copyToClipboard(button, text, doneLabel = "✓ Copied!") {
+		navigator.clipboard.writeText(text).then(
 			() => {
 				const originalText = button.textContent;
-				button.textContent = "✓ Copied!";
+				button.textContent = doneLabel;
 				setTimeout(() => {
 					button.textContent = originalText;
 				}, 2000);
 			},
 			(err) => {
-				console.error("Failed to copy ABC:", err);
-				alert("Failed to copy ABC");
+				console.error("Failed to copy:", err);
+				alert("Failed to copy to the clipboard");
 			}
 		);
 	}
@@ -591,6 +658,7 @@ export default class AbcModal extends Modal {
 		this.updateDisplayAfterTranspose();
 		this.updateBarLengthButtons();
 		this.updateNavigationButtons();
+		this.updateShareButton();
 	}
 
 	transpose(semitones) {
@@ -631,22 +699,28 @@ export default class AbcModal extends Modal {
 				this.elements.rendered.appendChild(this.allSvgs[i].cloneNode(true));
 		}
 
+		// Page controls go inside a wrapper around the last system on the page;
+		// CSS positions them absolutely over its bottom right corner, so they are
+		// fully visible but take no vertical space. Rebuilt on every render,
+		// which empties the container.
+		const { rendered, pageNav } = this.elements;
+		const lastLine = document.createElement("div");
+		lastLine.className = "abc-last-line";
+		lastLine.append(rendered.lastElementChild, pageNav);
+		rendered.appendChild(lastLine);
 		this.updatePaginationButtons(totalPages);
 	}
 
 	updatePaginationButtons(totalPages) {
-		if (totalPages > 1) {
-			this.elements.prevPageBtn.style.display = "inline-block";
-			this.elements.nextPageBtn.style.display = "inline-block";
-			this.elements.pageCounter.style.display = "inline-block";
-			this.elements.pageCounter.textContent = `${this.currentPage + 1} / ${totalPages}`;
-			this.elements.prevPageBtn.disabled = this.currentPage === 0;
-			this.elements.nextPageBtn.disabled = this.currentPage >= totalPages - 1;
-		} else {
-			this.elements.prevPageBtn.style.display = "none";
-			this.elements.nextPageBtn.style.display = "none";
-			this.elements.pageCounter.style.display = "none";
-		}
+		const { pageNav, pageCounter, prevPageBtn, nextPageBtn, rendered } =
+			this.elements;
+		const paged = totalPages > 1;
+		pageNav.style.display = paged ? "" : "none";
+		// clicking the score turns pages, so only advertise that when there are some
+		rendered.style.cursor = paged ? "pointer" : "";
+		pageCounter.textContent = `${this.currentPage + 1} / ${totalPages}`;
+		prevPageBtn.disabled = this.currentPage === 0;
+		nextPageBtn.disabled = this.currentPage >= totalPages - 1;
 	}
 
 	changeBarLength(direction) {

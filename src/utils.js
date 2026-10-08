@@ -129,4 +129,27 @@ const formatReference = (ref, acc, setUpCrossRefLink = noCrossRefLink) => {
 		</div>`;
 };
 
-export { addLineBreaks, formatNoteLinks, formatReference };
+/**
+ * Reads the X: (reference number) header of an ABC setting.
+ * @param {string} abc
+ * @returns {string|null} The trimmed value, or null if there is no X header.
+ */
+const getAbcX = (abc) => abc.match(/^X:\s*(.*?)\s*$/m)?.[1] || null;
+
+/**
+ * Indices of the settings in `abcArray` whose X header equals `x`.
+ * Callers decide what to do with zero or several matches.
+ * @param {string[]} abcArray
+ * @param {string|number} x
+ * @returns {number[]}
+ */
+const findAbcIndicesByX = (abcArray, x) =>
+	abcArray.flatMap((abc, i) => (getAbcX(abc) === String(x).trim() ? [i] : []));
+
+export {
+	addLineBreaks,
+	findAbcIndicesByX,
+	formatNoteLinks,
+	formatReference,
+	getAbcX
+};

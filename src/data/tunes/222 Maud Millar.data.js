@@ -26,6 +26,7 @@ P:Variations/embellishments
 "_v6"A/B/AGA||"_v7"Bged||"_v8"G/G/G||"_v9"BeeB||||"_v10"efgf||"_v11"eage||`,
 		`X: 2
 T: Maud Millar
+T:as played by Frankie Gavin
 R: reel
 S: Frankie Gavin, fiddle; Brian McGrath, piano
 D: Fierce Traditional

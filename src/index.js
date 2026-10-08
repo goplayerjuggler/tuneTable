@@ -41,7 +41,6 @@ import {
 const storageKey = "tunesData";
 const CURRENT_LIST_KEY = "currentTuneList";
 window.currentSortType = sortConstants.PREDEFINED_SORT_NAMES[0];
-let currentSortIndex = 0;
 
 let editModal,
 	getAbcModal,
@@ -546,6 +545,8 @@ async function resumeCurrentList(listState, manifest) {
 
 function applyUrlFilters(params) {
 	let filtered = false;
+	let handledById = false;
+	const abcX = params.get("abcX");
 	if (params.has("q")) {
 		const q = params.get("q");
 		if (q) {
@@ -560,8 +561,8 @@ function applyUrlFilters(params) {
 		const idProperty = idProperties[i];
 		const value = +params.get(idProperty);
 		if (value) {
-			selectByIdProperty(idProperty, value);
-			filtered = true;
+			selectByIdProperty(idProperty, value, abcX);
+			filtered = handledById = true;
 			break;
 		}
 	}
@@ -575,6 +576,11 @@ function applyUrlFilters(params) {
 		}
 	}
 	if (!filtered) applyFilters();
+
+	// abcX on a link that narrowed the list to one tune: open the viewer on that
+	// setting. (The ttId / theSessionId case is handled in selectByIdProperty.)
+	if (abcX !== null && !handledById && window.filteredData.length === 1)
+		openAbcModal(window.filteredData[0], abcX);
 }
 
 // -- Footer -------------------------------------------------------------------
@@ -701,14 +707,25 @@ function copyTuneDataToClipboard(tunes, button) {
 		}
 	);
 }
-function copyShareToClipboard(tune, button) {
+/**
+ * Link to a tune in the current server list. With `abcX`, the link also opens
+ * the score viewer on the setting whose X header matches.
+ */
+function getShareUrl(tune, abcX) {
 	const root = window.location.origin + (window.location.pathname ?? "");
 	const remaining = tune.ttId
 		? "ttId=" + tune.ttId
 		: tune.theSessionId
 			? "theSessionId=" + tune.theSessionId
 			: "n=" + encodeURIComponent(tune.name);
-	const result = `${root}?l=${currentListState.sourceId}&${remaining}`;
+	const abc = abcX == null ? "" : `&abcX=${encodeURIComponent(abcX)}`;
+	return `${root}?l=${currentListState.sourceId}&${remaining}${abc}`;
+}
+// Share links address a tune of a server list by id (or name); local lists have no stable address.
+const canShare = () => currentListState?.source === "server";
+
+function copyShareToClipboard(tune, button) {
+	const result = getShareUrl(tune);
 	navigator.clipboard.writeText(result).then(
 		() => {
 			const originalText = button.textContent;
@@ -1133,8 +1150,42 @@ function crossRefLinks(tune) {
 	});
 	return links;
 }
+// Sorts beyond abc-tools' predefined ones, as sort levels; ties fall back to the
+// name, which ignores leading articles ("The Kesh" files under K).
+const FILE_DATE_SORTS = {
+	fileDateNewest: [
+		{ type: "property", property: "fileDate", order: "desc" },
+		{ type: "name" }
+	],
+	fileDateOldest: [{ type: "property", property: "fileDate" }, { type: "name" }]
+};
+// Labels for the "Change ordering" menu. In abc-tools' names, "Desc" reverses the level before it.
+const SORT_LABELS = {
+	rhythmContourName: "Rhythm, contour, name",
+	rhythmContourDescName: "Rhythm, contour (descending), name",
+	meterContourName: "Meter, contour, name",
+	meterContourDescName: "Meter, contour (descending), name",
+	nameContour: "Name, contour",
+	nameDescContour: "Name (descending), contour",
+	fileDateNewest: "File date: newest first",
+	fileDateOldest: "File date: oldest first"
+};
+const SORT_OPTIONS = [
+	...sortConstants.PREDEFINED_SORT_NAMES,
+	...Object.keys(FILE_DATE_SORTS)
+];
+
+/** Sort `tunes` in place according to `window.currentSortType`. */
+function sortTunes(tunes) {
+	const sortLevels = FILE_DATE_SORTS[window.currentSortType];
+	sortTunesArray(
+		tunes,
+		sortLevels ? { sortLevels } : { predefinedSort: window.currentSortType }
+	);
+}
+
 function sortWithDefaultSort() {
-	sortTunesArray(window.tunesData, { predefinedSort: window.currentSortType });
+	sortTunes(window.tunesData);
 }
 
 function openTheSessionImport(e, dropdown, howToOpen) {
@@ -1253,9 +1304,9 @@ function populateFilters() {
 		modes.map((m) => toOption(m, modeCounts)).join("");
 }
 
-function openAbcModal(tune) {
+function openAbcModal(tune, abcX) {
 	if (!tune.abc) return;
-	getAbcModal().openWithTune(tune);
+	getAbcModal().openWithTune(tune, { abcX });
 }
 function findSetByName(name) {
 	const needle = name.toLowerCase();
@@ -1271,6 +1322,130 @@ function scrollToFirstTune(tunes) {
 	if (!first || !first._crId) return;
 	const el = document.getElementById(`cr-t${first._crId}`);
 	el?.scrollIntoView({ block: "center" });
+}
+
+// -- Tune context menu --------------------------------------------------------
+// Only one menu exists at any time: it is built when a row's actions button is
+// clicked, and removed when it closes, rather than keeping one per row in the DOM.
+
+let tuneMenu = null; // { el, trigger } while a menu is open
+
+function closeTuneMenu() {
+	if (!tuneMenu) return;
+	tuneMenu.el.remove();
+	tuneMenu.trigger.setAttribute("aria-expanded", "false");
+	tuneMenu = null;
+}
+
+/**
+ * Replace the menu's contents.
+ * @param {HTMLElement} menu
+ * @param {{ cls?: string, label: string, action: Function, keepOpen?: boolean }[]} items
+ *   `keepOpen` items (sub-menu navigation) leave the menu open; all others close it first.
+ */
+function fillMenu(menu, items) {
+	menu.replaceChildren(
+		...items.map(({ cls = "", label, action, keepOpen }) => {
+			const btn = document.createElement("button");
+			btn.className = `tune-menu-item ${cls}`.trim();
+			btn.setAttribute("role", "menuitem");
+			btn.textContent = label;
+			btn.addEventListener("click", (e) => {
+				// keepOpen: stop the document-level handler from closing the menu
+				if (keepOpen) e.stopPropagation();
+				else closeTuneMenu();
+				action();
+			});
+			return btn;
+		})
+	);
+}
+
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: "instant" });
+
+function openTuneMenu(trigger) {
+	const row = trigger.closest("tr");
+	const index = Number(row.dataset.tuneIndex);
+	const tune = window.filteredData[index];
+
+	const menu = document.createElement("div");
+	menu.className = "tune-context-menu";
+	menu.setAttribute("role", "menu");
+
+	const mainItems = [
+		{
+			cls: `btn-select${tune.selected ? " btn-select--checked" : ""}`,
+			label: `${tune.selected ? "☑" : "☐"} Select`,
+			action: () => toggleTuneSelected(index, row)
+		},
+		//no extra check on ttId / theSessionId being available
+		...(canShare()
+			? [
+					{
+						cls: "btn-share",
+						label: "🔗 Copy share link",
+						action: () => copyShare(index, trigger)
+					}
+				]
+			: []),
+		{ cls: "btn-delete", label: "🗑 Delete", action: () => deleteTune(index) },
+		{
+			cls: "btn-copy",
+			label: "📋 Copy code",
+			action: () => copySingleTune(index, trigger)
+		},
+		{
+			cls: "btn-edit",
+			label: "✏️ Edit",
+			action: () => editModal.openWithTune(tune, index)
+		},
+		{ label: "⬆️ Go to top", action: scrollToTop },
+		{
+			label: "↕️ Change ordering…",
+			keepOpen: true,
+			action: () => fillMenu(menu, sortItems)
+		}
+	];
+	const sortItems = [
+		...SORT_OPTIONS.map((type) => ({
+			label: `${type === window.currentSortType ? "◉" : "○"} ${SORT_LABELS[type] ?? type}`,
+			action: () => {
+				setSort(type);
+				scrollToTop();
+			}
+		})),
+		{ label: "← Back", keepOpen: true, action: () => fillMenu(menu, mainItems) }
+	];
+
+	fillMenu(menu, mainItems);
+	trigger.after(menu);
+	trigger.setAttribute("aria-expanded", "true");
+	tuneMenu = { el: menu, trigger };
+}
+
+/**
+ * Single delegated click handler for the table body, replacing per-row listeners
+ * for the actions button, the tune title and the incipit.
+ */
+function onTableClick(e) {
+	const trigger = e.target.closest(".tune-menu-trigger");
+	if (trigger) {
+		// keep the document-level handler from closing the menu being opened
+		e.stopPropagation();
+		const reopen = tuneMenu?.trigger !== trigger;
+		closeTuneMenu();
+		if (reopen) openTuneMenu(trigger);
+		return;
+	}
+	const scoreLink = e.target.closest(
+		"a.tune-name.has-abc, .tune-incipit--clickable"
+	);
+	if (scoreLink) {
+		e.preventDefault();
+		openAbcModal(
+			window.filteredData[scoreLink.closest("tr").dataset.tuneIndex]
+		);
+	}
 }
 
 function renderTable() {
@@ -1367,12 +1542,6 @@ function renderTable() {
 			? 'tune-incipit svg-pending" data-pending title="preparing the incipit…'
 			: "tune-incipit";
 
-		const shareButton =
-			currentListState.source === "server"
-				? //no extra check on ttId / theSessionId being available
-					`<button class="tune-menu-item btn-share" role="menuitem">🔗 Copy share link</button>`
-				: "";
-
 		// ── Row HTML ──────────────────────────────────────────────────
 		row.innerHTML = `
 			<td>
@@ -1385,74 +1554,14 @@ function renderTable() {
 						<div class="tune-actions">
 							<button class="btn-icon tune-menu-trigger" title="Actions" aria-haspopup="true"
 								aria-expanded="false">⋯</button>
-							<div class="tune-context-menu" hidden role="menu">
-								<button class="tune-menu-item btn-select${tune.selected ? " btn-select--checked" : ""}"
-									role="menuitem">${tune.selected ? "☑" : "☐"} Select</button>
-								${shareButton}
-								<button class="tune-menu-item btn-delete" role="menuitem">🗑 Delete</button>
-								<button class="tune-menu-item btn-copy" role="menuitem">📋 Copy code</button>
-								<button class="tune-menu-item btn-edit" role="menuitem">✏️ Edit</button>
-							</div>
 						</div>
 					   ${contourHtml}
 					</div>
 				</div>
-				<div class="${incipitClass}"></div>
+				<div class="${hasAbc ? "tune-incipit--clickable " : ""}${incipitClass}"></div>
 			</td>
 			<td class="col-references">${acc.referencesHtml}${scoresHtml}</td>`;
 
-		// ── Event listeners (no inline JS for action buttons) ─────────
-		if (hasAbc) {
-			row.querySelector(".tune-name").addEventListener("click", (e) => {
-				openAbcModal(window.filteredData[index], index);
-				e.preventDefault();
-			});
-		}
-
-		// ⋯ context menu
-		const trigger = row.querySelector(".tune-menu-trigger");
-		const menu = row.querySelector(".tune-context-menu");
-
-		trigger.addEventListener("click", (e) => {
-			e.stopPropagation();
-			const opening = menu.hidden;
-			// close any other open menus
-			document
-				.querySelectorAll(".tune-context-menu:not([hidden])")
-				.forEach((m) => {
-					m.hidden = true;
-					m.closest(".tune-actions")
-						?.querySelector(".tune-menu-trigger")
-						?.setAttribute("aria-expanded", "false");
-				});
-			if (opening) {
-				menu.hidden = false;
-				trigger.setAttribute("aria-expanded", "true");
-			}
-		});
-
-		row.querySelector(".btn-select").addEventListener("click", () => {
-			menu.hidden = true;
-			trigger.setAttribute("aria-expanded", "false");
-			toggleTuneSelected(index, row);
-		});
-		row.querySelector(".btn-edit").addEventListener("click", () => {
-			menu.hidden = true;
-			editModal.openWithTune(window.filteredData[index], index);
-		});
-
-		row.querySelector(".btn-copy").addEventListener("click", () => {
-			menu.hidden = true;
-			copySingleTune(index, trigger);
-		});
-		row.querySelector(".btn-share")?.addEventListener("click", () => {
-			menu.hidden = true;
-			copyShare(index, trigger);
-		});
-		row.querySelector(".btn-delete").addEventListener("click", () => {
-			menu.hidden = true;
-			deleteTune(index);
-		});
 		// Badge clicks toggle metadata filters; preserve the tune's viewport position
 		row.querySelector(".tune-meta").addEventListener("click", (e) => {
 			const badge = e.target.closest(".badge");
@@ -1563,7 +1672,7 @@ function filterByName(searchTerm) {
 	renderTable();
 }
 
-function selectByIdProperty(idProperty, id) {
+function selectByIdProperty(idProperty, id, abcX) {
 	const tunes = window.tunesData.filter((tune) => tune[idProperty] === id);
 	if (tunes.length > 0) {
 		tunes[0]._isCrTarget = true;
@@ -1579,7 +1688,7 @@ function selectByIdProperty(idProperty, id) {
 	// open the score viewer directly as well as scrolling to the tune.
 
 	const first = tunes[0];
-	if (first?.abc) openAbcModal(first);
+	if (first?.abc) openAbcModal(first, abcX);
 }
 
 function removeSpinner() {
@@ -1590,19 +1699,22 @@ function removeSpinner() {
 	_spinnerHidden = true;
 }
 
-function sortData() {
-	if (currentSortIndex < sortConstants.PREDEFINED_SORT_NAMES.length - 1) {
-		currentSortIndex++;
-	} else {
-		currentSortIndex = 0;
-	}
-	window.currentSortType =
-		sortConstants.PREDEFINED_SORT_NAMES[currentSortIndex];
-	sortTunesArray(window.filteredData, {
-		predefinedSort: window.currentSortType
-	});
-	renderTable();
+/**
+ * Switch to the given sort. `tunesData` is re-sorted, then the filters are
+ * reapplied, so the order survives later filter changes.
+ */
+function setSort(sortType) {
+	window.currentSortType = sortType;
+	sortWithDefaultSort();
+	applyFilters();
 	updateFooter();
+}
+
+/** Column header click: cycle through abc-tools' predefined sorts. */
+function sortData() {
+	const names = sortConstants.PREDEFINED_SORT_NAMES;
+	// indexOf is -1 for a sort outside the cycle (e.g. file date), which restarts it
+	setSort(names[(names.indexOf(window.currentSortType) + 1) % names.length]);
 }
 
 // -- Initialisation -----------------------------------------------------------
@@ -1639,7 +1751,9 @@ async function initialiseData() {
 		populateFilters,
 		applyFilters,
 		renderTable,
-		sortWithDefaultSort
+		sortWithDefaultSort,
+		canShare,
+		getShareUrl
 	};
 
 	slotManager = new TuneListSlotManager();
@@ -1661,12 +1775,6 @@ async function initialiseData() {
 	window.tunesData = [];
 	window.filteredData = [];
 	window._setLists = [];
-	window.sortByMostRecent = () => {
-		window.filteredData = window.filteredData.sort((a, b) =>
-			b.fileDate.localeCompare(a.fileDate)
-		);
-		renderTable();
-	};
 
 	// Cleanup from previous storage format
 	localStorage.removeItem(storageKey + "_saveDate");
@@ -1777,6 +1885,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 		});
 	});
 
+	document
+		.getElementById("tunesTableBody")
+		.addEventListener("click", onTableClick);
+
 	// Dropdown menu
 	const editMenuBtn = document.getElementById("editMenuBtn");
 	const dropdown = editMenuBtn.parentElement;
@@ -1795,14 +1907,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 	// Close any open tune context menus when clicking outside
 	document.addEventListener("click", (e) => {
 		if (!dropdown.contains(e.target)) setDropdownOpen(false);
-		document
-			.querySelectorAll(".tune-context-menu:not([hidden])")
-			.forEach((m) => {
-				m.hidden = true;
-				m.closest(".tune-actions")
-					?.querySelector(".tune-menu-trigger")
-					?.setAttribute("aria-expanded", "false");
-			});
+		closeTuneMenu();
 	});
 
 	// Helper: close dropdown then invoke action

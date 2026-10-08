@@ -59,6 +59,8 @@ I built this for myself and the musicians I play with, to explore, organise and 
 
 Similarly, there are `ttId` and `theSessionId` query parameters. They are used by the “share link” feature.
 
+The `abcX` parameter, used with one of the above so that the list narrows to a single tune, opens the score viewer on the setting (when a tune has several ABC settings) whose `X:` header matches. Example: `?l=default&ttId=123&abcX=2`. The **Share** button in the score viewer builds these links; it appears for every setting after the first, and reports an error if the setting has no `X:` header, or if several settings of the tune have the same one.
+
 ## Current list of tunes
 It’s a hodgepodge list of tunes I either like, am interested in, or want to share with some musicians, or … 
 A fair number of the scores there are my own work, either transcriptions of other people’s tunes or original pieces. I reserve some rights on this via a CC licence; details below.
@@ -192,11 +194,7 @@ localStorage.setItem('theSessionImportConfig', JSON.stringify({
 ```
 
 ## Sort by most recently updated, in the default list
-(I haven't yet set up the UI for this.) I use a little JS in Dev tools:
-```JavaScript
-tunesData.sort((a, b) => b.fileDate.localeCompare(a.fileDate));
-```
-Followed by rerendering by pushing a "badge filter" twice.
+In the ⋯ menu of any tune, **Change ordering…** lets you pick a sort directly, including *File date: newest first* and *File date: oldest first* (based on `tune.fileDate`). Clicking the first column header still cycles through the contour-based sorts only.
 
 ### Contributing
 Issues and pull requests are welcome.
