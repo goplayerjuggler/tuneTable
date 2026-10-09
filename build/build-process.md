@@ -185,7 +185,7 @@ Given the tunes that will be published in a list, the references that they point
 Tune `lastUpdate` values need a stable "when was this last changed" date, and `git log` is the source of truth for that — but shelling out to git for every tune on every build would be slow, so it's cached in `build/tune-dates.json`.
 
 - The cache holds `{ tuneDates1, tuneDates2 }`. Numbered files (`0001 some tune.data.js`) are indexed by number into the `tuneDates1` array; everything else (including bare `.abc` files) is a `fileName → date` entry in the `tuneDates2` dict.
-- `npm run update-dates` runs `git log -n 1 --follow --format=%ai -- <file>` for every `.data.js`/`.abc` file directly under `src/data/tunes/` and updates the cache if the date has changed. `--follow` means renames don't lose history.
+- `npm run update-dates` runs `git log --follow --name-status --format=%ai -- <file>` for every `.data.js`/`.abc` file directly under `src/data/tunes/` and updates the cache if the date has changed. `--follow` means renames don't lose history; the date taken is that of the most recent commit that changed the file's contents, so commits that merely renamed or moved it (git status `R100`) are skipped. A rename that also edited the file counts as a change.
 - `npm run update-dates -- only-check <duration>` (e.g. `4h`, `30m`, `7d`) restricts the git lookups to files whose mtime is within that window, so a quick "I just edited a couple of files" pass doesn't have to re-check everything.
 - `build-tune-lists.mjs` never writes this file; it only reads it and warns if a file has no cached date, telling you to run `update-dates`.
 - References, releases, artists and instruments are not covered by this cache either, and don't affect a list's `lastUpdate`.

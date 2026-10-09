@@ -3,7 +3,8 @@
 // Updates build/tune-dates.json using git commit dates as the source of truth.
 // Run via:  npm run update-dates
 //
-// Uses `git log --follow` so renames are handled correctly.
+// Uses `git log --follow` so history survives renames, but skips commits that
+// only renamed or moved a file: only changes to its contents count.
 import process from "process";
 import { execFile } from "child_process";
 import { promisify } from "util";
@@ -49,23 +50,31 @@ function serialiseTuneDates(tuneDates1, tuneDates2) {
 // ─── Git date lookup ──────────────────────────────────────────────────────────
 
 /**
- * Returns the date of the most recent commit touching `filePath` as YYYY-MM-DD,
- * or `null` if the file has no git history (e.g. untracked).
+ * Returns the date of the most recent commit that changed the contents of
+ * `filePath` as YYYY-MM-DD, or `null` if the file has no git history (e.g.
+ * untracked). Commits that only renamed or moved the file (status `R100`) are
+ * skipped; a rename that also edited the file (e.g. `R087`) still counts.
  */
 async function getGitDate(filePath) {
   try {
     const { stdout } = await execFileAsync("git", [
       "log",
-      "-n",
-      "1", //just need the most recent
       "--follow",
+      "--name-status",
       "--format=%ai",
       "--",
       filePath
     ]);
-    const firstLine = stdout.trim().split("\n")[0];
-    // "%ai" → "2024-03-15 14:23:45 +0100"
-    return firstLine ? firstLine.split(" ")[0] : null;
+    // Newest first: a date line ("%ai" → "2024-03-15 14:23:45 +0100") followed
+    // by a tab-separated status line ("M\tpath", "R100\told\tnew").
+    // Merge commits have no status line, so their date is simply overwritten.
+    let date = null;
+    for (const line of stdout.split("\n")) {
+      if (!line.trim()) continue;
+      if (!line.includes("\t")) date = line.split(" ")[0];
+      else if (!line.startsWith("R100\t")) return date;
+    }
+    return null;
   } catch {
     return null;
   }
