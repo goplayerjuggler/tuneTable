@@ -25,7 +25,5 @@ K:Gmajor
 			url: "https://en.wikipedia.org/wiki/Na_Ceannabh%C3%A1in_Bh%C3%A1na"
 		}
 	],
-	crossReferences: [
-		{ theSessionId: 34, index: 0 } // Frieze Britches;a set by McMahon & Hill
-	]
+	fileDate: "2026-04-08"
 };

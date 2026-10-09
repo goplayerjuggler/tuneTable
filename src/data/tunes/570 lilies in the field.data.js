@@ -17,10 +17,5 @@ d2fd Adfd cdef g2fe|d2fd Adfd eaag eddA|
 d2fd Adfd cdef g2fg|afge d2cd eaag edd2||`,
 	theSessionId: 1750,
 	theSessionSettingId: 44324,
-	crossReferences: [
-		{
-			index: 0,
-			theSessionId: 827 //Theresa O'Grady , the Templehouse
-		}
-	]
+	fileDate: "2026-08-24"
 };

@@ -16,11 +16,5 @@ g2ef gfeg f2df afdf|g2ef gfed B2Ac BE~E2|
 g2ef gfeg f2df afdf|edef gfed B2Ac BEED||`,
 	theSessionId: 827,
 	theSessionSettingId: 13977,
-	references: [
-		{
-			url: "https://www.youtube.com/watch?v=uvlCh20Ayw8",
-			artists: `Theresa O'Grady, banjo; Declan Payne, piano accordion`,
-			notes: "The Templehouse / The Lilies In The Field (April 2016)"
-		}
-	]
+	fileDate: "2026-08-24"
 };

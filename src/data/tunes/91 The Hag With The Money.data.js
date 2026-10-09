@@ -16,11 +16,5 @@ Add A3 AGE G3|Add ABA AGE EDD|`,
 			album: "The Fiddle Music Of Donegal - Volume Two (1997)"
 		}
 	],
-	parts: "AB",
-	crossReferences: [
-		{
-			theSessionId: 34,
-			index: 0 //Frieze Britches - set by McMahon & Hill
-		}
-	]
+	parts: "AB"
 };

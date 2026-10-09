@@ -33,28 +33,29 @@ D: Fierce Traditional
 Z:abc-transcription Malcolm Schonfield%2026-10-01 - 06
 Z:abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 N:An incomplete transcription.
-H:I think he's playing on a fiddle that's tuned a semitone sharper than the standard tuning.
+H:I think he's playing on a fiddle that's tuned a semitone sharper than the standard tuning. 
+H: For this transcription, rather than having it “as it sounds”, I've chosen to share it “as it would be played on a standard fiddle”. (It's easy enough to go from one to the other; it makes little difference…)
 M:4/4
 L:1/16
-K: Eb
+K: D
 %swing 0.15
 %swing_offset 0
-"^lento, acell."y/2 !slide!e3.d || cBGF ECB,C "^a tempo" E2{A}GE B,EGB|cGBG !slide!!tenuto!F2EF GccB cded|
-cBGF EGB,C EEGE B,EGB|cGBG !slide!!tenuto!F2EF GccB c2ec||
-Bcef geeg fc~c2 efec| B/B/BGB geeg f2{e}cB cefe|
-[BE]cef geeg fc~c2 [Ee]3f|gfed edcB Gc3 cfed||
-"^2nd"cBGF EGB,/C/D E2GE B,EGB|ecBG !slide!!tenuto!F2EF Gccc Gcec |
-BGFG FGB,C !tenuto!E2GE B,EGB | ecBG F/F/FEF GccB cfec ||
-Bcef ge[eE]g fc~c2 ~[eE]3c| B[eE]3 geeg f2{e}cB c/d/efz|
-[BE]cef geeg fc~c2 edef|!slide!!tenuto!gfed edcB GccB cfed||
-"^3rd"cBGF E/F/GB,C E2GE B,EGB|cGBG !slide!!tenuto!F2EF Gccc Gced|
-cBGF ECB,C EEGE B,EGB|!slide!!tenuto!ecBG !slide!F2EF GccB c2ec||
-[BE]cef geeg fc~c2 efec| B/B/BGB geeg fdeB c/d/efz|
-[BE]cef geeg fc~cB edef|gfed edcB Gccc Gced||
-"^4th"cBGF EGB,C !tenuto!E3G BEGB|ecBG F/F/FEF Gccc Gced|
-cBGF E/F/GB,C EEGE B,EGB|ecBG !slide!F2EF GccB cfec||
-[BE]2ef geeg fcc2 e3c| Bcef geeg fdeB c/d/efz|
-[BE]cef geeg fccB edef|gfed edcB GccB [c3E]"^starts second tune here"e|]  
+"^lento, acell."y/2 !slide!d3.c || BAFE DB,A,B, "^a tempo" D2{G}FD A,DFA|BFAF !slide!!tenuto!E2DE FBBA Bcdc|
+BAFE DFA,B, DDFD A,DFA|BFAF !slide!!tenuto!E2DE FBBA B2dB||
+ABde fddf eB~B2 dedB| A/A/AFA fddf e2{d}BA Bded|
+[AD]Bde fddf eB~B2 [Dd]3e|fedc dcBA FB3 Bedc||
+"^2nd"BAFE DFA,/B,/C D2FD A,DFA|dBAF !slide!!tenuto!E2DE FBBB FBdB |
+AFEF EFA,B, !tenuto!D2FD A,DFA | dBAF E/E/EDE FBBA BedB ||
+ABde fd[dD]f eB~B2 ~[dD]3B| A[dD]3 fddf e2{d}BA B/c/dez|
+[AD]Bde fddf eB~B2 dcde|!slide!!tenuto!fedc dcBA FBBA Bedc||
+"^3rd"BAFE D/E/FA,B, D2FD A,DFA|BFAF !slide!!tenuto!E2DE FBBB FBdc|
+BAFE DB,A,B, DDFD A,DFA|!slide!!tenuto!dBAF !slide!E2DE FBBA B2dB||
+[AD]Bde fddf eB~B2 dedB| A/A/AFA fddf ecdA B/c/dez|
+[AD]Bde fddf eB~BA dcde|fedc dcBA FBBB FBdc||
+"^4th"BAFE DFA,B, !tenuto!D3F ADFA|dBAF E/E/EDE FBBB FBdc|
+BAFE D/E/FA,B, DDFD A,DFA|dBAF !slide!E2DE FBBA BedB||
+[AD]2de fddf eBB2 d3B| ABde fddf ecdA B/c/dez|
+[AD]Bde fddf eBBA dcde|fedc dcBA FBBA [B3D]"^starts second tune here"d|]    
 `
 	],
 	references: [
