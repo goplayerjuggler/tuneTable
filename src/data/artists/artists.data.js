@@ -1,5 +1,10 @@
 export default [
 	{
+		id: "farr_lu",
+		name: "Lucy Farr",
+		instruments: ["fiddle"]
+	},
+	{
 		id: "gavin_fr",
 		qId: 1886411,
 		name: "Frankie Gavin",
@@ -22,6 +27,11 @@ export default [
 		urls: ["https://en.wikipedia.org/wiki/Se%C3%A1n_McGuire_(fiddler)"],
 		name: "Seán McGuire",
 		instruments: ["flute"]
+	},
+	{
+		id: "murphy_de",
+		name: "Denis Murphy",
+		instruments: ["fiddle"]
 	},
 	{
 		id: "oconnor_mi",

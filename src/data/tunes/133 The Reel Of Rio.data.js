@@ -15,10 +15,5 @@ DEGA BABd egg2 agef|gede gedB AcBA G2:|
 |:Bc|dgg2 bgg2 bgag edBd|eBB2 GABd e2dB AGEG|
 DEGA BABd egg2 agef|gede gedB AcBA G2:|`,
 	theSessionId: 575,
-	crossReferences: [
-		{
-			theSessionId: 440, //Fintan Vallely, Christmas Eve
-			index: 1
-		}
-	]
+	fileDate: "2026-04-08"
 };

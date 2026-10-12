@@ -77,11 +77,6 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 The Drunken Landlady / Christmas Eve / The Abbey Reel`
 		},
 		{
-			artists: "Fintan Vallely, flute; Mark Simos, guitar",
-			url: "https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2",
-			notes: "Christmas Eve / The Reel of Rio"
-		},
-		{
 			artists:
 				"“The Vashon Sessions” - flute, button accordion, fiddle, guitar, octave mandolin, percussion",
 			url: "https://thevashonsessions.bandcamp.com/track/christmas-eve-reel-of-mullinavat-bucks-of-oranmore",
@@ -101,5 +96,6 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`
 	],
 	theSessionId: 440,
 	theSessionSettingId: 48642,
-	parts: "AABBCC"
+	parts: "AABBCC",
+	fileDate: "2026-05-31"
 };
