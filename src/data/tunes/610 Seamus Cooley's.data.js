@@ -1,19 +1,20 @@
 export default {
 	parts: "AABB",
-	abc: `X: 1
+	abc: `X: 2
 T: Seamus Cooley's
 R: jig
 M:12/8
-H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/414#setting414. Setting entered in thesession by user “Toni Ribas” in 2001.
+H:Imported into *tuneTable* on 2026-10-13, from https://thesession.org/tunes/414#setting2061. Setting entered in thesession by user “Bannerman” in 2003 (?).
 N:*abc-tools: convert to M:12/8*
 L: 1/8
-K: Gmaj
- |:BAB G2E DB,D DEG|GAB AGE A3 AGA|
-   BAB G2E DB,D DEG|GAB AGE G3 G2A:|
- |:BAB d2B BAB d2B| A3  AGE ABA AGA|
-[1 BAB d2B BAB d2B| G2B AGE G3 G2A:|
-[2 BAB G2E DB,D DEG|GAB AGE G3 G2A||
+K: Dmaj
+ |:fef d2B ABA ABd|~e3 edB efe ede|
+   fef d2B ABA ABd|e3 ede f2e d2e:|
+ |:fef a2f fef a2f|efe edB efe ede|
+[1 fef a2f fef a2f|efe ede f2e d2e:|
+[2 fef d2B ABA ABd|e3 ede f2e d2e||
+
 `,
 	theSessionId: 414,
-	theSessionSettingId: 414
+	theSessionSettingId: 2061
 };

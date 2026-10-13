@@ -1,5 +1,12 @@
 export default [
-	{ id: "dolan_fe", name: "Felix Dolan", instrument: "piano" },
+	{
+		id: "dolan_fe",
+		name: "Felix Dolan",
+		url: "https://itma.accesstomemory.org/dolan-felix-1937-2013",
+		instrument: "piano",
+		b: 1937,
+		d: 2013
+	},
 	{
 		id: "farr_lu",
 		name: "Lucy Farr",
@@ -22,11 +29,19 @@ export default [
 			"Antóin Mac Gabhann (Tony Smith) comes from Mullahoran, Co Cavan and now lives in Ashbourne, Co Meath. He is one of Ireland’s best known traditional fiddle performers. (from bandcamp; 2015)",
 		instruments: ["fiddle"]
 	},
-	{ id: "macmahon_to", name: "Tony MacMahon", instruments: ["accordion"] },
+	{
+		id: "macmahon_to",
+		name: "Tony MacMahon",
+		instruments: ["accordion"],
+		url: "https://itma.accesstomemory.org/macmahon-tony-1939-2021"
+	},
 	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
 	{
 		id: "mcguire_se",
-		urls: ["https://en.wikipedia.org/wiki/Se%C3%A1n_McGuire_(fiddler)"],
+		urls: [
+			"https://en.wikipedia.org/wiki/Se%C3%A1n_McGuire_(fiddler)",
+			"https://www.discogs.com/artist/1667577-Sean-McGuire"
+		],
 		name: "Seán McGuire",
 		instruments: ["flute"]
 	},
@@ -38,7 +53,8 @@ export default [
 	{
 		id: "nicgabhann_ca",
 		name: "Caitlín Nic Gabhann",
-		instruments: ["concertina", "dance"]
+		instruments: ["concertina", "dance"],
+		url: "https://www.caitlin.ie"
 	},
 	{
 		id: "oconnor_mi",

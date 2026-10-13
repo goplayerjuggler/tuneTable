@@ -4,7 +4,7 @@ export default [
 		urls: [
 			"https://www.itma.ie/playlists/padraics-picks-november-2024/?track=7"
 		],
-
+		itmaId: "tmm-18590-1-280406",
 		tunes: [
 			{ theSessionId: 98 },
 			{
@@ -47,11 +47,28 @@ Warning for ITMA pages: you have to click on the link in the player.`,
 		year: 1993
 	},
 	{
+		//Morning dew / Hunter's house
 		urls: [
-			"https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6",
-			"https://itma.accesstomemory.org/lre-277086-1-277882"
+			"https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6"
 		],
+		itmaId: "lre-277086-1-277882",
 		credits: ["redican_la", "mcgann_an", "dolan_fe"],
-		tunes: [69, 472] //Morning dew, reel ; Hunter's house
+		tunes: [69, 472],
+		year: "1960s"
+	},
+	{
+		//Lark in the morning, jig ; Joe Cooley's, jig / Tony MacMahon, accordion ; Steve Cooney, guitar
+		urls: [
+			"https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-april-2025/?track=5"
+		],
+		itmaId: "tmm-18590-1-280420",
+		credits: ["macmahon_to", { name: "Steve Cooney", instrument: "guitar" }],
+		year: 2000,
+		tunes: [
+			{
+				theSessionId: 2060 //morning lark
+			},
+			{ theSessionId: 414, name: "Joe Cooley's" } //seamus cooley's
+		]
 	}
 ];
