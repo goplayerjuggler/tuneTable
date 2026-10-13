@@ -11,6 +11,7 @@
 // To name the other tunes of a reference, the build adds to each of its `tunes`
 // entries that is found in the database: `inDatabase: { idStr, name, rhythm }`
 // (`idStr` as in a note link: `theSessionId=2`). A list needn't contain those tunes.
+// In the app, a link to such a tune that is not in the list shown goes to the tune in the default list (setUpCrossRefLink in src/index.js).
 //
 // A `tunes` entry may give its own `name` and `rhythm`; they take precedence over the database's,
 // and are the only ones for a tune that is not in the database: `{ name: "Mo Ghloine", rhythm: "song" }`.

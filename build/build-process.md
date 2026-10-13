@@ -170,7 +170,7 @@ The Stage / [Ag Filleadh Abhaile](theSessionId=1234) / [O'Mahoney's](theSessionI
 ```
 
 - A tune that the reference mentions more than once gets a single merged reference: all its positions in the list are plain text, the credits are those of any of its positions, and the notes carry the time range and notes of each mention.
-- The tune whose row it is, and any tune not in the data, are plain text; every other tune is a note link, which `formatNoteLinks` turns into an anchor to that tune's row.
+- The tune whose row it is, and any tune not in the data, are plain text; every other tune is a note link, which `formatNoteLinks` turns into an anchor to that tune's row. If that tune is not in the list shown (a list holds the whole reference as soon as one of its tunes is in it), `setUpCrossRefLink` (`index.js`) instead makes an external link to it in the default list, like a share link (`?l=default&theSessionId=…`); in the default list itself it stays plain text.
 - The summary counts the rhythms of the tunes found in the data, lower-cased, in order of first appearance: `2 jigs; hop jig`, `7 reels`, `slow air; 2 strathspeys; reel`. Tunes without a rhythm are left out.
 - A tune is named by the reference's own entry (`tunes[i].name`) when it has one, else by `tune.name`, falling back to `metadataFromAbc`, then to the entry's `title`. Its rhythm is read from `tune.rhythm`, with the same fallback (`tuneName` and `tuneRhythm` in `build-entities.mjs` read the data when the build writes `inDatabase`; the app uses `inDatabase`).
 - These links are ordinary note links, so `calculateCrossRefs` sees them; it adds no pointer between tunes that already link to each other (see `src/cross-references.md`).
@@ -179,7 +179,7 @@ A reference that matches no loaded tune is validated but not published in any li
 
 ### Per-list subsets (`entitiesFor`)
 
-Given the tunes that will be published in a list, the references that they point to via `referenceId` are included (those embedded in a release too), plus the releases, artists and instruments those references and releases use (including the artists credited on a release).
+Given the tunes that will be published in a list, the references that they point to via `referenceId` are included (whole, even if some of their tunes are not in the list) (those embedded in a release too), plus the releases, artists and instruments those references and releases use (including the artists credited on a release).
 
 ## Tune-dates cache — `build/tune-dates.json` and `update-tune-dates.mjs`
 

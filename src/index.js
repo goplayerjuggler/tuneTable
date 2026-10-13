@@ -708,10 +708,10 @@ function copyTuneDataToClipboard(tunes, button) {
 	);
 }
 /**
- * Link to a tune in the current server list. With `abcX`, the link also opens
- * the score viewer on the setting whose X header matches.
+ * Link to a tune in the current server list, or in the server list `listId`.
+ * With `abcX`, the link also opens the score viewer on the setting whose X header matches.
  */
-function getShareUrl(tune, abcX) {
+function getShareUrl(tune, abcX, listId = currentListState.sourceId) {
 	const root = window.location.origin + (window.location.pathname ?? "");
 	const remaining = tune.ttId
 		? "ttId=" + tune.ttId
@@ -719,7 +719,7 @@ function getShareUrl(tune, abcX) {
 			? "theSessionId=" + tune.theSessionId
 			: "n=" + encodeURIComponent(tune.name);
 	const abc = abcX == null ? "" : `&abcX=${encodeURIComponent(abcX)}`;
-	return `${root}?l=${currentListState.sourceId}&${remaining}${abc}`;
+	return `${root}?l=${listId}&${remaining}${abc}`;
 }
 // Share links address a tune of a server list by id (or name); local lists have no stable address.
 const canShare = () => currentListState?.source === "server";
@@ -966,10 +966,14 @@ function resolveTuneById(idObj) {
 }
 
 const CR_NOT_ON_SCREEN = ""; //" (currently not on-screen)";
+const DEFAULT_LIST_ID = "default";
 
 // Replace [label](target) patterns in note text.
-// Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row;
-// all other patterns become external links.
+// Internal ID patterns (ttId=, theSessionId=) become anchor links to the target tune's row.
+// A tune that is not in the current list (e.g. another tune of a reference with several
+// tunes, in a list that has only some of them) becomes an external link to that tune in
+// the default list, like a share link. Unless this is the default list: the tune can't be found there either.
+// All other patterns become external links.
 function setUpCrossRefLink(label, target) {
 	const t = resolveTuneById(parseTuneIdStr(target));
 	if (t) {
@@ -977,6 +981,13 @@ function setUpCrossRefLink(label, target) {
 			return `<a href="#cr-t${t._crId}">${label}</a>`;
 		else return `[${label}]${CR_NOT_ON_SCREEN}`;
 	}
+	if (
+		currentListState?.source === "server" &&
+		currentListState.sourceId === DEFAULT_LIST_ID
+	)
+		return `[${label}]`;
+	const href = getShareUrl(parseTuneIdStr(target), undefined, DEFAULT_LIST_ID);
+	return `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`;
 }
 
 // Matches [label](ttId=…) / [label](theSessionId=…) patterns embedded in reference notes.

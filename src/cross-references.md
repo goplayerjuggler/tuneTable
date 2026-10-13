@@ -24,7 +24,7 @@ N: Also recorded as part of a set with [The Bucks Of Oranmore](theSessionId=2)
 
 Likewise, `notes` on a recording (or on one of its `tunes` entries) end up in a separate `tuneList` field that `formatReference` shows above the notes.
 
-`calculateCrossRefs` scans every reference's `notes` — whether it came from `references`, `referencesFromAbc` or `referencesFromRecordings` — for `[label](theSessionId=N)` or `[label](ttId=N)` patterns and, for each match:
+`calculateCrossRefs` scans every reference's `notes` — whether it came from `references`, `referencesFromAbc` or `referencesFromEntities` — for `[label](theSessionId=N)` or `[label](ttId=N)` patterns and, for each match:
 
 - resolves the target tune,
 - adds a `_resolvedCrossRefs` entry to the **target** tune (the one named in the link) pointing back at the tune the note lives on,
@@ -81,6 +81,8 @@ Both cross-reference mechanisms (explicit `index` and auto-detected note links) 
   - the tune named in a note-embedded link (so the inline link can jump straight there), and
   - the tune whose reference is being pointed at by a reverse `_resolvedCrossRefs` entry (so the "See entry under X" link can jump there).
 - **`tune._resolvedCrossRefs`** — the list of "See entry under X" pointers rendered on this tune's row, one per incoming cross-reference (from either mechanism). They are rendered as a single block (`crossRefsHtml`): `[See entry under X.]`, or `[See entries under: X; Y.]` for several tunes; a tune with several references to this one is listed once, its details (artists, custom notes) together in parentheses; tunes that are not on screen are named in a second list, "Cross-referenced to: …". Each entry carries `tuneName`, `tuneId`, `refIndex`, `artistNames` (copied from the target reference), and optionally `notes` (only present for explicit crossReferences with custom text).
+
+A link to a tune that is **not in the current list** has no anchor to point at, and `calculateCrossRefs` adds no pointer for it (it can't resolve the target). Instead `setUpCrossRefLink` (`index.js`) renders it as an external link, opening in a new tab, to that tune in the default list, in the form of a share link (`?l=default&theSessionId=N`). This is mostly seen in the tune list of a reference entity (`_tuneList`): a list holds the whole reference as soon as one of its tunes is in it, so its other tunes may be missing. In the default list itself, such a link stays plain text (`[label]`). A tune that is in the list but filtered out of the current view also stays plain text.
 
 Duplicate pointers (same source tune + refIndex) are silently skipped, so having both an explicit `crossReferences` entry and a note-embedded link for the same pairing during a migration won't double-list it.
 
