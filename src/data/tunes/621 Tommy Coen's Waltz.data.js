@@ -1,11 +1,12 @@
 export default {
 	tags: "transformed",
+	groups: "alora",
 	fileDate: "2026-09-28",
 	ttId: 621,
 	abc: `
 X:1
 T: Tommy Coen's Waltz
-T: Tommy Coen's as a fast-ish waltz%260928
+T: Tommy Coen's as a fast-ish waltz
 C:Malcolm Schonfield
 H: This is simply [Tommy Coen's reel](theSessionId=440), as a waltz.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
