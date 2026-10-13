@@ -23,7 +23,9 @@ export default [
 			{
 				//flogging
 				theSessionId: 195,
-				startTime: "~06:27"
+				startTime: "~06:27",
+				notes:
+					"(2026-10-12) They have their own distinctive take on the C part that I really like. I haven't heard it played like that anywhere else."
 			},
 			{ theSessionId: 1552, startTime: "7:58 (-06:48)" },
 			{ theSessionId: 113 },
@@ -43,5 +45,13 @@ export default [
 		notes: `I’ve listened to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
 Warning for ITMA pages: you have to click on the link in the player.`,
 		year: 1993
+	},
+	{
+		urls: [
+			"https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6",
+			"https://itma.accesstomemory.org/lre-277086-1-277882"
+		],
+		credits: ["redican_la", "mcgann_an", "dolan_fe"],
+		tunes: [69, 472] //Morning dew, reel ; Hunter's house
 	}
 ];

@@ -16,10 +16,5 @@ BE~E2 BAFA BE~E2 BAFB|A2Bc dfec dBAF E2FA:|
 Beed e2de f2df efdB|A2Bc dfec dBAF E2FA:|`,
 	theSessionId: 363,
 	parts: "AABB",
-	crossReferences: [
-		{
-			theSessionId: 440,
-			index: 4 //The Drunken Landlady / Christmas Eve / The Abbey Reel - CNG, COM
-		}
-	]
+	fileDate: "2026-05-31"
 };

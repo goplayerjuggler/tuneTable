@@ -14,10 +14,5 @@ K:Adorian
 g|egg2 a2ba gabg aged|egg2 a2ga bgaf gedg|
 egg2 a2bg agbg aged|egg2 a2ga bgaf ged|`,
 	theSessionId: 477,
-	crossReferences: [
-		{
-			theSessionId: 440,
-			index: 1 //The Drunken Landlady / Christmas Eve / The Abbey Reel - CNG, COM
-		}
-	]
+	fileDate: "2026-05-31"
 };

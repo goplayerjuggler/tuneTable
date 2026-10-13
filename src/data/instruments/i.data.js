@@ -13,6 +13,7 @@ export default {
 	cabrette: { qId: 1024962, en: "“cabrette” bagpipes", fr: "cabrette" },
 	cello: { qId: 8371, en: "cello", fr: "violoncelle" },
 	concertina: { qId: 593050, en: "concertina", fr: "concertina" },
+	dance: { qId: 11639, en: "dance", fr: "danse" },
 	fiddle: { qId: 132533685, en: "fiddle", fr: "violon" },
 	guitar: { qId: 6607, en: "guitar", fr: "guitare" },
 	hFiddle: { qId: 178933, en: "Hardanger fiddle", fr: "violon Hardanger" },
@@ -34,6 +35,7 @@ export default {
 	spoons: { qId: 1879664, en: "spoons", fr: "cuillères" },
 	uPipes: { qId: 543833, en: "uilleann pipes", fr: "cornemuse irlandaise" },
 	viola: { qId: 80284, en: "viola", fr: "alto" },
+	voc: { qId: 17172850, en: "voice", fr: "voix" },
 	wFlute: { qId: 1685320, en: "willow flute", fr: "Seljefløyte" },
 	whistle: { qId: 94994406, en: "tin whistle", fr: "whistle" }
 };

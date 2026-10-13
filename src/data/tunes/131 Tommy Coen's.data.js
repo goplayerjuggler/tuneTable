@@ -66,15 +66,7 @@ BGGA BGBd eg (3ggg gfga|bgaf gedB [1 ABGF GAdc:| [2 ABGF G2GE||`
 	references: [
 		{
 			notes:
-				"There’s an [interesting story on thesession](https://thesession.org/tunes/440#comment747565) about how this tune came to be known as Christmas Eve. It seems to involve antisemitism. Anyway, I’ve decided to use an alternate name here: Tommy Coen’s."
-		},
-		{
-			artists:
-				"Caitlín Nic Gabhann, concertina; Ciarán Ó Maonaigh, fiddle; Cathal Ó Curráin, Bouzouki",
-			url: "https://caitlinciaran.bandcamp.com/track/the-drunken-landlady-christmas-eve-the-abbey-reel",
-			album: "The High Seas",
-			notes: `1:48 onwards
-The Drunken Landlady / Christmas Eve / The Abbey Reel`
+				"There’s an [interesting story on thesession](https://thesession.org/tunes/440#comment747565) about how this tune came to be known as Christmas Eve. It seems to involve antisemitism. Anyway, I’ve decided to use an alternative name here: Tommy Coen’s."
 		},
 		{
 			artists:
@@ -96,6 +88,5 @@ The Drunken Landlady / Christmas Eve / The Abbey Reel`
 	],
 	theSessionId: 440,
 	theSessionSettingId: 48642,
-	parts: "AABBCC",
-	fileDate: "2026-05-31"
+	parts: "AABBCC"
 };

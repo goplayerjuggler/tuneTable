@@ -32,28 +32,5 @@ export default [
 			}
 		],
 		credits: ["farr_lu", "murphy_de"]
-	},
-	{
-		title: "Traditional Irish Flute Music",
-		theSessionRecordingId: 1015,
-		year: 1979,
-		urls: [
-			"https://fintanvallely.bandcamp.com/album/fintan-vallely-traditional-irish-flute-music-re-mastered-28-5-2021"
-		],
-		credits: [
-			{ name: "Fintan Vallely", instruments: ["flute"] },
-			{ name: "Mark Simos", instruments: ["guitar"] }
-		],
-		references: [
-			{
-				urls: [
-					"https://fintanvallely.bandcamp.com/track/christmas-eve-the-reel-of-rio-2"
-				],
-				tunes: [
-					{ theSessionId: 440, name: "Christmas Eve" },
-					{ theSessionId: 575 }
-				]
-			}
-		]
 	}
 ];

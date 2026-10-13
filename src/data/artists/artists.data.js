@@ -1,4 +1,5 @@
 export default [
+	{ id: "dolan_fe", name: "Felix Dolan", instrument: "piano" },
 	{
 		id: "farr_lu",
 		name: "Lucy Farr",
@@ -22,6 +23,7 @@ export default [
 		instruments: ["fiddle"]
 	},
 	{ id: "macmahon_to", name: "Tony MacMahon", instruments: ["accordion"] },
+	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
 	{
 		id: "mcguire_se",
 		urls: ["https://en.wikipedia.org/wiki/Se%C3%A1n_McGuire_(fiddler)"],
@@ -32,6 +34,11 @@ export default [
 		id: "murphy_de",
 		name: "Denis Murphy",
 		instruments: ["fiddle"]
+	},
+	{
+		id: "nicgabhann_ca",
+		name: "Caitlín Nic Gabhann",
+		instruments: ["concertina", "dance"]
 	},
 	{
 		id: "oconnor_mi",
@@ -47,6 +54,12 @@ Special Contribution Award / Gradam na gCeoltóirí 2017 Mick O’Connor, Co. Du
 https://www.tg4.ie/en/other-brands/gradam-ceoil/previous-winners/special-contribution/
 */
 	},
+	{
+		id: "ocurrain_ca",
+		name: "Cathal Ó Curráin",
+		instruments: ["bouzouki", "vocals", "fiddle"]
+	},
+	{ id: "omaonaigh_ci", name: "Ciarán Ó Maonaigh", instrument: "fiddle" },
 	{ id: "omurchu_ma", name: "Marcas Ó Murchú", instruments: ["flute"] },
 	{
 		id: "peoples_to",
@@ -66,5 +79,8 @@ https://www.tg4.ie/en/other-brands/gradam-ceoil/previous-winners/special-contrib
 		instruments: ["concertina"],
 		urls: ["https://jasonorourke.info"]
 	},
+	{ id: "redican_la", name: "Larry Redican", instrument: "fiddle" },
 	{ id: "whelan_ed", name: "Eddie Whelan", instruments: ["guitar"] }
 ];
+/*
+ */
