@@ -8,7 +8,8 @@
 // then it needn't name the release, which it takes from its parent.
 //
 // Pipeline (driven by build-tune-lists.mjs):
-//   1. loadEntities       — read, validate, resolve; returns the entity model
+//   1. loadEntities       — read, normalise (shorthands and defaults), validate, resolve;
+//                           returns the entity model
 //   2. projectReferences  — link each tune to the references that mention it
 //                           (`tune.referencesFromEntities`, as `{ referenceId, indices }`),
 //                           and note on each reference's `tunes` what the data knows of them
@@ -23,6 +24,7 @@ import { parseDataFile } from "./parse-data-file.mjs";
 import {
   has,
   abcXs,
+  DEFAULT_RELEASE_TYPE,
   RELEASE_ID_FIELDS,
   entityResolvers
 } from "../src/entityReferences.mjs";
@@ -41,6 +43,8 @@ const RELEASE_REF_FIELDS = [
 ];
 // Known values for `reference.type` (optional; an unknown value is only a warning).
 const REFERENCE_TYPES = ["audio", "video", "web", "book"];
+// Known values for `release.type` (optional, default "album"; an unknown value is only a warning).
+const RELEASE_TYPES = [DEFAULT_RELEASE_TYPE, "book"];
 
 // How a loaded tune gives its name and rhythm (the ABC metadata is the fallback).
 const tuneName = (t) => t.name ?? t.metadataFromAbc?.title;
@@ -84,6 +88,63 @@ const withDefaultInstrument = (credit, resolveArtist) => {
   const instrument = resolveArtist(credit)?.instruments?.[0];
   return instrument ? { ...credit, instruments: [instrument] } : credit;
 };
+
+// ─── Normalisation ────────────────────────────────────────────────────────────
+
+/**
+ * Shorthand for a list: a single `one` (`url`, `instrument`) becomes `[one]` as `many`
+ * (`urls`, `instruments`), unless `many` is given (then the entity is left as it is).
+ */
+const withList = (entity, one, many) =>
+  has(entity[one]) && !has(entity[many])
+    ? (({ [one]: value, ...rest }) => ({ ...rest, [many]: [value].flat() }))(
+        entity
+      )
+    : entity;
+
+/** A string as an id: lower case, accents and punctuation removed, words joined by hyphens. */
+const slug = (s) =>
+  s
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const normaliseCredits = (entity) =>
+  entity.credits
+    ? {
+        ...entity,
+        credits: entity.credits.map((c) =>
+          typeof c === "string" ? c : withList(c, "instrument", "instruments")
+        )
+      }
+    : entity;
+
+const normaliseArtist = (artist) =>
+  withList(withList(artist, "url", "urls"), "instrument", "instruments");
+
+/**
+ * A release is an "album" unless it says otherwise. One with no identifier gets an `id`
+ * made from its title and year (`the-fog-is-lifting-2025`), so that references can name it.
+ */
+const normaliseRelease = (release) => {
+  const r = normaliseCredits(withList(release, "url", "urls"));
+  const id =
+    !RELEASE_ID_FIELDS.some((f) => has(r[f])) && r.title
+      ? slug([r.title, r.year].filter(has).join(" "))
+      : "";
+  return { ...r, type: r.type ?? DEFAULT_RELEASE_TYPE, ...(id && { id }) };
+};
+
+/** A reference that belongs to a release is audio unless it says otherwise. */
+const normaliseReference = (ref) => {
+  const r = normaliseCredits(withList(ref, "url", "urls"));
+  return releaseRefField(r) && !has(r.type) ? { ...r, type: "audio" } : r;
+};
+
+const mapEntries = (pairs, normalise) =>
+  pairs.map(({ entry, fileName }) => ({ entry: normalise(entry), fileName }));
 
 // ─── Loading ──────────────────────────────────────────────────────────────────
 
@@ -153,7 +214,13 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  *
  * Fatal (thrown, all reported together): an entity without an identifier, a
  * duplicate identifier, a duplicate instrument key, `credits.indexes` outside
- * `reference.tunes`. Everything else that fails to resolve is a warning.
+ * `reference.tunes`, a `release.lead` outside `release.credits`. Everything else
+ * that fails to resolve is a warning.
+ *
+ * Normalised on reading: `url` becomes `urls: [url]` (artists, releases, references),
+ * `instrument` becomes `instruments: [instrument]` (artists and credits); a release
+ * is of type "album" by default, and gets an `id` made from its title and year if it
+ * has no identifier; a reference with a release is of type "audio" by default.
  *
  * Entities flagged `excludeFromBuild` are dropped on reading; those flagged
  * `isPrivate` are dropped after validation unless `isDevelopment` is true.
@@ -167,16 +234,19 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  *   instruments: object, resolveArtist: Function, resolveRelease: Function}>}
  */
 export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
-  const [artistPairs, releasePairs, fileReferencePairs, instrumentPairs] =
+  const [rawArtists, rawReleases, rawReferences, instrumentPairs] =
     await Promise.all(
       ["artists", "releases", "references", "instruments"].map((name) =>
         readEntries(path.join(dataDir, name))
       )
     );
-  const referencePairs = [
-    ...fileReferencePairs,
-    ...embeddedReferences(releasePairs)
-  ];
+  const artistPairs = mapEntries(rawArtists, normaliseArtist);
+  const releasePairs = mapEntries(rawReleases, normaliseRelease);
+  // Embedded references take their release's identifier, so the releases come first.
+  const referencePairs = mapEntries(
+    [...rawReferences, ...embeddedReferences(releasePairs)],
+    normaliseReference
+  );
   const errors = [];
 
   checkIdentity("artist", artistPairs, idKeys(ARTIST_ID_FIELDS), errors);
@@ -192,6 +262,20 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
       instruments[key] = definition;
     }
 
+  releasePairs.forEach(({ entry: release, fileName }) => {
+    const count = release.credits?.length ?? 0;
+    if (
+      has(release.lead) &&
+      !(
+        Number.isInteger(release.lead) &&
+        release.lead >= 0 &&
+        release.lead <= count
+      )
+    )
+      errors.push(
+        `${fileName}: release "${release.title ?? release.id}" has lead ${release.lead} outside its ${count} credit(s)`
+      );
+  });
   referencePairs.forEach(({ entry: ref, fileName }) => {
     const count = ref.tunes?.length ?? 0;
     (ref.credits ?? []).forEach((credit) =>
@@ -223,9 +307,12 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
         .filter((k) => !(k in instruments))
         .forEach((k) => warn(`uses unknown instrument "${k}"`));
     });
-  releasePairs.forEach(({ entry: release, fileName }) =>
-    checkCredits(release.credits, warner("release", fileName, release))
-  );
+  releasePairs.forEach(({ entry: release, fileName }) => {
+    const warn = warner("release", fileName, release);
+    if (!RELEASE_TYPES.includes(release.type))
+      warn(`has unknown type "${release.type}"`);
+    checkCredits(release.credits, warn);
+  });
   referencePairs.forEach(({ entry: ref, fileName }) => {
     const warn = warner("reference", fileName, ref);
     if (has(ref.type) && !REFERENCE_TYPES.includes(ref.type))

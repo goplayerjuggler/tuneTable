@@ -12,13 +12,23 @@
 // entries that is found in the database: `inDatabase: { idStr, name, rhythm }`
 // (`idStr` as in a note link: `theSessionId=2`). A list needn't contain those tunes.
 //
+// A `tunes` entry may give its own `name` and `rhythm`; they take precedence over the database's,
+// and are the only ones for a tune that is not in the database: `{ name: "Mo Ghloine", rhythm: "song" }`.
+//
 // A `tunes` entry may also have `abcX`: the `X:` header of the item of `tune.abc` that
 // the reference is about. The hydrated reference carries those as `abcX` (strings), and
 // getCombinedReferences (processTuneData.js) merges the ABC's N: and H: comments into it.
+//
+// A release of type "album" (the default type) is shown as the reference's `album`; any
+// other release (a book…) is named at the start of the notes instead. A release's `lead`
+// credits (the first `release.lead` of them) are named after its title: "Title (year), by A, B".
 
 // ─── Identity and lookup ──────────────────────────────────────────────────────
 
 export const has = (v) => v != null;
+
+/** The type of a release that doesn't give one. */
+export const DEFAULT_RELEASE_TYPE = "album";
 
 /** The `X:` header values, as strings, of some ABC text: one for a tune, several for a multi-tune string, none for no ABC. */
 export const abcXs = (abc) =>
@@ -81,18 +91,39 @@ export const createEntityModel = ({
 
 // ─── Tune-shaped references ───────────────────────────────────────────────────
 
-/** "Name (role, instrument, …), …" for whoever is credited on any of the tunes at `indices` of a reference (or release, which may be absent). */
-function creditLine(ref, indices, { instruments, resolveArtist }) {
+/** The name of a credited artist: the known artist's, else the credit's own (none for an unknown performer). */
+const creditName = (c, { resolveArtist }) => resolveArtist(c)?.name ?? c.name;
+
+/** "A, B": the lead artists of a release (its first `release.lead` credits) — those it comes under. */
+const leadLine = (release, model) =>
+  (release?.credits ?? [])
+    .slice(0, release.lead ?? 0)
+    .map((c) => creditName(c, model))
+    .filter(Boolean)
+    .join(", ");
+
+/**
+ * "Name (role, instrument, …), …" for whoever is credited on any of the tunes at `indices` of a reference (or release, which may be absent).
+ * A credit that is `unsure` shows a "?" after each of its instruments, or after the name if it has none: "A (fiddle?)", "A?".
+ * A credit with no name but a role or instruments shows "?" as the name: "? (piano)".
+ */
+function creditLine(ref, indices, model) {
+  const { instruments } = model;
   return (ref?.credits ?? [])
     .filter((c) => !c.indexes || c.indexes.some((i) => indices.includes(i)))
     .map((c) => {
-      const name = resolveArtist(c)?.name ?? c.name;
-      if (!name) return null; // unknown performer: slot kept in the data, nothing to show
+      // `unsure`: the credit may not apply (to this track, or to this instrument).
+      const mark = c.unsure ? "?" : "";
       const details = [
         c.role,
-        ...(c.instruments ?? []).map((k) => instruments[k]?.en ?? k)
+        ...(c.instruments ?? []).map((k) => `${instruments[k]?.en ?? k}${mark}`)
       ].filter(Boolean);
-      return details.length ? `${name} (${details.join(", ")})` : name;
+      // An unknown performer ("?") is shown only if there is a role or instrument to show.
+      const name = creditName(c, model) ?? (details.length ? "?" : null);
+      if (!name) return null;
+      return details.length
+        ? `${name} (${details.join(", ")})`
+        : `${name}${mark}`;
     })
     .filter(Boolean)
     .join(", ");
@@ -106,11 +137,15 @@ const plural = (word) =>
       ? word
       : `${word}s`;
 
-/** Counts the rhythms of the tunes found in the database, in order of first appearance: "2 jigs; hop jig". */
+/**
+ * Counts the rhythms of the tunes, in order of first appearance: "2 jigs; hop jig".
+ * A tune's rhythm is the reference's own (`entry.rhythm`, which a tune not in the database
+ * needs), else the database's.
+ */
 function rhythmSummary(entries) {
   const counts = new Map();
-  for (const { inDatabase } of entries) {
-    const rhythm = inDatabase?.rhythm?.trim().toLowerCase();
+  for (const { rhythm: own, inDatabase } of entries) {
+    const rhythm = (own ?? inDatabase?.rhythm)?.trim().toLowerCase();
     if (rhythm) counts.set(rhythm, (counts.get(rhythm) ?? 0) + 1);
   }
   return [...counts]
@@ -170,11 +205,23 @@ export function toReference(ref, indices, model) {
     )
   ];
   const tuneList = tuneListLine(ref.tunes ?? [], indices);
+  // "Title (year), by A, B" (no "by" without lead artists); nothing if the release has no title.
+  const releaseLabel =
+    release?.title &&
+    [
+      `${release.title}${release.year ? ` (${release.year})` : ""}`,
+      leadLine(release, model) && `by ${leadLine(release, model)}`
+    ]
+      .filter(Boolean)
+      .join(", ");
+  const isAlbum =
+    (release?.type ?? DEFAULT_RELEASE_TYPE) === DEFAULT_RELEASE_TYPE;
   // "Track 4 (3:17)"; without a track number, "(3:17)"; neither if both are absent.
   const trackInfo = has(ref.trackNumber)
     ? `Track ${ref.trackNumber}${ref.duration ? ` (${ref.duration})` : ""}`
     : ref.duration && `(${ref.duration})`;
   const notes = [
+    !isAlbum && releaseLabel,
     [trackInfo, ref.title].filter(Boolean).join(": "),
     ...mentions,
     ref.notes,
@@ -195,8 +242,7 @@ export function toReference(ref, indices, model) {
       creditLine(release, indices, model) ||
       undefined,
     url,
-    album:
-      release && `${release.title}${release.year ? ` (${release.year})` : ""}`,
+    album: (isAlbum && releaseLabel) || undefined,
     notes
   };
 }
