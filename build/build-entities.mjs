@@ -111,6 +111,17 @@ const slug = (s) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+/** A bare integer in `tunes` is shorthand for `{ theSessionId }`. */
+const normaliseTunes = (entity) =>
+  entity.tunes
+    ? {
+        ...entity,
+        tunes: entity.tunes.map((t) =>
+          Number.isInteger(t) ? { theSessionId: t } : t
+        )
+      }
+    : entity;
+
 const normaliseCredits = (entity) =>
   entity.credits
     ? {
@@ -139,7 +150,7 @@ const normaliseRelease = (release) => {
 
 /** A reference that belongs to a release is audio unless it says otherwise. */
 const normaliseReference = (ref) => {
-  const r = normaliseCredits(withList(ref, "url", "urls"));
+  const r = normaliseTunes(normaliseCredits(withList(ref, "url", "urls")));
   return releaseRefField(r) && !has(r.type) ? { ...r, type: "audio" } : r;
 };
 
@@ -218,7 +229,8 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  * that fails to resolve is a warning.
  *
  * Normalised on reading: `url` becomes `urls: [url]` (artists, releases, references),
- * `instrument` becomes `instruments: [instrument]` (artists and credits); a release
+ * `instrument` becomes `instruments: [instrument]` (artists and credits); an integer
+ * in `reference.tunes` becomes `{ theSessionId }`; a release
  * is of type "album" by default, and gets an `id` made from its title and year if it
  * has no identifier; a reference with a release is of type "audio" by default.
  *

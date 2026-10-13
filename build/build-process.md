@@ -106,13 +106,13 @@ Every field is optional unless stated. At least one *identifier* must be non-nul
 
 A reference's two lists:
 
-- `tunes` — ordered, in the sequence of the reference. Each entry has `theSessionId` or `ttId` (links a tune in the data), or just a `title` (not in the data yet); plus optional `name` (how this reference names the tune; see below), `startTime`, `endTime` (audio and video), `notes` and `abcX` (see below).
+- `tunes` — ordered, in the sequence of the reference. Each entry is an integer (shorthand for `{ theSessionId }`, the most widely used identifier), or has `theSessionId` or `ttId` (links a tune in the data), or just a `title` (not in the data yet); plus optional `name` (how this reference names the tune; see below), `startTime`, `endTime` (audio and video), `notes` and `abcX` (see below).
 - `credits` (of a reference or a release) — each is a bare artist `id` (shorthand for `{ id }`), or has `id` or `qId` (a known artist) or `name` (inline; `null` keeps the slot of an unknown performer), plus `instruments` (keys; or `instrument`, one key), `role` (free text, for non-performers: `author`), `unsure` (`true`: the credit may not apply, to this track or to this instrument) and `indexes` (0-based positions in `tunes`; absent = the whole reference; meaningless on a release, whose credits cover the whole release).
 
 ```js
 { id: "fog-is-lifting-track-3", releaseId: "fog-is-lifting-2025", trackNumber: 3,
   urls: ["https://…"],
-  tunes: [{ title: "The Stage" }, { theSessionId: 2716, startTime: "3:26" }],
+  tunes: [{ title: "The Stage" }, { theSessionId: 2716, startTime: "3:26" }, 1234],
   credits: [{ id: "sylvain-barou", indexes: [1] }, { name: "Libby McCrohan", instruments: ["bouzouki"] }] }
 ```
 
@@ -135,7 +135,7 @@ Entities are not lists of their own: each generated list JSON gets extra section
 
 ### Loading and validation (`loadEntities`)
 
-- **Shorthands and defaults**, applied on reading (so the published data has only the long forms): a `url` string becomes `urls: [url]` (artists, releases, references), an `instrument` key becomes `instruments: [instrument]` (artists and credits), unless the long form is also given; a release is of type `album` by default; a release with no identifier gets an `id` made from its title and year (`The Fog Is Lifting`, 2025 → `the-fog-is-lifting-2025`: lower case, accents removed, other runs of characters as one hyphen), which references may use as their `releaseId`; a reference that has a release is of type `audio` by default.
+- **Shorthands and defaults**, applied on reading (so the published data has only the long forms): a `url` string becomes `urls: [url]` (artists, releases, references), an `instrument` key becomes `instruments: [instrument]` (artists and credits), unless the long form is also given; an integer entry of a reference's `tunes` becomes `{ theSessionId }`; a release is of type `album` by default; a release with no identifier gets an `id` made from its title and year (`The Fog Is Lifting`, 2025 → `the-fog-is-lifting-2025`: lower case, accents removed, other runs of characters as one hyphen), which references may use as their `releaseId`; a reference that has a release is of type `audio` by default.
 - Files flagged `excludeFromBuild` are dropped on reading; `isPrivate` entities are dropped after validation unless `isDevelopment` is true. (A credit for a private artist in a public reference then simply shows no name.)
 - A reference is identified by its `id`, or by a release identifier + `trackNumber`, or — only when it has neither — by its first URL. That makes a web page need no `id`; a book without a URL does.
 - A reference embedded in a release (`release.references`) is loaded with the others: it takes the release's identifier (`releaseId` for the release's `id`, else `mbId`, `discogsId` or `theSessionRecordingId`), so that it is identified by that + `trackNumber`, or by its own `id`.
