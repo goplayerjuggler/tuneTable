@@ -37,14 +37,6 @@ P:A’
 		],
 		references: [
 			{
-				url: "https://juneappalrecordings.bandcamp.com/track/fishers-hornpipe-2",
-				artists: `Owen "Snake" Chapman, fiddle;  Paul Smith, banjo; Al White, mandolin; `,
-				album: `Fiddle Ditty by Owen "Snake" Chapman`,
-				notes:
-					"Another, different, oldtime setting – a “straight” one (non-“crooked”). I’m not 100% sure about the backing musicians.",
-				year: 1990
-			},
-			{
 				notes:
 					"I added a “straight” setting in a [separate entry](theSessionId=872)."
 			}
@@ -66,7 +58,7 @@ N:Setting entered in thesession by user “ceolachan” on 2011-03-02
 N:*abc-tools: convert to M:4/2*
 N:(Edited after importing)
 H:1. Bien que le nom comporte le mot « hornpipe », je préfère classer cet air comme un « reel » car à mon sens cela convient le mieux à la façon dont c'est habituellement joué de nos jours.
-H:2. Voir aussi d'autres [versions québecoise ou country](ttId=560).
+H:2. Voir aussi [d'autres versions](ttId=560) – québecoise ou country.
 K:Dmajor
 |:(3ABc|"D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FDFD "G" GBAG "D" FDFD "A" E2 (3ABc|
 "D" dAFD "G" GBAG "D" FDFD "G" GBAG|"D" FGAB cdec .d2c2 d2:|
@@ -76,6 +68,13 @@ K:Dmajor
 		theSessionId: 872,
 		theSessionSettingId: 14048,
 		parts: "AABB",
-		fileDate: "2026-09-24" //todo: check?
+		references: {
+			url: "https://juneappalrecordings.bandcamp.com/track/fishers-hornpipe-2",
+			artists: `Owen "Snake" Chapman, fiddle;  Paul Smith, banjo; Al White, mandolin; `,
+			album: `Fiddle Ditty by Owen "Snake" Chapman`,
+			notes:
+				"Another, oldtime setting. I’m not 100% sure about the backing musicians.",
+			year: 1990
+		}
 	}
 ];
