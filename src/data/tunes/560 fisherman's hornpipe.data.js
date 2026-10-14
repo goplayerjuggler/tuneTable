@@ -74,6 +74,8 @@ K:Dmajor
 "D" BGDG BdcB "G" AFDF A2GA|"D" BdcB "A" AGFE "D"D2d2 D2:|`
 		],
 		theSessionId: 872,
-		theSessionSettingId: 14048
+		theSessionSettingId: 14048,
+		parts: "AABB",
+		fileDate: "2026-09-24" //todo: check?
 	}
 ];

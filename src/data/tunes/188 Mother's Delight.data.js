@@ -25,10 +25,5 @@ GBeB GEED FAAG FDED|G2GF GFEG BGFG E3F:|`,
 			artists: "Bobby Casey, fiddle"
 		}
 	],
-	crossReferences: [
-		{
-			theSessionId: 1335,
-			index: 0 //Frankie Gavin & Alec Finn, Bunch Of Green Rushes
-		}
-	]
+	fileDate: "2026-08-03"
 };

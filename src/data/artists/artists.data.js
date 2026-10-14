@@ -13,6 +13,11 @@ export default [
 		instruments: ["fiddle"]
 	},
 	{
+		id: "finn_al",
+		name: "Alec Finn",
+		instruments: ["bouzouki"]
+	},
+	{
 		id: "gavin_fr",
 		qId: 1886411,
 		name: "Frankie Gavin",
@@ -32,7 +37,7 @@ export default [
 	{
 		id: "macmahon_to",
 		name: "Tony MacMahon",
-		instruments: ["accordion"],
+		instruments: ["melodeon"],
 		url: "https://itma.accesstomemory.org/macmahon-tony-1939-2021"
 	},
 	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
@@ -49,6 +54,11 @@ export default [
 		id: "murphy_de",
 		name: "Denis Murphy",
 		instruments: ["fiddle"]
+	},
+	{
+		id: "munnelly_da",
+		name: "David Munnelly",
+		instruments: ["melodeon"]
 	},
 	{
 		id: "nicgabhann_ca",
