@@ -348,7 +348,7 @@ async function saveTunesToStorage() {
 			await slotManager.saveSlot(
 				currentListState.sourceId,
 				currentListState.displayName,
-				prepareTunesForExport(window.tunesData), // strip derived properties
+				prepareTunesForExport(window.tunesData, { keepGenerated: true }), // strip derived properties
 				window._setLists ?? []
 			);
 		} catch (e) {
@@ -360,7 +360,7 @@ async function saveTunesToStorage() {
 		await slotManager.saveSlot(
 			id,
 			name,
-			prepareTunesForExport(window.tunesData),
+			prepareTunesForExport(window.tunesData, { keepGenerated: true }),
 			window._setLists ?? []
 		);
 		currentListState = {
@@ -494,40 +494,21 @@ async function loadServerListById(
 ) {
 	const res = await fetch(`./tune-lists/${listFile}`);
 	if (!res.ok) throw new Error(`HTTP ${res.status}`);
-	const { tunes, setLists, references, releases, artists, instruments } =
-		await res.json();
 	await onListSelected({
+		...(await res.json()), // tunes, setLists and entities
 		source: "server",
 		sourceId: listId,
 		displayName,
-		tunes,
-		setLists,
 		lastUpdate,
-		defaultSort,
-		references,
-		releases,
-		artists,
-		instruments
+		defaultSort
 	});
 }
 
 async function resumeCurrentList(listState, manifest) {
 	if (listState.source === "local") {
-		const slot = await slotManager.getSlot(listState.sourceId);
-		if (!slot) throw new Error("Slot not found");
-		await onListSelected({
-			source: "local",
-			sourceId: listState.sourceId,
-			displayName: slot.name,
-			tunes: slot.tunes ?? [],
-			setLists: slot.setLists ?? [],
-			lastUpdate: slot.modified,
-			defaultSort: slot.defaultSort,
-			references: slot.references,
-			releases: slot.releases,
-			artists: slot.artists,
-			instruments: slot.instruments
-		});
+		const selection = await slotManager.getListSelection(listState.sourceId);
+		if (!selection) throw new Error("Slot not found");
+		await onListSelected(selection);
 	} else if (listState.source === "server") {
 		const listInfo = manifest?.lists.find((l) => l.id === listState.sourceId);
 		if (!listInfo) throw new Error("Server list not found in manifest");
@@ -648,7 +629,12 @@ async function emptyTunes() {
 	await saveTunesToStorage();
 }
 
-function prepareTunesForExport(tunes) {
+/**
+ * A copy of `tunes` without derived properties.
+ * `keepGenerated`: keep the generated `_tuneList` of references from entities. It is not
+ * wanted in exported tune data, but a saved slot has no entities to generate it from again.
+ */
+function prepareTunesForExport(tunes, { keepGenerated = false } = {}) {
 	// deep copy so the original data is never mutated.
 	const tunesCopy = JSON.parse(JSON.stringify(tunes));
 	tunesCopy.forEach((tune) => {
@@ -682,7 +668,7 @@ function prepareTunesForExport(tunes) {
 		(tune.references ?? []).forEach((ref) => delete ref._crId);
 		(tune.referencesFromEntities ?? []).forEach((ref) => {
 			delete ref._crId;
-			delete ref._tuneList;
+			if (!keepGenerated) delete ref._tuneList;
 		});
 
 		if (tune.scores?.length === 0) delete tune.scores;

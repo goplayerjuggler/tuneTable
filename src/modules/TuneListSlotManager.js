@@ -122,41 +122,62 @@ export default class TuneListSlotManager {
 
 	/**
 	 * Creates or updates a slot with the supplied data (tune, set-list and default sort).
+	 *
+	 * `entities` (`references`, `releases`, `artists`, `instruments`, as in a server list's
+	 * JSON) are needed only if `tunes` still have their `referencesFromEntities` as links
+	 * (`{ referenceId, indices }`); tunes whose references are already expanded
+	 * (see hydrateReferencesFromEntities) need none. They are always overwritten, never
+	 * kept from an earlier save: a slot's entities go with the tunes they were saved with.
 	 * @param {string}   id
 	 * @param {string}   name
 	 * @param {object[]} tunes
 	 * @param {object[]} [setLists=[]]
 	 * @param {string}   defaultSort
+	 * @param {object}   [entities={}]
 	 * @returns {Promise<void>}
 	 */
-	async saveSlot(id, name, tunes, setLists = [], defaultSort) {
+	async saveSlot(id, name, tunes, setLists = [], defaultSort, entities = {}) {
 		const now = new Date().toISOString();
 		const existing = await this.getSlot(id);
-		const slot = existing
-			? {
-					...existing,
-					name,
-					tunes,
-					setLists,
-					lastUpdate: now,
-					defaultSort,
-					metadata: { ...existing.metadata, lastOpened: now }
-				}
-			: {
-					id,
-					name,
-					created: now,
-					lastUpdate: now,
-					tunes,
-					setLists,
-					defaultSort,
-					metadata: { lastOpened: now }
-				};
+		const { references, releases, artists, instruments } = entities;
+		const slot = {
+			...existing,
+			id,
+			name,
+			created: existing?.created ?? now,
+			lastUpdate: now,
+			tunes,
+			setLists,
+			defaultSort,
+			references,
+			releases,
+			artists,
+			instruments,
+			metadata: { ...existing?.metadata, lastOpened: now }
+		};
 
 		const tx = this.#db.transaction([STORE_SLOTS, STORE_META], "readwrite");
 		tx.objectStore(STORE_SLOTS).put(slot);
 		tx.objectStore(STORE_META).put(id, "lastActiveSlot");
 		await this.#txComplete(tx);
+	}
+
+	/**
+	 * A slot as the list selection that `onListSelected` (src/index.js) takes:
+	 * its data, with the entities (if any) that its tunes link to.
+	 * @param {string} id
+	 * @returns {Promise<object|null>} Null if the slot was not found.
+	 */
+	async getListSelection(id) {
+		const slot = await this.getSlot(id);
+		return slot && {
+			...slot,
+			source: "local",
+			sourceId: id,
+			displayName: slot.name,
+			tunes: slot.tunes ?? [],
+			setLists: slot.setLists ?? []
+		};
 	}
 
 	/**

@@ -37,7 +37,8 @@ function formatNoteLinks(text) {
  *
  * **Key Methods**:
  * - `openWithContext(manifest, currentListState)`: Open with latest manifest data
- * - `onSelect` callback: called with `{ source, sourceId, displayName, tunes, setLists }`
+ * - `onSelect` callback: called with `{ source, sourceId, displayName, tunes, setLists, lastUpdate, defaultSort }`,
+ *   plus the list's entities (`references`, `releases`, `artists`, `instruments`) for server lists
  */
 class TuneListSelectorModal extends Modal {
 	constructor({ slotManager, onSelect }) {
@@ -312,24 +313,18 @@ class TuneListSelectorModal extends Modal {
 	}
 
 	async _loadLocal(slotId) {
-		const slot = await this.slotManager.getSlot(slotId);
-		if (!slot) return;
-		await this.onSelect({
-			source: "local",
-			sourceId: slotId,
-			displayName: slot.name,
-			lastUpdate: slot.lastUpdate,
-			tunes: slot.tunes ?? [],
-			setLists: slot.setLists ?? [],
-			defaultSort: slot.defaultSort
-		});
+		const selection = await this.slotManager.getListSelection(slotId);
+		if (!selection) return;
+		await this.onSelect(selection);
 		this.close();
 	}
 
 	async _loadServer(listId, listFile, lastUpdate) {
 		this._setStatus("Loading…");
 		try {
-			const { tunes, setLists } = await this._withFreshManifestOnFailure(
+			// The whole list JSON: tunes, set lists and the entities (references,
+			// releases, artists, instruments) that the tunes' links point to.
+			const data = await this._withFreshManifestOnFailure(
 				listId,
 				listFile,
 				(file) => this._fetchListJson(file)
@@ -339,11 +334,10 @@ class TuneListSelectorModal extends Modal {
 			// when the modal was rendered.
 			const listInfo = this.manifest?.lists.find((l) => l.id === listId);
 			await this.onSelect({
+				...data,
 				source: "server",
 				sourceId: listId,
 				displayName: listInfo?.name ?? listId,
-				tunes,
-				setLists,
 				lastUpdate: listInfo?.lastUpdate ?? lastUpdate,
 				...(listInfo?.defaultSort ? { defaultSort: listInfo.defaultSort } : {})
 			});
@@ -379,7 +373,8 @@ class TuneListSelectorModal extends Modal {
 				name.trim(),
 				data.tunes ?? [],
 				data.setLists ?? [],
-				data.defaultSort ?? ""
+				listInfo?.defaultSort ?? "", // not in the list JSON, only in the manifest
+				data // the tunes only link to the entities, so they are saved too
 			);
 			this._setStatus(`Saved as "${name.trim()}"`, "success");
 			this._render();
