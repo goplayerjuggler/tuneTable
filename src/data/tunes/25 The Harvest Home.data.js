@@ -13,20 +13,7 @@ K:Dmajor
 DAFA DAFA defe dcBA|eAfA gfec d2 f2 d2:|
 |:cd|eAAA fAAA gAfA eAAA|eAfA gAfA (3efe (3dcB (3ABA (3GFE|
 DAFA DAFA defe dcBA|eAfA gfec d2 f2 d2:|`,
-	references: [
-		{
-			url: "https://donegalfiddlemusic.bandcamp.com/track/the-harvest-home-the-green-mountain-hornpipes",
-			album: "A Feeling In the Blood (1930s)",
-			notes: `The Harvest Home / The Green Mountain (reel)
-	A Néillidh Boyle recording that made a big impression on me.`,
-			artists: "Néillidh Boyle, fiddle"
-		},
-		{
-			url: "https://donegalfiddlemusic.bandcamp.com/track/harvest-home",
-			album: "A Feeling In the Blood (1930s)",
-			notes: `Another Néillidh Boyle recording that’s well worth checking out, with some glissando effects that only he does AFAIK. It’s preceded by a [recording of him talking about the tune](https://donegalfiddlemusic.bandcamp.com/track/harvest-home-speech). One interesting thing (among others) is he calls it a reel – he doesn’t call it a hornpipe.`,
-			artists: "Néillidh Boyle, fiddle"
-		}
-	], //
-	theSessionId: 49
+	theSessionId: 49,
+	fileDate: "2026-07-15",
+	parts: "AABB"
 };

@@ -1,5 +1,12 @@
 export default [
 	{
+		id: "boyle_ne",
+		name: "Néillidh Boyle",
+		instrument: "fiddle",
+		b: 1889,
+		d: 1961
+	},
+	{
 		id: "dolan_fe",
 		name: "Felix Dolan",
 		url: "https://itma.accesstomemory.org/dolan-felix-1937-2013",
