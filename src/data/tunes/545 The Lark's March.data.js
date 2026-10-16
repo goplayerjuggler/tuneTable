@@ -23,13 +23,5 @@ d3 def AFF FED|ded def AFA B2 A|
 d3 def ded def|gfe fdB[1 AFA B2 A:|2 AFA B3||`,
 	theSessionId: 5867,
 	theSessionSettingId: 5867,
-	references: [
-		{
-			url: "https://www.youtube.com/watch?v=1p1Kgl52SPU&list=OLAK5uy_mctZMVPunyjOg-vRdXZLsJAz4JeUI4tt4&index=2",
-			artists:
-				"Noel Hill, concertina; Tony Linnane, fiddle, Matt Molloy, flute",
-			notes: `A very fine album; this is where I first conciously encountered the tune, in May 2026.`,
-			album: "Noel Hill And Tony Linnane (1979)"
-		}
-	]
+	fileDate: "2026-06-03"
 };

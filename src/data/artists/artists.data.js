@@ -42,6 +42,11 @@ export default [
 		instruments: ["fiddle"]
 	},
 	{
+		id: "linnane_to",
+		name: "Tony Linnane",
+		instruments: ["fiddle"]
+	},
+	{
 		id: "macmahon_to",
 		name: "Tony MacMahon",
 		instruments: ["melodeon"],
@@ -57,6 +62,12 @@ export default [
 		name: "Seán McGuire",
 		instruments: ["flute"]
 	},
+	{
+		id: "molloy_ma",
+		name: "Matt Molloy",
+		instrument: "flute"
+	},
+
 	{
 		id: "murphy_de",
 		name: "Denis Murphy",
