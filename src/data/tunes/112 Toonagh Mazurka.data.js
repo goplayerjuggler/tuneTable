@@ -13,7 +13,7 @@ N: 1. Mostly swung throughout – so in general “♪♪=♩♪”.
 N: 2. I asked Eamonn Coyne about this tune and he told me it’s a version of a Tommy
 N: Peoples tune that he learned from T. Peoples’ and T. Peoples’ daughter (Siobhán)’s playing. He 
 N: never intended it to be a new tune of his.
-N: 3. The T. Peoples tune in question is called the Walking Stick.
+N: 3. The T. Peoples tune in question is called [The Walking Stick](theSessionId=1302).
 N: 4. I personally think this tune, or setting or variation of a T. Peoples tune, is sufficiently 
 N: different from the T. Peoples tune to be considered as a different tune in its own right. 
 M: 3/4
