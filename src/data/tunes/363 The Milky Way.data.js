@@ -2,6 +2,7 @@ export default {
 	groups: "su",
 	incipit: `X: 1
 T:The Milky Way
+C:Vincent Broderick
 R: reel
 M: 4/4
 L: 1/16
