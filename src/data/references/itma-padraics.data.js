@@ -42,7 +42,7 @@ export default [
 			}
 		],
 		//[Sally Gardens](theSessionId=98) / [The foxhunters](theSessionId=511) / [The humours of Tulla](theSessionId=141) / [The flogging reel](theSessionId=195) / Lucy Campbell / [Toss the feathers](theSessionId=113) / Lucy Campbell / [Trip to Durrow](theSessionId=891)
-		notes: `I’ve listened to this track dozens of times. It has such great energy! And there’s lots to learn from the playing.
+		notes: `I’ve listened to this dozens of times. It has such great energy! And there’s lots to learn from the playing.
 Warning for ITMA pages: you have to click on the link in the player.`,
 		year: 1993
 	},
