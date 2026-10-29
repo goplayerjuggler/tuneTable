@@ -1,4 +1,4 @@
-export default {
+export default {tags:"crooked", parts:"AABCDD", 
 	abc: `
 X: 1
 T: John Doherty's Mazurka
