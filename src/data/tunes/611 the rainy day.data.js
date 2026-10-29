@@ -6,7 +6,7 @@ H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/180
 N:*abc-tools: convert to M:4/4 & L:1/16*
 R: reel
 M: 4/4
-L: 1/8
+L: 1/16
 K: Ador
 |:EAAG ~A3G (3Bcd ed gedc|BGGF G2dG ~G2dG eGdG|
   EAAG ~A3G BA~A2 (3Bcd ef|~g3e dBGA [1 B2dB A3G:|2 B2dB A3d||
