@@ -3,7 +3,7 @@ export default {
 	abc: `
 X: 1
 T: Patsy Geary's
-R: jig
+R: single jig
 M: 12/8
 N: H. Norbeck has this as a single jig rather than a slide. 
 L: 1/8
@@ -19,5 +19,5 @@ P:Ⅱ
 `,
 	theSessionId: 325,
 	norbeckId: 6,
-	parts: "AB", tags:"single jig" 
+	parts: "AB"
 };
