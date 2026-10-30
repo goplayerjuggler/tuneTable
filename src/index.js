@@ -673,6 +673,7 @@ function prepareTunesForExport(tunes, { keepGenerated = false } = {}) {
 
 		if (tune.scores?.length === 0) delete tune.scores;
 		if (tune.references?.length === 0) delete tune.references;
+		delete tune.combinedReferences;
 	});
 	return tunesCopy;
 }
