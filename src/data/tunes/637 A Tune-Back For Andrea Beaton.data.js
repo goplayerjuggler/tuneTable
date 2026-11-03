@@ -5,7 +5,7 @@ X: 1
 T: A Tune-Back For Andrea Beaton
 C:Liz Carroll
 R: strathspey
-H:Added to *tuneTable* on 2026-11-03; it's a [setting](https://thesession.org/tunes/19792#setting19792) entered in thesession by user “_” in _ (?). (todo)
+H:Added to *tuneTable* on 2026-11-03; it's a [setting](https://thesession.org/tunes/19792#setting19792) entered in thesession by user “pbsinclair42” in 2020 (?).
 M: 4/4
 L: 1/8
 K: Dmaj
