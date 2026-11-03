@@ -51,6 +51,7 @@ export default [
 		id: "fierce_trad",
 		lead: 1,
 		theSessionRecordingId: 635,
+		itirid: "FG 6",
 		year: 2001,
 		urls: [
 			"https://frankiegavin.bandcamp.com/album/fierce-traditional",
@@ -77,6 +78,7 @@ export default [
 		title: "The High Seas",
 		url: "https://caitlinciaran.bandcamp.com/album/the-high-seas",
 		theSessionRecordingId: 5888,
+		itirid: "HiSeas",
 		year: 2018,
 		lead: 2,
 		credits: ["nicgabhann_ca", "omaonaigh_ci", "ocurrain_ca"],

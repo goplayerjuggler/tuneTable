@@ -4,6 +4,7 @@ export default {
 X:1
 T: Na Farraigí Dearga
 T: The Seas They Ran Red with Blood
+C:Ciarán Ó Maonaigh
 R:Highland
 D: Decade (2019)
 S:Fidil
