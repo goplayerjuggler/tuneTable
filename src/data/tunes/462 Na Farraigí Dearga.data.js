@@ -16,12 +16,18 @@ H: 4. Shared by kind permision from the composer.
 M:4/2
 L:1/8
 K:Dm
-!fermata!G,4||!segno!A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D GA (3Bcd cdBA GFDC | A,DDE F2AG FD (3EDC B,CA,B, | G,A,B,D GAB2 A,DEF E<^CD2 |
-A,DDE F2AG FD (3EDC B,CA,B, | G,A,B,D GA (3Bcd cdBA GFDC | A,DDE F2AG FD (3EDC B,CA,B, | G,A,B,D GAB2 A,DEF E<^CD2 ||
-BDGB A<FFD EA (3GFE FDDc | (3BdB GB A<FFD EA (3GFE F2Ac | (3BdB GB A<FFD EA (3GFE FDEC | A,DDE FGE^C A,DEF E<CD2|
-BDGB A<FFD EA (3GFE FDDc | (3BdB GB A<FFD EA (3GFE F2Ac | (3BdB G2 AFFD EA (3GFE FDEC | A,DDE FAE^C A,DEF E<CD2-||
-Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2-|
-Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2!D.S.!|]`,
+!fermata!G,4||!segno!A,DDE F2AG FD (3EDC B,CA,B, | G,2 (3G,B,D GA (3Bcd cdBA GFDC | 
+A,DDE F2AG FD (3EDC B,CA,B, | G,A,B,D GAB2 A,DEF E<^CD2 |
+A,DDE F2AG FD (3EDC B,CA,B, | G,A,B,D GA (3Bcd cdBA GFDC | 
+A,DDE F2AG FD (3EDC B,CA,B, | G,A,B,D GAB2 A,DEF E<^CD2 ||
+BDGB A<FFD EA (3GFE FDDc | (3BdB GB A<FFD EA (3GFE F2Ac | 
+(3BdB GB A<FFD EA (3GFE FDEC | A,DDE FGE^C A,DEF E<CD2|
+BDGB A<FFD EA (3GFE FDDc | (3BdB GB A<FFD EA (3GFE F2Ac | 
+(3BdB G2 AFFD EA (3GFE FDEC | A,DDE FAE^C A,DEF E<CD2-||
+Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | 
+Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2-|
+Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | 
+Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2!D.S.!|]`,
 	parts: "AABBCC",
 	ttId: 462
 };
