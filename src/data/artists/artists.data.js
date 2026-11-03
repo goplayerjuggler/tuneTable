@@ -9,6 +9,7 @@ export default [
 	{
 		id: "cassidy_co",
 		name: "Con Cassidy",
+		b: 1909,
 		d: 1994,
 		instrument: "fiddle",
 		url: "https://www.itma.ie/playlists/selections-from-the-caoimhin-mac-aoidh-collection-may-2025"
