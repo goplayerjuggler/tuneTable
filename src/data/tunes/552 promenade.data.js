@@ -63,16 +63,14 @@ dg ea- ag | ag ea- a2 | ge dg- gf | g2 ag g!D.C.!e |]
 
 `
 	],
-	theSessionid: 409,
+	theSessionId: 409,
 	parts: "AABB",
 	references: [
 		{
 			album:
 				"Michael Gorman And Willy Clancy – Irish Jigs, Reels & Hornpipes Recorded In Ireland (1956)",
-			url: "",
 			artists: "Michael Gorman, fiddle"
-			// , notes:
-			// 	""
 		}
-	]
+	],
+	fileDate: "2026-06-05"
 };

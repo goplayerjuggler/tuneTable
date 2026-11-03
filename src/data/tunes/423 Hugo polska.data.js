@@ -1,9 +1,10 @@
 export default {
 	abc: `X:1
+T:Hugo polska
 R:Polska
 O:Sweden
-H:2026-02-13, question sur groupe whatsApp/trad scandinave essaie d'identifier une polska ; ceci 
-H: est mon relevé de l'enregistrement partagé.
+H:2026-02-13, une question sur un groupe whatsApp/trad scandinave pour identifier une polska ; ceci est mon relevé de l'enregistrement partagé.
+H:2026-11-01, je retrouve le nom - il fait partie d'une liste de répertoire pour un stage qui se tiendra dans quelqueas jours.
 M:3/4
 L:1/8
 K:Daeol
@@ -13,6 +14,7 @@ A,D2F E>C | (3D2F2G2 {AG}A2 | A,D2F E>C | (3D2B,2D2 A,2|
 A,D2F E>C | (3D2F2G2 {AG}A2  | (3 d2 A2 G2 F>E| C2 D4 :| 
 
 X:2
+T:Hugo polska
 R:Polska
 H: Ceci est mon souvenir de cette polska, il me semble l'avoir apris avec Marc Maurer 
 H: sur les quais de seine il y a 15 ou 20 ans.

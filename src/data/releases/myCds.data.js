@@ -38,13 +38,7 @@ export default [
 		theSessionRecordingId: 5888,
 		year: 2018,
 		lead: 2,
-		credits: [
-			"nicgabhann_ca",
-			"omaonaigh_ci",
-			{
-				id: "ocurrain_ca"
-			}
-		],
+		credits: ["nicgabhann_ca", "omaonaigh_ci", "ocurrain_ca"],
 		references: [
 			{
 				trackNumber: 2, //Éigse an Spidéil / Come West Along the Road
@@ -52,6 +46,14 @@ export default [
 
 				duration: "04:28",
 				tunes: [{ theSessionId: 20543 }, { theSessionId: 474 }]
+			},
+
+			{
+				trackNumber: 6,
+				url: "https://caitlinciaran.bandcamp.com/track/the-speaking-waltz",
+				notes: "A “sweet”, lullaby-style setting",
+				duration: "04:36",
+				tunes: [12014]
 			},
 			{
 				trackNumber: 8,

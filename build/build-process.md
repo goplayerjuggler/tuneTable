@@ -107,7 +107,7 @@ Every field is optional unless stated. At least one *identifier* must be non-nul
 A reference's two lists:
 
 - `tunes` — ordered, in the sequence of the reference. Each entry is an integer (shorthand for `{ theSessionId }`, the most widely used identifier), or has `theSessionId` or `ttId` (links a tune in the data), or just a `title` (not in the data yet); plus optional `name` (how this reference names the tune; see below), `startTime`, `endTime` (audio and video), `notes` and `abcX` (see below).
-- `credits` (of a reference or a release) — each is a bare artist `id` (shorthand for `{ id }`), or has `id` or `qId` (a known artist) or `name` (inline; `null` keeps the slot of an unknown performer), plus `instruments` (keys; or `instrument`, one key), `role` (free text, for non-performers: `author`), `unsure` (`true`: the credit may not apply, to this track or to this instrument) and `indexes` (0-based positions in `tunes`; absent = the whole reference; meaningless on a release, whose credits cover the whole release).
+- `credits` (of a reference or a release) — each is a bare artist `id` (shorthand for `{ id }`), or has `id` or `qId` (a known artist) or `name` (inline; `null` keeps the slot of an unknown performer), plus `instruments` (keys; or `instrument`, one key), `role` (free text, for non-performers: `author`), `unsure` (`true`: the credit may not apply, to this track or to this instrument) and, to limit the credit to part of what it belongs to, `indexes` (0-based positions in the reference's `tunes`; absent = the whole reference) or, on a release, `trackNumbers` (the `trackNumber`s of the release's references that it applies to; absent = every track) and/or `indexes` (0-based positions in `release.references`, each of which needs a `trackNumber`: they are read as track numbers when loading, so the published credit has `trackNumbers` only). On a release, then, credits say who played on which tracks, which saves repeating them in each reference; `lead` ignores the limits.
 
 ```js
 { id: "fog-is-lifting-track-3", releaseId: "fog-is-lifting-2025", trackNumber: 3,
@@ -122,6 +122,11 @@ A reference's two lists:
 ```js
 // releases/fog-is-lifting.data.js
 { id: "fog-is-lifting-2025", title: "The Fog Is Lifting", year: 2025,
+  credits: [
+    { id: "sylvain-barou", instrument: "flute" },                      // every track
+    { name: "Libby McCrohan", instrument: "bouzouki", trackNumbers: [3, 4] },
+    { name: "Ann Other", instrument: "piano", indexes: [0] }           // the first of `references`
+  ],
   references: [
     { trackNumber: 3, tunes: [{ title: "The Stage" }, { theSessionId: 2716, abcX: 2 }] }
   ] }
@@ -139,8 +144,8 @@ Entities are not lists of their own: each generated list JSON gets extra section
 - Files flagged `excludeFromBuild` are dropped on reading; `isPrivate` entities are dropped after validation unless `isDevelopment` is true. (A credit for a private artist in a public reference then simply shows no name.)
 - A reference is identified by its `id`, or by a release identifier + `trackNumber`, or — only when it has neither — by its first URL. That makes a web page need no `id`; a book without a URL does.
 - A reference embedded in a release (`release.references`) is loaded with the others: it takes the release's identifier (`releaseId` for the release's `id`, else `mbId`, `discogsId` or `theSessionRecordingId`), so that it is identified by that + `trackNumber`, or by its own `id`.
-- **Errors** (the build fails, all listed together): an entity with none of its identifiers; the same identifier used twice; a duplicate instrument key; `credits.indexes` outside the reference's `tunes`; a release `lead` outside its `credits` (not an integer from 0 to the number of credits); a release with no identifier and no title to make an `id` from.
-- **Warnings**: an unknown `type` (of a reference or a release); a `releaseId` matching no release; a credit `id`/`qId` (of a reference or a release) matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. an `abcX` that matches no `X:` header of the tune's `abc`. `tunes` entries with only a title are never warned about. A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
+- **Errors** (the build fails, all listed together): an entity with none of its identifiers; the same identifier used twice; a duplicate instrument key; `credits.indexes` outside the reference's `tunes` (on a release: outside its `references`, or at one with no `trackNumber`); a release `lead` outside its `credits` (not an integer from 0 to the number of credits); a release with no identifier and no title to make an `id` from.
+- **Warnings**: an unknown `type` (of a reference or a release); a `releaseId` matching no release; a credit `id`/`qId` (of a reference or a release) matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. an `abcX` that matches no `X:` header of the tune's `abc`. `tunes` entries with only a title are never warned about. A release credit's `trackNumbers` matching no reference of the release (a track with no tunes needs no reference, so this is only a warning). A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
 - A reference without an `id` is given one: `<release identifier>#<trackNumber>`, else its first URL.
 - Credits resolve to artists by `id`, then `qId`; a credit with only a `name` is inline.
 - A credit that resolves to an artist, and has neither `role` nor `instruments`, gets the artist's first instrument (`artist.instruments[0]`). This is done on load, so the published credits carry it too. Give the credit its own `instruments` to override. This applies to the credits of releases as well as of references.
@@ -156,7 +161,7 @@ Each `tunes` entry found in the data also gets `inDatabase: { idStr, name, rhyth
 | `referenceId` | the reference's `id` (used to find its entities in the list JSON) |
 | `type` | the reference's `type`, if any |
 | `language` | the reference's `language`, if any (absent means English) |
-| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include any of its positions), as `Name (role, instrument, …)` using the English instrument labels; an `unsure` credit has a `?` after each instrument, or after the name if it has none (`John Smith (bouzouki?)`, `John Smith?`); an unknown performer is shown as `?` if the credit has a role or instruments (`? (piano)`), else skipped. If that gives nothing, the same for the release's credits |
+| `artists` | credits that apply to that tune (all of them, or those whose `indexes` include any of its positions), as `Name (role, instrument, …)` using the English instrument labels; an `unsure` credit has a `?` after each instrument, or after the name if it has none (`John Smith (bouzouki?)`, `John Smith?`); an unknown performer is shown as `?` if the credit has a role or instruments (`? (piano)`), else skipped. If that gives nothing, the same for the release's credits that apply to the reference's `trackNumber` (all of them if a credit has no `trackNumbers`) |
 | `url` | the reference's first URL, falling back to the release's |
 | `album` | release title and year, then `by` its lead artists, if any (`Title (2025), by A, B`); only when the release is an `album`: any other release is named in the same way at the start of the `notes` |
 | `notes` | track number and title, the list of the reference's tunes (when it has several), the tune's time range and the tune entry's `notes` (once per mention), the reference's `notes`, any further URLs |

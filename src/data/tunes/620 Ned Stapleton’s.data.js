@@ -8,6 +8,7 @@ T:Ned Stapleton’s Reel
 C:Ned Stapleton
 R:reel
 F:https://thekellyfamily.bandcamp.com/track/raghadsa-is-mo-cheaiti-i-will-go-with-my-kitty-ned-stapleton-s-reel-slow-air-reel
+Z:abc-transcription Malcolm Schonfield
 D: A Family Tradition: Traditional Irish Music from The Kelly Family (2023)
 N:Raghadsa Is Mo Cheaití {I will go with my Kitty}, Ned Stapleton’s Reel (Slow Air & Reel)
 H:James: "Following the air, I play a composition by flute player and composer Ned Stapleton (1916-1973). Ned was a multi-instrumentalist and composer from County Wicklow who was good friends with my father. He lived in London for a while before returning home to Ireland. My father mentioned musical gatherings in Dublin that included Ned, as well as Sonny Brogan, Bill Harte, Tom Mulligan, and others. It's an unusual and very beautiful reel."
@@ -30,6 +31,7 @@ C:Ned Stapleton
 R:reel
 M:4/4
 H:The previous transcription just covered the first time through. This version adds a bit more detail and goes on to the second time through. It's an exercise in transcription and leaves out some key details. Incomplete and inaccurate, but probably better than nothing. In the recording J Kelly plays it three times. The variation in the C part is particularly interesting, IMO.
+Z:abc-transcription Malcolm Schonfield
 L:1/16
 K:D
 Ac|d2[fd]d [ad]d[fd]d {f}!slide!g2fg edcA | d/d/fd A<dfd cAGE DEFA | 

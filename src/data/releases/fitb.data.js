@@ -22,9 +22,7 @@ export default [
 					49,
 					{
 						theSessionId: 166,
-						abcX: 1,
-						notes:
-							"Referred to as a Hornpipe on the album, which seems to be a mistake."
+						abcX: 1
 					}
 				],
 				notes: "A Néillidh Boyle recording that made a big impression on me."
@@ -49,6 +47,15 @@ export default [
 				trackNumber: 57,
 				url: "https://donegalfiddlemusic.bandcamp.com/track/the-pidgeon-on-the-gate",
 				tunes: [{ theSessionId: 1596, name: "The Pidgeon on the Gate" }]
+			},
+			{
+				trackNumber: 60,
+				duration: "01:40",
+				url: "https://donegalfiddlemusic.bandcamp.com/track/sean-sa-cheo",
+				name: "Sean Sa Cheo",
+				tunes: [177],
+				notes:
+					"The first time round he omits the C part. So it goes AB ABC ABC …. I’m pretty sure he also does this for the [Moving Cloud](theSessionId=1091); and maybe for some other tunes too."
 			}
 		]
 	}

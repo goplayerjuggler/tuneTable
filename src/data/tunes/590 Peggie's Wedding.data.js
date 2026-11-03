@@ -22,7 +22,7 @@ K: Gmaj
 |:efed Bdde gfge dBGB|EAAB A2GA EAAB A2Bd|
      efed Bdde gfge dBGE|DGGA G2ED EGGA [1G2Bd :| [2G2!D.C.!|]
 `,
-			`X: 1
+			`X: 2
 T: Peggie's Wedding
 R: reel
 N: A version with chords - just a few leads; nothing definitive, as usual.

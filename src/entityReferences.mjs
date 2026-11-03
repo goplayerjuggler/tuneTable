@@ -23,6 +23,10 @@
 // A release of type "album" (the default type) is shown as the reference's `album`; any
 // other release (a book…) is named at the start of the notes instead. A release's `lead`
 // credits (the first `release.lead` of them) are named after its title: "Title (year), by A, B".
+//
+// A release's credits are the fallback for a reference with no credits of its own that apply.
+// A release credit may be limited to some of the release's tracks with `trackNumbers`
+// (matching the references' `trackNumber`); without it, it applies to every track.
 
 // ─── Identity and lookup ──────────────────────────────────────────────────────
 
@@ -104,14 +108,13 @@ const leadLine = (release, model) =>
     .join(", ");
 
 /**
- * "Name (role, instrument, …), …" for whoever is credited on any of the tunes at `indices` of a reference (or release, which may be absent).
+ * "Name (role, instrument, …), …" for the given credits.
  * A credit that is `unsure` shows a "?" after each of its instruments, or after the name if it has none: "A (fiddle?)", "A?".
  * A credit with no name but a role or instruments shows "?" as the name: "? (piano)".
  */
-function creditLine(ref, indices, model) {
+function creditLine(credits, model) {
   const { instruments } = model;
-  return (ref?.credits ?? [])
-    .filter((c) => !c.indexes || c.indexes.some((i) => indices.includes(i)))
+  return credits
     .map((c) => {
       // `unsure`: the credit may not apply (to this track, or to this instrument).
       const mark = c.unsure ? "?" : "";
@@ -205,6 +208,12 @@ export function toReference(ref, indices, model) {
         .map(String)
     )
   ];
+  // A credit applies to the tune if it has no `indexes` or they include one of its positions;
+  // a release's credit applies to the track if it has no `trackNumbers` or they include the reference's.
+  const onTune = (c) =>
+    !c.indexes || c.indexes.some((i) => indices.includes(i));
+  const onTrack = (c) =>
+    !c.trackNumbers || c.trackNumbers.includes(ref.trackNumber);
   const tuneList = tuneListLine(ref.tunes ?? [], indices);
   // "Title (year), by A, B" (no "by" without lead artists); nothing if the release has no title.
   const releaseLabel =
@@ -237,10 +246,10 @@ export function toReference(ref, indices, model) {
     type: ref.type,
     language: ref.language,
     abcX: abcX.length ? abcX : undefined,
-    // The reference's own credits, else the release's.
+    // The reference's own credits that apply to the tune, else the release's that apply to the track.
     artists:
-      creditLine(ref, indices, model) ||
-      creditLine(release, indices, model) ||
+      creditLine((ref.credits ?? []).filter(onTune), model) ||
+      creditLine((release?.credits ?? []).filter(onTrack), model) ||
       undefined,
     url,
     album: (isAlbum && releaseLabel) || undefined,

@@ -148,6 +148,36 @@ const normaliseRelease = (release) => {
   return { ...r, type: r.type ?? DEFAULT_RELEASE_TYPE, ...(id && { id }) };
 };
 
+/**
+ * A release's credit may be limited to some of its tracks: by `trackNumbers`, by `indexes`
+ * (0-based positions in `release.references`, each of which needs a `trackNumber`), or both.
+ * Published as `trackNumbers` only, which is all the app needs. Pushes problems onto `errors`.
+ */
+const scopeCredits = (release, fileName, errors) => {
+  const references = release.references ?? [];
+  const scope = ({ indexes, ...credit }) => ({
+    ...credit,
+    trackNumbers: [
+      ...new Set([
+        ...(credit.trackNumbers ?? []),
+        ...indexes.map((i) => {
+          if (!has(references[i]?.trackNumber))
+            errors.push(
+              `${fileName}: release "${release.title ?? release.id}" has credit index ${i}, which is not one of its ${references.length} reference(s) with a trackNumber`
+            );
+          return references[i]?.trackNumber;
+        })
+      ])
+    ].filter(has)
+  });
+  return release.credits
+    ? {
+        ...release,
+        credits: release.credits.map((c) => (c.indexes ? scope(c) : c))
+      }
+    : release;
+};
+
 /** A reference that belongs to a release is audio unless it says otherwise. */
 const normaliseReference = (ref) => {
   const r = normaliseTunes(normaliseCredits(withList(ref, "url", "urls")));
@@ -225,7 +255,8 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  *
  * Fatal (thrown, all reported together): an entity without an identifier, a
  * duplicate identifier, a duplicate instrument key, `credits.indexes` outside
- * `reference.tunes`, a `release.lead` outside `release.credits`. Everything else
+ * `reference.tunes` (or, on a release, outside its `references` that have a
+ * `trackNumber`), a `release.lead` outside `release.credits`. Everything else
  * that fails to resolve is a warning.
  *
  * Normalised on reading: `url` becomes `urls: [url]` (artists, releases, references),
@@ -240,7 +271,9 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  * URL, if not given). References embedded in a release (`release.references`)
  * are loaded with the others; the published release doesn't carry them. An absent `language` means English. A credit (of a
  * reference or a release) that names a known artist but gives neither `role`
- * nor `instruments` gets the artist's first instrument.
+ * nor `instruments` gets the artist's first instrument. A release's credit can be limited
+ * to some tracks with `trackNumbers` and/or `indexes` (positions in `release.references`);
+ * the published credit has `trackNumbers` only.
  *
  * @returns {Promise<{references: object[], releases: object[], artists: object[],
  *   instruments: object, resolveArtist: Function, resolveRelease: Function}>}
@@ -253,13 +286,18 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
       )
     );
   const artistPairs = mapEntries(rawArtists, normaliseArtist);
-  const releasePairs = mapEntries(rawReleases, normaliseRelease);
+  const errors = [];
+  const releasePairs = mapEntries(rawReleases, normaliseRelease).map(
+    ({ entry, fileName }) => ({
+      entry: scopeCredits(entry, fileName, errors),
+      fileName
+    })
+  );
   // Embedded references take their release's identifier, so the releases come first.
   const referencePairs = mapEntries(
     [...rawReferences, ...embeddedReferences(releasePairs)],
     normaliseReference
   );
-  const errors = [];
 
   checkIdentity("artist", artistPairs, idKeys(ARTIST_ID_FIELDS), errors);
   checkIdentity("release", releasePairs, idKeys(RELEASE_ID_FIELDS), errors);
@@ -324,6 +362,12 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
     if (!RELEASE_TYPES.includes(release.type))
       warn(`has unknown type "${release.type}"`);
     checkCredits(release.credits, warn);
+    const tracks = referencePairs
+      .filter(({ entry }) => all.resolveRelease(entry) === release)
+      .map(({ entry }) => entry.trackNumber);
+    [...new Set((release.credits ?? []).flatMap((c) => c.trackNumbers ?? []))]
+      .filter((n) => !tracks.includes(n))
+      .forEach((n) => warn(`credits track ${n}, which has no reference`));
   });
   referencePairs.forEach(({ entry: ref, fileName }) => {
     const warn = warner("reference", fileName, ref);

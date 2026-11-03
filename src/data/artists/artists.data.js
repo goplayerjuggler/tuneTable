@@ -7,6 +7,13 @@ export default [
 		d: 1961
 	},
 	{
+		id: "cassidy_co",
+		name: "Con Cassidy",
+		d: 1994,
+		instrument: "fiddle",
+		url: "https://www.itma.ie/playlists/selections-from-the-caoimhin-mac-aoidh-collection-may-2025"
+	},
+	{
 		id: "dolan_fe",
 		name: "Felix Dolan",
 		url: "https://itma.accesstomemory.org/dolan-felix-1937-2013",

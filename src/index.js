@@ -806,6 +806,7 @@ async function addNewTune() {
 		rhythm: "",
 		abc: null,
 		references: [],
+		combinedReferences: [],
 		scores: [],
 		incipit: null
 	};
