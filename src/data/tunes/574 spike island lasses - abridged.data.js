@@ -19,5 +19,5 @@ cAGE ADDE (3FED GE FDDB| cAGE Adde (3fed ec d3e ||
 f2df e2ce dfed cAA2 | f2df edcd eaag edd2| 
 a3f g2fe dfed cAGB | Addc d3e (3fed ec dfed !D.S.! |]`,
 	ttId: 574,
-	contourShift: 1
+	contourShift: 0
 };

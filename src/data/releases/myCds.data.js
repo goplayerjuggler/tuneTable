@@ -174,6 +174,7 @@ export default [
 	{
 		title: "Traditional Irish Flute Music",
 		theSessionRecordingId: 1015,
+		itirid: "FVlly 1",
 		lead: 1,
 		year: 1979,
 		urls: [

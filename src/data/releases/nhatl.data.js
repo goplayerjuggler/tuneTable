@@ -1,6 +1,7 @@
 export default [
 	{
 		id: "nhatl",
+		itirid: "NHTL",
 		year: "1978",
 		theSessionRecordingId: 27,
 		title: "Noel Hill And Tony Linnane",

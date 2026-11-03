@@ -37,6 +37,7 @@ export default [
 	{
 		theSessionRecordingId: 432,
 		title: "Frankie Gavin & Alec Finn",
+		itirid: "FG 1",
 		year: 1977,
 		references: [
 			{

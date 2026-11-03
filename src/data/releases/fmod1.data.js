@@ -2,6 +2,7 @@ export default [
 	{
 		id: "fmod1",
 		year: "1995",
+		itirid: "FMD 1",
 		theSessionRecordingId: 283,
 		title: "The Fiddle Music of Donegal Volume 1",
 		urls: [

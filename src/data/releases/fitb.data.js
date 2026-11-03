@@ -1,6 +1,7 @@
 export default [
 	{
 		id: "fitb",
+		itirid: "NBoyle",
 		year: "1930s",
 		// theSessionRecordingId: 4445,
 		title: "A Feeling In The Blood",
