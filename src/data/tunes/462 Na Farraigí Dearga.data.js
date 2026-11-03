@@ -22,5 +22,6 @@ BDGB A<FFD EA (3GFE FDDc | (3BdB GB A<FFD EA (3GFE F2Ac | (3BdB GB A<FFD EA (3GF
 BDGB A<FFD EA (3GFE FDDc | (3BdB GB A<FFD EA (3GFE F2Ac | (3BdB G2 AFFD EA (3GFE FDEC | A,DDE FAE^C A,DEF E<CD2-||
 Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2-|
 Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2!D.S.!|]`,
-	parts: "AABBCC"
+	parts: "AABBCC",
+	ttId: 462
 };
