@@ -11,7 +11,7 @@ F:https://raelachrecords.bandcamp.com/track/na-farraigi-dearga-the-seas-they-ran
 Z:abc-transcription Malcolm Schonfield%2026-01-29
 H: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 H: 2. It's a fantastic, lovely tune; remarkable.
-H: 3. After some hesitation, I’ve put this as a highland. I initially went for “hornpipe”. On the album it's called a descriptive piece.
+H: 3. After some hesitation, I’ve put this as a highland. I initially went for “hornpipe”. It was composed as a descriptive piece.
 H: 4. Shared by kind permision from the composer.
 M:4/2
 L:1/8
