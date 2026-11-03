@@ -9,9 +9,9 @@ H:Based on a [setting](https://thesession.org/tunes/4236#setting4236) entered in
 L:1/8
 M:12/8
 K:Dmajor
-|:E|F2A AFA Bcd efg|fed ~B3 AFE EDE|
+|:E|F2A AFA Bcd e2g|fed BdB AFE EDE|
 	F2A AFA Bcd efg|fed ~B3 AFD D2:|
-|:e|fed BdB AFE EDF|AFB AFB AFB AFA|
-	fed BdB AFE E2e|fed BdB AFD D2:|`,
+|:e|fed BdB AFE EFG|A3 ABF ABF Ade|
+	fed BdB AFE E2g|fed BdB AFD D2:|`,
 	theSessionId: 4236
 };

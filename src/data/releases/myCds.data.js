@@ -1,5 +1,46 @@
 export default [
 	{
+		title: "Caitlín & Ciarán",
+		url: "https://caitlinciaran.bandcamp.com/album/caitl-n-ciar-n",
+		itirid: "CtlnCrn",
+		theSessionRecordingId: 4922,
+		year: 2014,
+		lead: 2,
+		credits: [
+			"nicgabhann_ca",
+			"omaonaigh_ci",
+			{ name: "Caoimhín Ó Fearghaíl", instrument: "bouzouki" },
+			{ name: "Sean Óg Graham", instrument: "guitar" }
+		],
+		references: [
+			{
+				trackNumber: 2, //whistler at the wake, old flair,
+				url: "https://caitlinciaran.bandcamp.com/track/the-whistler-at-the-wake-the-old-flail-the-butchers-march",
+
+				duration: "04:43",
+				tunes: [
+					4236,
+					839,
+					{ theSessionId: 1003, name: "The Butcher's March", rhythm: "jig" }
+				]
+			},
+			{
+				trackNumber: 3,
+				url: "https://caitlinciaran.bandcamp.com/track/midnight-in-virginia-the-mountain-road",
+
+				duration: "04:08",
+				tunes: [
+					{ name: " Midnight In Virginia", rhythm: "reel" },
+					{
+						notes:
+							"A five-part version “picked up from the Campbells of Glenties and Dermot McLaughlin”",
+						theSessionId: 68
+					}
+				]
+			}
+		]
+	},
+	{
 		id: "door_n_window",
 		theSessionRecordingId: 3472,
 		title: "Doorways & Windowsills",

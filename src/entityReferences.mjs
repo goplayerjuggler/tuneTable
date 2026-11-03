@@ -253,7 +253,9 @@ export function toReference(ref, indices, model) {
       undefined,
     url,
     album: (isAlbum && releaseLabel) || undefined,
-    notes
+    notes,
+    theSessionRecordingId: release?.theSessionRecordingId || undefined,
+    itirid: release?.itirid || undefined
   };
 }
 

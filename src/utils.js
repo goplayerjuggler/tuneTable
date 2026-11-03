@@ -108,9 +108,15 @@ const formatReference = (ref, acc, setUpCrossRefLink = noCrossRefLink) => {
 	const domain = ref.url
 		? ref.url.match(/^(?:https?:\/\/)?(?:www\.)?([^/]+)/)[1]
 		: "";
+	const theSession = ref.theSessionRecordingId
+		? `${ref.url ? " " : ""}<a href="https://thesession.org/recordings/${ref.theSessionRecordingId}" target="_blank" rel="noopener noreferrer">thessession</a>`
+		: "";
+	const iti = ref.itirid
+		? `${ref.url || ref.theSessionRecordingId ? " " : ""}<a href="https://www.irishtune.info/album/${ref.itirid}/" target="_blank" rel="noopener noreferrer">irishtune.info</a>`
+		: "";
 	const refHeader =
 		ref.artists && ref.url
-			? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a></div>`
+			? `<div class="url">${ref.artists} <a href="${ref.url}" target="_blank" rel="noopener noreferrer">${domain}</a>${theSession + iti}</div>`
 			: ref.artists
 				? `<div class="artists">${ref.artists}</div>`
 				: ref.url
