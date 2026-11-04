@@ -1,16 +1,14 @@
 export default {
 	tags: "transformed",
 	groups: "alora",
-	fileDate: "2026-09-28",
 	ttId: 621,
 	abc: `
 X:1
-T: Tommy Coen's Waltz
-T: Tommy Coen's as a fast-ish waltz
+T: Tommy Coen's In Three
 C:Malcolm Schonfield
-H: This is simply [Tommy Coen's reel](theSessionId=440), as a waltz.
+H: This is simply [Tommy Coen's reel](theSessionId=440), after some changes to put it in three. At first I thought the result was a waltz, but now I think it isn't.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-R: waltz
+R: Bourrée à 3 temps
 M: 3/4
 L: 1/8
 K: Gmaj
