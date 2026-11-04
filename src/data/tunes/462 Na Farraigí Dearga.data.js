@@ -12,7 +12,7 @@ Z:abc-transcription Malcolm Schonfield%2026-01-29
 H: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 H: 2. It's a fantastic, lovely tune; remarkable.
 H: 3. After some hesitation, I’ve put this as a highland. I initially went for “hornpipe”. It was composed as a descriptive piece.
-H: 4. Shared by kind permision from the composer.
+H: 4. Shared with kind permision from the composer.
 M:4/2
 L:1/8
 K:Dm
@@ -29,5 +29,6 @@ Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2-|
 Deef dAcB Ac (3efg fdec | Acef d<AcB Acef e<cd2 | 
 Acef d<AcB Ac (3efg fdec | dAcA FD (3DFD A,2 (3DEF E^CD2!D.S.!|]`,
 	parts: "AABBCC",
-	ttId: 462
+	ttId: 462,
+	theSessionId: 26985
 };
