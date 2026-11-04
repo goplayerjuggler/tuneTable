@@ -6,9 +6,9 @@ export default {
 X:1
 T: Tommy Coen's In Three
 C:Malcolm Schonfield
-H: This is simply [Tommy Coen's reel](theSessionId=440), after some changes to put it in three. At first I thought the result was a waltz, but now I think it isn't.
+H: This is simply [Tommy Coen's reel](theSessionId=440), after some changes to put it in three. At first I thought the result was a waltz, but now I think it isn't. Some friends said it's a bourrée à 3 temps, but I'm not convinced. I see it as some sort of a fast mazurka, with only a very slight “swing” to the pairs of quavers.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-R: Bourrée à 3 temps
+R: Mazurka
 M: 3/4
 L: 1/8
 K: Gmaj
