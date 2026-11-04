@@ -13,6 +13,7 @@ H: 1. Mostly swung throughout – so in general “♪♪=♩♪”
 H: 2. It's a fantastic, lovely tune; remarkable.
 H: 3. After some hesitation, I’ve put this as a highland. I initially went for “hornpipe”. It was composed as a descriptive piece.
 H: 4. Shared with kind permision from the composer.
+H: 5. I've come up with a variation involving some B naturals and F sharps thrown in to replace some of the B flats and F naturals, along with some other tweaks. Gives it a different flavour. But so far, I haven't recorded it or written it down.
 M:4/2
 L:1/8
 K:Dm
