@@ -6,7 +6,7 @@ mytunebook*.js
 *bourrée*.txt
 *workspace
 **/251010**/*
-**/tmp/**/*
+/tmp/
 *.backup
 # Dependency directories
 node_modules/
