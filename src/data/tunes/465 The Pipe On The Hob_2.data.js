@@ -7,12 +7,5 @@ L: 1/8
 K: Dmix
 d^cd A2G F2D DED|EDE cBc`,
 	theSessionId: 1049,
-	parts: "AABB",
-	crossReferences: [
-		{
-			theSessionId: 1334,
-			index: 1
-			//Luck penny; Pipe on the hob (1988) - McGann & Conway
-		}
-	]
+	parts: "AABB"
 };

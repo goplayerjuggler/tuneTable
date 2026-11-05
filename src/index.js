@@ -1001,7 +1001,7 @@ function addResolvedCrossRef(target, source, refIndex, ref, extra = {}) {
 }
 
 /**
- * The "See entry under …" pointers of a tune row (`tune._resolvedCrossRefs`) as one
+ * The "See …" pointers (formerly, "See entry under …") of a tune row (`tune._resolvedCrossRefs`) as one
  * block. One item per tune pointed to (a tune with several references to this one is
  * listed once, with their details together); tunes that are on screen are links, the
  * others are named in a second list. `onScreenIds` holds the `_crId` of the tunes shown.
@@ -1027,7 +1027,7 @@ function crossRefsHtml(crossRefs, onScreenIds) {
 	const sentences = [];
 	if (onScreen.length)
 		sentences.push(
-			`See ${onScreen.length > 1 ? "entries under:" : "entry under"} ${onScreen
+			`See ${onScreen
 				.map((g) => item(g, `<a href="#cr-t${g.tuneId}">${g.tuneName}</a>`))
 				.join("; ")}.`
 		);

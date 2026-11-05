@@ -1,0 +1,18 @@
+export default {
+	parts: "AABB",
+	groups: "alora",
+	abc: `
+X: 1
+T: Christmas In Spiddal
+C:Charlie Lennon
+R: mazurka
+H:Added to *tuneTable* on 2026-11-05; it was [entered](https://thesession.org/tunes/17868#setting17868) in thesession by user “Rover” in 2018 (?).
+M: 3/4
+L: 1/8
+K: Dmaj
+|:Ad dA de|d3e dc|Ad dA FA|G2 EF GB|A2 dA fA|de fg ab|af ge Ac|1 ed dA GE:|2 ed de fg||
+a2 fe fa|.f2 ~f2~f2|Ad de fa|g2 ef~fe|a2 fe fa|.f2 ~f2~f2|Ac ea fe|ed d2 fg|
+ab f2 f/e/f/a/|.f2 ~f2~f2|Ad de fa|g2 ~e4|af b2 af|ge fd ec|Ac ea ge|d6||
+`,
+	theSessionId: 19792
+};

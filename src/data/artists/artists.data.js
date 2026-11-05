@@ -1,4 +1,5 @@
 export default [
+	{ id: "barou_sy", name: "Sylvain Barou", instruments: ["flute", "uPipes"] },
 	{
 		id: "boyle_ne",
 		name: "Néillidh Boyle",
@@ -40,6 +41,7 @@ export default [
 		urls: ["https://en.wikipedia.org/wiki/Frankie_Gavin_(musician)"],
 		instruments: ["fiddle", "whistle", "flute", "viola"]
 	},
+	{ id: "harper_br", name: "Bríd Harper", instrument: "fiddle" },
 	{ id: "hill_no", name: "Noel Hill", instrument: "concertina" },
 	{
 		id: "macgabhann_an",
@@ -60,6 +62,7 @@ export default [
 		instrument: "melodeon",
 		url: "https://itma.accesstomemory.org/macmahon-tony-1939-2021"
 	},
+	{ id: "mccrohan_li", name: "Libby McCrohan", instrument: "bouzouki" },
 	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
 	{
 		id: "mcguire_se",

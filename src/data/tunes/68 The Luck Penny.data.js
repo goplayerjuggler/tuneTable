@@ -21,7 +21,8 @@ dBG GBd g2g fd^c|def gdB[1 cAF GBc:|2 cAF G2A||`,
 		{
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-may-2026/?track=3",
 			artists: "Andy McGann, fiddle; Brian Conway, fiddle; Felix Dolan, piano",
-			notes: "Luck penny; Pipe on the hob (1988)"
+			notes: "Luck penny; [Pipe on the hob](theSessionId=1049) (1988)"
 		}
-	]
+	],
+	fileDate: "2026-06-01"
 };

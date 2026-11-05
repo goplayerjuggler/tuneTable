@@ -34,11 +34,5 @@ K:Dmajor
 Top It Off is played completely “straight” here; not at all “crooked”.`
 		}
 	],
-	crossReferences: [
-		{
-			theSessionId: 1374,
-			index: 1
-			// Cucanandy/Top it Off/The Sunny Banks - S Barou, B Harper
-		}
-	]
+	fileDate: "2026-05-21"
 };

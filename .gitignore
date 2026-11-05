@@ -10,6 +10,6 @@ mytunebook*.js
 *.backup
 # Dependency directories
 node_modules/
-dist/
 # compiled
+dist/
 src/generated/

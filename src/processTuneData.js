@@ -30,8 +30,8 @@ const swingTransform3_4_rhythms =
  *
  * A reference entity may point to one setting of the tune, by the `X:` header of an
  * item of `tune.abc` (`abcX`). The ABC-derived reference of that setting is then
- * merged into the entity's: the entity supplies the url, album and artists (the ABC's
- * F:, D: and S: are ignored), and the ABC's N: and H: comments are added to its notes.
+ * merged into the entity's: the entity supplies the album and artists (the ABC's
+ * D: and S: are ignored), and the ABC's N: and H: comments are added to its notes. The ABC's F:, if present, will override the reference's url.
  * The merged reference is part 3, and the ABC-derived one leaves part 1.
  * Nothing is mutated: the merge is redone on each call, so it survives reprocessTune.
  *
@@ -51,9 +51,12 @@ function getCombinedReferences(tune, abcIndex) {
 		return abcRefs.length
 			? {
 					...ref,
-					notes: [ref.notes, ...abcRefs.map((abcRef) => abcRef._abcNotes)]
-						.filter(Boolean)
-						.join("\n")
+					...{
+						notes: [ref.notes, ...abcRefs.map((abcRef) => abcRef._abcNotes)]
+							.filter(Boolean)
+							.join("\n"),
+						url: abcRefs[0]?.url ?? ref.url
+					}
 				}
 			: ref;
 	});

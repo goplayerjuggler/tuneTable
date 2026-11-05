@@ -23,12 +23,6 @@ G2~g2 gagf dg~g2 bgag|dc~c2 gceg fdcA G2~c2:|`
 				`
 3. There’s [another entry on thesession with ID 4312](https://thesession.org/tunes/4312) and who knows, there may well be others.
 `
-		},
-		{
-			url: "https://donegalfiddlemusic.bandcamp.com/track/track-15-the-pigeon-on-the-gate-jenny-picking-cockles-reels",
-			artists: "Roisín McGrory and Damian Harrigan, fiddles",
-			album: "The Fiddle Music of Donegal Volume 2 (1997)",
-			notes: "The Pigeon on the Gate / Jenny Picking Cockles"
 		}
 	],
 	theSessionId: 1596,

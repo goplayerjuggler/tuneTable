@@ -15,12 +15,5 @@ AF~F2 DEFA dced BAdB|AdcB AFGE D/E/D CE D2:|
 |:dc|BABc dcdf b z fa gfgf|ecec BA B/c/d AFAF EA,CE|
 AF~F2 DEFA dced BAdB|AdcB AFGE D/E/D CE D2:|`,
 	theSessionId: 6274,
-	references: [
-		{
-			artists: "Vincent Campbell, fiddle",
-			url: "https://donegalfiddlemusic.bandcamp.com/track/track-1-john-mhosa-mcginley-s-hornpipe",
-			album: "The Fiddle Music of Donegal Volume 2 (1997)",
-			notes: "Well worth a listen. Wild and crazy, you might say!"
-		}
-	]
+	fileDate: "2026-06-09"
 };

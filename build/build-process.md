@@ -132,7 +132,7 @@ A reference's two lists:
   ] }
 ```
 
-- **`abcX`** on a `tunes` entry says that the reference is about one item of that tune's `abc` array: the one whose `X:` header matches (`abcX: 2` for `X:2`; a number or a string). The ABC-derived reference of that setting (from its `F:`, `D:`, `S:`, `N:` and `H:` fields) is then merged into the one built from the reference entity: the entity supplies the url, album and artists, the ABC's `F:`, `D:` and `S:` are ignored, and its `N:` and `H:` comments are added to the notes. So one reference entity can stand for a track of N tunes, with no need to edit the N tunes. See `getCombinedReferences` in `processTuneData.js`.
+- **`abcX`** on a `tunes` entry says that the reference is about one item of that tune's `abc` array: the one whose `X:` header matches (`abcX: 2` for `X:2`; a number or a string). The ABC-derived reference of that setting (from its `F:`, `D:`, `S:`, `N:` and `H:` fields) is then merged into the one built from the reference entity: the entity supplies the album and artists, the ABC's  `D:` and `S:` are ignored, its `N:` and `H:` comments are added to the notes, and if present its `F:` will override the URL. So one reference entity can stand for a track of N tunes, with no need to edit the N tunes. See `getCombinedReferences` in `processTuneData.js`.
 
 These *entity references* are not to be confused with a tune's own references (`tune.references`, `referencesFromAbc`, `referencesFromEntities`; see `getCombinedReferences` in `processTuneData.js`).
 

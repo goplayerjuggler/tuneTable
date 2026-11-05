@@ -18,16 +18,6 @@ P:Variations/embellishments
 "_v0"B3 B2 A G2 A||"_v1"A2!slide!B-B2A||"_v2"Bcd e2d e3||"_v3"B2g e2d e2d ||"_v4"B2g f2d e2d ||"_v5 (coda)"B2e e2d "C"!fermata!e3 |]
 `,
 	theSessionId: 1374,
-	references: [
-		{
-			url: "https://sylvainbarou.bandcamp.com/track/hop-jigs-reel-cucanandy-top-it-off-the-sunny-banks",
-			artists:
-				"Sylvain Barou, uilleann pipes; Bríd Harper, fiddle; Libby McCrohan, bouzouki",
-			album: "The Fog Is Lifting (2025)",
-			notes:
-				"Hop jigs & Reel: Cucanandy / [Top it Off](theSessionId=2608) / The Sunny Banks "
-		}
-	],
 	crossReferences: [
 		{
 			theSessionId: 1340,

@@ -195,5 +195,43 @@ export default [
 				]
 			}
 		]
+	},
+	{
+		title: "The Fog is Lifting",
+		theSessionRecordingId: 8393,
+		year: 2025,
+		urls: [
+			"https://sylvainbarou.bandcamp.com/album/br-d-harper-libby-mccrohan-sylvain-barou-the-fog-is-lifting"
+		],
+		credits: ["barou_sy", "harper_br", "mccrohan_li"],
+		references: [
+			{
+				trackNumber: 4,
+				url: "https://sylvainbarou.bandcamp.com/track/hop-jigs-reel-cucanandy-top-it-off-the-sunny-banks",
+				tunes: [1374, 2608, { rhythm: "reel", name: "The Sunny Banks" }]
+			},
+			{
+				trackNumber: 7,
+				urls: [
+					"https://sylvainbarou.bandcamp.com/track/mazurkas-christmas-in-spiddal-twelve-to-the-bar"
+				],
+				tunes: [19792, { name: "Twelve To The Bar", rhythm: "mazurka" }]
+			},
+
+			{
+				trackNumber: 11,
+				duration: "5:54",
+				url: "https://sylvainbarou.bandcamp.com/track/hornpipe-reels-the-stage-ag-filleadh-abhaile-omahoneys",
+				tunes: [
+					{ name: "The Stage", rhythm: "hornpipe" },
+					{ name: "Ag Filleadh Abhaile", rhythm: "reel" },
+					{
+						theSessionId: 2716,
+						startTime: "3:26",
+						notes: `I think this is a bit calmer than the Jason O’Rourke 2009 recording; but perhaps it’s an easier reference for learning the tune (?)`
+					}
+				]
+			}
+		]
 	}
 ];
