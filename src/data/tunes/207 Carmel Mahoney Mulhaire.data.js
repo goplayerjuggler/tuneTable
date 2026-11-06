@@ -21,16 +21,5 @@ K:Dmajor
 |:FAA2 FADF ADFA bagf|g2fg efde cdBc ABAG|
   FAA2 FADF ADFA bagf|gefd ecdB [1 AFGE D2DE:|2 AFGE D4||`,
 	theSessionId: 2716,
-	fileDate: "2026-06-24",
-	references: [
-		{
-			url: "https://sylvainbarou.bandcamp.com/track/hornpipe-reels-the-stage-ag-filleadh-abhaile-omahoneys",
-			notes: `Hornpipe/Reels: The Stage/Ag Filleadh Abhaile/O'Mahoney's
-03:26 / 05:54
-I think this is a bit calmer than the Jason O’Rourke 2009 recording; but perhaps it’s an easier reference for learning the tune (?)`,
-			artists:
-				"Sylvain Barou, uilleann pipes; Bríd Harper, fiddle; Libby McCrohan, bouzouki",
-			album: "The Fog Is Lifting (2025)"
-		}
-	]
+	fileDate: "2026-06-24"
 };
