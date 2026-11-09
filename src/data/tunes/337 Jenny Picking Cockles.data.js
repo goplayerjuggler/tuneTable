@@ -4,7 +4,7 @@ export default {
 T:Jenny Picking Cockles
 R:reel
 S:Neillidh Boyle
-O:Ireland;Co. Donegal; Dungloe.
+O:Ireland; Co. Donegal; Dungloe.
 Z:Transcribed by Larry Sanger from a tape of the old 78 rpm record of N. Boyle.
 M:4/4
 L:1/16
@@ -23,5 +23,6 @@ dg~g2 bgag ~f2ga fddg | bg~a2 gfga fdcA [G,G]B~g2:|`,
 			theSessionId: 1596 //The Old Pigeon On The Gate
 		}
 	],
-	theSessionId: 202
+	theSessionId: 202,
+	fileDate: "2026-07-22"
 };

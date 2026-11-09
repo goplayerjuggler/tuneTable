@@ -4,7 +4,7 @@ export default {
 	abc: `X:1
 T:Waverly
 C:Art Galbraith
-O:USA;Missouri.
+O:USA; Missouri.
 S:Michael McGoldrick, uilleann pipes; John Carty, banjo; Matt Griffin, guitar
 H:https://racketrecords.bandcamp.com/track/waverly-r-l-m-irt-n-sheamuis
 D:At Our Leisure

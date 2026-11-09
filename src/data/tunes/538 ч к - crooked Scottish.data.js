@@ -1,7 +1,6 @@
 export default {
 	parts: "ABB",
 	tags: ["transformed", "crooked"],
-	excludeFromDefault: true,
 	groups: "alora",
 	fileDate: "2026-05-27",
 	ttId: 538,

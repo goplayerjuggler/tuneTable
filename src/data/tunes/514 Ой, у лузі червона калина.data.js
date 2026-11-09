@@ -1,13 +1,12 @@
 export default {
 	parts: "ABB",
 	groups: "alora",
-	tags: "crooked",
+	tags: ["crooked", "song"],
 	ttId: 514,
 	abc: `
 X:1
 T:Ой, у лузі червона калина
 O:Ukraine
-R:Song
 S:Eileen, voice
 F:https://www.youtube.com/watch?v=ZztmQsSAqfo
 Z:abc-transcription Malcolm Schonfield

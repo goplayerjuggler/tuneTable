@@ -1,7 +1,7 @@
 export default {
 	ttId: 261,
 	groups: "ALORA,SU",
-	tags: "crooked",
+	tags: ["crooked", "song"],
 	abc: `
 %The Spanish Lady
 %abc-2.1
@@ -9,7 +9,6 @@ X:1
 T:The Spanish Lady
 M:3/4
 S:Brian Dunne
-R:song
 Q:1/4=70
 I:abc-charset utf-8
 Z:abc-transcription Malcolm Schonfield% 2024-07-(19,25,26); 08-07;11-21

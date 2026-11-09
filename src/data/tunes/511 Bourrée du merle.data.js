@@ -6,7 +6,7 @@ export default {
 X:1
 T:Bourrée du merle
 R:Bourrée à 3 temps
-O:France;Limousin;Corrèze.
+O:France; Limousin; Corrèze.
 S:Clémence Cognet, violon ; Noëllie Nioulou, violoncelle
 D:Les poufs à cordes / La Trotteuse (2013)
 Z:abc-transcription Malcolm Schonfield
@@ -47,5 +47,6 @@ From 01:23 onwards. The B part here is slightly different from the score I wrote
 		}
 	],
 	structure: "2.2.(6+6)",
-	ttId: 511
+	ttId: 511,
+	fileDate: "2026-07-02"
 };

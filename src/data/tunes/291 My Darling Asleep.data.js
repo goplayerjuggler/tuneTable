@@ -1,6 +1,6 @@
 export default {
 	name: "My Darling Asleep",
-	groups: "ALORA",
+	groups: "ALORA, blr",
 	incipit: `X: 1
 M: 12/8
 L: 1/8
