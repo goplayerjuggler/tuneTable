@@ -1,20 +1,22 @@
 export default {
+	parts: "AABBCCDD",
 	groups: "blr",
 	abc: `
 
-X: 2
-T: Banbury Bill
-O:England
-H:Added to *tuneTable* on 2026-11-10; from [thesession](https://thesession.org/tunes/14325#setting50571).
-R: Morris dance
-M: 4/4
+X: 1
+T: Nancy Clough
+T: Tom Clough
+O:England; Northumberland
+R: rant
+M: 4/2
 L: 1/8
 K: Dmaj
-|:"D" DE "D" FD "G"GA "G"B2|"A"EF "A"GA/G/ "D"FG "D"A2|
-"D"AD"D" FA "D"de "D"f2|"A" f/g/e "A"Bc "D"d2 "D"d2:|
-|:"D"de "D"fd "A"cd "A"e2|"G"Bc "G"de/d/ "A"cB "A"AB/c/|
-"D"dD "D"D2 "G"FG "D"A2|"G"B/c/d "A"c/d/e "D"d2 "D"d2:|
-
+|:(3DEF|"G" G2G,2 B,2D2 G2B>A G2D2| "C"G2AB cBAG "D"F2A2D2 (3DEF|
+"G" G2G,2 B,2D2 G2B>A G2D2| "C"E2"D"c2 BAGF [1"G"G6:|[2G2G2G2
+|:Bc|d3e d2cB c3dc2 BA| B2GB cBAG F2A2 D2EF|
+"G" G2G,2 B,2D2 G2B>A G2D2| "D"E2c2 BAGF [1"G"G6:|[2G2G2G2
+"_two more parts follow - will add soon"y
+%%todo
 
 `,
 	theSessionId: 14325

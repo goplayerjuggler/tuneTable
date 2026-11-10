@@ -1,5 +1,6 @@
 export default {
 	groups: "blr",
+	parts: "AABB",
 	abc: `
 X: 1
 T: Jack's Maggot
