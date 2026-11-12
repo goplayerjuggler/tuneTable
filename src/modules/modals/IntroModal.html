@@ -1,225 +1,225 @@
 <div class="intro-modal">
 
-    <div class="intro-lead">
-        <p>“Tune table” is a tool for browsing, organising, and exploring
-            collections of traditional and folk tunes. You can view sheet music, filter
-            tunes, browse notes and references, and sort lists in (as far as I know) a novel
-            way. The sorting involves an automatically-generated <em>contour</em>, which
-            is a type of diagram based on the beginning of a tune – see “Sorting and
-            contours” below for more info.
-        </p>
-        <p>This is an alpha-stage personal project, not a polished product. Several features are incomplete and in
-            general there will be bugs. Also, features like editing and importing tunes require some
-            technical know-how. But feel free to play around with it; you can’t really break anything!</p>
-        <!-- <p>I may rename it as “tune library” at point. That would be a better name. But after all, a name is just a name. </p> -->
-    </div>
+	<div class="intro-lead">
+		<p>“Tune table” is a tool for browsing, organising, and exploring
+			collections of traditional and folk tunes. You can view sheet music, filter
+			tunes, browse notes and references, and sort lists in (as far as I know) a novel
+			way. The sorting involves an automatically-generated <em>contour</em>, which
+			is a type of diagram based on the beginning of a tune – see “Sorting and
+			contours” below for more info.
+		</p>
+		<p>This is an alpha-stage personal project, not a polished product. Several features are incomplete and in
+			general there will be bugs. Also, features like editing and importing tunes require some
+			technical know-how. But feel free to play around with it; you can’t really break anything!</p>
+		<!-- <p>I may rename it as “tune library” at point. That would be a better name. But after all, a name is just a name. </p> -->
+	</div>
 
-    <div class="intro-sections">
+	<div class="intro-sections">
 
-        <details class="intro-section">
-            <summary>Tune lists – server and local</summary>
-            <div class="intro-section__body">
-                <p>When you first open “Tune table” you may be asked to choose a tune
-                    list. There are two kinds:</p>
-                <p><strong>Server lists</strong> are read-only lists that are hosted online. Any edits you make are
-                    saved automatically as a local
-                    copy in your browser. As well as server lists showing different slices of “my tunebook” (the tune
-                    collection I’m curating), I’ve also included a few (open-source) collections that have been shared
-                    by others. More such collections may follow later on.
-                </p>
-                <p><strong>Local lists</strong> are stored in your browser’s local
-                    storage.
-                    They will be lost if you clear your browser data, switch browsers
-                    or devices, or if the browser happens to free up space for some reason or other. So if you use local
-                    lists, do
-                    <strong>make backups</strong> by exporting your tune list via the
-                    Edit menu (“…” button at the top; “Copy tune data”).
-                </p>
-                <p>Local lists can be used to import tunes in <a href="https://abcnotation.com/" target="_blank"
-                        rel="noopener noreferrer">
-                        ABC format
-                    </a>, or to import users’ tunebooks
-                    and sets from <a href="https://thesession.org" target="_blank"
-                        rel="noopener noreferrer">thesession.org</a>.
-                    For example, you could try creating an empty local list and then importing all the tunes from one of
-                    <a href="https://www.norbeck.nu/abc/download.asp" target="_blank" rel="noopener noreferrer">Henrick
-                        Norbeck’s traditional music collections</a>.
-                </p>
-                <p>You can switch between lists at any time using the
-                    <em>Tune lists</em> button in the page footer or the Edit menu (“…” button at the top).
-                </p>
-            </div>
-        </details>
+		<details class="intro-section">
+			<summary>Tune lists – server and local</summary>
+			<div class="intro-section__body">
+				<p>When you first open “Tune table” you may be asked to choose a tune
+					list. There are two kinds:</p>
+				<p><strong>Server lists</strong> are read-only lists that are hosted online. Any edits you make are
+					saved automatically as a local
+					copy in your browser. As well as server lists showing different slices of “my tunebook” (the tune
+					collection I’m curating), I’ve also included a few (open-source) collections that have been shared
+					by others. More such collections may follow later on.
+				</p>
+				<p><strong>Local lists</strong> are stored in your browser’s local
+					storage.
+					They will be lost if you clear your browser data, switch browsers
+					or devices, or if the browser happens to free up space for some reason or other. So if you use local
+					lists, do
+					<strong>make backups</strong> by exporting your tune list via the
+					Edit menu (“…” button at the top; “Copy tune data”).
+				</p>
+				<p>Local lists can be used to import tunes in <a href="https://abcnotation.com/" target="_blank"
+						rel="noopener noreferrer">
+						ABC format
+					</a>, or to import users’ tunebooks
+					and sets from <a href="https://thesession.org" target="_blank"
+						rel="noopener noreferrer">thesession.org</a>.
+					For example, you could try creating an empty local list and then importing all the tunes from one of
+					<a href="https://www.norbeck.nu/abc/download.asp" target="_blank" rel="noopener noreferrer">Henrick
+						Norbeck’s traditional music collections</a>.
+				</p>
+				<p>You can switch between lists at any time using the
+					<em>Tune lists</em> button in the page footer or the Edit menu (“…” button at the top).
+				</p>
+			</div>
+		</details>
 
-        <details class="intro-section">
-            <summary>Sorting and contours</summary>
-            <div class="intro-section__body">
-                <p>Clicking the first column header cycles through three top-level sorting modes: by either the tune’s
-                    rhythmic type (i.e. jig, reel, mazurka, hornpipe …), its time signature, or its name.
-                    After the top-level sort,
-                    tunes are sorted by their <strong>contour</strong>.</p>
-                <p>A tune’s <em>contour</em> (shown as a small graphic next to the
-                    title) is its melodic outline: the shape of the melody relative to the
-                    tonic (home note), independent of key or mode (major, minor,
-                    mixolydian…). The contour is generated automatically from the
-                    tune’s <em>incipit</em> (the first few notes of the tune). The contour starts at the beginning of
-                    the first full bar
-                    of the tune, ignoring the anacrucis, if there is one. (Anacrucis: a pick-up, i.e. notes that do not
-                    make up a full bar, before the first full bar.)</p>
-                <p><em>Contour sort</em> groups tunes together when their contours start similarly, whatever key they
-                    happen to
-                    be in. For example, the following five jigs in my default tune list are grouped together (because
-                    they start similarly): Leave it down easy, Wellington’s Advance, Connie
-                    the Soldier, Old Man Dillon, and Darby The Driver. Comparing these tunes’ contours with their
-                    neighbours may help you understand the sorting sytem. </p>
-                <p>I find having tunes sorted this way makes it easier to find a tune whose name I’ve forgotten. I
-                    simply look it up in the list, based on how it starts. It’s just like how one used to look up words
-                    in printed dictionaries.
-                </p>
-                <!-- <p>Later on I would like to extend this project so it handles contour sort and incipits for tunes’ B (or
-                    C, D, E, …) parts.</p> -->
-            </div>
-        </details>
-        <details class="intro-section">
-            <summary>Score viewer</summary>
-            <div class="intro-section__body">
-                <p>Clicking on a tune’s name (shown as a link when a score is
-                    available) opens a score viewer. From there you can:</p>
-                <ul>
-                    <li>read the full score, with page navigation for multi-page scores;</li>
-                    <li>transpose up or down by semitone steps;</li>
-                    <li>switch bar length for certain tune types –
-                        see <em>About my collection of tunes</em>;</li>
-                    <li>view the raw ABC notation source;</li>
-                    <li>navigate between multiple settings of the same tune, if there are any in the current tune list;
-                    </li>
-                    <li>view a whole <em>set</em> of tunes as a single continuous score: if the tune is in a set, a
-                        “Mode”
-                        pick list at the bottom of the score viewer lets you pick the set</li>
-                    <li>open the tune, or tunes, in Michael Eskin’s ABC Transcription Tools. Among other things,
-                        Michael’s tool has lots of handy options for
-                        making PDF tunebooks.</li>
-                </ul>
-                <p>Changes made in the score viewer can be saved back to your local
-                    tune list.</p>
-            </div>
-        </details>
-        <details class="intro-section">
-            <summary>Set lists</summary>
-            <div class="intro-section__body">
-                <p>I use the “Set lists” feature to group tunes into ordered sets –
-                    for a session, a class, a gig, or any other occasion. You can create and manage
-                    set lists from the Edit menu (“…” button at the top) – make sure beforehand you’ve selected the
-                    tunes you want to use for a
-                    set. (To select a tune, use the the “…” or “three dots” menu next to the tune’s title.)
-                    Alternatively, set lists can also be imported from thesession.org.</p>
-                <p>Sets can be printed to PDF:
-                <ul>
-                    <li>There’s a “Preview &amp; print” button inside the “Set lists” view to print a set list with just
-                        the incipits
-                        (not the full scores) and optionally contours and other info entered in the set list</li>
-                    <li>Alternatively, to print the full scores of all the tunes in a set list, click on the “Open in
-                        Michael Eskin’s ABC Transcription Tools” button. Among other things, Michael’s tool has lots of
-                        handy options for
-                        making PDF tunebooks.</li>
-                </ul>
-                Sets can also be viewed as a continuous full
-                score in the score viewer, by opening any tune in the set and then selecting the set list in the “Mode”
-                pick list at the bottom of the score viewer. </p>
-                <p>
+		<details class="intro-section">
+			<summary>Sorting and contours</summary>
+			<div class="intro-section__body">
+				<p>Clicking the first column header cycles through three top-level sorting modes: by either the tune’s
+					rhythmic type (i.e. jig, reel, mazurka, hornpipe …), its time signature, or its name.
+					After the top-level sort,
+					tunes are sorted by their <strong>contour</strong>.</p>
+				<p>A tune’s <em>contour</em> (shown as a small graphic next to the
+					title) is its melodic outline: the shape of the melody relative to the
+					tonic (home note), independent of key or mode (major, minor,
+					mixolydian…). The contour is generated automatically from the
+					tune’s <em>incipit</em> (the first few notes of the tune). The contour starts at the beginning of
+					the first full bar
+					of the tune, ignoring the anacrucis, if there is one. (Anacrucis: a pick-up, i.e. notes that do not
+					make up a full bar, before the first full bar.)</p>
+				<p><em>Contour sort</em> groups tunes together when their contours start similarly, whatever key they
+					happen to
+					be in. For example, the following five jigs in my default tune list are grouped together (because
+					they start similarly): Leave it down easy, Wellington’s Advance, Connie
+					the Soldier, Old Man Dillon, and Darby The Driver. Comparing these tunes’ contours with their
+					neighbours may help you understand the sorting sytem. </p>
+				<p>I find having tunes sorted this way makes it easier to find a tune whose name I’ve forgotten. I
+					simply look it up in the list, based on how it starts. It’s just like how one used to look up words
+					in printed dictionaries.
+				</p>
+				<!-- <p>Later on I would like to extend this project so it handles contour sort and incipits for tunes’ B (or
+					C, D, E, …) parts.</p> -->
+			</div>
+		</details>
+		<details class="intro-section">
+			<summary>Score viewer</summary>
+			<div class="intro-section__body">
+				<p>Clicking on a tune’s name (shown as a link when a score is
+					available) opens a score viewer. From there you can:</p>
+				<ul>
+					<li>read the full score, with page navigation for multi-page scores;</li>
+					<li>transpose up or down by semitone steps;</li>
+					<li>switch bar length for certain tune types –
+						see <em>About my collection of tunes</em>;</li>
+					<li>view the raw ABC notation source;</li>
+					<li>navigate between multiple settings of the same tune, if there are any in the current tune list;
+					</li>
+					<li>view a whole <em>set</em> of tunes as a single continuous score: if the tune is in a set, a
+						“Mode”
+						pick list at the bottom of the score viewer lets you pick the set</li>
+					<li>open the tune, or tunes, in Michael Eskin’s ABC Transcription Tools. Among other things,
+						Michael’s tool has lots of handy options for
+						making PDF tunebooks.</li>
+				</ul>
+				<p>Changes made in the score viewer can be saved back to your local
+					tune list.</p>
+			</div>
+		</details>
+		<details class="intro-section">
+			<summary>Set lists</summary>
+			<div class="intro-section__body">
+				<p>I use the “Set lists” feature to group tunes into ordered sets –
+					for a session, a class, a gig, or any other occasion. You can create and manage
+					set lists from the Edit menu (“…” button at the top) – make sure beforehand you’ve selected the
+					tunes you want to use for a
+					set. (To select a tune, use the the “…” or “three dots” menu next to the tune’s title.)
+					Alternatively, set lists can also be imported from thesession.org.</p>
+				<p>Sets can be printed to PDF:
+				<ul>
+					<li>There’s a “Preview &amp; print” button inside the “Set lists” view to print a set list with just
+						the incipits
+						(not the full scores) and optionally contours and other info entered in the set list</li>
+					<li>Alternatively, to print the full scores of all the tunes in a set list, click on the “Open in
+						Michael Eskin’s ABC Transcription Tools” button. Among other things, Michael’s tool has lots of
+						handy options for
+						making PDF tunebooks.</li>
+				</ul>
+				Sets can also be viewed as a continuous full
+				score in the score viewer, by opening any tune in the set and then selecting the set list in the “Mode”
+				pick list at the bottom of the score viewer. </p>
+				<p>
 
-                    Set list data is saved alongside your tune list; the same backup advice made above (see “Tune lists
-                    – server and local”) applies.</p>
-            </div>
-        </details>
+					Set list data is saved alongside your tune list; the same backup advice made above (see “Tune lists
+					– server and local”) applies.</p>
+			</div>
+		</details>
 
-        <details class="intro-section">
-            <summary>Badges &amp; filtering</summary>
-            <div class="intro-section__body">
-                Round “badges” appear by each tune and can be used to filter the list by clicking on
-                them. Some badges are automatically extracted from the tune data (the ones for the rhythmic type,
-                composer, region, …). In my own collection, for a lot of tunes there are more badges where I’ve added
-                more info. Such as the “parts” (“AABB”, or “ABC” etc)
-                and tags like “crooked”.
-            </div>
-        </details>
-        <details class="intro-section">
-            <summary>About my collection of tunes</summary>
-            <div class="intro-section__body">
+		<details class="intro-section">
+			<summary>Badges &amp; filtering</summary>
+			<div class="intro-section__body">
+				Round “badges” appear by each tune and can be used to filter the list by clicking on
+				them. Some badges are automatically extracted from the tune data (the ones for the rhythmic type,
+				composer, region, …). In my own collection, for a lot of tunes there are more badges where I’ve added
+				more info. Such as the “parts” (“AABB”, or “ABC” etc)
+				and tags like “crooked”.
+			</div>
+		</details>
+		<details class="intro-section">
+			<summary>About my collection of tunes</summary>
+			<div class="intro-section__body">
 
-                <ul>
-                    <li>The default tune list is my personal selection drawn from Irish, Scottish, French, Scandinavian,
-                        Québécois,
-                        and other traditional music. Although most of the scores (also known as settings) are other
-                        people’s work that I’ve taken
-                        from
-                        <a href="https://thesession.org" target="_blank" rel="noopener noreferrer">thesession.org</a> or
-                        elsewhere, a
-                        fair few of them were written by me. At time of writing, I’m
-                        still adding tunes and other content quite frequently.
-                    </li>
-                    <li>There may be some errors in the scores and elsewhere. Please don’t take anything here as a
-                        definitive reference.
-                    <li>For some tunes I’ve worked on, I’ve added external references to videos
-                        or audio recordings. A few examples: The First Draft (a mazurka by Siobhán Peoples); two
-                        different “Tommy Potts-esque” settings of the jig Rambling Pitchfork (firstly by Jimmy Power,
-                        and secondly by
-                        Paddy O’Brien &amp; Nathan Gourley); the bourrée à Chandezon, a “bourrée à 3 temps” with several
-                        references, …. I’ve also added some cross-references between tunes, often when an audio
-                        reference is for a set of tunes.</li>
+				<ul>
+					<li>The default tune list is my personal selection drawn from Irish, Scottish, French, Scandinavian,
+						Québécois,
+						and other traditional music. Although most of the scores (also known as settings) are other
+						people’s work that I’ve taken
+						from
+						<a href="https://thesession.org" target="_blank" rel="noopener noreferrer">thesession.org</a> or
+						elsewhere, a
+						fair few of them were written by me. At time of writing, I’m
+						still adding tunes and other content quite frequently.
+					</li>
+					<li>There may be some errors in the scores and elsewhere. Please don’t take anything here as a
+						definitive reference.
+					<li>For some tunes I’ve worked on, I’ve added external references to videos
+						or audio recordings. A few examples: The First Draft (a mazurka by Siobhán Peoples); two
+						different “Tommy Potts-esque” settings of the jig Rambling Pitchfork (firstly by Jimmy Power,
+						and secondly by
+						Paddy O’Brien &amp; Nathan Gourley); the bourrée à Chandezon, a “bourrée à 3 temps” with several
+						references, …. I’ve also added some cross-references between tunes, often when an audio
+						reference is for a set of tunes.</li>
 
-                    <li>Most of the text is in English, but notes and titles for
-                        some French tunes appear in French.</li>
-                    <li>Bar lengths for some tunes are non-standard.<br />
-                        I prefer reels to be written in 4/4 with semiquavers (sixteenth notes) rather
-                        than the more common notation with quavers (eighth notes). The bar-length switcher in the score
-                        viewer lets you toggle between the two
-                        representations. Similar remarks apply to polkas, hornpipes and jigs.</li>
-                    <li>A Creative Commons license (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                            target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a> ) applies to all my original
-                        content (i.e. scores I have written, comments, etc). This means: <br />
-                        - **BY** (Attribution): You must give appropriate credit to the original creator<br />
-                        - **NC** (NonCommercial): You may not use the data for commercial purposes<br />
-                        - **SA** (ShareAlike): If you remix or build upon the data, you must distribute your
-                        contributions under the same CC BY-NC-SA 4.0 license</li>
-                </ul>
-            </div>
-        </details>
+					<li>Most of the text is in English, but notes and titles for
+						some French tunes appear in French.</li>
+					<li>Bar lengths for some tunes are non-standard.<br />
+						I prefer reels to be written in 4/4 with semiquavers (sixteenth notes) rather
+						than the more common notation with quavers (eighth notes). The bar-length switcher in the score
+						viewer lets you toggle between the two
+						representations. Similar remarks apply to polkas, hornpipes and jigs.</li>
+					<li>A Creative Commons license (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+							target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a> ) applies to all my original
+						content (i.e. scores I have written, comments, etc). This means: <br />
+						- **BY** (Attribution): You must give appropriate credit to the original creator<br />
+						- **NC** (NonCommercial): You may not use the data for commercial purposes<br />
+						- **SA** (ShareAlike): If you remix or build upon the data, you must distribute your
+						contributions under the same CC BY-NC-SA 4.0 license</li>
+				</ul>
+			</div>
+		</details>
 
-        <details class="intro-section">
-            <summary>
-                Contact &amp; other info
-            </summary>
-            <div class="intro-section__body">
-                <ul>
-                    <li>Please feel free to get in touch. Send me an email via this (update as necessary):
-                        firstname_lastname@yahoo.fr. I (Malcolm
-                        Schonfield) would welcome feedback about this project.</li>
-                    <li>For some (musical) background about me, you can go to <a
-                            href="https://thesession.org/members/40345" target="_blank" rel="noopener noreferrer">
-                            my user profile on thesession.org
-                        </a>.</li>
+		<details class="intro-section">
+			<summary>
+				Contact &amp; other info
+			</summary>
+			<div class="intro-section__body">
+				<ul>
+					<li>Please feel free to get in touch. Send me an email via this (update as necessary):
+						firstname_lastname@yahoo.fr. I (Malcolm
+						Schonfield) would welcome feedback about this project.</li>
+					<li>For some (musical) background about me, you can go to <a
+							href="https://thesession.org/members/40345" target="_blank" rel="noopener noreferrer">
+							my user profile on thesession.org
+						</a>.</li>
 
-                    <li>A little technical info: behind the scenes, tunes are stored as plain JavaScript objects with an
-                        "abc" or an "incipit"
-                        property, alongside other custom properties. These build on <a href="https://abcnotation.com/"
-                            target="_blank" rel="noopener noreferrer">
-                            ABC notation
-                        </a>, a commonly-used format for music notation.
+					<li>A little technical info: behind the scenes, tunes are stored as plain JavaScript objects with an
+						"abc" or an "incipit"
+						property, alongside other custom properties. These build on <a href="https://abcnotation.com/"
+							target="_blank" rel="noopener noreferrer">
+							ABC notation
+						</a>, a commonly-used format for music notation.
 
-                    </li>
-                    <li>Source code and documentation for Tune table is <a
-                            href="https://github.com/goplayerjuggler/tuneTable" target="_blank"
-                            rel="noopener noreferrer">
-                            on GitHub
-                        </a>.</li>
-                </ul>
-            </div>
-        </details>
-    </div>
+					</li>
+					<li>Source code and documentation for Tune table is <a
+							href="https://github.com/goplayerjuggler/tuneTable" target="_blank"
+							rel="noopener noreferrer">
+							on GitHub
+						</a>.</li>
+				</ul>
+			</div>
+		</details>
+	</div>
 
-    <div class="intro-footer">
-        <p>This text was last revised: 2026-06-09</p>
-    </div>
+	<div class="intro-footer">
+		<p>This text was last revised: 2026-06-09</p>
+	</div>
 
 </div>

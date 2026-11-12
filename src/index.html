@@ -2,83 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes" />
-  <script src="https://cdn.jsdelivr.net/npm/abcjs@6.6.3/dist/abcjs-basic-min.js"></script>
-  <title>🎵 Tune table</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes" />
+	<script src="https://cdn.jsdelivr.net/npm/abcjs@6.7.1/dist/abcjs-basic-min.js"></script>
+	<title>🎵 Tune table</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>🎵 Tune table</h1>
-    <div id="page-spinner">Setting up page…</div>
-    <div id="page-main" hidden>
-      <div class="controls">
-        <form class="search-container" id="searchForm">
-          <label for="searchInput" class="sr-only">Search tunes</label>
-          <input type="search" id="searchInput" placeholder="Search…" autocomplete="off" spellcheck="false">
-          <button type="submit" class="search-icon" aria-label="Search">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.35-4.35"></path>
-            </svg>
-          </button>
-        </form>
-        <select id="rhythmFilter" class="filter-select" aria-label="Filter by rhythm">
-          <option value="">All rhythms</option>
-        </select>
-        <select id="tonicFilter" class="filter-select" aria-label="Filter by tonic">
-          <option value="">All tonics</option>
-        </select>
-        <select id="modeFilter" class="filter-select" aria-label="Filter by mode">
-          <option value="">All modes</option>
-        </select>
-        <!-- Edit menu dropdown -->
-        <div class="dropdown">
-          <button id="editMenuBtn" class="add-tunes-btn" aria-haspopup="true" aria-controls="editMenuDropdown"
-            aria-label="Edit menu" aria-expanded="false">
-            …
-          </button>
-          <div id="editMenuDropdown" class="dropdown-content" role="menu">
-            <button role="menuitem" id="manageSlotsBtn">🔄 Library</button>
-            <button role="menuitem" id="tuneSelectionsBtn" disabled>📑 Set lists</button>
-            <button role="menuitem" id="thesession-import-btn">🎻 Import from thesession.org</button>
-            <button role="menuitem" id="addNewTuneBtn">➕ Add new tune</button>
-            <button role="menuitem" id="doubleBtn2">2 × bar</button>
-            <button role="menuitem" id="halveBtn2">½ bar</button>
-            <button role="menuitem" id="addTunesBtn">📝 Add tunes (from ABC)</button>
-            <button role="menuitem" id="loadJsonBtn">⇑ Load a dataset</button>
-            <button role="menuitem" id="emptyTunesBtn">🗑️ Remove all tunes</button>
-            <button role="menuitem" id="copyTunesBtn">📋 Copy all tune data</button>
-            <button role="menuitem" class="btn-icon btn-help" title="about “Tune table”" type="button"
-              aria-label="about “Tune table”">
-              about “Tune table”
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="table-container">
-        <table id="tunesTable">
-          <thead>
-            <tr>
-              <th class="sortable" data-column="name">Tune</th>
-              <th class="col-references">Notes / references</th>
-            </tr>
-          </thead>
-          <tbody id="tunesTableBody"></tbody>
-        </table>
-      </div>
-    </div>
-    <footer id="footer" role="contentinfo">
-      <span id="spCount"></span><br />
-      <span id="spLastUpdated"></span><br />
-      <span>Some rights are reserved, and rights for different tune collections may vary. For more details, see the <a
-          class="footer-link" href="https://github.com/goplayerjuggler/tuneTable" target="_blank"
-          rel="noopener noreferrer">source code</a>.</span>
-    </footer>
-  </div>
+	<div class="container">
+		<h1>🎵 Tune table</h1>
+		<div id="page-spinner">Setting up page…</div>
+		<div id="page-main" hidden>
+			<div class="controls">
+				<form class="search-container" id="searchForm">
+					<label for="searchInput" class="sr-only">Search tunes</label>
+					<input type="search" id="searchInput" placeholder="Search…" autocomplete="off" spellcheck="false">
+					<button type="submit" class="search-icon" aria-label="Search">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2">
+							<circle cx="11" cy="11" r="8"></circle>
+							<path d="m21 21-4.35-4.35"></path>
+						</svg>
+					</button>
+				</form>
+				<select id="rhythmFilter" class="filter-select" aria-label="Filter by rhythm">
+					<option value="">All rhythms</option>
+				</select>
+				<select id="tonicFilter" class="filter-select" aria-label="Filter by tonic">
+					<option value="">All tonics</option>
+				</select>
+				<select id="modeFilter" class="filter-select" aria-label="Filter by mode">
+					<option value="">All modes</option>
+				</select>
+				<!-- Edit menu dropdown -->
+				<div class="dropdown">
+					<button id="editMenuBtn" class="add-tunes-btn" aria-haspopup="true" aria-controls="editMenuDropdown"
+						aria-label="Edit menu" aria-expanded="false">
+						…
+					</button>
+					<div id="editMenuDropdown" class="dropdown-content" role="menu">
+						<button role="menuitem" id="manageSlotsBtn">🔄 Library</button>
+						<button role="menuitem" id="tuneSelectionsBtn" disabled>📑 Set lists</button>
+						<button role="menuitem" id="thesession-import-btn">🎻 Import from thesession.org</button>
+						<button role="menuitem" id="addNewTuneBtn">➕ Add new tune</button>
+						<button role="menuitem" id="doubleBtn2">2 × bar</button>
+						<button role="menuitem" id="halveBtn2">½ bar</button>
+						<button role="menuitem" id="addTunesBtn">📝 Add tunes (from ABC)</button>
+						<button role="menuitem" id="loadJsonBtn">⇑ Load a dataset</button>
+						<button role="menuitem" id="emptyTunesBtn">🗑️ Remove all tunes</button>
+						<button role="menuitem" id="copyTunesBtn">📋 Copy all tune data</button>
+						<button role="menuitem" class="btn-icon btn-help" title="about “Tune table”" type="button"
+							aria-label="about “Tune table”">
+							about “Tune table”
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="table-container">
+				<table id="tunesTable">
+					<thead>
+						<tr>
+							<th class="sortable" data-column="name">Tune</th>
+							<th class="col-references">Notes / references</th>
+						</tr>
+					</thead>
+					<tbody id="tunesTableBody"></tbody>
+				</table>
+			</div>
+		</div>
+		<footer id="footer" role="contentinfo">
+			<span id="spCount"></span><br />
+			<span id="spLastUpdated"></span><br />
+			<span>Some rights are reserved, and rights for different tune collections may vary. For more details, see the <a
+					class="footer-link" href="https://github.com/goplayerjuggler/tuneTable" target="_blank"
+					rel="noopener noreferrer">source code</a>.</span>
+		</footer>
+	</div>
 </body>
 
 </html>
