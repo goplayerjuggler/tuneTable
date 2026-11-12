@@ -145,7 +145,22 @@ export default {
 							x: 2
 						},
 						{
-							theSessionId: 19792
+							theSessionId: 19792,
+							X: 2
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "xmas in spiddal mazurkas - setting from thesession",
+					tunes: [
+						{
+							ttId: 471,
+							x: 2
+						},
+						{
+							theSessionId: 19792,
+							X: 3
 						}
 					],
 					collapsed: true

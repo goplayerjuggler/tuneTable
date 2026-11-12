@@ -1,6 +1,7 @@
 export default {
 	ttId: 261,
 	groups: "ALORA,SU",
+	parts: "A",
 	tags: ["crooked", "song"],
 	abc: `
 %The Spanish Lady
@@ -92,5 +93,6 @@ w: And~in all me life I ne’er did see A maid so neat a-bout the sole
 [P:Chorus]F/E/| [M:3/4]"D"DD DE FE | [M:4/4] "Bm"DB,-B,2 z4, | [M:3/4] "D"D>D DE FA | [M:4/4] "G"B4z2z
 w: She had twen-ty eight-een six-teen four-teen * Twelve ten eight six four two none 
 B/c/ | "Bm"dc BA "F#m"FE DE | [M:3/4] "Em7"FF "F#m7"FE "G6"DB, | [M:4/4]"A"A,4 z2z
-w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`
+w: She had nine-teen seven-teen fif-teen thir-teen eleven nine seven five three and one`,
+	fileDate: "2024-11-21"
 };

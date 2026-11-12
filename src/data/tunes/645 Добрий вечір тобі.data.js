@@ -2,6 +2,7 @@ export default {
 	excludeFromDefault: true,
 	groups: "alora",
 	tags: ["song"],
+	parts: "A",
 	ttId: 645,
 	abc: `
 X:1
