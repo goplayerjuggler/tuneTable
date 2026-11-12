@@ -5,7 +5,7 @@ export default {
 			name: "ALORA sets",
 			groups: "ALORA",
 			dateCreated: "2026-02-19T01:51:52.087Z",
-			dateModified: "2026-04-29T00:00:00.000",
+			dateModified: "2026-11-12T00:00:00.000",
 			sets: [
 				{
 					name: "Ballydesmond polkas (3)",
@@ -133,6 +133,19 @@ export default {
 						},
 						{
 							ttId: 516
+						}
+					],
+					collapsed: true
+				},
+				{
+					name: "xmas in spiddal mazurkas",
+					tunes: [
+						{
+							ttId: 471,
+							x: 2
+						},
+						{
+							theSessionId: 19792
 						}
 					],
 					collapsed: true
