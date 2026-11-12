@@ -11,7 +11,7 @@ M:4/4
 L:1/8
 K:Dmin
 "Dm"DD "C"CC "F"FE/D/ "C"C2 | "Gm"[GE][AF] [GB][GB] "A7"[AF][GE] FE | 
-"Dm"F2 "C7"[GE][GB] "F"[AF]2 |"Gm"[GE][AF] [GB][GB] "A7"[AF][GE] FE | 
-"Dm"F2 "C7"[GE][GB] "F"[AF]2 | "Gm"[GE][FD] "A7"[E^C]2 D4 |]
+"Dm"F2 "C7"[GE][GB] "F"[AF]4 |"Gm"[GE][AF] [GB][GB] "A7"[AF][GE] FE | 
+"Dm"F2 "C7"[GE][GB] "F"[AF]4 | "Gm"[GE][FD] "A7"[E^C]2 D4 |]
 `
 };

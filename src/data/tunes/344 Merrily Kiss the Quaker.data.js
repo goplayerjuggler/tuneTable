@@ -31,7 +31,7 @@ X: 5
 T: Merrily Kiss The Quaker
 R: single jig
 H:Added to *tuneTable* on 2026-11-02, from a [setting](https://thesession.org/tunes/70#setting12538) entered in thesession by user “LongNote” in 2010 (?).
-N:Related to the (double) [jig by the same name](theSessionId=70), but IMO this is best seen as a tdistinct tune in its own right. On thesession it doesn't have its own entry, currently.
+N:Related to the (double) [jig by the same name](theSessionId=70), but IMO this is best seen as a distinct tune in its own right. On thesession it doesn't have its own entry, currently; it goes alongside the double jig in the same entry.
 M:12/8
 L: 1/8
 N:*abc-tools: convert to M:12/8*
