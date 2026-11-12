@@ -21,10 +21,11 @@ gag fgf ege dBA|GAB D2 E G3 G2:|
 		theSessionId: 70,
 		theSessionSettingId: 24522,
 		itiid: 1271,
-		parts: "AABBCC"
+		parts: "AABBCC",
+		fileDate: "2026-11-03"
 	},
 	{
-		groups: "su",
+		groups: "su,alora",
 		abc: `
 X: 5
 T: Merrily Kiss The Quaker
@@ -42,6 +43,7 @@ def f2a f2a fed|fed faf ~e3 d2:|
 `,
 		ttId: 344,
 		itiid: 6462,
-		parts: "AABB"
+		parts: "AABB",
+		fileDate: "2026-11-03"
 	}
 ];
