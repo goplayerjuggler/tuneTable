@@ -12,17 +12,9 @@ D:Decade
 R:mazurka
 L:1/8
 M:3/4
-N: This lovely mazurka is a composition by Siobhán Peoples. I first heard it on
-N:www.itma.ie.
-N:Currently there’s a page on itma.ie for this tune:
-N:https://www.itma.ie/scores/first-draft/
-N:In it there are the following words from S. Peoples: "This tune simply got its
-N:title as it presented itself to me fully formed. It was recorded by the band
-N:Fidil on their 2019 recording, Decade, and they kindly allowed us to include the
-N:track here."
-N:The score I’m sharing is, I believe, identical to the one written by S. Peoples;
-N:I copied it from the itma.ie page. I got in touch with S. Peoples and she kindly
-N:agreed for me to do this. (MS, 2023)
+H: This lovely mazurka is a composition by Siobhán Peoples. I first heard it on www.itma.ie. Currently there’s a [page on itma.ie](https://www.itma.ie/scores/first-draft/) for this tune. In it there are the following words from S. Peoples: 
+H:"This tune simply got its title as it presented itself to me fully formed."
+H:The score I’m sharing is, I believe, identical to the one written by S. Peoples; I copied it from the itma.ie page. I got in touch with S. Peoples and she kindly agreed for me to do this. (MS, 2023)
 K:Gmajor
 DG|Bc d/c/B cA|G<B D2 GF|EG ce dc|BG [D2B,2] DG |
  Bc d/c/B cA|G<B DG FG|EG ce DF|G2 G2:|
@@ -96,5 +88,6 @@ More info in youtube - follow the link.`
 		}
 	],
 	theSessionId: 23320,
-	theSessionSettingId: 47650
+	theSessionSettingId: 47650,
+	fileDate: "2026-06-10"
 };

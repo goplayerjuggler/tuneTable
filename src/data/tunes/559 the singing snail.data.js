@@ -9,14 +9,11 @@ C:Siobhán Peoples
 S:Siobhán Peoples, fiddle
 F:https://www.itma.ie/scores/276410-singing-snail/
 R: Mazurka
-N: A lovely tune IMO.
-N: 0. I highly recommend checking out the itma page. It has
-N: a score written by Siobhan, that synchs with a recording
-N: she made.
-N: 1. Siobhan kindly gave me permission to share her tunes.
-N: 2. This score is just a quick thing I put together along with some chords.
-N: 3. (Obviously) the B part is “swung” just like the A, but I think I can leave
-N: it as is – left as an exercise for the reader, you could say.
+H: A lovely tune IMO.
+H: 0. I highly recommend checking out the itma page. It has a score written by Siobhán, that synchs with a recording she made.
+H: 1. Siobhan kindly gave me permission to share her tunes.
+H: 2. This score is just a quick thing I put together along with some chords.
+H: 3. (Obviously) the B part is “swung” just like the A, but I think I can leave it as is – left as an exercise for the reader, you could say.
 M: 3/4
 L: 1/8
 K: D
@@ -26,7 +23,8 @@ K: D
   "D"A<D FG AF |"G".G2 .B2 B2 | "A"AB cd ec| [1d6 :| [2d4 (3ABc !D.S.!|]
 `
 	],
-	references: []
+	fileDate: "2026-09-04"
+	// references: []
 	// theSessionId: 23320,
 	// theSessionSettingId: 47650
 };

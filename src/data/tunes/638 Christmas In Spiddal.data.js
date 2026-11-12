@@ -21,7 +21,7 @@ a2 fe fg|.f2 f4|Ad de fa|g2 ef (3gfe|
 af bg af|ge fd ec|Ac ea gc|ed dA FE!D.C.!|]
 `,
 		`
-X: 1
+X: 2
 T: Christmas In Spiddal
 C:Charlie Lennon
 H:A setting with some simple harmony (same as the previous entry, but with chords added.)
@@ -31,12 +31,12 @@ R: mazurka
 M: 3/4
 L: 1/8
 K: Dmaj
-|:"D"[AD]d dA dA|"D"d3"<("A F">)"E|"D"Dd dA (3FGA|"A(A7)"G2 EF GE|
+|:"D"[AD]d dA dA|"D"d3"<("A F">)"E|"D(G,Em)"Dd dA (3FGA|"A(A7)"G2 EF GE|
 "D"Ad dA fA|"D"de fg ab|"A"af ge Ac|1 "D"ed dA FE:|2 "D"ed de fg||
-"D"a2 fe fg|"D".f2 f4|"D"Ad de fa|"A(A7)"g2 ef (3gfe|
-"D"a"<("">)"f fe fg|"D".f2 f4|"G(A)"Ac ea gc|"A"ed de fg|
-"D"a2 fe fg|"D".f2 f4|"D"Ad de fa|"A"g2 ef (3gfe|
-"D"af bg af|"D"ge fd ec|"A"Ac ea gc|"D"ed dA FE!D.C.!|]
+"D"a2 fe fg|"D".f2 f4|"D(G,Em)"Ad de fa|"A(A7)"g2 ef (3gfe|
+"D"a"<("">)"f fe fg|"D".f2 f4|"A(A7)"Ac ea gc|"D"ed de fg|
+"D"a2 fe fg|"D".f2 f4|"D(G)"Ad de fa|"A"g2 ef (3gfe|
+"D"af bg af|"D"ge fd ec|"A(A7)"Ac ea gc|"D"ed dA FE!D.C.!|]
 `,
 		`
 X: 3
