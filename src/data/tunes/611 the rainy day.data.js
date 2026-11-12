@@ -2,16 +2,15 @@ export default {
 	parts: "AABB",
 	abc: `X: 6
 T: The Rainy Day
-H:Imported into *tuneTable* on 2026-09-21, from https://thesession.org/tunes/1807#setting7228. Setting entered in thesession by user “Dr. Dow” in 2007 (?)
-N:*abc-tools: convert to M:4/4 & L:1/16*
+H:This could be “wrong”, but FWIW this what I have, based on some memories of the track from Doorways & Windowsills. %todo: check
 R: reel
 M: 4/4
 L: 1/16
 K: Ador
-|:EAAG ~A3G (3Bcd ed gedc|BGGF G2dG ~G2dG eGdG|
-  EAAG ~A3G BA~A2 (3Bcd ef|~g3e dBGA [1 B2dB A3G:|2 B2dB A3d||
-|:eaag ~a3g ba~a2 bgag|eggf ~g3a bg~g2 bgag|
-  ea~a2 aged (3Bcd ef g2ag|eaag egdG|1 B2dB A3d:|2 B2dB A3G||
+|:EAAG A2GA B/c/ded gedc|BGGF G2DG ~G2dG eGdG|
+  EAAG ~A3B cBAB cdef|gage dBGA BGdB [1AA2G:|2 A3d||
+|:eaag a2ga b~a3 bgag|eggf ~g3a b~g3 bgag|
+  eaag aged B/c/def g3a|bgaf gede gedB [1Aed :|2 A3G||
 `,
 	theSessionId: 1807
 };
