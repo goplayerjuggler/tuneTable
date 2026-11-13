@@ -66,12 +66,14 @@ export default [
 	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
 	{
 		id: "mcguire_se",
+		b: 1927,
+		d: 2005,
 		urls: [
 			"https://en.wikipedia.org/wiki/Se%C3%A1n_McGuire_(fiddler)",
 			"https://www.discogs.com/artist/1667577-Sean-McGuire"
 		],
 		name: "Seán McGuire",
-		instrument: "flute"
+		instrument: "fiddle"
 	},
 	{
 		id: "molloy_ma",
