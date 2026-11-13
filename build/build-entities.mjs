@@ -4,8 +4,9 @@
 // A reference is anything outside the tune data that points at tunes (and
 // artists): an audio or video recording (typically a track of a release), a
 // web page, a book… Not to be confused with a tune's own `references`.
-// A reference lives in a file of its own, or inside its release (`release.references`):
-// then it needn't name the release, which it takes from its parent.
+// A reference lives in a file of its own, inside its release (`release.references`):
+// then it needn't name the release, which it takes from its parent, or inside a tune
+// (an entry of `tune.references` that has `credits`): then it needn't list the tune.
 //
 // Pipeline (driven by build-tune-lists.mjs):
 //   1. loadEntities       — read, normalise (shorthands and defaults), validate, resolve;
@@ -231,6 +232,45 @@ const embeddedReferences = (releasePairs) =>
       }))
   );
 
+/**
+ * The references embedded in tunes: an entry of a tune's `references` that has `credits` is
+ * a reference entity, which points at its tune unless it gives its own `tunes` (its `abcX`, if
+ * any, then goes onto that entry). Such an entry is moved out of the tune (mutating it) and
+ * returned as an entry like those read from the `references/` files; it is private if its
+ * tune is. Entries without `credits` stay as they are, and so do those of a tune that has
+ * neither `theSessionId` nor `ttId`: there would be nothing to link them by.
+ */
+function embeddedTuneReferences(tunes) {
+  const pairs = [];
+  for (const tune of tunes) {
+    const own = [tune.references ?? []].flat();
+    const link = has(tune.theSessionId)
+      ? { theSessionId: tune.theSessionId }
+      : has(tune.ttId) && { ttId: tune.ttId };
+    const lifted = own.filter((ref) => has(ref.credits));
+    if (!lifted.length) continue;
+    if (!link) {
+      console.warn(
+        `Warning: ${tune.fileName}: tune has no theSessionId or ttId, so its references with credits stay as they are`
+      );
+      continue;
+    }
+    pairs.push(
+      ...lifted.map(({ abcX, ...ref }) => ({
+        entry: {
+          ...ref,
+          tunes: ref.tunes ?? [{ ...link, ...(has(abcX) && { abcX }) }],
+          isPrivate: tune.isPrivate || ref.isPrivate
+        },
+        fileName: tune.fileName
+      }))
+    );
+    tune.references = own.filter((ref) => !lifted.includes(ref));
+    if (!tune.references.length) delete tune.references;
+  }
+  return pairs;
+}
+
 /** Checks each entry has an identifier and that none is used twice; pushes problems onto `errors`. */
 function checkIdentity(kind, pairs, keysOf, errors) {
   const seen = new Map();
@@ -269,7 +309,8 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  * `isPrivate` are dropped after validation unless `isDevelopment` is true.
  * References always get an `id` (derived from release + track, else the first
  * URL, if not given). References embedded in a release (`release.references`)
- * are loaded with the others; the published release doesn't carry them. An absent `language` means English. A credit (of a
+ * are loaded with the others; the published release doesn't carry them. So are those
+ * embedded in a tune of `tunes` (see embeddedTuneReferences), which are removed from it. An absent `language` means English. A credit (of a
  * reference or a release) that names a known artist but gives neither `role`
  * nor `instruments` gets the artist's first instrument. A release's credit can be limited
  * to some tracks with `trackNumbers` and/or `indexes` (positions in `release.references`);
@@ -278,7 +319,10 @@ function checkIdentity(kind, pairs, keysOf, errors) {
  * @returns {Promise<{references: object[], releases: object[], artists: object[],
  *   instruments: object, resolveArtist: Function, resolveRelease: Function}>}
  */
-export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
+export async function loadEntities(
+  dataDir,
+  { isDevelopment = false, tunes = [] } = {}
+) {
   const [rawArtists, rawReleases, rawReferences, instrumentPairs] =
     await Promise.all(
       ["artists", "releases", "references", "instruments"].map((name) =>
@@ -295,7 +339,11 @@ export async function loadEntities(dataDir, { isDevelopment = false } = {}) {
   );
   // Embedded references take their release's identifier, so the releases come first.
   const referencePairs = mapEntries(
-    [...rawReferences, ...embeddedReferences(releasePairs)],
+    [
+      ...rawReferences,
+      ...embeddedReferences(releasePairs),
+      ...embeddedTuneReferences(tunes)
+    ],
     normaliseReference
   );
 

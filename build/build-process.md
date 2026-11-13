@@ -63,7 +63,7 @@ Every `.data.js` file under `src/data/tunes/set-lists/` is evaluated the same wa
 
 ### 3. Load entities and attach references to tunes
 
-`loadEntities`, `projectReferences` and `entitiesFor` live in `build/build-entities.mjs`; see "References, releases, artists and instruments" below.
+`loadEntities` (given the loaded tunes, from which it takes the references written in them), `projectReferences` and `entitiesFor` live in `build/build-entities.mjs`; see "References, releases, artists and instruments" below.
 
 ### 4. Generate lists
 
@@ -101,7 +101,7 @@ Every field is optional unless stated. At least one *identifier* must be non-nul
 |---|---|---|
 | artist | `id` (local), `qId` (Wikidata QID, integer), `theSessionComposerId` | `name`, `instruments` (keys, first = main instrument; or `instrument`, one key), `notes`, `urls` (or `url`, one string) |
 | release | `id` (local; made from `title` and `year` if no identifier is given), `mbId`, `discogsId`, `theSessionRecordingId` | `type` (default `album`), `title`, `year`, `notes`, `urls` (or `url`), `credits`, `lead`, `references` |
-| reference | `id` (local); or a release identifier (`releaseId`, `mbId`, `discogsId`, `theSessionRecordingId`) + `trackNumber`; or, failing both, `urls[0]` | `type` (default `audio` if it has a release), `language`, `title`, `duration`, `notes`, `urls` (or `url`, one string), `tunes`, `credits` |
+| reference | `id` (local); or a release identifier (`releaseId`, `mbId`, `discogsId`, `theSessionRecordingId`) + `trackNumber`; or, failing both, `urls[0]` | `type` (default `audio` if it has a release), `language`, `title`, `year`, `duration`, `notes`, `urls` (or `url`, one string), `tunes`, `credits` |
 | instrument | the key | `{ qId, en, fr }` |
 
 A reference's two lists:
@@ -134,6 +134,13 @@ A reference's two lists:
 
 - **`abcX`** on a `tunes` entry says that the reference is about one item of that tune's `abc` array: the one whose `X:` header matches (`abcX: 2` for `X:2`; a number or a string). The ABC-derived reference of that setting (from its `F:`, `D:`, `S:`, `N:` and `H:` fields) is then merged into the one built from the reference entity: the entity supplies the album and artists, the ABC's  `D:` and `S:` are ignored, its `N:` and `H:` comments are added to the notes, and if present its `F:` will override the URL. So one reference entity can stand for a track of N tunes, with no need to edit the N tunes. See `getCombinedReferences` in `processTuneData.js`.
 
+- A reference can also be written in the tune it is about, in the tune's own `references`: an entry that has `credits` is a reference entity, whatever else it has (`url`, `year`, `notes`…). Its `tunes` is the tune itself unless it gives its own; `abcX` (if any) goes onto that entry. The build moves it out of `tune.references` into the entities, so it is validated, published and displayed like any other reference, with its artists resolved. Entries without `credits` are left alone: the older `artists` (a string) and `album` fields stay as free text. A tune with neither `theSessionId` nor `ttId` keeps its references as they are (with a warning). It is private if its tune is. Because the reference's id is its first URL (or its own `id`), the same one cannot be written in two tunes: put it in `references/`, with both tunes in its `tunes`.
+
+```js
+// tunes/211 Come West Along The Road.data.js
+references: [{ url: "https://www.itma.ie/…?track=3", year: 1958, credits: ["mcguire_se"] }]
+```
+
 These *entity references* are not to be confused with a tune's own references (`tune.references`, `referencesFromAbc`, `referencesFromEntities`; see `getCombinedReferences` in `processTuneData.js`).
 
 Entities are not lists of their own: each generated list JSON gets extra sections holding just the entities related to that list's tunes, so `origin-france.<hash>.json` only carries the references, artists etc. that involve French tunes. A list with no related references is unchanged. The JSON of a list is `{ tunes, setLists, references, releases, artists, instruments }`, the last four holding only what that list's tunes need.
@@ -143,6 +150,7 @@ Entities are not lists of their own: each generated list JSON gets extra section
 - **Shorthands and defaults**, applied on reading (so the published data has only the long forms): a `url` string becomes `urls: [url]` (artists, releases, references), an `instrument` key becomes `instruments: [instrument]` (artists and credits), unless the long form is also given; an integer entry of a reference's `tunes` becomes `{ theSessionId }`; a release is of type `album` by default; a release with no identifier gets an `id` made from its title and year (`The Fog Is Lifting`, 2025 → `the-fog-is-lifting-2025`: lower case, accents removed, other runs of characters as one hyphen), which references may use as their `releaseId`; a reference that has a release is of type `audio` by default.
 - Files flagged `excludeFromBuild` are dropped on reading; `isPrivate` entities are dropped after validation unless `isDevelopment` is true. (A credit for a private artist in a public reference then simply shows no name.)
 - A reference is identified by its `id`, or by a release identifier + `trackNumber`, or — only when it has neither — by its first URL. That makes a web page need no `id`; a book without a URL does.
+- A reference embedded in a tune (an entry of `tune.references` with `credits`) is loaded with the others, and removed from the tune.
 - A reference embedded in a release (`release.references`) is loaded with the others: it takes the release's identifier (`releaseId` for the release's `id`, else `mbId`, `discogsId` or `theSessionRecordingId`), so that it is identified by that + `trackNumber`, or by its own `id`.
 - **Errors** (the build fails, all listed together): an entity with none of its identifiers; the same identifier used twice; a duplicate instrument key; `credits.indexes` outside the reference's `tunes` (on a release: outside its `references`, or at one with no `trackNumber`); a release `lead` outside its `credits` (not an integer from 0 to the number of credits); a release with no identifier and no title to make an `id` from.
 - **Warnings**: an unknown `type` (of a reference or a release); a `releaseId` matching no release; a credit `id`/`qId` (of a reference or a release) matching no artist; an unknown instrument key; a `tunes` entry with a `theSessionId`/`ttId` that matches no tune. an `abcX` that matches no `X:` header of the tune's `abc`. `tunes` entries with only a title are never warned about. A release credit's `trackNumbers` matching no reference of the release (a track with no tunes needs no reference, so this is only a warning). A release referenced only by `mbId`, `discogsId` or `theSessionRecordingId` needn't have an entry.
@@ -164,7 +172,7 @@ Each `tunes` entry found in the data also gets `inDatabase: { idStr, name, rhyth
 | `artists` | credits that apply to that tune (all of them, or those whose `indexes` include any of its positions), as `Name (role, instrument, …)` using the English instrument labels; an `unsure` credit has a `?` after each instrument, or after the name if it has none (`John Smith (bouzouki?)`, `John Smith?`); an unknown performer is shown as `?` if the credit has a role or instruments (`? (piano)`), else skipped. If that gives nothing, the same for the release's credits that apply to the reference's `trackNumber` (all of them if a credit has no `trackNumbers`) |
 | `url` | the reference's first URL, falling back to the release's |
 | `album` | release title and year, then `by` its lead artists, if any (`Title (2025), by A, B`); only when the release is an `album`: any other release is named in the same way at the start of the `notes` |
-| `notes` | track number and title, the list of the reference's tunes (when it has several), the tune's time range and the tune entry's `notes` (once per mention), the reference's `notes`, any further URLs |
+| `notes` | the reference's `year`, track number and title, the list of the reference's tunes (when it has several), the tune's time range and the tune entry's `notes` (once per mention), the reference's `notes`, any further URLs |
 
 On loading a list, `hydrateReferencesFromEntities` (`src/entityReferences.mjs`, shared by the build and the app) expands each link into a tune-shaped reference: `referenceId`, `tuneList`, `type`, `language`, `abcX` (the `abcX` values, as strings, of the entries at that tune's positions; absent if none), `artists`, `url`, `album`, `notes`. These are the fields `formatReference` renders (`abcX` is not rendered: `processTuneData` uses it to merge the ABC's comments, see above), so tune rows are unchanged. Call it before `processTuneData`.
 

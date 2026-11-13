@@ -7,6 +7,7 @@
 // `{ referenceId, indices }`, `indices` being the positions of the tune in the
 // reference's `tunes`. `hydrateReferencesFromEntities` expands those links into
 // the shape `formatReference` renders (artists, album, url, notes, _tuneList).
+// A reference's own `year` is shown at the start of its notes.
 //
 // To name the other tunes of a reference, the build adds to each of its `tunes`
 // entries that is found in the database: `inDatabase: { idStr, name, rhythm }`
@@ -232,6 +233,7 @@ export function toReference(ref, indices, model) {
     : ref.duration && `(${ref.duration})`;
   const notes = [
     !isAlbum && releaseLabel,
+    ref.year, // of the reference itself: that of its release, if any, is in the label
     [trackInfo, ref.title].filter(Boolean).join(": "),
     ...mentions,
     ref.notes,

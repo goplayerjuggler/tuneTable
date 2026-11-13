@@ -19,7 +19,8 @@ const swingTransform3_4_rhythms =
  * A tune's references as one ordered list, the order that cross-reference
  * `index` values (see cross-references.md) refer to:
  *   1. `referencesFromAbc`        — derived from the tune's ABC by processTuneData
- *   2. `references`               — entered by hand
+ *   2. `references`               — entered by hand (an entry with `credits` is a
+ *                                   reference entity: the build moves it to part 3)
  *   3. `referencesFromEntities`   — linked at build time to the reference entities
  *                                   that mention the tune (`{ referenceId, indices }`),
  *                                   and expanded into the shape formatReference
