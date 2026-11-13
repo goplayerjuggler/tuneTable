@@ -5,13 +5,13 @@ export default {
 X: 5
 T: The Old Copperplate
 R: reel
-H:Added to *tuneTable* on 2026-11-13; it was [entered](https://thesession.org/tunes/410#setting30772) in thesession by user “Micheal toomey” in 2017 (?).
+H:Added to *tuneTable* on 2026-11-13; it was [entered](https://thesession.org/tunes/410#setting30772) in thesession by user “Micheal Toomey” in 2017 (?).
 M: 4/4
 L: 1/16
 K: Ador
 |:A2EA cAAe aged cAFA|G2DG BGBd gedc BAGB|
   A2EA cAAe aged cAGB|ABcd efge aged cAA2:|
-  ageg a2eg aged cAA2|gfef g2ef gfge dBGB|
+ |: ageg a2eg aged cAA2|gfef g2ef gfge dBGB|
   ageg a2eg aged cAGB|ABcd efge aged cAA2:|
 `,
 	theSessionId: 410,

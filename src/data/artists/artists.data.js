@@ -62,6 +62,7 @@ export default [
 		instrument: "melodeon",
 		url: "https://itma.accesstomemory.org/macmahon-tony-1939-2021"
 	},
+	{ id: "mcconnell_ca", name: "Cathal McConnell", instrument: "flute" },
 	{ id: "mccrohan_li", name: "Libby McCrohan", instrument: "bouzouki" },
 	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
 	{

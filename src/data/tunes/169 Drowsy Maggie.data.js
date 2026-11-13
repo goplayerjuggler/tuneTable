@@ -17,5 +17,14 @@ d2fd c2ec defg afge|d2fd c2ec BABc dAFA|
 d2fd c2ec defg afge|afge fdec BABc dAFD|`,
 	theSessionId: 27,
 	parts: "AB",
-	fileDate: "2026-08-03"
+	fileDate: "2026-08-03",
+	references: [
+		{
+			credits: ["mcconnell_ca"],
+			url: "https://www.itma.ie/playlists/furls-other-performers/?track=11",
+			duration: "1:14",
+			notes:
+				"Played ABBAABBC - he “doubles” it and adds some variations, including something original in D at the end."
+		}
+	]
 };
