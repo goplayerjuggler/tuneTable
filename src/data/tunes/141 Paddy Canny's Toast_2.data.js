@@ -1,3 +1,4 @@
+/*
 export default {
 	incipit: `X:1
 T:Paddy Canny's Toast
@@ -9,3 +10,4 @@ K:Gdor
 GF|DG~G2 dGcG dGcA GFDC|DG~G2`,
 	theSessionId: 675
 };
+*/

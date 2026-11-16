@@ -70,5 +70,27 @@ Warning for ITMA pages: you have to click on the link in the player.`,
 			},
 			{ theSessionId: 414, name: "Joe Cooley's" } //seamus cooley's
 		]
+	},
+	{
+		/*
+The bag of spuds, reel ; Down the broom, reel ; The bird in the bush, reel ; Kiss the maid behind the barrel, reel / Vincent broderick, flute
+261117
+*/ url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-october-2026/?track=15",
+		credits: ["broderick_vi"],
+		duration: "3:33",
+		tunes: [
+			579,
+			514,
+			629,
+			{
+				theSessionId: 676,
+				notes:
+					"A four-part version whose B part is (I think) usually played as the D part.",
+				startTime: "~2:25"
+			}
+		],
+		year: "~1958",
+		notes:
+			"The first two reels are played just once each, which is unusual; the other two are played twice."
 	}
 ];

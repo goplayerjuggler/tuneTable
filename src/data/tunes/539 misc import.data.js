@@ -479,28 +479,6 @@ A>cE>F A>c e2 d>fB>c d>e f2|f>ec>e a>e (3cBA[1 B>dc>B A4:|2 (3Bcd c>B A2- A3/2||
 	},
 	{
 		abc: `X:1
-T:Sunday's Well
-C:Caitlín Nic Gabhann
-R:waltz
-L:1/8
-M:3/4
-N:Imported into *tuneTable* on 2026-05-25,
-N:from https://thesession.org/tunes/13158#setting46519
-N:Setting entered in thesession by user “JACKB” on 2023-03-23
-N:(todo: not yet revised)
-K:Dmajor
-DB|:A2 D2 DE|F3E ED|A3F ED|BF d3B|A3B BA|
- F3E ED|ED EF ED|B2 de dB|A2 D2DE|F3E ED|A3F ED|
- B2d2dB|A2D3E|F3E ED|D3E DE-|1 D3 E DB:|2 D3E FA||
- |:dA de- ed|B2 de dB|AF AB BA|F3E ED|d3 e ed|
- B2d3e|f6|f3e ed|d3 e ed|B2 de dB|AF AB BA|
- F3 E ED|D2A2AB|A2 F2ED|D3E DE|1 D3E FA:|2 D3 A dB||`,
-		fileDate: "2026-05-25",
-		theSessionId: 13158,
-		theSessionSettingId: 46519
-	},
-	{
-		abc: `X:1
 T:The Whinny Hills Of Leitrim
 R:slip jig
 L:1/8

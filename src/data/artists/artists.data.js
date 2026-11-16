@@ -8,6 +8,14 @@ export default [
 		d: 1961
 	},
 	{
+		id: "broderick_vi",
+		name: "Vincent Broderick",
+		b: 1920,
+		d: 2008,
+		instrument: "flute",
+		url: "https://en.wikipedia.org/wiki/Vincent_Broderick_(musician)"
+	},
+	{
 		id: "cassidy_co",
 		name: "Con Cassidy",
 		b: 1909,
@@ -59,10 +67,19 @@ export default [
 	{
 		id: "macmahon_to",
 		name: "Tony MacMahon",
-		instrument: "melodeon",
+		instrument: "accordion",
 		url: "https://itma.accesstomemory.org/macmahon-tony-1939-2021"
 	},
-	{ id: "mcconnell_ca", name: "Cathal McConnell", instrument: "flute" },
+	{
+		id: "mcconnell_ca",
+		b: 1944,
+		name: "Cathal McConnell",
+		instrument: "flute",
+		urls: [
+			"https://compassrecords.com/artist/cathal-mcconnell/",
+			"https://www.itma.ie/playlists/cathal-mcconnell/"
+		]
+	},
 	{ id: "mccrohan_li", name: "Libby McCrohan", instrument: "bouzouki" },
 	{ id: "mcgann_an", name: "Andy McGann", instrument: "fiddle" },
 	{
@@ -90,7 +107,7 @@ export default [
 	{
 		id: "munnelly_da",
 		name: "David Munnelly",
-		instrument: "melodeon"
+		instrument: "accordion"
 	},
 	{
 		id: "nicgabhann_ca",

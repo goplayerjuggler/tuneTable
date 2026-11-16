@@ -18,12 +18,13 @@ export default {
 	},
 	jHarp: { qId: 5994, en: "jew's harp", fr: "guimbarde" },
 	// accordion: { qId: 79838, en: "accordion", fr: "accordéon" },
-	melodeon: {
+	accordion: {
 		qId: 379269,
-		en: "melodeon",
-		// fr: "accordéon"
-		// en: "diatonic button accordion",
-		fr: "accordéon diatonique"
+		//en: "melodeon",
+		en: "accordion",
+		fr: "accordéon"
+		//en: "diatonic button accordion",
+		//fr: "accordéon diatonique"
 	},
 	nyckelharpa: { qId: 182718, en: "nyckelharpa", fr: "nyckelharpa" },
 	pAccordion: {

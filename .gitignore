@@ -1,12 +1,10 @@
 
-# Local perso files
-log.md
-sorting.md
-mytunebook*.js
-*bourrée*.txt
 *workspace
+# temp & backup
 **/251010**/*
 /tmp/
+*template.data.jss
+*.abcc
 *.backup
 # Dependency directories
 node_modules/

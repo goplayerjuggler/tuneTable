@@ -16,5 +16,33 @@ export default [
 				name: "Cailleach an airgid (The Hag With The Money)"
 			}
 		]
+	},
+	{
+		url: "https://www.youtube.com/watch?v=sPXJkUaQH6o",
+		duration: "4:20",
+		tunes: [
+			//James Bryne's slip jig ; Port na síoga [The fairy jig], slip jig ; Drops of Brandy, slip jig
+			266,
+			{
+				theSessionId: 2743,
+				startTime: "1:26",
+				name: "Port na síoga (The fairy jig)"
+			},
+			{
+				theSessionId: 388,
+				startTime: "2:47",
+				notes: "Played in G",
+				name: "Drops of Brandy"
+			}
+		],
+		credits: [
+			{
+				name: "Dermot McLaughlin",
+				instrument: "fiddle"
+			}
+		],
+		year: 2006,
+		notes:
+			"Recorded at the William Kennedy Piping Festival, Armagh. 294-ITMA-DVCAM"
 	}
 ];

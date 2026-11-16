@@ -1,4 +1,5 @@
 export default {
+	parts: "ABCD",
 	abc: `X:1
 T:Kiss The Maid Behind The Barrel
 R:reel

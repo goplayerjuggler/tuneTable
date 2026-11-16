@@ -6,6 +6,6 @@ R:reel
 L:1/16
 M:4/4
 K:Dminor
-D3F ADFA DFAF GFED|A,3C EA,CE`,
+D3F ADFA DFAF GEDC|A,3C E2CE`,
 	theSessionId: 767
 };
