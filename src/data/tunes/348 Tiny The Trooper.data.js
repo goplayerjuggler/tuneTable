@@ -3,7 +3,7 @@ export default {
 	parts: "AABBCC",
 	incipit: `X:1
 T:Tiny The Trooper
-C:Paddy O’Brien (Offaly)
+C:Paddy O’Brien
 S:Paddy O’Brien, accordion; Tommy O’Sullivan, guitar
 F:https://youtu.be/uuDHzzQIGZE
 N:Tiny the Trooper & The Turf Cutter | TG4 Composer of the Year 2012 | Gradam TG4

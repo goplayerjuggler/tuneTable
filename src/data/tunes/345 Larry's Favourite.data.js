@@ -1,7 +1,7 @@
 export default {
 	incipit: `X: 1
 T: Larry's Favourite
-C:Paddy O’Brien (Offaly)
+C:Paddy O’Brien
 R: reel
 M: 4/4
 L: 1/16

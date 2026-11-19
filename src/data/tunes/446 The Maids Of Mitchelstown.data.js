@@ -1,4 +1,5 @@
 export default {
+	parts: "AB",
 	abc: `X:1
 T:The Maids Of Mitchelstown
 R:reel

@@ -1,17 +1,61 @@
 export default {
+	parts: "ABB",
 	tags: "crooked",
-	abc: `X:1
+	abc: [
+		`
+X:1
 T:Myrslåttern – marsch efter Olof Jönsson
+S:Elisabet Brouillard, accordion
 R:March
 O:Sweden; Härjedalen.
 H:Version Mats Berglund ; transmis par Elisabet Brouillard ; relevé par Malcolm Schonfield
-H:Appris d'Elisabet lors d'un stage, novembre 2026.
-H:Se joue suivi de [Myrslåttern polska](ttId=658)
-M:2/2
+H:Appris, suivi de [Myrslåttern polska](ttId=658), d'Elisabet lors d'un stage chez les Brayauds, Saint-Bonnet-près-Riom, novembre 2026.
+M:4/4
 L:1/8
-K:Am
-A>B cd e2 ga | ba ag e3c |A>B cd e2 ga |[M:3/2] ba ag e4-e2 
 K:Ador
-|:(3e^f^g |[M:2/2]a>f .fd df df | f>e ec Ac Ae | [M:3/2]ed Bc A4-[1 A2 :|2 A2A>E !D.C.!|]`,
+A>B cd e2 ga | ba ag e3c |A>B cd e2 ga |[M:6/4] ba ag e4-e2 
+|:(3e^f^g |[M:4/4]a>f .fd df df | f>e ec Ac Ae | [M:6/4]ed Bc A4-[1 A2 :|2 A2A>E !D.C.!|]
+
+`,
+		`
+
+X:2
+T:Myrslåttern – marsch efter Olof Jönsson
+R:March
+O:Sweden; Härjedalen.
+N:Version Mats Berglund
+H: Ceci est ma copie de l'arrangement d'Elisabet Brouillard ; elle m'a gentiment autorisé à le partager.
+M:2/4
+L:1/8
+K:Ador
+V:1
+"Am"A>B cd | "C"e2 (ga) | "D"(ba) (ag) | "Em"e3c |"F"A>B cd | "C"e2 (ga) | 
+"D"(ba) (ag) | "Em"e4-|e2 "(Am)"((3e^f^g) |: "D"(af) (fd) | (df) (df) | "Am"(fe) (ec) | 
+(Ac) (Ae) | "Em"ed Bc |1 "Am"A4-| A2 ((3e^f^g):|2 "Am"A4-|A4 |]
+V:2
+E>G AB | c2 (ed) | (dc) (cB) | B3G |=F>G AB | c2 (ed) | 
+(dc) (cB) | B4-|B4 |: D2 A2 | D2 A2| C2A2 | 
+C2A2 | GFED |1 C4-| C4:|2 C4-|C4 |]
+
+`,
+		`
+
+X:3
+T:Myrslattermarsch
+S:Patri & Hatao, månmarkapipas
+F:https://www.youtube.com/watch?v=moMLcb-xoNI
+N: Swedish Whistles - Myrerslattermarsch / Polska efter Olof Jönsson 
+H:Interesting instruments! The [månmarkapipa](https://goranmansson.se/manmarkapipa/) is a fipple flute with seven holes. It sounds lovely.
+H:After playing the tune twice, they follow it up with a very nice polska which I would like to also add here at some point. I couldn't find any references for it online.
+R:March
+O:Sweden; Härjedalen.
+M:4/4
+L:1/8
+K:Ador
+A>B cd e2 ga | ba ag e3c |A>B cd e2 ga |[M:5/4] ba ag e2-ee e/f/g | 
+|:[M:4/4]af fd df df | fe ec Ac Ae |1 [M:5/4]ed Bc A2-Ae e/f/g :|2 [M:4/4]ed Bc A2-Ae//d//c//B// !D.C.!|]
+
+`
+	],
 	ttId: 657
 };

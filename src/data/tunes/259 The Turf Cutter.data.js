@@ -1,8 +1,9 @@
 export default {
 	groups: "su",
+	parts: "AABB",
 	abc: `X:1
 T:The Turf Cutter
-C:Paddy O’Brien (Offaly)
+C:Paddy O’Brien
 R:slip jig
 L:1/8
 M:9/8
@@ -18,5 +19,6 @@ K:Adorian
  [2 ede aga b2a|gfg age dBG||`,
 	theSessionId: 14242,
 	theSessionSettingId: 25937,
-	norbeckId: 81
+	norbeckId: 81,
+	fileDate: "2026-03-07"
 };
