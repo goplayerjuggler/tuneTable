@@ -7,8 +7,9 @@ export default {
 X:1
 T: Tommy Coen's In Three
 C:Malcolm Schonfield
-H:1. This is simply [Tommy Coen's reel](theSessionId=440), AKA Christmas Eve, after some changes to put it in three. At first I thought the result was a waltz, but now I think it isn't. Some friends said it's a bourrée à 3 temps, but I'm not convinced. I also went with Mazurka for about 24 hours before rejecting it.
+H:1. (2026-11-5) This is simply [Tommy Coen's reel](theSessionId=440), AKA Christmas Eve, after some changes to put it in three. At first I thought the result was a waltz, but now I think it isn't. Some friends said it's a bourrée à 3 temps, but I'm not convinced. I also went with Mazurka for about 24 hours before rejecting it.
 H:2. The quaver pairs here mostly only lightly swung, if at all. 
+H:3. (2026-11-19) It works fine as a mazurka too. I think. It should also work well played “old-timey”.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 R: Hop jig
 M: 3/4

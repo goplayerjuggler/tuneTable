@@ -42,11 +42,13 @@ C2A2 | GFED |1 C4-| C4:|2 C4-|C4 |]
 
 X:3
 T:Myrslattermarsch
-S:Patri & Hatao, månmarkapipas
+S:Patri & Hatao, månmarkapipas; 2024
 F:https://www.youtube.com/watch?v=moMLcb-xoNI
 N: Swedish Whistles - Myrerslattermarsch / Polska efter Olof Jönsson 
-H:Interesting instruments! The [månmarkapipa](https://goranmansson.se/manmarkapipa/) is a fipple flute with seven holes. It sounds lovely.
+H:Interesting instruments! The månmarkapipa is a recently created type of fipple flute. It sounds lovely. More info from the creator's [website](https://goranmansson.se/manmarkapipa/): “A flute designed by Göran Månsson and Gunnar Stenmark. It’s tuned like a [Härjedalspipa](https://en.wikipedia.org/wiki/H%C3%A4rjedalspipa) with 7 finger holes. Dorian scale with blue notes on the third, six and the seventh in the scale.”
 H:After playing the tune twice, they follow it up with a very nice polska which I would like to also add here at some point. I couldn't find any references for it online.
+H:This score leaves out the phrasing and ornamentation; check out the video to really get the music.
+Z:abc-transcription Malcolm Schonfield
 R:March
 O:Sweden; Härjedalen.
 M:4/4
