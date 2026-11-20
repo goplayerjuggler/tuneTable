@@ -28,7 +28,7 @@ N: 5. All the “A*” chords are optional; also they can be A (major) or F#m,
 N: or even “open” F# (no A or A#) ad lib. 
 N: 6. This is a revised version; an earlier (flawed) version follows as 
 N: it has some more info.
-N: 7. On the fiddle these days I tend to play it in Am but on the whistle I 
+N: 7. On the fiddle these days I tend to play it in Am but on a whistle in D I 
 N: think it works better in Bm.
 Z: abc-copyright CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 L:1/8
@@ -110,6 +110,15 @@ BcG \\ % or { BGE }
 ~A3 :|
 P:G
 |: ABc | .F2d -d2 B- BcB ABc | .F2d- d2B- Bcd ecA | % or { Bdg e3 | }
-      .F2d -d2 B- BcB ABc | F2d BGE A3 :|`
+      .F2d -d2 B- BcB ABc | F2d BGE A3 :|`,
+		`X:4
+T:SNCF jigs - an intro section
+R:jig
+C:Malcolm Schonfield
+H: This simple riff could be an intro section. A bit derivative (Blowzebella probably) but hey...
+L:1/8
+M:12/8
+K:Bm
+|: "Bm"F"<("">)"EF Bcd F"<("">)"EF Bcd | "G"G"<("">)"FG Bcd G"<("">)"FG Bcd :|`
 	]
 };

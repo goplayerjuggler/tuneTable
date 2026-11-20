@@ -54,8 +54,8 @@ O:Sweden; Härjedalen.
 M:4/4
 L:1/8
 K:Ador
-A>B cd e2 ga | ba ag e3c |A>B cd e2 ga |[M:5/4] ba ag e2-ee e/f/g | 
-|:[M:4/4]af fd df df | fe ec Ac Ae |1 [M:5/4]ed Bc A2-Ae e/f/g :|2 [M:4/4]ed Bc A2-Ae//d//c//B// !D.C.!|]
+A,>B, CD E2 GA | BA AG E3C |A,>B, CD E2 GA |[M:5/4] BA AG E2-EE E/F/G | 
+|:[M:4/4]AF FD DF DF | FE EC A,C A,E |1 [M:5/4]ED B,C A,2-A,E E/F/G :|2 [M:4/4]ED B,C A,2-A,E//D//C//B,// !D.C.!|]
 
 `
 	],
