@@ -1,6 +1,6 @@
 export default {
 	parts: "AAB",
-	tags: ["crooked", "old time"],
+	tags: ["crooked", "old-time"],
 	abc: `X:1
 T:Wiley Lawes'
 O:USA

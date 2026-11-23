@@ -1,5 +1,6 @@
 export default {
 	fileDate: "2026-07-29",
+	tags: ["crooked", "old-time"],
 	parts: "AABB",
 	abc: `X:1
 T:Waverly
@@ -29,7 +30,6 @@ D2E2 G2AG BGAG BddB|efed B2BA[1 GBAG EGGE:|2 GBAG EGGf||
 [M:3/4]g2gf gfed B2d2|[M:4/4]efed B2BA[1 GBAG EGGf:|2 GBAG EGGE||`,
 	theSessionId: 22069,
 	theSessionSettingId: 44877,
-	tags: "crooked",
 	references: [
 		{
 			artists: "Tatiana Hargreaves, fiddle; Bruce C. Molsky, guitar",
