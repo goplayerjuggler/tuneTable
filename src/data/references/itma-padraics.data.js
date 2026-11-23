@@ -47,16 +47,6 @@ Warning for ITMA pages: you have to click on the link in the player.`,
 		year: 1993
 	},
 	{
-		//Morning dew / Hunter's house
-		urls: [
-			"https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6"
-		],
-		itmaId: "lre-277086-1-277882",
-		credits: ["redican_la", "mcgann_an", "dolan_fe"],
-		tunes: [69, 472],
-		year: "1960s"
-	},
-	{
 		//Lark in the morning, jig ; Joe Cooley's, jig / Tony MacMahon, accordion ; Steve Cooney, guitar
 		urls: [
 			"https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-april-2025/?track=5"

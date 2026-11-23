@@ -18,9 +18,14 @@ dB|:"D"~A3B AFED "G"~B3A BcdB|"D"~A3B AFED[1 "Em"gfed "A7"BcdB:|2 "Em"gfed "A7"B
 	parts: "AB",
 	references: [
 		{
-			artists: "Tony DeMarco, fiddle; Felix Dolan, piano",
+			credits: ["demarco_to", "dolan_fe"],
+			duration: "2:30",
 			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=3",
-			notes: `Wind that shakes the barley; Reel of Bogie`
+			//Wind that shakes the barley; Reel of Bogie
+			tunes: [
+				116,
+				{ name: "Reel of Bogie", rhythm: "reel", theSessionId: 3307 }
+			]
 		}
 	],
 	theSessionId: 116,

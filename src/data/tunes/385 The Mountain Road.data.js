@@ -22,9 +22,13 @@ F2AF BFAF F2AF EFDE|FA~A2 BAFB ABde ~f3e||
 	references: [
 		{
 			url: "https://www.itma.ie/playlists/michael-mcnamara-sound-collection-playlist/?track=2",
-			notes: "The mountain road; The hunter's house",
-			artists:
-				"Charlie Mulvihill, button accordion; Michael McNamara, flute; Pee Fitzpatrick, fiddle"
+			tunes: [68, 472],
+			//The mountain road; The hunter's house
+			credits: [
+				{ name: "Charlie Mulvihill", instrument: "button accordion" },
+				{ name: "Michael McNamara", instrument: "flute" },
+				{ name: "Pee Fitzpatrick", instrument: "fiddle" }
+			]
 		},
 		{
 			url: "https://www.cranfordpub.com/mp3s/michaelgorman2.mp3",
@@ -32,5 +36,6 @@ F2AF BFAF F2AF EFDE|FA~A2 BAFB ABde ~f3e||
 			notes:
 				"The original six part version, as played by the tune's composer. [More info from Cranford Publications](https://www.cranfordpub.com/tunes/Irish/Mountain_Road.htm)"
 		}
-	]
+	],
+	fileDate: "2026-11-03"
 };

@@ -10,8 +10,16 @@ B2dB cAFA G2BG DGBG |`,
 	theSessionId: 472,
 	references: [
 		{
-			notes: `1. See the entry for the Mountain Road.
-2. I came up with a [setting of this](ttId=535) as a jig in a minor key.`
+			duration: "0:40",
+			year: 1996,
+			type: "video",
+			url: "https://www.facebook.com/reel/2272344243250943",
+			credits: [
+				"mcgann_an",
+				"dolan_fe",
+				"conway_br",
+				{ name: "Patrick Mangan", instrument: "fiddle" }
+			]
 		}
 	]
 };

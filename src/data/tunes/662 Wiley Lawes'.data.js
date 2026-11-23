@@ -6,10 +6,12 @@ T:Wiley Lawes'
 O:USA
 D:Reparations (2017)
 S:Tatiana Hargreaves, fiddle; Jake Blount, banjo
+R:reel
 F:https://jakeblountmusic.bandcamp.com/track/wiley-lawes
 M:4/4
 L:1/16
-H:(2026-11-23) I'm really taken by this track. Here's a very rough and ready transcription of how Hargreaves plays it the first time round. Lots of things to be improved in this transcription, but it's a start.
+H:(2026-11-23)1. I'm really taken by this track. Here's a very rough and ready transcription of how Hargreaves plays it the first time round. Lots of things to be improved in this transcription, but it's a start.
+H:2. I don't know what type of tune this is. For the moment I've put it as a reel simply to have it listed amongst the reels.
 Z:abc-transcription Malcolm Schonfield
 K:C
 (e!slide!f)dc AFDF CFDF cFDF | CFDF dFDF Acdc defg | 

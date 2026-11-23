@@ -20,5 +20,16 @@ K:Edorian
 	],
 	theSessionId: 69,
 	theSessionSettingId: 12526,
-	fileDate: "2026-08-21"
+	fileDate: "2026-08-21",
+	references: [
+		{
+			//Morning dew, reel ; Hunter's house, reeel / Larry Redican, fiddle ; Andy McGann, fiddle ; Felix Dolan, piano
+			url: "https://www.itma.ie/playlists/padraic-mac-mathunas-monthly-picks-august-2025/?track=6",
+			credits: ["redican_la", "mcgann_an", "dolan_fe"],
+			year: "1960s",
+			tunes: [69, 472],
+			itmaId: "lre-277086-1-277882",
+			duration: "2:52"
+		}
+	]
 };

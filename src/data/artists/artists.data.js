@@ -24,6 +24,12 @@ export default [
 		url: "https://www.itma.ie/playlists/selections-from-the-caoimhin-mac-aoidh-collection-may-2025"
 	},
 	{
+		id: "conway_br",
+		name: "Brian Conway",
+		instrument: "fiddle"
+	},
+	{ id: "demarco_to", name: "Tony DeMarco", instrument: "fiddle" },
+	{
 		id: "dolan_fe",
 		name: "Felix Dolan",
 		url: "https://itma.accesstomemory.org/dolan-felix-1937-2013",
@@ -31,6 +37,7 @@ export default [
 		b: 1937,
 		d: 2013
 	},
+
 	{
 		id: "farr_lu",
 		name: "Lucy Farr",
@@ -154,7 +161,13 @@ https://www.tg4.ie/en/other-brands/gradam-ceoil/previous-winners/special-contrib
 		instrument: "concertina",
 		urls: ["https://jasonorourke.info"]
 	},
-	{ id: "redican_la", name: "Larry Redican", instrument: "fiddle" },
+	{
+		id: "redican_la",
+		name: "Larry Redican",
+		instrument: "fiddle",
+		b: 1908,
+		d: 1975
+	},
 	{ id: "whelan_ed", name: "Eddie Whelan", instrument: "guitar" }
 ];
 /*
