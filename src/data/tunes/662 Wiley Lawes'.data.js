@@ -1,7 +1,8 @@
 export default {
 	parts: "AAB",
 	tags: ["crooked", "old-time"],
-	abc: `X:1
+	abc: [
+		`X:1
 T:Wiley Lawes'
 O:USA
 D:Reparations (2017)
@@ -22,5 +23,32 @@ M:4/4
 K:Dmix
 a2ge fd2e fdc2 defg | abag fd2c Acd2 defg |
 a2ge fage fd2f a2ge | [M:3/4] fd2c Acdc dege |]`,
+		`X:2
+T:Wiley Lawes'
+O:USA
+R:reel
+H:This is more or les the same as the previous score, but with some tweaks to try to make it work nicely with the MIDI player in Michael Eskin's ABC Transcription Tools. Try opening it there via the button provided here, and then pressing the Play button. I think the output's fairly good.
+M:C|
+Q:1/2=100
+L:1/8
+Z:abc-transcription Malcolm Schonfield
+K:Ddor
+%soundfont fatboy
+%%MIDI program 40
+%%MIDI bassprog 0
+%%MIDI chordprog 0
+%%MIDI bassvol 64
+%%MIDI chordvol 64
+%swing 0.1
+%swing_offset 0
+(e!slide!f)dc AFDF | CFDF cFDF | CFDF dFDF | Acdc defg | 
+!slide!f[fd]2c AFDF | C2DF cFDF | CFDF dFDF | Acdc d3e | 
+f2dc AFDF | C3D c2DF | CFDF dFDF | Acdc defg | 
+fd2c AFDF | C2DF cFDF |  CFDF dFDF | [M:3/2] Acdc d4- de^fg ||
+M:C|
+K:Dmix
+a2ge fd2e| fdc2 defg | abag fd2c | Acd2 defg |
+a2ge fage| fd2f a2ge | [M:3/2] fd2c Acdc dege |]`
+	],
 	ttId: 662
 };
