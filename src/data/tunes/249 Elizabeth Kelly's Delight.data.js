@@ -10,8 +10,8 @@ N:Based on a setting entered in thesession by user “Will Harmon” on 2002-09-
 N:Chords by Malcolm Schonfield
 N:A pentatonic tune
 K:Adorian
-|:"A-"A3 ABA AGE|"A-"A2 E"G"G2 E DEG|"A-"A3 ABA AGE|"G"~G3 G2 E DEG:|
- |:"A-"c2 A BAG AGE|"A-"cBA "E-"BGE DEG|"A-"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
+|:"Am"A3 ABA AGE|"Am"A2 E"G"G2 E DEG|"Am"A3 BAG AGE|"G"~G3 G2 E DEG:|
+ |:"Am"c2 A BAG AGE|"Am"cBA "Em"BGE DEG|"Am"c2 A BAG AGE|"G"~G3 G2 E DEG:|`,
 	references: [
 		{
 			url: "https://thekellyfamily.bandcamp.com/track/the-humours-of-kilclougher-elizabeth-kelly-s-delight-jig-slip-jig",
