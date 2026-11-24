@@ -234,8 +234,9 @@ K:Fmajor
 
 	{
 		parts: "AB",
-		fileDate: "2026-06-09",
-		abc: `X:1
+		fileDate: "2026-11-24",
+		abc: [
+			`X:1
 T:The Ashplant
 R:reel
 L:1/16
@@ -249,6 +250,19 @@ GA|BEE2 BAGA BEE2 G3A|BEE2 BABd (3gfe dB A2GA|
    BEE2 BAGA BEE2 G3A|B2BA (3Bcd ef gedB A2GA||
    B2eB gBeB B2dB ADFA|B2eB g3a gedB A2GA|
    B2eB gBeB B2dB ADFA|(3Bcd ef g3a gedB A2GA||`,
+			`
+X: 7
+T: The Ashplant
+R: reel
+M: 4/4
+H:Added to *tuneTable* on 2026-11-24; this setting was [entered](https://thesession.org/tunes/726#setting31480) in thesession by user “Sergei Ejov” in 2017 (?).
+L: 1/16
+K: Edor
+|:"Em"BE~E2 BAGA BE~E2 "D"~G3A|1 "Em"BE~E2 BABd gedB "D"A2GA:|2 "Em"~B3A (3Bcd ef gedB "D"A2GA||
+|:"Em"B2eB fBeB ~B2ed "D"BAGA|1 "Em"B2eB fBeg fedB "D"A2GA:|2 "Em"(3Bcd ef ~g3a gedB "D"A2GA||
+
+`
+		],
 		theSessionId: 726,
 		theSessionSettingId: 25454
 	},
