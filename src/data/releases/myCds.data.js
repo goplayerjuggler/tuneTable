@@ -65,11 +65,8 @@ export default [
 				trackNumber: 2,
 				duration: "2:25",
 				notes: `Interesting setting and backing chords.`,
-				url: "https://frankiegavin.bandcamp.com/track/maud-millar",
-				tunes: [
-					{ theSessionId: 1177, abcX: "2" },
-					{ name: "Mary O’Neill’s Fancy", rhythm: "reel", theSessionId: 5951 }
-				],
+				urls: ["https://frankiegavin.bandcamp.com/track/maud-millar"],
+				tunes: [{ theSessionId: 1177, abcX: "2" }, { theSessionId: 5951 }],
 				credits: ["gavin_fr", { name: "Brian McGrath", instruments: ["piano"] }]
 			}
 		]

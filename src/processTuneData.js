@@ -49,15 +49,16 @@ function getCombinedReferences(tune, abcIndex) {
 			ref.abcX?.includes(abcRef._abcX)
 		);
 		abcRefs.forEach((abcRef) => merged.add(abcRef));
+		const urls = abcRefs[0]?.urls ?? ref.urls;
 		return abcRefs.length
 			? {
 					...ref,
 					...{
 						notes: [ref.notes, ...abcRefs.map((abcRef) => abcRef._abcNotes)]
 							.filter(Boolean)
-							.join("\n"),
-						url: abcRefs[0]?.url ?? ref.url
-					}
+							.join("\n")
+					},
+					...(urls && { urls })
 				}
 			: ref;
 	});

@@ -14,5 +14,6 @@ F2D DAG F2D DAD|BDB cAF[1 AGF GAG:|2 AGF G2A||
 |:~B3 cBc ~d3 ABc|B2G GAG F2D DAD|
 BDB cDc ~d3 ABc|~B3 cAF[1 AGF G2A:|2 AGF GAG||
  `,
+	parts: "AABB",
 	theSessionId: 2096
 };
