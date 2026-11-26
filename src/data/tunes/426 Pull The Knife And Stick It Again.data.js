@@ -17,15 +17,15 @@ edB BAF EDB, DEF|G2E FED B,ED E3:|`,
 		`
 X: 18
 T: Pull The Knife And Stick It Again
-H:Added to *tuneTable* on 2026-11-24; this setting was [entered](https://thesession.org/tunes/398#setting51705) in thesession by user “Fernando Durbán Galnares” in 2024 (?).
+H:Added to *tuneTable* on 2026-11-24; this setting was [entered](https://thesession.org/tunes/398#setting51705) in thesession by user “Fernando Durbán Galnares” in 2024 (?). Edited.
 R: jig
 M: 12/8
 L: 1/8
-K: Edor
-|:B,|"Em"E2E GFE "Bm"DB,E DB,D|"Em"E2E GFE "D"ABG AFD|
-     "Em"E2E GFE "Bm"DB,E DEF|"C"GFE "D"FED "Bm"B,ED "Em"E2:|
- |:B|"Em"edB BAF "Bm"EDB, DBd|"Em"edB BAF "D"ABc def|
-     "Em"edB BAF "Bm"EDB, DEF|"C"GFE "D"FED "Bm"B,ED "Em"E2:|
+K: Ador
+|:E|"Am"A2A cBA "Em"GEA GEG|"Am"A2A cBA "G"dec dBG|
+     "Am"A2A cBA "Em"GEA GAB|"F"cBA "G"BAG "Em"EAG "Am"A2:|
+ |:e|"Am"age edB "Em"AGE Geg|"Am"age edB "G"def gab|
+     "Am"age edB "Em"AGE GAB|"F"cBA "G"BAG "Em"EAG "Am"A2:|
 `
 	],
 	theSessionId: 398,

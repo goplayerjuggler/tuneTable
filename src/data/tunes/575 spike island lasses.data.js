@@ -21,9 +21,5 @@ f2ad faad faaf geeg|faad faaf g3f dcAc|
 defg a3b agfa g3e|f3d edcA dcde fded||`,
 	theSessionId: 737,
 	theSessionSettingId: 56502,
-	references: [
-		{
-			notes: `See also a [shorter version](ttId=574) I really like, that i got from a fine album by Doireann Glackin and Sarah Flynn.`
-		}
-	]
+	fileDate: "2026-09-04"
 };

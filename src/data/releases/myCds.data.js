@@ -230,5 +230,43 @@ export default [
 				]
 			}
 		]
+	},
+	{
+		id: "retro",
+		title: "Retro",
+		theSessionRecordingId: 8214,
+		year: 2024,
+		urls: ["https://munnellymusic.bandcamp.com/album/retro"],
+		credits: [
+			{ id: "munnelly_da", instruments: ["accordion", "piano"] },
+			"conneely_mi"
+		],
+		lead: 1,
+
+		references: [
+			{
+				trackNumber: 1,
+				url: "https://munnellymusic.bandcamp.com/track/the-girl-that-broke-my-heart-s-an-sa-cheo-reels",
+				tunes: [
+					{ ttId: 663 },
+					{
+						theSessionId: 177,
+						notes: "I like Munnelly's setting a lot."
+						//todo?: transcribe?
+					}
+				],
+				duration: "3:08",
+				credits: [
+					{ id: "munnelly_da", instruments: ["accordion", "piano"] },
+					{ id: "conneely_mi", indexes: [1] } //only plays on the second tune
+				]
+			},
+			{
+				url: "https://munnellymusic.bandcamp.com/track/the-wearied-lad-tommy-mccarthys-jigs",
+				trackNumber: 2,
+				tunes: [14933, 11480],
+				duration: "4:06"
+			}
+		]
 	}
 ];

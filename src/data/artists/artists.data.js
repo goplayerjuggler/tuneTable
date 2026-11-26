@@ -23,11 +23,8 @@ export default [
 		instrument: "fiddle",
 		url: "https://www.itma.ie/playlists/selections-from-the-caoimhin-mac-aoidh-collection-may-2025"
 	},
-	{
-		id: "conway_br",
-		name: "Brian Conway",
-		instrument: "fiddle"
-	},
+	{ id: "conneely_mi", name: "Mick Conneely", instrument: "bouzouki" },
+	{ id: "conway_br", name: "Brian Conway", instrument: "fiddle" },
 	{ id: "demarco_to", name: "Tony DeMarco", instrument: "fiddle" },
 	{
 		id: "dolan_fe",
@@ -37,17 +34,8 @@ export default [
 		b: 1937,
 		d: 2013
 	},
-
-	{
-		id: "farr_lu",
-		name: "Lucy Farr",
-		instrument: "fiddle"
-	},
-	{
-		id: "finn_al",
-		name: "Alec Finn",
-		instrument: "bouzouki"
-	},
+	{ id: "farr_lu", name: "Lucy Farr", instrument: "fiddle" },
+	{ id: "finn_al", name: "Alec Finn", instrument: "bouzouki" },
 	{
 		id: "gavin_fr",
 		qId: 1886411,
@@ -66,11 +54,7 @@ export default [
 			"Antóin Mac Gabhann (Tony Smith) comes from Mullahoran, Co Cavan and now lives in Ashbourne, Co Meath. He is one of Ireland’s best known traditional fiddle performers. (from bandcamp; 2015)",
 		instrument: "fiddle"
 	},
-	{
-		id: "linnane_to",
-		name: "Tony Linnane",
-		instrument: "fiddle"
-	},
+	{ id: "linnane_to", name: "Tony Linnane", instrument: "fiddle" },
 	{
 		id: "macmahon_to",
 		name: "Tony MacMahon",
@@ -100,21 +84,12 @@ export default [
 		name: "Seán McGuire",
 		instrument: "fiddle"
 	},
-	{
-		id: "molloy_ma",
-		name: "Matt Molloy",
-		instrument: "flute"
-	},
-
-	{
-		id: "murphy_de",
-		name: "Denis Murphy",
-		instrument: "fiddle"
-	},
+	{ id: "molloy_ma", name: "Matt Molloy", instrument: "flute" },
+	{ id: "murphy_de", name: "Denis Murphy", instrument: "fiddle" },
 	{
 		id: "munnelly_da",
 		name: "David Munnelly",
-		instrument: "accordion"
+		instruments: ["accordion", "piano"]
 	},
 	{
 		id: "nicgabhann_ca",
